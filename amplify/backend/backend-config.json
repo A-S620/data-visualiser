@@ -1,1 +1,10 @@
-{}
+{
+  "auth": {
+    "datavisualiser2b89f688": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
