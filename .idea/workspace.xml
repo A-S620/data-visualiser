@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,11 +109,19 @@
       <workItem from="1601303486381" duration="205000" />
       <workItem from="1601303771982" duration="2676000" />
       <workItem from="1601388941718" duration="2548000" />
+      <workItem from="1601394421700" duration="446000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -119,22 +131,22 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601231910697" />
-    <state width="1878" height="307" key="GridCell.Tab.0.bottom" timestamp="1601389202692">
+    <state width="1878" height="307" key="GridCell.Tab.0.bottom" timestamp="1601394630527">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601389202692" />
-    <state width="1878" height="307" key="GridCell.Tab.0.center" timestamp="1601389202688">
+    <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630527" />
+    <state width="1878" height="307" key="GridCell.Tab.0.center" timestamp="1601394630522">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601389202688" />
-    <state width="1878" height="307" key="GridCell.Tab.0.left" timestamp="1601389202686">
+    <state width="1878" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630522" />
+    <state width="1878" height="307" key="GridCell.Tab.0.left" timestamp="1601394630520">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601389202686" />
-    <state width="1878" height="307" key="GridCell.Tab.0.right" timestamp="1601389202690">
+    <state width="1878" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630520" />
+    <state width="1878" height="307" key="GridCell.Tab.0.right" timestamp="1601394630525">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601389202690" />
+    <state width="1878" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630525" />
     <state x="1440" y="179" key="SettingsEditor" timestamp="1601303714693">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
