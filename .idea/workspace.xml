@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/DataVisAPI/DataVisAPI-cloudformation-template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/DataVisAPI/api-params.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/api/DataVisAPI/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/amplify.state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/datavisualiser21fb493f-cloudformation-template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/function-parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/src/event.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/src/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +132,7 @@
       <workItem from="1601394421700" duration="711000" />
       <workItem from="1601405832447" duration="1022000" />
       <workItem from="1601464662630" duration="1783000" />
-      <workItem from="1601641338554" duration="2858000" />
+      <workItem from="1601641338554" duration="4781000" />
     </task>
     <servers />
   </component>
