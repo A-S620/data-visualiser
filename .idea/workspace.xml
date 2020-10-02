@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/datavisualiser6c9d94c0/datavisualiser6c9d94c0-cloudformation-template.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/datavisualiser6c9d94c0/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/amplify.state" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/dataVisAPILambda-cloudformation-template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/function-parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/src/event.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/dataVisAPILambda/src/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/cli.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aws-exports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aws-exports.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +79,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.security-fix">
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -77,8 +90,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="security-fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
@@ -109,7 +133,10 @@
       <workItem from="1601303486381" duration="205000" />
       <workItem from="1601303771982" duration="2676000" />
       <workItem from="1601388941718" duration="2548000" />
-      <workItem from="1601394421700" duration="446000" />
+      <workItem from="1601394421700" duration="711000" />
+      <workItem from="1601405832447" duration="1022000" />
+      <workItem from="1601464662630" duration="1783000" />
+      <workItem from="1601641338554" duration="2594000" />
     </task>
     <servers />
   </component>
@@ -131,22 +158,22 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601231910697" />
-    <state width="1878" height="307" key="GridCell.Tab.0.bottom" timestamp="1601394630527">
+    <state width="1878" height="307" key="GridCell.Tab.0.bottom" timestamp="1601469280157">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630527" />
-    <state width="1878" height="307" key="GridCell.Tab.0.center" timestamp="1601394630522">
+    <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280157" />
+    <state width="1878" height="307" key="GridCell.Tab.0.center" timestamp="1601469280152">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630522" />
-    <state width="1878" height="307" key="GridCell.Tab.0.left" timestamp="1601394630520">
+    <state width="1878" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280152" />
+    <state width="1878" height="307" key="GridCell.Tab.0.left" timestamp="1601469280151">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630520" />
-    <state width="1878" height="307" key="GridCell.Tab.0.right" timestamp="1601394630525">
+    <state width="1878" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280151" />
+    <state width="1878" height="307" key="GridCell.Tab.0.right" timestamp="1601469280155">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601394630525" />
+    <state width="1878" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280155" />
     <state x="1440" y="179" key="SettingsEditor" timestamp="1601303714693">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
