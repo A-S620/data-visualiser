@@ -10,6 +10,11 @@
       "StackName": "amplify-datavisualiser-dev-143752",
       "StackId": "arn:aws:cloudformation:eu-west-2:666982960188:stack/amplify-datavisualiser-dev-143752/794791d0-04b4-11eb-bf37-0283d9cf08b8",
       "AmplifyAppId": "d1tio73v7cmobw"
+    },
+    "categories": {
+      "auth": {
+        "datavisualiser594ca7b6": {}
+      }
     }
   }
 }
