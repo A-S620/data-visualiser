@@ -32,8 +32,8 @@ amplify/backend/awscloudformation
 build/
 dist/
 node_modules/
-package-lock.json
-awsconfigurati.eslintrc.jsonon.json
+
+awsconfiguration.json
 amplifyconfiguration.json
 amplify-build-config.json
 amplify-gradle-config.json
