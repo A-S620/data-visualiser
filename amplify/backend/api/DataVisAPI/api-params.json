@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/system",
+            "lambdaFunction": "datavisualiser21fb493f",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/system"
+        }
+    ],
+    "resourceName": "DataVisAPI",
+    "apiName": "DataVisAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "datavisualiser21fb493f"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-datavisualiser-dev-143752-authRole",
+        "unAuthRoleName": "amplify-datavisualiser-dev-143752-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "datavisualiser21fb493f",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
