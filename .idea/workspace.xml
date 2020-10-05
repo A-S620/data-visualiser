@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/amplify/backend/api/DataVisAPI/DataVisAPI-cloudformation-template.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/api/DataVisAPI/api-params.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/api/DataVisAPI/parameters.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/amplify.state" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/datavisualiser21fb493f-cloudformation-template.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/function-parameters.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/parameters.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/src/event.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amplify/backend/function/datavisualiser21fb493f/src/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +15,27 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1601904294" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
