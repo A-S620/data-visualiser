@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/App.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fileTransformer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +18,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +37,14 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Log-In-Functionality" />
+                    <option name="lastUsedInstant" value="1601907449" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="develop" />
+                    <option name="lastUsedInstant" value="1601907335" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1601904294" />
@@ -75,18 +96,37 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.security-fix">
+  <component name="RunManager" selected="Jest.test jest">
+    <configuration name="test jest" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/Test.test.js" />
+      <test-names>
+        <test-name value="test jest" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -107,8 +147,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.test jest" />
+        <item itemvalue="npm.watch" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.lint" />
       </list>
@@ -144,6 +207,8 @@
       <workItem from="1601405832447" duration="1022000" />
       <workItem from="1601464662630" duration="1783000" />
       <workItem from="1601641338554" duration="4781000" />
+      <workItem from="1601922784594" duration="1672000" />
+      <workItem from="1601972780843" duration="250000" />
     </task>
     <servers />
   </component>
@@ -165,22 +230,22 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601231910697" />
-    <state width="1878" height="307" key="GridCell.Tab.0.bottom" timestamp="1601469280157">
+    <state width="1111" height="307" key="GridCell.Tab.0.bottom" timestamp="1601914157799">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280157" />
-    <state width="1878" height="307" key="GridCell.Tab.0.center" timestamp="1601469280152">
+    <state width="1111" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157799" />
+    <state width="1111" height="307" key="GridCell.Tab.0.center" timestamp="1601914157795">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280152" />
-    <state width="1878" height="307" key="GridCell.Tab.0.left" timestamp="1601469280151">
+    <state width="1111" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157795" />
+    <state width="1111" height="307" key="GridCell.Tab.0.left" timestamp="1601914157793">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280151" />
-    <state width="1878" height="307" key="GridCell.Tab.0.right" timestamp="1601469280155">
+    <state width="1111" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157793" />
+    <state width="1111" height="307" key="GridCell.Tab.0.right" timestamp="1601914157797">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601469280155" />
+    <state width="1111" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157797" />
     <state x="1440" y="179" key="SettingsEditor" timestamp="1601303714693">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
