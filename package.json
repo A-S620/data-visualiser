@@ -25,6 +25,7 @@
     "aws-amplify": "^3.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
@@ -70,7 +71,9 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
-    "jest": "^26.5.0",
+    "jest": "^26.5.2",
+    "jsdom": "16.4.0",
+    "jsdom-global": "3.0.2",
     "prettier": "^2.1.2",
     "react-test-renderer": "^16.13.1"
   }

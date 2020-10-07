@@ -3,12 +3,38 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Amplify from 'aws-amplify';
-import config from './aws-exports';
-Amplify.configure(config);
+import { BrowserRouter } from 'react-router-dom';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import { blue, purple } from '@material-ui/core/colors';
+
+const theme = createMuiTheme({
+    root: {
+        width: '100%',
+    },
+    palette: {
+        primary: purple,
+    },
+    layout: {
+        drawerWidth: 232,
+    },
+    alignItemsAndJustifyContent: {
+        width: 500,
+        height: 80,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'pink',
+    },
+});
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <MuiThemeProvider theme={theme} key="app">
+            <React.StrictMode>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </React.StrictMode>
+        </MuiThemeProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

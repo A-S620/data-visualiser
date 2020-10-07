@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/App.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fileTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Export/Export.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navigation/TabPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Settings/Settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/Navigation/Navigation.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/App.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/App.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +45,20 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="Log-In-Functionality" />
-                    <option name="lastUsedInstant" value="1601907449" />
+                    <option name="branchName" value="develop-ui" />
+                    <option name="lastUsedInstant" value="1601998195" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1601907335" />
+                    <option name="lastUsedInstant" value="1601998010" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="Log-In-Functionality" />
+                    <option name="lastUsedInstant" value="1601974880" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1601904294" />
+                    <option name="lastUsedInstant" value="1601974490" />
                   </RecentBranch>
                 </list>
               </option>
@@ -64,6 +75,12 @@
         <option value="$PROJECT_DIR$/.idea" />
       </set>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -89,12 +106,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Navigation" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -107,13 +127,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/components" />
       <recent name="$PROJECT_DIR$/test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Navigation" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.test jest">
+  <component name="RunManager" selected="npm.watch">
     <configuration name="test jest" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -169,8 +191,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.test jest" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="Jest.test jest" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.lint" />
@@ -209,6 +231,11 @@
       <workItem from="1601641338554" duration="4781000" />
       <workItem from="1601922784594" duration="1672000" />
       <workItem from="1601972780843" duration="250000" />
+      <workItem from="1601973981682" duration="748000" />
+      <workItem from="1601996623604" duration="180000" />
+      <workItem from="1601997959428" duration="3053000" />
+      <workItem from="1602009399596" duration="3249000" />
+      <workItem from="1602095897703" duration="5034000" />
     </task>
     <servers />
   </component>
@@ -226,26 +253,38 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2000" y="205" key="#ESLint" timestamp="1602000244878">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2000" y="205" key="#ESLint/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602000244878" />
+    <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602015699535">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
     <state x="2009" y="55" key="CommitChangelistDialog2" timestamp="1601231910697">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601231910697" />
-    <state width="1111" height="307" key="GridCell.Tab.0.bottom" timestamp="1601914157799">
+    <state width="1878" height="702" key="GridCell.Tab.0.bottom" timestamp="1602097513699">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1111" height="307" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157799" />
-    <state width="1111" height="307" key="GridCell.Tab.0.center" timestamp="1601914157795">
+    <state width="1878" height="702" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602097513699" />
+    <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
+    <state width="1878" height="702" key="GridCell.Tab.0.center" timestamp="1602097513691">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1111" height="307" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157795" />
-    <state width="1111" height="307" key="GridCell.Tab.0.left" timestamp="1601914157793">
+    <state width="1878" height="702" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602097513691" />
+    <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
+    <state width="1878" height="702" key="GridCell.Tab.0.left" timestamp="1602097513684">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1111" height="307" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157793" />
-    <state width="1111" height="307" key="GridCell.Tab.0.right" timestamp="1601914157797">
+    <state width="1878" height="702" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602097513684" />
+    <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
+    <state width="1878" height="702" key="GridCell.Tab.0.right" timestamp="1602097513693">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1111" height="307" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601914157797" />
+    <state width="1878" height="702" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602097513693" />
+    <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state x="1440" y="179" key="SettingsEditor" timestamp="1601303714693">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
@@ -254,5 +293,9 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2070" y="286" width="659" height="508" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601389368558" />
+    <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1602010411732">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602010411732" />
   </component>
 </project>

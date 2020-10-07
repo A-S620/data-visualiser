@@ -1,16 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch, Redirect, Router, BrowserRouter } from 'react-router-dom';
+import Routes from './components/Navigation/Routes';
+import Navigation from './components/Navigation/Navigation';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import {Grid} from '@material-ui/core';
 import './App.css';
 
-function App() {
+export default function App() {
     return (
-        <div className="App">
-            <header>
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1>It works</h1>
-            </header>
+        <div >
+            <Grid style={{ marginTop: 10 }} container direction="row" justify="center" alignItems="center">
+                <Grid item>
+                    <Navigation />
+                </Grid>
+                <Grid item>
+                    <BrowserRouter basename="/">
+                        <Route exact path={'/'}></Route>
+                    </BrowserRouter>
+                </Grid>
+            </Grid>
         </div>
     );
 }
-
-export default (App);
