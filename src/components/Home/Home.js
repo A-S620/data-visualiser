@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import { DropzoneArea } from 'material-ui-dropzone';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,6 +30,19 @@ export default function Home() {
                 <Typography variant="h6" style={{ marginBottom: 5 }}>
                     Home Page
                 </Typography>
+                <DropzoneArea
+                    id='drop-zone-area'
+                    showPreviews={true}
+                    // onChange={async (files) => this.uploadFiles(files)}
+                    showPreviewsInDropzone={false}
+                    useChipsForPreview
+                    // previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
+                    // previewChipProps={{ classes: { root: this.classes.previewChip } }}
+                    previewText="Selected files"
+                    clearOnUnmount={true}
+                    acceptedFiles={['application/json']}
+                    filesLimit={1}
+                />
             </Container>
         </Grid>
     );
