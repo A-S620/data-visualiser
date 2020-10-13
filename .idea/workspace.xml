@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/components/Home/Home.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aws-exports.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/aws-exports.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +33,24 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="develop-ui" />
-                    <option name="lastUsedInstant" value="1601998195" />
+                    <option name="branchName" value="API" />
+                    <option name="lastUsedInstant" value="1602527993" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
-                    <option name="lastUsedInstant" value="1601998010" />
+                    <option name="lastUsedInstant" value="1602527455" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="Log-In-Functionality" />
-                    <option name="lastUsedInstant" value="1601974880" />
+                    <option name="lastUsedInstant" value="1602527432" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1601974490" />
+                    <option name="lastUsedInstant" value="1602527377" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="develop-ui" />
+                    <option name="lastUsedInstant" value="1601998195" />
                   </RecentBranch>
                 </list>
               </option>
@@ -228,6 +230,7 @@
       <workItem from="1602095897703" duration="5103000" />
       <workItem from="1602145974817" duration="87000" />
       <workItem from="1602183047974" duration="2471000" />
+      <workItem from="1602599188953" duration="350000" />
     </task>
     <servers />
   </component>
