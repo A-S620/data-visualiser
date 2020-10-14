@@ -64,7 +64,7 @@ export default function Navigation() {
             >
                 <div className={classes.drawerHeader}>
                     <Typography variant="h6" noWrap align="center">
-                        Staffly
+                        Data Visualiser
                     </Typography>
                 </div>
                 <Tabs
