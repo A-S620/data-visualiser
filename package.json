@@ -24,6 +24,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "aws-amplify": "^3.3.2",
+    "express": "^4.17.1",
     "material-ui-dropzone": "^3.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -32,6 +33,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "node src/server/middleware.js",
     "build": "react-scripts build",
     "test": "jest",
     "watch": "jest --watchAll",
@@ -78,5 +80,20 @@
     "jsdom-global": "3.0.2",
     "prettier": "^2.1.2",
     "react-test-renderer": "^16.13.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A-S620/data-visualiser.git"
+  },
+  "author": "A-S620",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A-S620/data-visualiser/issues"
+  },
+  "homepage": "https://github.com/A-S620/data-visualiser#readme"
 }
