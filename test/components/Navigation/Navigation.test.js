@@ -1,13 +1,13 @@
 import { mount } from 'enzyme';
-import Navigation from '../../../src/components/Navigation/Navigation';
+import UserNavigation from '../../../src/components/Navigation/UserNavigation';
 import React from 'react';
 import Home from '../../../src/components/Home/Home';
 import Export from '../../../src/components/Export/Export';
 import Settings from '../../../src/components/Settings/Settings';
 import 'jsdom-global/register';
 
-describe('Navigation Component', () => {
-    const wrapper = mount(<Navigation />);
+describe('UserNavigation Component', () => {
+    const wrapper = mount(<UserNavigation />);
 
     it('should have the correct items in the menu', () => {
         //given that I have a menu

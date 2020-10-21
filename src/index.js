@@ -8,23 +8,30 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { blue, purple } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
-    root: {
-        width: '100%',
-    },
     palette: {
-        primary: purple,
+        text: {
+            primary: '#000000',
+        },
+        primary: {
+            // light: will be calculated from palette.primary.main,
+            main: '#7C4F99',
+            // dark: will be calculated from palette.primary.main,
+            // contrastText: will be calculated to contrast with palette.primary.main
+        },
+        secondary: {
+            main: '#dda448',
+            // dark: will be calculated from palette.secondary.main,
+            contrastText: '#ffffff',
+        },
+        // Used by `getContrastText()` to maximize the contrast between
+        // the background and the text.
+        contrastThreshold: 3,
+        // Used by the functions below to shift a color's luminance by approximately
+        // two indexes within its tonal palette.
+        // E.g., shift from Red 500 to Red 300 or Red 700.
+        tonalOffset: 0.2,
     },
-    layout: {
-        drawerWidth: 232,
-    },
-    alignItemsAndJustifyContent: {
-        width: 500,
-        height: 80,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'pink',
-    },
+
 });
 ReactDOM.render(
     <React.StrictMode>

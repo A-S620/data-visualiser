@@ -1,24 +1,19 @@
 import React from 'react';
 import { Route, Switch, Redirect, Router, BrowserRouter } from 'react-router-dom';
 import Routes from './components/Navigation/Routes';
-import Navigation from './components/Navigation/Navigation';
+import UserNavigation from './components/Navigation/UserNavigation';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import {Grid} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import './App.css';
+import LandingPage from './components/LandingPage/LandingPage';
+import Appbar from './components/Navigation/Appbar';
+import FrontNavigation from "./components/Navigation/FrontNavigation";
 
 export default function App() {
     return (
-        <div >
-            <Grid style={{ marginTop: 10 }} container direction="row" justify="center" alignItems="center">
-                <Grid item>
-                    <Navigation />
-                </Grid>
-                <Grid item>
-                    <BrowserRouter basename="/">
-                        <Route exact path={'/'}></Route>
-                    </BrowserRouter>
-                </Grid>
-            </Grid>
+        <div>
+            {/*<Appbar />*/}
+            <FrontNavigation />
         </div>
     );
 }

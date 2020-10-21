@@ -33,7 +33,7 @@ function a11yProps(index) {
     };
 }
 
-export default function Navigation() {
+export default function UserNavigation() {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = useState(false);
