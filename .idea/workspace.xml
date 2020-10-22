@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon-32x32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo_transparent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/Appbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation/FrontNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/assets/images/ColourHeader.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/assets/images/Galaxy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/assets/images/LandingPage.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/assets/images/logo_transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Construction/Construction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/UserNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/components/Navigation/Navigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Navigation/Navigation.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +241,9 @@
       <workItem from="1603131749131" duration="3906000" />
       <workItem from="1603218045804" duration="5385000" />
       <workItem from="1603271834947" duration="21000" />
-      <workItem from="1603309320809" duration="2804000" />
+      <workItem from="1603309320809" duration="2947000" />
+      <workItem from="1603354768636" duration="1000" />
+      <workItem from="1603396269840" duration="2090000" />
     </task>
     <servers />
   </component>
