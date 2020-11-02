@@ -4,6 +4,7 @@ import React from 'react';
 import Home from '../../../src/components/Home/Home';
 import Export from '../../../src/components/Export/Export';
 import Settings from '../../../src/components/Settings/Settings';
+import PlottingPage from '../../../src/components/Plotting/PlottingPage';
 import 'jsdom-global/register';
 
 describe('UserNavigation Component', () => {
@@ -13,13 +14,14 @@ describe('UserNavigation Component', () => {
         //given that I have a menu
         //when I want to navigate to a page
         //then it should allow me to navigate to that page
-        const pages = ['Home', 'Export', 'Settings'];
+        const pages = ['Home', 'Export', 'Plotting', 'Settings'];
 
         const menu = wrapper.find('div#menu-tabs');
 
         expect(menu.find('button#simple-tab-0').text()).toBe(pages[0]);
         expect(menu.find('button#simple-tab-1').text()).toBe(pages[1]);
         expect(menu.find('button#simple-tab-2').text()).toBe(pages[2]);
+        expect(menu.find('button#simple-tab-3').text()).toBe(pages[3]);
     });
     it('should change to the Home page when Home is clicked in the menu', () => {
         //given I have a home option in the menu
@@ -28,7 +30,6 @@ describe('UserNavigation Component', () => {
 
         const homeOption = wrapper.find('div#menu-tabs').find('button#simple-tab-0');
         const homePage = mount(<Home />).html();
-        const exportPage = mount(<Export />).html();
 
         homeOption.simulate('click');
 
@@ -46,12 +47,24 @@ describe('UserNavigation Component', () => {
 
         expect(wrapper.html()).toContain(exportPage);
     });
-    it('should change to the Settings page when Settings is clicked in the menu', () => {
+    it('should change to the plotting page when Plotting is clicked in the menu', () => {
+        //given I have a Plotting option in the menu
+        //when I click it
+        //then it should take me to the Plotting page
+
+        const plottingOption = wrapper.find('div#menu-tabs').find('button#simple-tab-2');
+        const plottingPage = mount(<PlottingPage />).html();
+
+        plottingOption.simulate('click');
+
+        expect(wrapper.html()).toContain(plottingPage);
+    });
+    it('should change to the settings page when Settings is clicked in the menu', () => {
         //given I have a Settings option in the menu
         //when I click it
         //then it should take me to the Settings page
 
-        const settingsOption = wrapper.find('div#menu-tabs').find('button#simple-tab-2');
+        const settingsOption = wrapper.find('div#menu-tabs').find('button#simple-tab-3');
         const settingsPage = mount(<Settings />).html();
 
         settingsOption.simulate('click');

@@ -77,10 +77,5 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LandingPage(props) {
     const classes = useStyles();
-    return (
-        <Paper
-        >
-            beep beep
-        </Paper>
-    );
+    return <Paper>beep beep</Paper>;
 }

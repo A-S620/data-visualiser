@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Drawer, Tab, Tabs, Typography } from '@material-ui/core';
+import { Drawer, Tab, Tabs, Typography, AppBar } from '@material-ui/core';
 import Home from '../Home/Home';
 import Export from '../Export/Export';
 import Settings from '../Settings/Settings';
 import TabPanel from './TabPanel';
+import PlottingPage from '../Plotting/PlottingPage';
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'flex',
+        flexGrow: 1,
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -53,33 +54,37 @@ export default function UserNavigation() {
 
     return (
         <div className={classes.root}>
-            <Drawer
-                className={classes.drawer}
-                variant="permanent"
-                anchor="left"
-                open={open}
-                classes={{
-                    paper: classes.drawerPaper,
-                }}
-            >
-                <div className={classes.drawerHeader}>
-                    <Typography variant="h6" noWrap align="center">
-                        Data Visualiser
-                    </Typography>
-                </div>
+            {/*<Drawer*/}
+            {/*    className={classes.drawer}*/}
+            {/*    variant="permanent"*/}
+            {/*    anchor="left"*/}
+            {/*    open={open}*/}
+            {/*    classes={{*/}
+            {/*        paper: classes.drawerPaper,*/}
+            {/*    }}*/}
+            {/*>*/}
+            {/*    <div className={classes.drawerHeader}>*/}
+            {/*        <Typography variant="h6" noWrap align="center">*/}
+            {/*            Data Visualiser*/}
+            {/*        </Typography>*/}
+            {/*    </div>*/}
+            <AppBar position="static">
                 <Tabs
                     value={tab}
                     onChange={handleTabChange}
-                    orientation={'vertical'}
+                    orientation={'horizontal'}
                     indicatorColor="primary"
-                    textColor="primary"
+                    textColor="black"
                     id="menu-tabs"
                 >
                     <Tab label={'Home'} {...a11yProps(0)} />
                     <Tab label={'Export'} {...a11yProps(1)} />
-                    <Tab label={'Settings'} {...a11yProps(2)} />
+                    <Tab label={'Plotting'} {...a11yProps(2)} />
+                    <Tab label={'Settings'} {...a11yProps(3)} />
                 </Tabs>
-            </Drawer>
+            </AppBar>
+
+            {/*</Drawer>*/}
             <TabPanel value={tab} index={0}>
                 <Home />
             </TabPanel>
@@ -87,6 +92,9 @@ export default function UserNavigation() {
                 <Export />
             </TabPanel>
             <TabPanel value={tab} index={2}>
+                <PlottingPage />
+            </TabPanel>
+            <TabPanel value={tab} index={3}>
                 <Settings />
             </TabPanel>
         </div>

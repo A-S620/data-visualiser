@@ -31,7 +31,7 @@ export default function Home() {
                     Home Page
                 </Typography>
                 <DropzoneArea
-                    id='drop-zone-area'
+                    id="drop-zone-area"
                     showPreviews={true}
                     // onChange={async (files) => this.uploadFiles(files)}
                     showPreviewsInDropzone={false}

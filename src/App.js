@@ -7,14 +7,15 @@ import { Grid } from '@material-ui/core';
 import './App.css';
 import LandingPage from './components/LandingPage/LandingPage';
 import Appbar from './components/Navigation/Appbar';
-import FrontNavigation from "./components/Navigation/FrontNavigation";
-import Construction from "./components/Construction/Construction";
+import FrontNavigation from './components/Navigation/FrontNavigation';
+import Construction from './components/Construction/Construction';
 
 export default function App() {
     return (
         <div>
+            <UserNavigation />
             {/*<Appbar />*/}
-            <Construction />
+            {/*<Construction />*/}
         </div>
     );
 }

@@ -15,6 +15,14 @@
     "prettier"
   ],
   "rules": {
+//    "func-style": ["error", "global"],
+    "no-new-func": "error",
+    "no-param-reassign": "error",
+    "prefer-arrow-callback": "error",
+    "arrow-parens": ["error", "always"],
+    "arrow-body-style": ["error", "as-needed"],
+    "new-cap": "error",
+    "no-invalid-this": "error",
     "prettier/prettier": [
       "error",
       {

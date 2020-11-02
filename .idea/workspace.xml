@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Construction/Construction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Plotting/LinePlotting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Plotting/PlottingNav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Plotting/PlottingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/UserNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/UserNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Navigation/Navigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Navigation/UserNavigation.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +49,11 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="develop-ui" />
-                    <option name="lastUsedInstant" value="1602677857" />
+                    <option name="lastUsedInstant" value="1603705186" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1603483185" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
@@ -43,10 +62,6 @@
                   <RecentBranch>
                     <option name="branchName" value="Log-In-Functionality" />
                     <option name="lastUsedInstant" value="1601974880" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1601974490" />
                   </RecentBranch>
                 </list>
               </option>
@@ -94,7 +109,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -110,7 +125,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -183,10 +198,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="Jest.test jest" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.security-fix" />
-        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +258,21 @@
       <workItem from="1603271834947" duration="21000" />
       <workItem from="1603309320809" duration="2947000" />
       <workItem from="1603354768636" duration="1000" />
-      <workItem from="1603396269840" duration="2090000" />
+      <workItem from="1603396269840" duration="2319000" />
+      <workItem from="1603482700341" duration="789000" />
+      <workItem from="1603704489282" duration="69000" />
+      <workItem from="1603705020807" duration="136000" />
+      <workItem from="1603742020207" duration="361000" />
+      <workItem from="1603828956334" duration="3146000" />
+      <workItem from="1603885752263" duration="594000" />
+      <workItem from="1603886531392" duration="325000" />
+      <workItem from="1603917297602" duration="1405000" />
+      <workItem from="1603967717274" duration="11000" />
+      <workItem from="1604002724798" duration="3046000" />
+      <workItem from="1604075721424" duration="1262000" />
+      <workItem from="1604312338449" duration="258000" />
+      <workItem from="1604313967153" duration="506000" />
+      <workItem from="1604332795758" duration="1434000" />
     </task>
     <servers />
   </component>
@@ -261,10 +290,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2000" y="205" key="#ESLint" timestamp="1602000244878">
+    <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2000" y="205" key="#ESLint/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602000244878" />
+    <state x="2000" y="205" key="#ESLint/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604332981025" />
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602015699535">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
@@ -273,34 +302,35 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601231910697" />
-    <state width="1878" height="433" key="GridCell.Tab.0.bottom" timestamp="1602186389147">
+    <state width="1878" height="352" key="GridCell.Tab.0.bottom" timestamp="1604334200452">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="433" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602186389147" />
+    <state width="1878" height="352" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200452" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
-    <state width="1878" height="943" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602101663700" />
-    <state width="1878" height="433" key="GridCell.Tab.0.center" timestamp="1602186389141">
+    <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
+    <state width="1878" height="352" key="GridCell.Tab.0.center" timestamp="1604334200449">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="433" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602186389141" />
+    <state width="1878" height="352" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200449" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
-    <state width="1878" height="943" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602101663697" />
-    <state width="1878" height="433" key="GridCell.Tab.0.left" timestamp="1602186389139">
+    <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
+    <state width="1878" height="352" key="GridCell.Tab.0.left" timestamp="1604334200447">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="433" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602186389139" />
+    <state width="1878" height="352" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200447" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
-    <state width="1878" height="943" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602101663696" />
-    <state width="1878" height="433" key="GridCell.Tab.0.right" timestamp="1602186389144">
+    <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
+    <state width="1878" height="352" key="GridCell.Tab.0.right" timestamp="1604334200450">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="433" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602186389144" />
+    <state width="1878" height="352" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200450" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
-    <state width="1878" height="943" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602101663698" />
-    <state x="1440" y="179" key="SettingsEditor" timestamp="1601303714693">
-      <screen x="1440" y="0" width="1920" height="1080" />
+    <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
+    <state x="0" y="149" width="997" height="722" key="SettingsEditor" timestamp="1604089230614">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601303714693" />
+    <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
+    <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="2070" y="286" width="659" height="508" key="find.popup" timestamp="1603225284763">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
