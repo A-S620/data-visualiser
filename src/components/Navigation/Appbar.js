@@ -1,13 +1,15 @@
+//Imports from libraries
 import React, { useState } from 'react';
 import { AppBar, Button, Toolbar, Tab, Tabs, Grid, RaisedButton, Box } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+
+//Assets Imports
 import LandingImage from '../assets/images/LandingPage.jpg';
-import { borders } from '@material-ui/system';
+
+//UI Components Imports
 import TabPanel from './TabPanel';
 import LandingPage from '../LandingPage/LandingPage';
 import Home from '../Home/Home';
-import Export from '../Export/Export';
-import Settings from '../Settings/Settings';
 
 const useStyles = makeStyles((theme) => ({
     paperContainer: {

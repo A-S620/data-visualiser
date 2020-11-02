@@ -1,3 +1,4 @@
+//Imports from libraries
 import React from 'react';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import { DropzoneArea } from 'material-ui-dropzone';

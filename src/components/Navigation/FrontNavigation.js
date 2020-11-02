@@ -1,11 +1,14 @@
+//Imports from libraries
 import React, { useState } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Button, Drawer, Grid, Paper, Tab, Tabs, Typography } from '@material-ui/core';
+
+//UI Components Imports
 import Home from '../Home/Home';
-import Export from '../Export/Export';
-import Settings from '../Settings/Settings';
 import TabPanel from './TabPanel';
 import LandingPage from '../LandingPage/LandingPage';
+
+//Assets Imports
 import LandingImage from '../assets/images/LandingPage.jpg';
 
 const drawerWidth = 240;

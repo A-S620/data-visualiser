@@ -1,18 +1,11 @@
+//Imports from libraries
 import React from 'react';
-// nodejs library that concatenates classes
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-import logo from '../assets/images/logo_transparent.png';
-import LandingImage from '../assets/images/LandingPage.jpg';
-import Background from '../assets/images/ColourHeader.png';
-import Galaxy from '../assets/images/Galaxy.jpg';
-import Image from 'material-ui-image';
-import Appbar from '../Navigation/Appbar';
-import FrontNavigation from '../Navigation/FrontNavigation';
-
 import { Card, Paper, CardHeader, CardMedia, CardContent, CardActions, AppBar, Grid } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
-import UserNavigation from '../Navigation/UserNavigation';
+
+//Assets Imports
+import LandingImage from '../assets/images/LandingPage.jpg';
+
 const useStyles = makeStyles((theme) => ({
     paperContainer: {
         backgroundImage: 'url(' + LandingImage + ')',

@@ -2,24 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Plotting/LinePlotting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Plotting/PlottingNav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Plotting/PlottingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Construction/Construction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Construction/Construction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Export/Export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Export/Export.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Appbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Appbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/FrontNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/FrontNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/TabPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navigation/UserNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigation/UserNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Plotting/LinePlotting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Plotting/LinePlotting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Plotting/PlottingNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Plotting/PlottingNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Plotting/PlottingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Plotting/PlottingPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/components/Navigation/Navigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Navigation/UserNavigation.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/App.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/App.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Home/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Home/Home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Navigation/UserNavigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Navigation/UserNavigation.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,8 +275,16 @@
       <workItem from="1604075721424" duration="1262000" />
       <workItem from="1604312338449" duration="258000" />
       <workItem from="1604313967153" duration="506000" />
-      <workItem from="1604332795758" duration="1434000" />
+      <workItem from="1604332795758" duration="2770000" />
     </task>
+    <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
+      <created>1604334325015</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604334325015</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +299,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Plotting pages, Navigation unit tests, project formatting using ESLint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plotting pages, Navigation unit tests, project formatting using ESLint" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
@@ -298,32 +311,32 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="2009" y="55" key="CommitChangelistDialog2" timestamp="1601231910697">
+    <state x="2009" y="55" key="CommitChangelistDialog2" timestamp="1604334323415">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1601231910697" />
-    <state width="1878" height="352" key="GridCell.Tab.0.bottom" timestamp="1604334200452">
+    <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334323415" />
+    <state width="1878" height="318" key="GridCell.Tab.0.bottom" timestamp="1604335803521">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="352" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200452" />
+    <state width="1878" height="318" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604335803521" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
-    <state width="1878" height="352" key="GridCell.Tab.0.center" timestamp="1604334200449">
+    <state width="1878" height="318" key="GridCell.Tab.0.center" timestamp="1604335803518">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="352" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200449" />
+    <state width="1878" height="318" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604335803518" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
-    <state width="1878" height="352" key="GridCell.Tab.0.left" timestamp="1604334200447">
+    <state width="1878" height="318" key="GridCell.Tab.0.left" timestamp="1604335803516">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="352" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200447" />
+    <state width="1878" height="318" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604335803516" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
-    <state width="1878" height="352" key="GridCell.Tab.0.right" timestamp="1604334200450">
+    <state width="1878" height="318" key="GridCell.Tab.0.right" timestamp="1604335803519">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="352" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604334200450" />
+    <state width="1878" height="318" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604335803519" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor" timestamp="1604089230614">

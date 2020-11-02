@@ -1,10 +1,8 @@
+//Imports from libraries
 import React from 'react';
-
-//Material UI components
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Grid } from '@material-ui/core';
 
-//My components
+//UI components Imports
 import PlottingNav from './PlottingNav';
 
 const useStyles = makeStyles((theme) => ({
