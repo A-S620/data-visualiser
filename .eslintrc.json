@@ -23,6 +23,7 @@
     "arrow-body-style": ["error", "as-needed"],
     "new-cap": "error",
     "no-invalid-this": "error",
+    "prefer-const": "error",
     "prettier/prettier": [
       "error",
       {
