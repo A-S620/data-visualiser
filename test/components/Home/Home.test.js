@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { mount } from 'enzyme';
 
 //UI Components Imports
-import Home from '../../../src/components/Home/Home';
+import Home from '../../../src/components/LoggedIn/Home/Home';
 
 describe('Home page', () => {
     const wrapper = mount(<Home />);

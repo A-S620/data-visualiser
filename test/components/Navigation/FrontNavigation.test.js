@@ -4,7 +4,7 @@ import React from 'react';
 import 'jsdom-global/register';
 
 //UI Components Imports
-import FrontNavigation from '../../../src/components/Navigation/FrontNavigation';
+import FrontNavigation from '../../../src/components/NotLoggedIn/Navigation/FrontNavigation';
 
 describe('FrontNavigation Component', () => {
     const wrapper = mount(<FrontNavigation />);

@@ -4,11 +4,11 @@ import { AppBar, Button, Toolbar, Tab, Tabs, Grid, RaisedButton, Box } from '@ma
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 //Assets Imports
-import LandingImage from '../assets/images/LandingPage.jpg';
+import LandingImage from '../../assets/images/LandingPage.jpg';
 
 //UI Components Imports
 import TabPanel from './TabPanel';
-import LandingPage from '../LandingPage/LandingPage';
+import LandingPage from '../../NotLoggedIn/LandingPage/LandingPage';
 import Home from '../Home/Home';
 
 const useStyles = makeStyles((theme) => ({

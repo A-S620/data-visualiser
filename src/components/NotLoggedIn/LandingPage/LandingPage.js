@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Card, Paper, CardHeader, CardMedia, CardContent, CardActions, AppBar, Grid } from '@material-ui/core';
 
 //Assets Imports
-import LandingImage from '../assets/images/LandingPage.jpg';
+import LandingImage from '../../assets/images/LandingPage.jpg';
 
 const useStyles = makeStyles((theme) => ({
     paperContainer: {

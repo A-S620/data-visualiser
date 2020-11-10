@@ -4,12 +4,12 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Button, Drawer, Grid, Paper, Tab, Tabs, Typography } from '@material-ui/core';
 
 //UI Components Imports
-import Home from '../Home/Home';
-import TabPanel from './TabPanel';
+import Home from '../../LoggedIn/Home/Home';
+import TabPanel from '../../LoggedIn/Navigation/TabPanel';
 import LandingPage from '../LandingPage/LandingPage';
 
 //Assets Imports
-import LandingImage from '../assets/images/LandingPage.jpg';
+import LandingImage from '../../assets/images/LandingPage.jpg';
 
 const drawerWidth = 240;
 

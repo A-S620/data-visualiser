@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/components/Navigation/FrontNavigation.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation/TabPanel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Construction/Construction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotLoggedIn/Construction/Construction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Export/Export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Export/Export.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotLoggedIn/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotLoggedIn/Login/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Appbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Navigation/Appbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/FrontNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation/FrontNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Navigation/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Navigation/TabPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation/UserNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Navigation/UserNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Construction/Construction.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Construction/Construction.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Home/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Home/Home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Navigation/FrontNavigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Navigation/FrontNavigation.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/Navigation/UserNavigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/Navigation/UserNavigation.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +109,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -115,16 +129,19 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/LoggedIn" />
+      <recent name="$PROJECT_DIR$/src/components/NotLoggedIn" />
+      <recent name="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
+      <recent name="$PROJECT_DIR$/test/components" />
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
       <recent name="$PROJECT_DIR$/node_modules/material-kit-react" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/components/Navigation" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/components" />
-      <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -263,6 +280,9 @@
       <workItem from="1604423301876" duration="1148000" />
       <workItem from="1604607590814" duration="500000" />
       <workItem from="1604766773494" duration="1433000" />
+      <workItem from="1604913720955" duration="249000" />
+      <workItem from="1604938431727" duration="389000" />
+      <workItem from="1605040889424" duration="664000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -285,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604423457490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Unit tests, code formatting">
+      <created>1604913876507</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604913876507</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +330,8 @@
     <MESSAGE value="Plotting pages, Navigation unit tests, project formatting using ESLint" />
     <MESSAGE value="Setting import format for all existing project files." />
     <MESSAGE value="Construction page unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Construction page unit tests" />
+    <MESSAGE value="Unit tests, code formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit tests, code formatting" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
@@ -314,9 +342,10 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="2009" y="55" key="CommitChangelistDialog2" timestamp="1604423456728">
-      <screen x="1440" y="0" width="1920" height="1080" />
+    <state x="459" y="0" key="CommitChangelistDialog2" timestamp="1604913875176">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="459" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1604913875176" />
     <state x="2009" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604423456728" />
     <state width="1878" height="176" key="GridCell.Tab.0.bottom" timestamp="1604424852743">
       <screen x="1440" y="23" width="1920" height="1057" />
@@ -351,9 +380,10 @@
     </state>
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1604423463077">
-      <screen x="1440" y="0" width="1920" height="1080" />
+    <state x="420" y="218" key="Vcs.Push.Dialog.v2" timestamp="1604913881378">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1604913881378" />
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604423463077" />
     <state x="2070" y="286" width="659" height="508" key="find.popup" timestamp="1603225284763">
       <screen x="1440" y="0" width="1920" height="1080" />
