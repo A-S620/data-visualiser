@@ -4,7 +4,7 @@ import React from 'react';
 import 'jsdom-global/register';
 
 //UI Components Imports
-import UserNavigation from '../../../src/components/LoggedIn/Navigation/UserNavigation';
+import UserNavigation from '../../../../src/components/LoggedIn/Navigation/UserNavigation';
 
 describe('UserNavigation Component', () => {
     const wrapper = mount(<UserNavigation />);

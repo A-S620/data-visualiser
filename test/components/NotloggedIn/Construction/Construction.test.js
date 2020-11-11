@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { mount } from 'enzyme';
 
 //UI Components Imports
-import Construction from '../../../src/components/NotLoggedIn/Construction/Construction';
+import Construction from '../../../../src/components/NotLoggedIn/Construction/Construction';
 
 describe('Construction Page', () => {
     const component = mount(<Construction />);
