@@ -272,7 +272,7 @@
       <workItem from="1604938431727" duration="389000" />
       <workItem from="1605040889424" duration="1031000" />
       <workItem from="1605124998344" duration="114000" />
-      <workItem from="1605125202006" duration="2699000" />
+      <workItem from="1605125202006" duration="3001000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -323,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605126941751</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Worked on Redux and domain files&#10;Separated dataReducers.js to have the state in initialState.js.&#10;In Domain, created an interfaces folder to store the interfaces.&#10;Created a Variables.tsx file, which will identify variables in the imported data source.">
+      <created>1605128507992</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605128507993</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +345,8 @@
     <MESSAGE value="Organised UI Components into LoggedIn and NotLoggedIn" />
     <MESSAGE value="Separated Unit tests for UI Components into LoggedIn and NotLoggedIn. Created domain folder with BasicGraph.js file. Created Rest folder, with repositories subfolder, created create-diagram-repo.js repo file." />
     <MESSAGE value="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed." />
+    <MESSAGE value="Worked on Redux and domain files&#10;Separated dataReducers.js to have the state in initialState.js.&#10;In Domain, created an interfaces folder to store the interfaces.&#10;Created a Variables.tsx file, which will identify variables in the imported data source." />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on Redux and domain files&#10;Separated dataReducers.js to have the state in initialState.js.&#10;In Domain, created an interfaces folder to store the interfaces.&#10;Created a Variables.tsx file, which will identify variables in the imported data source." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
@@ -349,11 +357,11 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605126941233">
+    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605128507526">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605126941233" />
+    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605128507526" />
     <state width="1878" height="932" key="GridCell.Tab.0.bottom" timestamp="1605125547499">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
@@ -387,11 +395,11 @@
     </state>
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605126945917">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605128509921">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041884615" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605126945917" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605128509921" />
     <state x="2070" y="286" width="659" height="508" key="find.popup" timestamp="1603225284763">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
