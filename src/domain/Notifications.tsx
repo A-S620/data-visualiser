@@ -1,24 +1,24 @@
-//A class that handles erors in the system. Errors are stored as an Array of strings.
+//A class that handles notifications in the system. Errors are stored as an Array of strings.
 export class Notifications {
-    private errors: Array<string> = [];
+    private notifications: Array<string> = [];
 
-    public addError(message: string): void {
-        this.errors.push(message);
+    public addNotification(notification: string): void {
+        this.notifications.push(notification);
     }
 
-    public errorMessage(): string {
-        return this.errors.join(', ');
+    public notificationComma(): string {
+        return this.notifications.join(', ');
     }
 
     public isEmpty(): boolean {
-        return this.errors.length === 0;
+        return this.notifications.length === 0;
     }
 
-    public getErrors(): Array<string> {
-        return this.errors;
+    public getNotifications(): Array<string> {
+        return this.notifications;
     }
 
-    public concat(notes: Notifications): void {
-        this.errors = this.errors.concat(notes.getErrors());
+    public concat(notifs: Notifications): void {
+        this.notifications = this.notifications.concat(notifs.getNotifications());
     }
 }

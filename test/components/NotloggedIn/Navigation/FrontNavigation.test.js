@@ -14,7 +14,7 @@ describe('FrontNavigation Component', () => {
         //when I want to navigate to a page
         //then it should allow me to navigate to that page
         const pages = ['Home', 'About', 'Privacy Policy', 'terms Of Use', 'Documentation'];
-
+        //TODO: Fix test
         const menu = wrapper.find('div#menu-tabs');
 
         expect(menu.find('button#simple-tab-0').text()).toBe(pages[0]);
