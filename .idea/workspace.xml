@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/store/Store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/Variables.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/IVariables.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/initialState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -271,7 +272,7 @@
       <workItem from="1604938431727" duration="389000" />
       <workItem from="1605040889424" duration="1031000" />
       <workItem from="1605124998344" duration="114000" />
-      <workItem from="1605125202006" duration="1363000" />
+      <workItem from="1605125202006" duration="2699000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -315,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605126442269</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed.">
+      <created>1605126941751</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605126941751</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +337,8 @@
     <MESSAGE value="Unit tests, code formatting" />
     <MESSAGE value="Organised UI Components into LoggedIn and NotLoggedIn" />
     <MESSAGE value="Separated Unit tests for UI Components into LoggedIn and NotLoggedIn. Created domain folder with BasicGraph.js file. Created Rest folder, with repositories subfolder, created create-diagram-repo.js repo file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated Unit tests for UI Components into LoggedIn and NotLoggedIn. Created domain folder with BasicGraph.js file. Created Rest folder, with repositories subfolder, created create-diagram-repo.js repo file." />
+    <MESSAGE value="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
@@ -340,11 +349,11 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1952" y="55" key="CommitChangelistDialog2" timestamp="1605126441687">
+    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605126941233">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1952" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605126441687" />
+    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605126941233" />
     <state width="1878" height="932" key="GridCell.Tab.0.bottom" timestamp="1605125547499">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
@@ -378,11 +387,11 @@
     </state>
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605126444816">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605126945917">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041884615" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605126444816" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605126945917" />
     <state x="2070" y="286" width="659" height="508" key="find.popup" timestamp="1603225284763">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>

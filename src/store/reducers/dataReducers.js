@@ -1,4 +1,4 @@
-const initialState = {};
+import { initialState } from './initialState';
 export default function dataReducer(state = initialState, action) {
     switch (action.type) {
         default:
