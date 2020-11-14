@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ImportData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/Notifications.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Variables.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Variables.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +120,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -128,17 +138,17 @@
       <recent name="$PROJECT_DIR$/src/components/NotLoggedIn" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
-    <configuration name="test jest" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.watch">
+    <configuration name="Notification Message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/test/Test.test.js" />
+      <test-file value="$PROJECT_DIR$/test/domain/Notifications.test.tsx" />
       <test-names>
-        <test-name value="test jest" />
+        <test-name value="Notification Message" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -184,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="Jest.Notification Message" />
+        <item itemvalue="npm.test" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.lint" />
-        <item itemvalue="Jest.test jest" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +268,11 @@
       <workItem from="1605040889424" duration="1031000" />
       <workItem from="1605124998344" duration="114000" />
       <workItem from="1605125202006" duration="4279000" />
-      <workItem from="1605174650795" duration="187000" />
+      <workItem from="1605174650795" duration="399000" />
+      <workItem from="1605210050134" duration="3909000" />
+      <workItem from="1605284775494" duration="340000" />
+      <workItem from="1605298012104" duration="2203000" />
+      <workItem from="1605360776830" duration="582000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -330,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605129703657</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="no-eval and no-implied-eval added to ESLint">
+      <created>1605174983773</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605174983774</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +369,8 @@
     <MESSAGE value="Worked on Redux and domain files&#10;Separated dataReducers.js to have the state in initialState.js.&#10;In Domain, created an interfaces folder to store the interfaces.&#10;Created a Variables.tsx file, which will identify variables in the imported data source." />
     <MESSAGE value="Notifications.tsx in domain.&#10;Added a file that will handle any notifications to the user in the system." />
     <MESSAGE value="Restructuring Notifications.tsx, Variables.tsx validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructuring Notifications.tsx, Variables.tsx validation" />
+    <MESSAGE value="no-eval and no-implied-eval added to ESLint" />
+    <option name="LAST_COMMIT_MESSAGE" value="no-eval and no-implied-eval added to ESLint" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
@@ -359,36 +381,36 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605129703159">
+    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605174982978">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605129703159" />
-    <state width="1878" height="932" key="GridCell.Tab.0.bottom" timestamp="1605125547499">
+    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605174982978" />
+    <state width="1878" height="312" key="GridCell.Tab.0.bottom" timestamp="1605214558735">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="932" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605125547499" />
+    <state width="1878" height="312" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605214558735" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
     <state width="1878" height="176" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1604424852743" />
-    <state width="1878" height="932" key="GridCell.Tab.0.center" timestamp="1605125547497">
+    <state width="1878" height="312" key="GridCell.Tab.0.center" timestamp="1605214558731">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="932" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605125547497" />
+    <state width="1878" height="312" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605214558731" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
     <state width="1878" height="176" key="GridCell.Tab.0.center/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1604424852739" />
-    <state width="1878" height="932" key="GridCell.Tab.0.left" timestamp="1605125547496">
+    <state width="1878" height="312" key="GridCell.Tab.0.left" timestamp="1605214558729">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="932" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605125547496" />
+    <state width="1878" height="312" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605214558729" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
     <state width="1878" height="176" key="GridCell.Tab.0.left/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1604424852738" />
-    <state width="1878" height="932" key="GridCell.Tab.0.right" timestamp="1605125547498">
+    <state width="1878" height="312" key="GridCell.Tab.0.right" timestamp="1605214558734">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="932" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605125547498" />
+    <state width="1878" height="312" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605214558734" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
     <state width="1878" height="176" key="GridCell.Tab.0.right/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1604424852741" />

@@ -9,10 +9,10 @@ import FrontNavigation from './components/NotLoggedIn/Navigation/FrontNavigation
 export default function App() {
     return (
         <div>
-            {/*<UserNavigation />*/}
+            <UserNavigation />
             {/*<Appbar />*/}
             {/*<Construction />*/}
-            <FrontNavigation />
+            {/*<FrontNavigation />*/}
         </div>
     );
 }

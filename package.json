@@ -24,9 +24,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/node": "^14.14.7",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
     "aws-amplify": "^3.3.2",
     "material-ui-dropzone": "^3.5.0",
     "material-ui-image": "^3.3.0",
+    "papaparse": "^5.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",
@@ -66,6 +70,8 @@
     "@babel/plugin-syntax-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.12.1",
+    "@types/jest": "^26.0.15",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
@@ -82,10 +88,12 @@
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.5.2",
+    "jest": "^26.6.3",
     "jsdom": "16.4.0",
     "jsdom-global": "3.0.2",
     "prettier": "^2.1.2",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.5"
   }
 }

@@ -3,7 +3,7 @@
 import { IVariables } from './interfaces/IVariables';
 
 //Other domain components
-import {Notifications} from './Notifications';
+import { Notifications } from './Notifications';
 
 export class ImportedDataVariables {
     private importedDataVariables: any;

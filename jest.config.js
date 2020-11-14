@@ -10,6 +10,7 @@ module.exports = {
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
     transform: {
         '^.+\\.js$': 'babel-jest',
+        '^.+\\.tsx?$': 'ts-jest',
         '^.+\\.css$': 'jest-transform-css',
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             '<rootDir>/test/fileMock.js',
@@ -18,7 +19,7 @@ module.exports = {
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
             '<rootDir>/test/fileMock.js',
     },
-    collectCoverageFrom: ['**/*.{js,jsx}', '!**/node_modules/**', '!**/vendor/**'],
+    collectCoverageFrom: ['**/*.{js,jsx,ts,tsx}', '!**/node_modules/**', '!**/vendor/**'],
     clearMocks: true,
     collectCoverage: true,
     coverageDirectory: 'coverage',
