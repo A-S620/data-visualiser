@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/IFile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportData.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,6 +263,9 @@
       <workItem from="1605284775494" duration="340000" />
       <workItem from="1605298012104" duration="2203000" />
       <workItem from="1605360776830" duration="2538000" />
+      <workItem from="1605369763786" duration="113000" />
+      <workItem from="1605448228306" duration="345000" />
+      <workItem from="1605515304371" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -349,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605361545754</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Working on notifications">
+      <created>1605369861324</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605369861324</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,7 +378,8 @@
     <MESSAGE value="Restructuring Notifications.tsx, Variables.tsx validation" />
     <MESSAGE value="no-eval and no-implied-eval added to ESLint" />
     <MESSAGE value="Import data interface and componenet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Import data interface and componenet" />
+    <MESSAGE value="Working on notifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on notifications" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
@@ -380,11 +390,11 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605361544199">
+    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605369860579">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605361544199" />
+    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605369860579" />
     <state width="1878" height="312" key="GridCell.Tab.0.bottom" timestamp="1605214558735">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
@@ -418,11 +428,11 @@
     </state>
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
-    <state x="2000" y="278" key="Vcs.Push.Dialog.v2" timestamp="1605129705969">
-      <screen x="1440" y="23" width="1920" height="1057" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605369865004">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041884615" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605128738815" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605369865004" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2070" y="286" width="659" height="508" key="find.popup" timestamp="1603225284763">
       <screen x="1440" y="0" width="1920" height="1080" />

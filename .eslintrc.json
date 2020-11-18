@@ -27,6 +27,8 @@
     "prefer-destructuring": ["error", {"array":  true, "object":  true}, {"enforceForRenamedProperties" :  true}],
     "no-eval": "error",
     "no-implied-eval": "error",
+    "no-with": "error",
+    "no-plusplus": "error",
     "prettier/prettier": [
       "error",
       {
