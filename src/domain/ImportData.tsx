@@ -11,10 +11,8 @@ export class ImportData {
     }
     public validate(): Notifications {
         const notifications: Notifications = new Notifications();
-        for (var i = 0; i < this.importedData.length; i += 1) {
-            if (this.importedData[i].length === 0) {
-                notifications.addNotification(`File ${this.importedData[i].name} is empty`);
-            }
+        if (this.importedData.length === 0) {
+            notifications.addNotification(`File is empty`);
         }
         return notifications;
     }

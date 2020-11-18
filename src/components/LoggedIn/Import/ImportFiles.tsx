@@ -73,7 +73,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
     }
     private async uploadFiles() {
         console.log(this.state.submitButtonDisabled);
-        console.log("filess"+this.state.files);
+        console.log('filess' + this.state.files);
         const files = new ImportData(this.state.files);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {
@@ -128,13 +128,12 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             filesLimit={1}
                         />
                         <Button
+                            id="submit-files-button"
                             variant="contained"
                             disabled={this.state.submitButtonDisabled}
-                            onClick={
-                                () => {
-                                    this.uploadFiles();
-                                }
-                            }
+                            onClick={() => {
+                                this.uploadFiles();
+                            }}
                         >
                             Submit files
                         </Button>

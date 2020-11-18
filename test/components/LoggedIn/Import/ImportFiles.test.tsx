@@ -11,9 +11,9 @@ import { ImportData } from '../../../../src/domain/ImportData';
 
 jest.mock('../../../../src/domain/ImportData');
 
-// let component: ReactWrapper;
-// beforeEach(() => (component = mount(<ImportFiles />)));
-// afterEach(() => component.unmount());
+let component: ReactWrapper;
+beforeEach(() => (component = mount(<ImportFiles />)));
+afterEach(() => component.unmount());
 
 const exampleJSON = {
     shopping: {
@@ -30,7 +30,7 @@ const exampleJSON = {
     },
 };
 describe('Import Files', () => {
-    const component = mount(<ImportFiles />);
+    // const component = mount(<ImportFiles />);
     it('should have a drag and drop feature', () => {
         //given I have a home page
         //when I go on it
@@ -40,7 +40,7 @@ describe('Import Files', () => {
 
         expect(component.find('input')).toBeTruthy();
     });
-    it('should accept JSON files', () => {
+    it('should accept JSON files in the drag and drop feature', () => {
         //given I have a dropzone area
         //when I drag a JSON file into it
         //it should accept the document
@@ -51,4 +51,15 @@ describe('Import Files', () => {
 
         expect(dropZone.props().accept).toBe('application/json');
     });
+    it('should be disabled when no files have been inputted', () => {
+        //given I have a dropzone area
+        //when I dont have any files imported
+        //then the submit button should be disabled.
+
+        expect(component.find('button#submit-files-button').props().disabled).toBe(true);
+    });
 });
+
+function clickSubmit(): void {
+    component.find('button#submit-files-button').simulate('click');
+}

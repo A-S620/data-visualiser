@@ -6,7 +6,7 @@ export class Notifications {
         this.notifications.push(notification);
     }
 
-    public notificationComma(): string {
+    public notification(): string {
         return this.notifications.join(', ');
     }
 
