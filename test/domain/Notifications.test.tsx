@@ -6,7 +6,7 @@ describe('Notification Message', () => {
 
         notifications.addNotification('error occured');
 
-        expect(notifications.notificationComma()).toBe('error occured');
+        expect(notifications.notification()).toBe('error occured');
     });
 
     it('should print out multiple notification messages', () => {
@@ -15,7 +15,7 @@ describe('Notification Message', () => {
         notifications.addNotification('this happened');
         notifications.addNotification('that happened too');
 
-        expect(notifications.notificationComma()).toBe('this happened, that happened too');
+        expect(notifications.notification()).toBe('this happened, that happened too');
     });
     it('should add notifications', () => {
         const notifications1 = new Notifications();
@@ -26,7 +26,7 @@ describe('Notification Message', () => {
 
         notifications1.concat(notifications2);
 
-        expect(notifications1.notificationComma()).toBe('notification 1, notification 2');
+        expect(notifications1.notification()).toBe('notification 1, notification 2');
     });
     it('should print out error message when second notes is empty', () => {
         const notifications1 = new Notifications();
@@ -36,7 +36,7 @@ describe('Notification Message', () => {
 
         notifications1.concat(notifications2);
 
-        expect(notifications1.notificationComma()).toBe('notification 1');
+        expect(notifications1.notification()).toBe('notification 1');
     });
     it('should print out error message when first notes is empty', () => {
         const notifications1 = new Notifications();
@@ -46,7 +46,7 @@ describe('Notification Message', () => {
 
         notifications1.concat(notifications2);
 
-        expect(notifications1.notificationComma()).toBe('notification 2');
+        expect(notifications1.notification()).toBe('notification 2');
     });
     it('should be empty when both notes are empty', () => {
         const notifications1 = new Notifications();

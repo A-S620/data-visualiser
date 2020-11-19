@@ -3,7 +3,6 @@
 import React from 'react';
 import { Container, Grid, makeStyles, Typography, Button } from '@material-ui/core';
 import { DropzoneArea } from 'material-ui-dropzone';
-
 //Interfaces
 import { AlertType } from '../../../domain/interfaces/INotification';
 //Domain Components
@@ -72,10 +71,9 @@ export default class ImportFiles extends React.Component<{}, IState> {
         }
     }
     private async uploadFiles() {
-        console.log(this.state.submitButtonDisabled);
-        console.log('filess' + this.state.files);
         const files = new ImportData(this.state.files);
         const errors: Notifications = files.validate();
+        console.log(errors.getNotifications());
         if (errors.isEmpty()) {
             try {
                 this.setState({
@@ -88,7 +86,16 @@ export default class ImportFiles extends React.Component<{}, IState> {
                     outcomeMessage: `${e.notification}`,
                 });
             }
+        }else {
+            this.setState({ errors})
         }
+    }
+
+    private refreshFiles() {
+        this.setState({
+            importedFiles: [],
+            files:'',
+        })
     }
 
     public render() {
@@ -100,7 +107,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
                 {!this.state.errors.isEmpty() && (
                     <AlertNotification
                         alert={AlertType.FAILED}
-                        notification={`Error(s): ${this.state.errors.notificationComma()}`}
+                        notification={`Error(s): ${this.state.errors.notification()}`}
                     />
                 )}
                 <Grid
@@ -124,15 +131,18 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             previewChipProps={{ classes: { root: this.classes.previewChip } }}
                             previewText="Selected files"
                             clearOnUnmount={true}
-                            acceptedFiles={['application/json']}
+                            acceptedFiles={['text/csv']}
                             filesLimit={1}
                         />
                         <Button
+                            color="primary"
+                            style={{ marginRight: 10, borderRadius: '5em' }}
                             id="submit-files-button"
                             variant="contained"
                             disabled={this.state.submitButtonDisabled}
                             onClick={() => {
                                 this.uploadFiles();
+                                this.refreshFiles();
                             }}
                         >
                             Submit files
