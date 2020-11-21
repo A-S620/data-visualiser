@@ -63,7 +63,6 @@ export default class ImportFiles extends React.Component<{}, IState> {
                 submitButtonDisabled: false,
                 files: allFiles,
             });
-            console.log(this.state.files);
         } else {
             this.setState({
                 submitButtonDisabled: true,
@@ -71,9 +70,9 @@ export default class ImportFiles extends React.Component<{}, IState> {
         }
     }
     private async uploadFiles() {
+        console.log(this.state.files);
         const files = new ImportData(this.state.files);
         const errors: Notifications = files.validate();
-        console.log(errors.getNotifications());
         if (errors.isEmpty()) {
             try {
                 this.setState({
@@ -131,7 +130,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             previewChipProps={{ classes: { root: this.classes.previewChip } }}
                             previewText="Selected files"
                             clearOnUnmount={true}
-                            acceptedFiles={['text/csv']}
+                            acceptedFiles={['text/csv', 'application/json']}
                             filesLimit={1}
                         />
                         <Button

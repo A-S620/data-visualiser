@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/CSVProcessor.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/TestData/Test.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/CSVProcessor.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/Notifications.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/Notifications.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CSVProcessor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportData.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +97,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.data.extractors.current.export.id" value="CSV-Groovy.csv.groovy" />
+    <property name="database.data.extractors.current.id" value="CSV-Groovy.csv.groovy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -117,6 +119,13 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/TestData" />
+      <recent name="$PROJECT_DIR$/test/components/LoggedIn" />
+      <recent name="$PROJECT_DIR$/test/components/NotloggedIn/Navigation" />
+      <recent name="$PROJECT_DIR$/test/components/NotloggedIn" />
+      <recent name="$PROJECT_DIR$/src/components/LoggedIn" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
       <recent name="$PROJECT_DIR$/public" />
@@ -124,24 +133,15 @@
       <recent name="$PROJECT_DIR$/node_modules/material-kit-react" />
       <recent name="$PROJECT_DIR$" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/components/LoggedIn" />
-      <recent name="$PROJECT_DIR$/test/components/NotloggedIn/Navigation" />
-      <recent name="$PROJECT_DIR$/test/components/NotloggedIn" />
-      <recent name="$PROJECT_DIR$/src/components/LoggedIn" />
-      <recent name="$PROJECT_DIR$/src/components/NotLoggedIn" />
-    </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -284,7 +284,10 @@
       <workItem from="1605448228306" duration="345000" />
       <workItem from="1605515304371" duration="293000" />
       <workItem from="1605716034671" duration="5194000" />
-      <workItem from="1605815339470" duration="3906000" />
+      <workItem from="1605815339470" duration="3989000" />
+      <workItem from="1605888537479" duration="4423000" />
+      <workItem from="1605903891686" duration="2055000" />
+      <workItem from="1605970864867" duration="5297000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -398,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605733842824</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ImportFiles component">
+      <created>1605821033026</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605821033027</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,49 +432,54 @@
     <MESSAGE value="Working on file imports" />
     <MESSAGE value="ImportFiles unit tests" />
     <MESSAGE value="ImportFiles.test.tsx, ImportData.test.tsx unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImportFiles.test.tsx, ImportData.test.tsx unit tests" />
+    <MESSAGE value="ImportFiles component" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImportFiles component" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2000" y="205" key="#ESLint" timestamp="1604332981025">
+    <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2000" y="205" key="#ESLint/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1604332981025" />
+    <state x="2000" y="205" key="#ESLint/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605972822203" />
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602015699535">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1509" y="55" key="CommitChangelistDialog2" timestamp="1605733842378">
+    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1605821032293">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="55" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605733842378" />
+    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605821032293" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
-    <state width="1878" height="312" key="GridCell.Tab.0.bottom" timestamp="1605817995362">
+    <state width="1878" height="655" key="GridCell.Tab.0.bottom" timestamp="1605975575494">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="312" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605817995362" />
+    <state width="1878" height="102" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605972827647" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
+    <state width="1878" height="655" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605975575494" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
     <state width="1878" height="312" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605734299289" />
-    <state width="1878" height="312" key="GridCell.Tab.0.center" timestamp="1605817995359">
+    <state width="1878" height="655" key="GridCell.Tab.0.center" timestamp="1605975575477">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="312" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605817995359" />
+    <state width="1878" height="102" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605972827644" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
+    <state width="1878" height="655" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605975575477" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
     <state width="1878" height="312" key="GridCell.Tab.0.center/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605734299287" />
-    <state width="1878" height="312" key="GridCell.Tab.0.left" timestamp="1605817995351">
+    <state width="1878" height="655" key="GridCell.Tab.0.left" timestamp="1605975575469">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="312" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605817995351" />
+    <state width="1878" height="102" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605972827642" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
+    <state width="1878" height="655" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605975575469" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
     <state width="1878" height="312" key="GridCell.Tab.0.left/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605734299286" />
-    <state width="1878" height="312" key="GridCell.Tab.0.right" timestamp="1605817995361">
+    <state width="1878" height="655" key="GridCell.Tab.0.right" timestamp="1605975575485">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="312" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605817995361" />
+    <state width="1878" height="102" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605972827645" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
+    <state width="1878" height="655" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605975575485" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
     <state width="1878" height="312" key="GridCell.Tab.0.right/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605734299288" />
     <state x="1440" y="179" width="997" height="722" key="SettingsEditor" timestamp="1605716308692">
@@ -473,16 +488,20 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605733845045">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1605821036257">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605733845045" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605821036257" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
-    <state x="2070" y="286" width="659" height="508" key="find.popup" timestamp="1603225284763">
+    <state x="1988" y="199" key="editAsTableFormatDialogDimension" timestamp="1605890618585">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2070" y="286" width="659" height="508" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603225284763" />
+    <state x="1988" y="199" key="editAsTableFormatDialogDimension/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605890618585" />
+    <state x="2070" y="286" width="659" height="522" key="find.popup" timestamp="1605974149089">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2070" y="286" width="659" height="522" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605974149089" />
     <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1602010411732">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
