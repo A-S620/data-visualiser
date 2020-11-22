@@ -4,7 +4,7 @@ import { IFile } from './interfaces/IFile';
 
 //Other domain components
 import { Notifications } from './Notifications';
-import CSVProcessor from "./CSVProcessor";
+import CSVProcessor from './CSVProcessor';
 export class ImportData {
     private importedData: any;
     constructor(importedData: string) {

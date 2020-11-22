@@ -6,13 +6,16 @@ import { Notifications } from './Notifications';
 const papa = require('papaparse');
 
 export default class CSVProcessor {
-    //https://github.com/typeiii/jquery-csv
     private CSVFile: any;
     constructor(CSVFile: string) {
         this.CSVFile = CSVFile;
     }
     public getCSVFile(): string {
         return this.CSVFile;
+    }
+    public CSVToObjects(): Array<object> {
+        const result = papa.parse(this.CSVFile, { header: true });
+        return result.data;
     }
     public CSVToArrays(): Array<Array<any>> {
         const result = papa.parse(this.CSVFile);
@@ -26,9 +29,5 @@ export default class CSVProcessor {
             columns.push(allData[0][i]);
         }
         return columns;
-    }
-    public validate(): Notifications {
-        const notifications: Notifications = new Notifications();
-        return notifications;
     }
 }
