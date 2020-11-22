@@ -1,4 +1,4 @@
-//Imports from libraries
+//Processes imported CSV files
 
 //Other domain components
 import { Notifications } from './Notifications';
