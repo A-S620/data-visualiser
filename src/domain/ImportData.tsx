@@ -5,6 +5,8 @@ import { IFile } from './interfaces/IFile';
 //Other domain components
 import { Notifications } from './Notifications';
 import CSVProcessor from './CSVProcessor';
+import StoreHandler from './StoreHandler';
+import {store} from "../store/store";
 export class ImportData {
     private importedData: any;
     constructor(importedData: string) {
@@ -12,11 +14,17 @@ export class ImportData {
     }
     public validate(): Notifications {
         const notifications: Notifications = new Notifications();
-        const fileProcessor = new CSVProcessor(this.importedData);
         if (this.importedData.length === 0) {
             notifications.addNotification(`File is empty`);
+            return notifications;
+        } else {
+            const fileProcessor = new CSVProcessor(this.importedData);
+            const columns: Array<string> = fileProcessor.getCSVColumns();
+            const fileAsObjects: Array<object> = fileProcessor.CSVToObjects();
+            const fileAsArray: Array<Array<any>> = fileProcessor.CSVToArrays();
+            const storeHandler = new StoreHandler(columns, fileAsObjects, fileAsArray);
+            storeHandler.createColumns();
         }
-        console.log(fileProcessor.getCSVColumns());
         return notifications;
     }
 }
