@@ -15,7 +15,7 @@ export default class StoreHandler {
         this.dataAsArrays = dataAsArrays;
     }
 
-    //create columns in store
+    //create columns in testStore
     public createColumns() {
         const notifications: Notifications = new Notifications();
         store.dispatch({
@@ -27,5 +27,5 @@ export default class StoreHandler {
         const { columns } = store.getState();
         return columns;
     }
-    //create data in store
+    //create data in testStore
 }

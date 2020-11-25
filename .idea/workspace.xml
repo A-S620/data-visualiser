@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/TestStore/reducers/testDataReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/TestStore/testIndex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/TestStore/testReduxState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/TestStore/testStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/StoreHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/StoreHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/StoreHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/initialState.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/CSVProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/CSVProcessor.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="CSV-Groovy.csv.groovy" />
     <property name="database.data.extractors.current.id" value="CSV-Groovy.csv.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -121,6 +122,13 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/components/assets/images" />
+      <recent name="$PROJECT_DIR$/node_modules/material-kit-react" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/TestData" />
       <recent name="$PROJECT_DIR$/test/components/LoggedIn" />
@@ -128,15 +136,19 @@
       <recent name="$PROJECT_DIR$/test/components/NotloggedIn" />
       <recent name="$PROJECT_DIR$/src/components/LoggedIn" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/NotLoggedIn/Navigation" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/components/assets/images" />
-      <recent name="$PROJECT_DIR$/node_modules/material-kit-react" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
-  <component name="RunManager" selected="npm.security-fix">
+  <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -189,9 +201,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.watch" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.security" />
-        <item itemvalue="npm.watch" />
         <item itemvalue="npm.test" />
         <item itemvalue="npm.lint" />
       </list>
@@ -277,7 +289,7 @@
       <workItem from="1605903891686" duration="2055000" />
       <workItem from="1605970864867" duration="5480000" />
       <workItem from="1606030207545" duration="5162000" />
-      <workItem from="1606336874356" duration="786000" />
+      <workItem from="1606336874356" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -419,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606035902748</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Create and get columns from Store in StoreHandler.tsx">
+      <created>1606337833138</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1606337833138</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +466,8 @@
     <MESSAGE value="CSVProcessor.tsx created, still need to do unit tests." />
     <MESSAGE value="CSVProcessor.tsx unit tests." />
     <MESSAGE value="Created StoreHandler.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created StoreHandler.tsx" />
+    <MESSAGE value="Create and get columns from Store in StoreHandler.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create and get columns from Store in StoreHandler.tsx" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
@@ -458,11 +478,11 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1606035901593">
+    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1606337832465">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606035901593" />
+    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606337832465" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1606035957611">
       <screen x="1440" y="0" width="1920" height="1080" />
@@ -502,11 +522,11 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="280" key="Vcs.Push.Dialog.v2" timestamp="1606035912281">
-      <screen x="1440" y="25" width="1920" height="1055" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1606337835855">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606033996709" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606337835855" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2000" y="280" key="Vcs.Push.Dialog.v2/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1606035912281" />
     <state x="1988" y="199" key="editAsTableFormatDialogDimension" timestamp="1605890618585">

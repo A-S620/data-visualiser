@@ -1,6 +1,6 @@
 //Imports from testStore
-import reduxState from '../reduxState';
-export default function dataReducers(state = reduxState, action) {
+import testReduxState from '../testReduxState';
+export default function testDataReducers(state = testReduxState, action) {
     switch (action.type) {
         case 'ADD_COLUMNS':
             return {
