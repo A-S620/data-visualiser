@@ -13,6 +13,7 @@ export default class GetStoreHandler {
     }
     public getDataAsObjects(): Array<object> {
         const { dataAsObjects } = this.reduxStore;
+        console.log(JSON.stringify(dataAsObjects));
         return dataAsObjects;
     }
 }

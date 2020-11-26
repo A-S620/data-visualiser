@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/GetStoreHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/GetStoreHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/GetStoreHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/StoreHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/CreateStoreHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/StoreHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/CreateStoreHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestStore/reducers/testDataReducers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestStore/testIndex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestStore/testReduxState.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestStore/testStore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/CSVProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/CSVProcessor.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/CreateStoreHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/CreateStoreHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +292,7 @@
       <workItem from="1605970864867" duration="5480000" />
       <workItem from="1606030207545" duration="5162000" />
       <workItem from="1606336874356" duration="1798000" />
-      <workItem from="1606395721733" duration="3449000" />
+      <workItem from="1606395721733" duration="6170000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -445,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606338691519</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="GetStoreHandler.tsx, CreateStoreHandler.tsx">
+      <created>1606406561849</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1606406561849</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +485,8 @@
     <MESSAGE value="Created StoreHandler.tsx" />
     <MESSAGE value="Create and get columns from Store in StoreHandler.tsx" />
     <MESSAGE value="TestStore, CSVProcessor.test.tsx, StoreHandler.test.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestStore, CSVProcessor.test.tsx, StoreHandler.test.tsx" />
+    <MESSAGE value="GetStoreHandler.tsx, CreateStoreHandler.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="GetStoreHandler.tsx, CreateStoreHandler.tsx" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
@@ -486,11 +497,11 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015699535" />
-    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1606338691084">
+    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1606406561274">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606337832465" />
+    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606406561274" />
     <state x="1509" y="53" key="CommitChangelistDialog2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338691084" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1606338712563">
@@ -531,11 +542,11 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1606338693616">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1606406564202">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606337835855" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606406564202" />
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338693616" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2000" y="280" key="Vcs.Push.Dialog.v2/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1606035912281" />
@@ -543,13 +554,13 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1988" y="199" key="editAsTableFormatDialogDimension/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605890618585" />
-    <state x="2070" y="286" width="659" height="522" key="find.popup" timestamp="1605974149089">
+    <state x="2070" y="286" width="659" height="522" key="find.popup" timestamp="1606408414651">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2070" y="286" width="659" height="522" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605974149089" />
-    <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1602010411732">
+    <state x="2070" y="286" width="659" height="522" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606408414651" />
+    <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1606406479363">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602010411732" />
+    <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606406479363" />
   </component>
 </project>

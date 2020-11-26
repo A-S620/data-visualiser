@@ -8,28 +8,18 @@ import CSVProcessor from '../../src/domain/CSVProcessor';
 
 //Test Data
 const TestCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
-
-const exampleCSVObject = [
-    {
-        ID: '1',
-        iManufacturer: 'Evans & Sutherland',
-        iMPartNumber: '230-132-111AA',
-        iSimCategory: 'Visual',
-        iPartType: 'PCB',
-        iGroup: '1',
-        iLocation: 'Offsite',
-    },
-    {
-        ID: '2',
-        iManufacturer: 'Evans & Sutherland',
-        iMPartNumber: '230-132-111AA',
-        iSimCategory: 'Visual',
-        iPartType: 'PCB',
-        iGroup: '1',
-        iLocation: 'Offsite',
-    },
+const CSVAsArrays = [
+    ['col1', 'col2', 'col3'],
+    [' 1', '3', 'foo'],
+    [' 2', '5', 'bar'],
+    ['c-1', '7', 'baz'],
 ];
-
+const CSVAsObjects = [
+    { col1: ' 1', col2: '3', col3: 'foo' },
+    { col1: ' 2', col2: '5', col3: 'bar' },
+    { col1: 'c-1', col2: '7', col3: 'baz' },
+];
+const columns = ['col1', 'col2', 'col3'];
 describe('CSVProcessor domain component', () => {
     it('should return the CSV File as string when CSV file is valid', async () => {
         /*
@@ -44,7 +34,7 @@ describe('CSVProcessor domain component', () => {
         //Given I have a CSV file with columns
         //When I create an instance of CSV Processor with my CSV file
         //Then the CSV Processor should return the columns as an array
-        const columns = ['col1', 'col2', 'col3'];
+
         const processor = new CSVProcessor(TestCSV);
         expect(processor.getCSVColumns()).toStrictEqual(columns);
     });
@@ -52,11 +42,6 @@ describe('CSVProcessor domain component', () => {
         //Given I have a CSV file
         //When I create an instance of CSV processor with my CSV file
         //Then the CSVProcessor should return the file as an array of objects
-        const CSVAsObjects = [
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-        ];
 
         const processor = new CSVProcessor(TestCSV);
         expect(processor.CSVToObjects()).toStrictEqual(CSVAsObjects);
@@ -66,11 +51,6 @@ describe('CSVProcessor domain component', () => {
         //When I create an instance of CSV processor with my CSV file
         //Then the CSVProcessor should return the file as an array of arrays
         const processor = new CSVProcessor(TestCSV);
-        expect(processor.CSVToArrays()).toStrictEqual([
-            ['col1', 'col2', 'col3'],
-            [' 1', '3', 'foo'],
-            [' 2', '5', 'bar'],
-            ['c-1', '7', 'baz'],
-        ]);
+        expect(processor.CSVToArrays()).toStrictEqual(CSVAsArrays);
     });
 });
