@@ -5,7 +5,7 @@ import { IFile } from './interfaces/IFile';
 //Other domain components
 import { Notifications } from './Notifications';
 import CSVProcessor from './CSVProcessor';
-import StoreHandler from './StoreHandler';
+import CreateStoreHandler from './CreateStoreHandler';
 import {store} from "../store/store";
 export class ImportData {
     private importedData: any;
@@ -22,7 +22,7 @@ export class ImportData {
             const columns: Array<string> = fileProcessor.getCSVColumns();
             const fileAsObjects: Array<object> = fileProcessor.CSVToObjects();
             const fileAsArray: Array<Array<any>> = fileProcessor.CSVToArrays();
-            const storeHandler = new StoreHandler(columns, fileAsObjects, fileAsArray);
+            const storeHandler = new CreateStoreHandler(columns, fileAsObjects, fileAsArray);
             storeHandler.createColumns();
         }
         return notifications;

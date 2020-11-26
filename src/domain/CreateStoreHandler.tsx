@@ -1,11 +1,11 @@
-//Responsible for handling the redux Store
+//Responsible for adding data to the redux store.
 //Imports from libraries
 //Other domain components
 import { Notifications } from './Notifications';
 
 //Store componenets
 import { store } from '../store/store';
-export default class StoreHandler {
+export default class CreateStoreHandler {
     private columns: any;
     private dataAsObjects: any;
     private dataAsArrays: any;
@@ -14,18 +14,25 @@ export default class StoreHandler {
         this.dataAsObjects = dataAsObjects;
         this.dataAsArrays = dataAsArrays;
     }
-
-    //create columns in testStore
+    //create columns in store
     public createColumns() {
-        const notifications: Notifications = new Notifications();
         store.dispatch({
             type: 'ADD_COLUMNS',
             payload: this.columns,
         });
     }
-    public getColumns(): Array<any> {
-        const { columns } = store.getState();
-        return columns;
+    //create data as arrays in store
+    public createDataAsArrays() {
+        store.dispatch({
+            type: 'ADD_DATA_AS_ARRAYS',
+            payload: this.dataAsArrays,
+        });
     }
-    //create data in testStore
+    //create data as objects in store
+    public createDataAsObjects() {
+        store.dispatch({
+            type: 'ADD_DATA_AS_OBJECTS',
+            payload: this.dataAsObjects,
+        });
+    }
 }
