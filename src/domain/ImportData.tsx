@@ -7,6 +7,8 @@ import { Notifications } from './Notifications';
 import CSVProcessor from './CSVProcessor';
 import CreateStoreHandler from './CreateStoreHandler';
 import GetStoreHandler from './GetStoreHandler';
+
+//Store components
 import { store } from '../store/store';
 export class ImportData {
     private importedData: any;

@@ -4,16 +4,12 @@ import { store } from '../store/store';
 export default class GetStoreHandler {
     private readonly reduxStore = store.getState();
     public getColumns(): Array<any> {
-        const { columns } = this.reduxStore;
-        return columns;
+        return store.getState().columns;
     }
     public getDataAsArrays(): Array<Array<any>> {
-        const { dataAsArrays } = this.reduxStore;
-        return dataAsArrays;
+        return store.getState().dataAsArrays;
     }
     public getDataAsObjects(): Array<object> {
-        const { dataAsObjects } = this.reduxStore;
-        console.log(JSON.stringify(dataAsObjects));
-        return dataAsObjects;
+        return store.getState().dataAsObjects;
     }
 }

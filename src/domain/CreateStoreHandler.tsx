@@ -16,23 +16,30 @@ export default class CreateStoreHandler {
     }
     //create columns in store
     public createColumns() {
-        store.dispatch({
-            type: 'ADD_COLUMNS',
-            payload: this.columns,
-        });
+        for (var i = 0; i < this.columns.length; i += 1) {
+            store.dispatch({
+                type: 'ADD_COLUMNS',
+                payload: this.columns[i],
+            });
+        }
+        console.log(store.getState().columns);
     }
     //create data as arrays in store
     public createDataAsArrays() {
-        store.dispatch({
-            type: 'ADD_DATA_AS_ARRAYS',
-            payload: this.dataAsArrays,
-        });
+        for (let i = 0; i < this.dataAsArrays.length; i += 1) {
+            store.dispatch({
+                type: 'ADD_DATA_AS_ARRAYS',
+                payload: this.dataAsArrays[i],
+            });
+        }
     }
     //create data as objects in store
     public createDataAsObjects() {
-        store.dispatch({
-            type: 'ADD_DATA_AS_OBJECTS',
-            payload: this.dataAsObjects,
-        });
+        for (let i = 0; i < this.dataAsObjects.length; i += 1) {
+            store.dispatch({
+                type: 'ADD_DATA_AS_OBJECTS',
+                payload: this.dataAsObjects[i],
+            });
+        }
     }
 }

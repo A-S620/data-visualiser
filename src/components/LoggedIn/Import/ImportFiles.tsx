@@ -70,7 +70,6 @@ export default class ImportFiles extends React.Component<{}, IState> {
         }
     }
     private async uploadFiles() {
-        console.log(this.state.files);
         const files = new ImportData(this.state.files);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {

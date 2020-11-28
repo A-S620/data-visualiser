@@ -15,6 +15,7 @@ export default class CSVProcessor {
     }
     public CSVToObjects(): Array<object> {
         const result = papa.parse(this.CSVFile, { header: true });
+        const dataObjects: Array<object> = [];
         return result.data;
     }
     public CSVToArrays(): Array<Array<any>> {
@@ -25,7 +26,7 @@ export default class CSVProcessor {
         var columns: string[];
         columns = [];
         const allData = this.CSVToArrays();
-        for (var i = 0; i < allData[0].length; i += 1) {
+        for (let i = 0; i < allData[0].length; i += 1) {
             columns.push(allData[0][i]);
         }
         return columns;

@@ -5,12 +5,12 @@ export default function dataReducers(state = reduxState, action) {
         case 'ADD_DATA_AS_ARRAYS':
             return {
                 ...state,
-                dataAsArrays: [state.dataAsArrays, action.payload],
+                dataAsArrays: [...state.dataAsArrays, action.payload],
             };
         case 'ADD_DATA_AS_OBJECTS':
             return {
                 ...state,
-                dataAsObjects: [state.dataAsObjects, action.payload],
+                dataAsObjects: [...state.dataAsObjects, action.payload],
             };
         case 'ADD_COLUMNS':
             return {
