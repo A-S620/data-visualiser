@@ -21,15 +21,18 @@ export class ImportData {
             notifications.addNotification(`File is empty`);
             return notifications;
         } else {
-            const fileProcessor = new CSVProcessor(this.importedData);
-            const columns: Array<string> = fileProcessor.getCSVColumns();
-            const fileAsObjects: Array<object> = fileProcessor.CSVToObjects();
-            const fileAsArray: Array<Array<any>> = fileProcessor.CSVToArrays();
-            const storeHandler = new CreateStoreHandler(columns, fileAsObjects, fileAsArray);
-            storeHandler.createColumns();
-            storeHandler.createDataAsArrays();
-            storeHandler.createDataAsObjects();
+            this.processCSV();
         }
         return notifications;
+    }
+    private processCSV() {
+        const fileProcessor = new CSVProcessor(this.importedData);
+        const columns: Array<string> = fileProcessor.getCSVColumns();
+        const fileAsObjects: Array<object> = fileProcessor.CSVToObjects();
+        const fileAsArray: Array<Array<any>> = fileProcessor.CSVToArrays();
+        const storeHandler = new CreateStoreHandler(columns, fileAsObjects, fileAsArray);
+        storeHandler.createColumns();
+        storeHandler.createDataAsArrays();
+        storeHandler.createDataAsObjects();
     }
 }
