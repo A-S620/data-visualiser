@@ -1,13 +1,14 @@
 //Handles file imports in the front end.
 //Imports from libraries
 import React from 'react';
-import { Container, Grid, makeStyles, Typography, Button } from '@material-ui/core';
+import { Button, Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import { DropzoneArea } from 'material-ui-dropzone';
 //Interfaces
 import { AlertType } from '../../../domain/interfaces/INotification';
+import { FileType } from '../../../domain/interfaces/IFileType';
 //Domain Components
-import { Notifications } from '../../../domain/Notifications';
-import { ImportData } from '../../../domain/ImportData';
+import { Notifications } from '../../../domain/UIHandlers/Notifications';
+import { ImportData } from '../../../domain/UIHandlers/ImportData';
 //UI Componenets
 import { AlertNotification } from '../Notifications/AlertNotification';
 
@@ -19,6 +20,7 @@ interface IState {
     outcomeMessage: string;
     errors: Notifications;
     files: string;
+    fileType: FileType;
 }
 export default class ImportFiles extends React.Component<{}, IState> {
     private classes: any = makeStyles((theme) => ({
@@ -53,7 +55,15 @@ export default class ImportFiles extends React.Component<{}, IState> {
             outcomeMessage: '',
             errors: new Notifications(),
             files: '',
+            fileType: FileType.CSV,
         };
+    }
+    private checkFileType(files: File[]): FileType {
+        const file = files[0];
+        if (file.type === 'text/csv') {
+            return FileType.CSV;
+        }
+        return FileType.JSON;
     }
     private async addFiles(files: File[]) {
         this.setState({ importedFiles: files });
@@ -62,6 +72,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             this.setState({
                 submitButtonDisabled: false,
                 files: allFiles,
+                fileType: this.checkFileType(files),
             });
         } else {
             this.setState({
@@ -70,7 +81,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
         }
     }
     private async uploadFiles() {
-        const files = new ImportData(this.state.files);
+        const files = new ImportData(this.state.files, this.state.fileType);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {
             try {
@@ -84,16 +95,16 @@ export default class ImportFiles extends React.Component<{}, IState> {
                     outcomeMessage: `${e.notification}`,
                 });
             }
-        }else {
-            this.setState({ errors})
+        } else {
+            this.setState({ errors });
         }
     }
 
     private refreshFiles() {
         this.setState({
             importedFiles: [],
-            files:'',
-        })
+            files: '',
+        });
     }
 
     public render() {

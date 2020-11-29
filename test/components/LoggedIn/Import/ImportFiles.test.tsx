@@ -7,9 +7,9 @@ import React from 'react';
 import ImportFiles from '../../../../src/components/LoggedIn/Import/ImportFiles';
 
 //Domain Componenets
-import { ImportData } from '../../../../src/domain/ImportData';
+import { ImportData } from '../../../../src/domain/UIHandlers/ImportData';
 
-jest.mock('../../../../src/domain/ImportData');
+jest.mock('../../../../src/domain/UIHandlers/ImportData');
 
 let component: ReactWrapper;
 beforeEach(() => (component = mount(<ImportFiles />)));

@@ -1,7 +1,7 @@
 //Processes imported CSV files
 
 //Other domain components
-import { Notifications } from './Notifications';
+import { Notifications } from '../UIHandlers/Notifications';
 
 const papa = require('papaparse');
 
@@ -14,12 +14,12 @@ export default class CSVProcessor {
         return this.CSVFile;
     }
     public CSVToObjects(): Array<object> {
-        const result = papa.parse(this.CSVFile, { header: true });
+        const result = papa.parse(this.CSVFile, { header: true, skipEmptyLines: true });
         const dataObjects: Array<object> = [];
         return result.data;
     }
     public CSVToArrays(): Array<Array<any>> {
-        const result = papa.parse(this.CSVFile);
+        const result = papa.parse(this.CSVFile, { skipEmptyLines: true });
         return result.data;
     }
     public getCSVColumns(): Array<string> {

@@ -1,28 +1,34 @@
 //A class that handles the imported data.
 //Interfaces
-import { IFile } from './interfaces/IFile';
 
 //Other domain components
 import { Notifications } from './Notifications';
-import CSVProcessor from './CSVProcessor';
-import CreateStoreHandler from './CreateStoreHandler';
-import GetStoreHandler from './GetStoreHandler';
+import CSVProcessor from '../FileProcessors/CSVProcessor';
+import CreateStoreHandler from '../StoreHandlers/CreateStoreHandler';
+import JSONProcessor from '../FileProcessors/JSONProcessor';
+//Interfaces
+import { FileType, IFileType } from '../interfaces/IFileType';
 
-//Store components
-import { store } from '../store/store';
 export class ImportData {
     private importedData: any;
-    constructor(importedData: string) {
+    private fileType: FileType;
+    constructor(importedData: string, fileType: FileType) {
         this.importedData = importedData;
+        this.fileType = fileType;
     }
     public validate(): Notifications {
         const notifications: Notifications = new Notifications();
         if (this.importedData.length === 0) {
             notifications.addNotification(`File is empty`);
             return notifications;
-        } else {
+        }
+        if (this.fileType === FileType.JSON) {
+            this.processJSON();
+        }
+        if (this.fileType === FileType.CSV) {
             this.processCSV();
         }
+
         return notifications;
     }
     private processCSV() {
@@ -34,5 +40,8 @@ export class ImportData {
         storeHandler.createColumns();
         storeHandler.createDataAsArrays();
         storeHandler.createDataAsObjects();
+    }
+    private processJSON() {
+        const fileProcessor = new JSONProcessor(this.importedData);
     }
 }

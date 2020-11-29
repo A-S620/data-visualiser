@@ -1,10 +1,10 @@
 //Responsible for adding data to the redux store.
 //Imports from libraries
 //Other domain components
-import { Notifications } from './Notifications';
+import { Notifications } from '../UIHandlers/Notifications';
 
 //Store componenets
-import { store } from '../store/store';
+import { store } from '../../store/store';
 export default class CreateStoreHandler {
     private columns: any;
     private dataAsObjects: any;

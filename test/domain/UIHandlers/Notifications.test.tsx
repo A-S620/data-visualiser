@@ -1,4 +1,4 @@
-import { Notifications } from '../../src/domain/Notifications';
+import { Notifications } from '../../../src/domain/UIHandlers/Notifications';
 
 describe('Notification Message', () => {
     it('should print out single notification', () => {

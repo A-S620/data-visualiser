@@ -1,5 +1,5 @@
 const Papa = require('papaparse');
-const config = {
+const papaParseConfig = {
     delimiter: '', // auto-detect
     newline: '', // auto-detect
     quoteChar: '"',
@@ -26,3 +26,5 @@ const config = {
     transform: undefined,
     delimitersToGuess: [',', '\t', '|', ';', Papa.RECORD_SEP, Papa.UNIT_SEP],
 };
+
+export default papaParseConfig;

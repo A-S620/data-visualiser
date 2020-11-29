@@ -1,13 +1,14 @@
 //Imports from libraries
-import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
 
+//Interface Components
+import {FileType} from '../../../src/domain/interfaces/IFileType';
 //Domain Components
-import { ImportData } from '../../src/domain/ImportData';
+import {ImportData} from '../../../src/domain/UIHandlers/ImportData';
 
 //Store components
-import { store } from '../../src/store/store';
+import {store} from '../../../src/store/store';
 //Test Data
 const TestCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
 const CSVAsArrays = [
@@ -28,7 +29,7 @@ describe('Import Data', () => {
         //When I import an empty file
         //Then I should get an error saying the file is empty
 
-        const importDataNotifications = new ImportData('').validate();
+        const importDataNotifications = new ImportData('', FileType.CSV).validate();
 
         expect(importDataNotifications.notification()).toBe('File is empty');
     });
@@ -37,7 +38,7 @@ describe('Import Data', () => {
         //When I import data
         //Then it should add the file to the redux store correctly
 
-        const importDataNotifications = new ImportData(TestCSV).validate();
+        const importDataNotifications = new ImportData(TestCSV, FileType.CSV).validate();
         expect(store.getState().columns).toStrictEqual(columns);
         expect(store.getState().dataAsObjects).toStrictEqual(CSVAsObjects);
         expect(store.getState().dataAsArrays).toStrictEqual(CSVAsArrays);
