@@ -43,5 +43,8 @@ export class ImportData {
     }
     private processJSON() {
         const fileProcessor = new JSONProcessor(this.importedData);
+        console.log(fileProcessor.getJSONFile());
+        console.log(fileProcessor.getFields());
+        console.log(fileProcessor.convertToCSV());
     }
 }
