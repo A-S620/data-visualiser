@@ -6,48 +6,47 @@ const papa = require('papaparse');
 const { Parser } = require('json2csv');
 
 export default class JSONProcessor {
-    private JSONFile: any;
-    constructor(JSONFile: any) {
-        this.JSONFile = JSONFile;
+    private jsonFile: any;
+    constructor(jsonFile: any) {
+        this.jsonFile = jsonFile;
     }
     public getJSONFile(): any {
-        return this.JSONFile;
+        return this.jsonFile;
     }
-    public getFields(): Array<string> {
+    public getJSONFields(): Array<string> {
         let firstRow = '';
-        for (var i = 0; i < this.JSONFile.length && this.JSONFile[i] !== '}'; i += 1) {
-            firstRow = firstRow + this.JSONFile[i];
+        for (var i = 0; i < this.jsonFile.length && this.jsonFile[i] !== '}'; i += 1) {
+            firstRow = firstRow + this.jsonFile[i];
         }
         firstRow = firstRow + '}';
         const firstRowParsed = JSON.parse(firstRow);
-        const test = [];
-        test.push(firstRowParsed);
-        console.log(test);
         return Object.keys(firstRowParsed);
     }
-    public convertToCSV(): string {
-        const fields = this.getFields();
+    public jsonToObjects(): Array<object> {
+        let jsonObject = '';
+        const objectsArray = [];
+        for (var i = 0; i < this.jsonFile.length; i += 1) {
+            if (this.jsonFile[i] !== '}') {
+                jsonObject = jsonObject + this.jsonFile[i];
+            } else {
+                jsonObject = jsonObject + '}';
+                const rowParsed = JSON.parse(jsonObject);
+                objectsArray.push(rowParsed);
+                jsonObject = '';
+            }
+        }
+        return objectsArray;
+    }
+    public jsonToArrays(): Array<Array<any>> {
+        const jsonAsCSV = this.convertToCSV(this.jsonToObjects());
+        const result = papa.parse(jsonAsCSV, { skipEmptyLines: true });
+        return result.data;
+    }
+    private convertToCSV(JSONObjects: Array<object>): string {
+        const fields = this.getJSONFields();
         const opts = { fields };
         const parser = new Parser(opts);
-        const csv = parser.parse(this.JSONFile);
+        const csv = parser.parse(JSONObjects);
         return csv;
     }
-    // public JSONToObjects(): Array<object> {
-    //     const result = [];
-    //     for (var i = 0; i < this.JSONFile.length; i += 1) {
-    //         result.push(this.JSONFile[i]);
-    //     }
-    //     return result;
-    // }
-    // public JSONToArrays(): Array<Array<any>> {
-    //     const result = papa.unparse(this.JSONFile, { header: false, skipEmptyLines: true });
-    //     return result.data;
-    // }
-    // public getJSONColumns(): Array<string> {
-    //     const keys = [];
-    //     for (const [key, value] of Object.entries(this.JSONFile[0])) {
-    //         keys.push(key);
-    //     }
-    //     return keys;
-    // }
 }

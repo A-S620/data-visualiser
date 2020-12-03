@@ -6,26 +6,25 @@ import { Notifications } from '../UIHandlers/Notifications';
 const papa = require('papaparse');
 
 export default class CSVProcessor {
-    private CSVFile: any;
-    constructor(CSVFile: string) {
-        this.CSVFile = CSVFile;
+    private csvFile: any;
+    constructor(csvFile: string) {
+        this.csvFile = csvFile;
     }
     public getCSVFile(): string {
-        return this.CSVFile;
+        return this.csvFile;
     }
-    public CSVToObjects(): Array<object> {
-        const result = papa.parse(this.CSVFile, { header: true, skipEmptyLines: true });
-        const dataObjects: Array<object> = [];
+    public csvToObjects(): Array<object> {
+        const result = papa.parse(this.csvFile, { header: true, skipEmptyLines: true });
         return result.data;
     }
-    public CSVToArrays(): Array<Array<any>> {
-        const result = papa.parse(this.CSVFile, { skipEmptyLines: true });
+    public csvToArrays(): Array<Array<any>> {
+        const result = papa.parse(this.csvFile, { skipEmptyLines: true });
         return result.data;
     }
-    public getCSVColumns(): Array<string> {
+    public getCSVFields(): Array<string> {
         var columns: string[];
         columns = [];
-        const allData = this.CSVToArrays();
+        const allData = this.csvToArrays();
         for (let i = 0; i < allData[0].length; i += 1) {
             columns.push(allData[0][i]);
         }
