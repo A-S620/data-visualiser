@@ -32,19 +32,23 @@ export class ImportData {
         return notifications;
     }
     private processCSV() {
-        const fileProcessor = new CSVProcessor(this.importedData);
-        const columns: Array<string> = fileProcessor.getCSVColumns();
-        const fileAsObjects: Array<object> = fileProcessor.CSVToObjects();
-        const fileAsArray: Array<Array<any>> = fileProcessor.CSVToArrays();
+        const csvProcessor = new CSVProcessor(this.importedData);
+        const columns: Array<string> = csvProcessor.getCSVFields();
+        const fileAsObjects: Array<object> = csvProcessor.csvToObjects();
+        const fileAsArray: Array<Array<any>> = csvProcessor.csvToArrays();
+        this.storeHandler(columns, fileAsObjects, fileAsArray);
+    }
+    private processJSON() {
+        const jsonProcessor = new JSONProcessor(this.importedData);
+        const columns: Array<string> = jsonProcessor.getJSONFields();
+        const fileAsObjects: Array<object> = jsonProcessor.jsonToObjects();
+        const fileAsArray: Array<Array<any>> = jsonProcessor.jsonToArrays();
+        this.storeHandler(columns, fileAsObjects, fileAsArray);
+    }
+    private storeHandler(columns: Array<string>, fileAsObjects: Array<object>, fileAsArray: Array<Array<any>>) {
         const storeHandler = new CreateStoreHandler(columns, fileAsObjects, fileAsArray);
         storeHandler.createColumns();
         storeHandler.createDataAsArrays();
         storeHandler.createDataAsObjects();
-    }
-    private processJSON() {
-        const fileProcessor = new JSONProcessor(this.importedData);
-        console.log(fileProcessor.getJSONFile());
-        console.log(fileProcessor.getFields());
-        console.log(fileProcessor.convertToCSV());
     }
 }

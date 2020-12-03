@@ -19,7 +19,7 @@ const csvAsObjects = [
     { col1: ' 2', col2: '5', col3: 'bar' },
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
-const fields = ['col1', 'col2', 'col3'];
+const csvFields = ['col1', 'col2', 'col3'];
 describe('CSVProcessor domain component', () => {
     it('should return the CSV File as string when CSV file is valid', async () => {
         /*
@@ -30,13 +30,13 @@ describe('CSVProcessor domain component', () => {
         const processor = new CSVProcessor(testCSV);
         expect(processor.getCSVFile()).toBe(testCSV);
     });
-    it('should return the fields from the testCSV', () => {
-        //Given I have a CSV file with fields
+    it('should return the csvFields from the testCSV', () => {
+        //Given I have a CSV file with csvFields
         //When I create an instance of CSV Processor with my CSV file
-        //Then the CSV Processor should return the fields as an array
+        //Then the CSV Processor should return the csvFields as an array
 
         const processor = new CSVProcessor(testCSV);
-        expect(processor.getCSVFields()).toStrictEqual(fields);
+        expect(processor.getCSVFields()).toStrictEqual(csvFields);
     });
     it('should return the testCSV file as an array of objects', () => {
         //Given I have a CSV file

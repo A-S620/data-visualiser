@@ -22,7 +22,6 @@ export default class CreateStoreHandler {
                 payload: this.columns[i],
             });
         }
-        console.log(store.getState().columns);
     }
     //create data as arrays in store
     public createDataAsArrays() {

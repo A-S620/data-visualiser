@@ -7,7 +7,6 @@ import React from 'react';
 import JSONProcessor from '../../../src/domain/FileProcessors/JSONProcessor';
 
 //Test Data
-import * as TestData from './Test.json';
 const testJSON = {
     id: 1,
     first_name: 'Jeanette',
@@ -30,7 +29,7 @@ const jsonAsObjects = [
         ip_address: '26.58.193.2',
     },
 ];
-const fields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'];
+const jsonFields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'];
 describe('JSONProcessor domain component', () => {
     it('should return the JSON File as string when JSON file is valid', async () => {
         /*
@@ -47,7 +46,7 @@ describe('JSONProcessor domain component', () => {
         //Then the JSON Processor should return the columns as an array
 
         const processor = new JSONProcessor(JSON.stringify(testJSON));
-        expect(processor.getJSONFields()).toStrictEqual(fields);
+        expect(processor.getJSONFields()).toStrictEqual(jsonFields);
     });
     it('should return the testJSON file as an array of objects', () => {
         //Given I have a JSON file

@@ -12,7 +12,6 @@ import { ImportData } from '../../../domain/UIHandlers/ImportData';
 //UI Componenets
 import { AlertNotification } from '../Notifications/AlertNotification';
 
-//TODO: JSON files accept.
 interface IState {
     importedFiles: Array<File>;
     submitButtonDisabled: boolean;
