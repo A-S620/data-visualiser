@@ -4,7 +4,7 @@
 //Other domain components
 import { Notifications } from './Notifications';
 import CSVProcessor from '../FileProcessors/CSVProcessor';
-import CreateStoreHandler from '../StoreHandlers/CreateStoreHandler';
+import CreateImportedDataStore from '../StoreHandlers/CreateImportedDataStore';
 import JSONProcessor from '../FileProcessors/JSONProcessor';
 //Interfaces
 import { FileType, IFileType } from '../interfaces/IFileType';
@@ -46,7 +46,7 @@ export class ImportData {
         this.storeHandler(dataFields, fileAsObjects, fileAsArray);
     }
     private storeHandler(dataFields: Array<string>, fileAsObjects: Array<object>, fileAsArray: Array<Array<any>>) {
-        const storeHandler = new CreateStoreHandler(dataFields, fileAsObjects, fileAsArray);
+        const storeHandler = new CreateImportedDataStore(dataFields, fileAsObjects, fileAsArray);
         storeHandler.createDataFields();
         storeHandler.createDataAsArrays();
         storeHandler.createDataAsObjects();

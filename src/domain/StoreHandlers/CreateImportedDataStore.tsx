@@ -5,7 +5,7 @@ import { Notifications } from '../UIHandlers/Notifications';
 
 //Store componenets
 import { store } from '../../store/store';
-export default class CreateStoreHandler {
+export default class CreateImportedDataStore {
     private dataFields: any;
     private dataAsObjects: any;
     private dataAsArrays: any;

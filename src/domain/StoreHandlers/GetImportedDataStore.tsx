@@ -2,7 +2,7 @@
 //Interfaces
 //Store components
 import { store } from '../../store/store';
-export default class GetStoreHandler {
+export default class GetImportedDataStore {
     public getDataFields(): Array<string> {
         return store.getState().dataFields;
     }

@@ -4,8 +4,8 @@ import 'jsdom-global/register';
 import React from 'react';
 
 //Domain Components
-import CreateStoreHandler from '../../../src/domain/StoreHandlers/CreateStoreHandler';
-import GetStoreHandler from '../../../src/domain/StoreHandlers/GetStoreHandler';
+import CreateImportedDataStore from '../../../src/domain/StoreHandlers/CreateImportedDataStore';
+import GetImportedDataStore from '../../../src/domain/StoreHandlers/GetImportedDataStore';
 
 //Store components
 import { store } from '../../../src/store/store';
@@ -23,32 +23,32 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
-describe('CreateStoreHandler domain component', () => {
+describe('CreateImportedDataStore domain component', () => {
     it('Should add dataFields to the dataFields attribute in the Redux State', () => {
         //Given I have dataFields as a array
-        //When I create an instance of CreateStoreHandler
-        //Then the CreateStoreHandler should add the dataFields to the dataFields attribute in the redux state
-        const createStoreHandler = new CreateStoreHandler(dataFields, dataAsObjects, dataAsArrays);
+        //When I create an instance of CreateImportedDataStore
+        //Then the CreateImportedDataStore should add the dataFields to the dataFields attribute in the redux state
+        const createStoreHandler = new CreateImportedDataStore(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataFields();
-        const getStoreHandler = new GetStoreHandler();
+        const getStoreHandler = new GetImportedDataStore();
         expect(getStoreHandler.getDataFields()).toStrictEqual(dataFields);
     });
     it('Should add data as Arrays to the dataAsArrays attribute in the redux store', () => {
         //Given I have CSV data as an array
-        //When I create an instance of CreateStoreHandler
-        //Then the CreateStoreHandler should add the data to the dataAsArrays attribute in the redux state
-        const createStoreHandler = new CreateStoreHandler(dataFields, dataAsObjects, dataAsArrays);
+        //When I create an instance of CreateImportedDataStore
+        //Then the CreateImportedDataStore should add the data to the dataAsArrays attribute in the redux state
+        const createStoreHandler = new CreateImportedDataStore(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsArrays();
-        const getStoreHandler = new GetStoreHandler();
+        const getStoreHandler = new GetImportedDataStore();
         expect(getStoreHandler.getDataAsArrays()).toStrictEqual(dataAsArrays);
     });
     it('Should add data as Objects to the dataAsObjects attribute in the redux store', () => {
         //Given I have CSV data as an object
-        //When I create an instance of CreateStoreHandler
-        //Then the CreateStoreHandler should add the data to the dataAsObjects attribute in the redux state
-        const createStoreHandler = new CreateStoreHandler(dataFields, dataAsObjects, dataAsArrays);
+        //When I create an instance of CreateImportedDataStore
+        //Then the CreateImportedDataStore should add the data to the dataAsObjects attribute in the redux state
+        const createStoreHandler = new CreateImportedDataStore(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsObjects();
-        const getStoreHandler = new GetStoreHandler();
+        const getStoreHandler = new GetImportedDataStore();
         expect(getStoreHandler.getDataAsObjects()).toStrictEqual(dataAsObjects);
     });
 });

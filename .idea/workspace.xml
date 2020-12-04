@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/FileProcessors/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/FileProcessors/CSVProcessor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/StoreHandlers/CreateStoreHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/StoreHandlers/CreateStoreHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/StoreHandlers/GetStoreHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/StoreHandlers/GetStoreHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/FileProcessors/JSONProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/FileProcessors/JSONProcessor.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/StoreHandlers/CreateStoreHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/StoreHandlers/CreateStoreHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/StoreHandlers/GetStoreHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/StoreHandlers/GetStoreHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/dataReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/importedDataReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/importedDataState.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +291,7 @@
       <workItem from="1606839361825" duration="4663000" />
       <workItem from="1606922580137" duration="8484000" />
       <workItem from="1607008202497" duration="5337000" />
-      <workItem from="1607087394026" duration="1090000" />
+      <workItem from="1607087394026" duration="1413000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -518,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607014352982</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refactoring- renaming variables">
+      <created>1607088587312</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607088587312</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed." />
     <MESSAGE value="Worked on Redux and domain files&#10;Separated dataReducers.js to have the state in initialState.js.&#10;In Domain, created an interfaces folder to store the interfaces.&#10;Created a Variables.tsx file, which will identify variables in the imported data source." />
     <MESSAGE value="Notifications.tsx in domain.&#10;Added a file that will handle any notifications to the user in the system." />
     <MESSAGE value="Restructuring Notifications.tsx, Variables.tsx validation" />
@@ -551,7 +549,8 @@
     <MESSAGE value="JSONProcessor.tsx return fields" />
     <MESSAGE value="JSONProcessor.tsx and JSONProcessor.test.tsx" />
     <MESSAGE value="ImportData.tsx and ImportData.test.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImportData.tsx and ImportData.test.tsx" />
+    <MESSAGE value="Refactoring- renaming variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring- renaming variables" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
@@ -566,11 +565,11 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606637347061" />
-    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1607014352410">
+    <state x="1509" y="53" key="CommitChangelistDialog2" timestamp="1607088586698">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607014352410" />
+    <state x="1509" y="53" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607088586698" />
     <state x="1509" y="53" key="CommitChangelistDialog2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338691084" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1607014442512">
@@ -619,11 +618,11 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607014355596">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607088590019">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607014355596" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607088590019" />
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338693616" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2000" y="280" key="Vcs.Push.Dialog.v2/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1606035912281" />
