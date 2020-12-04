@@ -22,12 +22,12 @@ export default class CSVProcessor {
         return result.data;
     }
     public getCSVFields(): Array<string> {
-        var columns: string[];
-        columns = [];
+        var dataFields: string[];
+        dataFields = [];
         const allData = this.csvToArrays();
         for (let i = 0; i < allData[0].length; i += 1) {
-            columns.push(allData[0][i]);
+            dataFields.push(allData[0][i]);
         }
-        return columns;
+        return dataFields;
     }
 }

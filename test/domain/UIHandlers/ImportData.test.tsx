@@ -63,7 +63,7 @@ describe('Import Data', () => {
         //Then it should add the file to the redux store correctly
 
         const importDataNotifications = new ImportData(testCSV, FileType.CSV).validate();
-        expect(store.getState().columns).toStrictEqual(csvFields);
+        expect(store.getState().dataFields).toStrictEqual(csvFields);
         expect(store.getState().dataAsObjects).toStrictEqual(csvAsObjects);
         expect(store.getState().dataAsArrays).toStrictEqual(csvAsArrays);
     });
@@ -73,7 +73,7 @@ describe('Import Data', () => {
         //Then it should add the file to the redux store correctly
 
         const importDataNotifications = new ImportData(JSON.stringify(testJSON), FileType.JSON).validate();
-        expect(store.getState().columns).toStrictEqual(jsonFields);
+        expect(store.getState().dataFields).toStrictEqual(jsonFields);
         expect(store.getState().dataAsObjects).toStrictEqual(jsonAsObjects);
         expect(store.getState().dataAsArrays).toStrictEqual(jsonAsArrays);
     });

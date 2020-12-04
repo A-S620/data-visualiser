@@ -3,9 +3,8 @@
 //Store components
 import { store } from '../../store/store';
 export default class GetStoreHandler {
-    private readonly reduxStore = store.getState();
-    public getColumns(): Array<string> {
-        return store.getState().columns;
+    public getDataFields(): Array<string> {
+        return store.getState().dataFields;
     }
     public getDataAsArrays(): Array<Array<any>> {
         return store.getState().dataAsArrays;

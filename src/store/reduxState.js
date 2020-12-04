@@ -1,5 +1,5 @@
 const reduxState = {
-    columns: [],
+    dataFields: [],
     dataAsObjects: [],
     dataAsArrays: [],
 };

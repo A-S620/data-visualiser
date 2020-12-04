@@ -33,21 +33,21 @@ export class ImportData {
     }
     private processCSV() {
         const csvProcessor = new CSVProcessor(this.importedData);
-        const columns: Array<string> = csvProcessor.getCSVFields();
+        const dataFields: Array<string> = csvProcessor.getCSVFields();
         const fileAsObjects: Array<object> = csvProcessor.csvToObjects();
         const fileAsArray: Array<Array<any>> = csvProcessor.csvToArrays();
-        this.storeHandler(columns, fileAsObjects, fileAsArray);
+        this.storeHandler(dataFields, fileAsObjects, fileAsArray);
     }
     private processJSON() {
         const jsonProcessor = new JSONProcessor(this.importedData);
-        const columns: Array<string> = jsonProcessor.getJSONFields();
+        const dataFields: Array<string> = jsonProcessor.getJSONFields();
         const fileAsObjects: Array<object> = jsonProcessor.jsonToObjects();
         const fileAsArray: Array<Array<any>> = jsonProcessor.jsonToArrays();
-        this.storeHandler(columns, fileAsObjects, fileAsArray);
+        this.storeHandler(dataFields, fileAsObjects, fileAsArray);
     }
-    private storeHandler(columns: Array<string>, fileAsObjects: Array<object>, fileAsArray: Array<Array<any>>) {
-        const storeHandler = new CreateStoreHandler(columns, fileAsObjects, fileAsArray);
-        storeHandler.createColumns();
+    private storeHandler(dataFields: Array<string>, fileAsObjects: Array<object>, fileAsArray: Array<Array<any>>) {
+        const storeHandler = new CreateStoreHandler(dataFields, fileAsObjects, fileAsArray);
+        storeHandler.createDataFields();
         storeHandler.createDataAsArrays();
         storeHandler.createDataAsObjects();
     }

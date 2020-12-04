@@ -6,20 +6,20 @@ import { Notifications } from '../UIHandlers/Notifications';
 //Store componenets
 import { store } from '../../store/store';
 export default class CreateStoreHandler {
-    private columns: any;
+    private dataFields: any;
     private dataAsObjects: any;
     private dataAsArrays: any;
-    constructor(columns: Array<string>, dataAsObjects: Array<object>, dataAsArrays: Array<Array<any>>) {
-        this.columns = columns;
+    constructor(dataFields: Array<string>, dataAsObjects: Array<object>, dataAsArrays: Array<Array<any>>) {
+        this.dataFields = dataFields;
         this.dataAsObjects = dataAsObjects;
         this.dataAsArrays = dataAsArrays;
     }
-    //create columns in store
-    public createColumns() {
-        for (var i = 0; i < this.columns.length; i += 1) {
+    //create dataFields in store
+    public createDataFields() {
+        for (var i = 0; i < this.dataFields.length; i += 1) {
             store.dispatch({
-                type: 'ADD_COLUMNS',
-                payload: this.columns[i],
+                type: 'ADD_DATA_FIELDS',
+                payload: this.dataFields[i],
             });
         }
     }

@@ -12,10 +12,10 @@ export default function dataReducers(state = reduxState, action) {
                 ...state,
                 dataAsObjects: [...state.dataAsObjects, action.payload],
             };
-        case 'ADD_COLUMNS':
+        case 'ADD_DATA_FIELDS':
             return {
                 ...state,
-                columns: [...state.columns, action.payload],
+                dataFields: [...state.dataFields, action.payload],
             };
         default:
             return state;

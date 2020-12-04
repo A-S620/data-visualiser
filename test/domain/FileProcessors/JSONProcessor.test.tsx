@@ -1,7 +1,5 @@
 //Imports from libraries
-import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
-import React from 'react';
 
 //Domain Components
 import JSONProcessor from '../../../src/domain/FileProcessors/JSONProcessor';
@@ -40,7 +38,7 @@ describe('JSONProcessor domain component', () => {
         const processor = new JSONProcessor(JSON.stringify(testJSON));
         expect(processor.getJSONFile()).toBe(JSON.stringify(testJSON));
     });
-    it('should return the columns from the testJSON', () => {
+    it('should return the jsonFields from the testJSON', () => {
         //Given I have a JSON file with columns
         //When I create an instance of JSON Processor with my JSON file
         //Then the JSON Processor should return the columns as an array

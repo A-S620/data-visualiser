@@ -11,45 +11,44 @@ import GetStoreHandler from '../../../src/domain/StoreHandlers/GetStoreHandler';
 import { store } from '../../../src/store/store';
 
 //Test Data
-const TestCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
-const CSVAsArrays = [
+const dataAsArrays = [
     ['col1', 'col2', 'col3'],
     [' 1', '3', 'foo'],
     [' 2', '5', 'bar'],
     ['c-1', '7', 'baz'],
 ];
-const CSVAsObjects = [
+const dataAsObjects = [
     { col1: ' 1', col2: '3', col3: 'foo' },
     { col1: ' 2', col2: '5', col3: 'bar' },
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
-const columns = ['col1', 'col2', 'col3'];
+const dataFields = ['col1', 'col2', 'col3'];
 describe('CreateStoreHandler domain component', () => {
-    it('Should add columns to the columns attribute in the Redux State', () => {
-        //Given I have columns as a array
+    it('Should add dataFields to the dataFields attribute in the Redux State', () => {
+        //Given I have dataFields as a array
         //When I create an instance of CreateStoreHandler
-        //Then the CreateStoreHandler should add the columns to the columns attribute in the redux state
-        const createStoreHandler = new CreateStoreHandler(columns, CSVAsObjects, CSVAsArrays);
-        createStoreHandler.createColumns();
+        //Then the CreateStoreHandler should add the dataFields to the dataFields attribute in the redux state
+        const createStoreHandler = new CreateStoreHandler(dataFields, dataAsObjects, dataAsArrays);
+        createStoreHandler.createDataFields();
         const getStoreHandler = new GetStoreHandler();
-        expect(getStoreHandler.getColumns()).toStrictEqual(columns);
+        expect(getStoreHandler.getDataFields()).toStrictEqual(dataFields);
     });
-    it('Should add CSV as Arrays to the dataAsArrays attribute in the redux store', () => {
+    it('Should add data as Arrays to the dataAsArrays attribute in the redux store', () => {
         //Given I have CSV data as an array
         //When I create an instance of CreateStoreHandler
         //Then the CreateStoreHandler should add the data to the dataAsArrays attribute in the redux state
-        const createStoreHandler = new CreateStoreHandler(columns, CSVAsObjects, CSVAsArrays);
+        const createStoreHandler = new CreateStoreHandler(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsArrays();
         const getStoreHandler = new GetStoreHandler();
-        expect(getStoreHandler.getDataAsArrays()).toStrictEqual(CSVAsArrays);
+        expect(getStoreHandler.getDataAsArrays()).toStrictEqual(dataAsArrays);
     });
-    it('Should add CSV as Objects to the dataAsObjects attribute in the redux store', () => {
+    it('Should add data as Objects to the dataAsObjects attribute in the redux store', () => {
         //Given I have CSV data as an object
         //When I create an instance of CreateStoreHandler
         //Then the CreateStoreHandler should add the data to the dataAsObjects attribute in the redux state
-        const createStoreHandler = new CreateStoreHandler(columns, CSVAsObjects, CSVAsArrays);
+        const createStoreHandler = new CreateStoreHandler(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsObjects();
         const getStoreHandler = new GetStoreHandler();
-        expect(getStoreHandler.getDataAsObjects()).toStrictEqual(CSVAsObjects);
+        expect(getStoreHandler.getDataAsObjects()).toStrictEqual(dataAsObjects);
     });
 });
