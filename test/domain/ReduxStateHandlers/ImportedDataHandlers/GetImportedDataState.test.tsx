@@ -4,11 +4,11 @@ import 'jsdom-global/register';
 import React from 'react';
 
 //Domain Componenets
-import CreateImportedDataState from '../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState';
-import GetImportedDataState from '../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState';
+import CreateImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState';
+import GetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState';
 
 //Store components
-import { store } from '../../../src/store/store';
+import { store } from '../../../../src/store/store';
 
 //Test Data
 const dataAsArrays = [
