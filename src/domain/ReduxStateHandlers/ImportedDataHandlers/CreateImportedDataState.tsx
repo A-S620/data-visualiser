@@ -1,11 +1,11 @@
-//Responsible for adding data to the redux store.
+//Responsible for adding data to the importedData redux state.
 //Imports from libraries
 //Other domain components
-import { Notifications } from '../UIHandlers/Notifications';
+import { Notifications } from '../../UIHandlers/Notifications';
 
 //Store componenets
-import { store } from '../../store/store';
-export default class CreateImportedDataStore {
+import { store } from '../../../store/store';
+export default class CreateImportedDataState {
     private dataFields: any;
     private dataAsObjects: any;
     private dataAsArrays: any;
