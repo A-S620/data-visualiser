@@ -1,6 +1,6 @@
-const reduxState = {
+const importedDataState = {
     dataFields: [],
     dataAsObjects: [],
     dataAsArrays: [],
 };
-export default reduxState;
+export default importedDataState;

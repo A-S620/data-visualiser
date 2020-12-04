@@ -2,6 +2,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 //Store componenets imports
-import dataReducers from './reducers/dataReducers';
+import importedDataReducer from './reducers/importedDataReducer';
 
-export const store = createStore(dataReducers, applyMiddleware(thunk));
+export const store = createStore(importedDataReducer, applyMiddleware(thunk));

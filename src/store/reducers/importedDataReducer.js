@@ -1,6 +1,6 @@
 //Imports from testStore
-import reduxState from '../reduxState';
-export default function dataReducers(state = reduxState, action) {
+import importedDataState from '../importedDataState';
+export default function importedDataReducer(state = importedDataState, action) {
     switch (action.type) {
         case 'ADD_DATA_AS_ARRAYS':
             return {
