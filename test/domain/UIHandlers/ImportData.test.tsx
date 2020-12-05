@@ -1,7 +1,7 @@
 //Imports from libraries
 import 'jsdom-global/register';
 import React from 'react';
-//TODO: Reset Redux Store before each test
+
 //Interface Components
 import { FileType } from '../../../src/domain/interfaces/IFileType';
 //Domain Components
@@ -9,7 +9,7 @@ import { ImportData } from '../../../src/domain/UIHandlers/ImportData';
 
 //Store components
 import { store } from '../../../src/store/store';
-import ResetImportedDataState from "../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState";
+import ResetImportedDataState from '../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
 //Test Data
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';

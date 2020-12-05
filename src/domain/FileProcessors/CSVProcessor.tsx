@@ -24,9 +24,8 @@ export default class CSVProcessor {
     public getCSVFields(): Array<string> {
         var dataFields: string[];
         dataFields = [];
-        const allData = this.csvToArrays();
-        for (let i = 0; i < allData[0].length; i += 1) {
-            dataFields.push(allData[0][i]);
+        for (let i = 0; i < this.csvToArrays()[0].length; i += 1) {
+            dataFields.push(this.csvToArrays()[0][i]);
         }
         return dataFields;
     }

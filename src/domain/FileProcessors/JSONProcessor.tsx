@@ -18,7 +18,7 @@ export default class JSONProcessor {
         for (var i = 0; i < this.jsonFile.length && this.jsonFile[i] !== '}'; i += 1) {
             firstRow = firstRow + this.jsonFile[i];
         }
-        firstRow = firstRow + '}';
+        firstRow = `${firstRow}}`;
         const firstRowParsed = JSON.parse(firstRow);
         return Object.keys(firstRowParsed);
     }
@@ -29,7 +29,7 @@ export default class JSONProcessor {
             if (this.jsonFile[i] !== '}') {
                 jsonObject = jsonObject + this.jsonFile[i];
             } else {
-                jsonObject = jsonObject + '}';
+                jsonObject = `${jsonObject}}`;
                 const rowParsed = JSON.parse(jsonObject);
                 objectsArray.push(rowParsed);
                 jsonObject = '';
@@ -42,11 +42,11 @@ export default class JSONProcessor {
         const result = papa.parse(jsonAsCSV, { skipEmptyLines: true });
         return result.data;
     }
-    private convertToCSV(JSONObjects: Array<object>): string {
+    private convertToCSV(jsonObjects: Array<object>): string {
         const fields = this.getJSONFields();
         const opts = { fields };
         const parser = new Parser(opts);
-        const csv = parser.parse(JSONObjects);
+        const csv = parser.parse(jsonObjects);
         return csv;
     }
 }
