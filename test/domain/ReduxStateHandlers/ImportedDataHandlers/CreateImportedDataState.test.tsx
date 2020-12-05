@@ -6,7 +6,7 @@ import React from 'react';
 //Domain Components
 import CreateImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState';
 import GetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState';
-
+import ResetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
 //Store components
 import { store } from '../../../../src/store/store';
 
@@ -23,6 +23,17 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+
+//Runs before each test
+beforeEach(() => {
+    const resetImportedDataState = new ResetImportedDataState();
+    resetImportedDataState.resetImportedDataState();
+});
+//Runs after all test
+afterAll(() => {
+    const resetImportedDataState = new ResetImportedDataState();
+    resetImportedDataState.resetImportedDataState();
+});
 describe('CreateImportedDataState domain component', () => {
     it('Should add dataFields to the dataFields attribute in the Redux State', () => {
         //Given I have dataFields as a array

@@ -9,6 +9,7 @@ import { ImportData } from '../../../src/domain/UIHandlers/ImportData';
 
 //Store components
 import { store } from '../../../src/store/store';
+import ResetImportedDataState from "../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState";
 //Test Data
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
@@ -47,6 +48,17 @@ const jsonAsObjects = [
     },
 ];
 const jsonFields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'];
+
+//Runs before each test
+beforeEach(() => {
+    const resetImportedDataState = new ResetImportedDataState();
+    resetImportedDataState.resetImportedDataState();
+});
+//Runs after all test
+afterAll(() => {
+    const resetImportedDataState = new ResetImportedDataState();
+    resetImportedDataState.resetImportedDataState();
+});
 describe('Import Data', () => {
     it('should return file is empty when files are empty', () => {
         //Given I have an import file component

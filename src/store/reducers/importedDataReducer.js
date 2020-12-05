@@ -17,6 +17,9 @@ export default function importedDataReducer(state = importedDataState, action) {
                 ...state,
                 dataFields: [...state.dataFields, action.payload],
             };
+        case 'RESET_IMPORTED_DATA_STATE':
+            return importedDataState;
+
         default:
             return state;
     }

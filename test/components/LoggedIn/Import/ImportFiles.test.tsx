@@ -49,7 +49,7 @@ describe('Import Files', () => {
 
         expect(dropZone.props().type).toBe('file');
 
-        expect(dropZone.props().accept).toBe('application/json');
+        expect(dropZone.props().accept).toBe('text/csv,application/json');
     });
     it('should be disabled when no files have been inputted', () => {
         //given I have a dropzone area

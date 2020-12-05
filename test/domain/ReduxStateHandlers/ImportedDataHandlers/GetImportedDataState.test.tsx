@@ -9,6 +9,8 @@ import GetImportedDataState from '../../../../src/domain/ReduxStateHandlers/Impo
 
 //Store components
 import { store } from '../../../../src/store/store';
+import ResetImportedDataState
+    from "../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState";
 
 //Test Data
 const dataAsArrays = [
@@ -23,6 +25,16 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+//Runs before each test
+beforeEach(() => {
+    const resetImportedDataState = new ResetImportedDataState();
+    resetImportedDataState.resetImportedDataState();
+});
+//Runs after all test
+afterAll(() => {
+    const resetImportedDataState = new ResetImportedDataState();
+    resetImportedDataState.resetImportedDataState();
+});
 describe('GetImportedDataState domain component', () => {
     it('Should return the correct dataFields if the getColumns function is called', () => {
         //Given I have created data in the redux store
