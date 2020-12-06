@@ -2,23 +2,7 @@
 import ReduxState from '../ReduxState';
 export default function importedDataReducer(state = ReduxState, action) {
     switch (action.type) {
-        case 'ADD_DATA_AS_ARRAYS':
-            return {
-                ...state,
-                importedData: {
-                    ...state.importedData,
-                    dataAsArrays: action.payload,
-                },
-            };
-        case 'ADD_DATA_AS_OBJECTS':
-            return {
-                ...state,
-                importedData: {
-                    ...state.importedData,
-                    dataAsObjects: action.payload,
-                },
-            };
-        case 'ADD_DATA_FIELDS':
+        case 'dataFieldsAdded':
             return {
                 ...state,
                 importedData: {
@@ -26,7 +10,24 @@ export default function importedDataReducer(state = ReduxState, action) {
                     dataFields: action.payload,
                 },
             };
-        case 'RESET_IMPORTED_DATA_STATE':
+        case 'dataAsArraysAdded':
+            return {
+                ...state,
+                importedData: {
+                    ...state.importedData,
+                    dataAsArrays: action.payload,
+                },
+            };
+        case 'dataAsObjectsAdded':
+            return {
+                ...state,
+                importedData: {
+                    ...state.importedData,
+                    dataAsObjects: action.payload,
+                },
+            };
+
+        case 'importedDataStateReset':
             return ReduxState;
 
         default:

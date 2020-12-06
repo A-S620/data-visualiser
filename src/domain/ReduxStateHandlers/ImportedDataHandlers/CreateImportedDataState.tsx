@@ -17,21 +17,21 @@ export default class CreateImportedDataState {
     //create dataFields in store
     public createDataFields() {
         store.dispatch({
-            type: 'ADD_DATA_FIELDS',
+            type: 'dataFieldsAdded',
             payload: this.dataFields,
         });
     }
     //create data as arrays in store
     public createDataAsArrays() {
         store.dispatch({
-            type: 'ADD_DATA_AS_ARRAYS',
+            type: 'dataAsArraysAdded',
             payload: this.dataAsArrays,
         });
     }
     //create data as objects in store
     public createDataAsObjects() {
         store.dispatch({
-            type: 'ADD_DATA_AS_OBJECTS',
+            type: 'dataAsObjectsAdded',
             payload: this.dataAsObjects,
         });
     }

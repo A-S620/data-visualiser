@@ -5,7 +5,7 @@ import { store } from '../../../store/store';
 export default class ResetImportedDataState {
     public resetImportedDataState() {
         store.dispatch({
-            type: 'RESET_IMPORTED_DATA_STATE',
+            type: 'importedDataStateReset',
         });
     }
 }
