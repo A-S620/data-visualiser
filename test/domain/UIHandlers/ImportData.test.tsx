@@ -75,9 +75,9 @@ describe('Import Data', () => {
         //Then it should add the file to the redux store correctly
 
         const importDataNotifications = new ImportData(testCSV, FileType.CSV).validate();
-        expect(store.getState().dataFields).toStrictEqual(csvFields);
-        expect(store.getState().dataAsObjects).toStrictEqual(csvAsObjects);
-        expect(store.getState().dataAsArrays).toStrictEqual(csvAsArrays);
+        expect(store.getState().importedData.dataFields).toStrictEqual(csvFields);
+        expect(store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
+        expect(store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
     });
     it('Should add the JSON file data correctly to the Redux store', () => {
         //Given I have an import file componenet
@@ -85,8 +85,8 @@ describe('Import Data', () => {
         //Then it should add the file to the redux store correctly
 
         const importDataNotifications = new ImportData(JSON.stringify(testJSON), FileType.JSON).validate();
-        expect(store.getState().dataFields).toStrictEqual(jsonFields);
-        expect(store.getState().dataAsObjects).toStrictEqual(jsonAsObjects);
-        expect(store.getState().dataAsArrays).toStrictEqual(jsonAsArrays);
+        expect(store.getState().importedData.dataFields).toStrictEqual(jsonFields);
+        expect(store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);
+        expect(store.getState().importedData.dataAsArrays).toStrictEqual(jsonAsArrays);
     });
 });

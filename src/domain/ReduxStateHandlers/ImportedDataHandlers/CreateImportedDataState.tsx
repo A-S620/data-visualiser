@@ -16,29 +16,23 @@ export default class CreateImportedDataState {
     }
     //create dataFields in store
     public createDataFields() {
-        for (var i = 0; i < this.dataFields.length; i += 1) {
-            store.dispatch({
-                type: 'ADD_DATA_FIELDS',
-                payload: this.dataFields[i],
-            });
-        }
+        store.dispatch({
+            type: 'ADD_DATA_FIELDS',
+            payload: this.dataFields,
+        });
     }
     //create data as arrays in store
     public createDataAsArrays() {
-        for (let i = 0; i < this.dataAsArrays.length; i += 1) {
-            store.dispatch({
-                type: 'ADD_DATA_AS_ARRAYS',
-                payload: this.dataAsArrays[i],
-            });
-        }
+        store.dispatch({
+            type: 'ADD_DATA_AS_ARRAYS',
+            payload: this.dataAsArrays,
+        });
     }
     //create data as objects in store
     public createDataAsObjects() {
-        for (let i = 0; i < this.dataAsObjects.length; i += 1) {
-            store.dispatch({
-                type: 'ADD_DATA_AS_OBJECTS',
-                payload: this.dataAsObjects[i],
-            });
-        }
+        store.dispatch({
+            type: 'ADD_DATA_AS_OBJECTS',
+            payload: this.dataAsObjects,
+        });
     }
 }

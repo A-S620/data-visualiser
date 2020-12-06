@@ -4,12 +4,12 @@
 import { store } from '../../../store/store';
 export default class GetImportedDataState {
     public getDataFields(): Array<string> {
-        return store.getState().dataFields;
+        return store.getState().importedData.dataFields;
     }
     public getDataAsArrays(): Array<Array<any>> {
-        return store.getState().dataAsArrays;
+        return store.getState().importedData.dataAsArrays;
     }
     public getDataAsObjects(): Array<object> {
-        return store.getState().dataAsObjects;
+        return store.getState().importedData.dataAsObjects;
     }
 }
