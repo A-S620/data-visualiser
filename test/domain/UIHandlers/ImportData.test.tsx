@@ -8,7 +8,7 @@ import { FileType } from '../../../src/domain/interfaces/IFileType';
 import { ImportData } from '../../../src/domain/UIHandlers/ImportData';
 
 //Store components
-import { store } from '../../../src/store/store';
+import store from '../../../src/store/store';
 import ResetImportedDataState from '../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
 //Test Data
 //Test Data

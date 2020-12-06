@@ -8,7 +8,7 @@ import CreateImportedDataState from '../../../../src/domain/ReduxStateHandlers/I
 import GetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState';
 import ResetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
 //Store components
-import { store } from '../../../../src/store/store';
+import Store from '../../../../src/store/store';
 
 //Test Data
 const dataAsArrays = [

@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -289,7 +298,7 @@
       <workItem from="1607008202497" duration="5337000" />
       <workItem from="1607087394026" duration="2916000" />
       <workItem from="1607153591427" duration="3789000" />
-      <workItem from="1607266359128" duration="5987000" />
+      <workItem from="1607266359128" duration="7068000" />
     </task>
     <task id="LOCAL-00001" summary="Plotting pages, Navigation unit tests, project formatting using ESLint">
       <created>1604334325015</created>
@@ -571,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607274367302</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="importedDataReducer.js refactoring action names">
+      <created>1607274883844</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1607274883844</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +595,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ImportFiles.test.tsx, ImportData.test.tsx unit tests" />
     <MESSAGE value="ImportFiles component" />
     <MESSAGE value="CSVProcessor.tsx created, still need to do unit tests." />
     <MESSAGE value="CSVProcessor.tsx unit tests." />
@@ -604,7 +619,8 @@
     <MESSAGE value="ResetImportedDataState + unit tests set up&#10;resetting importedDataState before each test and after all tests in: CreateImportedDataState.test.tsx, GetImportedDataState.test.tsx, ImportData.test.tsx" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="importedDataReducer.js and ReduxState.js refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="importedDataReducer.js and ReduxState.js refactoring" />
+    <MESSAGE value="importedDataReducer.js refactoring action names" />
+    <option name="LAST_COMMIT_MESSAGE" value="importedDataReducer.js refactoring action names" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
@@ -619,17 +635,17 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606637347061" />
-    <state x="1509" y="32" key="CommitChangelistDialog2" timestamp="1607274366617">
+    <state x="1509" y="32" key="CommitChangelistDialog2" timestamp="1607275536009">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="32" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274366617" />
+    <state x="1509" y="32" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607275536009" />
     <state x="1509" y="53" key="CommitChangelistDialog2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338691084" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
-    <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1607274121301">
+    <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1607275521571">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274121301" />
+    <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607275521571" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606552867121" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
@@ -637,10 +653,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225464" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442512" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875@52.25.1388.875" timestamp="1607184677438" />
-    <state width="1878" height="335" key="GridCell.Tab.0.center" timestamp="1607274121297">
+    <state width="1878" height="335" key="GridCell.Tab.0.center" timestamp="1607275521567">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274121297" />
+    <state width="1878" height="335" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607275521567" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606552867117" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
@@ -648,10 +664,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225461" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875@52.25.1388.875" timestamp="1607184677435" />
-    <state width="1878" height="335" key="GridCell.Tab.0.left" timestamp="1607274121293">
+    <state width="1878" height="335" key="GridCell.Tab.0.left" timestamp="1607275521566">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274121293" />
+    <state width="1878" height="335" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607275521566" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606552867116" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
@@ -659,10 +675,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225459" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875@52.25.1388.875" timestamp="1607184677432" />
-    <state width="1878" height="335" key="GridCell.Tab.0.right" timestamp="1607274121298">
+    <state width="1878" height="335" key="GridCell.Tab.0.right" timestamp="1607275521569">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274121298" />
+    <state width="1878" height="335" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607275521569" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state width="1878" height="335" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606552867119" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
@@ -676,11 +692,11 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607274369809">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607274885896">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274369809" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607274885896" />
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338693616" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2000" y="280" key="Vcs.Push.Dialog.v2/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1606035912281" />
@@ -688,10 +704,10 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1988" y="199" key="editAsTableFormatDialogDimension/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605890618585" />
-    <state x="2070" y="286" width="659" height="580" key="find.popup" timestamp="1607088380160">
+    <state x="2070" y="286" width="707" height="580" key="find.popup" timestamp="1607275675699">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state x="2070" y="286" width="659" height="580" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607088380160" />
+    <state x="2070" y="286" width="707" height="580" key="find.popup/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607275675699" />
     <state x="2065" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1606406479363">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
