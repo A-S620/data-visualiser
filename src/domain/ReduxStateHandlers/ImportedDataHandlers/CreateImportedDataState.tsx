@@ -5,6 +5,8 @@ import { Notifications } from '../../UIHandlers/Notifications';
 
 //Store componenets
 import Store from '../../../store/Store';
+//Actions
+import * as importedDataActions from '../../../store/Actions/ImportedDataActions';
 export default class CreateImportedDataState {
     private dataFields: any;
     private dataAsObjects: any;
@@ -17,21 +19,21 @@ export default class CreateImportedDataState {
     //create dataFields in store
     public createDataFields() {
         Store.dispatch({
-            type: 'dataFieldsAdded',
+            type: importedDataActions.DATA_FIELDS_ADDED,
             payload: this.dataFields,
         });
     }
     //create data as arrays in store
     public createDataAsArrays() {
         Store.dispatch({
-            type: 'dataAsArraysAdded',
+            type: importedDataActions.DATA_AS_ARRAYS_ADDED,
             payload: this.dataAsArrays,
         });
     }
     //create data as objects in store
     public createDataAsObjects() {
         Store.dispatch({
-            type: 'dataAsObjectsAdded',
+            type: importedDataActions.DATA_AS_OBJECTS_ADDED,
             payload: this.dataAsObjects,
         });
     }

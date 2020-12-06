@@ -1,8 +1,10 @@
-//Imports from testStore
+//Imports from store
 import ReduxState from '../ReduxState';
+//Actions
+import * as importedDataActions from '../Actions/ImportedDataActions';
 export default function importedDataReducer(state = ReduxState, action) {
     switch (action.type) {
-        case 'dataFieldsAdded':
+        case importedDataActions.DATA_FIELDS_ADDED:
             return {
                 ...state,
                 importedData: {
@@ -10,7 +12,7 @@ export default function importedDataReducer(state = ReduxState, action) {
                     dataFields: action.payload,
                 },
             };
-        case 'dataAsArraysAdded':
+        case importedDataActions.DATA_AS_ARRAYS_ADDED:
             return {
                 ...state,
                 importedData: {
@@ -18,7 +20,7 @@ export default function importedDataReducer(state = ReduxState, action) {
                     dataAsArrays: action.payload,
                 },
             };
-        case 'dataAsObjectsAdded':
+        case importedDataActions.DATA_AS_OBJECTS_ADDED:
             return {
                 ...state,
                 importedData: {
@@ -27,7 +29,7 @@ export default function importedDataReducer(state = ReduxState, action) {
                 },
             };
 
-        case 'importedDataStateReset':
+        case importedDataActions.IMPORTED_DATA_STATE_RESET:
             return ReduxState;
 
         default:
