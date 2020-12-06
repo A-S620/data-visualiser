@@ -1,3 +1,4 @@
+//Stores the Redux Action types for the imported data state
 export const DATA_FIELDS_ADDED = 'dataFieldsAdded';
 export const DATA_AS_ARRAYS_ADDED = 'dataAsArraysAdded';
 export const DATA_AS_OBJECTS_ADDED = 'dataAsObjectsAdded';

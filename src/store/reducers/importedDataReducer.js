@@ -1,7 +1,7 @@
 //Imports from store
 import ReduxState from '../ReduxState';
 //Actions
-import * as importedDataActions from '../Actions/ImportedDataActions';
+import * as importedDataActions from '../Actions/ImportedDataActionTypes';
 export default function importedDataReducer(state = ReduxState, action) {
     switch (action.type) {
         case importedDataActions.DATA_FIELDS_ADDED:
