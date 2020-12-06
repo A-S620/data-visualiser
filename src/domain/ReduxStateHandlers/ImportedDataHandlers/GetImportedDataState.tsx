@@ -1,15 +1,15 @@
 // Responsible for getting data from the importedData Redux state
 //Interfaces
 //Store components
-import store from '../../../store/store';
+import Store from '../../../store/Store';
 export default class GetImportedDataState {
     public getDataFields(): Array<string> {
-        return store.getState().importedData.dataFields;
+        return Store.getState().importedData.dataFields;
     }
     public getDataAsArrays(): Array<Array<any>> {
-        return store.getState().importedData.dataAsArrays;
+        return Store.getState().importedData.dataAsArrays;
     }
     public getDataAsObjects(): Array<object> {
-        return store.getState().importedData.dataAsObjects;
+        return Store.getState().importedData.dataAsObjects;
     }
 }

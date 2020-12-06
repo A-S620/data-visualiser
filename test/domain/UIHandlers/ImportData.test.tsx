@@ -8,7 +8,7 @@ import { FileType } from '../../../src/domain/interfaces/IFileType';
 import { ImportData } from '../../../src/domain/UIHandlers/ImportData';
 
 //Store components
-import store from '../../../src/store/store';
+import Store from '../../../src/store/Store';
 import ResetImportedDataState from '../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
 //Test Data
 //Test Data
@@ -75,9 +75,9 @@ describe('Import Data', () => {
         //Then it should add the file to the redux store correctly
 
         const importDataNotifications = new ImportData(testCSV, FileType.CSV).validate();
-        expect(store.getState().importedData.dataFields).toStrictEqual(csvFields);
-        expect(store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
-        expect(store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
+        expect(Store.getState().importedData.dataFields).toStrictEqual(csvFields);
+        expect(Store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
+        expect(Store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
     });
     it('Should add the JSON file data correctly to the Redux store', () => {
         //Given I have an import file componenet
@@ -85,8 +85,8 @@ describe('Import Data', () => {
         //Then it should add the file to the redux store correctly
 
         const importDataNotifications = new ImportData(JSON.stringify(testJSON), FileType.JSON).validate();
-        expect(store.getState().importedData.dataFields).toStrictEqual(jsonFields);
-        expect(store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);
-        expect(store.getState().importedData.dataAsArrays).toStrictEqual(jsonAsArrays);
+        expect(Store.getState().importedData.dataFields).toStrictEqual(jsonFields);
+        expect(Store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);
+        expect(Store.getState().importedData.dataAsArrays).toStrictEqual(jsonAsArrays);
     });
 });
