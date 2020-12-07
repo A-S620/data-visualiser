@@ -3,20 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/GetImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/ResetImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/Actions/ImportedDataActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ImportedDataActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/Actions/ImportedDataActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ImportedDataActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ImportedDataActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ImportedDataActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/importedDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/reduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/ResetImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/ResetImportedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/importedDataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/importedDataReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,13 +141,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -690,10 +685,10 @@
     <state x="1509" y="32" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279029824" />
     <state x="1509" y="53" key="CommitChangelistDialog2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338691084" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
-    <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1607279052350">
+    <state width="1878" height="335" key="GridCell.Tab.0.bottom" timestamp="1607369980073">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279009046" />
+    <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607369980073" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279052350" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
@@ -701,10 +696,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225464" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442512" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875@52.25.1388.875" timestamp="1607184677438" />
-    <state width="1878" height="335" key="GridCell.Tab.0.center" timestamp="1607279052347">
+    <state width="1878" height="335" key="GridCell.Tab.0.center" timestamp="1607369980070">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279009043" />
+    <state width="1878" height="335" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607369980070" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279052347" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
@@ -712,10 +707,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225461" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875@52.25.1388.875" timestamp="1607184677435" />
-    <state width="1878" height="335" key="GridCell.Tab.0.left" timestamp="1607279052345">
+    <state width="1878" height="335" key="GridCell.Tab.0.left" timestamp="1607369980068">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279009041" />
+    <state width="1878" height="335" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607369980067" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279052345" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
@@ -723,10 +718,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225459" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875@52.25.1388.875" timestamp="1607184677432" />
-    <state width="1878" height="335" key="GridCell.Tab.0.right" timestamp="1607279052348">
+    <state width="1878" height="335" key="GridCell.Tab.0.right" timestamp="1607369980071">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="335" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279009045" />
+    <state width="1878" height="335" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607369980071" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state width="1878" height="335" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607279052348" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />

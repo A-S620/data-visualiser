@@ -5,7 +5,7 @@ import { Notifications } from '../../UIHandlers/Notifications';
 
 //Store componenets
 import Store from '../../../ReduxStore/Store';
-import {addDataFields, addDataAsArrays, addDataAsObjects} from "../../../ReduxStore/Actions/ImportedDataActions";
+import { addDataFields, addDataAsArrays, addDataAsObjects } from '../../../ReduxStore/Actions/ReducerActions';
 
 export default class CreateImportedData {
     private dataFields: any;
