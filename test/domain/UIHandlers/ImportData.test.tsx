@@ -8,8 +8,8 @@ import { FileType } from '../../../src/domain/interfaces/IFileType';
 import { ImportData } from '../../../src/domain/UIHandlers/ImportData';
 
 //Store components
-import Store from '../../../src/store/Store';
-import ResetImportedDataState from '../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
+import Store from '../../../src/ReduxStore/Store';
+import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 //Test Data
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
@@ -51,12 +51,12 @@ const jsonFields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_addr
 
 //Runs before each test
 beforeEach(() => {
-    const resetImportedDataState = new ResetImportedDataState();
+    const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
 //Runs after all test
 afterAll(() => {
-    const resetImportedDataState = new ResetImportedDataState();
+    const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
 describe('Import Data', () => {

@@ -4,10 +4,10 @@
 import { Notifications } from '../../UIHandlers/Notifications';
 
 //Store componenets
-import Store from '../../../store/Store';
-import {addDataFields, addDataAsArrays, addDataAsObjects} from "../../../store/Actions/ImportedDataActions";
+import Store from '../../../ReduxStore/Store';
+import {addDataFields, addDataAsArrays, addDataAsObjects} from "../../../ReduxStore/Actions/ImportedDataActions";
 
-export default class CreateImportedDataState {
+export default class CreateImportedData {
     private dataFields: any;
     private dataAsObjects: any;
     private dataAsArrays: any;

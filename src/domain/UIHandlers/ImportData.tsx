@@ -4,7 +4,7 @@
 //Other domain components
 import { Notifications } from './Notifications';
 import CSVProcessor from '../FileProcessors/CSVProcessor';
-import CreateImportedDataState from '../ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState';
+import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
 import JSONProcessor from '../FileProcessors/JSONProcessor';
 //Interfaces
 import { FileType, IFileType } from '../interfaces/IFileType';
@@ -40,7 +40,7 @@ export class ImportData {
         this.storeHandler(jsonProcessor.getJSONFields(), jsonProcessor.jsonToObjects(), jsonProcessor.jsonToArrays());
     }
     private storeHandler(dataFields: Array<string>, fileAsObjects: Array<object>, fileAsArray: Array<Array<any>>) {
-        const storeHandler = new CreateImportedDataState(dataFields, fileAsObjects, fileAsArray);
+        const storeHandler = new CreateImportedData(dataFields, fileAsObjects, fileAsArray);
         storeHandler.createDataFields();
         storeHandler.createDataAsArrays();
         storeHandler.createDataAsObjects();

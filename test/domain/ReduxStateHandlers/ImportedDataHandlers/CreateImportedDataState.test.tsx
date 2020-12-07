@@ -4,11 +4,11 @@ import 'jsdom-global/register';
 import React from 'react';
 
 //Domain Components
-import CreateImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState';
-import GetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState';
-import ResetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
+import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
+import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 //Store components
-import Store from '../../../../src/store/Store';
+import Store from '../../../../src/ReduxStore/Store';
 
 //Test Data
 const dataAsArrays = [
@@ -26,40 +26,40 @@ const dataFields = ['col1', 'col2', 'col3'];
 
 //Runs before each test
 beforeEach(() => {
-    const resetImportedDataState = new ResetImportedDataState();
+    const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
 //Runs after all test
 afterAll(() => {
-    const resetImportedDataState = new ResetImportedDataState();
+    const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
-describe('CreateImportedDataState domain component', () => {
+describe('CreateImportedData domain component', () => {
     it('Should add dataFields to the dataFields attribute in the Redux State', () => {
         //Given I have dataFields as a array
-        //When I create an instance of CreateImportedDataState
-        //Then the CreateImportedDataState should add the dataFields to the dataFields attribute in the redux state
-        const createStoreHandler = new CreateImportedDataState(dataFields, dataAsObjects, dataAsArrays);
+        //When I create an instance of CreateImportedData
+        //Then the CreateImportedData should add the dataFields to the dataFields attribute in the redux state
+        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataFields();
-        const getStoreHandler = new GetImportedDataState();
+        const getStoreHandler = new GetImportedData();
         expect(getStoreHandler.getDataFields()).toStrictEqual(dataFields);
     });
     it('Should add data as Arrays to the dataAsArrays attribute in the redux store', () => {
         //Given I have CSV data as an array
-        //When I create an instance of CreateImportedDataState
-        //Then the CreateImportedDataState should add the data to the dataAsArrays attribute in the redux state
-        const createStoreHandler = new CreateImportedDataState(dataFields, dataAsObjects, dataAsArrays);
+        //When I create an instance of CreateImportedData
+        //Then the CreateImportedData should add the data to the dataAsArrays attribute in the redux state
+        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsArrays();
-        const getStoreHandler = new GetImportedDataState();
+        const getStoreHandler = new GetImportedData();
         expect(getStoreHandler.getDataAsArrays()).toStrictEqual(dataAsArrays);
     });
     it('Should add data as Objects to the dataAsObjects attribute in the redux store', () => {
         //Given I have CSV data as an object
-        //When I create an instance of CreateImportedDataState
-        //Then the CreateImportedDataState should add the data to the dataAsObjects attribute in the redux state
-        const createStoreHandler = new CreateImportedDataState(dataFields, dataAsObjects, dataAsArrays);
+        //When I create an instance of CreateImportedData
+        //Then the CreateImportedData should add the data to the dataAsObjects attribute in the redux state
+        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsObjects();
-        const getStoreHandler = new GetImportedDataState();
+        const getStoreHandler = new GetImportedData();
         expect(getStoreHandler.getDataAsObjects()).toStrictEqual(dataAsObjects);
     });
 });

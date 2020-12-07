@@ -1,8 +1,8 @@
 // Responsible for getting data from the importedData Redux state
 //Interfaces
 //Store components
-import Store from '../../../store/Store';
-export default class GetImportedDataState {
+import Store from '../../../ReduxStore/Store';
+export default class GetImportedData {
     public getDataFields(): Array<string> {
         return Store.getState().importedData.dataFields;
     }

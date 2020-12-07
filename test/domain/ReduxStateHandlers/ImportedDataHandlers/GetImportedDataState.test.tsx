@@ -4,12 +4,12 @@ import 'jsdom-global/register';
 import React from 'react';
 
 //Domain Componenets
-import CreateImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/CreateImportedDataState';
-import GetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/GetImportedDataState';
+import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 
 //Store components
 
-import ResetImportedDataState from '../../../../src/domain/ReduxStateHandlers/ImportedDataHandlers/ResetImportedDataState';
+import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 
 //Test Data
 const dataAsArrays = [
@@ -26,41 +26,41 @@ const dataAsObjects = [
 const dataFields = ['col1', 'col2', 'col3'];
 //Runs before each test
 beforeEach(() => {
-    const resetImportedDataState = new ResetImportedDataState();
+    const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
 //Runs after all test
 afterAll(() => {
-    const resetImportedDataState = new ResetImportedDataState();
+    const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
-describe('GetImportedDataState domain component', () => {
+describe('GetImportedData domain component', () => {
     it('Should return the correct dataFields if the getColumns function is called', () => {
         //Given I have created data in the redux store
-        //When I run the function getColumns from an instance of GetImportedDataState
+        //When I run the function getColumns from an instance of GetImportedData
         //Then it should return the correct dataFields
-        const createStoreHandler = new CreateImportedDataState(dataFields, dataAsObjects, dataAsArrays);
+        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataFields();
-        const getStoreHandler = new GetImportedDataState();
+        const getStoreHandler = new GetImportedData();
 
         expect(getStoreHandler.getDataFields()).toStrictEqual(dataFields);
     });
     it('Should return the correct data as arrays if the getDataAsArrays function is called', () => {
         //Given I have created data in the redux store
-        //When I run the function getDataAsArrays from an instance of GetImportedDataState
+        //When I run the function getDataAsArrays from an instance of GetImportedData
         //Then it should return the correct data as arrays
-        const createStoreHandler = new CreateImportedDataState(dataFields, dataAsObjects, dataAsArrays);
+        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsArrays();
-        const getStoreHandler = new GetImportedDataState();
+        const getStoreHandler = new GetImportedData();
         expect(getStoreHandler.getDataAsArrays()).toStrictEqual(dataAsArrays);
     });
     it('Should return the correct dataFields if the getDataAsObjects function is called', () => {
         //Given I have created data in the redux store
-        //When I run the function getDataAsObjects from an instance of GetImportedDataState
+        //When I run the function getDataAsObjects from an instance of GetImportedData
         //Then it should return the correct data as objects
-        const createStoreHandler = new CreateImportedDataState(dataFields, dataAsObjects, dataAsArrays);
+        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
         createStoreHandler.createDataAsObjects();
-        const getStoreHandler = new GetImportedDataState();
+        const getStoreHandler = new GetImportedData();
 
         expect(getStoreHandler.getDataAsObjects()).toStrictEqual(dataAsObjects);
     });
