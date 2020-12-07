@@ -1,3 +1,4 @@
+//ReduxStore components
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
 
