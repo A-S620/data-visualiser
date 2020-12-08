@@ -5,13 +5,6 @@ import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions'
 import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
 
-const reduxState = {
-    importedData: {
-        dataFields: [],
-        dataAsObjects: [],
-        dataAsArrays: [],
-    },
-};
 //Test Data
 const dataAsArrays = [
     ['col1', 'col2', 'col3'],
@@ -78,6 +71,11 @@ describe('ReduxReducer', () => {
                 dataFields: [],
                 dataAsObjects: [],
                 dataAsArrays: [],
+            },
+            analysedData: {
+                integerFields: [],
+                integerDataObjects: [],
+                integerDataArrays: [],
             },
         });
     });

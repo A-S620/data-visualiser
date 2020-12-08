@@ -29,7 +29,7 @@ export default function reduxReducer(state = ReduxState, action) {
                 },
             };
 
-        case importedDataActions.IMPORTED_DATA_STATE_RESET:
+        case importedDataActions.IMPORTED_DATA_SLICE_RESET:
             return ReduxState;
 
         default:

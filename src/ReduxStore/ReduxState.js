@@ -4,5 +4,10 @@ const ReduxState = {
         dataAsObjects: [],
         dataAsArrays: [],
     },
+    analysedData: {
+        integerFields: [],
+        integerDataObjects: [],
+        integerDataArrays: [],
+    },
 };
 export default ReduxState;
