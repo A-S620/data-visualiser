@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/ResetImportedDatatest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/ResetImportedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,15 +137,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -302,14 +302,8 @@
       <workItem from="1607285103702" duration="777000" />
       <workItem from="1607355438880" duration="797000" />
       <workItem from="1607456015915" duration="2979000" />
-      <workItem from="1607510931152" duration="4760000" />
-    </task>
-    <task id="LOCAL-00007" summary="Set up basic Redux. Created store folder structure, Store.js creates the Redux store, dataReducers.js has all of the data reducers needed.">
-      <created>1605126941751</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1605126941751</updated>
+      <workItem from="1607510931152" duration="4799000" />
+      <workItem from="1607543151966" duration="1184000" />
     </task>
     <task id="LOCAL-00008" summary="Worked on Redux and domain files&#10;Separated dataReducers.js to have the state in initialState.js.&#10;In Domain, created an interfaces folder to store the interfaces.&#10;Created a Variables.tsx file, which will identify variables in the imported data source.">
       <created>1605128507992</created>
@@ -647,7 +641,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607517414749</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Refactoring">
+      <created>1607517800167</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1607517800167</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,14 +674,14 @@
     <MESSAGE value="Created ImportedDataActions.tsx and refactored ImportedDataActionTypes.js" />
     <MESSAGE value="Refactoring ImportedDataActions.tsx" />
     <MESSAGE value="Refactoring reduxStore" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="ReducerActionTypes.js, ReducerActions.tsx unit tests" />
     <MESSAGE value="ReduxReducer.js unit tests" />
     <MESSAGE value="Created AnalysedData slice handling components in domain" />
     <MESSAGE value="Updated ReduxStore to handle analysed data slice&#10;Updated ReducerActions.tsx, ReducerActionTypes.js + unit tests&#10;Updated ReduxReducer.js - need to do unit tests&#10;Updated ReduxState.js to include analysedData slice." />
     <MESSAGE value="ReduxReducer.js analysedData actions + unit tests" />
     <MESSAGE value="AnalysedData domain components unit test files setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="AnalysedData domain components unit test files setup" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
@@ -695,18 +696,18 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606637347061" />
-    <state x="1509" y="0" key="CommitChangelistDialog2" timestamp="1607517414270">
+    <state x="1509" y="0" key="CommitChangelistDialog2" timestamp="1607517799518">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="1509" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517414270" />
+    <state x="1509" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517799518" />
     <state x="1509" y="53" key="CommitChangelistDialog2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338691084" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
     <state x="1509" y="32" key="CommitChangelistDialog2/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607371850294" />
-    <state width="1878" height="826" key="GridCell.Tab.0.bottom" timestamp="1607517773805">
+    <state width="1878" height="826" key="GridCell.Tab.0.bottom" timestamp="1607517815003">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="826" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517773805" />
+    <state width="1878" height="826" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517815003" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607373585908" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
@@ -714,10 +715,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225464" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442512" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875@52.25.1388.875" timestamp="1607184677438" />
-    <state width="1878" height="826" key="GridCell.Tab.0.center" timestamp="1607517773800">
+    <state width="1878" height="826" key="GridCell.Tab.0.center" timestamp="1607517814999">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="826" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517773800" />
+    <state width="1878" height="826" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517814999" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607373585894" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
@@ -725,10 +726,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225461" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875@52.25.1388.875" timestamp="1607184677435" />
-    <state width="1878" height="826" key="GridCell.Tab.0.left" timestamp="1607517773798">
+    <state width="1878" height="826" key="GridCell.Tab.0.left" timestamp="1607517814989">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="826" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517773798" />
+    <state width="1878" height="826" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517814989" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607373585893" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
@@ -736,10 +737,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225459" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875@52.25.1388.875" timestamp="1607184677432" />
-    <state width="1878" height="826" key="GridCell.Tab.0.right" timestamp="1607517773802">
+    <state width="1878" height="826" key="GridCell.Tab.0.right" timestamp="1607517815001">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="826" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517773802" />
+    <state width="1878" height="826" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517815001" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state width="1878" height="335" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607373585895" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
@@ -753,11 +754,11 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607517416671">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607517802501">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517416671" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607517802501" />
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338693616" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2000" y="280" key="Vcs.Push.Dialog.v2/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1606035912281" />
