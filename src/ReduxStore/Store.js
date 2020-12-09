@@ -2,7 +2,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 //Store componenets imports
-import importedDataReducer from './reducers/importedDataReducer';
+import ReduxReducer from './Reducers/ReduxReducer';
 
 let Store;
-export default Store = createStore(importedDataReducer, applyMiddleware(thunk));
+export default Store = createStore(ReduxReducer, applyMiddleware(thunk));
