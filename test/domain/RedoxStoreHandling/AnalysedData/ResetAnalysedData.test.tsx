@@ -37,7 +37,7 @@ describe('ResetImportedData domain component', () => {
         //Given I have field data in the dataAsArrays attribute in the analysedData slice
         //When I reset the dataAsArrays attribute
         //Then the dataAsArrays attribute should be empty
-        const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects, addIntegerDataArrays());
+        const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects, integerDataArrays);
         createStoreHandler.createIntegerDataArrays();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
@@ -48,7 +48,7 @@ describe('ResetImportedData domain component', () => {
         //Given I have field data in the dataAsObjects attribute in the analysedData slice
         //When I reset the dataAsObjects attribute
         //Then the dataAsObjects attribute should be empty
-        const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects, addIntegerDataArrays());
+        const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects, integerDataArrays);
         createStoreHandler.createIntegerDataObjects();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
