@@ -1,5 +1,3 @@
-//TODO: fix existing unit tests
-//TODO: add unit tests for analysedData slice
 //ReduxStore components
 import ReduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
