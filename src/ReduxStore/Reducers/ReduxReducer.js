@@ -48,14 +48,6 @@ export default function reduxReducer(state = ReduxState, action) {
                     integerFields: action.payload,
                 },
             };
-        case ReducerActions.INTEGER_DATA_ARRAYS_ADDED:
-            return {
-                ...state,
-                analysedData: {
-                    ...state.analysedData,
-                    integerDataArrays: action.payload,
-                },
-            };
         case ReducerActions.INTEGER_DATA_OBJECTS_ADDED:
             return {
                 ...state,
@@ -69,7 +61,6 @@ export default function reduxReducer(state = ReduxState, action) {
                 analysedData: {
                     integerFields: [],
                     integerDataObjects: [],
-                    integerDataArrays: [],
                 },
             };
         default:

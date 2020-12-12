@@ -24,10 +24,6 @@ export const addIntegerFields = (integerFields: Array<string>) => ({
     type: reducerActionTypes.INTEGER_FIELDS_ADDED,
     payload: integerFields,
 });
-export const addIntegerDataArrays = (integerDataArrays: Array<Array<any>>) => ({
-    type: reducerActionTypes.INTEGER_DATA_ARRAYS_ADDED,
-    payload: integerDataArrays,
-});
 export const addIntegerDataObjects = (integerDataObjects: Array<object>) => ({
     type: reducerActionTypes.INTEGER_DATA_OBJECTS_ADDED,
     payload: integerDataObjects,

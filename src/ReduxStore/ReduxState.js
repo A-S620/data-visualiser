@@ -7,7 +7,6 @@ const ReduxState = {
     analysedData: {
         integerFields: [],
         integerDataObjects: [],
-        integerDataArrays: [],
     },
 };
 export default ReduxState;

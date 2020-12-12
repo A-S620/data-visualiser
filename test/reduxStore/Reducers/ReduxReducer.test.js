@@ -18,12 +18,7 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
-const integerDataArrays = [
-    ['col1', 'col2'],
-    [33, 43],
-    [9, 3],
-    [6, 7],
-];
+
 const integerDataObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },
@@ -41,7 +36,6 @@ const analysedDataSlice = {
     analysedData: {
         integerFields: [],
         integerDataObjects: [],
-        integerDataArrays: [],
     },
 };
 describe('ReduxReducer', () => {
@@ -114,7 +108,6 @@ describe('ReduxReducer', () => {
             analysedData: {
                 integerFields: dataFields,
                 integerDataObjects: [],
-                integerDataArrays: [],
             },
         });
     });
@@ -126,19 +119,6 @@ describe('ReduxReducer', () => {
             analysedData: {
                 integerFields: [],
                 integerDataObjects: integerDataObjects,
-                integerDataArrays: [],
-            },
-        });
-    });
-    it('Should handle INTEGER_DATA_ARRAYS_ADDED', () => {
-        //Given there is a Redux reducer
-        //When integer data arrays is added to the analysedData slice
-        //Then it should return the updated state
-        expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerDataArrays(integerDataArrays))).toEqual({
-            analysedData: {
-                integerFields: [],
-                integerDataObjects: [],
-                integerDataArrays: integerDataArrays,
             },
         });
     });
@@ -152,8 +132,7 @@ describe('ReduxReducer', () => {
                     {
                         analysedData: {
                             integerFields: [],
-                            integerDataObjects: [],
-                            integerDataArrays: integerDataArrays,
+                            integerDataObjects: integerDataObjects,
                         },
                     },
                 ],

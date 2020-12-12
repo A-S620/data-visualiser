@@ -9,5 +9,4 @@ export const IMPORTED_DATA_SLICE_RESET = 'importedDataSliceReset';
 //analysedData slice
 export const INTEGER_FIELDS_ADDED = 'integerFieldsAdded';
 export const INTEGER_DATA_OBJECTS_ADDED = 'integerDataObjectsAdded';
-export const INTEGER_DATA_ARRAYS_ADDED = 'integerDataArraysAdded';
 export const ANALYSED_DATA_SLICE_RESET = 'analysedDataSliceReset';

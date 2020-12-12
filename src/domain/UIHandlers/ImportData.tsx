@@ -1,3 +1,5 @@
+//TODO: Test valid JSON + notification
+//TODO: Test valid CSV +notification
 //A class that handles the imported data.
 //Interfaces
 

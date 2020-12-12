@@ -76,16 +76,6 @@ describe('Reducer actions', () => {
         };
         expect(reducerActions.addIntegerFields(dataFields)).toEqual(expectedAction);
     });
-    it('Should create an action to add the integerDataArrays', () => {
-        //Given I have integerDataArrays
-        //When the action to add the integerDataArrays is carried out
-        //Then the integerDataArrays should be added
-        const expectedAction = {
-            type: actionTypes.INTEGER_DATA_ARRAYS_ADDED,
-            payload: integerDataArrays,
-        };
-        expect(reducerActions.addIntegerDataArrays(integerDataArrays)).toEqual(expectedAction);
-    });
     it('Should create an action to add the integerDataObjects', () => {
         //Given I have integerDataObjects
         //When the action to add the integerDataObjects is carried out
