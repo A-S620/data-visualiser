@@ -97,7 +97,6 @@ export default class ImportFiles extends React.Component<{}, IState> {
             this.setState({ errors });
         }
     }
-
     private refreshFiles() {
         this.setState({
             importedFiles: [],

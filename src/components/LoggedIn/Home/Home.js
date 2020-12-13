@@ -1,10 +1,8 @@
-//Imports from libraries
 import React from 'react';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
-import { DropzoneArea } from 'material-ui-dropzone';
 
-//UI Componenets
-import ImportFiles from '../Import/ImportFiles'
+import ImportFiles from '../Import/ImportFiles';
+import AnalyseFile from '../Analyse/AnalyseFile';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,7 +32,8 @@ export default function Home() {
     const classes = useStyles();
     return (
         <Grid className={classes.root} container direction="column" justify="flex-start" alignItems="center">
-            <ImportFiles/>
+            <ImportFiles />
+            <AnalyseFile />
         </Grid>
     );
 }
