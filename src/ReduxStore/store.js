@@ -4,5 +4,5 @@ import thunk from 'redux-thunk';
 //Store componenets imports
 import ReduxReducer from './Reducers/ReduxReducer';
 
-let Store;
-export default Store = createStore(ReduxReducer, applyMiddleware(thunk));
+// export default Store = createStore(ReduxReducer, applyMiddleware(thunk));
+export const store = createStore(ReduxReducer);

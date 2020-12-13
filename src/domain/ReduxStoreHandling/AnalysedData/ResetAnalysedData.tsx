@@ -1,9 +1,9 @@
 //Responsible for resetting the Analysed data slice in the Redux store.
 //Store components
-import Store from '../../../ReduxStore/Store';
+import { store } from '../../../ReduxStore/store';
 import { resetAnalysedData } from '../../../ReduxStore/Actions/ReducerActions';
 export default class ResetAnalysedData {
     public resetAnalysedData() {
-        Store.dispatch(resetAnalysedData());
+        store.dispatch(resetAnalysedData());
     }
 }

@@ -1,10 +1,8 @@
 //Responsible for adding data to the importedData redux state.
-//Imports from libraries
-//Other domain components
+
 import { Notifications } from '../../UIHandlers/Notifications';
 
-//Store componenets
-import Store from '../../../ReduxStore/Store';
+import { store } from '../../../ReduxStore/store';
 import { addDataFields, addDataAsArrays, addDataAsObjects } from '../../../ReduxStore/Actions/ReducerActions';
 
 export default class CreateImportedData {
@@ -18,14 +16,14 @@ export default class CreateImportedData {
     }
     //create dataFields in store
     public createDataFields() {
-        Store.dispatch(addDataFields(this.dataFields));
+        store.dispatch(addDataFields(this.dataFields));
     }
     //create data as arrays in store
     public createDataAsArrays() {
-        Store.dispatch(addDataAsArrays(this.dataAsArrays));
+        store.dispatch(addDataAsArrays(this.dataAsArrays));
     }
     //create data as objects in store
     public createDataAsObjects() {
-        Store.dispatch(addDataAsObjects(this.dataAsObjects));
+        store.dispatch(addDataAsObjects(this.dataAsObjects));
     }
 }

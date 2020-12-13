@@ -1,15 +1,14 @@
-//Handles file imports in the front end.
-//Imports from libraries
+//Handles file imports in the front end
 import React from 'react';
 import { Button, Container, Grid, makeStyles, Typography } from '@material-ui/core';
 import { DropzoneArea } from 'material-ui-dropzone';
-//Interfaces
+
 import { AlertType } from '../../../domain/interfaces/INotification';
 import { FileType } from '../../../domain/interfaces/IFileType';
-//Domain Components
+
 import { Notifications } from '../../../domain/UIHandlers/Notifications';
 import { ImportData } from '../../../domain/UIHandlers/ImportData';
-//UI Componenets
+
 import { AlertNotification } from '../Notifications/AlertNotification';
 
 interface IState {

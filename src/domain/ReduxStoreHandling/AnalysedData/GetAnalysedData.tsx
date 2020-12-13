@@ -1,14 +1,14 @@
 //Responsible for getting the data stored in the AnalysedData slice in the Redux store
 //Store componenets
-import Store from '../../../ReduxStore/Store';
+import { store } from '../../../ReduxStore/store';
 export default class GetAnalysedData {
     public getIntegerFields(): Array<string> {
-        return Store.getState().analysedData.integerFields;
+        return store.getState().analysedData.integerFields;
     }
     public getIntegerDataArrays(): Array<Array<any>> {
-        return Store.getState().analysedData.integerDataArrays;
+        return store.getState().analysedData.integerDataArrays;
     }
     public getIntegerDataObjects(): Array<object> {
-        return Store.getState().analysedData.integerDataObjects;
+        return store.getState().analysedData.integerDataObjects;
     }
 }

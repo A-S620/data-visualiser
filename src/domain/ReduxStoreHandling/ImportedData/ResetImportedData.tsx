@@ -1,10 +1,10 @@
 //Responsible for resetting the importedData redux state
 //Store components
-import Store from '../../../ReduxStore/Store';
+import { store } from '../../../ReduxStore/store';
 import { resetImportedData } from '../../../ReduxStore/Actions/ReducerActions';
 
 export default class ResetImportedData {
     public resetImportedDataState() {
-        Store.dispatch(resetImportedData());
+        store.dispatch(resetImportedData());
     }
 }
