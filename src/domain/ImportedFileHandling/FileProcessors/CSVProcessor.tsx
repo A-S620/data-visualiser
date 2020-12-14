@@ -1,7 +1,7 @@
 //Processes imported CSV files
 
 //Other domain components
-import { Notifications } from '../UIHandlers/Notifications';
+import { Notifications } from '../../UIHandlers/Notifications';
 
 const papa = require('papaparse');
 

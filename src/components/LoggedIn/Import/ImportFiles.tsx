@@ -7,7 +7,7 @@ import { AlertType } from '../../../domain/interfaces/INotification';
 import { FileType } from '../../../domain/interfaces/IFileType';
 
 import { Notifications } from '../../../domain/UIHandlers/Notifications';
-import { ImportData } from '../../../domain/UIHandlers/ImportData';
+import { ImportData } from '../../../domain/ImportedFileHandling/ImportData';
 
 import { AlertNotification } from '../Notifications/AlertNotification';
 

@@ -7,7 +7,7 @@ import React from 'react';
 import ImportFiles from '../../../../src/components/LoggedIn/Import/ImportFiles';
 
 //Domain Componenets
-import { ImportData } from '../../../../src/domain/UIHandlers/ImportData';
+import { ImportData } from '../../../../src/domain/ImportedFileHandling/ImportData';
 
 jest.mock('../../../../src/domain/UIHandlers/ImportData');
 

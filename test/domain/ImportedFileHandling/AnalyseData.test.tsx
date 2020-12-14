@@ -7,7 +7,7 @@ import React from 'react';
 import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import { AnalyseData } from '../../../src/domain/UIHandlers/AnalyseData';
+import { AnalyseData } from '../../../src/domain/ImportedFileHandling/AnalyseData';
 
 //Store components
 

@@ -2,7 +2,7 @@
 import 'jsdom-global/register';
 
 //Domain Components
-import JSONProcessor from '../../../src/domain/FileProcessors/JSONProcessor';
+import JSONProcessor from '../../../../src/domain/ImportedFileHandling/FileProcessors/JSONProcessor';
 
 //Test Data
 const testJSON = {

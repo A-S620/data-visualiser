@@ -1,15 +1,12 @@
 //TODO: Test valid JSON + notification
 //TODO: Test valid CSV +notification
-//A class that handles the imported data.
-//Interfaces
 
-//Other domain components
-import { Notifications } from './Notifications';
-import CSVProcessor from '../FileProcessors/CSVProcessor';
+import { Notifications } from '../UIHandlers/Notifications';
+import CSVProcessor from './FileProcessors/CSVProcessor';
 import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
-import JSONProcessor from '../FileProcessors/JSONProcessor';
-//Interfaces
-import { FileType, IFileType } from '../interfaces/IFileType';
+import JSONProcessor from './FileProcessors/JSONProcessor';
+
+import { FileType } from '../interfaces/IFileType';
 
 export class ImportData {
     private importedData: any;

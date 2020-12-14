@@ -1,6 +1,6 @@
 //A class that handles analysed data
 //Other domain components
-import { Notifications } from './Notifications';
+import { Notifications } from '../UIHandlers/Notifications';
 import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 

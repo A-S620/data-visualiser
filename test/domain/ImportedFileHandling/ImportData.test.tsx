@@ -5,7 +5,7 @@ import React from 'react';
 //Interface Components
 import { FileType } from '../../../src/domain/interfaces/IFileType';
 //Domain Components
-import { ImportData } from '../../../src/domain/UIHandlers/ImportData';
+import { ImportData } from '../../../src/domain/ImportedFileHandling/ImportData';
 
 //Store components
 import { store } from '../../../src/ReduxStore/store';
