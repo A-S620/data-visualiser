@@ -3,17 +3,14 @@
 import { Notifications } from '../UIHandlers/Notifications';
 import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
+import { store } from '../../ReduxStore/store';
 
 export class AnalyseData {
-    private dataFields: Array<string>;
-    private dataAsObjects: Array<object>;
+    private readonly dataFields = store.getState().importedData.dataFields;
+    private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
     private integerFields: Array<string> = [];
     private integerDataAsObjects: Array<object> = [];
 
-    constructor(dataFields: Array<string>, dataAsObjects: Array<object>) {
-        this.dataFields = dataFields;
-        this.dataAsObjects = dataAsObjects;
-    }
     public validate(): Notifications {
         const notifications: Notifications = new Notifications();
         this.analyseData();
@@ -25,9 +22,7 @@ export class AnalyseData {
         }
         if (this.integerFields.length >= 2) {
             this.createAnalysedData();
-            notifications.addNotification(
-                `Imported file has the following integer fields ${this.integerFields}, and can be visualised`
-            );
+            return notifications;
         }
         return notifications;
     }

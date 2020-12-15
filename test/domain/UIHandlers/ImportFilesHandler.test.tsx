@@ -1,5 +1,7 @@
 import { ImportFileHandler } from '../../../src/domain/UIHandlers/ImportFileHandler';
-import { GetImportedData } from '../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
+import GetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
+import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
+import { FileType } from '../../../src/domain/interfaces/IFileType';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
 const csvAsArrays = [
@@ -16,9 +18,12 @@ const csvAsObjects = [
 const csvFields = ['col1', 'col2', 'col3'];
 describe('ImportFileHandler domain component', () => {
     it('should add data from the imported file to the importedData slice in the store', () => {
-        const importFileHandler = new ImportFileHandler(testCSV);
-        const getImportedData = new GetImportedData();
+        const importedFile: IImportedFile = {
+            file: testCSV,
+            fileType: FileType.CSV,
+        };
+        const importFileErrors = new ImportFileHandler(importedFile).validate();
 
-        expect(getImportedData.getDataFields()).toEqual(csvFields);
+        expect(importFileErrors).toEqual(csvFields);
     });
 });

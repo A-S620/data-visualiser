@@ -1,6 +1,7 @@
-import { Notifications } from './Notifications';
-import { ImportData } from '../ImportedFileHandling/ImportData';
-import { IImportedFile } from '../interfaces/IImportedFile';
+import {Notifications} from './Notifications';
+import {ImportData} from '../ImportedFileHandling/ImportData';
+import {IImportedFile} from '../interfaces/IImportedFile';
+import {AnalyseData} from '../ImportedFileHandling/AnalyseData';
 
 export class ImportFileHandler {
     private importedFile: IImportedFile;
@@ -9,17 +10,23 @@ export class ImportFileHandler {
         this.importedFile = importedFile;
     }
 
-    public handleImportedFile(): Notifications {
+    public validate(): Notifications {
         const notifications = new Notifications();
-        const importDataErrors = this.importData();
-        if (importDataErrors.isEmpty()) {
+        const importedDataErrors = this.getImportedDataErrors();
+        notifications.concat(importedDataErrors);
+        if (notifications.isEmpty()) {
+            const analysedDataErrors = this.analyseData();
+            notifications.concat(analysedDataErrors);
         }
         return notifications;
     }
-    private importData(): Notifications {
-        const { fileType, file } = this.importedFile;
-        const importData = new ImportData(file, fileType);
-        const importDataErrors = importData.validate();
-        return importDataErrors;
+    private getImportedDataErrors(): Notifications {
+        const importData = new ImportData(this.importedFile);
+        return importData.validate();
+    }
+    private analyseData(): Notifications {
+        const analyseData = new AnalyseData();
+        const analyseDataErrors = analyseData.validate();
+        return analyseDataErrors;
     }
 }

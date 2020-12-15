@@ -1,6 +1,6 @@
 import { FileType } from './IFileType';
 
 export interface IImportedFile {
-    file: String;
+    file: string;
     fileType: FileType;
 }

@@ -10,6 +10,7 @@ import { Notifications } from '../../../domain/UIHandlers/Notifications';
 import { ImportData } from '../../../domain/ImportedFileHandling/ImportData';
 
 import { AlertNotification } from '../Notifications/AlertNotification';
+import {IImportedFile} from "../../../domain/interfaces/IImportedFile";
 
 interface IState {
     importedFiles: Array<File>;
@@ -79,7 +80,11 @@ export default class ImportFiles extends React.Component<{}, IState> {
         }
     }
     private async uploadFiles() {
-        const files = new ImportData(this.state.files, this.state.fileType);
+        const file: IImportedFile = {
+            file: this.state.files,
+            fileType: this.state.fileType
+        }
+        const files = new ImportData(file);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {
             try {

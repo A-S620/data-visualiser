@@ -34,8 +34,7 @@ export class ImportData {
         return notifications;
     }
     private processCSV() {
-        const { file } = this.importedFile;
-        const csvProcessor = new CSVProcessor(file);
+        const csvProcessor = new CSVProcessor(this.importedFile.file);
         const importedData: IImportedData = {
             dataFields: csvProcessor.getCSVFields(),
             dataAsObjects: csvProcessor.csvToObjects(),
@@ -44,7 +43,7 @@ export class ImportData {
         ImportData.createImportedData(importedData);
     }
     private processJSON() {
-        const jsonProcessor = new JSONProcessor(this.importedFile);
+        const jsonProcessor = new JSONProcessor(this.importedFile.file);
         const importedData: IImportedData = {
             dataFields: jsonProcessor.getJSONFields(),
             dataAsObjects: jsonProcessor.jsonToObjects(),

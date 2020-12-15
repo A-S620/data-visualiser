@@ -8,6 +8,8 @@ import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedD
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { AnalyseData } from '../../../src/domain/ImportedFileHandling/AnalyseData';
+import CreateImportedData from "../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData";
+import {IImportedData} from "../../../src/domain/interfaces/IImportedData";
 
 //Store components
 
@@ -42,20 +44,34 @@ describe('Analyse Data', () => {
         //Given I have some data with no integer fields
         //When I process the data using the AnalyseData class
         //Then it should return a notification
-        const analyseData = new AnalyseData(dataWithoutFloatsFields, dataWithoutFloats);
+        const testData: IImportedData = {
+            dataFields: dataWithoutFloatsFields,
+            dataAsObjects: dataWithoutFloats,
+            dataAsArrays: [],
+        };
+        const createImportedData = new CreateImportedData(testData);
+        createImportedData.createDataFields();
+        createImportedData.createDataAsObjects();
+        const analyseData = new AnalyseData();
         const notifications = analyseData.validate();
         expect(notifications.getNotifications()[0]).toEqual(
             "Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised"
         );
     });
-    it('Should return a notification when there 2 or more integer fields in the data', () => {
+    it('Should not return a notification when there 2 or more integer fields in the data', () => {
         //Given I have some data with 2 or more integer fields
         //When I process the data using the AnalyseData class
         //Then it should return a notification
-        const analyseData = new AnalyseData(dataFields, dataAsObjects);
+        const testData: IImportedData = {
+            dataFields: dataFields,
+            dataAsObjects: dataAsObjects,
+            dataAsArrays: [],
+        };
+        const createImportedData = new CreateImportedData(testData);
+        createImportedData.createDataFields();
+        createImportedData.createDataAsObjects();
+        const analyseData = new AnalyseData();
         const notifications = analyseData.validate();
-        expect(notifications.getNotifications()[0]).toEqual(
-            'Imported file has the following integer fields col1,col2, and can be visualised'
-        );
+        expect(notifications.getNotifications()).toEqual([]);
     });
 });
