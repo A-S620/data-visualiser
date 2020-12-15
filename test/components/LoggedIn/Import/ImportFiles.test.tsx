@@ -9,7 +9,7 @@ import ImportFiles from '../../../../src/components/LoggedIn/Import/ImportFiles'
 //Domain Componenets
 import { ImportData } from '../../../../src/domain/ImportedFileHandling/ImportData';
 
-jest.mock('../../../../src/domain/UIHandlers/ImportData');
+jest.mock('../../../../src/domain/ImportedFileHandling/ImportData');
 
 let component: ReactWrapper;
 beforeEach(() => (component = mount(<ImportFiles />)));

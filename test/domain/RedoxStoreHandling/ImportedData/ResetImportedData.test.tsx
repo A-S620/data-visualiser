@@ -6,6 +6,7 @@ import React from 'react';
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import {IImportedData} from "../../../../src/domain/interfaces/IImportedData";
 
 //Test Data
 const dataAsArrays = [
@@ -20,38 +21,43 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+const importedData: IImportedData = {
+    dataFields: dataFields,
+    dataAsObjects: dataAsObjects,
+    dataAsArrays: dataAsArrays,
+};
 describe('ResetImportedData domain component', () => {
     it('Should reset the dataFields attribute in the importedDataState', () => {
         //Given I have field data in the dataField attribute in the importedDataState
         //When I reset the dataFields attribute
         //Then the dataFields attribute should be empty
-        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
+        const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataFields();
         const resetStoreHandler = new ResetImportedData();
         resetStoreHandler.resetImportedDataState();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getDataFields()).toStrictEqual([]);
+        expect(getStoreHandler.getImportedData().dataFields).toStrictEqual([]);
     });
     it('Should reset the dataAsArrays attribute in the importedDataState', () => {
         //Given I have field data in the dataAsArrays attribute in the importedDataState
         //When I reset the dataAsArrays attribute
         //Then the dataAsArrays attribute should be empty
-        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
+        const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataAsArrays();
         const resetStoreHandler = new ResetImportedData();
         resetStoreHandler.resetImportedDataState();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getDataAsArrays()).toStrictEqual([]);
+        expect(getStoreHandler.getImportedData().dataAsArrays).toStrictEqual([]);
     });
     it('Should reset the dataAsObjects attribute in the importedDataState', () => {
         //Given I have field data in the dataAsObjects attribute in the importedDataState
         //When I reset the dataAsObjects attribute
         //Then the dataAsObjects attribute should be empty
-        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
+        const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataAsObjects();
         const resetStoreHandler = new ResetImportedData();
         resetStoreHandler.resetImportedDataState();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getDataAsObjects()).toStrictEqual([]);
+        expect(getStoreHandler.getImportedData().dataAsObjects).toStrictEqual([]);
     });
 });

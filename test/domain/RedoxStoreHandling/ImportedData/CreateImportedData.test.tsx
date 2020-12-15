@@ -9,6 +9,7 @@ import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedD
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 //Store components
 import { store } from '../../../../src/ReduxStore/store';
+import { IImportedData } from '../../../../src/domain/interfaces/IImportedData';
 
 //Test Data
 const dataAsArrays = [
@@ -39,27 +40,42 @@ describe('CreateImportedData domain component', () => {
         //Given I have dataFields as a array
         //When I create an instance of CreateImportedData
         //Then the CreateImportedData should add the dataFields to the dataFields attribute in the redux state
-        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
+        const importedData: IImportedData = {
+            dataFields: dataFields,
+            dataAsObjects: dataAsObjects,
+            dataAsArrays: dataAsArrays,
+        };
+        const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataFields();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getDataFields()).toStrictEqual(dataFields);
+        expect(getStoreHandler.getImportedData().dataFields).toStrictEqual(dataFields);
     });
     it('Should add data as Arrays to the dataAsArrays attribute in the redux store', () => {
         //Given I have CSV data as an array
         //When I create an instance of CreateImportedData
         //Then the CreateImportedData should add the data to the dataAsArrays attribute in the redux state
-        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
+        const importedData: IImportedData = {
+            dataFields: dataFields,
+            dataAsObjects: dataAsObjects,
+            dataAsArrays: dataAsArrays,
+        };
+        const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataAsArrays();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getDataAsArrays()).toStrictEqual(dataAsArrays);
+        expect(getStoreHandler.getImportedData().dataAsArrays).toStrictEqual(dataAsArrays);
     });
     it('Should add data as Objects to the dataAsObjects attribute in the redux store', () => {
         //Given I have CSV data as an object
         //When I create an instance of CreateImportedData
         //Then the CreateImportedData should add the data to the dataAsObjects attribute in the redux state
-        const createStoreHandler = new CreateImportedData(dataFields, dataAsObjects, dataAsArrays);
+        const importedData: IImportedData = {
+            dataFields: dataFields,
+            dataAsObjects: dataAsObjects,
+            dataAsArrays: dataAsArrays,
+        };
+        const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataAsObjects();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getDataAsObjects()).toStrictEqual(dataAsObjects);
+        expect(getStoreHandler.getImportedData().dataAsObjects).toStrictEqual(dataAsObjects);
     });
 });

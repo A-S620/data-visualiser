@@ -4,26 +4,23 @@ import { Notifications } from '../../UIHandlers/Notifications';
 
 import { store } from '../../../ReduxStore/store';
 import { addDataFields, addDataAsArrays, addDataAsObjects } from '../../../ReduxStore/Actions/ReducerActions';
+import { IImportedData } from '../../interfaces/IImportedData';
 
 export default class CreateImportedData {
-    private dataFields: any;
-    private dataAsObjects: any;
-    private dataAsArrays: any;
-    constructor(dataFields: Array<string>, dataAsObjects: Array<object>, dataAsArrays: Array<Array<any>>) {
-        this.dataFields = dataFields;
-        this.dataAsObjects = dataAsObjects;
-        this.dataAsArrays = dataAsArrays;
+    private importedData: IImportedData;
+    constructor(importedData: IImportedData) {
+        this.importedData = importedData;
     }
     //create dataFields in store
     public createDataFields() {
-        store.dispatch(addDataFields(this.dataFields));
+        store.dispatch(addDataFields(this.importedData.dataFields));
     }
     //create data as arrays in store
     public createDataAsArrays() {
-        store.dispatch(addDataAsArrays(this.dataAsArrays));
+        store.dispatch(addDataAsArrays(this.importedData.dataAsArrays));
     }
     //create data as objects in store
     public createDataAsObjects() {
-        store.dispatch(addDataAsObjects(this.dataAsObjects));
+        store.dispatch(addDataAsObjects(this.importedData.dataAsObjects));
     }
 }

@@ -2,25 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/IAnalysedData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedFile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/FileProcessors/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/FileProcessors/CSVProcessor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/FileProcessors/JSONProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/FileProcessors/JSONProcessor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/FileProcessors/PapaParse/PapaParseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/FileProcessors/PapaParse/PapaParseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/FileProcessors/PapaParse/PapaUnparseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/FileProcessors/PapaParse/PapaUnparseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/AnalyseData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/AnalyseData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/GetImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/GetImportedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/IImportedFile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedFile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Import/ImportFiles.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/FileProcessors/CSVProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/CSVProcessor.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/FileProcessors/JSONProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/JSONProcessor.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/FileProcessors/Test.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/Test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/AnalyseData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/ResetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/ResetImportedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,21 +321,9 @@
       <workItem from="1607845745238" duration="561000" />
       <workItem from="1607846634063" duration="201000" />
       <workItem from="1607850135861" duration="2256000" />
-      <workItem from="1607976796574" duration="2814000" />
-    </task>
-    <task id="LOCAL-00015" summary="ImportFiles unit tests">
-      <created>1605730415230</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1605730415231</updated>
-    </task>
-    <task id="LOCAL-00016" summary="ImportFiles.test.tsx, ImportData.test.tsx unit tests">
-      <created>1605733842824</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1605733842824</updated>
+      <workItem from="1607976796574" duration="2975000" />
+      <workItem from="1608026708056" duration="3568000" />
+      <workItem from="1608032257248" duration="172000" />
     </task>
     <task id="LOCAL-00017" summary="ImportFiles component">
       <created>1605821033026</created>
@@ -673,7 +654,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607852571067</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Restructured domain">
+      <created>1607979746784</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1607979746784</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Started ImportFileHandler.tsx + unit tests, interfaces&#10;Interfaces created:&#10;IAnalysedData.tsx&#10;IImportedData.tsx&#10;IImportedFile.tsx">
+      <created>1607979835264</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1607979835264</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,8 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring Imported Data state handlers unit tests" />
-    <MESSAGE value="ResetImportedDataState class created + unit tests set up" />
     <MESSAGE value="ResetImportedDataState + unit tests set up&#10;resetting importedDataState before each test and after all tests in: CreateImportedDataState.test.tsx, GetImportedDataState.test.tsx, ImportData.test.tsx" />
     <MESSAGE value="importedDataReducer.js and ReduxState.js refactoring" />
     <MESSAGE value="importedDataReducer.js refactoring action names" />
@@ -706,7 +699,9 @@
     <MESSAGE value="Removing integerDataArrays from analysedData slice in Redux" />
     <MESSAGE value="Rename Store to store store.js" />
     <MESSAGE value="AnalyseFile.tsx UI component" />
-    <option name="LAST_COMMIT_MESSAGE" value="AnalyseFile.tsx UI component" />
+    <MESSAGE value="Restructured domain" />
+    <MESSAGE value="Started ImportFileHandler.tsx + unit tests, interfaces&#10;Interfaces created:&#10;IAnalysedData.tsx&#10;IImportedData.tsx&#10;IImportedFile.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started ImportFileHandler.tsx + unit tests, interfaces&#10;Interfaces created:&#10;IAnalysedData.tsx&#10;IImportedData.tsx&#10;IImportedFile.tsx" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2000" y="205" key="#ESLint" timestamp="1605972822203">
@@ -721,18 +716,18 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606637347061" />
-    <state x="2541" y="0" key="CommitChangelistDialog2" timestamp="1607852570604">
+    <state x="1878" y="0" key="CommitChangelistDialog2" timestamp="1607979834941">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605041879468" />
-    <state x="2541" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607852570604" />
+    <state x="1878" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607979834941" />
     <state x="1509" y="53" key="CommitChangelistDialog2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338691084" />
     <state x="96" y="23" key="CommitChangelistDialog2/46.23.1394.877/1440.23.1920.1057@46.23.1394.877" timestamp="1605716143192" />
     <state x="1509" y="32" key="CommitChangelistDialog2/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607371850294" />
-    <state width="1878" height="381" key="GridCell.Tab.0.bottom" timestamp="1607852594697">
+    <state width="1878" height="381" key="GridCell.Tab.0.bottom" timestamp="1608030321468">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="381" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607851444971" />
+    <state width="1878" height="381" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608030321468" />
     <state width="1878" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962268" />
     <state width="1878" height="381" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607852594697" />
     <state width="1878" height="433" key="GridCell.Tab.0.bottom/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508719" />
@@ -740,10 +735,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225464" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442512" />
     <state width="1878" height="335" key="GridCell.Tab.0.bottom/52.25.1388.875@52.25.1388.875" timestamp="1607184677438" />
-    <state width="1878" height="381" key="GridCell.Tab.0.center" timestamp="1607852594695">
+    <state width="1878" height="381" key="GridCell.Tab.0.center" timestamp="1608030321465">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="381" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607851444969" />
+    <state width="1878" height="381" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608030321465" />
     <state width="1878" height="307" key="GridCell.Tab.0.center/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962260" />
     <state width="1878" height="381" key="GridCell.Tab.0.center/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607852594695" />
     <state width="1878" height="433" key="GridCell.Tab.0.center/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508715" />
@@ -751,10 +746,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225461" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.center/52.25.1388.875@52.25.1388.875" timestamp="1607184677435" />
-    <state width="1878" height="381" key="GridCell.Tab.0.left" timestamp="1607852594693">
+    <state width="1878" height="381" key="GridCell.Tab.0.left" timestamp="1608030321464">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="381" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607851444967" />
+    <state width="1878" height="381" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608030321464" />
     <state width="1878" height="307" key="GridCell.Tab.0.left/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962257" />
     <state width="1878" height="381" key="GridCell.Tab.0.left/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607852594693" />
     <state width="1878" height="433" key="GridCell.Tab.0.left/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508714" />
@@ -762,10 +757,10 @@
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606553225459" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1607014442510" />
     <state width="1878" height="335" key="GridCell.Tab.0.left/52.25.1388.875@52.25.1388.875" timestamp="1607184677432" />
-    <state width="1878" height="381" key="GridCell.Tab.0.right" timestamp="1607852594696">
+    <state width="1878" height="381" key="GridCell.Tab.0.right" timestamp="1608030321466">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="381" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607851444970" />
+    <state width="1878" height="381" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1608030321466" />
     <state width="1878" height="307" key="GridCell.Tab.0.right/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1602015962262" />
     <state width="1878" height="381" key="GridCell.Tab.0.right/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607852594696" />
     <state width="1878" height="433" key="GridCell.Tab.0.right/46.23.1394.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603834508716" />
@@ -779,11 +774,11 @@
     <state x="1440" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1603886460045" />
     <state x="0" y="149" width="997" height="722" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1604089230614" />
     <state x="1440" y="179" key="SettingsEditor/0.23.1440.877/1440.0.1920.1080@1440.0.1920.1080" timestamp="1605716308692" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607852573195">
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2" timestamp="1607979839180">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="420" y="218" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1605716147338" />
-    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607852573195" />
+    <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1607979839180" />
     <state x="2000" y="261" key="Vcs.Push.Dialog.v2/0.25.1440.875/1440.0.1920.1080@1440.0.1920.1080" timestamp="1606338693616" />
     <state x="2000" y="278" key="Vcs.Push.Dialog.v2/46.23.1394.877/1440.23.1920.1057@1440.23.1920.1057" timestamp="1605129705969" />
     <state x="2000" y="280" key="Vcs.Push.Dialog.v2/52.25.1388.875/1440.25.1920.1055@1440.25.1920.1055" timestamp="1606035912281" />

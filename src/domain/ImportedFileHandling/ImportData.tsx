@@ -4,44 +4,67 @@
 import { Notifications } from '../UIHandlers/Notifications';
 import CSVProcessor from './FileProcessors/CSVProcessor';
 import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
+import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
 import JSONProcessor from './FileProcessors/JSONProcessor';
 
 import { FileType } from '../interfaces/IFileType';
+import { IImportedData } from '../interfaces/IImportedData';
+import { IImportedFile } from '../interfaces/IImportedFile';
 
 export class ImportData {
-    private importedData: any;
-    private fileType: FileType;
-    constructor(importedData: string, fileType: FileType) {
-        this.importedData = importedData;
-        this.fileType = fileType;
+    private importedFile: IImportedFile;
+
+    constructor(importedFile: IImportedFile) {
+        this.importedFile = importedFile;
     }
     public validate(): Notifications {
         const notifications: Notifications = new Notifications();
-        if (this.importedData.length === 0) {
+        const { fileType, file }: IImportedFile = this.importedFile;
+        if (file.length === 0) {
             notifications.addNotification(`File is empty`);
             return notifications;
         }
-        if (this.fileType === FileType.JSON) {
+        if (fileType === FileType.JSON) {
             this.processJSON();
         }
-        if (this.fileType === FileType.CSV) {
+        if (fileType === FileType.CSV) {
             this.processCSV();
         }
 
         return notifications;
     }
     private processCSV() {
-        const csvProcessor = new CSVProcessor(this.importedData);
-        this.storeHandler(csvProcessor.getCSVFields(), csvProcessor.csvToObjects(), csvProcessor.csvToArrays());
+        const { file } = this.importedFile;
+        const csvProcessor = new CSVProcessor(file);
+        const importedData: IImportedData = {
+            dataFields: csvProcessor.getCSVFields(),
+            dataAsObjects: csvProcessor.csvToObjects(),
+            dataAsArrays: csvProcessor.csvToArrays(),
+        };
+        ImportData.createImportedData(importedData);
     }
     private processJSON() {
-        const jsonProcessor = new JSONProcessor(this.importedData);
-        this.storeHandler(jsonProcessor.getJSONFields(), jsonProcessor.jsonToObjects(), jsonProcessor.jsonToArrays());
+        const jsonProcessor = new JSONProcessor(this.importedFile);
+        const importedData: IImportedData = {
+            dataFields: jsonProcessor.getJSONFields(),
+            dataAsObjects: jsonProcessor.jsonToObjects(),
+            dataAsArrays: jsonProcessor.jsonToArrays(),
+        };
+        ImportData.createImportedData(importedData);
     }
-    private storeHandler(dataFields: Array<string>, fileAsObjects: Array<object>, fileAsArray: Array<Array<any>>) {
-        const storeHandler = new CreateImportedData(dataFields, fileAsObjects, fileAsArray);
-        storeHandler.createDataFields();
-        storeHandler.createDataAsArrays();
-        storeHandler.createDataAsObjects();
+    private static createImportedData(importedData: IImportedData) {
+        const createImportedData = new CreateImportedData(importedData);
+        createImportedData.createDataFields();
+        createImportedData.createDataAsArrays();
+        createImportedData.createDataAsObjects();
+    }
+    public getImportedData(): IImportedData {
+        const getImportedData = new GetImportedData();
+        const data = getImportedData.getImportedData();
+        return {
+            dataFields: data.dataFields,
+            dataAsObjects: data.dataAsObjects,
+            dataAsArrays: data.dataAsArrays,
+        };
     }
 }

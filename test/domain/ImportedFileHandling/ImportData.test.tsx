@@ -10,6 +10,7 @@ import { ImportData } from '../../../src/domain/ImportedFileHandling/ImportData'
 //Store components
 import { store } from '../../../src/ReduxStore/store';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
 const csvAsArrays = [
@@ -63,8 +64,11 @@ describe('Import Data', () => {
         //Given I have an import file component
         //When I import an empty file
         //Then I should get an error saying the file is empty
-
-        const importDataNotifications = new ImportData('', FileType.CSV).validate();
+        const importedFile: IImportedFile = {
+            file: '',
+            fileType: FileType.CSV,
+        };
+        const importDataNotifications = new ImportData(importedFile).validate();
 
         expect(importDataNotifications.notification()).toBe('File is empty');
     });
@@ -72,8 +76,11 @@ describe('Import Data', () => {
         //Given I have an import file componenet
         //When I import a CSV file
         //Then it should add the file to the redux store correctly
-
-        const importDataNotifications = new ImportData(testCSV, FileType.CSV).validate();
+        const importedFile: IImportedFile = {
+            file: testCSV,
+            fileType: FileType.CSV,
+        };
+        const importDataNotifications = new ImportData(importedFile).validate();
         expect(store.getState().importedData.dataFields).toStrictEqual(csvFields);
         expect(store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
         expect(store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
@@ -83,7 +90,11 @@ describe('Import Data', () => {
         //When I import a JSON file
         //Then it should add the file to the redux store correctly
 
-        const importDataNotifications = new ImportData(JSON.stringify(testJSON), FileType.JSON).validate();
+        const importedFile: IImportedFile = {
+            file: JSON.stringify(testJSON),
+            fileType: FileType.JSON,
+        };
+        const importDataNotifications = new ImportData(importedFile).validate();
         expect(store.getState().importedData.dataFields).toStrictEqual(jsonFields);
         expect(store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);
         expect(store.getState().importedData.dataAsArrays).toStrictEqual(jsonAsArrays);
