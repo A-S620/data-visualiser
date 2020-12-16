@@ -1,7 +1,7 @@
-import {Notifications} from './Notifications';
-import {ImportData} from '../ImportedFileHandling/ImportData';
-import {IImportedFile} from '../interfaces/IImportedFile';
-import {AnalyseData} from '../ImportedFileHandling/AnalyseData';
+import { Notifications } from './Notifications';
+import { ImportData } from '../ImportedFileHandling/ImportData';
+import { IImportedFile } from '../interfaces/IImportedFile';
+import { AnalyseData } from '../ImportedFileHandling/AnalyseData';
 
 export class ImportFileHandler {
     private importedFile: IImportedFile;

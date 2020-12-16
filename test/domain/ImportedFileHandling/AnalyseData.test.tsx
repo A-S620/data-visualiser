@@ -8,8 +8,8 @@ import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedD
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { AnalyseData } from '../../../src/domain/ImportedFileHandling/AnalyseData';
-import CreateImportedData from "../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData";
-import {IImportedData} from "../../../src/domain/interfaces/IImportedData";
+import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import { IImportedData } from '../../../src/domain/interfaces/IImportedData';
 
 //Store components
 
@@ -30,7 +30,7 @@ const integerDataObjects = [
 
 const dataWithoutFloats = [
     {
-        id: 'aaa',
+        id: '1',
         first_name: 'Jeanette',
         last_name: 'Penddreth',
         email: 'jpenddreth0@census.gov',
@@ -54,7 +54,7 @@ describe('Analyse Data', () => {
         createImportedData.createDataAsObjects();
         const analyseData = new AnalyseData();
         const notifications = analyseData.validate();
-        expect(notifications.getNotifications()[0]).toEqual(
+        expect(notifications.notification()).toEqual(
             "Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised"
         );
     });
@@ -72,6 +72,6 @@ describe('Analyse Data', () => {
         createImportedData.createDataAsObjects();
         const analyseData = new AnalyseData();
         const notifications = analyseData.validate();
-        expect(notifications.getNotifications()).toEqual([]);
+        expect(notifications.notification()).toEqual('');
     });
 });

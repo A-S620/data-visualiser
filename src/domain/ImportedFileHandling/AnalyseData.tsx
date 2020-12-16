@@ -32,7 +32,7 @@ export class AnalyseData {
             // eslint-disable-next-line prefer-destructuring
             const currentObject: Object = this.dataAsObjects[objIndex];
             for (const [key, value] of Object.entries(currentObject)) {
-                if (this.dataIsFloat(value)) {
+                if (this.dataIsFloat(value) && this.dataIsNotIPAddress(value)) {
                     const valueAsFloat = this.convertDataToFloat(value);
                     // @ts-ignore
                     objectToAdd[key] = valueAsFloat;
@@ -43,6 +43,18 @@ export class AnalyseData {
             objectToAdd = {};
         }
         return this.integerFields;
+    }
+    private dataIsNotIPAddress(data: string): Boolean {
+        let decimalPointCount = 0;
+        for (var i = 0; i < data.length; i += 1) {
+            if (data[i] === '.') {
+                decimalPointCount += 1;
+            }
+        }
+        if (decimalPointCount <= 1) {
+            return true;
+        }
+        return false;
     }
     private dataIsFloat(data: string): Boolean {
         const dataAsFloat = parseFloat(data);
