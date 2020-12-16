@@ -7,7 +7,7 @@ import { AlertType } from '../../../domain/interfaces/INotification';
 import { FileType } from '../../../domain/interfaces/IFileType';
 
 import { Notifications } from '../../../domain/UIHandlers/Notifications';
-import { ImportData } from '../../../domain/ImportedFileHandling/ImportData';
+import { ImportFileHandler} from "../../../domain/UIHandlers/ImportFileHandler";
 
 import { AlertNotification } from '../Notifications/AlertNotification';
 import {IImportedFile} from "../../../domain/interfaces/IImportedFile";
@@ -84,7 +84,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             file: this.state.files,
             fileType: this.state.fileType
         }
-        const files = new ImportData(file);
+        const files = new ImportFileHandler(file);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {
             try {
