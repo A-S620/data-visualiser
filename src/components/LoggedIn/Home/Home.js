@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Home() {
     const classes = useStyles();
     return (
-        <Grid className={classes.root} container direction="column" justify="flex-start" alignItems="center">
+        <Grid className={classes.root} container direction="row" justify="flex-start" alignItems="center">
             <ImportFiles />
             <AnalyseFile />
         </Grid>
