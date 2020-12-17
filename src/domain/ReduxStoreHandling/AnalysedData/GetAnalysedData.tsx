@@ -5,9 +5,7 @@ export default class GetAnalysedData {
     public getIntegerFields(): Array<string> {
         return store.getState().analysedData.integerFields;
     }
-    public getIntegerDataArrays(): Array<Array<any>> {
-        return store.getState().analysedData.integerDataArrays;
-    }
+
     public getIntegerDataObjects(): Array<object> {
         return store.getState().analysedData.integerDataObjects;
     }
