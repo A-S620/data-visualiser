@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 
-import ImportFiles from '../Import/ImportFiles';
-import AnalyseFile from '../Analyse/AnalyseFile';
+import ImportFiles from '../ImportFileHandling/Import/ImportFiles';
+import AnalyseFile from '../ImportFileHandling/Analyse/AnalyseFile';
+import ImportFileHandling from '../ImportFileHandling/ImportFileHandling';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -32,8 +33,7 @@ export default function Home() {
     const classes = useStyles();
     return (
         <Grid className={classes.root} container direction="row" justify="flex-start" alignItems="center">
-            <ImportFiles />
-            <AnalyseFile />
+            <ImportFileHandling />
         </Grid>
     );
 }

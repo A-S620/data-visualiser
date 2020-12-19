@@ -1,16 +1,20 @@
 //Handles file imports in the front end
 import React from 'react';
-import { Button, Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Button, Container, Grid, IconButton, makeStyles, Tooltip } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
-import { AlertType } from '../../../domain/interfaces/INotification';
-import { FileType } from '../../../domain/interfaces/IFileType';
+import { AlertType } from '../../../../domain/interfaces/INotification';
+import { FileType } from '../../../../domain/interfaces/IFileType';
 
-import { Notifications } from '../../../domain/UIHandlers/Notifications';
-import { ImportFileHandler} from "../../../domain/UIHandlers/ImportFileHandler";
+import { Notifications } from '../../../../domain/UIHandlers/Notifications';
+import { ImportFileHandler } from '../../../../domain/UIHandlers/ImportFileHandler';
 
-import { AlertNotification } from '../Notifications/AlertNotification';
-import {IImportedFile} from "../../../domain/interfaces/IImportedFile";
+import { AlertNotification } from '../../Notifications/AlertNotification';
+import { IImportedFile } from '../../../../domain/interfaces/IImportedFile';
+
+import ImportedFileStats from './ImportedFileStats';
+import { IImportedFileStats } from '../../../../domain/interfaces/IImportedFileStats';
 
 interface IState {
     importedFiles: Array<File>;
@@ -20,6 +24,7 @@ interface IState {
     errors: Notifications;
     files: string;
     fileType: FileType;
+    importedFileStats: IImportedFileStats;
 }
 export default class ImportFiles extends React.Component<{}, IState> {
     private classes: any = makeStyles((theme) => ({
@@ -55,9 +60,14 @@ export default class ImportFiles extends React.Component<{}, IState> {
             errors: new Notifications(),
             files: '',
             fileType: FileType.CSV,
+            importedFileStats: {
+                fileType: FileType.CSV,
+                fileSize: '',
+                characterCount: 0,
+            },
         };
     }
-    private checkFileType(files: File[]): FileType {
+    private static checkFileType(files: File[]): FileType {
         const file = files[0];
         if (file.type === 'text/csv') {
             return FileType.CSV;
@@ -71,7 +81,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             this.setState({
                 submitButtonDisabled: false,
                 files: allFiles,
-                fileType: this.checkFileType(files),
+                fileType: ImportFiles.checkFileType(files),
             });
         } else {
             this.setState({
@@ -82,8 +92,8 @@ export default class ImportFiles extends React.Component<{}, IState> {
     private async uploadFiles() {
         const file: IImportedFile = {
             file: this.state.files,
-            fileType: this.state.fileType
-        }
+            fileType: this.state.fileType,
+        };
         const files = new ImportFileHandler(file);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {
@@ -129,9 +139,17 @@ export default class ImportFiles extends React.Component<{}, IState> {
                     alignItems="center"
                 >
                     <Container style={{ marginBottom: 20 }} id="drop-zone-area">
-                        <Typography variant="h6" style={{ marginBottom: 5 }}>
-                            Home Page
-                        </Typography>
+                        <Tooltip title="Delete Imported File from system">
+                            <IconButton
+                                color="primary"
+                                style={{ marginRight: 10, borderRadius: '5em' }}
+                                id="refresh-import-button"
+                                disabled={this.state.submitButtonDisabled}
+                                onClick={() => {}}
+                            >
+                                <DeleteIcon />
+                            </IconButton>
+                        </Tooltip>
 
                         <DropzoneArea
                             showPreviews={true}
@@ -145,6 +163,8 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             acceptedFiles={['text/csv', 'application/json']}
                             filesLimit={1}
                         />
+                    </Container>
+                    <Grid container justify="center">
                         <Button
                             color="primary"
                             style={{ marginRight: 10, borderRadius: '5em' }}
@@ -156,9 +176,10 @@ export default class ImportFiles extends React.Component<{}, IState> {
                                 this.refreshFiles();
                             }}
                         >
-                            Submit files
+                            Import
                         </Button>
-                    </Container>
+                    </Grid>
+                    <ImportedFileStats {...this.state.importedFileStats} />
                 </Grid>
             </main>
         );

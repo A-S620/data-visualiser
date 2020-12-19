@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import React from 'react';
 
 //UI Componenets
-import ImportFiles from '../../../../src/components/LoggedIn/Import/ImportFiles';
+import ImportFiles from '../../../../src/components/LoggedIn/ImportFileHandling/Import/ImportFiles';
 
 //Domain Componenets
 import { ImportData } from '../../../../src/domain/ImportedFileHandling/ImportData';
