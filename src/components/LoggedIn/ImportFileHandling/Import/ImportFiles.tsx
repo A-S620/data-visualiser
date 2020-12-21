@@ -36,14 +36,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             height: '100%',
         },
         container: {
-            width: '40%',
-        },
-        alignItemsAndJustifyContent: {
             width: '100%',
-            height: '100%',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: 'pink',
         },
         previewChip: {
             minWidth: 160,
@@ -61,9 +54,9 @@ export default class ImportFiles extends React.Component<{}, IState> {
             files: '',
             fileType: FileType.CSV,
             importedFileStats: {
-                fileType: FileType.CSV,
+                fileType: undefined,
                 fileSize: '',
-                characterCount: 0,
+                characterCount: undefined,
             },
         };
     }
@@ -82,6 +75,11 @@ export default class ImportFiles extends React.Component<{}, IState> {
                 submitButtonDisabled: false,
                 files: allFiles,
                 fileType: ImportFiles.checkFileType(files),
+                importedFileStats: {
+                    fileType: ImportFiles.checkFileType(files),
+                    fileSize: (files[0].size / 1000).toString(),
+                    characterCount: allFiles.length,
+                },
             });
         } else {
             this.setState({
@@ -112,10 +110,26 @@ export default class ImportFiles extends React.Component<{}, IState> {
             this.setState({ errors });
         }
     }
-    private refreshFiles() {
+    private resetFiles() {
+        const file: IImportedFile = {
+            file: this.state.files,
+            fileType: this.state.fileType,
+        };
+        const files = new ImportFileHandler(file);
+        files.resetImportedFileData();
         this.setState({
             importedFiles: [],
+            submitButtonDisabled: true,
+            outcome: undefined,
+            outcomeMessage: '',
+            errors: new Notifications(),
             files: '',
+            fileType: FileType.CSV,
+            importedFileStats: {
+                fileType: undefined,
+                fileSize: '',
+                characterCount: undefined,
+            },
         });
     }
 
@@ -145,7 +159,9 @@ export default class ImportFiles extends React.Component<{}, IState> {
                                 style={{ marginRight: 10, borderRadius: '5em' }}
                                 id="refresh-import-button"
                                 disabled={this.state.submitButtonDisabled}
-                                onClick={() => {}}
+                                onClick={() => {
+                                    this.resetFiles();
+                                }}
                             >
                                 <DeleteIcon />
                             </IconButton>
@@ -173,13 +189,14 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             disabled={this.state.submitButtonDisabled}
                             onClick={() => {
                                 this.uploadFiles();
-                                this.refreshFiles();
                             }}
                         >
                             Import
                         </Button>
                     </Grid>
-                    <ImportedFileStats {...this.state.importedFileStats} />
+                    <Grid container justify="center">
+                        <ImportedFileStats {...this.state.importedFileStats} />
+                    </Grid>
                 </Grid>
             </main>
         );

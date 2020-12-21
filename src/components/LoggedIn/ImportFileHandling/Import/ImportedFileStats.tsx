@@ -9,13 +9,14 @@ const useStyles = makeStyles((theme: Theme) =>
             flexGrow: 1,
         },
         statDescription: {
-            padding: theme.spacing(2),
+            margin: theme.spacing(2),
             textAlign: 'center',
             color: theme.palette.text.secondary,
         },
         stat: {
             color: theme.palette.primary.main,
             textAlign: 'center',
+            margin: theme.spacing(1),
         },
         gridItem: {
             background: theme.palette.secondary.main,
@@ -29,7 +30,7 @@ function getStatLabel(key: string): string {
         return 'File Type';
     }
     if (key === 'fileSize') {
-        return 'File Size';
+        return 'File Size (KB)';
     }
     if (key === 'characterCount') {
         return 'Character Count';

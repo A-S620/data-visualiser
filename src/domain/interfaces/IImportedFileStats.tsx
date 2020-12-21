@@ -1,7 +1,7 @@
 import { FileType } from './IFileType';
 
 export interface IImportedFileStats {
-    fileType: FileType;
+    fileType: FileType | undefined;
     fileSize: string;
-    characterCount: number;
+    characterCount: number | undefined;
 }

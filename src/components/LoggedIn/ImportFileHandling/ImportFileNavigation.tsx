@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
 }));
 
-export default function ImportFileHandling() {
+export default function ImportFileNavigation() {
     const classes = useStyles();
     const theme = useTheme();
     const [value, setValue] = React.useState(0);

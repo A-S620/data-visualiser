@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileHandling.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedFileStats.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Analyse/AnalyseFile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/AnalyseFile.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Import/ImportFiles.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileHandling.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/IImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedFileStats.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,19 +135,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.starte">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -322,13 +306,7 @@
       <workItem from="1608149263766" duration="3659000" />
       <workItem from="1608214707089" duration="2000" />
       <workItem from="1608234108952" duration="238000" />
-    </task>
-    <task id="LOCAL-00022" summary="TestStore, CSVProcessor.test.tsx, StoreHandler.test.tsx">
-      <created>1606338691519</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1606338691519</updated>
+      <workItem from="1608579602905" duration="2796000" />
     </task>
     <task id="LOCAL-00023" summary="GetStoreHandler.tsx, CreateStoreHandler.tsx">
       <created>1606406561849</created>
@@ -666,7 +644,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608153198769</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Created ImportFileHandling.tsx, ImportedFileStats.tsx&#10;ImportFileHandling.tsx - Navigation for Import and Analyse components&#10;ImportedFileStats.tsx - Stats on the imported file&#10;Restructured folders in UI section">
+      <created>1608371712243</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1608371712244</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +659,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="store.js refactoring" />
     <MESSAGE value="Store.js refactoring" />
     <MESSAGE value="Created ImportedDataActions.js" />
     <MESSAGE value="Created ImportedDataActions.tsx and refactored ImportedDataActionTypes.js" />
@@ -699,6 +683,7 @@
     <MESSAGE value="ImportFileHandler.tsx + Unit tests&#10;Added functionality to AnalyseData.tsx to check that data is not IP address + updated unit tests." />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="refactored ImportFiles.tsx to use ImportFileHandler.tsx&#10;need to do ImportFiles.tsx unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored ImportFiles.tsx to use ImportFileHandler.tsx&#10;need to do ImportFiles.tsx unit tests" />
+    <MESSAGE value="Created ImportFileHandling.tsx, ImportedFileStats.tsx&#10;ImportFileHandling.tsx - Navigation for Import and Analyse components&#10;ImportedFileStats.tsx - Stats on the imported file&#10;Restructured folders in UI section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created ImportFileHandling.tsx, ImportedFileStats.tsx&#10;ImportFileHandling.tsx - Navigation for Import and Analyse components&#10;ImportedFileStats.tsx - Stats on the imported file&#10;Restructured folders in UI section" />
   </component>
 </project>
