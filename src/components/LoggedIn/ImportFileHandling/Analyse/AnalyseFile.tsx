@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, CssBaseline, Typography, CircularProgress } from '@material-ui/core';
+import { Box, Container, CssBaseline, Typography, CircularProgress, Chip } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     selectEmpty: {
         marginTop: theme.spacing(2),
     },
+    chips: {
+        backgroundColor: theme.palette.secondary.main,
+        margin: theme.spacing(1),
+    },
 }));
 function calcIntColumnsPercentage(intColumns: number, allColumns: number): number {
     if (intColumns === 0 || allColumns === 0) {
@@ -35,9 +39,13 @@ function calcIntColumnsPercentage(intColumns: number, allColumns: number): numbe
     return Math.round((intColumns / allColumns) * 100);
 }
 function AnalyseFile(props: any) {
+    const classes = useStyles();
     return (
         <Container component="main">
             <CssBaseline />
+            {props.integerFields.map((integerField: string) => (
+                <Chip className={classes.chips} label={integerField} />
+            ))}
             <Typography>{props.integerFields}</Typography>
             <Box position="relative" display="inline-flex">
                 <CircularProgress
