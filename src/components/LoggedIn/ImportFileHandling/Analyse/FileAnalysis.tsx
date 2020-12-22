@@ -3,30 +3,6 @@ import { Box, Container, CssBaseline, Typography, CircularProgress, Chip } from 
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
-    paper: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: theme.palette.secondary.main,
-    },
-    form: {
-        width: '100%', // Fix IE 11 issue.
-        marginTop: theme.spacing(3),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
-    formControl: {
-        margin: theme.spacing(1),
-        minWidth: 220,
-    },
-    selectEmpty: {
-        marginTop: theme.spacing(2),
-    },
     chips: {
         backgroundColor: theme.palette.secondary.main,
         margin: theme.spacing(1),
@@ -38,7 +14,7 @@ function calcIntColumnsPercentage(intColumns: number, allColumns: number): numbe
     }
     return Math.round((intColumns / allColumns) * 100);
 }
-function AnalyseFile(props: any) {
+function FileAnalysis(props: any) {
     const classes = useStyles();
     return (
         <Container component="main">
@@ -81,4 +57,4 @@ const mapStateToProps = (state: any) => ({
     integerDataObjects: state.analysedData.integerDataObjects,
     dataFields: state.importedData.dataFields,
 });
-export default connect(mapStateToProps, {})(AnalyseFile);
+export default connect(mapStateToProps, {})(FileAnalysis);

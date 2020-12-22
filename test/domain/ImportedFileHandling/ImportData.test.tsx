@@ -5,7 +5,7 @@ import React from 'react';
 //Interface Components
 import { FileType } from '../../../src/domain/interfaces/IFileType';
 //Domain Components
-import { ImportData } from '../../../src/domain/ImportedFileHandling/ImportData';
+import { ImportFileData } from '../../../src/domain/ImportedFileHandling/ImportFileData';
 
 //Store components
 import { store } from '../../../src/ReduxStore/store';
@@ -68,7 +68,7 @@ describe('Import Data', () => {
             file: '',
             fileType: FileType.CSV,
         };
-        const importData = new ImportData(importedFile);
+        const importData = new ImportFileData(importedFile);
         expect(importData.validate().notification()).toBe('File is empty');
     });
     it('Should add the CSV file data correctly to the Redux store', () => {
@@ -79,7 +79,7 @@ describe('Import Data', () => {
             file: testCSV,
             fileType: FileType.CSV,
         };
-        const importData = new ImportData(importedFile);
+        const importData = new ImportFileData(importedFile);
         importData.validate();
         expect(store.getState().importedData.dataFields).toStrictEqual(csvFields);
         expect(store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
@@ -94,7 +94,7 @@ describe('Import Data', () => {
             file: JSON.stringify(testJSON),
             fileType: FileType.JSON,
         };
-        const importData = new ImportData(importedFile);
+        const importData = new ImportFileData(importedFile);
         importData.validate();
         expect(store.getState().importedData.dataFields).toStrictEqual(jsonFields);
         expect(store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);

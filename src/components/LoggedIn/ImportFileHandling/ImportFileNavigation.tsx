@@ -6,7 +6,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ImportFiles from './Import/ImportFiles';
-import AnalyseFile from './Analyse/AnalyseFile';
+import AnalyseFile from './Analyse/FileAnalysis';
 
 interface TabPanelProps {
     children?: React.ReactNode;

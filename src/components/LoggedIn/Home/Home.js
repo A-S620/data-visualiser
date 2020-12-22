@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 
 import ImportFiles from '../ImportFileHandling/Import/ImportFiles';
-import AnalyseFile from '../ImportFileHandling/Analyse/AnalyseFile';
+import AnalyseFile from '../ImportFileHandling/Analyse/FileAnalysis';
 import ImportFileNavigation from '../ImportFileHandling/ImportFileNavigation';
 
 const useStyles = makeStyles((theme) => ({

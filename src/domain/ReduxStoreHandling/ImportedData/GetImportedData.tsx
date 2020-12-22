@@ -2,7 +2,7 @@
 //Interfaces
 //Store components
 import { store } from '../../../ReduxStore/store';
-import { IImportedData } from '../../interfaces/IImportedData';
+import { IImportedFileData } from '../../interfaces/IImportedFileData';
 
 export default class GetImportedData {
     private static getDataFields(): Array<string> {
@@ -14,8 +14,8 @@ export default class GetImportedData {
     private static getDataAsObjects(): Array<object> {
         return store.getState().importedData.dataAsObjects;
     }
-    public getImportedData(): IImportedData {
-        const importedData: IImportedData = {
+    public getImportedData(): IImportedFileData {
+        const importedData: IImportedFileData = {
             dataFields: GetImportedData.getDataFields(),
             dataAsObjects: GetImportedData.getDataAsObjects(),
             dataAsArrays: GetImportedData.getDataAsArrays(),

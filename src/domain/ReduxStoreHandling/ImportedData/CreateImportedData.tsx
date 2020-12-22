@@ -4,11 +4,11 @@ import { Notifications } from '../../UIHandlers/Notifications';
 
 import { store } from '../../../ReduxStore/store';
 import { addDataFields, addDataAsArrays, addDataAsObjects } from '../../../ReduxStore/Actions/ReducerActions';
-import { IImportedData } from '../../interfaces/IImportedData';
+import { IImportedFileData } from '../../interfaces/IImportedFileData';
 
 export default class CreateImportedData {
-    private importedData: IImportedData;
-    constructor(importedData: IImportedData) {
+    private importedData: IImportedFileData;
+    constructor(importedData: IImportedFileData) {
         this.importedData = importedData;
     }
     //create dataFields in store

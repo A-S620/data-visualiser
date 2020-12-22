@@ -6,7 +6,7 @@ import React from 'react';
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-import {IImportedData} from "../../../../src/domain/interfaces/IImportedData";
+import {IImportedFileData} from "../../../../src/domain/interfaces/IImportedFileData";
 
 //Test Data
 const dataAsArrays = [
@@ -21,7 +21,7 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
-const importedData: IImportedData = {
+const importedData: IImportedFileData = {
     dataFields: dataFields,
     dataAsObjects: dataAsObjects,
     dataAsArrays: dataAsArrays,

@@ -10,7 +10,7 @@ import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedD
 //Store components
 
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-import { IImportedData } from '../../../../src/domain/interfaces/IImportedData';
+import { IImportedFileData } from '../../../../src/domain/interfaces/IImportedFileData';
 
 //Test Data
 const dataAsArrays = [
@@ -40,7 +40,7 @@ describe('GetImportedData domain component', () => {
         //Given I have created data in the redux store
         //When I run the function getColumns from an instance of GetImportedData
         //Then it should return the correct dataFields
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: dataAsArrays,
@@ -55,7 +55,7 @@ describe('GetImportedData domain component', () => {
         //Given I have created data in the redux store
         //When I run the function getDataAsArrays from an instance of GetImportedData
         //Then it should return the correct data as arrays
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: dataAsArrays,
@@ -69,7 +69,7 @@ describe('GetImportedData domain component', () => {
         //Given I have created data in the redux store
         //When I run the function getDataAsObjects from an instance of GetImportedData
         //Then it should return the correct data as objects
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: dataAsArrays,

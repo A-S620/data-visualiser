@@ -8,10 +8,10 @@ import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData'
 import JSONProcessor from './FileProcessors/JSONProcessor';
 
 import { FileType } from '../interfaces/IFileType';
-import { IImportedData } from '../interfaces/IImportedData';
+import { IImportedFileData } from '../interfaces/IImportedFileData';
 import { IImportedFile } from '../interfaces/IImportedFile';
 
-export class ImportData {
+export class ImportFileData {
     private importedFile: IImportedFile;
 
     constructor(importedFile: IImportedFile) {
@@ -35,29 +35,29 @@ export class ImportData {
     }
     private processCSV() {
         const csvProcessor = new CSVProcessor(this.importedFile.file);
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: csvProcessor.getCSVFields(),
             dataAsObjects: csvProcessor.csvToObjects(),
             dataAsArrays: csvProcessor.csvToArrays(),
         };
-        ImportData.createImportedData(importedData);
+        ImportFileData.createImportedData(importedData);
     }
     private processJSON() {
         const jsonProcessor = new JSONProcessor(this.importedFile.file);
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: jsonProcessor.getJSONFields(),
             dataAsObjects: jsonProcessor.jsonToObjects(),
             dataAsArrays: jsonProcessor.jsonToArrays(),
         };
-        ImportData.createImportedData(importedData);
+        ImportFileData.createImportedData(importedData);
     }
-    private static createImportedData(importedData: IImportedData) {
+    private static createImportedData(importedData: IImportedFileData) {
         const createImportedData = new CreateImportedData(importedData);
         createImportedData.createDataFields();
         createImportedData.createDataAsArrays();
         createImportedData.createDataAsObjects();
     }
-    public getImportedData(): IImportedData {
+    public getImportedData(): IImportedFileData {
         const getImportedData = new GetImportedData();
         const data = getImportedData.getImportedData();
         return {

@@ -7,9 +7,9 @@ import React from 'react';
 import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import { AnalyseData } from '../../../src/domain/ImportedFileHandling/AnalyseData';
+import { AnalyseFileData } from '../../../src/domain/ImportedFileHandling/AnalyseFileData';
 import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { IImportedData } from '../../../src/domain/interfaces/IImportedData';
+import { IImportedFileData } from '../../../src/domain/interfaces/IImportedFileData';
 
 //Store components
 
@@ -42,9 +42,9 @@ const dataWithoutFloatsFields = ['id', 'first_name', 'last_name', 'email', 'gend
 describe('Analyse Data', () => {
     it('Should return a notification when there are no integer fields in the data', () => {
         //Given I have some data with no integer fields
-        //When I process the data using the AnalyseData class
+        //When I process the data using the AnalyseFileData class
         //Then it should return a notification
-        const testData: IImportedData = {
+        const testData: IImportedFileData = {
             dataFields: dataWithoutFloatsFields,
             dataAsObjects: dataWithoutFloats,
             dataAsArrays: [],
@@ -52,7 +52,7 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseData();
+        const analyseData = new AnalyseFileData();
         const notifications = analyseData.validate();
         expect(notifications.notification()).toEqual(
             "Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised"
@@ -60,9 +60,9 @@ describe('Analyse Data', () => {
     });
     it('Should not return a notification when there 2 or more integer fields in the data', () => {
         //Given I have some data with 2 or more integer fields
-        //When I process the data using the AnalyseData class
+        //When I process the data using the AnalyseFileData class
         //Then it should return a notification
-        const testData: IImportedData = {
+        const testData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: [],
@@ -70,7 +70,7 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseData();
+        const analyseData = new AnalyseFileData();
         const notifications = analyseData.validate();
         expect(notifications.notification()).toEqual('');
     });

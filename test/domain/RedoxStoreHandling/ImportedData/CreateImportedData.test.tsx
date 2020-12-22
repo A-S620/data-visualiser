@@ -9,7 +9,7 @@ import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedD
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 //Store components
 import { store } from '../../../../src/ReduxStore/store';
-import { IImportedData } from '../../../../src/domain/interfaces/IImportedData';
+import { IImportedFileData } from '../../../../src/domain/interfaces/IImportedFileData';
 
 //Test Data
 const dataAsArrays = [
@@ -40,7 +40,7 @@ describe('CreateImportedData domain component', () => {
         //Given I have dataFields as a array
         //When I create an instance of CreateImportedData
         //Then the CreateImportedData should add the dataFields to the dataFields attribute in the redux state
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: dataAsArrays,
@@ -54,7 +54,7 @@ describe('CreateImportedData domain component', () => {
         //Given I have CSV data as an array
         //When I create an instance of CreateImportedData
         //Then the CreateImportedData should add the data to the dataAsArrays attribute in the redux state
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: dataAsArrays,
@@ -68,7 +68,7 @@ describe('CreateImportedData domain component', () => {
         //Given I have CSV data as an object
         //When I create an instance of CreateImportedData
         //Then the CreateImportedData should add the data to the dataAsObjects attribute in the redux state
-        const importedData: IImportedData = {
+        const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
             dataAsArrays: dataAsArrays,

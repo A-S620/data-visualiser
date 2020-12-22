@@ -5,7 +5,7 @@ import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData'
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { store } from '../../ReduxStore/store';
 
-export class AnalyseData {
+export class AnalyseFileData {
     private readonly dataFields = store.getState().importedData.dataFields;
     private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
     private integerFields: Array<string> = [];
