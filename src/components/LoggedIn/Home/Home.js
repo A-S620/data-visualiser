@@ -3,18 +3,12 @@ import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
 
 import ImportFiles from '../ImportFileHandling/Import/ImportFiles';
 import AnalyseFile from '../ImportFileHandling/Analyse/FileAnalysis';
-import ImportFileNavigation from '../ImportFileHandling/ImportFileNavigation';
+import ImportFileComponent from '../ImportFileHandling/ImportFileComponent';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100%',
-    },
-    container: {
-        width: '40%',
     },
     alignItemsAndJustifyContent: {
         width: '100%',
@@ -23,17 +17,13 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         backgroundColor: 'pink',
     },
-    previewChip: {
-        minWidth: 160,
-        maxWidth: 210,
-    },
 }));
 
 export default function Home() {
     const classes = useStyles();
     return (
-        <Grid className={classes.root} container direction="row" justify="flex-start" alignItems="center">
-            <ImportFileNavigation />
-        </Grid>
+        <main>
+            <ImportFileComponent />
+        </main>
     );
 }

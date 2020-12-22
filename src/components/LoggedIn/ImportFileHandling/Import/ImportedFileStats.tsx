@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: theme.palette.text.secondary,
         },
         stat: {
-            color: theme.palette.primary.main,
+            color: theme.palette.secondary.contrastText,
             textAlign: 'center',
             margin: theme.spacing(1),
         },

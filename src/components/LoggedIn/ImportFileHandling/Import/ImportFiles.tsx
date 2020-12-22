@@ -1,6 +1,6 @@
 //Handles file imports in the front end
 import React from 'react';
-import { Button, Container, Grid, IconButton, makeStyles, Tooltip } from '@material-ui/core';
+import { Button, Container, Grid, IconButton, makeStyles, Paper, Tooltip } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
@@ -28,12 +28,11 @@ interface IState {
 }
 export default class ImportFiles extends React.Component<{}, IState> {
     private classes: any = makeStyles((theme) => ({
-        root: {
-            width: '100%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+        paper: {
+            width: '70%',
             height: '100%',
+            margin: theme.spacing(2),
+            padding: theme.spacing(2),
         },
         container: {
             width: '100%',
@@ -145,59 +144,55 @@ export default class ImportFiles extends React.Component<{}, IState> {
                         notification={`Error(s): ${this.state.errors.notification()}`}
                     />
                 )}
-                <Grid
-                    className={this.classes.root}
-                    container
-                    direction="column"
-                    justify="flex-start"
-                    alignItems="center"
-                >
-                    <Container style={{ marginBottom: 20 }} id="drop-zone-area">
-                        <Tooltip title="Delete Imported File from system">
-                            <IconButton
+                <Paper className={this.classes.paper}>
+                    <Grid container direction="column" justify="flex-start" alignItems="center">
+                        <Container style={{ marginBottom: 20 }} id="drop-zone-area">
+                            <Tooltip title="Delete Imported File from system">
+                                <IconButton
+                                    color="primary"
+                                    style={{ marginRight: 10, borderRadius: '5em' }}
+                                    id="refresh-import-button"
+                                    disabled={this.state.submitButtonDisabled}
+                                    onClick={() => {
+                                        this.resetFiles();
+                                    }}
+                                >
+                                    <DeleteIcon />
+                                </IconButton>
+                            </Tooltip>
+
+                            <DropzoneArea
+                                showPreviews={true}
+                                onChange={async (files) => this.addFiles(files)}
+                                showPreviewsInDropzone={false}
+                                useChipsForPreview
+                                previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
+                                previewChipProps={{ classes: { root: this.classes.previewChip } }}
+                                previewText="Selected files"
+                                clearOnUnmount={true}
+                                acceptedFiles={['text/csv', 'application/json']}
+                                filesLimit={1}
+                            />
+                        </Container>
+                        <Grid justify="center">
+                            <Button
                                 color="primary"
                                 style={{ marginRight: 10, borderRadius: '5em' }}
-                                id="refresh-import-button"
+                                id="submit-files-button"
+                                variant="contained"
                                 disabled={this.state.submitButtonDisabled}
                                 onClick={() => {
-                                    this.resetFiles();
+                                    this.uploadFiles();
                                 }}
                             >
-                                <DeleteIcon />
-                            </IconButton>
-                        </Tooltip>
-
-                        <DropzoneArea
-                            showPreviews={true}
-                            onChange={async (files) => this.addFiles(files)}
-                            showPreviewsInDropzone={false}
-                            useChipsForPreview
-                            previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
-                            previewChipProps={{ classes: { root: this.classes.previewChip } }}
-                            previewText="Selected files"
-                            clearOnUnmount={true}
-                            acceptedFiles={['text/csv', 'application/json']}
-                            filesLimit={1}
-                        />
-                    </Container>
-                    <Grid container justify="center">
-                        <Button
-                            color="primary"
-                            style={{ marginRight: 10, borderRadius: '5em' }}
-                            id="submit-files-button"
-                            variant="contained"
-                            disabled={this.state.submitButtonDisabled}
-                            onClick={() => {
-                                this.uploadFiles();
-                            }}
-                        >
-                            Import
-                        </Button>
+                                Import
+                            </Button>
+                        </Grid>
+                        <Grid justify="center">
+                            <ImportedFileStats {...this.state.importedFileStats} />
+                        </Grid>
                     </Grid>
-                    <Grid container justify="center">
-                        <ImportedFileStats {...this.state.importedFileStats} />
-                    </Grid>
-                </Grid>
+                </Paper>
             </main>
         );
     }

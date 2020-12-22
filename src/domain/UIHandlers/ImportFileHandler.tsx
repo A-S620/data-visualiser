@@ -17,7 +17,7 @@ export class ImportFileHandler {
         const importedDataErrors = this.getImportedDataErrors();
         notifications.concat(importedDataErrors);
         if (notifications.isEmpty()) {
-            const analysedDataErrors = this.analyseData();
+            const analysedDataErrors = ImportFileHandler.analyseData();
             notifications.concat(analysedDataErrors);
         }
         return notifications;
@@ -26,10 +26,9 @@ export class ImportFileHandler {
         const importData = new ImportFileData(this.importedFile);
         return importData.validate();
     }
-    private analyseData(): Notifications {
+    private static analyseData(): Notifications {
         const analyseData = new AnalyseFileData();
-        const analyseDataErrors = analyseData.validate();
-        return analyseDataErrors;
+        return analyseData.validate();
     }
     public resetImportedFileData() {
         ImportFileHandler.resetImportedData();
