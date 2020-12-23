@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Made Linting changes to other files">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/data-visualiser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data-visualiser.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/CSVProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/CSVProcessor.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/JSONProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/JSONProcessor.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/Test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prettier.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/prettier.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fileTransformer.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/fileTransformer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/setupTests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,21 +321,7 @@
       <workItem from="1608646128847" duration="7000" />
       <workItem from="1608665897641" duration="5036000" />
       <workItem from="1608717715743" duration="428000" />
-      <workItem from="1608718976152" duration="4806000" />
-    </task>
-    <task id="LOCAL-00032" summary="Refactoring- renaming variables">
-      <created>1607088587312</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1607088587312</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Refactoring Redux store">
-      <created>1607088981907</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1607088981907</updated>
+      <workItem from="1608718976152" duration="5364000" />
     </task>
     <task id="LOCAL-00034" summary="Refactoring Imported Data store handlers">
       <created>1607089239871</created>
@@ -666,7 +652,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608736125778</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Made Linting changes to Domain Components tests">
+      <created>1608737515750</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1608737515750</updated>
+    </task>
+    <task id="LOCAL-00082" summary="Made Linting changes to Redux Store tests">
+      <created>1608737653838</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1608737653838</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,9 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ReduxReducer.js analysedData actions + unit tests" />
-    <MESSAGE value="AnalysedData domain components unit test files setup" />
-    <MESSAGE value="GetAnalysedData.tsx + unit tests" />
     <MESSAGE value="ResetAnalysedData.tsx + unit tests" />
     <MESSAGE value="CreateAnalysedData.tsx + unit tests" />
     <MESSAGE value="AnalyseData.tsx UI Handler + unit tests" />
@@ -699,7 +696,10 @@
     <MESSAGE value="Made Linting changes to ReduxStore" />
     <MESSAGE value="Made Linting changes to other files in src" />
     <MESSAGE value="Made Linting changes to UI Components tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Linting changes to UI Components tests" />
+    <MESSAGE value="Made Linting changes to Domain Components tests" />
+    <MESSAGE value="Made Linting changes to Redux Store tests" />
+    <MESSAGE value="Made Linting changes to other files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Linting changes to other files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
