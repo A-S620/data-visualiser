@@ -46,45 +46,43 @@ function getExampleObject(integerDataObjects: Array<object>): Object {
 function FileAnalysis(props: any) {
     const classes = useStyles();
     return (
-        <Paper className={classes.paper}>
-            <Grid direction="column" justify="flex-start" alignItems="flex-start">
-                <CssBaseline />
-                <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
-                <Box position="relative" display="inline-flex" className={classes.donutChart}>
-                    <CircularProgress
-                        variant="determinate"
-                        {...props}
-                        color="primary"
-                        thickness={7}
-                        size={200}
-                        value={calcIntColumnsPercentage(props.integerFields.length, props.dataFields.length)}
-                    />
-                    <Box
-                        top={0}
-                        left={0}
-                        bottom={0}
-                        right={0}
-                        position="absolute"
-                        display="flex"
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        <Typography variant="h3" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
-                            props.integerFields.length,
-                            props.dataFields.length
-                        )}%`}</Typography>
-                    </Box>
+        <Grid direction="column" justify="flex-start" alignItems="flex-start">
+            <CssBaseline />
+            <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
+            <Box position="relative" display="inline-flex" className={classes.donutChart}>
+                <CircularProgress
+                    variant="determinate"
+                    {...props}
+                    color="primary"
+                    thickness={7}
+                    size={200}
+                    value={calcIntColumnsPercentage(props.integerFields.length, props.dataFields.length)}
+                />
+                <Box
+                    top={0}
+                    left={0}
+                    bottom={0}
+                    right={0}
+                    position="absolute"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Typography variant="h3" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
+                        props.integerFields.length,
+                        props.dataFields.length
+                    )}%`}</Typography>
                 </Box>
-                <Typography className={classes.statDescription}>Integer Columns:</Typography>
-                {props.integerFields.map((integerField: string) => (
-                    <Chip className={classes.chips} label={integerField} />
-                ))}
-                <Typography className={classes.statDescription}>Example Data Object:</Typography>
-                <Typography variant="h6" className={classes.exampleObject}>{`${JSON.stringify(
-                    getExampleObject(props.integerDataObjects)
-                )}`}</Typography>
-            </Grid>
-        </Paper>
+            </Box>
+            <Typography className={classes.statDescription}>Integer Columns:</Typography>
+            {props.integerFields.map((integerField: string) => (
+                <Chip className={classes.chips} label={integerField} />
+            ))}
+            <Typography className={classes.statDescription}>Example Data Object:</Typography>
+            <Typography variant="h6" className={classes.exampleObject}>{`${JSON.stringify(
+                getExampleObject(props.integerDataObjects)
+            )}`}</Typography>
+        </Grid>
     );
 }
 

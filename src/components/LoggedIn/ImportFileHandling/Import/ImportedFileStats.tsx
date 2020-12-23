@@ -7,20 +7,22 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
             flexGrow: 1,
+            margin: theme.spacing(20),
         },
         statDescription: {
-            margin: theme.spacing(2),
+            margin: theme.spacing(4),
             textAlign: 'center',
             color: theme.palette.text.secondary,
         },
         stat: {
             color: theme.palette.secondary.contrastText,
             textAlign: 'center',
-            margin: theme.spacing(1),
+            margin: theme.spacing(4),
         },
         gridItem: {
             background: theme.palette.secondary.main,
-            marginRight: 10,
+            padding: theme.spacing(6),
+            margin: theme.spacing(4),
             borderRadius: '2em',
         },
     })

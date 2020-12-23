@@ -25,6 +25,7 @@ const theme = createMuiTheme({
         contrastThreshold: 3,
         tonalOffset: 0.2,
     },
+    spacing: 2,
 });
 ReactDOM.render(
     <React.StrictMode>
