@@ -1,6 +1,3 @@
-//ReduxStore components
-import ReduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
-import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
@@ -40,15 +37,9 @@ const analysedDataSlice = {
 };
 describe('ReduxReducer', () => {
     it('should return the initial state', () => {
-        //Given there is a Redux reducer
-        //When it is first called
-        //Then it should return the initial state
         expect(reduxReducer(undefined, {})).toEqual(ReduxState);
     });
     it('should handle DATA_FIELDS_ADDED', () => {
-        //Given there is a Redux reducer
-        //When data fields is added to the importedData slice
-        //Then it should return the updated state
         expect(reduxReducer(importedDataSlice, reducerActions.addDataFields(dataFields))).toEqual({
             importedData: {
                 dataFields: dataFields,
@@ -58,9 +49,6 @@ describe('ReduxReducer', () => {
         });
     });
     it('should handle DATA_AS_ARRAY_ADDED', () => {
-        //Given there is a Redux reducer
-        //When data as arrays is added to the importedData slice
-        //Then it should return the updated state
         expect(reduxReducer(importedDataSlice, reducerActions.addDataAsArrays(dataAsArrays))).toEqual({
             importedData: {
                 dataFields: [],
@@ -70,9 +58,6 @@ describe('ReduxReducer', () => {
         });
     });
     it('should handle DATA_AS_OBJECTS_ADDED', () => {
-        //Given there is a Redux reducer
-        //When data as objects is added to the importedData slice
-        //Then it should return the updated state
         expect(reduxReducer(importedDataSlice, reducerActions.addDataAsObjects(dataAsObjects))).toEqual({
             importedData: {
                 dataFields: [],
@@ -82,9 +67,6 @@ describe('ReduxReducer', () => {
         });
     });
     it('should handle IMPORTED_DATA_STATE_RESET', () => {
-        //Given there is a Redux reducer
-        //When data in the importedData slice is reset
-        //Then it should return the updated state
         expect(
             reduxReducer(
                 [
@@ -101,9 +83,6 @@ describe('ReduxReducer', () => {
         ).toEqual(importedDataSlice);
     });
     it('Should handle INTEGER_FIELDS_ADDED', () => {
-        //Given there is a Redux reducer
-        //When integer fields is added to the analysedData slice
-        //Then it should return the updated state
         expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerFields(dataFields))).toEqual({
             analysedData: {
                 integerFields: dataFields,
@@ -112,9 +91,6 @@ describe('ReduxReducer', () => {
         });
     });
     it('Should handle INTEGER_DATA_OBJECTS_ADDED', () => {
-        //Given there is a Redux reducer
-        //When integer data objects is added to the analysedData slice
-        //Then it should return the updated state
         expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerDataObjects(integerDataObjects))).toEqual({
             analysedData: {
                 integerFields: [],
@@ -123,9 +99,6 @@ describe('ReduxReducer', () => {
         });
     });
     it('Should handle ANALYSED_DATA_SLICE_RESET', () => {
-        //Given there is a Redux reducer
-        //When data in the analysedData slice is reset
-        //Then it should return the updated state
         expect(
             reduxReducer(
                 [
