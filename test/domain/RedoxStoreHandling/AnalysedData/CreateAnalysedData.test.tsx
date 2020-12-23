@@ -1,9 +1,5 @@
-//Imports from libraries
-import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
-import React from 'react';
 
-//Domain Components
 import CreateAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
@@ -27,18 +23,12 @@ afterAll(() => {
 });
 describe('CreateAnalysedData domain component', () => {
     it('Should add integerFields to the integerFields attribute in the analysedData slice', () => {
-        //Given I have integerFields as a array
-        //When I create an instance of CreateAnalysedData
-        //Then the CreateAnalysedData should add the integerFields to the integerFields attribute
         const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects);
         createStoreHandler.createIntegerFields();
         const getStoreHandler = new GetAnalysedData();
         expect(getStoreHandler.getIntegerFields()).toStrictEqual(integerFields);
     });
     it('Should add data as Objects to the integerDataObjects attribute in the analysedData slice', () => {
-        //Given I have CSV data as an object
-        //When I create an instance of CreateAnalysedData
-        //Then the CreateAnalysedData should add the data to the integerDataObjects attribute
         const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects);
         createStoreHandler.createIntegerDataObjects();
         const getStoreHandler = new GetAnalysedData();

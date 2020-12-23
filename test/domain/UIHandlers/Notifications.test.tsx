@@ -4,9 +4,9 @@ describe('Notification Message', () => {
     it('should print out single notification', () => {
         const notifications = new Notifications();
 
-        notifications.addNotification('error occured');
+        notifications.addNotification('error occurred');
 
-        expect(notifications.notification()).toBe('error occured');
+        expect(notifications.notification()).toBe('error occurred');
     });
 
     it('should print out multiple notification messages', () => {

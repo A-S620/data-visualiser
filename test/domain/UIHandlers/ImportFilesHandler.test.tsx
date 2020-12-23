@@ -1,5 +1,4 @@
 import { ImportFileHandler } from '../../../src/domain/UIHandlers/ImportFileHandler';
-import GetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
 import { FileType } from '../../../src/domain/interfaces/IFileType';
 //Test Data

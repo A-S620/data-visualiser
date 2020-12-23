@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Made Linting changes to domain components">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/CSVProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/CSVProcessor.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/JSONProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/JSONProcessor.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/Test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="org.sonarlint.intellij.config.project.SonarLintProjectConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -320,28 +321,7 @@
       <workItem from="1608646128847" duration="7000" />
       <workItem from="1608665897641" duration="5036000" />
       <workItem from="1608717715743" duration="428000" />
-      <workItem from="1608718976152" duration="3580000" />
-    </task>
-    <task id="LOCAL-00029" summary="JSONProcessor.tsx return fields">
-      <created>1606933000273</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1606933000273</updated>
-    </task>
-    <task id="LOCAL-00030" summary="JSONProcessor.tsx and JSONProcessor.test.tsx">
-      <created>1607013273098</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1607013273098</updated>
-    </task>
-    <task id="LOCAL-00031" summary="ImportData.tsx and ImportData.test.tsx">
-      <created>1607014352982</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1607014352982</updated>
+      <workItem from="1608718976152" duration="4806000" />
     </task>
     <task id="LOCAL-00032" summary="Refactoring- renaming variables">
       <created>1607088587312</created>
@@ -665,7 +645,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608735041252</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="Made Linting changes to ReduxStore">
+      <created>1608735765061</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1608735765061</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Made Linting changes to other files in src">
+      <created>1608735903206</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1608735903206</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Made Linting changes to UI Components tests">
+      <created>1608736125778</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1608736125778</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,9 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ReduxReducer.js unit tests" />
-    <MESSAGE value="Created AnalysedData slice handling components in domain" />
-    <MESSAGE value="Updated ReduxStore to handle analysed data slice&#10;Updated ReducerActions.tsx, ReducerActionTypes.js + unit tests&#10;Updated ReduxReducer.js - need to do unit tests&#10;Updated ReduxState.js to include analysedData slice." />
     <MESSAGE value="ReduxReducer.js analysedData actions + unit tests" />
     <MESSAGE value="AnalysedData domain components unit test files setup" />
     <MESSAGE value="GetAnalysedData.tsx + unit tests" />
@@ -698,6 +696,13 @@
     <MESSAGE value="ImportFileComponent.tsx" />
     <MESSAGE value="Made Linting changes to UI components" />
     <MESSAGE value="Made Linting changes to domain components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Linting changes to domain components" />
+    <MESSAGE value="Made Linting changes to ReduxStore" />
+    <MESSAGE value="Made Linting changes to other files in src" />
+    <MESSAGE value="Made Linting changes to UI Components tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Linting changes to UI Components tests" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,17 +1,8 @@
-//Imports from libraries
 import 'jsdom-global/register';
-import React from 'react';
 
-//Interface Components
-//Domain Components
-import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
-import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
-import ResetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { AnalyseFileData } from '../../../src/domain/ImportedFileHandling/AnalyseFileData';
 import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { IImportedFileData } from '../../../src/domain/interfaces/IImportedFileData';
-
-//Store components
 
 //Test data
 const dataAsObjects = [
@@ -20,13 +11,6 @@ const dataAsObjects = [
     { col1: '76', col2: '23', col3: 'foo' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
-const integerFields = ['col1', 'col2'];
-
-const integerDataObjects = [
-    { col1: 32, col2: 45 },
-    { col1: 79, col2: 5 },
-    { col1: 76, col2: 23 },
-];
 
 const dataWithoutFloats = [
     {
@@ -41,9 +25,6 @@ const dataWithoutFloats = [
 const dataWithoutFloatsFields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'];
 describe('Analyse Data', () => {
     it('Should return a notification when there are no integer fields in the data', () => {
-        //Given I have some data with no integer fields
-        //When I process the data using the AnalyseFileData class
-        //Then it should return a notification
         const testData: IImportedFileData = {
             dataFields: dataWithoutFloatsFields,
             dataAsObjects: dataWithoutFloats,
@@ -59,9 +40,6 @@ describe('Analyse Data', () => {
         );
     });
     it('Should not return a notification when there 2 or more integer fields in the data', () => {
-        //Given I have some data with 2 or more integer fields
-        //When I process the data using the AnalyseFileData class
-        //Then it should return a notification
         const testData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,

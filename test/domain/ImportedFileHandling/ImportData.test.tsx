@@ -1,13 +1,8 @@
-//Imports from libraries
 import 'jsdom-global/register';
-import React from 'react';
 
-//Interface Components
 import { FileType } from '../../../src/domain/interfaces/IFileType';
-//Domain Components
 import { ImportFileData } from '../../../src/domain/ImportedFileHandling/ImportFileData';
 
-//Store components
 import { store } from '../../../src/ReduxStore/store';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
@@ -61,9 +56,6 @@ afterAll(() => {
 });
 describe('Import Data', () => {
     it('should return file is empty when files are empty', () => {
-        //Given I have an import file component
-        //When I import an empty file
-        //Then I should get an error saying the file is empty
         const importedFile: IImportedFile = {
             file: '',
             fileType: FileType.CSV,
@@ -72,9 +64,6 @@ describe('Import Data', () => {
         expect(importData.validate().notification()).toBe('File is empty');
     });
     it('Should add the CSV file data correctly to the Redux store', () => {
-        //Given I have an import file componenet
-        //When I import a CSV file
-        //Then it should add the file to the redux store correctly
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: FileType.CSV,
@@ -86,15 +75,11 @@ describe('Import Data', () => {
         expect(store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
     });
     it('Should add the JSON file data correctly to the Redux store', () => {
-        //Given I have an import file component
-        //When I import a JSON file
-        //Then it should add the file to the redux store correctly
-
         const importedFile: IImportedFile = {
-            file: JSON.stringify(testJSON),
-            fileType: FileType.JSON,
-        };
-        const importData = new ImportFileData(importedFile);
+                file: JSON.stringify(testJSON),
+                fileType: FileType.JSON,
+            },
+            importData = new ImportFileData(importedFile);
         importData.validate();
         expect(store.getState().importedData.dataFields).toStrictEqual(jsonFields);
         expect(store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);
