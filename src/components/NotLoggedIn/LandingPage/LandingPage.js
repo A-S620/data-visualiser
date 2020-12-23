@@ -1,9 +1,7 @@
-//Imports from libraries
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, Paper, CardHeader, CardMedia, CardContent, CardActions, AppBar, Grid } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
 
-//Assets Imports
 import LandingImage from '../../assets/images/LandingPage.jpg';
 
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: 'white',
     },
-    topasad: {
+    top: {
         color: 'blue',
         position: 'absolute',
         top: '10%',
@@ -69,6 +67,5 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LandingPage(props) {
-    const classes = useStyles();
     return <Paper>beep beep</Paper>;
 }

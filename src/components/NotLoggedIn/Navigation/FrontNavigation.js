@@ -1,14 +1,10 @@
-//Imports from libraries
 import React, { useState } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Button, Drawer, Grid, Paper, Tab, Tabs, Typography } from '@material-ui/core';
+import { Button, Drawer, Grid, Paper, Tab, Tabs } from '@material-ui/core';
 
-//UI Components Imports
-import Home from '../../LoggedIn/Home/Home';
 import TabPanel from '../../LoggedIn/Navigation/TabPanel';
 import LandingPage from '../LandingPage/LandingPage';
 
-//Assets Imports
 import LandingImage from '../../assets/images/LandingPage.jpg';
 
 const drawerWidth = 240;
@@ -52,14 +48,6 @@ export default function FrontNavigation() {
     const handleTabChange = (e, newValue) => {
         setTab(newValue);
         setOpen(true);
-    };
-
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
     };
 
     return (

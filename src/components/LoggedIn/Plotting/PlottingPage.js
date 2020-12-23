@@ -1,8 +1,6 @@
-//Imports from libraries
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-//UI components Imports
 import PlottingNav from './PlottingNav';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PlottingPage() {
-    const classes = useStyles();
     return (
         <div>
             <PlottingNav />

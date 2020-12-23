@@ -1,9 +1,7 @@
-//Imports from libraries
 import React, { useState } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Drawer, Tab, Tabs, Typography, AppBar } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Tab, Tabs, AppBar } from '@material-ui/core';
 
-//UI Components Imports
 import Home from '../Home/Home';
 import Export from '../Export/Export';
 import Settings from '../Settings/Settings';
@@ -39,38 +37,13 @@ function a11yProps(index) {
 
 export default function UserNavigation() {
     const classes = useStyles();
-    const theme = useTheme();
-    const [open, setOpen] = useState(false);
     const [tab, setTab] = useState(0);
     const handleTabChange = (e, newValue) => {
         setTab(newValue);
-        setOpen(true);
-    };
-
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
-    const handleDrawerClose = () => {
-        setOpen(false);
     };
 
     return (
         <div className={classes.root}>
-            {/*<Drawer*/}
-            {/*    className={classes.drawer}*/}
-            {/*    variant="permanent"*/}
-            {/*    anchor="left"*/}
-            {/*    open={open}*/}
-            {/*    classes={{*/}
-            {/*        paper: classes.drawerPaper,*/}
-            {/*    }}*/}
-            {/*>*/}
-            {/*    <div className={classes.drawerHeader}>*/}
-            {/*        <Typography variant="h6" noWrap align="center">*/}
-            {/*            Data Visualiser*/}
-            {/*        </Typography>*/}
-            {/*    </div>*/}
             <AppBar position="static">
                 <Tabs
                     value={tab}

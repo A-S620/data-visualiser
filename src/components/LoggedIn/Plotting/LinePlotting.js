@@ -1,7 +1,6 @@
-//Imports from libraries
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Paper, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { LineSeries, XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis } from 'react-vis';
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +27,6 @@ const data = [
     { x: 9, y: 0 },
 ];
 export default function LinePlotting() {
-    const classes = useStyles();
     return (
         <div>
             Test

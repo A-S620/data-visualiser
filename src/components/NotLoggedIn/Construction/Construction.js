@@ -1,9 +1,7 @@
-//Imports from libraries
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Typography, Grid } from '@material-ui/core';
 
-//Assets Imports
 import logo from '../../assets/images/logo_transparent.png';
 
 const useStyles = makeStyles((theme) => ({

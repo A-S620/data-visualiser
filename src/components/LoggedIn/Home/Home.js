@@ -1,8 +1,6 @@
 import React from 'react';
-import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 
-import ImportFiles from '../ImportFileHandling/Import/ImportFiles';
-import AnalyseFile from '../ImportFileHandling/Analyse/FileAnalysis';
 import ImportFileComponent from '../ImportFileHandling/ImportFileComponent';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Home() {
-    const classes = useStyles();
     return (
         <main>
             <ImportFileComponent />

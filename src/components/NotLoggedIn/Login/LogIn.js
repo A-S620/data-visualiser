@@ -1,7 +1,13 @@
-//Imports from libraries
 import React from 'react';
-import {Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from '@material-ui/core';
-
+import {
+    Button,
+    TextField,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
+} from '@material-ui/core';
 
 export default function LogIn() {
     const [open, setOpen] = React.useState(false);

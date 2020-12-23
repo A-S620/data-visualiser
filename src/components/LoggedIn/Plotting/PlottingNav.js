@@ -1,10 +1,8 @@
-//Imports from libraries
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Tabs, Tab, Box, Typography, Grid } from '@material-ui/core';
+import { AppBar, Tabs, Tab, Box, Typography } from '@material-ui/core';
 
-//Icons
 import ShowChartIcon from '@material-ui/icons/ShowChart';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -13,7 +11,6 @@ import GraphicEqIcon from '@material-ui/icons/GraphicEq';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import StreetviewIcon from '@material-ui/icons/Streetview';
 
-//UI componenets imports
 import LinePlotting from './LinePlotting';
 
 //Switches tabs

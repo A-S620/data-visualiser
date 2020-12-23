@@ -1,15 +1,11 @@
-//Imports from libraries
 import React, { useState } from 'react';
-import { AppBar, Button, Toolbar, Tab, Tabs, Grid, RaisedButton, Box } from '@material-ui/core';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { AppBar, Button, Tab, Tabs, Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-//Assets Imports
 import LandingImage from '../../assets/images/LandingPage.jpg';
 
-//UI Components Imports
 import TabPanel from './TabPanel';
 import LandingPage from '../../NotLoggedIn/LandingPage/LandingPage';
-import Home from '../Home/Home';
 
 const useStyles = makeStyles((theme) => ({
     paperContainer: {
@@ -51,11 +47,9 @@ function a11yProps(index) {
 }
 export default function Appbar() {
     const classes = useStyles();
-    const [open, setOpen] = useState(false);
     const [tab, setTab] = useState(0);
     const handleTabChange = (e, newValue) => {
         setTab(newValue);
-        setOpen(true);
     };
     return (
         <div className={classes.paperContainer}>

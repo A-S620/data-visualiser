@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import { Typography, Grid, Box } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import { IImportedFileStats } from '../../../../domain/interfaces/IImportedFileStats';
 
 const useStyles = makeStyles((theme: Theme) =>

@@ -1,4 +1,3 @@
-//UI Components Imports
 import Home from '../Home/Home';
 import Export from '../Export/Export';
 import Settings from '../Settings/Settings';
