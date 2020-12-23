@@ -1,18 +1,13 @@
-//Imports from libraries
 import { mount } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 
-//UI Components Imports
 import UserNavigation from '../../../../src/components/LoggedIn/Navigation/UserNavigation';
 
 describe('UserNavigation Component', () => {
     const wrapper = mount(<UserNavigation />);
 
     it('should have the correct items in the menu', () => {
-        //given that I have a menu
-        //when I want to navigate to a page
-        //then it should allow me to navigate to that page
         const pages = ['Home', 'Export', 'Plotting', 'Settings'];
 
         const menu = wrapper.find('div#menu-tabs');
