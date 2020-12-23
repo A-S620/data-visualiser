@@ -1,6 +1,3 @@
-//Responsible for taking the imported data from the imported data slice
-//and amending it to create the analysed data slice in the ReduxStore
-
 import { store } from '../../../ReduxStore/store';
 import { addIntegerDataObjects, addIntegerFields } from '../../../ReduxStore/Actions/ReducerActions';
 

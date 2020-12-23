@@ -1,7 +1,3 @@
-//Processes imported JSON files
-
-//Other domain components
-
 const papa = require('papaparse');
 const { Parser } = require('json2csv');
 
@@ -46,7 +42,6 @@ export default class JSONProcessor {
         const fields = this.getJSONFields();
         const opts = { fields };
         const parser = new Parser(opts);
-        const csv = parser.parse(jsonObjects);
-        return csv;
+        return parser.parse(jsonObjects);
     }
 }

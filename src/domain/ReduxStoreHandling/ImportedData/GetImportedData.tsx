@@ -1,6 +1,3 @@
-// Responsible for getting data from the importedData Redux state
-//Interfaces
-//Store components
 import { store } from '../../../ReduxStore/store';
 import { IImportedFileData } from '../../interfaces/IImportedFileData';
 
@@ -15,11 +12,10 @@ export default class GetImportedData {
         return store.getState().importedData.dataAsObjects;
     }
     public getImportedData(): IImportedFileData {
-        const importedData: IImportedFileData = {
+        return {
             dataFields: GetImportedData.getDataFields(),
             dataAsObjects: GetImportedData.getDataAsObjects(),
             dataAsArrays: GetImportedData.getDataAsArrays(),
         };
-        return importedData;
     }
 }

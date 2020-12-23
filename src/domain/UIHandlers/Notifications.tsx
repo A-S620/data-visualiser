@@ -1,4 +1,3 @@
-//A class that handles notifications in the system. Errors are stored as an Array of strings.
 export class Notifications {
     private notifications: Array<string> = [];
 
