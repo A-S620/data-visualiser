@@ -1,5 +1,3 @@
-//Stores the Redux Action types for the state
-
 //importedData slice
 export const DATA_FIELDS_ADDED = 'dataFieldsAdded';
 export const DATA_AS_ARRAYS_ADDED = 'dataAsArraysAdded';

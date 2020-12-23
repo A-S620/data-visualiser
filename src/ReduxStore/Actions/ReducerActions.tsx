@@ -1,8 +1,5 @@
-//Stores the Redux Actions for the imported data state
-//Action types
 import * as reducerActionTypes from './ReducerActionTypes';
 
-//importedData slice
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
     payload: dataFields,

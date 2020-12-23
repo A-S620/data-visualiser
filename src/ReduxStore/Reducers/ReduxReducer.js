@@ -1,6 +1,4 @@
-//Imports from store
 import ReduxState from '../ReduxState';
-//Actions
 import * as ReducerActions from '../Actions/ReducerActionTypes';
 export default function reduxReducer(state = ReduxState, action) {
     switch (action.type) {

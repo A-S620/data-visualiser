@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" afterDir="false" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Made Linting changes to domain components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileNavigation.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +132,7 @@
       <recent name="$PROJECT_DIR$/test/domain/ImportedFileHandling" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.starte">
+  <component name="RunManager" selected="npm.watch">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -147,16 +143,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
     </configuration>
     <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -199,13 +185,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="watch" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.watch" />
         <item itemvalue="npm.starte" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.security" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -322,28 +318,9 @@
       <workItem from="1608579602905" duration="3566000" />
       <workItem from="1608639495990" duration="597000" />
       <workItem from="1608646128847" duration="7000" />
-      <workItem from="1608665897641" duration="4932000" />
-    </task>
-    <task id="LOCAL-00026" summary="ImportData.tsx, ImportData.test.tsx">
-      <created>1606636223992</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1606636223992</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Folder structure for domain and domain test">
-      <created>1606641372165</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1606641372165</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Working on JSONProcessor.tsx and JSONProcessor.test.tsx">
-      <created>1606644151067</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1606644151067</updated>
+      <workItem from="1608665897641" duration="5036000" />
+      <workItem from="1608717715743" duration="428000" />
+      <workItem from="1608718976152" duration="3580000" />
     </task>
     <task id="LOCAL-00029" summary="JSONProcessor.tsx return fields">
       <created>1606933000273</created>
@@ -667,7 +644,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608666334535</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="ImportFileComponent.tsx">
+      <created>1608671028378</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1608671028378</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Made Linting changes to UI components">
+      <created>1608732896365</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1608732896366</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Made Linting changes to domain components">
+      <created>1608735041252</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1608735041252</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,9 +673,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring ImportedDataActions.tsx" />
-    <MESSAGE value="Refactoring reduxStore" />
-    <MESSAGE value="ReducerActionTypes.js, ReducerActions.tsx unit tests" />
     <MESSAGE value="ReduxReducer.js unit tests" />
     <MESSAGE value="Created AnalysedData slice handling components in domain" />
     <MESSAGE value="Updated ReduxStore to handle analysed data slice&#10;Updated ReducerActions.tsx, ReducerActionTypes.js + unit tests&#10;Updated ReduxReducer.js - need to do unit tests&#10;Updated ReduxState.js to include analysedData slice." />
@@ -700,6 +695,9 @@
     <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx" />
     <MESSAGE value="AnalyseFile.tsx" />
     <MESSAGE value="Refactoring&#10;Renaming components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring&#10;Renaming components" />
+    <MESSAGE value="ImportFileComponent.tsx" />
+    <MESSAGE value="Made Linting changes to UI components" />
+    <MESSAGE value="Made Linting changes to domain components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Linting changes to domain components" />
   </component>
 </project>
