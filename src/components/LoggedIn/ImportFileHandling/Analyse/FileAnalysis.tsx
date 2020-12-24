@@ -48,6 +48,9 @@ function FileAnalysis(props: any) {
     return (
         <Grid direction="column" justify="flex-start" alignItems="flex-start">
             <CssBaseline />
+            <Typography variant="h4" style={{ paddingBottom: '20px' }}>
+                File Analysis:
+            </Typography>
             <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
             <Box position="relative" display="inline-flex" className={classes.donutChart}>
                 <CircularProgress

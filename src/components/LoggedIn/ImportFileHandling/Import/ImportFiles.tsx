@@ -149,7 +149,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             <IconButton
                                 color="primary"
                                 style={{ marginRight: 10, borderRadius: '5em' }}
-                                id="refresh-import-button"
+                                id="delete-import-button"
                                 disabled={this.state.submitButtonDisabled}
                                 onClick={() => {
                                     this.resetFiles();

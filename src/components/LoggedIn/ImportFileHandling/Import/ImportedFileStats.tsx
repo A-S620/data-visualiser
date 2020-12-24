@@ -43,10 +43,10 @@ export default function ImportedFileStats(importedFileStats: IImportedFileStats)
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id="imported-file-stats">
             <Grid container direction="row" justify="space-between" alignItems="flex-start">
                 {Object.entries(importedFileStats).map(([key, value]) => (
-                    <Grid item direction="column" justify="center" alignItems="center" className={classes.gridItem}>
+                    <Grid item direction="column" justify="center" alignItems="center" className={classes.gridItem} id={key+'-stat'}>
                         <Typography className={classes.statDescription} variant="subtitle1">
                             {getStatLabel(key)}
                         </Typography>
