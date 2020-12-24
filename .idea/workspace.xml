@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,14 +321,7 @@
       <workItem from="1608717715743" duration="428000" />
       <workItem from="1608718976152" duration="5456000" />
       <workItem from="1608751554708" duration="3744000" />
-      <workItem from="1608827930313" duration="2665000" />
-    </task>
-    <task id="LOCAL-00036" summary="Refactoring Imported Data state handlers unit tests">
-      <created>1607089932077</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1607089932077</updated>
+      <workItem from="1608827930313" duration="3021000" />
     </task>
     <task id="LOCAL-00037" summary="ResetImportedDataState class created + unit tests set up">
       <created>1607090647527</created>
@@ -667,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608756642280</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="ImportFiles.tsx and ImportedFileStats.tsx unit tests">
+      <created>1608830767113</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1608830767114</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +674,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CreateAnalysedData.tsx + unit tests" />
     <MESSAGE value="AnalyseData.tsx UI Handler + unit tests" />
     <MESSAGE value="Removing integerDataArrays from analysedData slice in Redux" />
     <MESSAGE value="Rename Store to store store.js" />
@@ -700,7 +698,8 @@
     <MESSAGE value="Made Linting changes to Redux Store tests" />
     <MESSAGE value="Made Linting changes to other files" />
     <MESSAGE value="Import File components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Import File components" />
+    <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImportFiles.tsx and ImportedFileStats.tsx unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

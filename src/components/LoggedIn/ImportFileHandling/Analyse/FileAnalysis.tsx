@@ -46,7 +46,7 @@ function getExampleObject(integerDataObjects: Array<object>): Object {
 function FileAnalysis(props: any) {
     const classes = useStyles();
     return (
-        <Grid direction="column" justify="flex-start" alignItems="flex-start">
+        <Grid direction="column" justify="flex-start" alignItems="flex-start" id="file-analysis">
             <CssBaseline />
             <Typography variant="h4" style={{ paddingBottom: '20px' }}>
                 File Analysis:

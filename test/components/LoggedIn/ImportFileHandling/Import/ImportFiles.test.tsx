@@ -4,7 +4,6 @@ import React from 'react';
 
 import ImportFiles from '../../../../../src/components/LoggedIn/ImportFileHandling/Import/ImportFiles';
 import ImportedFileStats from '../../../../../src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats';
-import {FileType} from "../../../../../src/domain/interfaces/IFileType";
 
 let component: ReactWrapper;
 beforeEach(() => (component = mount(<ImportFiles />)));
@@ -53,6 +52,3 @@ describe('Import Files', () => {
     });
 });
 
-function clickSubmit(): void {
-    component.find('button#submit-files-button').simulate('click');
-}
