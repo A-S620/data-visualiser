@@ -1,8 +1,10 @@
 import { ImportFileHandler } from '../../../src/domain/UIHandlers/ImportFileHandler';
 import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
 import { FileType } from '../../../src/domain/interfaces/IFileType';
+import { store } from '../../../src/ReduxStore/store';
+import GetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 //Test Data
-const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
+const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n c-1,7,baz';
 
 const testJSON = {
     id: 1,
@@ -41,5 +43,27 @@ describe('ImportFileHandler domain component', () => {
         const importFileErrors = new ImportFileHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual('File is empty');
+    });
+    it('should create imported data', () => {
+        const importedFile: IImportedFile = {
+            file: testCSV,
+            fileType: FileType.CSV,
+        };
+        const importFile = new ImportFileHandler(importedFile);
+        importFile.validate();
+        const getImportedData = new GetImportedData();
+        expect(getImportedData.getImportedData().dataFields).toStrictEqual(['col1', 'col2', 'col3']);
+    });
+    //TODO: Reset data
+    it('should reset imported data', async () => {
+        const importedFile: IImportedFile = {
+            file: testCSV,
+            fileType: FileType.CSV,
+        };
+        const importFile = new ImportFileHandler(importedFile);
+        importFile.validate();
+        importFile.resetImportedFileData();
+        const getImportedData = new GetImportedData();
+        expect(getImportedData.getImportedData().dataFields).toBe([]);
     });
 });

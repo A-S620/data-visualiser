@@ -1,13 +1,9 @@
-//Imports from libraries
-import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
 
-//Domain Componenets
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 
-//Store components
 
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import { IImportedFileData } from '../../../../src/domain/interfaces/IImportedFileData';
@@ -37,9 +33,6 @@ afterAll(() => {
 });
 describe('GetImportedData domain component', () => {
     it('Should return the correct dataFields if the getColumns function is called', () => {
-        //Given I have created data in the redux store
-        //When I run the function getColumns from an instance of GetImportedData
-        //Then it should return the correct dataFields
         const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
@@ -52,9 +45,6 @@ describe('GetImportedData domain component', () => {
         expect(getStoreHandler.getImportedData().dataFields).toStrictEqual(dataFields);
     });
     it('Should return the correct data as arrays if the getDataAsArrays function is called', () => {
-        //Given I have created data in the redux store
-        //When I run the function getDataAsArrays from an instance of GetImportedData
-        //Then it should return the correct data as arrays
         const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
@@ -66,9 +56,6 @@ describe('GetImportedData domain component', () => {
         expect(getStoreHandler.getImportedData().dataAsArrays).toStrictEqual(dataAsArrays);
     });
     it('Should return the correct dataAsObjects if the getDataAsObjects function is called', () => {
-        //Given I have created data in the redux store
-        //When I run the function getDataAsObjects from an instance of GetImportedData
-        //Then it should return the correct data as objects
         const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,

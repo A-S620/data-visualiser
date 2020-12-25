@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Home/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Home/Home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,14 +323,7 @@
       <workItem from="1608718976152" duration="5456000" />
       <workItem from="1608751554708" duration="3744000" />
       <workItem from="1608827930313" duration="3150000" />
-      <workItem from="1608882844602" duration="4642000" />
-    </task>
-    <task id="LOCAL-00039" summary="Refactoring">
-      <created>1607158385592</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1607158385592</updated>
+      <workItem from="1608882844602" duration="6467000" />
     </task>
     <task id="LOCAL-00040" summary="importedDataReducer.js and ReduxState.js refactoring">
       <created>1607274367302</created>
@@ -669,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608887416648</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Home.js unit tests">
+      <created>1608888571355</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1608888571355</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rename Store to store store.js" />
     <MESSAGE value="AnalyseFile.tsx UI component" />
     <MESSAGE value="Restructured domain" />
     <MESSAGE value="Started ImportFileHandler.tsx + unit tests, interfaces&#10;Interfaces created:&#10;IAnalysedData.tsx&#10;IImportedData.tsx&#10;IImportedFile.tsx" />
@@ -702,7 +700,8 @@
     <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx unit tests" />
     <MESSAGE value="Started unit tests for FileAnalysis.tsx" />
     <MESSAGE value="unit tests for FileAnalysis.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests for FileAnalysis.tsx" />
+    <MESSAGE value="Home.js unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home.js unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
