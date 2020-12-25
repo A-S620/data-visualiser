@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, CssBaseline, Typography, CircularProgress, Chip, Grid, Paper } from '@material-ui/core';
+import { Box, CssBaseline, Typography, CircularProgress, Chip, Grid } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
@@ -48,12 +48,13 @@ function FileAnalysis(props: any) {
     return (
         <Grid direction="column" justify="flex-start" alignItems="flex-start" id="file-analysis">
             <CssBaseline />
-            <Typography variant="h4" style={{ paddingBottom: '20px' }}>
+            <Typography variant="h4" style={{ paddingBottom: '20px' }} id="file-analysis-title">
                 File Analysis:
             </Typography>
             <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
             <Box position="relative" display="inline-flex" className={classes.donutChart}>
                 <CircularProgress
+                    id={'circular-progress'}
                     variant="determinate"
                     {...props}
                     color="primary"
@@ -62,6 +63,7 @@ function FileAnalysis(props: any) {
                     value={calcIntColumnsPercentage(props.integerFields.length, props.dataFields.length)}
                 />
                 <Box
+                    id={'circular-progress-text'}
                     top={0}
                     left={0}
                     bottom={0}
@@ -79,10 +81,10 @@ function FileAnalysis(props: any) {
             </Box>
             <Typography className={classes.statDescription}>Integer Columns:</Typography>
             {props.integerFields.map((integerField: string) => (
-                <Chip className={classes.chips} label={integerField} />
+                <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
             ))}
             <Typography className={classes.statDescription}>Example Data Object:</Typography>
-            <Typography variant="h6" className={classes.exampleObject}>{`${JSON.stringify(
+            <Typography variant="h6" className={classes.exampleObject} id={'example-object'}>{`${JSON.stringify(
                 getExampleObject(props.integerDataObjects)
             )}`}</Typography>
         </Grid>
