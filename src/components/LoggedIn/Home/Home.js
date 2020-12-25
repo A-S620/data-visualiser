@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
     return (
-        <main>
+        <main id={'home-page'}>
             <ImportFileComponent />
         </main>
     );

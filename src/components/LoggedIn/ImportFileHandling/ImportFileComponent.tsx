@@ -30,9 +30,16 @@ export default function ImportFileComponent() {
     const classes = useStyles();
     return (
         <main>
-            <Grid container direction="row" justify="center" alignItems="center" className={classes.root}>
+            <Grid
+                container
+                direction="row"
+                justify="center"
+                alignItems="center"
+                className={classes.root}
+                id={'import-file-component'}
+            >
                 <Paper className={classes.paper}>
-                    <Grid container direction="row" justify="center" alignItems="center" >
+                    <Grid container direction="row" justify="center" alignItems="center">
                         <Grid item className={classes.component}>
                             <ImportFiles />
                         </Grid>
