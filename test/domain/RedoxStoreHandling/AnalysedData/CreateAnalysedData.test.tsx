@@ -26,12 +26,12 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects);
         createStoreHandler.createIntegerFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getIntegerFields()).toStrictEqual(integerFields);
+        expect(getStoreHandler.getAnalysedData().integerFields).toStrictEqual(integerFields);
     });
     it('Should add data as Objects to the integerDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects);
         createStoreHandler.createIntegerDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getIntegerDataObjects()).toStrictEqual(integerDataObjects);
+        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual(integerDataObjects);
     });
 });

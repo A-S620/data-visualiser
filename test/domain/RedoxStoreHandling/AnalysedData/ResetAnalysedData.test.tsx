@@ -18,7 +18,7 @@ describe('ResetImportedData domain component', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getIntegerFields()).toStrictEqual([]);
+        expect(getStoreHandler.getAnalysedData().integerFields).toStrictEqual([]);
     });
 
     it('Should reset the dataAsObjects attribute in the analysedData slice', () => {
@@ -27,6 +27,6 @@ describe('ResetImportedData domain component', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getIntegerDataObjects()).toStrictEqual([]);
+        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual([]);
     });
 });

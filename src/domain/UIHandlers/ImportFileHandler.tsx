@@ -30,15 +30,11 @@ export class ImportFileHandler {
         const analyseData = new AnalyseFileData();
         return analyseData.validate();
     }
-    public resetImportedFileData() {
-        ImportFileHandler.resetImportedData();
-        ImportFileHandler.resetAnalysedData();
-    }
-    private static resetImportedData() {
+    public resetImportedData() {
         const resetImportedData = new ResetImportedData();
         resetImportedData.resetImportedDataState();
     }
-    private static resetAnalysedData() {
+    public resetAnalysedData() {
         const resetAnalysedData = new ResetAnalysedData();
         resetAnalysedData.resetAnalysedData();
     }

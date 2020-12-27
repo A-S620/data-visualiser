@@ -27,7 +27,7 @@ describe('ResetAnalysedData domain component', () => {
         createStoreHandler.createIntegerFields();
         const getStoreHandler = new GetAnalysedData();
 
-        expect(getStoreHandler.getIntegerFields()).toStrictEqual(integerFields);
+        expect(getStoreHandler.getAnalysedData().integerFields).toStrictEqual(integerFields);
     });
 
     it('Should return the correct data as objects if the getIntegerDataObjects method is called', () => {
@@ -35,6 +35,6 @@ describe('ResetAnalysedData domain component', () => {
         createStoreHandler.createIntegerDataObjects();
         const getStoreHandler = new GetAnalysedData();
 
-        expect(getStoreHandler.getIntegerDataObjects()).toStrictEqual(integerDataObjects);
+        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual(integerDataObjects);
     });
 });
