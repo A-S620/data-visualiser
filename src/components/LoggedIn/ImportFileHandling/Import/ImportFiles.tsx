@@ -1,11 +1,9 @@
-//Handles file imports in the front end
 import React from 'react';
 import { Button, Container, Grid, IconButton, makeStyles, Paper, Tooltip } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
 import { AlertType } from '../../../../domain/interfaces/INotification';
-import { FileType } from '../../../../domain/interfaces/IFileType';
 
 import { Notifications } from '../../../../domain/UIHandlers/Notifications';
 import { ImportFileHandler } from '../../../../domain/UIHandlers/ImportFileHandler';
@@ -23,7 +21,7 @@ interface IState {
     outcomeMessage: string;
     errors: Notifications;
     files: string;
-    fileType: FileType;
+    fileType: string;
     importedFileStats: IImportedFileStats;
 }
 export default class ImportFiles extends React.Component<{}, IState> {
@@ -50,20 +48,17 @@ export default class ImportFiles extends React.Component<{}, IState> {
             outcomeMessage: '',
             errors: new Notifications(),
             files: '',
-            fileType: FileType.CSV,
+            fileType: '',
             importedFileStats: {
-                fileType: undefined,
+                fileType: '',
                 fileSize: '',
                 characterCount: undefined,
             },
         };
     }
-    private static checkFileType(files: File[]): FileType {
+    private static checkFileType(files: File[]): string {
         const file = files[0];
-        if (file.type === 'text/csv') {
-            return FileType.CSV;
-        }
-        return FileType.JSON;
+        return file.type;
     }
     private async addFiles(files: File[]) {
         this.setState({ importedFiles: files });
@@ -114,7 +109,8 @@ export default class ImportFiles extends React.Component<{}, IState> {
             fileType: this.state.fileType,
         };
         const files = new ImportFileHandler(file);
-        files.resetImportedFileData();
+        files.resetImportedData();
+        files.resetAnalysedData();
         this.setState({
             importedFiles: [],
             submitButtonDisabled: true,
@@ -122,15 +118,14 @@ export default class ImportFiles extends React.Component<{}, IState> {
             outcomeMessage: '',
             errors: new Notifications(),
             files: '',
-            fileType: FileType.CSV,
+            fileType: '',
             importedFileStats: {
-                fileType: undefined,
+                fileType: '',
                 fileSize: '',
                 characterCount: undefined,
             },
         });
     }
-
     public render() {
         return (
             <main>
@@ -168,7 +163,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
                             previewChipProps={{ classes: { root: this.classes.previewChip } }}
                             previewText="Selected files"
                             clearOnUnmount={true}
-                            acceptedFiles={['text/csv', 'application/json']}
+                            acceptedFiles={['text/csv']}
                             filesLimit={1}
                         />
                     </Container>

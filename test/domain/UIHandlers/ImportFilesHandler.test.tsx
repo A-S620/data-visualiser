@@ -1,13 +1,12 @@
 import { ImportFileHandler } from '../../../src/domain/UIHandlers/ImportFileHandler';
 import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
-import { FileType } from '../../../src/domain/interfaces/IFileType';
 import GetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n 1,7,baz';
-
+const testCSV2 = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n cool,7,baz';
 const testJSON = {
     id: 1,
     first_name: 'Jeanette',
@@ -34,27 +33,35 @@ describe('ImportFileHandler domain component', () => {
     it('should add data from the imported file to the importedData slice in the store', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFileErrors = new ImportFileHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual('');
     });
     it('should return a notification when there are no integer fields in data', () => {
+        //TODO: investigate test
         const importedFile: IImportedFile = {
-            file: JSON.stringify(testJSON),
-            fileType: FileType.JSON,
+            file: testCSV2,
+            fileType: 'text/csv',
         };
         const importFileErrors = new ImportFileHandler(importedFile).validate();
 
-        expect(importFileErrors.notification()).toEqual(
-            "Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised"
-        );
+        expect(importFileErrors.notification()).toEqual('File is application/json, only CSV is accepted');
+    });
+    it('should return a notification when the file is not a CSV file', () => {
+        const importedFile: IImportedFile = {
+            file: JSON.stringify(testJSON),
+            fileType: 'application/json',
+        };
+        const importFileErrors = new ImportFileHandler(importedFile).validate();
+
+        expect(importFileErrors.notification()).toEqual('File is application/json, only CSV is accepted');
     });
     it('should return a notification when the file is empty', () => {
         const importedFile: IImportedFile = {
             file: '',
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFileErrors = new ImportFileHandler(importedFile).validate();
 
@@ -63,7 +70,7 @@ describe('ImportFileHandler domain component', () => {
     it('should create imported data', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFile = new ImportFileHandler(importedFile);
         importFile.validate();
@@ -73,7 +80,7 @@ describe('ImportFileHandler domain component', () => {
     it('should reset imported data', async () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFile = new ImportFileHandler(importedFile);
         await importFile.validate();
@@ -84,7 +91,7 @@ describe('ImportFileHandler domain component', () => {
     it('should create analysed data', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFile = new ImportFileHandler(importedFile);
         importFile.validate();
@@ -94,7 +101,7 @@ describe('ImportFileHandler domain component', () => {
     it('should reset analysed data data', async () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFile = new ImportFileHandler(importedFile);
         await importFile.validate();

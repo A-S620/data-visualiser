@@ -1,6 +1,5 @@
 import 'jsdom-global/register';
 
-import { FileType } from '../../../src/domain/interfaces/IFileType';
 import { ImportFileData } from '../../../src/domain/ImportedFileHandling/ImportFileData';
 
 import { store } from '../../../src/ReduxStore/store';
@@ -20,29 +19,6 @@ const csvAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const csvFields = ['col1', 'col2', 'col3'];
-const testJSON = {
-    id: 1,
-    first_name: 'Jeanette',
-    last_name: 'Penddreth',
-    email: 'jpenddreth0@census.gov',
-    gender: 'Female',
-    ip_address: '26.58.193.2',
-};
-const jsonAsArrays = [
-    ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'],
-    ['1', 'Jeanette', 'Penddreth', 'jpenddreth0@census.gov', 'Female', '26.58.193.2'],
-];
-const jsonAsObjects = [
-    {
-        id: 1,
-        first_name: 'Jeanette',
-        last_name: 'Penddreth',
-        email: 'jpenddreth0@census.gov',
-        gender: 'Female',
-        ip_address: '26.58.193.2',
-    },
-];
-const jsonFields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'];
 
 //Runs before each test
 beforeEach(() => {
@@ -58,7 +34,7 @@ describe('Import Data', () => {
     it('should return file is empty when files are empty', () => {
         const importedFile: IImportedFile = {
             file: '',
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importData = new ImportFileData(importedFile);
         expect(importData.validate().notification()).toBe('File is empty');
@@ -66,23 +42,12 @@ describe('Import Data', () => {
     it('Should add the CSV file data correctly to the Redux store', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importData = new ImportFileData(importedFile);
         importData.validate();
         expect(store.getState().importedData.dataFields).toStrictEqual(csvFields);
         expect(store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
         expect(store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
-    });
-    it('Should add the JSON file data correctly to the Redux store', () => {
-        const importedFile: IImportedFile = {
-                file: JSON.stringify(testJSON),
-                fileType: FileType.JSON,
-            },
-            importData = new ImportFileData(importedFile);
-        importData.validate();
-        expect(store.getState().importedData.dataFields).toStrictEqual(jsonFields);
-        expect(store.getState().importedData.dataAsObjects).toStrictEqual(jsonAsObjects);
-        expect(store.getState().importedData.dataAsArrays).toStrictEqual(jsonAsArrays);
     });
 });

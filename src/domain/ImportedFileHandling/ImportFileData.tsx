@@ -1,18 +1,15 @@
-//TODO: Test valid JSON + notification
 //TODO: Test valid CSV +notification
 
 import { Notifications } from '../UIHandlers/Notifications';
 import CSVProcessor from './FileProcessors/CSVProcessor';
 import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
-import JSONProcessor from './FileProcessors/JSONProcessor';
 
-import { FileType } from '../interfaces/IFileType';
 import { IImportedFileData } from '../interfaces/IImportedFileData';
 import { IImportedFile } from '../interfaces/IImportedFile';
 
 export class ImportFileData {
-    private importedFile: IImportedFile;
+    private readonly importedFile: IImportedFile;
 
     constructor(importedFile: IImportedFile) {
         this.importedFile = importedFile;
@@ -24,10 +21,10 @@ export class ImportFileData {
             notifications.addNotification(`File is empty`);
             return notifications;
         }
-        if (fileType === FileType.JSON) {
-            this.processJSON();
-        }
-        if (fileType === FileType.CSV) {
+        if (fileType !== 'text/csv') {
+            notifications.addNotification(`File is ${fileType}, only CSV is accepted`);
+            return notifications;
+        } else {
             this.processCSV();
         }
 
@@ -39,15 +36,6 @@ export class ImportFileData {
             dataFields: csvProcessor.getCSVFields(),
             dataAsObjects: csvProcessor.csvToObjects(),
             dataAsArrays: csvProcessor.csvToArrays(),
-        };
-        ImportFileData.createImportedData(importedData);
-    }
-    private processJSON() {
-        const jsonProcessor = new JSONProcessor(this.importedFile.file);
-        const importedData: IImportedFileData = {
-            dataFields: jsonProcessor.getJSONFields(),
-            dataAsObjects: jsonProcessor.jsonToObjects(),
-            dataAsArrays: jsonProcessor.jsonToArrays(),
         };
         ImportFileData.createImportedData(importedData);
     }

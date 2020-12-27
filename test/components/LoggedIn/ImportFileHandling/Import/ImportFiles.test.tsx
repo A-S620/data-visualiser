@@ -19,7 +19,7 @@ describe('Import Files', () => {
 
             expect(dropZone.props().type).toBe('file');
 
-            expect(dropZone.props().accept).toBe('text/csv,application/json');
+            expect(dropZone.props().accept).toBe('text/csv');
         });
     });
     describe('Buttons', () => {
@@ -32,7 +32,7 @@ describe('Import Files', () => {
     });
     describe('Imported file statistics', () => {
         const fileStatsObject = {
-            fileType: undefined,
+            fileType: '',
             fileSize: '',
             characterCount: undefined,
         };

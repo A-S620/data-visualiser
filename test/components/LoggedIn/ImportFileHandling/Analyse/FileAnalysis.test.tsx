@@ -7,7 +7,6 @@ import { store } from '../../../../../src/ReduxStore/store';
 import FileAnalysis from '../../../../../src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis';
 import { ImportFileHandler } from '../../../../../src/domain/UIHandlers/ImportFileHandler';
 import { IImportedFile } from '../../../../../src/domain/interfaces/IImportedFile';
-import { FileType } from '../../../../../src/domain/interfaces/IFileType';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
@@ -43,7 +42,7 @@ describe('File Analysis component', () => {
     describe('File Analysis stats', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
-            fileType: FileType.CSV,
+            fileType: 'text/csv',
         };
         const importFile = new ImportFileHandler(importedFile).validate();
         it('Should show the integer Columns in the file', () => {

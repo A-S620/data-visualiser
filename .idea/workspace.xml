@@ -3,12 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFileHandling/FileProcessors/JSONProcessor.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/IFileType.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/IImportedFile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedFile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/IImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/IImportedFileStats.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/FileProcessors/JSONProcessor.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,14 +333,7 @@
       <workItem from="1608751554708" duration="3744000" />
       <workItem from="1608827930313" duration="3150000" />
       <workItem from="1608882844602" duration="6655000" />
-      <workItem from="1609055613856" duration="1460000" />
-    </task>
-    <task id="LOCAL-00041" summary="importedDataReducer.js refactoring action names">
-      <created>1607274883844</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1607274883844</updated>
+      <workItem from="1609055613856" duration="7389000" />
     </task>
     <task id="LOCAL-00042" summary="store.js refactoring">
       <created>1607275866513</created>
@@ -671,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608890472485</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="ImportFileHandler.tsx and other components unit tests">
+      <created>1609057243464</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1609057243465</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +686,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Restructured domain" />
     <MESSAGE value="Started ImportFileHandler.tsx + unit tests, interfaces&#10;Interfaces created:&#10;IAnalysedData.tsx&#10;IImportedData.tsx&#10;IImportedFile.tsx" />
     <MESSAGE value="Refactored domain components to work with IImportedFile.tsx&#10;Refactored:&#10;ImportData.tsx&#10;CreateImportedData.tsx&#10;GetImportedData.tsx&#10;Unit tests refactored:&#10;ImportData.test.tsx&#10;CreateImportedData.test.tsx&#10;GetImportedData.test.tsx&#10;ResetImportedData.test.tsx" />
     <MESSAGE value="ImportFileHandler.tsx + Unit tests&#10;Added functionality to AnalyseData.tsx to check that data is not IP address + updated unit tests." />
@@ -704,7 +710,8 @@
     <MESSAGE value="unit tests for FileAnalysis.tsx" />
     <MESSAGE value="Home.js unit tests" />
     <MESSAGE value="ImportFilesHandler.test.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImportFilesHandler.test.tsx" />
+    <MESSAGE value="ImportFileHandler.tsx and other components unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImportFileHandler.tsx and other components unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
