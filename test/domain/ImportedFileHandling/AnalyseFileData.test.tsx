@@ -70,7 +70,24 @@ describe('Analyse Data', () => {
         const analyseData = new AnalyseFileData();
         const notifications = analyseData.validate();
         expect(notifications.notification()).toEqual(
-            'One of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. This object will be ignored'
+            'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
         );
+    });
+    it('should add the correct objects, if one of the objects has the wrong length', () => {
+        const testData: IImportedFileData = {
+            dataFields: dataFields2,
+            dataAsObjects: dataAsObjects2,
+            dataAsArrays: [],
+        };
+        const createImportedData = new CreateImportedData(testData);
+        createImportedData.createDataFields();
+        createImportedData.createDataAsObjects();
+        const analyseData = new AnalyseFileData();
+        analyseData.validate();
+        const getAnalysedData = new GetAnalysedData();
+        expect(getAnalysedData.getAnalysedData().integerDataAsObjects).toStrictEqual([
+            { col1: 79, col2: 5 },
+            { col1: 76, col2: 23 },
+        ]);
     });
 });

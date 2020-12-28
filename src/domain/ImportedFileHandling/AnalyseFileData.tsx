@@ -16,29 +16,29 @@ export class AnalyseFileData {
             return notifications;
         }
         if (this.integerFields.length >= 2) {
-            notifications.concat(this.validateObjectLength());
-            if (notifications.isEmpty()) {
-                this.createAnalysedData();
-            }
-
-            return notifications;
+            notifications.concat(this.validateObjectsLength());
+            this.createAnalysedData();
         }
         return notifications;
     }
-    private validateObjectLength(): Notifications {
+    private validateObjectsLength(): Notifications {
         const notifications = new Notifications();
         for (var objIndex = 0; objIndex < this.integerDataAsObjects.length; objIndex += 1) {
             const currentObject = this.integerDataAsObjects[objIndex];
             const currentObjectLength = Object.keys(currentObject).length;
             if (currentObjectLength !== this.integerFields.length) {
                 notifications.addNotification(
-                    `One of the objects has ${currentObjectLength} fields, instead of ${this.integerFields.length}. All other values in that column, on other rows are floats. This object will be ignored`
+                    `One or more of the objects has ${currentObjectLength} fields, instead of ${this.integerFields.length}. All other values in that column, on other rows are floats. These object will be ignored`
                 );
-                return notifications;
+                this.removeInvalidObject(objIndex);
             }
         }
         return notifications;
     }
+    private removeInvalidObject(index: number) {
+        this.integerDataAsObjects.splice(index, 1);
+    }
+
     private analyseData(): Array<string> {
         for (var objIndex = 0; objIndex < this.dataAsObjects.length; objIndex += 1) {
             const objectToAdd: Object = {};

@@ -47,7 +47,7 @@ describe('ImportFileHandler domain component', () => {
         const importFileErrors = new ImportFileHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual(
-            'One of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. This object will be ignored'
+            'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
         );
     });
     it('should return a notification when the file is not a CSV file', () => {
