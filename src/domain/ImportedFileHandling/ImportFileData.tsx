@@ -1,5 +1,3 @@
-//TODO: Test valid CSV +notification
-
 import { Notifications } from '../UIHandlers/Notifications';
 import CSVProcessor from './FileProcessors/CSVProcessor';
 import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
@@ -24,19 +22,25 @@ export class ImportFileData {
         if (fileType !== 'text/csv') {
             notifications.addNotification(`File is ${fileType}, only CSV is accepted`);
             return notifications;
+        }
+        notifications.concat(this.checkValidCSV());
+        if (!notifications.isEmpty()) {
+            return notifications;
         } else {
             this.processCSV();
         }
 
         return notifications;
     }
+    private checkValidCSV(): Notifications {
+        const csvProcessor = new CSVProcessor(this.importedFile.file);
+        const notifications = new Notifications();
+        notifications.concat(csvProcessor.validateCSV());
+        return notifications;
+    }
     private processCSV() {
         const csvProcessor = new CSVProcessor(this.importedFile.file);
-        const importedData: IImportedFileData = {
-            dataFields: csvProcessor.getCSVFields(),
-            dataAsObjects: csvProcessor.csvToObjects(),
-            dataAsArrays: csvProcessor.csvToArrays(),
-        };
+        const importedData = csvProcessor.getImportedFileData();
         ImportFileData.createImportedData(importedData);
     }
     private static createImportedData(importedData: IImportedFileData) {

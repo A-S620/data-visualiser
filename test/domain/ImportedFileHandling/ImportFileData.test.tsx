@@ -7,6 +7,7 @@ import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedDa
 import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
+const invalidCSV = 'col1,,col2,col3\n,foo\n 2,5,bar\nc-1,7,baz';
 const csvAsArrays = [
     ['col1', 'col2', 'col3'],
     [' 1', '3', 'foo'],
@@ -39,6 +40,24 @@ describe('Import Data', () => {
         const importData = new ImportFileData(importedFile);
         expect(importData.validate().notification()).toBe('File is empty');
     });
+    it('should return wrong file type error', () => {
+        const importedFile: IImportedFile = {
+            file: 'test',
+            fileType: 'application/json',
+        };
+        const importData = new ImportFileData(importedFile);
+        expect(importData.validate().notification()).toBe('File is application/json, only CSV is accepted');
+    });
+    it('should return a CSV processing error', () => {
+        const importedFile: IImportedFile = {
+            file: invalidCSV,
+            fileType: 'text/csv',
+        };
+        const importData = new ImportFileData(importedFile);
+        expect(importData.validate().notification()).toBe(
+            'FieldMismatch: Too few fields: expected 4 fields but parsed 2, Row: 0, FieldMismatch: Too few fields: expected 4 fields but parsed 3, Row: 1, FieldMismatch: Too few fields: expected 4 fields but parsed 3, Row: 2'
+        );
+    });
     it('Should add the CSV file data correctly to the Redux store', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
@@ -46,8 +65,8 @@ describe('Import Data', () => {
         };
         const importData = new ImportFileData(importedFile);
         importData.validate();
-        expect(store.getState().importedData.dataFields).toStrictEqual(csvFields);
-        expect(store.getState().importedData.dataAsObjects).toStrictEqual(csvAsObjects);
-        expect(store.getState().importedData.dataAsArrays).toStrictEqual(csvAsArrays);
+        expect(importData.getImportedData().dataFields).toStrictEqual(csvFields);
+        expect(importData.getImportedData().dataAsObjects).toStrictEqual(csvAsObjects);
+        expect(importData.getImportedData().dataAsArrays).toStrictEqual(csvAsArrays);
     });
 });
