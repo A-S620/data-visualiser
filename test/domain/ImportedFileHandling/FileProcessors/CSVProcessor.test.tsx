@@ -3,6 +3,7 @@ import CSVProcessor from '../../../../src/domain/ImportedFileHandling/FileProces
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
+const invalidCSV = 'col1,,col2,col3\n,foo\n 2,5,bar\nc-1,7,baz';
 const csvAsArrays = [
     ['col1', 'col2', 'col3'],
     [' 1', '3', 'foo'],
@@ -22,14 +23,22 @@ describe('CSVProcessor domain component', () => {
     });
     it('should return the csvFields from the testCSV', () => {
         const processor = new CSVProcessor(testCSV);
-        expect(processor.getCSVFields()).toStrictEqual(csvFields);
+        expect(processor.getImportedFileData().dataFields).toStrictEqual(csvFields);
     });
     it('should return the testCSV file as an array of objects', () => {
         const processor = new CSVProcessor(testCSV);
-        expect(processor.csvToObjects()).toStrictEqual(csvAsObjects);
+        expect(processor.getImportedFileData().dataAsObjects).toStrictEqual(csvAsObjects);
     });
     it('should return the testCSV file as an array of arrays', () => {
         const processor = new CSVProcessor(testCSV);
-        expect(processor.csvToArrays()).toStrictEqual(csvAsArrays);
+        expect(processor.getImportedFileData().dataAsArrays).toStrictEqual(csvAsArrays);
+    });
+    it('should return an error when CSV is not valid', () => {
+        const processor = new CSVProcessor(invalidCSV);
+        expect(processor.validateCSV().getNotifications()).toStrictEqual([
+            'FieldMismatch: Too few fields: expected 4 fields but parsed 2, Row: 0',
+            'FieldMismatch: Too few fields: expected 4 fields but parsed 3, Row: 1',
+            'FieldMismatch: Too few fields: expected 4 fields but parsed 3, Row: 2',
+        ]);
     });
 });
