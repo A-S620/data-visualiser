@@ -43,6 +43,11 @@ function getExampleObject(integerDataObjects: Array<object>): Object {
     }
     return objectToReturn;
 }
+function calcNumberOfIgnoredObjects(integerDataObjects: Array<object>, dataAsObjects: Array<object>): number {
+    const analysedDataLength = integerDataObjects.length;
+    const importedDataLength = dataAsObjects.length;
+    return importedDataLength - analysedDataLength;
+}
 function FileAnalysis(props: any) {
     const classes = useStyles();
     return (
@@ -83,6 +88,10 @@ function FileAnalysis(props: any) {
             {props.integerFields.map((integerField: string) => (
                 <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
             ))}
+            <Typography className={classes.statDescription}>Number of Ignored Data Objects:</Typography>
+            <Typography className={classes.statDescription}>
+                {`${calcNumberOfIgnoredObjects(props.integerDataObjects, props.dataAsObjects)}`}
+            </Typography>
             <Typography className={classes.statDescription}>Example Data Object:</Typography>
             <Typography variant="h6" className={classes.exampleObject} id={'example-object'}>{`${JSON.stringify(
                 getExampleObject(props.integerDataObjects)
@@ -95,5 +104,6 @@ const mapStateToProps = (state: any) => ({
     integerFields: state.analysedData.integerFields,
     integerDataObjects: state.analysedData.integerDataObjects,
     dataFields: state.importedData.dataFields,
+    dataAsObjects: state.importedData.dataAsObjects,
 });
 export default connect(mapStateToProps, {})(FileAnalysis);

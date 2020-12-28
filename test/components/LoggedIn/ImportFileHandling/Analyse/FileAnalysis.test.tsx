@@ -35,8 +35,12 @@ describe('File Analysis component', () => {
         it('Should have the Integer Columns stat', () => {
             expect(component.find('div#file-analysis').find('p').at(1).text()).toBe('Integer Columns:');
         });
+        it('Should have the INumber of Ignored Data Objects stat', () => {
+            expect(component.find('div#file-analysis').find('p').at(2).text()).toBe('Number of Ignored Data Objects:');
+        });
+        //TODO:Fix tests
         it('Example Data Object stat', () => {
-            expect(component.find('div#file-analysis').find('p').at(2).text()).toBe('Example Data Object:');
+            expect(component.find('div#file-analysis').find('p').at(3).text()).toBe('Example Data Object:');
         });
     });
     describe('File Analysis stats', () => {
