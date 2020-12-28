@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/ImportFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseFileData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/ImportFileData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFileHandling/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFileHandling/AnalyseFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFileHandling/AnalyseFileData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,14 +326,7 @@
       <workItem from="1608827930313" duration="3150000" />
       <workItem from="1608882844602" duration="6655000" />
       <workItem from="1609055613856" duration="7567000" />
-      <workItem from="1609141693862" duration="4906000" />
-    </task>
-    <task id="LOCAL-00044" summary="Created ImportedDataActions.js">
-      <created>1607277672507</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1607277672507</updated>
+      <workItem from="1609141693862" duration="7758000" />
     </task>
     <task id="LOCAL-00045" summary="Created ImportedDataActions.tsx and refactored ImportedDataActionTypes.js">
       <created>1607278765174</created>
@@ -671,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609146306085</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="ImportFileData.tsx + unit tests">
+      <created>1609146996306</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1609146996306</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +679,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ImportFileHandler.tsx + Unit tests&#10;Added functionality to AnalyseData.tsx to check that data is not IP address + updated unit tests." />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="refactored ImportFiles.tsx to use ImportFileHandler.tsx&#10;need to do ImportFiles.tsx unit tests" />
     <MESSAGE value="Created ImportFileHandling.tsx, ImportedFileStats.tsx&#10;ImportFileHandling.tsx - Navigation for Import and Analyse components&#10;ImportedFileStats.tsx - Stats on the imported file&#10;Restructured folders in UI section" />
@@ -704,7 +703,8 @@
     <MESSAGE value="ImportFileHandler.tsx and other components unit tests" />
     <MESSAGE value="Removed JSONProcessor.tsx and its functionality&#10;Updated unit tests" />
     <MESSAGE value="CSVProcessor.tsx handling invalid CSV + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSVProcessor.tsx handling invalid CSV + unit tests" />
+    <MESSAGE value="ImportFileData.tsx + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImportFileData.tsx + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

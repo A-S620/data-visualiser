@@ -39,15 +39,16 @@ describe('ImportFileHandler domain component', () => {
 
         expect(importFileErrors.notification()).toEqual('');
     });
-    it('should return a notification when there are no integer fields in data', () => {
-        //TODO: investigate test
+    it('should return a notification when all object sizes are not equal', () => {
         const importedFile: IImportedFile = {
             file: testCSV2,
             fileType: 'text/csv',
         };
         const importFileErrors = new ImportFileHandler(importedFile).validate();
 
-        expect(importFileErrors.notification()).toEqual('File is application/json, only CSV is accepted');
+        expect(importFileErrors.notification()).toEqual(
+            'One of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. This object will be ignored'
+        );
     });
     it('should return a notification when the file is not a CSV file', () => {
         const importedFile: IImportedFile = {

@@ -6,7 +6,6 @@ export class AnalyseFileData {
     private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
     private integerFields: Array<string> = [];
     private integerDataAsObjects: Array<object> = [];
-
     public validate(): Notifications {
         const notifications: Notifications = new Notifications();
         this.analyseData();
@@ -17,8 +16,26 @@ export class AnalyseFileData {
             return notifications;
         }
         if (this.integerFields.length >= 2) {
-            this.createAnalysedData();
+            notifications.concat(this.validateObjectLength());
+            if (notifications.isEmpty()) {
+                this.createAnalysedData();
+            }
+
             return notifications;
+        }
+        return notifications;
+    }
+    private validateObjectLength(): Notifications {
+        const notifications = new Notifications();
+        for (var objIndex = 0; objIndex < this.integerDataAsObjects.length; objIndex += 1) {
+            const currentObject = this.integerDataAsObjects[objIndex];
+            const currentObjectLength = Object.keys(currentObject).length;
+            if (currentObjectLength !== this.integerFields.length) {
+                notifications.addNotification(
+                    `One of the objects has ${currentObjectLength} fields, instead of ${this.integerFields.length}. All other values in that column, on other rows are floats. This object will be ignored`
+                );
+                return notifications;
+            }
         }
         return notifications;
     }
