@@ -51,52 +51,67 @@ function calcNumberOfIgnoredObjects(integerDataObjects: Array<object>, dataAsObj
 function FileAnalysis(props: any) {
     const classes = useStyles();
     return (
-        <Grid direction="column" justify="flex-start" alignItems="flex-start" id="file-analysis">
-            <CssBaseline />
-            <Typography variant="h4" style={{ paddingBottom: '20px' }} id="file-analysis-title">
-                File Analysis:
-            </Typography>
-            <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
-            <Box position="relative" display="inline-flex" className={classes.donutChart}>
-                <CircularProgress
-                    id={'circular-progress'}
-                    variant="determinate"
-                    {...props}
-                    color="primary"
-                    thickness={7}
-                    size={200}
-                    value={calcIntColumnsPercentage(props.integerFields.length, props.dataFields.length)}
-                />
-                <Box
-                    id={'circular-progress-text'}
-                    top={0}
-                    left={0}
-                    bottom={0}
-                    right={0}
-                    position="absolute"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Typography variant="h3" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
-                        props.integerFields.length,
-                        props.dataFields.length
-                    )}%`}</Typography>
+        <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="flex-start"
+            alignItems="flex-start"
+            id="file-analysis"
+        >
+            <Box >
+                <Typography variant="h4" style={{ paddingBottom: '20px' }} id="file-analysis-title">
+                    File Analysis:
+                </Typography>
+            </Box>
+            <Box my={15}>
+                <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
+                <Box position="relative" display="inline-flex" className={classes.donutChart}>
+                    <CircularProgress
+                        id={'circular-progress'}
+                        variant="determinate"
+                        {...props}
+                        color="primary"
+                        thickness={7}
+                        size={200}
+                        value={calcIntColumnsPercentage(props.integerFields.length, props.dataFields.length)}
+                    />
+                    <Box
+                        id={'circular-progress-text'}
+                        top={0}
+                        left={0}
+                        bottom={0}
+                        right={0}
+                        position="absolute"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <Typography variant="h3" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
+                            props.integerFields.length,
+                            props.dataFields.length
+                        )}%`}</Typography>
+                    </Box>
                 </Box>
             </Box>
-            <Typography className={classes.statDescription}>Integer Columns:</Typography>
-            {props.integerFields.map((integerField: string) => (
-                <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
-            ))}
-            <Typography className={classes.statDescription}>Number of Ignored Data Objects:</Typography>
-            <Typography className={classes.statDescription}>
-                {`${calcNumberOfIgnoredObjects(props.integerDataObjects, props.dataAsObjects)}`}
-            </Typography>
-            <Typography className={classes.statDescription}>Example Data Object:</Typography>
-            <Typography variant="h6" className={classes.exampleObject} id={'example-object'}>{`${JSON.stringify(
-                getExampleObject(props.integerDataObjects)
-            )}`}</Typography>
-        </Grid>
+            <Box >
+                <Typography className={classes.statDescription}>Integer Columns:</Typography>
+                {props.integerFields.map((integerField: string) => (
+                    <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
+                ))}
+            </Box>
+            <Box my={15}>
+                <Typography className={classes.statDescription}>Number of Ignored Data Objects:</Typography>
+                <Typography className={classes.statDescription}>
+                    {`${calcNumberOfIgnoredObjects(props.integerDataObjects, props.dataAsObjects)}`}
+                </Typography>
+            </Box>
+            <Box >
+                <Typography className={classes.statDescription}>Example Data Object:</Typography>
+                <Typography variant="h6" className={classes.exampleObject} id={'example-object'}>{`${JSON.stringify(
+                    getExampleObject(props.integerDataObjects)
+                )}`}</Typography>
+            </Box>
+        </Box>
     );
 }
 

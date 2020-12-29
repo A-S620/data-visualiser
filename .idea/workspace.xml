@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -325,13 +324,6 @@
       <workItem from="1608882844602" duration="6655000" />
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
-    </task>
-    <task id="LOCAL-00047" summary="Refactoring reduxStore">
-      <created>1607370400037</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1607370400037</updated>
     </task>
     <task id="LOCAL-00048" summary="Refactoring">
       <created>1607370566646</created>
@@ -669,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609150900222</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="ImportFiles.tsx component">
+      <created>1609262944529</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1609262944529</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -677,7 +676,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created ImportFileHandling.tsx, ImportedFileStats.tsx&#10;ImportFileHandling.tsx - Navigation for Import and Analyse components&#10;ImportedFileStats.tsx - Stats on the imported file&#10;Restructured folders in UI section" />
     <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx" />
     <MESSAGE value="AnalyseFile.tsx" />
     <MESSAGE value="Refactoring&#10;Renaming components" />
@@ -702,7 +700,8 @@
     <MESSAGE value="ImportFileData.tsx + unit tests" />
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Check all objects are same size - if one object is smaller it means that one of its column values is not a float.&#10;To Do: ignore objects that are wrong size" />
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid" />
-    <option name="LAST_COMMIT_MESSAGE" value="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid" />
+    <MESSAGE value="ImportFiles.tsx component" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImportFiles.tsx component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
