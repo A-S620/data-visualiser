@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Grid, IconButton, makeStyles, Paper, Tooltip } from '@material-ui/core';
+import { Box, Button, Container, Divider, Grid, IconButton, makeStyles, Paper, Tooltip } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
@@ -13,6 +13,7 @@ import { IImportedFile } from '../../../../domain/interfaces/IImportedFile';
 
 import ImportedFileStats from './ImportedFileStats';
 import { IImportedFileStats } from '../../../../domain/interfaces/IImportedFileStats';
+import AnalyseFile from '../Analyse/FileAnalysis';
 
 interface IState {
     importedFiles: Array<File>;
@@ -26,10 +27,13 @@ interface IState {
 }
 export default class ImportFiles extends React.Component<{}, IState> {
     private classes: any = makeStyles((theme) => ({
-        paper: {
+        root: {
             height: '100%',
-            margin: theme.spacing(2),
-            padding: theme.spacing(2),
+            width: '75%',
+        },
+        componentArea: {
+            height: '70%',
+            width: '75%',
         },
         container: {
             width: '100%',
@@ -37,6 +41,14 @@ export default class ImportFiles extends React.Component<{}, IState> {
         previewChip: {
             minWidth: 160,
             maxWidth: 210,
+        },
+        verticalLine: {
+            background: theme.palette.primary.light,
+            width: '2px',
+            margin: theme.spacing(7),
+        },
+        space: {
+            minWidth: '10%',
         },
     }));
     constructor(props: object) {
@@ -128,64 +140,74 @@ export default class ImportFiles extends React.Component<{}, IState> {
     }
     public render() {
         return (
-            <main>
-                {this.state.outcome && (
-                    <AlertNotification alert={this.state.outcome} notification={this.state.outcomeMessage} />
-                )}
-                {!this.state.errors.isEmpty() && (
-                    <AlertNotification
-                        alert={AlertType.FAILED}
-                        notification={`Error(s): ${this.state.errors.notification()}`}
-                    />
-                )}
-                <Grid container direction="column" justify="flex-start" alignItems="center">
-                    <Container style={{ marginBottom: 20 }} id="drop-zone-area">
-                        <Tooltip title="Delete Imported File from system">
-                            <IconButton
-                                color="primary"
-                                style={{ marginRight: 10, borderRadius: '5em' }}
-                                id="delete-import-button"
-                                disabled={this.state.submitButtonDisabled}
-                                onClick={() => {
-                                    this.resetFiles();
-                                }}
-                            >
-                                <DeleteIcon />
-                            </IconButton>
-                        </Tooltip>
-
-                        <DropzoneArea
-                            showPreviews={true}
-                            onChange={async (files) => this.addFiles(files)}
-                            showPreviewsInDropzone={false}
-                            useChipsForPreview
-                            previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
-                            previewChipProps={{ classes: { root: this.classes.previewChip } }}
-                            previewText="Selected files"
-                            clearOnUnmount={true}
-                            acceptedFiles={['text/csv']}
-                            filesLimit={1}
+            <Box
+                display="flex"
+                justifyContent="center"
+                flexDirection="column"
+                alignItems="center"
+                className={this.classes.root}
+                id={'import-file-component'}
+                my={15}
+                mx={15}
+            >
+                <Box style={{ height: '50%', width: '50%' }} my={15}>
+                    {this.state.outcome && (
+                        <AlertNotification alert={this.state.outcome} notification={this.state.outcomeMessage} />
+                    )}
+                    {!this.state.errors.isEmpty() && (
+                        <AlertNotification
+                            alert={AlertType.FAILED}
+                            notification={`Error(s): ${this.state.errors.notification()}`}
                         />
-                    </Container>
-                    <Grid justify="center">
-                        <Button
-                            color="primary"
-                            style={{ marginRight: 10, borderRadius: '5em' }}
-                            id="submit-files-button"
-                            variant="contained"
-                            disabled={this.state.submitButtonDisabled}
-                            onClick={() => {
-                                this.uploadFiles();
-                            }}
-                        >
-                            Import
-                        </Button>
-                    </Grid>
-                    <Grid justify="center">
-                        <ImportedFileStats {...this.state.importedFileStats} />
-                    </Grid>
-                </Grid>
-            </main>
+                    )}
+                </Box>
+                <Paper>
+                    <Box
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        className={this.classes.componentArea}
+                    >
+                        <Box id="drop-zone-area" mx={15} my={15}>
+                            <Tooltip title="Delete Imported File from system">
+                                <IconButton
+                                    color="primary"
+                                    style={{ marginRight: 10, borderRadius: '5em' }}
+                                    id="delete-import-button"
+                                    disabled={this.state.submitButtonDisabled}
+                                    onClick={() => {
+                                        this.resetFiles();
+                                    }}
+                                >
+                                    <DeleteIcon />
+                                </IconButton>
+                            </Tooltip>
+                            <DropzoneArea
+                                showPreviews={true}
+                                onChange={async (files) => {
+                                    await this.addFiles(files);
+                                    await this.uploadFiles();
+                                }}
+                                showPreviewsInDropzone={false}
+                                useChipsForPreview
+                                previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
+                                previewChipProps={{ classes: { root: this.classes.previewChip } }}
+                                previewText="Selected files"
+                                clearOnUnmount={true}
+                                acceptedFiles={['text/csv']}
+                                filesLimit={1}
+                            />
+
+                            <ImportedFileStats {...this.state.importedFileStats} />
+                        </Box>
+                        <Box mx={15} my={15}>
+                            <Divider orientation="vertical" flexItem className={this.classes.verticalLine} />
+                            <AnalyseFile />
+                        </Box>
+                    </Box>
+                </Paper>
+            </Box>
         );
     }
 }

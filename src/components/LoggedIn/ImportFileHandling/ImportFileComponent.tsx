@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import { Grid, Paper, Divider } from '@material-ui/core';
+import { Grid, Paper, Divider, Box } from '@material-ui/core';
 import ImportFiles from './Import/ImportFiles';
 import AnalyseFile from './Analyse/FileAnalysis';
 
@@ -38,7 +38,7 @@ export default function ImportFileComponent() {
                 className={classes.root}
                 id={'import-file-component'}
             >
-                <Paper className={classes.paper}>
+                <Box className={classes.paper}>
                     <Grid container direction="row" justify="center" alignItems="center">
                         <Grid item className={classes.component}>
                             <ImportFiles />
@@ -49,7 +49,7 @@ export default function ImportFileComponent() {
                             <AnalyseFile />
                         </Grid>
                     </Grid>
-                </Paper>
+                </Box>
             </Grid>
         </main>
     );
