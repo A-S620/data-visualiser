@@ -5,8 +5,8 @@ export interface ILinePlottingOptions {
     width: number;
     colour: string;
     opacity: number;
-    curveType: CurveType;
-    lineStyle: LineStyle;
+    curveType: CurveType | null;
+    lineStyle: LineStyle | undefined;
     lineWidth: number;
 }
 export enum CurveType {
