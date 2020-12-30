@@ -1,8 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, FormControl, Grid, InputLabel, Paper, Select, Typography } from '@material-ui/core';
-import { FormHelperText } from '@material-ui/core';
-import { TextField } from '@material-ui/core';
+import { Box, FormControl, FormHelperText, InputLabel, Paper, Select, TextField, Typography } from '@material-ui/core';
+import {
+    CurveType,
+    ILinePlottingOptions,
+    LineStyle,
+} from '../../../../domain/interfaces/plotting/ILinePlottingOptions';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -23,6 +26,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LinePlottingOptions() {
     const classes = useStyles();
+    const [state, setState] = React.useState<{ options: ILinePlottingOptions }>({
+        options: {
+            xValues: '',
+            yValues: '',
+            height: 0,
+            width: 0,
+            colour: '',
+            opacity: 0,
+            curveType: null,
+            lineStyle: undefined,
+            lineWidth: 0,
+        },
+    });
     return (
         <Paper className={classes.paper}>
             <Box
@@ -37,11 +53,7 @@ export default function LinePlottingOptions() {
                 <Box my={15} display="flex" flexDirection="row" justifyContent="center">
                     <FormControl required className={classes.formControl}>
                         <InputLabel id={'x-values-select'}>X Values</InputLabel>
-                        <Select
-                            value={'test'}
-                            // onChange={}
-                            name="X Values"
-                        >
+                        <Select value={state.options.xValues} onChange={(event) => {}} name="X Values">
                             <option aria-label="None" value="" />
                             <option value={10}>Ten</option>
                             <option value={20}>Twenty</option>
@@ -53,7 +65,7 @@ export default function LinePlottingOptions() {
                     <FormControl required className={classes.formControl}>
                         <InputLabel id={'y-values-select'}>Y Values</InputLabel>
                         <Select
-                            value={'test'}
+                            value={state.options.yValues}
                             // onChange={}
                             name="Y Values"
                         >
@@ -84,7 +96,7 @@ export default function LinePlottingOptions() {
                     <FormControl className={classes.curveFormControl}>
                         <InputLabel id={'curve-select'}>Curve</InputLabel>
                         <Select
-                            value={'test'}
+                            value={state.options.curveType}
                             // onChange={}
                             name="Y Values"
                         >
@@ -100,7 +112,7 @@ export default function LinePlottingOptions() {
                     <FormControl className={classes.formControl}>
                         <InputLabel id={'line-style-select'}>Line Style</InputLabel>
                         <Select
-                            value={'test'}
+                            value={state.options.lineStyle}
                             // onChange={}
                             name="Y Values"
                         >
