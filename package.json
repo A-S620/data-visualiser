@@ -87,6 +87,7 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.12.1",
     "@types/jest": "^26.0.15",
+    "@types/react-vis": "^1.11.5",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.5.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",

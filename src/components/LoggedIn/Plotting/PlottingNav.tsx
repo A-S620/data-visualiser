@@ -14,7 +14,7 @@ import StreetviewIcon from '@material-ui/icons/Streetview';
 import LinePlotting from './LinePlotting';
 
 //Switches tabs
-function TabPanel(props) {
+function TabPanel(props: any) {
     const { children, value, index, ...other } = props;
 
     return (
@@ -40,7 +40,7 @@ TabPanel.propTypes = {
     value: PropTypes.any.isRequired,
 };
 
-function a11yProps(index) {
+function a11yProps(index: number) {
     return {
         id: `scrollable-force-tab-${index}`,
         'aria-controls': `scrollable-force-tabpanel-${index}`,
@@ -51,12 +51,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         width: '100%',
-        backgroundColor: theme.palette.background.paper,
     },
     stickToBottom: {
         width: '100%',
         position: 'fixed',
         bottom: 0,
+        justifyContent: 'center',
     },
 }));
 
@@ -64,7 +64,7 @@ export default function PlottingNav() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event: any, newValue: any) => {
         setValue(newValue);
     };
 
@@ -91,28 +91,27 @@ export default function PlottingNav() {
             <TabPanel value={value} index={6}>
                 Item Seven
             </TabPanel>
-            <div>
-                <AppBar position="static" color="default" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                    <Tabs
-                        value={value}
-                        onChange={handleChange}
-                        variant="scrollable"
-                        scrollButtons="on"
-                        indicatorColor="primary"
-                        textColor="primary"
-                        aria-label="scrollable force tabs example"
-                        className={classes.stickToBottom}
-                    >
-                        <Tab label="Line" icon={<ShowChartIcon />} {...a11yProps(0)} />
-                        <Tab label="Bar" icon={<BarChartIcon />} {...a11yProps(1)} />
-                        <Tab label="Mark" icon={<FiberManualRecordIcon />} {...a11yProps(2)} />
-                        <Tab label="Hexbin" icon={<BlurOnIcon />} {...a11yProps(3)} />
-                        <Tab label="Polygon" icon={<GraphicEqIcon />} {...a11yProps(4)} />
-                        <Tab label="Donut" icon={<DonutLargeIcon />} {...a11yProps(5)} />
-                        <Tab label="Heatmap" icon={<StreetviewIcon />} {...a11yProps(6)} />
-                    </Tabs>
-                </AppBar>
-            </div>
+
+            <AppBar position="static" color="default" style={{ position: 'fixed' }}>
+                <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    scrollButtons="on"
+                    indicatorColor="primary"
+                    textColor="primary"
+                    aria-label="scrollable force tabs example"
+                    className={classes.stickToBottom}
+                    centered
+                >
+                    <Tab label="Line" icon={<ShowChartIcon />} {...a11yProps(0)} />
+                    <Tab label="Bar" icon={<BarChartIcon />} {...a11yProps(1)} />
+                    <Tab label="Mark" icon={<FiberManualRecordIcon />} {...a11yProps(2)} />
+                    <Tab label="Hexbin" icon={<BlurOnIcon />} {...a11yProps(3)} />
+                    <Tab label="Polygon" icon={<GraphicEqIcon />} {...a11yProps(4)} />
+                    <Tab label="Donut" icon={<DonutLargeIcon />} {...a11yProps(5)} />
+                    <Tab label="Heatmap" icon={<StreetviewIcon />} {...a11yProps(6)} />
+                </Tabs>
+            </AppBar>
         </div>
     );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import PlottingNav from './PlottingNav';
+import { Box } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PlottingPage() {
     return (
-        <div>
+        <Box>
             <PlottingNav />
-        </div>
+        </Box>
     );
 }
