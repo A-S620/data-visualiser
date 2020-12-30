@@ -2,7 +2,7 @@ import 'jsdom-global/register';
 
 import { AnalyseFileData } from '../../../src/domain/ImportedFileHandling/AnalyseFileData';
 import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { IImportedFileData } from '../../../src/domain/interfaces/IImportedFileData';
+import { IImportedFileData } from '../../../src/domain/interfaces/import/IImportedFileData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 //Test data

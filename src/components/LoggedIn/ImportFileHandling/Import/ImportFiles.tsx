@@ -9,10 +9,10 @@ import { Notifications } from '../../../../domain/UIHandlers/Notifications';
 import { ImportFileHandler } from '../../../../domain/UIHandlers/ImportFileHandler';
 
 import { AlertNotification } from '../../Notifications/AlertNotification';
-import { IImportedFile } from '../../../../domain/interfaces/IImportedFile';
+import { IImportedFile } from '../../../../domain/interfaces/import/IImportedFile';
 
 import ImportedFileStats from './ImportedFileStats';
-import { IImportedFileStats } from '../../../../domain/interfaces/IImportedFileStats';
+import { IImportedFileStats } from '../../../../domain/interfaces/import/IImportedFileStats';
 import AnalyseFile from '../Analyse/FileAnalysis';
 
 interface IState {

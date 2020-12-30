@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { store } from '../../../../../src/ReduxStore/store';
 import FileAnalysis from '../../../../../src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis';
 import { ImportFileHandler } from '../../../../../src/domain/UIHandlers/ImportFileHandler';
-import { IImportedFile } from '../../../../../src/domain/interfaces/IImportedFile';
+import { IImportedFile } from '../../../../../src/domain/interfaces/import/IImportedFile';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';

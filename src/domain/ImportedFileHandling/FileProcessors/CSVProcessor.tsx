@@ -1,4 +1,4 @@
-import { IImportedFileData } from '../../interfaces/IImportedFileData';
+import { IImportedFileData } from '../../interfaces/import/IImportedFileData';
 import { Notifications } from '../../UIHandlers/Notifications';
 
 const papa = require('papaparse');

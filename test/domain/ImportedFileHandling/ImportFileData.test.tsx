@@ -4,7 +4,7 @@ import { ImportFileData } from '../../../src/domain/ImportedFileHandling/ImportF
 
 import { store } from '../../../src/ReduxStore/store';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-import { IImportedFile } from '../../../src/domain/interfaces/IImportedFile';
+import { IImportedFile } from '../../../src/domain/interfaces/import/IImportedFile';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
 const invalidCSV = 'col1,,col2,col3\n,foo\n 2,5,bar\nc-1,7,baz';

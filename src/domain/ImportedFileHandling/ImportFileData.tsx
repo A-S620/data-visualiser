@@ -3,8 +3,8 @@ import CSVProcessor from './FileProcessors/CSVProcessor';
 import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
 
-import { IImportedFileData } from '../interfaces/IImportedFileData';
-import { IImportedFile } from '../interfaces/IImportedFile';
+import { IImportedFileData } from '../interfaces/import/IImportedFileData';
+import { IImportedFile } from '../interfaces/import/IImportedFile';
 
 export class ImportFileData {
     private readonly importedFile: IImportedFile;

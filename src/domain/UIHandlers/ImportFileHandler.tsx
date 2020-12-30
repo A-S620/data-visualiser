@@ -1,6 +1,6 @@
 import { Notifications } from './Notifications';
 import { ImportFileData } from '../ImportedFileHandling/ImportFileData';
-import { IImportedFile } from '../interfaces/IImportedFile';
+import { IImportedFile } from '../interfaces/import/IImportedFile';
 import { AnalyseFileData } from '../ImportedFileHandling/AnalyseFileData';
 import ResetImportedData from '../ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../ReduxStoreHandling/AnalysedData/ResetAnalysedData';
