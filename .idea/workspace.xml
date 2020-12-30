@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/plotting/ILinePlottingOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/LinePlotting.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,11 +122,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/domain/interfaces/import" />
       <recent name="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line" />
       <recent name="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import" />
       <recent name="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -329,21 +325,7 @@
       <workItem from="1608882844602" duration="6655000" />
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
-      <workItem from="1609323819729" duration="9779000" />
-    </task>
-    <task id="LOCAL-00052" summary="Updated ReduxStore to handle analysed data slice&#10;Updated ReducerActions.tsx, ReducerActionTypes.js + unit tests&#10;Updated ReduxReducer.js - need to do unit tests&#10;Updated ReduxState.js to include analysedData slice.">
-      <created>1607458972790</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1607458972790</updated>
-    </task>
-    <task id="LOCAL-00053" summary="ReduxReducer.js analysedData actions + unit tests">
-      <created>1607517208058</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1607517208059</updated>
+      <workItem from="1609323819729" duration="10959000" />
     </task>
     <task id="LOCAL-00054" summary="ReduxReducer.js analysedData actions + unit tests">
       <created>1607517235320</created>
@@ -674,7 +656,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609327948238</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="LinePlottingOptions.tsx">
+      <created>1609335047218</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1609335047218</updated>
+    </task>
+    <task id="LOCAL-00102" summary="restructuring interfaces folder">
+      <created>1609336475239</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1609336475239</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,8 +678,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made Linting changes to UI components" />
-    <MESSAGE value="Made Linting changes to domain components" />
     <MESSAGE value="Made Linting changes to ReduxStore" />
     <MESSAGE value="Made Linting changes to other files in src" />
     <MESSAGE value="Made Linting changes to UI Components tests" />
@@ -707,7 +701,9 @@
     <MESSAGE value="Unit Tests for UI components" />
     <MESSAGE value="UserNavigation.js updated + unit tests" />
     <MESSAGE value="PlottingNav.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlottingNav.tsx" />
+    <MESSAGE value="LinePlottingOptions.tsx" />
+    <MESSAGE value="restructuring interfaces folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="restructuring interfaces folder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
