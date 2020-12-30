@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/LinePlotting.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/LinePlotting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/LinePlotting.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,11 +126,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line" />
       <recent name="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import" />
       <recent name="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -332,14 +329,7 @@
       <workItem from="1608882844602" duration="6655000" />
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
-      <workItem from="1609323819729" duration="3658000" />
-    </task>
-    <task id="LOCAL-00051" summary="Created AnalysedData slice handling components in domain">
-      <created>1607458857902</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1607458857903</updated>
+      <workItem from="1609323819729" duration="9779000" />
     </task>
     <task id="LOCAL-00052" summary="Updated ReduxStore to handle analysed data slice&#10;Updated ReducerActions.tsx, ReducerActionTypes.js + unit tests&#10;Updated ReduxReducer.js - need to do unit tests&#10;Updated ReduxState.js to include analysedData slice.">
       <created>1607458972790</created>
@@ -677,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609326645565</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="PlottingNav.tsx">
+      <created>1609327948238</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1609327948238</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +682,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ImportFileComponent.tsx" />
     <MESSAGE value="Made Linting changes to UI components" />
     <MESSAGE value="Made Linting changes to domain components" />
     <MESSAGE value="Made Linting changes to ReduxStore" />
@@ -710,7 +706,8 @@
     <MESSAGE value="FileAnalysis.tsx component" />
     <MESSAGE value="Unit Tests for UI components" />
     <MESSAGE value="UserNavigation.js updated + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserNavigation.js updated + unit tests" />
+    <MESSAGE value="PlottingNav.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlottingNav.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
