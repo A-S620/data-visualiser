@@ -54,8 +54,8 @@ export default function UserNavigation() {
                     id="menu-tabs"
                 >
                     <Tab label={'Home'} {...a11yProps(0)} />
-                    <Tab label={'Export'} {...a11yProps(1)} />
-                    <Tab label={'Plotting'} {...a11yProps(2)} />
+                    <Tab label={'Plotting'} {...a11yProps(1)} />
+                    <Tab label={'Export'} {...a11yProps(2)} />
                     <Tab label={'Settings'} {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
@@ -65,10 +65,10 @@ export default function UserNavigation() {
                 <Home />
             </TabPanel>
             <TabPanel value={tab} index={1}>
-                <Export />
+                <PlottingPage />
             </TabPanel>
             <TabPanel value={tab} index={2}>
-                <PlottingPage />
+                <Export />
             </TabPanel>
             <TabPanel value={tab} index={3}>
                 <Settings />

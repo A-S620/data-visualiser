@@ -13,7 +13,7 @@ describe('UserNavigation Component', () => {
     );
 
     it('should have the correct items in the menu', () => {
-        const pages = ['Home', 'Export', 'Plotting', 'Settings'];
+        const pages = ['Home', 'Plotting', 'Export', 'Settings'];
 
         const menu = wrapper.find('div#menu-tabs');
 
