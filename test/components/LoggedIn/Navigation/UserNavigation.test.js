@@ -1,11 +1,16 @@
 import { mount } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-
+import { Provider } from 'react-redux';
+import { store } from '../../../../src/ReduxStore/store';
 import UserNavigation from '../../../../src/components/LoggedIn/Navigation/UserNavigation';
 
 describe('UserNavigation Component', () => {
-    const wrapper = mount(<UserNavigation />);
+    const wrapper = mount(
+        <Provider store={store}>
+            <UserNavigation />
+        </Provider>
+    );
 
     it('should have the correct items in the menu', () => {
         const pages = ['Home', 'Export', 'Plotting', 'Settings'];

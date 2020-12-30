@@ -1,18 +1,26 @@
 import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
-
+import { Provider } from 'react-redux';
+import { store } from '../../../../../src/ReduxStore/store';
 import ImportFiles from '../../../../../src/components/LoggedIn/ImportFileHandling/Import/ImportFiles';
 import ImportedFileStats from '../../../../../src/components/LoggedIn/ImportFileHandling/Import/ImportedFileStats';
 
 let component: ReactWrapper;
-beforeEach(() => (component = mount(<ImportFiles />)));
+beforeEach(
+    () =>
+        (component = mount(
+            <Provider store={store}>
+                <ImportFiles />
+            </Provider>
+        ))
+);
 afterEach(() => component.unmount());
 
 describe('Import Files', () => {
     describe('Drag and Drop', () => {
         it('should have a drag and drop feature', () => {
-            expect(component.find('input')).toBeTruthy();
+            expect(component.find('div#drop-zone-area').find('input')).toBeTruthy();
         });
         it('should accept JSON and CSV files in the drag and drop feature', () => {
             const dropZone = component.find('input');
@@ -23,9 +31,6 @@ describe('Import Files', () => {
         });
     });
     describe('Buttons', () => {
-        it('should disable submit button when no files have been inputted', () => {
-            expect(component.find('button#submit-files-button').props().disabled).toBe(true);
-        });
         it('should disable delete button when no files have been inputted', () => {
             expect(component.find('button#delete-import-button').props().disabled).toBe(true);
         });
@@ -51,4 +56,3 @@ describe('Import Files', () => {
         });
     });
 });
-

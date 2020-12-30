@@ -150,7 +150,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
                 my={15}
                 mx={15}
             >
-                <Box style={{ height: '50%', width: '50%' }} my={15}>
+                <Box style={{ height: '50%', width: '50%' }} my={15} id={'alert-area'}>
                     {this.state.outcome && (
                         <AlertNotification alert={this.state.outcome} notification={this.state.outcomeMessage} />
                     )}

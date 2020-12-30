@@ -25,22 +25,22 @@ afterEach(() => component.unmount());
 describe('File Analysis component', () => {
     describe('File Analysis stat descriptions', () => {
         it('Should have the title File Analysis', () => {
-            expect(component.find('div#file-analysis').find('h4').text()).toBe('File Analysis:');
+            expect(component.find('div#title').text()).toBe('File Analysis:');
         });
         it('Should have the Percentage of Integer Columns in file stat', () => {
-            expect(component.find('div#file-analysis').find('p').at(0).text()).toBe(
+            expect(component.find('div#percent-integer-columns').find('p').text()).toBe(
                 'Percentage of Integer Columns in file:'
             );
         });
         it('Should have the Integer Columns stat', () => {
-            expect(component.find('div#file-analysis').find('p').at(1).text()).toBe('Integer Columns:');
+            expect(component.find('div#integer-columns').find('p').text()).toBe('Integer Columns:');
         });
         it('Should have the INumber of Ignored Data Objects stat', () => {
-            expect(component.find('div#file-analysis').find('p').at(2).text()).toBe('Number of Ignored Data Objects:');
+            expect(component.find('div#ignored-objects').find('p').at(0).text()).toBe('Number of Ignored Data Objects:');
         });
         //TODO:Fix tests
         it('Example Data Object stat', () => {
-            expect(component.find('div#file-analysis').find('p').at(3).text()).toBe('Example Data Object:');
+            expect(component.find('div#example-object').find('p').text()).toBe('Example Data Object:');
         });
     });
     describe('File Analysis stats', () => {

@@ -58,12 +58,12 @@ function FileAnalysis(props: any) {
             alignItems="flex-start"
             id="file-analysis"
         >
-            <Box >
+            <Box id="title">
                 <Typography variant="h4" style={{ paddingBottom: '20px' }} id="file-analysis-title">
                     File Analysis:
                 </Typography>
             </Box>
-            <Box my={15}>
+            <Box my={15} id="percent-integer-columns">
                 <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
                 <Box position="relative" display="inline-flex" className={classes.donutChart}>
                     <CircularProgress
@@ -93,19 +93,19 @@ function FileAnalysis(props: any) {
                     </Box>
                 </Box>
             </Box>
-            <Box >
+            <Box id="integer-columns">
                 <Typography className={classes.statDescription}>Integer Columns:</Typography>
                 {props.integerFields.map((integerField: string) => (
                     <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
                 ))}
             </Box>
-            <Box my={15}>
+            <Box my={15} id="ignored-objects">
                 <Typography className={classes.statDescription}>Number of Ignored Data Objects:</Typography>
                 <Typography className={classes.statDescription}>
                     {`${calcNumberOfIgnoredObjects(props.integerDataObjects, props.dataAsObjects)}`}
                 </Typography>
             </Box>
-            <Box >
+            <Box id="example-object">
                 <Typography className={classes.statDescription}>Example Data Object:</Typography>
                 <Typography variant="h6" className={classes.exampleObject} id={'example-object'}>{`${JSON.stringify(
                     getExampleObject(props.integerDataObjects)

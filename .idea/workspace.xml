@@ -4,7 +4,11 @@
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Navigation/UserNavigation.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Navigation/UserNavigation.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,13 +135,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -324,13 +330,7 @@
       <workItem from="1608882844602" duration="6655000" />
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
-    </task>
-    <task id="LOCAL-00048" summary="Refactoring">
-      <created>1607370566646</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1607370566646</updated>
+      <workItem from="1609323819729" duration="2273000" />
     </task>
     <task id="LOCAL-00049" summary="ReducerActionTypes.js, ReducerActions.tsx unit tests">
       <created>1607371851554</created>
@@ -668,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609262944529</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="FileAnalysis.tsx component">
+      <created>1609263736609</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1609263736609</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +683,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx" />
     <MESSAGE value="AnalyseFile.tsx" />
     <MESSAGE value="Refactoring&#10;Renaming components" />
     <MESSAGE value="ImportFileComponent.tsx" />
@@ -701,7 +707,8 @@
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Check all objects are same size - if one object is smaller it means that one of its column values is not a float.&#10;To Do: ignore objects that are wrong size" />
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid" />
     <MESSAGE value="ImportFiles.tsx component" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImportFiles.tsx component" />
+    <MESSAGE value="FileAnalysis.tsx component" />
+    <option name="LAST_COMMIT_MESSAGE" value="FileAnalysis.tsx component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
