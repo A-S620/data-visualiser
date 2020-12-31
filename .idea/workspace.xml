@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingNav.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingPage.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +133,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -314,14 +327,7 @@
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
       <workItem from="1609323819729" duration="12753000" />
-      <workItem from="1609400964515" duration="3929000" />
-    </task>
-    <task id="LOCAL-00057" summary="GetAnalysedData.tsx + unit tests">
-      <created>1607544391076</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1607544391077</updated>
+      <workItem from="1609400964515" duration="4680000" />
     </task>
     <task id="LOCAL-00058" summary="ResetAnalysedData.tsx + unit tests">
       <created>1607544942353</created>
@@ -659,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609339158343</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects">
+      <created>1609405260875</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1609405260875</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,7 +680,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made Linting changes to UI Components tests" />
     <MESSAGE value="Made Linting changes to Domain Components tests" />
     <MESSAGE value="Made Linting changes to Redux Store tests" />
     <MESSAGE value="Made Linting changes to other files" />
@@ -692,7 +704,8 @@
     <MESSAGE value="restructuring interfaces folder" />
     <MESSAGE value="ILinePlottingOptions.tsx interface" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
+    <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -69,7 +69,7 @@ export default function PlottingNav() {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} id={'plotting-tab-panel'}>
             <TabPanel value={value} index={0}>
                 <LinePlottingPage />
             </TabPanel>
@@ -94,6 +94,7 @@ export default function PlottingNav() {
 
             <AppBar position="static" color="default" style={{ position: 'fixed' }}>
                 <Tabs
+                    id={'plotting-tabs'}
                     value={value}
                     onChange={handleChange}
                     scrollButtons="on"
@@ -103,13 +104,13 @@ export default function PlottingNav() {
                     className={classes.stickToBottom}
                     centered
                 >
-                    <Tab label="Line" icon={<ShowChartIcon />} {...a11yProps(0)} />
-                    <Tab label="Bar" icon={<BarChartIcon />} {...a11yProps(1)} />
-                    <Tab label="Mark" icon={<FiberManualRecordIcon />} {...a11yProps(2)} />
-                    <Tab label="Hexbin" icon={<BlurOnIcon />} {...a11yProps(3)} />
-                    <Tab label="Polygon" icon={<GraphicEqIcon />} {...a11yProps(4)} />
-                    <Tab label="Donut" icon={<DonutLargeIcon />} {...a11yProps(5)} />
-                    <Tab label="Heatmap" icon={<StreetviewIcon />} {...a11yProps(6)} />
+                    <Tab label="Line" icon={<ShowChartIcon />} {...a11yProps(0)} id={'line-tab'} />
+                    <Tab label="Bar" icon={<BarChartIcon />} {...a11yProps(1)} id={'bar-tab'} />
+                    <Tab label="Mark" icon={<FiberManualRecordIcon />} {...a11yProps(2)} id={'mark-tab'} />
+                    <Tab label="Hexbin" icon={<BlurOnIcon />} {...a11yProps(3)} id={'hexbin-tab'} />
+                    <Tab label="Polygon" icon={<GraphicEqIcon />} {...a11yProps(4)} id={'polygon-tab'} />
+                    <Tab label="Donut" icon={<DonutLargeIcon />} {...a11yProps(5)} id={'donut-tab'} />
+                    <Tab label="Heatmap" icon={<StreetviewIcon />} {...a11yProps(6)} id={'heatmap-tab'} />
                 </Tabs>
             </AppBar>
         </div>
