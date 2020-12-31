@@ -7,130 +7,183 @@ import {
     LineStyle,
 } from '../../../../domain/interfaces/plotting/ILinePlottingOptions';
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        flexGrow: 1,
-        padding: theme.spacing(10),
-        width: '100%',
-    },
-    root: {
-        // width: '100%',
-    },
-    formControl: {
-        minWidth: 180,
-    },
-    curveFormControl: {
-        minWidth: 380,
-    },
-}));
-
-export default function LinePlottingOptions() {
-    const classes = useStyles();
-    const [state, setState] = React.useState<{ options: ILinePlottingOptions }>({
-        options: {
-            xValues: '',
-            yValues: '',
-            height: 0,
-            width: 0,
-            colour: '',
-            opacity: 0,
-            curveType: null,
-            lineStyle: undefined,
-            lineWidth: 0,
+interface IState {
+    options: ILinePlottingOptions;
+}
+export default class LinePlottingOptions extends React.Component<{}, IState> {
+    private classes: any = makeStyles((theme) => ({
+        paper: {
+            flexGrow: 1,
+            width: '100%',
         },
-    });
-    return (
-        <Paper className={classes.paper}>
-            <Box
-                display="flex"
-                justifyContent="center"
-                flexDirection="column"
-                alignItems="center"
-                className={classes.root}
-                id={'line-plotting-options'}
-            >
-                <Typography>Line Series Plotting Options</Typography>
-                <Box my={15} display="flex" flexDirection="row" justifyContent="center">
-                    <FormControl required className={classes.formControl}>
-                        <InputLabel id={'x-values-select'}>X Values</InputLabel>
-                        <Select value={state.options.xValues} onChange={(event) => {}} name="X Values">
-                            <option aria-label="None" value="" />
-                            <option value={10}>Ten</option>
-                            <option value={20}>Twenty</option>
-                            <option value={30}>Thirty</option>
-                        </Select>
-                        <FormHelperText>Data on X-Axis</FormHelperText>
-                    </FormControl>
-                    <Box mx={5} />
-                    <FormControl required className={classes.formControl}>
-                        <InputLabel id={'y-values-select'}>Y Values</InputLabel>
-                        <Select
-                            value={state.options.yValues}
-                            // onChange={}
-                            name="Y Values"
-                        >
-                            <option aria-label="None" value="" />
-                            <option value={10}>Ten</option>
-                            <option value={20}>Twenty</option>
-                            <option value={30}>Thirty</option>
-                        </Select>
-                        <FormHelperText>Data on Y-Axis</FormHelperText>
-                    </FormControl>
+        root: {
+            // width: '100%',
+        },
+    }));
+    constructor(props: object) {
+        super(props);
+        this.state = {
+            options: {
+                xValues: '',
+                yValues: '',
+                height: 0,
+                width: 0,
+                colour: '',
+                opacity: 0,
+                curveType: null,
+                lineStyle: undefined,
+                lineWidth: 0,
+            },
+        };
+    }
+    private getLineStyle(lineStyle: string): LineStyle {
+        if (lineStyle === 'dashed') {
+            return LineStyle.DASHED;
+        }
+        return LineStyle.SOLID;
+    }
+    public render() {
+        return (
+            <Paper className={this.classes.paper}>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    flexDirection="column"
+                    alignItems="center"
+                    className={this.classes.root}
+                    id={'line-plotting-options'}
+                    px={20}
+                    py={20}
+                >
+                    <Typography>Line Series Plotting Options</Typography>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center">
+                        <FormControl required style={{ minWidth: 200 }}>
+                            <InputLabel id={'x-values-select'}>X Values</InputLabel>
+                            <Select
+                                value={this.state.options.xValues}
+                                onChange={(event) => {
+                                    this.setState({
+                                        options: {
+                                            ...this.state.options,
+                                            xValues: event.target.value as string,
+                                        },
+                                    });
+                                }}
+                                name="X Values"
+                            >
+                                <option aria-label="None" value="" />
+                                <option value={'test'}>Ten</option>
+                                <option value={'test2'}>Twenty</option>
+                                <option value={'test3'}>Thirty</option>
+                            </Select>
+                            <FormHelperText>Data on X-Axis</FormHelperText>
+                        </FormControl>
+                        <Box mx={5} />
+                        <FormControl required style={{ minWidth: 200 }}>
+                            <InputLabel id={'y-values-select'}>Y Values</InputLabel>
+                            <Select
+                                value={this.state.options.yValues}
+                                onChange={(event) => {
+                                    this.setState({
+                                        options: {
+                                            ...this.state.options,
+                                            yValues: event.target.value as string,
+                                        },
+                                    });
+                                }}
+                                name="Y Values"
+                            >
+                                <option aria-label="None" value="" />
+                                <option value={10}>Ten</option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                            </Select>
+                            <FormHelperText>Data on Y-Axis</FormHelperText>
+                        </FormControl>
+                    </Box>
+                    <Box display="flex" flexDirection="row" justifyContent="center">
+                        <TextField id="colour-textfield" label="Height" variant="outlined" helperText="Default 500" />
+                        <Box mx={5} />
+                        <TextField id="colour-textfield" label="Width" variant="outlined" helperText="Default 500" />
+                    </Box>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center">
+                        <TextField id="colour-textfield" label="Colour" variant="outlined" helperText="Hex Value" />
+                        <Box mx={5} />
+                        <TextField
+                            id="colour-textfield"
+                            label="Opacity"
+                            variant="outlined"
+                            helperText="Value must be between 0 and 1"
+                        />
+                    </Box>
+                    <Box>
+                        <FormControl style={{ minWidth: 400 }}>
+                            <InputLabel id={'curve-select'}>Curve</InputLabel>
+                            <Select
+                                value={this.state.options.curveType}
+                                onChange={(event) => {
+                                    this.setState({
+                                        options: {
+                                            ...this.state.options,
+                                            curveType: event.target.value as CurveType,
+                                        },
+                                    });
+                                }}
+                                name="Y Values"
+                            >
+                                <option aria-label="None" value="" />
+                                <option value={CurveType.curveBasis}>Basis</option>
+                                <option value={CurveType.curveBasisClosed}>Basis Closed</option>
+                                <option value={CurveType.curveBasisOpen}>Basis Open</option>
+                                <option value={CurveType.curveBundle}>Bundle</option>
+                                <option value={CurveType.curveCardinal}>Cardinal</option>
+                                <option value={CurveType.curveCardinalClosed}>Cardinal Closed</option>
+                                <option value={CurveType.curveCardinalOpen}>Cardinal Open</option>
+                                <option value={CurveType.curveCatmullRom}>Catmull Rom</option>
+                                <option value={CurveType.curveCatmullRomClosed}>Catmull Rom Closed</option>
+                                <option value={CurveType.curveCatmullRomOpen}>Catmull Rom Open</option>
+                                <option value={CurveType.curveLinear}>Linear</option>
+                                <option value={CurveType.curveLinearClosed}>Linear Closed</option>
+                                <option value={CurveType.curveMonotoneX}>Monotone X</option>
+                                <option value={CurveType.curveMonotoneY}>Monotone Y</option>
+                                <option value={CurveType.curveNatural}>Natural</option>
+                                <option value={CurveType.curveStep}>Step</option>
+                                <option value={CurveType.curveStepAfter}>Step After</option>
+                                <option value={CurveType.curveStepBefore}>Step Before</option>
+                            </Select>
+                            <FormHelperText>Function used to create curve</FormHelperText>
+                        </FormControl>
+                    </Box>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center">
+                        <FormControl style={{ minWidth: 200 }}>
+                            <InputLabel id={'line-style-select'}>Line Style</InputLabel>
+                            <Select
+                                value={this.state.options.lineStyle}
+                                onChange={(event) => {
+                                    this.setState({
+                                        options: {
+                                            ...this.state.options,
+                                            lineStyle: event.target.value as LineStyle,
+                                        },
+                                    });
+                                }}
+                                name="Y Values"
+                            >
+                                <option aria-label="None" value="" />
+                                <option value={LineStyle.SOLID}>Solid</option>
+                                <option value={LineStyle.DASHED}>Dashed</option>
+                            </Select>
+                        </FormControl>
+                        <Box mx={5} />
+                        <TextField
+                            id="line-width-textfield"
+                            label="Line Width"
+                            variant="outlined"
+                            helperText="Default: 2px"
+                        />
+                    </Box>
                 </Box>
-                <Box display="flex" flexDirection="row" justifyContent="center">
-                    <TextField id="colour-textfield" label="Height" variant="outlined" helperText="Default 500" />
-                    <Box mx={5} />
-                    <TextField id="colour-textfield" label="Width" variant="outlined" helperText="Default 500" />
-                </Box>
-                <Box my={15} display="flex" flexDirection="row" justifyContent="center">
-                    <TextField id="colour-textfield" label="Colour" variant="outlined" helperText="Hex Value" />
-                    <Box mx={5} />
-                    <TextField
-                        id="colour-textfield"
-                        label="Opacity"
-                        variant="outlined"
-                        helperText="Value must be between 0 and 1"
-                    />
-                </Box>
-                <Box>
-                    <FormControl className={classes.curveFormControl}>
-                        <InputLabel id={'curve-select'}>Curve</InputLabel>
-                        <Select
-                            value={state.options.curveType}
-                            // onChange={}
-                            name="Y Values"
-                        >
-                            <option aria-label="None" value="" />
-                            <option value={10}>Ten</option>
-                            <option value={20}>Twenty</option>
-                            <option value={30}>Thirty</option>
-                        </Select>
-                        <FormHelperText>Function used to create curve</FormHelperText>
-                    </FormControl>
-                </Box>
-                <Box my={15} display="flex" flexDirection="row" justifyContent="center">
-                    <FormControl className={classes.formControl}>
-                        <InputLabel id={'line-style-select'}>Line Style</InputLabel>
-                        <Select
-                            value={state.options.lineStyle}
-                            // onChange={}
-                            name="Y Values"
-                        >
-                            <option aria-label="None" value="" />
-                            <option value={10}>Ten</option>
-                            <option value={20}>Twenty</option>
-                            <option value={30}>Thirty</option>
-                        </Select>
-                    </FormControl>
-                    <Box mx={5} />
-                    <TextField
-                        id="line-width-textfield"
-                        label="Line Width"
-                        variant="outlined"
-                        helperText="Default: 2px"
-                    />
-                </Box>
-            </Box>
-        </Paper>
-    );
+            </Paper>
+        );
+    }
 }

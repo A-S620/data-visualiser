@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/interfaces/plotting/ILinePlottingOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +25,7 @@
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
         <option value="A-S620 &lt;aatikaseedat00@gmail.com&gt;" />
+        <option value="A-S620 &lt;48350000+a-s620@users.noreply.github.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -110,7 +111,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="org.sonarlint.intellij.config.project.SonarLintProjectConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -130,19 +131,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -325,28 +313,8 @@
       <workItem from="1608882844602" duration="6655000" />
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
-      <workItem from="1609323819729" duration="10959000" />
-    </task>
-    <task id="LOCAL-00054" summary="ReduxReducer.js analysedData actions + unit tests">
-      <created>1607517235320</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1607517235321</updated>
-    </task>
-    <task id="LOCAL-00055" summary="AnalysedData domain components unit test files setup">
-      <created>1607517414749</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1607517414749</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Refactoring">
-      <created>1607517800167</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1607517800167</updated>
+      <workItem from="1609323819729" duration="12753000" />
+      <workItem from="1609400964515" duration="3929000" />
     </task>
     <task id="LOCAL-00057" summary="GetAnalysedData.tsx + unit tests">
       <created>1607544391076</created>
@@ -670,7 +638,28 @@
       <option name="project" value="LOCAL" />
       <updated>1609336475239</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="ILinePlottingOptions.tsx interface">
+      <created>1609337392893</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1609337392893</updated>
+    </task>
+    <task id="LOCAL-00104" summary="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx">
+      <created>1609339130306</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1609339130306</updated>
+    </task>
+    <task id="LOCAL-00105" summary="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx">
+      <created>1609339158343</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1609339158343</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,8 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made Linting changes to ReduxStore" />
-    <MESSAGE value="Made Linting changes to other files in src" />
     <MESSAGE value="Made Linting changes to UI Components tests" />
     <MESSAGE value="Made Linting changes to Domain Components tests" />
     <MESSAGE value="Made Linting changes to Redux Store tests" />
@@ -703,7 +690,9 @@
     <MESSAGE value="PlottingNav.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx" />
     <MESSAGE value="restructuring interfaces folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="restructuring interfaces folder" />
+    <MESSAGE value="ILinePlottingOptions.tsx interface" />
+    <MESSAGE value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
