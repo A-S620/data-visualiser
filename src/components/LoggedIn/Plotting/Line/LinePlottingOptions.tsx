@@ -55,10 +55,10 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                     px={20}
                     py={20}
                 >
-                    <Typography>Line Series Plotting Options</Typography>
+                    <Typography id={'line-plotting-title'}>Line Series Plotting Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
-                        <FormControl required style={{ minWidth: 200 }}>
-                            <InputLabel id={'x-values-select'}>X Values</InputLabel>
+                        <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
+                            <InputLabel>X Values</InputLabel>
                             <Select
                                 value={this.state.options.xValues}
                                 onChange={(event) => {
@@ -79,8 +79,8 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                             <FormHelperText>Data on X-Axis</FormHelperText>
                         </FormControl>
                         <Box mx={5} />
-                        <FormControl required style={{ minWidth: 200 }}>
-                            <InputLabel id={'y-values-select'}>Y Values</InputLabel>
+                        <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
+                            <InputLabel>Y Values</InputLabel>
                             <Select
                                 value={this.state.options.yValues}
                                 onChange={(event) => {
@@ -101,24 +101,24 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                             <FormHelperText>Data on Y-Axis</FormHelperText>
                         </FormControl>
                     </Box>
-                    <Box display="flex" flexDirection="row" justifyContent="center">
-                        <TextField id="colour-textfield" label="Height" variant="outlined" helperText="Default 500" />
+                    <Box display="flex" flexDirection="row" justifyContent="center" id={'size-textfields'}>
+                        <TextField id="height-textfield" label="Height" variant="outlined" helperText="Default 500" />
                         <Box mx={5} />
-                        <TextField id="colour-textfield" label="Width" variant="outlined" helperText="Default 500" />
+                        <TextField id="width-textfield" label="Width" variant="outlined" helperText="Default 500" />
                     </Box>
-                    <Box my={15} display="flex" flexDirection="row" justifyContent="center">
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'colour-textfields'}>
                         <TextField id="colour-textfield" label="Colour" variant="outlined" helperText="Hex Value" />
                         <Box mx={5} />
                         <TextField
-                            id="colour-textfield"
+                            id="opacity-textfield"
                             label="Opacity"
                             variant="outlined"
                             helperText="Value must be between 0 and 1"
                         />
                     </Box>
                     <Box>
-                        <FormControl style={{ minWidth: 400 }}>
-                            <InputLabel id={'curve-select'}>Curve</InputLabel>
+                        <FormControl required style={{ minWidth: 400 }} id={'curve-select'}>
+                            <InputLabel>Curve</InputLabel>
                             <Select
                                 value={this.state.options.curveType}
                                 onChange={(event) => {
@@ -131,7 +131,7 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                                 }}
                                 name="Y Values"
                             >
-                                <option aria-label="None" value="" />
+                                <option aria-label="None" value={undefined} />
                                 <option value={CurveType.curveBasis}>Basis</option>
                                 <option value={CurveType.curveBasisClosed}>Basis Closed</option>
                                 <option value={CurveType.curveBasisOpen}>Basis Open</option>
@@ -154,9 +154,9 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                             <FormHelperText>Function used to create curve</FormHelperText>
                         </FormControl>
                     </Box>
-                    <Box my={15} display="flex" flexDirection="row" justifyContent="center">
-                        <FormControl style={{ minWidth: 200 }}>
-                            <InputLabel id={'line-style-select'}>Line Style</InputLabel>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'line-options'}>
+                        <FormControl style={{ minWidth: 200 }} id={'line-style-select'}>
+                            <InputLabel >Line Style</InputLabel>
                             <Select
                                 value={this.state.options.lineStyle}
                                 onChange={(event) => {
@@ -169,7 +169,7 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                                 }}
                                 name="Y Values"
                             >
-                                <option aria-label="None" value="" />
+                                <option aria-label="None" value={undefined} />
                                 <option value={LineStyle.SOLID}>Solid</option>
                                 <option value={LineStyle.DASHED}>Dashed</option>
                             </Select>

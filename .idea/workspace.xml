@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingNav.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingPage.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,14 +326,7 @@
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
       <workItem from="1609323819729" duration="12753000" />
-      <workItem from="1609400964515" duration="4680000" />
-    </task>
-    <task id="LOCAL-00058" summary="ResetAnalysedData.tsx + unit tests">
-      <created>1607544942353</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1607544942353</updated>
+      <workItem from="1609400964515" duration="6859000" />
     </task>
     <task id="LOCAL-00059" summary="CreateAnalysedData.tsx + unit tests">
       <created>1607546077833</created>
@@ -672,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609405260875</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="PlottingNav.tsx unit tests">
+      <created>1609406003510</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1609406003510</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +679,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made Linting changes to Domain Components tests" />
     <MESSAGE value="Made Linting changes to Redux Store tests" />
     <MESSAGE value="Made Linting changes to other files" />
     <MESSAGE value="Import File components" />
@@ -705,7 +703,8 @@
     <MESSAGE value="ILinePlottingOptions.tsx interface" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
+    <MESSAGE value="PlottingNav.tsx unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlottingNav.tsx unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
