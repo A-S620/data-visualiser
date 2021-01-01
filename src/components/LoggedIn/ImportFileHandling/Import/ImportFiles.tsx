@@ -6,7 +6,7 @@ import { DropzoneArea } from 'material-ui-dropzone';
 import { AlertType } from '../../../../domain/interfaces/INotification';
 
 import { Notifications } from '../../../../domain/UIHandlers/Notifications';
-import { ImportFileHandler } from '../../../../domain/UIHandlers/ImportFileHandler';
+import { ImportFilesHandler } from '../../../../domain/UIHandlers/ImportFilesHandler';
 
 import { AlertNotification } from '../../Notifications/AlertNotification';
 import { IImportedFile } from '../../../../domain/interfaces/import/IImportedFile';
@@ -97,7 +97,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             file: this.state.files,
             fileType: this.state.fileType,
         };
-        const files = new ImportFileHandler(file);
+        const files = new ImportFilesHandler(file);
         const errors: Notifications = files.validate();
         if (errors.isEmpty()) {
             try {
@@ -120,7 +120,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             file: this.state.files,
             fileType: this.state.fileType,
         };
-        const files = new ImportFileHandler(file);
+        const files = new ImportFilesHandler(file);
         files.resetImportedData();
         files.resetAnalysedData();
         this.setState({

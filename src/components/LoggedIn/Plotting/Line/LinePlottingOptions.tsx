@@ -1,56 +1,120 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, FormControl, FormHelperText, InputLabel, Paper, Select, TextField, Typography } from '@material-ui/core';
+import {
+    Box,
+    Chip,
+    FormControl,
+    FormHelperText,
+    InputLabel,
+    Paper,
+    Select,
+    TextField,
+    Typography,
+} from '@material-ui/core';
+import { connect } from 'react-redux';
 import {
     CurveType,
     ILinePlottingOptions,
     LineStyle,
 } from '../../../../domain/interfaces/plotting/ILinePlottingOptions';
 
+import { AlertType } from '../../../../domain/interfaces/INotification';
+import { Notifications } from '../../../../domain/UIHandlers/Notifications';
+import { AlertNotification } from '../../Notifications/AlertNotification';
+
 interface IState {
     options: ILinePlottingOptions;
+    submitButtonDisabled: boolean;
+    outcome: AlertType | undefined;
+    outcomeMessage: string;
+    errors: Notifications;
 }
-export default class LinePlottingOptions extends React.Component<{}, IState> {
-    private classes: any = makeStyles((theme) => ({
-        paper: {
-            flexGrow: 1,
-            width: '100%',
-        },
-        root: {
-            // width: '100%',
-        },
-    }));
-    constructor(props: object) {
-        super(props);
-        this.state = {
-            options: {
-                xValues: '',
-                yValues: '',
-                height: 0,
-                width: 0,
-                colour: '',
-                opacity: 0,
-                curveType: null,
-                lineStyle: undefined,
-                lineWidth: 0,
-            },
-        };
-    }
-    private getLineStyle(lineStyle: string): LineStyle {
-        if (lineStyle === 'dashed') {
-            return LineStyle.DASHED;
+const useStyles = makeStyles((theme) => ({
+    paper: {
+        flexGrow: 1,
+        width: '100%',
+    },
+    root: {
+        // width: '100%',
+    },
+}));
+function LinePlottingOptions(props: any) {
+    const classes = useStyles();
+    const [options, setOptions] = React.useState<{
+        xValue: string;
+        yValue: string;
+        height: number;
+        width: number;
+        colour: string;
+        opacity: number;
+        curveType: CurveType | undefined;
+        lineStyle: LineStyle | undefined;
+        lineWidth: number;
+    }>({
+        xValue: '',
+        yValue: '',
+        height: 0,
+        width: 0,
+        colour: '',
+        opacity: 0,
+        curveType: undefined,
+        lineStyle: undefined,
+        lineWidth: 0,
+    });
+    const [notifications, setNotifications] = React.useState<{
+        outcome: AlertType | undefined;
+        outcomeMessage: string;
+        errors: Notifications;
+    }>({
+        outcome: undefined,
+        outcomeMessage: '',
+        errors: new Notifications(),
+    });
+    function dataIsImported(): boolean {
+        if (props.integerFields.length === 0) {
+            dataNotImportedNotify();
+            return false;
         }
-        return LineStyle.SOLID;
+        return true;
     }
-    public render() {
-        return (
-            <Paper className={this.classes.paper}>
+    function dataNotImportedNotify() {
+        const errors = new Notifications();
+        errors.addNotification('Import a file with valid data to visualise it');
+        setNotifications({
+            outcome: AlertType.FAILED,
+            outcomeMessage: `${errors.getNotifications()}`,
+            errors: errors,
+        });
+    }
+    return (
+        <Box
+            display="flex"
+            justifyContent="center"
+            flexDirection="column"
+            alignItems="center"
+            className={classes.root}
+            id={'line-plotting-options'}
+            my={15}
+            mx={15}
+        >
+            <Box style={{ height: '50%', width: '50%' }} my={15} id={'alert-area'}>
+                {notifications.outcome && (
+                    <AlertNotification alert={notifications.outcome} notification={notifications.outcomeMessage} />
+                )}
+                {!notifications.errors.isEmpty() && (
+                    <AlertNotification
+                        alert={AlertType.FAILED}
+                        notification={`Error(s): ${notifications.errors.notification()}`}
+                    />
+                )}
+            </Box>
+            <Paper className={classes.paper}>
                 <Box
                     display="flex"
                     justifyContent="center"
                     flexDirection="column"
                     alignItems="center"
-                    className={this.classes.root}
+                    className={classes.root}
                     id={'line-plotting-options'}
                     px={20}
                     py={20}
@@ -58,45 +122,49 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                     <Typography id={'line-plotting-title'}>Line Series Plotting Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
-                            <InputLabel>X Values</InputLabel>
+                            <InputLabel>X Value</InputLabel>
                             <Select
-                                value={this.state.options.xValues}
+                                value={options.xValue}
                                 onChange={(event) => {
-                                    this.setState({
-                                        options: {
-                                            ...this.state.options,
-                                            xValues: event.target.value as string,
-                                        },
+                                    setOptions({
+                                        ...options,
+                                        xValue: event.target.value as string,
                                     });
                                 }}
                                 name="X Values"
                             >
                                 <option aria-label="None" value="" />
-                                <option value={'test'}>Ten</option>
-                                <option value={'test2'}>Twenty</option>
-                                <option value={'test3'}>Thirty</option>
+                                {dataIsImported() &&
+                                    props.integerFields.map((integerField: string) => (
+                                        <option
+                                            value={integerField}
+                                            id={integerField + '-option'}
+                                        >{`${integerField}`}</option>
+                                    ))}
                             </Select>
                             <FormHelperText>Data on X-Axis</FormHelperText>
                         </FormControl>
                         <Box mx={5} />
                         <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
-                            <InputLabel>Y Values</InputLabel>
+                            <InputLabel>Y Value</InputLabel>
                             <Select
-                                value={this.state.options.yValues}
+                                value={options.yValue}
                                 onChange={(event) => {
-                                    this.setState({
-                                        options: {
-                                            ...this.state.options,
-                                            yValues: event.target.value as string,
-                                        },
+                                    setOptions({
+                                        ...options,
+                                        yValue: event.target.value as string,
                                     });
                                 }}
                                 name="Y Values"
                             >
                                 <option aria-label="None" value="" />
-                                <option value={10}>Ten</option>
-                                <option value={20}>Twenty</option>
-                                <option value={30}>Thirty</option>
+                                {dataIsImported() &&
+                                    props.integerFields.map((integerField: string) => (
+                                        <option
+                                            value={integerField}
+                                            id={integerField + '-option'}
+                                        >{`${integerField}`}</option>
+                                    ))}
                             </Select>
                             <FormHelperText>Data on Y-Axis</FormHelperText>
                         </FormControl>
@@ -120,13 +188,11 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                         <FormControl required style={{ minWidth: 400 }} id={'curve-select'}>
                             <InputLabel>Curve</InputLabel>
                             <Select
-                                value={this.state.options.curveType}
+                                value={options.curveType}
                                 onChange={(event) => {
-                                    this.setState({
-                                        options: {
-                                            ...this.state.options,
-                                            curveType: event.target.value as CurveType,
-                                        },
+                                    setOptions({
+                                        ...options,
+                                        curveType: event.target.value as CurveType,
                                     });
                                 }}
                                 name="Y Values"
@@ -156,15 +222,13 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'line-options'}>
                         <FormControl style={{ minWidth: 200 }} id={'line-style-select'}>
-                            <InputLabel >Line Style</InputLabel>
+                            <InputLabel>Line Style</InputLabel>
                             <Select
-                                value={this.state.options.lineStyle}
+                                value={options.lineStyle}
                                 onChange={(event) => {
-                                    this.setState({
-                                        options: {
-                                            ...this.state.options,
-                                            lineStyle: event.target.value as LineStyle,
-                                        },
+                                    setOptions({
+                                        ...options,
+                                        lineStyle: event.target.value as LineStyle,
                                     });
                                 }}
                                 name="Y Values"
@@ -184,6 +248,11 @@ export default class LinePlottingOptions extends React.Component<{}, IState> {
                     </Box>
                 </Box>
             </Paper>
-        );
-    }
+        </Box>
+    );
 }
+const mapStateToProps = (state: any) => ({
+    integerFields: state.analysedData.integerFields,
+    integerDataObjects: state.analysedData.integerDataObjects,
+});
+export default connect(mapStateToProps, {})(LinePlottingOptions);

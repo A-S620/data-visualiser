@@ -1,6 +1,6 @@
 export interface ILinePlottingOptions {
-    xValues: string;
-    yValues: string;
+    xValue: string;
+    yValue: string;
     height: number;
     width: number;
     colour: string;

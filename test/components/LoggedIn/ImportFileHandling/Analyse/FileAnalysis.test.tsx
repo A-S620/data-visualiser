@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import { store } from '../../../../../src/ReduxStore/store';
 import FileAnalysis from '../../../../../src/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis';
-import { ImportFileHandler } from '../../../../../src/domain/UIHandlers/ImportFileHandler';
+import { ImportFilesHandler } from '../../../../../src/domain/UIHandlers/ImportFilesHandler';
 import { IImportedFile } from '../../../../../src/domain/interfaces/import/IImportedFile';
 
 //Test Data
@@ -48,7 +48,7 @@ describe('File Analysis component', () => {
             file: testCSV,
             fileType: 'text/csv',
         };
-        const importFile = new ImportFileHandler(importedFile).validate();
+        const importFile = new ImportFilesHandler(importedFile).validate();
         it('Should show the integer Columns in the file', () => {
             expect(component.find('div#col1-chip').text()).toBe('col1');
             expect(component.find('div#col2-chip').text()).toBe('col2');

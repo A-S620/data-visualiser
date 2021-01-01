@@ -1,5 +1,5 @@
 export interface INotification {
-    alert: AlertType;
+    alert: AlertType | undefined;
     notification: string;
 }
 export enum AlertType {

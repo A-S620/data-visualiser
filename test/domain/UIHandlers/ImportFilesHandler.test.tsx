@@ -1,4 +1,4 @@
-import { ImportFileHandler } from '../../../src/domain/UIHandlers/ImportFileHandler';
+import { ImportFilesHandler } from '../../../src/domain/UIHandlers/ImportFilesHandler';
 import { IImportedFile } from '../../../src/domain/interfaces/import/IImportedFile';
 import GetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
@@ -29,13 +29,13 @@ afterAll(() => {
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });
-describe('ImportFileHandler domain component', () => {
+describe('ImportFilesHandler domain component', () => {
     it('should add data from the imported file to the importedData slice in the store', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
         };
-        const importFileErrors = new ImportFileHandler(importedFile).validate();
+        const importFileErrors = new ImportFilesHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual('');
     });
@@ -44,7 +44,7 @@ describe('ImportFileHandler domain component', () => {
             file: testCSV2,
             fileType: 'text/csv',
         };
-        const importFileErrors = new ImportFileHandler(importedFile).validate();
+        const importFileErrors = new ImportFilesHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual(
             'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
@@ -55,7 +55,7 @@ describe('ImportFileHandler domain component', () => {
             file: JSON.stringify(testJSON),
             fileType: 'application/json',
         };
-        const importFileErrors = new ImportFileHandler(importedFile).validate();
+        const importFileErrors = new ImportFilesHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual('File is application/json, only CSV is accepted');
     });
@@ -64,7 +64,7 @@ describe('ImportFileHandler domain component', () => {
             file: '',
             fileType: 'text/csv',
         };
-        const importFileErrors = new ImportFileHandler(importedFile).validate();
+        const importFileErrors = new ImportFilesHandler(importedFile).validate();
 
         expect(importFileErrors.notification()).toEqual('File is empty');
     });
@@ -73,7 +73,7 @@ describe('ImportFileHandler domain component', () => {
             file: testCSV,
             fileType: 'text/csv',
         };
-        const importFile = new ImportFileHandler(importedFile);
+        const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
         const getImportedData = new GetImportedData();
         expect(getImportedData.getImportedData().dataFields).toStrictEqual(['col1', 'col2', 'col3']);
@@ -83,7 +83,7 @@ describe('ImportFileHandler domain component', () => {
             file: testCSV,
             fileType: 'text/csv',
         };
-        const importFile = new ImportFileHandler(importedFile);
+        const importFile = new ImportFilesHandler(importedFile);
         await importFile.validate();
         importFile.resetImportedData();
         const getImportedData = new GetImportedData();
@@ -94,7 +94,7 @@ describe('ImportFileHandler domain component', () => {
             file: testCSV,
             fileType: 'text/csv',
         };
-        const importFile = new ImportFileHandler(importedFile);
+        const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().integerFields).toStrictEqual(['col1', 'col2']);
@@ -104,7 +104,7 @@ describe('ImportFileHandler domain component', () => {
             file: testCSV,
             fileType: 'text/csv',
         };
-        const importFile = new ImportFileHandler(importedFile);
+        const importFile = new ImportFilesHandler(importedFile);
         await importFile.validate();
         importFile.resetAnalysedData();
         const getAnalysedData = new GetAnalysedData();

@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFilesHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/INotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/INotification.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/plotting/ILinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/plotting/ILinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,13 +137,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -326,14 +333,8 @@
       <workItem from="1609055613856" duration="7567000" />
       <workItem from="1609141693862" duration="9244000" />
       <workItem from="1609323819729" duration="12753000" />
-      <workItem from="1609400964515" duration="6859000" />
-    </task>
-    <task id="LOCAL-00059" summary="CreateAnalysedData.tsx + unit tests">
-      <created>1607546077833</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1607546077833</updated>
+      <workItem from="1609400964515" duration="6932000" />
+      <workItem from="1609488068711" duration="4808000" />
     </task>
     <task id="LOCAL-00060" summary="AnalyseData.tsx UI Handler + unit tests">
       <created>1607763158142</created>
@@ -671,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609406003510</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality">
+      <created>1609408219092</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1609408219092</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +687,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made Linting changes to Redux Store tests" />
     <MESSAGE value="Made Linting changes to other files" />
     <MESSAGE value="Import File components" />
     <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx unit tests" />
@@ -704,7 +711,8 @@
     <MESSAGE value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
     <MESSAGE value="PlottingNav.tsx unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlottingNav.tsx unit tests" />
+    <MESSAGE value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

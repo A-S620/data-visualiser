@@ -5,7 +5,7 @@ import { AnalyseFileData } from '../ImportedFileHandling/AnalyseFileData';
 import ResetImportedData from '../ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
-export class ImportFileHandler {
+export class ImportFilesHandler {
     private importedFile: IImportedFile;
 
     constructor(importedFile: IImportedFile) {
@@ -17,7 +17,7 @@ export class ImportFileHandler {
         const importedDataErrors = this.getImportedDataErrors();
         notifications.concat(importedDataErrors);
         if (notifications.isEmpty()) {
-            const analysedDataErrors = ImportFileHandler.analyseData();
+            const analysedDataErrors = ImportFilesHandler.analyseData();
             notifications.concat(analysedDataErrors);
         }
         return notifications;
