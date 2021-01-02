@@ -12,6 +12,7 @@ const theme = createMuiTheme({
     palette: {
         text: {
             primary: '#000000',
+            secondary: '#808080',
         },
         primary: {
             // light: will be calculated from palette.primary.main,

@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Tab, Tabs, AppBar } from '@material-ui/core';
+import { connect } from 'react-redux';
 
 import Home from '../Home/Home';
 import Export from '../Export/Export';
 import Settings from '../Settings/Settings';
 import TabPanel from './TabPanel';
 import PlottingPage from '../Plotting/PlottingPage';
-
-const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,27 +19,30 @@ const useStyles = makeStyles((theme) => ({
     hide: {
         display: 'none',
     },
-    drawer: {
-        width: drawerWidth,
-    },
-    drawerPaper: {
-        width: drawerWidth,
+    tab: {
+        '&:disabled': {
+            color: theme.palette.text.secondary,
+            opacity: 1,
+        },
     },
 }));
 
-function a11yProps(index) {
+function a11yProps(index: number) {
     return {
         id: `simple-tab-${index}`,
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
 
-export default function UserNavigation() {
+function UserNavigation(props: any) {
     const classes = useStyles();
     const [tab, setTab] = useState(0);
-    const handleTabChange = (e, newValue) => {
+    const handleTabChange = (e: any, newValue: number) => {
         setTab(newValue);
     };
+    function tabIsDisabled(): boolean {
+        return props.integerFields.length === 0 && props.integerDataObjects.length === 0;
+    }
 
     return (
         <div className={classes.root}>
@@ -50,17 +52,16 @@ export default function UserNavigation() {
                     onChange={handleTabChange}
                     orientation={'horizontal'}
                     indicatorColor="primary"
-                    textColor="black"
+                    textColor="primary"
                     id="menu-tabs"
                 >
                     <Tab label={'Home'} {...a11yProps(0)} />
-                    <Tab label={'Plotting'} {...a11yProps(1)} />
-                    <Tab label={'Export'} {...a11yProps(2)} />
+                    <Tab label={'Plotting'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(1)} />
+                    <Tab label={'Export'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(2)} />
                     <Tab label={'Settings'} {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
 
-            {/*</Drawer>*/}
             <TabPanel value={tab} index={0}>
                 <Home />
             </TabPanel>
@@ -76,3 +77,8 @@ export default function UserNavigation() {
         </div>
     );
 }
+const mapStateToProps = (state: any) => ({
+    integerFields: state.analysedData.integerFields,
+    integerDataObjects: state.analysedData.integerDataObjects,
+});
+export default connect(mapStateToProps, {})(UserNavigation);

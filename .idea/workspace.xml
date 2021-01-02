@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/LoggedIn/Navigation/UserNavigation.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/UIHandlers/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/INotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/INotification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/interfaces/plotting/ILinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/interfaces/plotting/ILinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Navigation/UserNavigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/UIHandlers/ImportFilesHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Navigation/UserNavigation.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,15 +136,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -334,14 +331,10 @@
       <workItem from="1609141693862" duration="9244000" />
       <workItem from="1609323819729" duration="12753000" />
       <workItem from="1609400964515" duration="6932000" />
-      <workItem from="1609488068711" duration="4808000" />
-    </task>
-    <task id="LOCAL-00060" summary="AnalyseData.tsx UI Handler + unit tests">
-      <created>1607763158142</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1607763158143</updated>
+      <workItem from="1609488068711" duration="4973000" />
+      <workItem from="1609574926754" duration="2771000" />
+      <workItem from="1609577876826" duration="39000" />
+      <workItem from="1609577966890" duration="828000" />
     </task>
     <task id="LOCAL-00061" summary="Removing integerDataArrays from analysedData slice in Redux">
       <created>1607763241293</created>
@@ -679,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609408219092</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported.">
+      <created>1609493519585</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1609493519586</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,7 +687,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Made Linting changes to other files" />
     <MESSAGE value="Import File components" />
     <MESSAGE value="ImportFiles.tsx and ImportedFileStats.tsx unit tests" />
     <MESSAGE value="Started unit tests for FileAnalysis.tsx" />
@@ -712,7 +711,8 @@
     <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
     <MESSAGE value="PlottingNav.tsx unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
+    <MESSAGE value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

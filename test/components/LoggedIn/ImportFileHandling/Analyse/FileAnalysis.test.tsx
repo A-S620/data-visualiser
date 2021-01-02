@@ -38,7 +38,6 @@ describe('File Analysis component', () => {
         it('Should have the INumber of Ignored Data Objects stat', () => {
             expect(component.find('div#ignored-objects').find('p').at(0).text()).toBe('Number of Ignored Data Objects:');
         });
-        //TODO:Fix tests
         it('Example Data Object stat', () => {
             expect(component.find('div#example-object').find('p').text()).toBe('Example Data Object:');
         });
