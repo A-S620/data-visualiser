@@ -37,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
     root: {
         // width: '100%',
     },
+    textColor: {
+        color: theme.palette.text.primary,
+    },
+    helperTextColor: {
+        color: theme.palette.text.disabled,
+    },
 }));
 function LinePlottingOptions(props: any) {
     const classes = useStyles();
@@ -122,7 +128,7 @@ function LinePlottingOptions(props: any) {
                     <Typography id={'line-plotting-title'}>Line Series Plotting Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
-                            <InputLabel>X Value</InputLabel>
+                            <InputLabel className={classes.textColor}>X Value</InputLabel>
                             <Select
                                 value={options.xValue}
                                 onChange={(event) => {
@@ -142,11 +148,11 @@ function LinePlottingOptions(props: any) {
                                         >{`${integerField}`}</option>
                                     ))}
                             </Select>
-                            <FormHelperText>Data on X-Axis</FormHelperText>
+                            <FormHelperText className={classes.helperTextColor}>Data on X-Axis</FormHelperText>
                         </FormControl>
                         <Box mx={5} />
                         <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
-                            <InputLabel>Y Value</InputLabel>
+                            <InputLabel className={classes.textColor}>Y Value</InputLabel>
                             <Select
                                 value={options.yValue}
                                 onChange={(event) => {
@@ -166,27 +172,66 @@ function LinePlottingOptions(props: any) {
                                         >{`${integerField}`}</option>
                                     ))}
                             </Select>
-                            <FormHelperText>Data on Y-Axis</FormHelperText>
+                            <FormHelperText className={classes.helperTextColor}>Data on Y-Axis</FormHelperText>
                         </FormControl>
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'size-textfields'}>
-                        <TextField id="height-textfield" label="Height" variant="outlined" helperText="Default 500" />
+                        <TextField
+                            id="height-textfield"
+                            label="Height"
+                            variant="outlined"
+                            helperText="Default 500"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                        />
                         <Box mx={5} />
-                        <TextField id="width-textfield" label="Width" variant="outlined" helperText="Default 500" />
+                        <TextField
+                            id="width-textfield"
+                            label="Width"
+                            variant="outlined"
+                            helperText="Default 500"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                        />
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'colour-textfields'}>
-                        <TextField id="colour-textfield" label="Colour" variant="outlined" helperText="Hex Value" />
+                        <TextField
+                            id="colour-textfield"
+                            label="Colour"
+                            variant="outlined"
+                            helperText="Hex Value"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                        />
                         <Box mx={5} />
                         <TextField
                             id="opacity-textfield"
                             label="Opacity"
                             variant="outlined"
                             helperText="Value must be between 0 and 1"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
                         />
                     </Box>
                     <Box>
                         <FormControl required style={{ minWidth: 400 }} id={'curve-select'}>
-                            <InputLabel>Curve</InputLabel>
+                            <InputLabel className={classes.textColor}>Curve</InputLabel>
                             <Select
                                 value={options.curveType}
                                 onChange={(event) => {
@@ -217,12 +262,12 @@ function LinePlottingOptions(props: any) {
                                 <option value={CurveType.curveStepAfter}>Step After</option>
                                 <option value={CurveType.curveStepBefore}>Step Before</option>
                             </Select>
-                            <FormHelperText>Function used to create curve</FormHelperText>
+                            <FormHelperText className={classes.helperTextColor}>Function used to create curve</FormHelperText>
                         </FormControl>
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'line-options'}>
                         <FormControl style={{ minWidth: 200 }} id={'line-style-select'}>
-                            <InputLabel>Line Style</InputLabel>
+                            <InputLabel className={classes.textColor}>Line Style</InputLabel>
                             <Select
                                 value={options.lineStyle}
                                 onChange={(event) => {
@@ -244,6 +289,12 @@ function LinePlottingOptions(props: any) {
                             label="Line Width"
                             variant="outlined"
                             helperText="Default: 2px"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
                         />
                     </Box>
                 </Box>
