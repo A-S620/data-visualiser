@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
         statDescription: {
             margin: theme.spacing(4),
             textAlign: 'center',
-            color: theme.palette.text.secondary,
+            color: theme.palette.text.primary,
         },
         stat: {
             color: theme.palette.secondary.contrastText,

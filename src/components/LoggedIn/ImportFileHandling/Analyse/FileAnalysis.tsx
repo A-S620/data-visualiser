@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     statDescription: {
         margin: theme.spacing(1),
         textAlign: 'left',
-        color: theme.palette.text.secondary,
+        color: theme.palette.text.primary,
     },
     donutChart: {
         margin: theme.spacing(2),

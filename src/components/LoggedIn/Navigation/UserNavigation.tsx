@@ -19,9 +19,15 @@ const useStyles = makeStyles((theme) => ({
     hide: {
         display: 'none',
     },
+    tabIndicator: {
+        backgroundColor: theme.palette.text.secondary,
+    },
+    tabText: {
+        textColor: theme.palette.text.secondary,
+    },
     tab: {
         '&:disabled': {
-            color: theme.palette.text.secondary,
+            color: theme.palette.text.disabled,
             opacity: 1,
         },
     },
@@ -51,8 +57,9 @@ function UserNavigation(props: any) {
                     value={tab}
                     onChange={handleTabChange}
                     orientation={'horizontal'}
-                    indicatorColor="primary"
-                    textColor="primary"
+                    classes={{
+                        indicator: classes.tabIndicator,
+                    }}
                     id="menu-tabs"
                 >
                     <Tab label={'Home'} {...a11yProps(0)} />
