@@ -1,0 +1,52 @@
+import { ILinePlottingOptions } from '../interfaces/plotting/ILinePlottingOptions';
+import { Notifications } from '../UIHandlers/Notifications';
+
+export class LinePlotOptionsValidate {
+    private readonly options: ILinePlottingOptions;
+    constructor(linePlotOptions: ILinePlottingOptions) {
+        this.options = linePlotOptions;
+    }
+    public validate(): Notifications {
+        const notifications: Notifications = new Notifications();
+        if (this.options.xValue === this.options.yValue) {
+            notifications.addNotification('Cannot select the same fields for X Value and Y Value');
+        }
+        if (!this.lengthIsValid(this.options.height)) {
+            notifications.addNotification(
+                `The maximum value for Height is 800, the minimum value for Height is 100. The current height is ${this.options.height}`
+            );
+        }
+        if (!this.lengthIsValid(this.options.width)) {
+            notifications.addNotification(
+                `The maximum value for Width is 800, the minimum value for Width is 100. The current width is ${this.options.width}`
+            );
+        }
+        if (!this.opacityIsValid(this.options.opacity)) {
+            notifications.addNotification(
+                `The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is ${this.options.opacity}`
+            );
+        }
+        if (!this.lineWidthIsValid(this.options.lineWidth)) {
+            notifications.addNotification(
+                `The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is ${this.options.lineWidth}`
+            );
+        }
+        // if (this.isValidHex(this.options.colour)) {
+        //     notifications.addNotification(`The colour is not a valid Hex Value, it is ${this.options.colour}`);
+        // }
+        return notifications;
+    }
+
+    private isValidHex(color: string) {
+        return color.match(/^#[0-9a-f]{3,6}$/i) !== null;
+    }
+    private lengthIsValid(length: number): boolean {
+        return !(length > 800 || length < 100);
+    }
+    private opacityIsValid(opacity: number): boolean {
+        return !(opacity > 1 || opacity < 0);
+    }
+    private lineWidthIsValid(width: number): boolean {
+        return !(width > 10 || width < 1);
+    }
+}

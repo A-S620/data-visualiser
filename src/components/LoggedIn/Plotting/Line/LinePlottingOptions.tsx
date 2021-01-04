@@ -21,6 +21,7 @@ import {
 import { AlertType } from '../../../../domain/interfaces/INotification';
 import { Notifications } from '../../../../domain/UIHandlers/Notifications';
 import { AlertNotification } from '../../Notifications/AlertNotification';
+import { Button } from '@material-ui/core';
 
 interface IState {
     options: ILinePlottingOptions;
@@ -177,6 +178,7 @@ function LinePlottingOptions(props: any) {
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'size-textfields'}>
                         <TextField
+                            type={'number'}
                             id="height-textfield"
                             label="Height"
                             variant="outlined"
@@ -190,6 +192,7 @@ function LinePlottingOptions(props: any) {
                         />
                         <Box mx={5} />
                         <TextField
+                            type={'number'}
                             id="width-textfield"
                             label="Width"
                             variant="outlined"
@@ -204,6 +207,7 @@ function LinePlottingOptions(props: any) {
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'colour-textfields'}>
                         <TextField
+                            type={'text'}
                             id="colour-textfield"
                             label="Colour"
                             variant="outlined"
@@ -217,6 +221,7 @@ function LinePlottingOptions(props: any) {
                         />
                         <Box mx={5} />
                         <TextField
+                            type={'number'}
                             id="opacity-textfield"
                             label="Opacity"
                             variant="outlined"
@@ -262,7 +267,9 @@ function LinePlottingOptions(props: any) {
                                 <option value={CurveType.curveStepAfter}>Step After</option>
                                 <option value={CurveType.curveStepBefore}>Step Before</option>
                             </Select>
-                            <FormHelperText className={classes.helperTextColor}>Function used to create curve</FormHelperText>
+                            <FormHelperText className={classes.helperTextColor}>
+                                Function used to create curve
+                            </FormHelperText>
                         </FormControl>
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'line-options'}>
@@ -285,6 +292,7 @@ function LinePlottingOptions(props: any) {
                         </FormControl>
                         <Box mx={5} />
                         <TextField
+                            type={'number'}
                             id="line-width-textfield"
                             label="Line Width"
                             variant="outlined"
@@ -296,6 +304,11 @@ function LinePlottingOptions(props: any) {
                                 className: classes.textColor,
                             }}
                         />
+                    </Box>
+                    <Box>
+                        <Button variant="outlined" color="primary" >
+                            Submit
+                        </Button>
                     </Box>
                 </Box>
             </Paper>
