@@ -33,7 +33,7 @@ export default function LineSeriesVis() {
             id={'line-series'}
             mx={15}
         >
-            <XYPlot height={500} width={500}>
+            <XYPlot height={800} width={800}>
                 <VerticalGridLines />
                 <HorizontalGridLines />
                 <XAxis />
