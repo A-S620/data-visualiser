@@ -58,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         justifyContent: 'center',
     },
+    tab: {
+        color: theme.palette.text.primary,
+        opacity: 1,
+    },
 }));
 
 export default function PlottingNav() {
@@ -99,18 +103,53 @@ export default function PlottingNav() {
                     onChange={handleChange}
                     scrollButtons="on"
                     indicatorColor="primary"
-                    textColor="primary"
                     aria-label="scrollable force tabs example"
                     className={classes.stickToBottom}
                     centered
                 >
-                    <Tab label="Line" icon={<ShowChartIcon />} {...a11yProps(0)} id={'line-tab'} />
-                    <Tab label="Bar" icon={<BarChartIcon />} {...a11yProps(1)} id={'bar-tab'} />
-                    <Tab label="Mark" icon={<FiberManualRecordIcon />} {...a11yProps(2)} id={'mark-tab'} />
-                    <Tab label="Hexbin" icon={<BlurOnIcon />} {...a11yProps(3)} id={'hexbin-tab'} />
-                    <Tab label="Polygon" icon={<GraphicEqIcon />} {...a11yProps(4)} id={'polygon-tab'} />
-                    <Tab label="Donut" icon={<DonutLargeIcon />} {...a11yProps(5)} id={'donut-tab'} />
-                    <Tab label="Heatmap" icon={<StreetviewIcon />} {...a11yProps(6)} id={'heatmap-tab'} />
+                    <Tab
+                        label="Line"
+                        icon={<ShowChartIcon />}
+                        {...a11yProps(0)}
+                        id={'line-tab'}
+                        className={classes.tab}
+                    />
+                    <Tab label="Bar" icon={<BarChartIcon />} {...a11yProps(1)} id={'bar-tab'} className={classes.tab} />
+                    <Tab
+                        label="Mark"
+                        icon={<FiberManualRecordIcon />}
+                        {...a11yProps(2)}
+                        id={'mark-tab'}
+                        className={classes.tab}
+                    />
+                    <Tab
+                        label="Hexbin"
+                        icon={<BlurOnIcon />}
+                        {...a11yProps(3)}
+                        id={'hexbin-tab'}
+                        className={classes.tab}
+                    />
+                    <Tab
+                        label="Polygon"
+                        icon={<GraphicEqIcon />}
+                        {...a11yProps(4)}
+                        id={'polygon-tab'}
+                        className={classes.tab}
+                    />
+                    <Tab
+                        label="Donut"
+                        icon={<DonutLargeIcon />}
+                        {...a11yProps(5)}
+                        id={'donut-tab'}
+                        className={classes.tab}
+                    />
+                    <Tab
+                        label="Heatmap"
+                        icon={<StreetviewIcon />}
+                        {...a11yProps(6)}
+                        id={'heatmap-tab'}
+                        className={classes.tab}
+                    />
                 </Tabs>
             </AppBar>
         </div>

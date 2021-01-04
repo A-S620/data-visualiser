@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,13 +131,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -329,14 +331,8 @@
       <workItem from="1609488068711" duration="4973000" />
       <workItem from="1609574926754" duration="2771000" />
       <workItem from="1609577876826" duration="39000" />
-      <workItem from="1609577966890" duration="3586000" />
-    </task>
-    <task id="LOCAL-00063" summary="AnalyseFile.tsx UI component">
-      <created>1607852571067</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1607852571067</updated>
+      <workItem from="1609577966890" duration="3630000" />
+      <workItem from="1609747803443" duration="417000" />
     </task>
     <task id="LOCAL-00064" summary="Restructured domain">
       <created>1607979746784</created>
@@ -674,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609580258455</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="LinePlottingOptions.tsx&#10;Styling">
+      <created>1609582094148</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1609582094148</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +685,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Started unit tests for FileAnalysis.tsx" />
     <MESSAGE value="unit tests for FileAnalysis.tsx" />
     <MESSAGE value="Home.js unit tests" />
     <MESSAGE value="ImportFilesHandler.test.tsx" />
@@ -707,7 +709,8 @@
     <MESSAGE value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
     <MESSAGE value="UserNavigation.tsx&#10;Updated so Plotting and Export tabs are only enabled when a valid file has been imported.&#10;Did unit tests" />
     <MESSAGE value="UserNavigation.tsx&#10;Styling" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserNavigation.tsx&#10;Styling" />
+    <MESSAGE value="LinePlottingOptions.tsx&#10;Styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx&#10;Styling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
