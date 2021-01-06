@@ -45,10 +45,10 @@ describe('Line Plotting Options Component', () => {
         const textfield = wrapper.find('div#size-textfields').find('label#width-textfield-label');
         expect(textfield.text()).toBe('Width');
     });
-    it('Should have a colour textfield', () => {
-        const textfield = wrapper.find('div#colour-textfields').find('label#colour-textfield-label');
-        expect(textfield.text()).toBe('Colour');
-    });
+    // it('Should have a colour textfield', () => {
+    //     const textfield = wrapper.find('div#colour-textfields').find('label#colour-textfield-label');
+    //     expect(textfield.text()).toBe('Colour');
+    // });
     it('Should have a opacity textfield', () => {
         const textfield = wrapper.find('div#colour-textfields').find('label#opacity-textfield-label');
         expect(textfield.text()).toBe('Opacity');

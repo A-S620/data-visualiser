@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { ColorPicker } from 'material-ui-color';
 import {
     Box,
     Chip,
@@ -77,6 +78,9 @@ function LinePlottingOptions(props: any) {
         outcomeMessage: '',
         errors: new Notifications(),
     });
+    function handleColor(e: any) {
+        console.log('color', e);
+    }
     function dataIsImported(): boolean {
         if (props.integerFields.length === 0) {
             dataNotImportedNotify();
@@ -206,17 +210,14 @@ function LinePlottingOptions(props: any) {
                         />
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'colour-textfields'}>
-                        <TextField
-                            type={'text'}
-                            id="colour-textfield"
-                            label="Colour"
-                            variant="outlined"
-                            helperText="Hex Value"
-                            FormHelperTextProps={{
-                                className: classes.helperTextColor,
-                            }}
-                            InputLabelProps={{
-                                className: classes.textColor,
+                        <ColorPicker
+                            defaultValue={options.colour}
+                            value={options.colour}
+                            onChange={(e) => {
+                                setOptions({
+                                    ...options,
+                                    colour: e.hex,
+                                });
                             }}
                         />
                         <Box mx={5} />
@@ -306,7 +307,7 @@ function LinePlottingOptions(props: any) {
                         />
                     </Box>
                     <Box>
-                        <Button variant="outlined" color="primary" >
+                        <Button variant="outlined" color="primary">
                             Submit
                         </Button>
                     </Box>

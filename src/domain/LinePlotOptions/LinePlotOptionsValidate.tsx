@@ -31,15 +31,9 @@ export class LinePlotOptionsValidate {
                 `The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is ${this.options.lineWidth}`
             );
         }
-        // if (this.isValidHex(this.options.colour)) {
-        //     notifications.addNotification(`The colour is not a valid Hex Value, it is ${this.options.colour}`);
-        // }
         return notifications;
     }
 
-    private isValidHex(color: string) {
-        return color.match(/^#[0-9a-f]{3,6}$/i) !== null;
-    }
     private lengthIsValid(length: number): boolean {
         return !(length > 800 || length < 100);
     }

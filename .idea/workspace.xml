@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingNav.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,14 +339,7 @@
       <workItem from="1609577966890" duration="3630000" />
       <workItem from="1609747803443" duration="6195000" />
       <workItem from="1609758091009" duration="726000" />
-      <workItem from="1609938154428" duration="600000" />
-    </task>
-    <task id="LOCAL-00067" summary="Refactoring">
-      <created>1608066311416</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1608066311418</updated>
+      <workItem from="1609938154428" duration="3935000" />
     </task>
     <task id="LOCAL-00068" summary="ImportFileHandler.tsx + Unit tests&#10;Added functionality to AnalyseData.tsx to check that data is not IP address + updated unit tests.">
       <created>1608152300204</created>
@@ -680,7 +677,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609758810078</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx">
+      <created>1609938860300</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1609938860310</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +692,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ImportFilesHandler.test.tsx" />
     <MESSAGE value="ImportFileHandler.tsx and other components unit tests" />
     <MESSAGE value="Removed JSONProcessor.tsx and its functionality&#10;Updated unit tests" />
     <MESSAGE value="CSVProcessor.tsx handling invalid CSV + unit tests" />
@@ -713,7 +716,8 @@
     <MESSAGE value="LinePlottingOptions.tsx&#10;Styling" />
     <MESSAGE value="PlottingNav.tsx - changed colour of navigation." />
     <MESSAGE value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
+    <MESSAGE value="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

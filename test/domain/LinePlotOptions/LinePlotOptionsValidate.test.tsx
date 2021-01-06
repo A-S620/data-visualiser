@@ -14,7 +14,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             yValue: 'test',
             height: 500,
             width: 500,
-            colour: '#cd3b54',
+            colour: '#cd3b55',
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
@@ -95,23 +95,6 @@ describe('LinePlotOptionsValidate domain component', () => {
         expect(notifications.notification()).toBe(
             'The maximum value for Width is 800, the minimum value for Width is 100. The current width is 50'
         );
-    });
-    //TODO: Valid Hex value
-    it('Should return a notification when the colour is an invalid hex value', () => {
-        const lineOptions: ILinePlottingOptions = {
-            xValue: 'test',
-            yValue: 'test2',
-            height: 800,
-            width: 800,
-            colour: '#00000£',
-            opacity: 0,
-            curveType: CurveType.curveMonotoneY,
-            lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
-        };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
-        const notifications = lineOptionsValidate.validate();
-        expect(notifications.notification()).toBe('The colour is not a valid Hex Value, it is #00000£');
     });
     it('Should return a notification when the opacity is bigger than the maximum value', () => {
         const lineOptions: ILinePlottingOptions = {
