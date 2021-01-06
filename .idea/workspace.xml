@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/UIHandlers/LinePlotHandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/components/LoggedIn/Plotting/PlottingNav.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +132,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -335,21 +334,8 @@
       <workItem from="1609577876826" duration="39000" />
       <workItem from="1609577966890" duration="3630000" />
       <workItem from="1609747803443" duration="6195000" />
-      <workItem from="1609758091009" duration="610000" />
-    </task>
-    <task id="LOCAL-00065" summary="Started ImportFileHandler.tsx + unit tests, interfaces&#10;Interfaces created:&#10;IAnalysedData.tsx&#10;IImportedData.tsx&#10;IImportedFile.tsx">
-      <created>1607979835264</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1607979835264</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Refactored domain components to work with IImportedFile.tsx&#10;Refactored:&#10;ImportData.tsx&#10;CreateImportedData.tsx&#10;GetImportedData.tsx&#10;Unit tests refactored:&#10;ImportData.test.tsx&#10;CreateImportedData.test.tsx&#10;GetImportedData.test.tsx&#10;ResetImportedData.test.tsx">
-      <created>1608032678132</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1608032678133</updated>
+      <workItem from="1609758091009" duration="726000" />
+      <workItem from="1609938154428" duration="600000" />
     </task>
     <task id="LOCAL-00067" summary="Refactoring">
       <created>1608066311416</created>
@@ -680,7 +666,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609748252893</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options">
+      <created>1609758770621</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1609758770621</updated>
+    </task>
+    <task id="LOCAL-00115" summary="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options">
+      <created>1609758810078</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1609758810078</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +688,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Home.js unit tests" />
     <MESSAGE value="ImportFilesHandler.test.tsx" />
     <MESSAGE value="ImportFileHandler.tsx and other components unit tests" />
     <MESSAGE value="Removed JSONProcessor.tsx and its functionality&#10;Updated unit tests" />
@@ -713,7 +712,8 @@
     <MESSAGE value="UserNavigation.tsx&#10;Styling" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Styling" />
     <MESSAGE value="PlottingNav.tsx - changed colour of navigation." />
-    <option name="LAST_COMMIT_MESSAGE" value="PlottingNav.tsx - changed colour of navigation." />
+    <MESSAGE value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

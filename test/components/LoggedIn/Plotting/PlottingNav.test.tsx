@@ -6,7 +6,11 @@ import { store } from '../../../../src/ReduxStore/store';
 import PlottingNav from '../../../../src/components/LoggedIn/Plotting/PlottingNav';
 
 describe('Plotting Navigation Component', () => {
-    const wrapper = mount(<PlottingNav />);
+    const wrapper = mount(
+        <Provider store={store}>
+            <PlottingNav />
+        </Provider>
+    );
 
     it('should have the correct items in the menu', () => {
         const pages = ['Line', 'Bar', 'Mark', 'Hexbin', 'Polygon', 'Donut', 'Heatmap'];
