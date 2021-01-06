@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,14 +343,7 @@
       <workItem from="1609758091009" duration="726000" />
       <workItem from="1609938154428" duration="4047000" />
       <workItem from="1609946222051" duration="718000" />
-      <workItem from="1609952255608" duration="1623000" />
-    </task>
-    <task id="LOCAL-00070" summary="refactored ImportFiles.tsx to use ImportFileHandler.tsx&#10;need to do ImportFiles.tsx unit tests">
-      <created>1608153198769</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1608153198769</updated>
+      <workItem from="1609952255608" duration="4967000" />
     </task>
     <task id="LOCAL-00071" summary="Created ImportFileHandling.tsx, ImportedFileStats.tsx&#10;ImportFileHandling.tsx - Navigation for Import and Analyse components&#10;ImportedFileStats.tsx - Stats on the imported file&#10;Restructured folders in UI section">
       <created>1608371712243</created>
@@ -682,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609946882023</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="LinePlottingOptions.test.tsx">
+      <created>1609954269019</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1609954269020</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +696,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CSVProcessor.tsx handling invalid CSV + unit tests" />
     <MESSAGE value="ImportFileData.tsx + unit tests" />
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Check all objects are same size - if one object is smaller it means that one of its column values is not a float.&#10;To Do: ignore objects that are wrong size" />
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid" />
@@ -715,7 +720,8 @@
     <MESSAGE value="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx colour picker" />
     <MESSAGE value="Restructuring folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructuring folders" />
+    <MESSAGE value="LinePlottingOptions.test.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.test.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

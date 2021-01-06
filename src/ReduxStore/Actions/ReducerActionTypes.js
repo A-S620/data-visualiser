@@ -8,3 +8,7 @@ export const IMPORTED_DATA_SLICE_RESET = 'importedDataSliceReset';
 export const INTEGER_FIELDS_ADDED = 'integerFieldsAdded';
 export const INTEGER_DATA_OBJECTS_ADDED = 'integerDataObjectsAdded';
 export const ANALYSED_DATA_SLICE_RESET = 'analysedDataSliceReset';
+
+//plottingOptions slice
+export const LINE_OPTIONS_ADDED = 'lineOptionsAdded';
+export const LINE_OPTIONS_RESET = 'lineOptionsReset';

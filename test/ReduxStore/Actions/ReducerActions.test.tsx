@@ -1,5 +1,6 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
+import { CurveType, ILinePlottingOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlottingOptions';
 
 //Test Data
 const dataAsArrays = [
@@ -20,51 +21,81 @@ const integerDataObjects = [
     { col1: 76, col2: 23 },
 ];
 describe('Reducer actions', () => {
-    it('Should create an action to add the dataFields', () => {
-        const expectedAction = {
-            type: actionTypes.DATA_FIELDS_ADDED,
-            payload: dataFields,
-        };
-        expect(reducerActions.addDataFields(dataFields)).toEqual(expectedAction);
+    describe('Imported data actions', () => {
+        it('Should create an action to add the dataFields', () => {
+            const expectedAction = {
+                type: actionTypes.DATA_FIELDS_ADDED,
+                payload: dataFields,
+            };
+            expect(reducerActions.addDataFields(dataFields)).toEqual(expectedAction);
+        });
+        it('Should create an action to add the data as Arrays', () => {
+            const expectedAction = {
+                type: actionTypes.DATA_AS_ARRAYS_ADDED,
+                payload: dataAsArrays,
+            };
+            expect(reducerActions.addDataAsArrays(dataAsArrays)).toEqual(expectedAction);
+        });
+        it('Should create an action to add the data as objects', () => {
+            const expectedAction = {
+                type: actionTypes.DATA_AS_OBJECTS_ADDED,
+                payload: dataAsObjects,
+            };
+            expect(reducerActions.addDataAsObjects(dataAsObjects)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset imported data', () => {
+            const expectedAction = {
+                type: actionTypes.IMPORTED_DATA_SLICE_RESET,
+            };
+            expect(reducerActions.resetImportedData()).toEqual(expectedAction);
+        });
     });
-    it('Should create an action to add the data as Arrays', () => {
-        const expectedAction = {
-            type: actionTypes.DATA_AS_ARRAYS_ADDED,
-            payload: dataAsArrays,
-        };
-        expect(reducerActions.addDataAsArrays(dataAsArrays)).toEqual(expectedAction);
+    describe('Analysed data actions', () => {
+        it('Should create an action to add the integerFields', () => {
+            const expectedAction = {
+                type: actionTypes.INTEGER_FIELDS_ADDED,
+                payload: dataFields,
+            };
+            expect(reducerActions.addIntegerFields(dataFields)).toEqual(expectedAction);
+        });
+        it('Should create an action to add the integerDataObjects', () => {
+            const expectedAction = {
+                type: actionTypes.INTEGER_DATA_OBJECTS_ADDED,
+                payload: integerDataObjects,
+            };
+            expect(reducerActions.addIntegerDataObjects(integerDataObjects)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset analysed data', () => {
+            const expectedAction = {
+                type: actionTypes.ANALYSED_DATA_SLICE_RESET,
+            };
+            expect(reducerActions.resetAnalysedData()).toEqual(expectedAction);
+        });
     });
-    it('Should create an action to add the data as objects', () => {
-        const expectedAction = {
-            type: actionTypes.DATA_AS_OBJECTS_ADDED,
-            payload: dataAsObjects,
-        };
-        expect(reducerActions.addDataAsObjects(dataAsObjects)).toEqual(expectedAction);
-    });
-    it('Should create an action to reset imported data', () => {
-        const expectedAction = {
-            type: actionTypes.IMPORTED_DATA_SLICE_RESET,
-        };
-        expect(reducerActions.resetImportedData()).toEqual(expectedAction);
-    });
-    it('Should create an action to add the integerFields', () => {
-        const expectedAction = {
-            type: actionTypes.INTEGER_FIELDS_ADDED,
-            payload: dataFields,
-        };
-        expect(reducerActions.addIntegerFields(dataFields)).toEqual(expectedAction);
-    });
-    it('Should create an action to add the integerDataObjects', () => {
-        const expectedAction = {
-            type: actionTypes.INTEGER_DATA_OBJECTS_ADDED,
-            payload: integerDataObjects,
-        };
-        expect(reducerActions.addIntegerDataObjects(integerDataObjects)).toEqual(expectedAction);
-    });
-    it('Should create an action to reset analysed data', () => {
-        const expectedAction = {
-            type: actionTypes.ANALYSED_DATA_SLICE_RESET,
-        };
-        expect(reducerActions.resetAnalysedData()).toEqual(expectedAction);
+    describe('Plotting Options actions', () => {
+        it('Should create an action to add the line options', () => {
+            const lineOptions: ILinePlottingOptions = {
+                xValue: 'test',
+                yValue: 'test2',
+                height: 800,
+                width: 800,
+                colour: '#000000',
+                opacity: 2,
+                curveType: CurveType.curveMonotoneY,
+                lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
+            };
+            const expectedAction = {
+                type: actionTypes.LINE_OPTIONS_ADDED,
+                payload: lineOptions,
+            };
+            expect(reducerActions.addLineOptions(lineOptions)).toEqual(expectedAction);
+        });
+        it('Should create an action to rest the options', () => {
+            const expectedAction = {
+                type: actionTypes.LINE_OPTIONS_RESET,
+            };
+            expect(reducerActions.resetLineOptions()).toEqual(expectedAction);
+        });
     });
 });
