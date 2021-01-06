@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { ColorPicker } from 'material-ui-color';
 import {
     Box,
-    Chip,
+    Button,
     FormControl,
     FormHelperText,
     InputLabel,
@@ -18,7 +18,7 @@ import { CurveType, ILinePlottingOptions, LineStyle } from '../../../../interfac
 import { AlertType } from '../../../../interfaces/INotification';
 import { Notifications } from '../../../../UIHandling/Notifications';
 import { AlertNotification } from '../../Notifications/AlertNotification';
-import { Button } from '@material-ui/core';
+import { LinePlotOptionsValidate } from '../../../../domain/LinePlotOptions/LinePlotOptionsValidate';
 
 interface IState {
     options: ILinePlottingOptions;
@@ -51,8 +51,8 @@ function LinePlottingOptions(props: any) {
         width: number;
         colour: string;
         opacity: number;
-        curveType: CurveType | undefined;
-        lineStyle: LineStyle | undefined;
+        curveType: CurveType;
+        lineStyle: LineStyle;
         lineWidth: number;
     }>({
         xValue: '',
@@ -61,8 +61,8 @@ function LinePlottingOptions(props: any) {
         width: 0,
         colour: '',
         opacity: 0,
-        curveType: undefined,
-        lineStyle: undefined,
+        curveType: CurveType.curveMonotoneY,
+        lineStyle: LineStyle.SOLID,
         lineWidth: 0,
     });
     const [notifications, setNotifications] = React.useState<{
@@ -74,8 +74,40 @@ function LinePlottingOptions(props: any) {
         outcomeMessage: '',
         errors: new Notifications(),
     });
-    function handleColor(e: any) {
-        console.log('color', e);
+    function validateDataOptions() {
+        const optionsToValidate: ILinePlottingOptions = {
+            xValue: options.xValue,
+            yValue: options.yValue,
+            height: options.height,
+            width: options.width,
+            colour: options.colour,
+            opacity: options.opacity,
+            curveType: options.curveType,
+            lineStyle: options.lineStyle,
+            lineWidth: options.lineWidth,
+        };
+        // const validateOptions = new LinePlotHandler(optionsToValidate);
+        // const errors: Notifications = validateOptions.validate();
+        // if (errors.isEmpty()) {
+        //     try {
+        //         setNotifications({
+        //             ...notifications,
+        //             outcome: AlertType.SUCCESS,
+        //             outcomeMessage: 'Files successfully uploaded',
+        //         });
+        //     } catch (e) {
+        //         setNotifications({
+        //             ...notifications,
+        //             outcome: AlertType.FAILED,
+        //             outcomeMessage: `${e.notification}`,
+        //         });
+        //     }
+        // } else {
+        //     setNotifications({
+        //         ...notifications,
+        //         errors: errors,
+        //     });
+        // }
     }
     function dataIsImported(): boolean {
         if (props.integerFields.length === 0) {
@@ -302,8 +334,8 @@ function LinePlottingOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box>
-                        <Button variant="outlined" color="primary">
+                    <Box id={'submit-button'}>
+                        <Button variant="outlined" color="primary" id={'options-submit-button'}>
                             Submit
                         </Button>
                     </Box>

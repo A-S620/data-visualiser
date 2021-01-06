@@ -25,44 +25,55 @@ beforeEach(
 afterEach(() => wrapper.unmount());
 
 describe('Line Plotting Options Component', () => {
-    it('Should have the correct title', () => {
-        const title = wrapper.find('p#line-plotting-title');
-        expect(title.text()).toBe('Line Series Plotting Options');
+    describe('UI Components', () => {
+        it('Should have the correct title', () => {
+            const title = wrapper.find('p#line-plotting-title');
+            expect(title.text()).toBe('Line Series Plotting Options');
+        });
+        it('Should have a X Values select', () => {
+            const select = wrapper.find('div#x-values-select').find('label');
+            expect(select.text()).toBe('X Value *');
+        });
+        it('Should have a Y Values select', () => {
+            const select = wrapper.find('div#y-values-select').find('label');
+            expect(select.text()).toBe('Y Value *');
+        });
+        it('Should have a height textfield', () => {
+            const textfield = wrapper.find('div#size-textfields').find('label#height-textfield-label');
+            expect(textfield.text()).toBe('Height');
+        });
+        it('Should have a width textfield', () => {
+            const textfield = wrapper.find('div#size-textfields').find('label#width-textfield-label');
+            expect(textfield.text()).toBe('Width');
+        });
+        it('Should have a opacity textfield', () => {
+            const textfield = wrapper.find('div#colour-textfields').find('label#opacity-textfield-label');
+            expect(textfield.text()).toBe('Opacity');
+        });
+        it('Should have a curve select', () => {
+            const select = wrapper.find('div#curve-select').find('label');
+            expect(select.text()).toBe('Curve *');
+        });
+        it('Should have a line style select', () => {
+            const select = wrapper.find('div#line-style-select').find('label');
+            expect(select.text()).toBe('Line Style');
+        });
+        it('Should have a line width textfield', () => {
+            const textfield = wrapper.find('div#line-options').find('label#line-width-textfield-label');
+            expect(textfield.text()).toBe('Line Width');
+        });
+        it('Should have a submit button', () => {
+            const button = wrapper.find('div#submit-button');
+            expect(button.text()).toBe('Submit');
+        });
     });
-    it('Should have a X Values select', () => {
-        const select = wrapper.find('div#x-values-select').find('label');
-        expect(select.text()).toBe('X Value *');
-    });
-    it('Should have a Y Values select', () => {
-        const select = wrapper.find('div#y-values-select').find('label');
-        expect(select.text()).toBe('Y Value *');
-    });
-    it('Should have a height textfield', () => {
-        const textfield = wrapper.find('div#size-textfields').find('label#height-textfield-label');
-        expect(textfield.text()).toBe('Height');
-    });
-    it('Should have a width textfield', () => {
-        const textfield = wrapper.find('div#size-textfields').find('label#width-textfield-label');
-        expect(textfield.text()).toBe('Width');
-    });
-    // it('Should have a colour textfield', () => {
-    //     const textfield = wrapper.find('div#colour-textfields').find('label#colour-textfield-label');
-    //     expect(textfield.text()).toBe('Colour');
-    // });
-    it('Should have a opacity textfield', () => {
-        const textfield = wrapper.find('div#colour-textfields').find('label#opacity-textfield-label');
-        expect(textfield.text()).toBe('Opacity');
-    });
-    it('Should have a curve select', () => {
-        const select = wrapper.find('div#curve-select').find('label');
-        expect(select.text()).toBe('Curve *');
-    });
-    it('Should have a line style select', () => {
-        const select = wrapper.find('div#line-style-select').find('label');
-        expect(select.text()).toBe('Line Style');
-    });
-    it('Should have a line width textfield', () => {
-        const textfield = wrapper.find('div#line-options').find('label#line-width-textfield-label');
-        expect(textfield.text()).toBe('Line Width');
-    });
+    describe('Integration with Line Plot Handler', () => {});
 });
+// function inputGraphName(graphName: string): void {
+//     wrapper.find('input#graph-name').simulate('change', {
+//         target: { value: graphName },
+//     });
+// }
+function clickSubmit(): void {
+    wrapper.find('button#options-submit-button').simulate('click');
+}
