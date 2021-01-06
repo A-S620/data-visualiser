@@ -9,7 +9,7 @@ import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedD
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 //Store components
 import { store } from '../../../../src/ReduxStore/store';
-import { IImportedFileData } from '../../../../src/domain/interfaces/import/IImportedFileData';
+import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
 
 //Test Data
 const dataAsArrays = [

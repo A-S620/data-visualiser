@@ -4,9 +4,8 @@ import React from 'react';
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 
-
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-import { IImportedFileData } from '../../../../src/domain/interfaces/import/IImportedFileData';
+import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
 
 //Test Data
 const dataAsArrays = [

@@ -1,6 +1,6 @@
 import { store } from '../../../ReduxStore/store';
 import { addDataFields, addDataAsArrays, addDataAsObjects } from '../../../ReduxStore/Actions/ReducerActions';
-import { IImportedFileData } from '../../interfaces/import/IImportedFileData';
+import { IImportedFileData } from '../../../interfaces/import/IImportedFileData';
 
 export default class CreateImportedData {
     private importedData: IImportedFileData;

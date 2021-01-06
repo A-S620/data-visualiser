@@ -1,5 +1,5 @@
 import { store } from '../../../ReduxStore/store';
-import { IImportedFileData } from '../../interfaces/import/IImportedFileData';
+import { IImportedFileData } from '../../../interfaces/import/IImportedFileData';
 
 export default class GetImportedData {
     private static getDataFields(): Array<string> {
