@@ -1,4 +1,4 @@
-export interface ILinePlottingOptions {
+export interface ILinePlotOptions {
     xValue: string;
     yValue: string;
     height: number;

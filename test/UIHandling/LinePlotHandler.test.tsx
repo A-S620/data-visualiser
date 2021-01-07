@@ -1,12 +1,13 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { CurveType, ILinePlottingOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlottingOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
 import { LinePlotHandler } from '../../src/UIHandling/LinePlotHandler';
+import GetLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
-        const testOptions: ILinePlottingOptions = {
+        const testOptions: ILinePlotOptions = {
             xValue: 'Test',
             yValue: 'Test2',
             height: 500,
@@ -23,7 +24,7 @@ describe('Line Plot Handler UIHandling Component', () => {
         expect(notifications.notification()).toBe('');
     });
     it('Should give an error if one of the options are invalid', () => {
-        const testOptions: ILinePlottingOptions = {
+        const testOptions: ILinePlotOptions = {
             xValue: 'Test',
             yValue: 'Test2',
             height: 0,
@@ -42,7 +43,7 @@ describe('Line Plot Handler UIHandling Component', () => {
         );
     });
     it('Should save valid options in the Redux store', () => {
-        const testOptions: ILinePlottingOptions = {
+        const testOptions: ILinePlotOptions = {
             xValue: 'Test',
             yValue: 'Test2',
             height: 500,

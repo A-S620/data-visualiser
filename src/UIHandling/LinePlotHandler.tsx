@@ -1,10 +1,10 @@
-import { ILinePlottingOptions } from '../interfaces/plotting/ILinePlottingOptions';
+import { ILinePlotOptions } from '../interfaces/plotting/ILinePlotOptions';
 import { Notifications } from './Notifications';
 import { LinePlotOptionsValidate } from '../domain/LinePlotOptions/LinePlotOptionsValidate';
 
 export class LinePlotHandler {
-    private options: ILinePlottingOptions;
-    constructor(options: ILinePlottingOptions) {
+    private options: ILinePlotOptions;
+    constructor(options: ILinePlotOptions) {
         this.options = options;
     }
     public validateOptions(): Notifications {

@@ -13,7 +13,7 @@ import {
     Typography,
 } from '@material-ui/core';
 import { connect } from 'react-redux';
-import { CurveType, ILinePlottingOptions, LineStyle } from '../../../../interfaces/plotting/ILinePlottingOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../../interfaces/plotting/ILinePlotOptions';
 
 import { AlertType } from '../../../../interfaces/INotification';
 import { Notifications } from '../../../../UIHandling/Notifications';
@@ -21,7 +21,7 @@ import { AlertNotification } from '../../Notifications/AlertNotification';
 import { LinePlotOptionsValidate } from '../../../../domain/LinePlotOptions/LinePlotOptionsValidate';
 
 interface IState {
-    options: ILinePlottingOptions;
+    options: ILinePlotOptions;
     submitButtonDisabled: boolean;
     outcome: AlertType | undefined;
     outcomeMessage: string;
@@ -75,7 +75,7 @@ function LinePlottingOptions(props: any) {
         errors: new Notifications(),
     });
     function validateDataOptions() {
-        const optionsToValidate: ILinePlottingOptions = {
+        const optionsToValidate: ILinePlotOptions = {
             xValue: options.xValue,
             yValue: options.yValue,
             height: options.height,

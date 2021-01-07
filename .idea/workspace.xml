@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/CreateLinePlotOptions.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,14 +354,7 @@
       <workItem from="1609946222051" duration="718000" />
       <workItem from="1609952255608" duration="5186000" />
       <workItem from="1610007856871" duration="2564000" />
-      <workItem from="1610025581362" duration="876000" />
-    </task>
-    <task id="LOCAL-00073" summary="AnalyseFile.tsx">
-      <created>1608583370330</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1608583370330</updated>
+      <workItem from="1610025581362" duration="2274000" />
     </task>
     <task id="LOCAL-00074" summary="Refactoring&#10;Renaming components">
       <created>1608666334534</created>
@@ -685,7 +692,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610011111787</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="LinePlotOptions slice - ReduxReducer.js + unit tests">
+      <created>1610026643738</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1610026643739</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,7 +707,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid" />
     <MESSAGE value="ImportFiles.tsx component" />
     <MESSAGE value="FileAnalysis.tsx component" />
     <MESSAGE value="Unit Tests for UI components" />
@@ -718,7 +731,8 @@
     <MESSAGE value="LinePlottingOptions.test.tsx" />
     <MESSAGE value="ReducerActions.tsx, ReducerActionTypes.js updated with line options.&#10;Created files: CreateLinePlotOptions.tsx, GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx&#10;Began TDD on LinePlotHandler.tsx - LinePlotHandler.test.tsx&#10;TODO: Storing Line plot options in Redux" />
     <MESSAGE value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
+    <MESSAGE value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

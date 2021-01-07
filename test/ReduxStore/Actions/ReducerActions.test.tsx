@@ -1,6 +1,6 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
-import { CurveType, ILinePlottingOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlottingOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 
 //Test Data
 const dataAsArrays = [
@@ -74,7 +74,7 @@ describe('Reducer actions', () => {
     });
     describe('Plotting Options actions', () => {
         it('Should create an action to add the line options', () => {
-            const lineOptions: ILinePlottingOptions = {
+            const lineOptions: ILinePlotOptions = {
                 xValue: 'test',
                 yValue: 'test2',
                 height: 800,

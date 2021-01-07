@@ -1,9 +1,9 @@
-import { ILinePlottingOptions } from '../../interfaces/plotting/ILinePlottingOptions';
+import { ILinePlotOptions } from '../../interfaces/plotting/ILinePlotOptions';
 import { Notifications } from '../../UIHandling/Notifications';
 
 export class LinePlotOptionsValidate {
-    private readonly options: ILinePlottingOptions;
-    constructor(linePlotOptions: ILinePlottingOptions) {
+    private readonly options: ILinePlotOptions;
+    constructor(linePlotOptions: ILinePlotOptions) {
         this.options = linePlotOptions;
     }
     public validate(): Notifications {

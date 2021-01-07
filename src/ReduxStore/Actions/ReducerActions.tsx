@@ -1,5 +1,5 @@
 import * as reducerActionTypes from './ReducerActionTypes';
-import { ILinePlottingOptions } from '../../interfaces/plotting/ILinePlottingOptions';
+import { ILinePlotOptions } from '../../interfaces/plotting/ILinePlotOptions';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -31,7 +31,7 @@ export const resetAnalysedData = () => ({
 });
 
 //plottingOptions slice
-export const addLineOptions = (linePlotOptions: ILinePlottingOptions) => ({
+export const addLineOptions = (linePlotOptions: ILinePlotOptions) => ({
     type: reducerActionTypes.LINE_OPTIONS_ADDED,
     payload: linePlotOptions,
 });

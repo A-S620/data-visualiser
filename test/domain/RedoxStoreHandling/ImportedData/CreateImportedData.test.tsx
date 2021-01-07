@@ -1,14 +1,10 @@
-//Imports from libraries
-import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
 
-//Domain Components
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-//Store components
-import { store } from '../../../../src/ReduxStore/store';
+
 import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
 
 //Test Data
@@ -25,21 +21,17 @@ const dataAsObjects = [
 ];
 const dataFields = ['col1', 'col2', 'col3'];
 
-//Runs before each test
 beforeEach(() => {
     const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
-//Runs after all test
+
 afterAll(() => {
     const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
 });
 describe('CreateImportedData domain component', () => {
     it('Should add dataFields to the dataFields attribute in the Redux State', () => {
-        //Given I have dataFields as a array
-        //When I create an instance of CreateImportedData
-        //Then the CreateImportedData should add the dataFields to the dataFields attribute in the redux state
         const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
@@ -51,9 +43,6 @@ describe('CreateImportedData domain component', () => {
         expect(getStoreHandler.getImportedData().dataFields).toStrictEqual(dataFields);
     });
     it('Should add data as Arrays to the dataAsArrays attribute in the redux store', () => {
-        //Given I have CSV data as an array
-        //When I create an instance of CreateImportedData
-        //Then the CreateImportedData should add the data to the dataAsArrays attribute in the redux state
         const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,
@@ -65,9 +54,6 @@ describe('CreateImportedData domain component', () => {
         expect(getStoreHandler.getImportedData().dataAsArrays).toStrictEqual(dataAsArrays);
     });
     it('Should add data as Objects to the dataAsObjects attribute in the redux store', () => {
-        //Given I have CSV data as an object
-        //When I create an instance of CreateImportedData
-        //Then the CreateImportedData should add the data to the dataAsObjects attribute in the redux state
         const importedData: IImportedFileData = {
             dataFields: dataFields,
             dataAsObjects: dataAsObjects,

@@ -1,11 +1,11 @@
 import React from 'react';
 import 'jsdom-global/register';
-import { CurveType, ILinePlottingOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlottingOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 import { LinePlotOptionsValidate } from '../../../src/domain/LinePlotOptions/LinePlotOptionsValidate';
 
 describe('LinePlotOptionsValidate domain component', () => {
     it('Should return a notification when the xValue is the same as the yValue', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test',
             height: 500,
@@ -21,7 +21,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         expect(notifications.notification()).toBe('Cannot select the same fields for X Value and Y Value');
     });
     it('Should return a notification when the height is bigger than the maximum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 801,
@@ -39,7 +39,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the height is smaller than the minimum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 50,
@@ -57,7 +57,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the width is bigger than the maximum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 800,
@@ -75,7 +75,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the width is smaller than the minimum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 800,
@@ -93,7 +93,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the opacity is bigger than the maximum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 800,
@@ -111,7 +111,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the opacity is smaller than the minimum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 800,
@@ -129,7 +129,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the line width is smaller than the minimum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 800,
@@ -147,7 +147,7 @@ describe('LinePlotOptionsValidate domain component', () => {
         );
     });
     it('Should return a notification when the line width is bigger than the maximum value', () => {
-        const lineOptions: ILinePlottingOptions = {
+        const lineOptions: ILinePlotOptions = {
             xValue: 'test',
             yValue: 'test2',
             height: 800,

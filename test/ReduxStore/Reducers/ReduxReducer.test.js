@@ -1,7 +1,7 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
-import { CurveType, ILinePlottingOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlottingOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 
 //Test Data
 const dataAsArrays = [

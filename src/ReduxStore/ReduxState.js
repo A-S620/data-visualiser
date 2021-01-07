@@ -1,5 +1,3 @@
-import { CurveType, LineStyle } from '../interfaces/plotting/ILinePlottingOptions';
-
 const ReduxState = {
     importedData: {
         dataFields: [],
