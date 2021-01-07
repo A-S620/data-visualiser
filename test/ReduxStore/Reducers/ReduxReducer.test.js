@@ -117,9 +117,9 @@ describe('ReduxReducer', () => {
             ).toEqual(analysedDataSlice);
         });
     });
-    describe('Plotting options slice', () => {
-        describe('Line Plot Options', () => {
-            const plottingOptionsSlice = {
+    describe('Plotting options', () => {
+        describe('Line Plot Options slice', () => {
+            const linePlotOptions = {
                 linePlotOptions: {},
             };
             const lineOptions = {
@@ -128,51 +128,45 @@ describe('ReduxReducer', () => {
                 height: 500,
                 width: 500,
                 colour: '#cd3b55',
-                opacity: 0,
+                opacity: 0.5,
                 curveType: CurveType.curveMonotoneY,
                 lineStyle: LineStyle.SOLID,
                 lineWidth: 2,
             };
             it('Should handle LINE_OPTIONS_ADDED', () => {
-                expect(reduxReducer(plottingOptionsSlice, reducerActions.addLineOptions(lineOptions))).toEqual({
-                    plottingOptions: {
-                        linePlotOptions: {
-                            xValue: 'test',
-                            yValue: 'test2',
-                            height: 500,
-                            width: 500,
-                            colour: '#cd3b55',
-                            opacity: 0,
-                            curveType: CurveType.curveMonotoneY,
-                            lineStyle: LineStyle.SOLID,
-                            lineWidth: 2,
-                        },
+                expect(reduxReducer(linePlotOptions, reducerActions.addLineOptions(lineOptions))).toEqual({
+                    linePlotOptions: {
+                        xValue: 'test',
+                        yValue: 'test2',
+                        height: 500,
+                        width: 500,
+                        colour: '#cd3b55',
+                        opacity: 0.5,
+                        curveType: CurveType.curveMonotoneY,
+                        lineStyle: LineStyle.SOLID,
+                        lineWidth: 2,
                     },
                 });
             });
             it('Should handle LINE_OPTIONS_RESET', () => {
                 expect(
                     reduxReducer(
-                        [
-                            {
-                                plottingOptions: {
-                                    linePlotOptions: {
-                                        xValue: 'test',
-                                        yValue: 'test2',
-                                        height: 500,
-                                        width: 500,
-                                        colour: '#cd3b55',
-                                        opacity: 0,
-                                        curveType: CurveType.curveMonotoneY,
-                                        lineStyle: LineStyle.SOLID,
-                                        lineWidth: 2,
-                                    },
-                                },
+                        {
+                            linePlotOptions: {
+                                xValue: 'test',
+                                yValue: 'test2',
+                                height: 500,
+                                width: 500,
+                                colour: '#cd3b55',
+                                opacity: 0,
+                                curveType: CurveType.curveMonotoneY,
+                                lineStyle: LineStyle.SOLID,
+                                lineWidth: 2,
                             },
-                        ],
+                        },
                         reducerActions.resetLineOptions()
                     )
-                ).toEqual(plottingOptionsSlice);
+                ).toEqual(linePlotOptions);
             });
         });
     });

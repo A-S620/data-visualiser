@@ -62,14 +62,15 @@ export default function reduxReducer(state = ReduxState, action) {
                 },
             };
 
-        //plottingOptions slice
+        //linePlotOptions slice
         case ReducerActions.LINE_OPTIONS_ADDED:
             return {
                 ...state,
-                plottingOptions: {
-                    ...state.plottingOptions,
-                    linePlotOptions: action.payload,
-                },
+                linePlotOptions: action.payload,
+            };
+        case ReducerActions.LINE_OPTIONS_RESET:
+            return {
+                linePlotOptions: {},
             };
         default:
             return state;

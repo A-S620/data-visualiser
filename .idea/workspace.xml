@@ -68,7 +68,7 @@
   </component>
   <component name="JupyterTrust" id="e96eeed0-2211-4143-92c3-5a31ee1938ff" />
   <component name="KubernetesApiPersistence">
-    <option name="context" value="minikube" />
+    <option name="context" value="arn:aws:eks:us-west-2:595076097930:cluster/Korat-Kai-Cluster" />
     <option name="namespace" value="default" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -133,13 +133,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -337,14 +339,8 @@
       <workItem from="1609938154428" duration="4047000" />
       <workItem from="1609946222051" duration="718000" />
       <workItem from="1609952255608" duration="5186000" />
-      <workItem from="1610007856871" duration="2158000" />
-    </task>
-    <task id="LOCAL-00072" summary="ImportFiles.tsx and ImportedFileStats.tsx">
-      <created>1608582837777</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1608582837777</updated>
+      <workItem from="1610007856871" duration="2564000" />
+      <workItem from="1610025581362" duration="876000" />
     </task>
     <task id="LOCAL-00073" summary="AnalyseFile.tsx">
       <created>1608583370330</created>
@@ -682,7 +678,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609964637807</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass">
+      <created>1610011111786</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1610011111787</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +693,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Check all objects are same size - if one object is smaller it means that one of its column values is not a float.&#10;To Do: ignore objects that are wrong size" />
     <MESSAGE value="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid" />
     <MESSAGE value="ImportFiles.tsx component" />
     <MESSAGE value="FileAnalysis.tsx component" />
@@ -715,7 +717,8 @@
     <MESSAGE value="Restructuring folders" />
     <MESSAGE value="LinePlottingOptions.test.tsx" />
     <MESSAGE value="ReducerActions.tsx, ReducerActionTypes.js updated with line options.&#10;Created files: CreateLinePlotOptions.tsx, GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx&#10;Began TDD on LinePlotHandler.tsx - LinePlotHandler.test.tsx&#10;TODO: Storing Line plot options in Redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReducerActions.tsx, ReducerActionTypes.js updated with line options.&#10;Created files: CreateLinePlotOptions.tsx, GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx&#10;Began TDD on LinePlotHandler.tsx - LinePlotHandler.test.tsx&#10;TODO: Storing Line plot options in Redux" />
+    <MESSAGE value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
