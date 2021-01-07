@@ -58,6 +58,41 @@ describe('Line Plot Handler UIHandling Component', () => {
         const linePlotHandler = new LinePlotHandler(testOptions);
         linePlotHandler.validateOptions();
         const getLinePlotOptions = new GetLinePlotOptions();
-        expect(getLinePlotOptions).toBe(testOptions);
+        expect(getLinePlotOptions.getLinePlotOptions()).toBe(testOptions);
+    });
+    it('Should get the line options from the Redux store', () => {
+        const testOptions: ILinePlotOptions = {
+            xValue: 'Test',
+            yValue: 'Test2',
+            height: 500,
+            width: 500,
+            colour: '000000',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+
+        const linePlotHandler = new LinePlotHandler(testOptions);
+        linePlotHandler.validateOptions();
+        expect(linePlotHandler.getOptions()).toBe(testOptions);
+    });
+    it('Should reset the line options from the Redux store', () => {
+        const testOptions: ILinePlotOptions = {
+            xValue: 'Test',
+            yValue: 'Test2',
+            height: 500,
+            width: 500,
+            colour: '000000',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+
+        const linePlotHandler = new LinePlotHandler(testOptions);
+        linePlotHandler.validateOptions();
+        linePlotHandler.resetOptions();
+        expect(linePlotHandler.getOptions()).toStrictEqual({});
     });
 });

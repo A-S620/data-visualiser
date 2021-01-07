@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,14 +338,7 @@
       <workItem from="1609952255608" duration="5186000" />
       <workItem from="1610007856871" duration="2564000" />
       <workItem from="1610025581362" duration="2427000" />
-      <workItem from="1610031159858" duration="487000" />
-    </task>
-    <task id="LOCAL-00075" summary="ImportFileComponent.tsx">
-      <created>1608671028378</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1608671028378</updated>
+      <workItem from="1610031159858" duration="1416000" />
     </task>
     <task id="LOCAL-00076" summary="Made Linting changes to UI components">
       <created>1608732896365</created>
@@ -683,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610028122018</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx">
+      <created>1610031706242</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1610031706243</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,7 +691,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="FileAnalysis.tsx component" />
     <MESSAGE value="Unit Tests for UI components" />
     <MESSAGE value="UserNavigation.js updated + unit tests" />
     <MESSAGE value="PlottingNav.tsx" />
@@ -716,7 +715,8 @@
     <MESSAGE value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
     <MESSAGE value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
     <MESSAGE value="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx" />
+    <MESSAGE value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
