@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,17 +132,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -338,14 +327,10 @@
       <workItem from="1609952255608" duration="5186000" />
       <workItem from="1610007856871" duration="2564000" />
       <workItem from="1610025581362" duration="2427000" />
-      <workItem from="1610031159858" duration="1416000" />
-    </task>
-    <task id="LOCAL-00076" summary="Made Linting changes to UI components">
-      <created>1608732896365</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1608732896366</updated>
+      <workItem from="1610031159858" duration="1465000" />
+      <workItem from="1610034855704" duration="270000" />
+      <workItem from="1610099023567" duration="1057000" />
+      <workItem from="1610100174403" duration="3335000" />
     </task>
     <task id="LOCAL-00077" summary="Made Linting changes to domain components">
       <created>1608735041252</created>
@@ -683,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610031706243</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="LinePlotHandler.tsx + unit tests">
+      <created>1610033540787</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1610033540787</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,7 +683,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Unit Tests for UI components" />
     <MESSAGE value="UserNavigation.js updated + unit tests" />
     <MESSAGE value="PlottingNav.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx" />
@@ -716,7 +707,8 @@
     <MESSAGE value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
     <MESSAGE value="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx" />
     <MESSAGE value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
+    <MESSAGE value="LinePlotHandler.tsx + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlotHandler.tsx + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

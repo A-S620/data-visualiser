@@ -19,6 +19,7 @@ import { AlertType } from '../../../../interfaces/INotification';
 import { Notifications } from '../../../../UIHandling/Notifications';
 import { AlertNotification } from '../../Notifications/AlertNotification';
 import { LinePlotOptionsValidate } from '../../../../domain/LinePlotOptions/LinePlotOptionsValidate';
+import { LinePlotHandler } from '../../../../UIHandling/LinePlotHandler';
 
 interface IState {
     options: ILinePlotOptions;
@@ -51,19 +52,19 @@ function LinePlottingOptions(props: any) {
         width: number;
         colour: string;
         opacity: number;
-        curveType: CurveType;
-        lineStyle: LineStyle;
+        curveType: CurveType | null;
+        lineStyle: LineStyle | undefined;
         lineWidth: number;
     }>({
         xValue: '',
         yValue: '',
-        height: 0,
-        width: 0,
-        colour: '',
-        opacity: 0,
-        curveType: CurveType.curveMonotoneY,
-        lineStyle: LineStyle.SOLID,
-        lineWidth: 0,
+        height: 400,
+        width: 400,
+        colour: '#000000',
+        opacity: 1,
+        curveType: null,
+        lineStyle: undefined,
+        lineWidth: 2,
     });
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
@@ -74,6 +75,12 @@ function LinePlottingOptions(props: any) {
         outcomeMessage: '',
         errors: new Notifications(),
     });
+    function submitIsEnabled(): boolean {
+        return !(options.xValue.length !== 0 && options.yValue.length !== 0 && xValAndYValIsEqual());
+    }
+    function xValAndYValIsEqual(): boolean {
+        return options.xValue !== options.yValue;
+    }
     function validateDataOptions() {
         const optionsToValidate: ILinePlotOptions = {
             xValue: options.xValue,
@@ -86,35 +93,28 @@ function LinePlottingOptions(props: any) {
             lineStyle: options.lineStyle,
             lineWidth: options.lineWidth,
         };
-        // const validateOptions = new LinePlotHandler(optionsToValidate);
-        // const errors: Notifications = validateOptions.validate();
-        // if (errors.isEmpty()) {
-        //     try {
-        //         setNotifications({
-        //             ...notifications,
-        //             outcome: AlertType.SUCCESS,
-        //             outcomeMessage: 'Files successfully uploaded',
-        //         });
-        //     } catch (e) {
-        //         setNotifications({
-        //             ...notifications,
-        //             outcome: AlertType.FAILED,
-        //             outcomeMessage: `${e.notification}`,
-        //         });
-        //     }
-        // } else {
-        //     setNotifications({
-        //         ...notifications,
-        //         errors: errors,
-        //     });
-        // }
-    }
-    function dataIsImported(): boolean {
-        if (props.integerFields.length === 0) {
-            dataNotImportedNotify();
-            return false;
+        const validateOptions = new LinePlotHandler(optionsToValidate);
+        const errors: Notifications = validateOptions.validateOptions();
+        if (errors.isEmpty()) {
+            try {
+                setNotifications({
+                    ...notifications,
+                    outcome: AlertType.SUCCESS,
+                    outcomeMessage: 'Options Validated',
+                });
+            } catch (e) {
+                setNotifications({
+                    ...notifications,
+                    outcome: AlertType.FAILED,
+                    outcomeMessage: `${e.notification}`,
+                });
+            }
+        } else {
+            setNotifications({
+                ...notifications,
+                errors: errors,
+            });
         }
-        return true;
     }
     function dataNotImportedNotify() {
         const errors = new Notifications();
@@ -133,10 +133,9 @@ function LinePlottingOptions(props: any) {
             alignItems="center"
             className={classes.root}
             id={'line-plotting-options'}
-            my={15}
             mx={15}
         >
-            <Box style={{ height: '50%', width: '50%' }} my={15} id={'alert-area'}>
+            <Box style={{ height: '50%', width: '50%' }} id={'alert-area'}>
                 {notifications.outcome && (
                     <AlertNotification alert={notifications.outcome} notification={notifications.outcomeMessage} />
                 )}
@@ -163,7 +162,6 @@ function LinePlottingOptions(props: any) {
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
                             <InputLabel className={classes.textColor}>X Value</InputLabel>
                             <Select
-                                value={options.xValue}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
@@ -171,15 +169,19 @@ function LinePlottingOptions(props: any) {
                                     });
                                 }}
                                 name="X Values"
+                                renderValue={(value) => {
+                                    if (!xValAndYValIsEqual()) {
+                                        return `⚠️  - ${value}`;
+                                    }
+                                    return `${value}`;
+                                }}
                             >
-                                <option aria-label="None" value="" />
-                                {dataIsImported() &&
-                                    props.integerFields.map((integerField: string) => (
-                                        <option
-                                            value={integerField}
-                                            id={integerField + '-option'}
-                                        >{`${integerField}`}</option>
-                                    ))}
+                                {props.integerFields.map((integerField: string) => (
+                                    <option
+                                        value={integerField}
+                                        id={integerField + '-option'}
+                                    >{`${integerField}`}</option>
+                                ))}
                             </Select>
                             <FormHelperText className={classes.helperTextColor}>Data on X-Axis</FormHelperText>
                         </FormControl>
@@ -187,7 +189,12 @@ function LinePlottingOptions(props: any) {
                         <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
                             <InputLabel className={classes.textColor}>Y Value</InputLabel>
                             <Select
-                                value={options.yValue}
+                                renderValue={(value) => {
+                                    if (!xValAndYValIsEqual()) {
+                                        return `⚠️  - ${value}`;
+                                    }
+                                    return `${value}`;
+                                }}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
@@ -196,14 +203,12 @@ function LinePlottingOptions(props: any) {
                                 }}
                                 name="Y Values"
                             >
-                                <option aria-label="None" value="" />
-                                {dataIsImported() &&
-                                    props.integerFields.map((integerField: string) => (
-                                        <option
-                                            value={integerField}
-                                            id={integerField + '-option'}
-                                        >{`${integerField}`}</option>
-                                    ))}
+                                {props.integerFields.map((integerField: string) => (
+                                    <option
+                                        value={integerField}
+                                        id={integerField + '-option'}
+                                    >{`${integerField}`}</option>
+                                ))}
                             </Select>
                             <FormHelperText className={classes.helperTextColor}>Data on Y-Axis</FormHelperText>
                         </FormControl>
@@ -214,12 +219,18 @@ function LinePlottingOptions(props: any) {
                             id="height-textfield"
                             label="Height"
                             variant="outlined"
-                            helperText="Default 500"
+                            helperText="Default 400"
                             FormHelperTextProps={{
                                 className: classes.helperTextColor,
                             }}
                             InputLabelProps={{
                                 className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    height: parseInt(event.target.value),
+                                });
                             }}
                         />
                         <Box mx={5} />
@@ -228,12 +239,18 @@ function LinePlottingOptions(props: any) {
                             id="width-textfield"
                             label="Width"
                             variant="outlined"
-                            helperText="Default 500"
+                            helperText="Default 400"
                             FormHelperTextProps={{
                                 className: classes.helperTextColor,
                             }}
                             InputLabelProps={{
                                 className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    width: parseInt(event.target.value),
+                                });
                             }}
                         />
                     </Box>
@@ -261,13 +278,19 @@ function LinePlottingOptions(props: any) {
                             InputLabelProps={{
                                 className: classes.textColor,
                             }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    opacity: parseInt(event.target.value),
+                                });
+                            }}
                         />
                     </Box>
                     <Box>
-                        <FormControl required style={{ minWidth: 400 }} id={'curve-select'}>
+                        <FormControl style={{ minWidth: 400 }} id={'curve-select'}>
                             <InputLabel className={classes.textColor}>Curve</InputLabel>
                             <Select
-                                value={options.curveType}
+                                // value={options.curveType}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
@@ -276,7 +299,6 @@ function LinePlottingOptions(props: any) {
                                 }}
                                 name="Y Values"
                             >
-                                <option aria-label="None" value={undefined} />
                                 <option value={CurveType.curveBasis}>Basis</option>
                                 <option value={CurveType.curveBasisClosed}>Basis Closed</option>
                                 <option value={CurveType.curveBasisOpen}>Basis Open</option>
@@ -314,7 +336,6 @@ function LinePlottingOptions(props: any) {
                                 }}
                                 name="Y Values"
                             >
-                                <option aria-label="None" value={undefined} />
                                 <option value={LineStyle.SOLID}>Solid</option>
                                 <option value={LineStyle.DASHED}>Dashed</option>
                             </Select>
@@ -332,10 +353,22 @@ function LinePlottingOptions(props: any) {
                             InputLabelProps={{
                                 className: classes.textColor,
                             }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    lineWidth: parseInt(event.target.value),
+                                });
+                            }}
                         />
                     </Box>
                     <Box id={'submit-button'}>
-                        <Button variant="outlined" color="primary" id={'options-submit-button'}>
+                        <Button
+                            variant="outlined"
+                            color="primary"
+                            disabled={submitIsEnabled()}
+                            id={'options-submit-button'}
+                            onClick={validateDataOptions}
+                        >
                             Submit
                         </Button>
                     </Box>
@@ -346,6 +379,5 @@ function LinePlottingOptions(props: any) {
 }
 const mapStateToProps = (state: any) => ({
     integerFields: state.analysedData.integerFields,
-    integerDataObjects: state.analysedData.integerDataObjects,
 });
 export default connect(mapStateToProps, {})(LinePlottingOptions);

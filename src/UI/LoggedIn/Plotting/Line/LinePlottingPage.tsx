@@ -22,7 +22,6 @@ export default function LinePlottingPage() {
             alignItems="center"
             className={classes.root}
             id={'line-plotting-page'}
-            my={10}
         >
             <Box mx={10}>
                 <LineSeriesVis />
