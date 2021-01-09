@@ -116,15 +116,6 @@ function LinePlottingOptions(props: any) {
             });
         }
     }
-    function dataNotImportedNotify() {
-        const errors = new Notifications();
-        errors.addNotification('Import a file with valid data to visualise it');
-        setNotifications({
-            outcome: AlertType.FAILED,
-            outcomeMessage: `${errors.getNotifications()}`,
-            errors: errors,
-        });
-    }
     return (
         <Box
             display="flex"
@@ -162,6 +153,7 @@ function LinePlottingOptions(props: any) {
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
                             <InputLabel className={classes.textColor}>X Value</InputLabel>
                             <Select
+                                id={'select-xValue'}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,

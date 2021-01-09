@@ -4,7 +4,7 @@ import CreateAnalysedData from '../../../../src/domain/ReduxStoreHandling/Analys
 import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 //Test Data
-const integerFields = ['col1', 'col2', 'col3'];
+const integerFields = ['col1', 'col2'];
 
 const integerDataObjects = [
     { col1: 32, col2: 45 },

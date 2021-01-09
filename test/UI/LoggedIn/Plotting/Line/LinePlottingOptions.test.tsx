@@ -6,13 +6,16 @@ import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
 import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
+import CreateAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
+import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 //Test Data
-const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
-const importedFile: IImportedFile = {
-    file: testCSV,
-    fileType: 'text/csv',
-};
-const importFile = new ImportFilesHandler(importedFile).validate();
+const integerFields = ['col1', 'col2'];
+
+const integerDataObjects = [
+    { col1: 32, col2: 45 },
+    { col1: 79, col2: 5 },
+    { col1: 76, col2: 23 },
+];
 let wrapper: ReactWrapper;
 beforeEach(
     () =>
@@ -46,13 +49,18 @@ describe('Line Plotting Options Component', () => {
             const textfield = wrapper.find('div#size-textfields').find('label#width-textfield-label');
             expect(textfield.text()).toBe('Width');
         });
+        it('Should have a colour picker', () => {
+            const colourPicker = wrapper.find('div#colour-textfields');
+            expect(colourPicker.find('button')).toBeTruthy();
+            expect(colourPicker.find('div#colorpicker-input').find('input')).toBeTruthy();
+        });
         it('Should have a opacity textfield', () => {
             const textfield = wrapper.find('div#colour-textfields').find('label#opacity-textfield-label');
             expect(textfield.text()).toBe('Opacity');
         });
         it('Should have a curve select', () => {
             const select = wrapper.find('div#curve-select').find('label');
-            expect(select.text()).toBe('Curve *');
+            expect(select.text()).toBe('Curve');
         });
         it('Should have a line style select', () => {
             const select = wrapper.find('div#line-style-select').find('label');
@@ -63,11 +71,92 @@ describe('Line Plotting Options Component', () => {
             expect(textfield.text()).toBe('Line Width');
         });
         it('Should have a submit button', () => {
-            const button = wrapper.find('div#submit-button');
+            const button = wrapper.find('button#options-submit-button');
             expect(button.text()).toBe('Submit');
         });
+        it('Submit button should be disabled when no xValue and yValue are selected', () => {
+            const button = wrapper.find('button#options-submit-button');
+            expect(button.props().disabled).toBe(true);
+        });
     });
-    describe('Integration with Line Plot Handler', () => {});
+    describe('Integration with Redux store', () => {
+        beforeAll(() => {
+            const createAnalysedData = new CreateAnalysedData(integerFields, integerDataObjects);
+            createAnalysedData.createIntegerFields();
+            createAnalysedData.createIntegerDataObjects();
+        });
+        afterAll(() => {
+            const resetAnalysedData = new ResetAnalysedData();
+            resetAnalysedData.resetAnalysedData();
+        });
+        it('Should allow the first column to get selected in the xValues select', async () => {
+            await selectXVal('col2');
+            expect(wrapper.find('input').at(0).props().value).toBe('col2');
+        });
+        it('Should allow the second column to get selected in the yValues select', async () => {
+            await selectYVal('col1');
+            expect(wrapper.find('input').at(1).props().value).toBe('col1');
+        });
+    });
+    describe('Validation', () => {
+        beforeAll(() => {
+            const createAnalysedData = new CreateAnalysedData(integerFields, integerDataObjects);
+            createAnalysedData.createIntegerFields();
+            createAnalysedData.createIntegerDataObjects();
+        });
+        afterAll(() => {
+            const resetAnalysedData = new ResetAnalysedData();
+            resetAnalysedData.resetAnalysedData();
+        });
+        it('should enable the submit button when the xValue and yValue selects have valid options selected', async () => {
+            await selectXVal('col1');
+
+            await selectYVal('col2');
+
+            const button = wrapper.find('button#options-submit-button');
+            expect(button.props().disabled).toBe(false);
+        });
+        it('should not enable the submit button when the xValue and yValue selects have same options selected', async () => {
+            await selectXVal('col1');
+
+            await selectYVal('col1');
+
+            const button = wrapper.find('button#options-submit-button');
+            expect(button.props().disabled).toBe(true);
+        });
+    });
+    describe('Integration with Line Plot Handler', () => {
+        beforeAll(() => {
+            const createAnalysedData = new CreateAnalysedData(integerFields, integerDataObjects);
+            createAnalysedData.createIntegerFields();
+            createAnalysedData.createIntegerDataObjects();
+        });
+        afterAll(() => {
+            const resetAnalysedData = new ResetAnalysedData();
+            resetAnalysedData.resetAnalysedData();
+        });
+        it('Should give a success notification when valid options are submitted', async () => {
+            await selectXVal('col1');
+            await selectYVal('col2');
+            await selectCurve('curveBasis');
+            await selectLineStyle('solid');
+            await inputLineWidth(5);
+
+            await clickSubmit();
+            expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe('Options Validated');
+        });
+        it('Should give an error notification when invalid options are submitted', async () => {
+            await selectXVal('col2');
+            await selectYVal('col1');
+
+            await inputHeight(50);
+            await inputWidth(500);
+            await clickSubmit();
+            expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe(
+                'Error(s): The maximum value for Height is 800, the minimum value for Height is 100. The current height is 50'
+            );
+        });
+    });
 });
 // function inputGraphName(graphName: string): void {
 //     wrapper.find('input#graph-name').simulate('change', {
@@ -76,4 +165,47 @@ describe('Line Plotting Options Component', () => {
 // }
 function clickSubmit(): void {
     wrapper.find('button#options-submit-button').simulate('click');
+}
+function inputHeight(value: number): void {
+    wrapper.find('input#height-textfield').simulate('change', {
+        target: { value: value },
+    });
+}
+function inputWidth(value: number): void {
+    wrapper.find('input#width-textfield').simulate('change', {
+        target: { value: value },
+    });
+}
+function inputLineWidth(value: number) {
+    wrapper.find('input#line-width-textfield').simulate('change', {
+        target: { value: value },
+    });
+}
+function selectXVal(value: string) {
+    const xValSelect = wrapper.find('div#x-values-select');
+    xValSelect
+        .find('input')
+        .at(0)
+        .simulate('change', { target: { value: value } });
+}
+function selectYVal(value: string) {
+    const yValSelect = wrapper.find('div#y-values-select');
+    yValSelect
+        .find('input')
+        .at(0)
+        .simulate('change', { target: { value: value } });
+}
+function selectCurve(value: string) {
+    const curve = wrapper.find('div#curve-select');
+    curve
+        .find('input')
+        .at(0)
+        .simulate('change', { target: { value: value } });
+}
+function selectLineStyle(value: string) {
+    const lineStyle = wrapper.find('div#line-style-select');
+    lineStyle
+        .find('input')
+        .at(0)
+        .simulate('change', { target: { value: value } });
 }
