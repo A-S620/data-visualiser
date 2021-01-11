@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHaandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotCreateVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/NotificationsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/FileProcessors/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/FileProcessors/CSVProcessor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/ImportFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/ImportFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Notifications.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Notifications.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LinePlotOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,13 +133,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -360,6 +348,10 @@
       <workItem from="1610176659771" duration="7817000" />
       <workItem from="1610266246872" duration="1021000" />
       <workItem from="1610352579850" duration="2688000" />
+      <workItem from="1610370650277" duration="2896000" />
+      <workItem from="1610373664216" duration="210000" />
+      <workItem from="1610377973731" duration="1484000" />
+      <workItem from="1610382479825" duration="2764000" />
     </task>
     <task id="LOCAL-00079" summary="Made Linting changes to other files in src">
       <created>1608735903206</created>

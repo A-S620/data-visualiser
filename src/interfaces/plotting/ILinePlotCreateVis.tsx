@@ -1,7 +1,7 @@
 import { CurveType, ILinePlotOptions, LineStyle } from './ILinePlotOptions';
 
 export interface ILinePlotCreateVis {
-    data: Array<{ x: number; y: number }>;
+    data: Array<Object>;
     height: number;
     width: number;
     colour: string;
