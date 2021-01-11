@@ -1,13 +1,13 @@
 import { ILinePlotOptions } from '../../interfaces/plotting/ILinePlotOptions';
-import { Notifications } from '../../UIHandling/Notifications';
+import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 
-export class LinePlotOptionsValidate {
+export class LineSeriesOptionsValidate {
     private readonly options: ILinePlotOptions;
     constructor(linePlotOptions: ILinePlotOptions) {
         this.options = linePlotOptions;
     }
-    public validate(): Notifications {
-        const notifications: Notifications = new Notifications();
+    public validate(): NotificationsHandler {
+        const notifications: NotificationsHandler = new NotificationsHandler();
         if (this.options.xValue === this.options.yValue) {
             notifications.addNotification('Cannot select the same fields for X Value and Y Value');
         }

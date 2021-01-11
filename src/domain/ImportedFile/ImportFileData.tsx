@@ -1,4 +1,4 @@
-import { Notifications } from '../../UIHandling/Notifications';
+import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 import CSVProcessor from './FileProcessors/CSVProcessor';
 import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
@@ -12,8 +12,8 @@ export class ImportFileData {
     constructor(importedFile: IImportedFile) {
         this.importedFile = importedFile;
     }
-    public validate(): Notifications {
-        const notifications: Notifications = new Notifications();
+    public validate(): NotificationsHandler {
+        const notifications: NotificationsHandler = new NotificationsHandler();
         const { fileType, file }: IImportedFile = this.importedFile;
         if (file.length === 0) {
             notifications.addNotification(`File is empty`);
@@ -32,9 +32,9 @@ export class ImportFileData {
 
         return notifications;
     }
-    private checkValidCSV(): Notifications {
+    private checkValidCSV(): NotificationsHandler {
         const csvProcessor = new CSVProcessor(this.importedFile.file);
-        const notifications = new Notifications();
+        const notifications = new NotificationsHandler();
         notifications.concat(csvProcessor.validateCSV());
         return notifications;
     }

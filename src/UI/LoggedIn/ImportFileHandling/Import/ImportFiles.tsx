@@ -5,7 +5,7 @@ import { DropzoneArea } from 'material-ui-dropzone';
 
 import { AlertType } from '../../../../interfaces/INotification';
 
-import { Notifications } from '../../../../UIHandling/Notifications';
+import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import { ImportFilesHandler } from '../../../../UIHandling/ImportFilesHandler';
 
 import { AlertNotification } from '../../Notifications/AlertNotification';
@@ -20,7 +20,7 @@ interface IState {
     submitButtonDisabled: boolean;
     outcome: AlertType | undefined;
     outcomeMessage: string;
-    errors: Notifications;
+    errors: NotificationsHandler;
     files: string;
     fileType: string;
     importedFileStats: IImportedFileStats;
@@ -58,7 +58,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             submitButtonDisabled: true,
             outcome: undefined,
             outcomeMessage: '',
-            errors: new Notifications(),
+            errors: new NotificationsHandler(),
             files: '',
             fileType: '',
             importedFileStats: {
@@ -98,7 +98,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             fileType: this.state.fileType,
         };
         const files = new ImportFilesHandler(file);
-        const errors: Notifications = files.validate();
+        const errors: NotificationsHandler = files.validate();
         if (errors.isEmpty()) {
             try {
                 this.setState({
@@ -128,7 +128,7 @@ export default class ImportFiles extends React.Component<{}, IState> {
             submitButtonDisabled: true,
             outcome: undefined,
             outcomeMessage: '',
-            errors: new Notifications(),
+            errors: new NotificationsHandler(),
             files: '',
             fileType: '',
             importedFileStats: {

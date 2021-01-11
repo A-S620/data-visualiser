@@ -1,9 +1,9 @@
 import React from 'react';
 import 'jsdom-global/register';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
-import { LinePlotOptionsValidate } from '../../../src/domain/LinePlotOptions/LinePlotOptionsValidate';
+import { LineSeriesOptionsValidate } from '../../../src/domain/LineSeriesVis/LineSeriesOptionsValidate';
 
-describe('LinePlotOptionsValidate domain component', () => {
+describe('LineSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the xValue is the same as the yValue', () => {
         const lineOptions: ILinePlotOptions = {
             xValue: 'test',
@@ -16,7 +16,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe('Cannot select the same fields for X Value and Y Value');
     });
@@ -32,7 +32,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Height is 800, the minimum value for Height is 100. The current height is 801'
@@ -50,7 +50,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Height is 800, the minimum value for Height is 100. The current height is 50'
@@ -68,7 +68,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Width is 800, the minimum value for Width is 100. The current width is 801'
@@ -86,7 +86,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Width is 800, the minimum value for Width is 100. The current width is 50'
@@ -104,7 +104,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is 2'
@@ -122,7 +122,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is -1'
@@ -140,7 +140,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 0,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is 0'
@@ -158,7 +158,7 @@ describe('LinePlotOptionsValidate domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 11,
         };
-        const lineOptionsValidate = new LinePlotOptionsValidate(lineOptions);
+        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is 11'

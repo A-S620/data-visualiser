@@ -2,7 +2,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
-import { LinePlotHandler } from '../../src/UIHandling/LinePlotHandler';
+import { LinePlotOptionsHandler } from '../../src/UIHandling/LinePlotOptionsHandler';
 import GetLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 
 describe('Line Plot Handler UIHandling Component', () => {
@@ -19,7 +19,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LinePlotHandler(testOptions);
+        const linePlotHandler = new LinePlotOptionsHandler(testOptions);
         const notifications = linePlotHandler.validateOptions();
         expect(notifications.notification()).toBe('');
     });
@@ -36,7 +36,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LinePlotHandler(testOptions);
+        const linePlotHandler = new LinePlotOptionsHandler(testOptions);
         const notifications = linePlotHandler.validateOptions();
         expect(notifications.notification()).toBe(
             'The maximum value for Height is 800, the minimum value for Height is 100. The current height is 0'
@@ -55,7 +55,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LinePlotHandler(testOptions);
+        const linePlotHandler = new LinePlotOptionsHandler(testOptions);
         linePlotHandler.validateOptions();
         const getLinePlotOptions = new GetLinePlotOptions();
         expect(getLinePlotOptions.getLinePlotOptions()).toBe(testOptions);
@@ -73,7 +73,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LinePlotHandler(testOptions);
+        const linePlotHandler = new LinePlotOptionsHandler(testOptions);
         linePlotHandler.validateOptions();
         expect(linePlotHandler.getOptions()).toBe(testOptions);
     });
@@ -90,7 +90,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LinePlotHandler(testOptions);
+        const linePlotHandler = new LinePlotOptionsHandler(testOptions);
         linePlotHandler.validateOptions();
         linePlotHandler.resetOptions();
         expect(linePlotHandler.getOptions()).toStrictEqual({});

@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="LinePlottingOptions.tsx save options in Redux">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHaandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotCreateVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/Notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/NotificationsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/FileProcessors/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/FileProcessors/CSVProcessor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/ImportFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/ImportFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/LinePlotOptions/LinePlotOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Notifications.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Notifications.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/LinePlotOptions/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LinePlotOptionsValidate.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,14 +357,9 @@
       <workItem from="1610034855704" duration="270000" />
       <workItem from="1610099023567" duration="1057000" />
       <workItem from="1610100174403" duration="3741000" />
-      <workItem from="1610176659771" duration="7726000" />
-    </task>
-    <task id="LOCAL-00078" summary="Made Linting changes to ReduxStore">
-      <created>1608735765061</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1608735765061</updated>
+      <workItem from="1610176659771" duration="7817000" />
+      <workItem from="1610266246872" duration="1021000" />
+      <workItem from="1610352579850" duration="2688000" />
     </task>
     <task id="LOCAL-00079" summary="Made Linting changes to other files in src">
       <created>1608735903206</created>
@@ -688,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610104272172</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="LinePlottingOptions.tsx unit tests done">
+      <created>1610184832530</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1610184832530</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +712,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="PlottingNav.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx" />
     <MESSAGE value="restructuring interfaces folder" />
     <MESSAGE value="ILinePlottingOptions.tsx interface" />
@@ -721,7 +736,19 @@
     <MESSAGE value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
     <MESSAGE value="LinePlotHandler.tsx + unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx save options in Redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx save options in Redux" />
+    <MESSAGE value="LinePlottingOptions.tsx unit tests done" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx unit tests done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx</url>
+          <line>157</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

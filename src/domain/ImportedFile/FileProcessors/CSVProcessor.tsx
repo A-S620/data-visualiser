@@ -1,5 +1,5 @@
 import { IImportedFileData } from '../../../interfaces/import/IImportedFileData';
-import { Notifications } from '../../../UIHandling/Notifications';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 
 const papa = require('papaparse');
 
@@ -11,8 +11,8 @@ export default class CSVProcessor {
     public getCSVFile(): string {
         return this.csvFile;
     }
-    public validateCSV(): Notifications {
-        const notifications = new Notifications();
+    public validateCSV(): NotificationsHandler {
+        const notifications = new NotificationsHandler();
         const result = papa.parse(this.csvFile, { header: true, skipEmptyLines: true });
         const csvErrors = result.errors;
         if (csvErrors.length !== 0) {

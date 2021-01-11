@@ -1,4 +1,4 @@
-import { Notifications } from './Notifications';
+import { NotificationsHandler } from './NotificationsHandler';
 import { ImportFileData } from '../domain/ImportedFile/ImportFileData';
 import { IImportedFile } from '../interfaces/import/IImportedFile';
 import { AnalyseFileData } from '../domain/ImportedFile/AnalyseFileData';
@@ -12,8 +12,8 @@ export class ImportFilesHandler {
         this.importedFile = importedFile;
     }
 
-    public validate(): Notifications {
-        const notifications = new Notifications();
+    public validate(): NotificationsHandler {
+        const notifications = new NotificationsHandler();
         const importedDataErrors = this.getImportedDataErrors();
         notifications.concat(importedDataErrors);
         if (notifications.isEmpty()) {
@@ -22,11 +22,11 @@ export class ImportFilesHandler {
         }
         return notifications;
     }
-    private getImportedDataErrors(): Notifications {
+    private getImportedDataErrors(): NotificationsHandler {
         const importData = new ImportFileData(this.importedFile);
         return importData.validate();
     }
-    private static analyseData(): Notifications {
+    private static analyseData(): NotificationsHandler {
         const analyseData = new AnalyseFileData();
         return analyseData.validate();
     }

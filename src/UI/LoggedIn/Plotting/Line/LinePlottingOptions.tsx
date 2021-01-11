@@ -16,17 +16,17 @@ import { connect } from 'react-redux';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../../interfaces/plotting/ILinePlotOptions';
 
 import { AlertType } from '../../../../interfaces/INotification';
-import { Notifications } from '../../../../UIHandling/Notifications';
+import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import { AlertNotification } from '../../Notifications/AlertNotification';
-import { LinePlotOptionsValidate } from '../../../../domain/LinePlotOptions/LinePlotOptionsValidate';
-import { LinePlotHandler } from '../../../../UIHandling/LinePlotHandler';
+import { LineSeriesOptionsValidate } from '../../../../domain/LineSeriesVis/LineSeriesOptionsValidate';
+import { LinePlotOptionsHandler } from '../../../../UIHandling/LinePlotOptionsHandler';
 
 interface IState {
     options: ILinePlotOptions;
     submitButtonDisabled: boolean;
     outcome: AlertType | undefined;
     outcomeMessage: string;
-    errors: Notifications;
+    errors: NotificationsHandler;
 }
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -69,11 +69,11 @@ function LinePlottingOptions(props: any) {
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
         outcomeMessage: string;
-        errors: Notifications;
+        errors: NotificationsHandler;
     }>({
         outcome: undefined,
         outcomeMessage: '',
-        errors: new Notifications(),
+        errors: new NotificationsHandler(),
     });
     function submitIsEnabled(): boolean {
         return !(options.xValue.length !== 0 && options.yValue.length !== 0 && xValAndYValIsEqual());
@@ -93,8 +93,8 @@ function LinePlottingOptions(props: any) {
             lineStyle: options.lineStyle,
             lineWidth: options.lineWidth,
         };
-        const validateOptions = new LinePlotHandler(optionsToValidate);
-        const errors: Notifications = validateOptions.validateOptions();
+        const validateOptions = new LinePlotOptionsHandler(optionsToValidate);
+        const errors: NotificationsHandler = validateOptions.validateOptions();
         if (errors.isEmpty()) {
             try {
                 setNotifications({

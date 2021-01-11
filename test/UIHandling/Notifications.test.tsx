@@ -1,8 +1,8 @@
-import { Notifications } from '../../src/UIHandling/Notifications';
+import { NotificationsHandler } from '../../src/UIHandling/NotificationsHandler';
 
 describe('Notification Message', () => {
     it('should print out single notification', () => {
-        const notifications = new Notifications();
+        const notifications = new NotificationsHandler();
 
         notifications.addNotification('error occurred');
 
@@ -10,7 +10,7 @@ describe('Notification Message', () => {
     });
 
     it('should print out multiple notification messages', () => {
-        const notifications = new Notifications();
+        const notifications = new NotificationsHandler();
 
         notifications.addNotification('this happened');
         notifications.addNotification('that happened too');
@@ -18,8 +18,8 @@ describe('Notification Message', () => {
         expect(notifications.notification()).toBe('this happened, that happened too');
     });
     it('should add notifications', () => {
-        const notifications1 = new Notifications();
-        const notifications2 = new Notifications();
+        const notifications1 = new NotificationsHandler();
+        const notifications2 = new NotificationsHandler();
 
         notifications1.addNotification('notification 1');
         notifications2.addNotification('notification 2');
@@ -29,8 +29,8 @@ describe('Notification Message', () => {
         expect(notifications1.notification()).toBe('notification 1, notification 2');
     });
     it('should print out error message when second notes is empty', () => {
-        const notifications1 = new Notifications();
-        const notifications2 = new Notifications();
+        const notifications1 = new NotificationsHandler();
+        const notifications2 = new NotificationsHandler();
 
         notifications1.addNotification('notification 1');
 
@@ -39,8 +39,8 @@ describe('Notification Message', () => {
         expect(notifications1.notification()).toBe('notification 1');
     });
     it('should print out error message when first notes is empty', () => {
-        const notifications1 = new Notifications();
-        const notifications2 = new Notifications();
+        const notifications1 = new NotificationsHandler();
+        const notifications2 = new NotificationsHandler();
 
         notifications2.addNotification('notification 2');
 
@@ -49,8 +49,8 @@ describe('Notification Message', () => {
         expect(notifications1.notification()).toBe('notification 2');
     });
     it('should be empty when both notes are empty', () => {
-        const notifications1 = new Notifications();
-        const notifications2 = new Notifications();
+        const notifications1 = new NotificationsHandler();
+        const notifications2 = new NotificationsHandler();
 
         notifications1.concat(notifications2);
 

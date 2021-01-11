@@ -1,4 +1,4 @@
-import { Notifications } from '../../UIHandling/Notifications';
+import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { store } from '../../ReduxStore/store';
 
@@ -6,8 +6,8 @@ export class AnalyseFileData {
     private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
     private integerFields: Array<string> = [];
     private integerDataAsObjects: Array<object> = [];
-    public validate(): Notifications {
-        const notifications: Notifications = new Notifications();
+    public validate(): NotificationsHandler {
+        const notifications: NotificationsHandler = new NotificationsHandler();
         this.analyseData();
         if (this.integerFields.length < 2) {
             notifications.addNotification(
@@ -21,8 +21,8 @@ export class AnalyseFileData {
         }
         return notifications;
     }
-    private validateObjectsLength(): Notifications {
-        const notifications = new Notifications();
+    private validateObjectsLength(): NotificationsHandler {
+        const notifications = new NotificationsHandler();
         for (var objIndex = 0; objIndex < this.integerDataAsObjects.length; objIndex += 1) {
             const currentObject = this.integerDataAsObjects[objIndex];
             const currentObjectLength = Object.keys(currentObject).length;

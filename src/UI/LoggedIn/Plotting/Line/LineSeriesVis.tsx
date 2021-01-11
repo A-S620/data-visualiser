@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import { LineSeries, XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis } from 'react-vis';
-
+import { connect } from 'react-redux';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -21,7 +21,7 @@ const data = [
     { x: 8, y: 2 },
     { x: 9, y: 0 },
 ];
-export default function LineSeriesVis() {
+function LineSeriesVis(props: any) {
     const classes = useStyles();
     return (
         <Box
@@ -43,3 +43,7 @@ export default function LineSeriesVis() {
         </Box>
     );
 }
+const mapStateToProps = (state: any) => ({
+    linePlotOptions: state.lineOptions,
+});
+export default connect(mapStateToProps, {})(LineSeriesVis);

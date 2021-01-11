@@ -1,4 +1,4 @@
-export class Notifications {
+export class NotificationsHandler {
     private notifications: Array<string> = [];
 
     public addNotification(notification: string): void {
@@ -17,7 +17,7 @@ export class Notifications {
         return this.notifications;
     }
 
-    public concat(notifs: Notifications): void {
+    public concat(notifs: NotificationsHandler): void {
         this.notifications = this.notifications.concat(notifs.getNotifications());
     }
 }
