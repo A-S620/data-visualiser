@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,14 +351,7 @@
       <workItem from="1610377973731" duration="1484000" />
       <workItem from="1610382479825" duration="2925000" />
       <workItem from="1610440089620" duration="372000" />
-      <workItem from="1610441077558" duration="827000" />
-    </task>
-    <task id="LOCAL-00082" summary="Made Linting changes to Redux Store tests">
-      <created>1608737653838</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1608737653838</updated>
+      <workItem from="1610441077558" duration="1145000" />
     </task>
     <task id="LOCAL-00083" summary="Made Linting changes to other files">
       <created>1608737864117</created>
@@ -696,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610441350938</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Updating dependencies">
+      <created>1610442360155</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1610442360155</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,7 +704,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
     <MESSAGE value="PlottingNav.tsx unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
@@ -729,7 +728,8 @@
     <MESSAGE value="LineSeriesCreateVis.tsx + unit tests" />
     <MESSAGE value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
     <MESSAGE value="Ran nmp audit fix command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ran nmp audit fix command" />
+    <MESSAGE value="Updating dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating dependencies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
