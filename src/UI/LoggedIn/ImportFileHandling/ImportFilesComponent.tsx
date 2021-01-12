@@ -3,17 +3,17 @@ import { Box, Button, Container, Divider, Grid, IconButton, makeStyles, Paper, T
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
-import { AlertType } from '../../../../interfaces/INotification';
+import { AlertType } from '../../../interfaces/INotification';
 
-import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
-import { ImportFilesHandler } from '../../../../UIHandling/ImportFilesHandler';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
+import { ImportFilesHandler } from '../../../UIHandling/ImportFilesHandler';
 
-import { AlertNotification } from '../../Notifications/AlertNotification';
-import { IImportedFile } from '../../../../interfaces/import/IImportedFile';
+import { AlertNotification } from '../Notifications/AlertNotification';
+import { IImportedFile } from '../../../interfaces/import/IImportedFile';
 
-import ImportedFileStats from './ImportedFileStats';
-import { IImportedFileStats } from '../../../../interfaces/import/IImportedFileStats';
-import AnalyseFile from '../Analyse/FileAnalysis';
+import ImportedFileStats from './Import/ImportedFileStats';
+import { IImportedFileStats } from '../../../interfaces/import/IImportedFileStats';
+import AnalyseFile from './Analyse/FileAnalysisComponent';
 
 interface IState {
     importedFiles: Array<File>;
@@ -25,7 +25,7 @@ interface IState {
     fileType: string;
     importedFileStats: IImportedFileStats;
 }
-export default class ImportFiles extends React.Component<{}, IState> {
+export default class ImportFilesComponent extends React.Component<{}, IState> {
     private classes: any = makeStyles((theme) => ({
         root: {
             height: '100%',
@@ -79,9 +79,9 @@ export default class ImportFiles extends React.Component<{}, IState> {
             this.setState({
                 submitButtonDisabled: false,
                 files: allFiles,
-                fileType: ImportFiles.checkFileType(files),
+                fileType: ImportFilesComponent.checkFileType(files),
                 importedFileStats: {
-                    fileType: ImportFiles.checkFileType(files),
+                    fileType: ImportFilesComponent.checkFileType(files),
                     fileSize: (files[0].size / 1000).toString(),
                     characterCount: allFiles.length,
                 },

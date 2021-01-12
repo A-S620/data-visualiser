@@ -48,7 +48,7 @@ function calcNumberOfIgnoredObjects(integerDataObjects: Array<object>, dataAsObj
     const importedDataLength = dataAsObjects.length;
     return importedDataLength - analysedDataLength;
 }
-function FileAnalysis(props: any) {
+function FileAnalysisComponent(props: any) {
     const classes = useStyles();
     return (
         <Box
@@ -121,4 +121,4 @@ const mapStateToProps = (state: any) => ({
     dataFields: state.importedData.dataFields,
     dataAsObjects: state.importedData.dataAsObjects,
 });
-export default connect(mapStateToProps, {})(FileAnalysis);
+export default connect(mapStateToProps, {})(FileAnalysisComponent);

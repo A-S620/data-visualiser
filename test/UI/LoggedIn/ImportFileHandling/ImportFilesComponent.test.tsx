@@ -2,16 +2,16 @@ import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from '../../../../../src/ReduxStore/store';
-import ImportFiles from '../../../../../src/UI/LoggedIn/ImportFileHandling/Import/ImportFiles';
-import ImportedFileStats from '../../../../../src/UI/LoggedIn/ImportFileHandling/Import/ImportedFileStats';
+import { store } from '../../../../src/ReduxStore/store';
+import ImportFilesComponent from '../../../../src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent';
+import ImportedFileStats from '../../../../src/UI/LoggedIn/ImportFileHandling/Import/ImportedFileStats';
 
 let component: ReactWrapper;
 beforeEach(
     () =>
         (component = mount(
             <Provider store={store}>
-                <ImportFiles />
+                <ImportFilesComponent />
             </Provider>
         ))
 );

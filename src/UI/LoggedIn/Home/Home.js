@@ -1,8 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import ImportFileComponent from '../ImportFileHandling/ImportFileComponent';
-import ImportFiles from "../ImportFileHandling/Import/ImportFiles";
+import ImportFilesComponent from '../ImportFileHandling/ImportFilesComponent';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,8 +21,7 @@ export default function Home() {
     return (
         <main id={'home-page'}>
             {/*<ImportFileComponent />*/}
-            <ImportFiles />
+            <ImportFilesComponent />
         </main>
-
     );
 }
