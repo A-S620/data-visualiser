@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFileComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Import/ImportFiles.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,24 +120,36 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling" />
+      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/domain/interfaces/import" />
-      <recent name="$PROJECT_DIR$/src/components/LoggedIn/Plotting/Line" />
-      <recent name="$PROJECT_DIR$/test/components/LoggedIn/ImportFileHandling/Import" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.lint">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -178,16 +182,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -200,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.watch" />
-        <item itemvalue="npm.starte" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.security" />
-        <item itemvalue="npm.test" />
+        <item itemvalue="npm.watch" />
+        <item itemvalue="npm.starte" />
       </list>
     </recent_temporary>
   </component>
@@ -353,14 +347,7 @@
       <workItem from="1610373664216" duration="210000" />
       <workItem from="1610377973731" duration="1484000" />
       <workItem from="1610382479825" duration="2925000" />
-      <workItem from="1610440089620" duration="307000" />
-    </task>
-    <task id="LOCAL-00080" summary="Made Linting changes to UI Components tests">
-      <created>1608736125778</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1608736125778</updated>
+      <workItem from="1610440089620" duration="372000" />
     </task>
     <task id="LOCAL-00081" summary="Made Linting changes to Domain Components tests">
       <created>1608737515750</created>
@@ -698,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610385745506</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx">
+      <created>1610440448197</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1610440448198</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +700,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="restructuring interfaces folder" />
     <MESSAGE value="ILinePlottingOptions.tsx interface" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
@@ -731,7 +724,8 @@
     <MESSAGE value="LinePlottingOptions.tsx save options in Redux" />
     <MESSAGE value="LinePlottingOptions.tsx unit tests done" />
     <MESSAGE value="LineSeriesCreateVis.tsx + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="LineSeriesCreateVis.tsx + unit tests" />
+    <MESSAGE value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
