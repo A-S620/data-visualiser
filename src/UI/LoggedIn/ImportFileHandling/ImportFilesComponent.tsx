@@ -13,7 +13,7 @@ import { IImportedFile } from '../../../interfaces/import/IImportedFile';
 
 import ImportedFileStats from './Import/ImportedFileStats';
 import { IImportedFileStats } from '../../../interfaces/import/IImportedFileStats';
-import AnalyseFile from './Analyse/FileAnalysisComponent';
+import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
 
 interface IState {
     importedFiles: Array<File>;
@@ -203,7 +203,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                         </Box>
                         <Box mx={15} my={15}>
                             <Divider orientation="vertical" flexItem className={this.classes.verticalLine} />
-                            <AnalyseFile />
+                            <FileAnalysisComponent />
                         </Box>
                     </Box>
                 </Paper>

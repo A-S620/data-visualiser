@@ -1,13 +1,11 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
 import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
-import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
-import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import CreateAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
+import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
 //Test Data
 const integerFields = ['col1', 'col2'];
 

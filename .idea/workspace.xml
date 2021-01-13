@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHaandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHaandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/NotloggedIn/Construction/__snapshots__/Construction.test.js.snap" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +136,20 @@
       <recent name="$PROJECT_DIR$/src/domain/interfaces/import" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint">
+  <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -183,10 +203,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.watch" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.security" />
-        <item itemvalue="npm.watch" />
         <item itemvalue="npm.starte" />
       </list>
     </recent_temporary>
@@ -338,13 +358,6 @@
       <workItem from="1610382479825" duration="2925000" />
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
-    </task>
-    <task id="LOCAL-00085" summary="ImportFiles.tsx and ImportedFileStats.tsx unit tests">
-      <created>1608830767113</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1608830767114</updated>
     </task>
     <task id="LOCAL-00086" summary="Started unit tests for FileAnalysis.tsx">
       <created>1608831178341</created>
@@ -682,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610558599339</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="Minor Change">
+      <created>1610558662103</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1610558662103</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +710,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="PlottingNav.tsx unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
     <MESSAGE value="UserNavigation.tsx&#10;Updated so Plotting and Export tabs are only enabled when a valid file has been imported.&#10;Did unit tests" />
@@ -715,14 +734,15 @@
     <MESSAGE value="Ran nmp audit fix command" />
     <MESSAGE value="Updating dependencies" />
     <MESSAGE value="Remove destructuring rule from .eslintrc.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove destructuring rule from .eslintrc.json" />
+    <MESSAGE value="Minor Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx</url>
-          <line>157</line>
+          <line>155</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

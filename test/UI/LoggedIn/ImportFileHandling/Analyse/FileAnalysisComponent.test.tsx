@@ -4,7 +4,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import { store } from '../../../../../src/ReduxStore/store';
-import FileAnalysis from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent';
+import FileAnalysisComponent from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
 
@@ -16,7 +16,7 @@ beforeEach(
     () =>
         (component = mount(
             <Provider store={store}>
-                <FileAnalysis />
+                <FileAnalysisComponent />
             </Provider>
         ))
 );

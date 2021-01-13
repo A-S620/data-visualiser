@@ -18,16 +18,8 @@ import { CurveType, ILinePlotOptions, LineStyle } from '../../../../interfaces/p
 import { AlertType } from '../../../../interfaces/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import { AlertNotification } from '../../Notifications/AlertNotification';
-import { LineSeriesOptionsValidate } from '../../../../domain/LineSeriesVis/LineSeriesOptionsValidate';
 import { LinePlotOptionsHandler } from '../../../../UIHandling/LinePlotOptionsHandler';
 
-interface IState {
-    options: ILinePlotOptions;
-    submitButtonDisabled: boolean;
-    outcome: AlertType | undefined;
-    outcomeMessage: string;
-    errors: NotificationsHandler;
-}
 const useStyles = makeStyles((theme) => ({
     paper: {
         flexGrow: 1,
