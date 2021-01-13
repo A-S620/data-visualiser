@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHaandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHaandler.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,20 +339,6 @@
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
     </task>
-    <task id="LOCAL-00083" summary="Made Linting changes to other files">
-      <created>1608737864117</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1608737864117</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Import File components">
-      <created>1608756642279</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1608756642280</updated>
-    </task>
     <task id="LOCAL-00085" summary="ImportFiles.tsx and ImportedFileStats.tsx unit tests">
       <created>1608830767113</created>
       <option name="number" value="00085" />
@@ -683,7 +668,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610442360155</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Remove destructuring rule from .eslintrc.json">
+      <created>1610558554222</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1610558554222</updated>
+    </task>
+    <task id="LOCAL-00133" summary="Remove destructuring rule from .eslintrc.json">
+      <created>1610558599339</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1610558599339</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,7 +690,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects" />
     <MESSAGE value="PlottingNav.tsx unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
@@ -716,7 +714,8 @@
     <MESSAGE value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
     <MESSAGE value="Ran nmp audit fix command" />
     <MESSAGE value="Updating dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating dependencies" />
+    <MESSAGE value="Remove destructuring rule from .eslintrc.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove destructuring rule from .eslintrc.json" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
