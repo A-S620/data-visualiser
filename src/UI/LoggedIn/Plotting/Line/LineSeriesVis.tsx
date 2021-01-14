@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import { LineSeries, XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis } from 'react-vis';
 import { connect } from 'react-redux';
+import { LineSeriesVisHandler } from '../../../../UIHandling/LineSeriesVisHandler';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -33,7 +35,7 @@ function LineSeriesVis(props: any) {
             id={'line-series'}
             mx={15}
         >
-            <XYPlot height={800} width={800}>
+            <XYPlot height={400} width={400}>
                 <VerticalGridLines />
                 <HorizontalGridLines />
                 <XAxis />

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,14 +353,7 @@
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
       <workItem from="1610560004276" duration="285000" />
-      <workItem from="1610631513297" duration="5576000" />
-    </task>
-    <task id="LOCAL-00090" summary="ImportFileHandler.tsx and other components unit tests">
-      <created>1609057243464</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1609057243465</updated>
+      <workItem from="1610631513297" duration="5995000" />
     </task>
     <task id="LOCAL-00091" summary="Removed JSONProcessor.tsx and its functionality&#10;Updated unit tests">
       <created>1609063802545</created>
@@ -702,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610638409325</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test">
+      <created>1610640004716</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1610640004716</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +706,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx&#10;Styling" />
     <MESSAGE value="PlottingNav.tsx - changed colour of navigation." />
     <MESSAGE value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
     <MESSAGE value="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx" />
@@ -735,7 +730,8 @@
     <MESSAGE value="LineSeriesVisHandler.tsx UIHandler component + unit tests" />
     <MESSAGE value="CurrentVisualisation Actions, ActionTypes for ReduxStore + unit tests" />
     <MESSAGE value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
+    <MESSAGE value="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
