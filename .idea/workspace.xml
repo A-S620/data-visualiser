@@ -6,11 +6,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,21 +353,7 @@
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
       <workItem from="1610560004276" duration="285000" />
-      <workItem from="1610631513297" duration="7918000" />
-    </task>
-    <task id="LOCAL-00092" summary="CSVProcessor.tsx handling invalid CSV + unit tests">
-      <created>1609146306085</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1609146306085</updated>
-    </task>
-    <task id="LOCAL-00093" summary="ImportFileData.tsx + unit tests">
-      <created>1609146996306</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1609146996306</updated>
+      <workItem from="1610631513297" duration="9354000" />
     </task>
     <task id="LOCAL-00094" summary="AnalyseFileData.tsx + unit tests&#10;Check all objects are same size - if one object is smaller it means that one of its column values is not a float.&#10;To Do: ignore objects that are wrong size">
       <created>1609150140033</created>
@@ -703,7 +684,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610640380174</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests">
+      <created>1610642901237</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1610642901237</updated>
+    </task>
+    <task id="LOCAL-00142" summary="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore">
+      <created>1610642978287</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1610642978287</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,8 +706,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
-    <MESSAGE value="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx" />
     <MESSAGE value="LinePlottingOptions.tsx colour picker" />
     <MESSAGE value="Restructuring folders" />
     <MESSAGE value="LinePlottingOptions.test.tsx" />
@@ -736,7 +729,9 @@
     <MESSAGE value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
     <MESSAGE value="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test" />
     <MESSAGE value="updated LineSeriesVisHandler.tsx + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated LineSeriesVisHandler.tsx + unit tests" />
+    <MESSAGE value="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests" />
+    <MESSAGE value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

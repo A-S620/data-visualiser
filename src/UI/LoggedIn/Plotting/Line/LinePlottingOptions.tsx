@@ -279,7 +279,7 @@ function LinePlottingOptions(props: any) {
                             onChange={(event) => {
                                 setOptions({
                                     ...options,
-                                    opacity: parseInt(event.target.value),
+                                    opacity: parseFloat(event.target.value),
                                 });
                             }}
                         />
