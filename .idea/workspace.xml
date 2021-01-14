@@ -5,12 +5,11 @@
       <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,14 +357,7 @@
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
       <workItem from="1610560004276" duration="285000" />
-      <workItem from="1610631513297" duration="4248000" />
-    </task>
-    <task id="LOCAL-00089" summary="ImportFilesHandler.test.tsx">
-      <created>1608890472485</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1608890472485</updated>
+      <workItem from="1610631513297" duration="5576000" />
     </task>
     <task id="LOCAL-00090" summary="ImportFileHandler.tsx and other components unit tests">
       <created>1609057243464</created>
@@ -703,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610637937424</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="ReduxReducer.js + state updated with currentVisualisation slice + unit tests">
+      <created>1610638409325</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1610638409325</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +710,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="UserNavigation.tsx&#10;Styling" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Styling" />
     <MESSAGE value="PlottingNav.tsx - changed colour of navigation." />
     <MESSAGE value="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options" />
@@ -736,7 +734,8 @@
     <MESSAGE value="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17" />
     <MESSAGE value="LineSeriesVisHandler.tsx UIHandler component + unit tests" />
     <MESSAGE value="CurrentVisualisation Actions, ActionTypes for ReduxStore + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="CurrentVisualisation Actions, ActionTypes for ReduxStore + unit tests" />
+    <MESSAGE value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
