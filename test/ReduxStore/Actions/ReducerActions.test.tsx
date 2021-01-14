@@ -1,6 +1,7 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../../src/interfaces/plotting/ILinePlotCreateVis';
 
 //Test Data
 const dataAsArrays = [
@@ -96,6 +97,34 @@ describe('Reducer actions', () => {
                 type: actionTypes.LINE_OPTIONS_RESET,
             };
             expect(reducerActions.resetLineOptions()).toEqual(expectedAction);
+        });
+    });
+    describe('Current Visualisation actions', () => {
+        it('Should create an action to add the current Visualisation', () => {
+            const currentVisual: ILinePlotCreateVis = {
+                data: [
+                    { x: 79, y: 5 },
+                    { x: 76, y: 23 },
+                ],
+                height: 500,
+                width: 500,
+                colour: '000000',
+                opacity: 0.5,
+                curveType: CurveType.curveMonotoneY,
+                lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
+            };
+            const expectedAction = {
+                type: actionTypes.CURRENT_VISUAL_ADDED,
+                payload: currentVisual,
+            };
+            expect(reducerActions.addCurrentVisual(currentVisual)).toEqual(expectedAction);
+        });
+        it('Should create an action to rest the current Visualisation', () => {
+            const expectedAction = {
+                type: actionTypes.CURRENT_VISUAL_RESET,
+            };
+            expect(reducerActions.resetCurrentVisual()).toEqual(expectedAction);
         });
     });
 });

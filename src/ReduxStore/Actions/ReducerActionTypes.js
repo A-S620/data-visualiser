@@ -12,3 +12,7 @@ export const ANALYSED_DATA_SLICE_RESET = 'analysedDataSliceReset';
 //plottingOptions slice
 export const LINE_OPTIONS_ADDED = 'lineOptionsAdded';
 export const LINE_OPTIONS_RESET = 'lineOptionsReset';
+
+//currentVisualisationSlice
+export const CURRENT_VISUAL_ADDED = 'currentVisualAdded';
+export const CURRENT_VISUAL_RESET = 'currentVisualReset';

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +137,7 @@
       <recent name="$PROJECT_DIR$/src/domain/interfaces/import" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch">
+  <component name="RunManager" selected="npm.start">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -174,7 +179,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="starte" type="js.build_tools.npm" temporary="true">
+    <configuration name="start" type="js.build_tools.npm" temporary="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -198,10 +203,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.security" />
-        <item itemvalue="npm.starte" />
       </list>
     </recent_temporary>
   </component>
@@ -353,14 +358,7 @@
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
       <workItem from="1610560004276" duration="285000" />
-      <workItem from="1610631513297" duration="1572000" />
-    </task>
-    <task id="LOCAL-00087" summary="unit tests for FileAnalysis.tsx">
-      <created>1608887416647</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1608887416648</updated>
+      <workItem from="1610631513297" duration="3768000" />
     </task>
     <task id="LOCAL-00088" summary="Home.js unit tests">
       <created>1608888571355</created>
@@ -698,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610560266810</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="LineSeriesVisHandler.tsx UIHandler component + unit tests">
+      <created>1610635433752</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1610635433753</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +711,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
     <MESSAGE value="UserNavigation.tsx&#10;Updated so Plotting and Export tabs are only enabled when a valid file has been imported.&#10;Did unit tests" />
     <MESSAGE value="UserNavigation.tsx&#10;Styling" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;Styling" />
@@ -731,7 +735,8 @@
     <MESSAGE value="Remove destructuring rule from .eslintrc.json" />
     <MESSAGE value="Minor Change" />
     <MESSAGE value="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17" />
+    <MESSAGE value="LineSeriesVisHandler.tsx UIHandler component + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="LineSeriesVisHandler.tsx UIHandler component + unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

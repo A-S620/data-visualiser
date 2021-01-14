@@ -1,5 +1,6 @@
 import * as reducerActionTypes from './ReducerActionTypes';
 import { ILinePlotOptions } from '../../interfaces/plotting/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../interfaces/plotting/ILinePlotCreateVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -37,4 +38,13 @@ export const addLineOptions = (linePlotOptions: ILinePlotOptions) => ({
 });
 export const resetLineOptions = () => ({
     type: reducerActionTypes.LINE_OPTIONS_RESET,
+});
+
+//currentVisualisation slice
+export const addCurrentVisual = (currentVisualisation: ILinePlotCreateVis) => ({
+    type: reducerActionTypes.CURRENT_VISUAL_ADDED,
+    payload: currentVisualisation,
+});
+export const resetCurrentVisual = () => ({
+    type: reducerActionTypes.CURRENT_VISUAL_RESET,
 });
