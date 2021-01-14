@@ -4,6 +4,7 @@ import { LineSeriesOptionsValidate } from '../domain/LineSeriesVis/LineSeriesOpt
 import GetLinePlotOptions from '../domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 import CreateLinePlotOptions from '../domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
 import ResetLinePlotOptions from '../domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
+import { LineSeriesVisHandler } from './LineSeriesVisHandler';
 
 export class LinePlotOptionsHandler {
     private options: ILinePlotOptions;
@@ -17,6 +18,7 @@ export class LinePlotOptionsHandler {
         notifications.concat(optionsErrors);
         if (notifications.isEmpty()) {
             this.createOptions();
+            new LineSeriesVisHandler().createVisualisation();
         }
         return notifications;
     }

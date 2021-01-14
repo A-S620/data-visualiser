@@ -2,7 +2,6 @@ import React from 'react';
 import 'jsdom-global/register';
 import CreateLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
 import ResetLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
-import GetLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
 import { IImportedFileData } from '../../src/interfaces/import/IImportedFileData';

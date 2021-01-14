@@ -4,6 +4,7 @@ import 'jsdom-global/register';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
 import { LinePlotOptionsHandler } from '../../src/UIHandling/LinePlotOptionsHandler';
 import GetLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
+import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -59,6 +60,34 @@ describe('Line Plot Handler UIHandling Component', () => {
         linePlotHandler.validateOptions();
         const getLinePlotOptions = new GetLinePlotOptions();
         expect(getLinePlotOptions.getLinePlotOptions()).toBe(testOptions);
+    });
+    it('Should create the current visualisation in the Redux store if the options are valid', () => {
+        const testOptions: ILinePlotOptions = {
+            xValue: 'Test',
+            yValue: 'Test2',
+            height: 500,
+            width: 500,
+            colour: '000000',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+
+        const linePlotHandler = new LinePlotOptionsHandler(testOptions);
+        linePlotHandler.validateOptions();
+
+        const getCurrentVisual = new GetCurrentVisualisation();
+        expect(getCurrentVisual.getCurrentVisualisation()).toEqual({
+            data: [],
+            height: 500,
+            width: 500,
+            colour: '000000',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        });
     });
     it('Should get the line options from the Redux store', () => {
         const testOptions: ILinePlotOptions = {
