@@ -9,5 +9,6 @@ const ReduxState = {
         integerDataObjects: [],
     },
     linePlotOptions: {},
+    currentVisualisation: {},
 };
 export default ReduxState;

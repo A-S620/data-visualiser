@@ -170,4 +170,61 @@ describe('ReduxReducer', () => {
             });
         });
     });
+    describe('Current Visualisation', () => {
+        const currentVisualSlice = {
+            currentVisualisation: {},
+        };
+        const currentVisual = {
+            data: [
+                { x: 79, y: 5 },
+                { x: 76, y: 23 },
+            ],
+            height: 500,
+            width: 500,
+            colour: '000000',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+        it('Should handle CURRENT_VISUAL_ADDED', () => {
+            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentVisual(currentVisual))).toEqual({
+                currentVisualisation: {
+                    data: [
+                        { x: 79, y: 5 },
+                        { x: 76, y: 23 },
+                    ],
+                    height: 500,
+                    width: 500,
+                    colour: '000000',
+                    opacity: 0.5,
+                    curveType: CurveType.curveMonotoneY,
+                    lineStyle: LineStyle.SOLID,
+                    lineWidth: 2,
+                },
+            });
+        });
+        it('Should handle CURRENT_VISUAL_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        currentVisualisation: {
+                            data: [
+                                { x: 79, y: 5 },
+                                { x: 76, y: 23 },
+                            ],
+                            height: 500,
+                            width: 500,
+                            colour: '000000',
+                            opacity: 0.5,
+                            curveType: CurveType.curveMonotoneY,
+                            lineStyle: LineStyle.SOLID,
+                            lineWidth: 2,
+                        },
+                    },
+                    reducerActions.resetCurrentVisual()
+                )
+            ).toEqual(currentVisualSlice);
+        });
+    });
 });

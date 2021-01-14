@@ -72,6 +72,16 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 linePlotOptions: {},
             };
+        //currentVisualisation slice
+        case ReducerActions.CURRENT_VISUAL_ADDED:
+            return {
+                ...state,
+                currentVisualisation: action.payload,
+            };
+        case ReducerActions.CURRENT_VISUAL_RESET:
+            return {
+                currentVisualisation: {},
+            };
         default:
             return state;
     }
