@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/NotloggedIn/Construction/__snapshots__/Construction.test.js.snap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,15 +133,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -358,13 +352,8 @@
       <workItem from="1610382479825" duration="2925000" />
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
-    </task>
-    <task id="LOCAL-00086" summary="Started unit tests for FileAnalysis.tsx">
-      <created>1608831178341</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1608831178341</updated>
+      <workItem from="1610560004276" duration="285000" />
+      <workItem from="1610631513297" duration="1572000" />
     </task>
     <task id="LOCAL-00087" summary="unit tests for FileAnalysis.tsx">
       <created>1608887416647</created>
@@ -702,7 +691,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610558662103</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17">
+      <created>1610560266810</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1610560266810</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +706,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality" />
     <MESSAGE value="LinePlottingOptions.tsx&#10;update options and notifications.&#10;show columns in x value and y value select&#10;&#10;To DO: Handle when valid data has not been imported." />
     <MESSAGE value="UserNavigation.tsx&#10;Updated so Plotting and Export tabs are only enabled when a valid file has been imported.&#10;Did unit tests" />
     <MESSAGE value="UserNavigation.tsx&#10;Styling" />
@@ -735,7 +730,8 @@
     <MESSAGE value="Updating dependencies" />
     <MESSAGE value="Remove destructuring rule from .eslintrc.json" />
     <MESSAGE value="Minor Change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor Change" />
+    <MESSAGE value="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

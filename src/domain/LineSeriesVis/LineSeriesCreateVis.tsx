@@ -1,7 +1,6 @@
 import GetLinePlotOptions from '../ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 import GetAnalysedData from '../ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import { ILinePlotCreateVis } from '../../interfaces/plotting/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../interfaces/plotting/ILinePlotOptions';
 import { IAnalysedFileData } from '../../interfaces/import/IAnalysedFileData';
 
 export class LineSeriesCreateVis {
