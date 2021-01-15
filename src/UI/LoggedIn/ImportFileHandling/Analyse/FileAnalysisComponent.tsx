@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, CssBaseline, Typography, CircularProgress, Chip, Grid } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
+import ReactJson from 'react-json-view';
 const useStyles = makeStyles((theme) => ({
     paper: {
         height: '100%',
@@ -23,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     },
     exampleObject: {
         textColor: theme.palette.text.primary,
+    },
+    boxSize: {
+        maxWidth: '300px',
     },
 }));
 function calcIntColumnsPercentage(intColumns: number, allColumns: number): number {
@@ -93,7 +97,7 @@ function FileAnalysisComponent(props: any) {
                     </Box>
                 </Box>
             </Box>
-            <Box id="integer-columns">
+            <Box id="integer-columns" className={classes.boxSize}>
                 <Typography className={classes.statDescription}>Integer Columns:</Typography>
                 {props.integerFields.map((integerField: string) => (
                     <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
@@ -105,11 +109,16 @@ function FileAnalysisComponent(props: any) {
                     {`${calcNumberOfIgnoredObjects(props.integerDataObjects, props.dataAsObjects)}`}
                 </Typography>
             </Box>
-            <Box id="example-object">
+            <Box id="example-object" className={classes.boxSize}>
                 <Typography className={classes.statDescription}>Example Data Object:</Typography>
-                <Typography variant="h6" className={classes.exampleObject} id={'example-object'}>{`${JSON.stringify(
-                    getExampleObject(props.integerDataObjects)
-                )}`}</Typography>
+                <Box component="div" whiteSpace="normal" className={classes.boxSize}>
+                    <ReactJson
+                        src={getExampleObject(props.integerDataObjects)}
+                        theme="summerfruit:inverted"
+                        displayDataTypes={false}
+                        displayObjectSize={false}
+                    />
+                </Box>
             </Box>
         </Box>
     );
