@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -133,13 +134,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -353,14 +356,10 @@
       <workItem from="1610440089620" duration="372000" />
       <workItem from="1610441077558" duration="1145000" />
       <workItem from="1610560004276" duration="285000" />
-      <workItem from="1610631513297" duration="9354000" />
-    </task>
-    <task id="LOCAL-00094" summary="AnalyseFileData.tsx + unit tests&#10;Check all objects are same size - if one object is smaller it means that one of its column values is not a float.&#10;To Do: ignore objects that are wrong size">
-      <created>1609150140033</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1609150140033</updated>
+      <workItem from="1610631513297" duration="9697000" />
+      <workItem from="1610698321023" duration="3560000" />
+      <workItem from="1610717642696" duration="3557000" />
+      <workItem from="1610729722218" duration="720000" />
     </task>
     <task id="LOCAL-00095" summary="AnalyseFileData.tsx + unit tests&#10;Ignores objects that are invalid">
       <created>1609150900222</created>
@@ -698,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610642978287</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="LinePlottingOptions.tsx colours select updated&#10;LineSeriesVis.tsx integrated with Options and data">
+      <created>1610644794884</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1610644794884</updated>
+    </task>
+    <option name="localTasksCounter" value="144" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +712,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx colour picker" />
     <MESSAGE value="Restructuring folders" />
     <MESSAGE value="LinePlottingOptions.test.tsx" />
     <MESSAGE value="ReducerActions.tsx, ReducerActionTypes.js updated with line options.&#10;Created files: CreateLinePlotOptions.tsx, GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx&#10;Began TDD on LinePlotHandler.tsx - LinePlotHandler.test.tsx&#10;TODO: Storing Line plot options in Redux" />
@@ -731,7 +736,8 @@
     <MESSAGE value="updated LineSeriesVisHandler.tsx + unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests" />
     <MESSAGE value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
+    <MESSAGE value="LinePlottingOptions.tsx colours select updated&#10;LineSeriesVis.tsx integrated with Options and data" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions.tsx colours select updated&#10;LineSeriesVis.tsx integrated with Options and data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
