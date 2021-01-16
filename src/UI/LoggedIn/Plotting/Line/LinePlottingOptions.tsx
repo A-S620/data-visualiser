@@ -129,7 +129,7 @@ function LinePlottingOptions(props: any) {
                     />
                 )}
             </Box>
-            <Paper className={classes.paper}>
+            <div className={classes.paper}>
                 <Box
                     display="flex"
                     justifyContent="center"
@@ -372,7 +372,7 @@ function LinePlottingOptions(props: any) {
                         </Button>
                     </Box>
                 </Box>
-            </Paper>
+            </div>
         </Box>
     );
 }

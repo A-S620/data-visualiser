@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid, List } from '@material-ui/core';
 import {
     LineSeries,
     XYPlot,
@@ -11,8 +11,10 @@ import {
     ChartLabel,
     Highlight,
     HighlightArea,
+    Borders,
 } from 'react-vis';
 import { connect } from 'react-redux';
+import { Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,15 +36,17 @@ const data = [
 ];
 function LineSeriesVis(props: any) {
     const classes = useStyles();
-    const [lastDrawLocation, setLastDrawLocation] = React.useState<{
-        lastDrawLocation: any;
-    }>();
-    const [selectedArea, setSelectedArea] = React.useState<{
-        selectedArea: HighlightArea | null;
-    }>();
+    function formatAxisValue(value: number): number {
+        if (value > 1000) {
+            return value / 100;
+        }
+        return value;
+    }
     return (
         <Box
             display="flex"
+            flexWrap="nowrap"
+            overflow="auto"
             justifyContent="center"
             flexDirection="column"
             alignItems="center"
@@ -50,50 +54,33 @@ function LineSeriesVis(props: any) {
             id={'line-series'}
             mx={15}
         >
-            <XYPlot
-                height={props.currentVisualisation.height}
-                width={props.currentVisualisation.width}
-                animation
-                // @ts-ignore
-                xDomain={lastDrawLocation && [lastDrawLocation.left, lastDrawLocation.right]}
-                // @ts-ignore
-                yDomain={lastDrawLocation && [lastDrawLocation.bottom, lastDrawLocation.top]}
-            >
-                <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
-                <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
-                <XAxis title={props.linePlotOptions.xValue} />
-                <YAxis title={props.linePlotOptions.yValue} />
+            <List>
+                <XYPlot height={props.currentVisualisation.height} width={props.currentVisualisation.width} animation>
+                    <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
+                    <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
+                    <XAxis
+                        // @ts-ignore
+                        tickFormat={(v) => formatAxisValue(v)}
+                        title={props.linePlotOptions.xValue}
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
+                    />
+                    <YAxis
+                        title={props.linePlotOptions.yValue}
+                        // left={50}
+                        // @ts-ignore
+                        tickFormat={(v) => formatAxisValue(v)}
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
+                    />
 
-                <LineSeries
-                    strokeStyle={props.currentVisualisation.lineStyle}
-                    opacity={props.currentVisualisation.opacity}
-                    curve={props.currentVisualisation.curve}
-                    data={props.currentVisualisation.data}
-                    color={props.currentVisualisation.colour}
-                />
-                <Highlight
-                    onBrushEnd={(area) =>
-                        setSelectedArea({
-                            selectedArea: area,
-                        })
-                    }
-                    onDrag={(area) => {
-                        setLastDrawLocation({
-                            ...lastDrawLocation,
-                            lastDrawLocation: {
-                                // @ts-ignore
-                                bottom: selectedArea.bottom + (area.top - area.bottom),
-                                // @ts-ignore
-                                left: selectedArea.left - (area.right - area.left),
-                                // @ts-ignore
-                                right: selectedArea.right - (area.right - area.left),
-                                // @ts-ignore
-                                top: selectedArea.top + (area.top - area.bottom),
-                            },
-                        });
-                    }}
-                />
-            </XYPlot>
+                    <LineSeries
+                        strokeStyle={props.currentVisualisation.lineStyle}
+                        opacity={props.currentVisualisation.opacity}
+                        curve={props.currentVisualisation.curve}
+                        data={props.currentVisualisation.data}
+                        color={props.currentVisualisation.colour}
+                    />
+                </XYPlot>
+            </List>
         </Box>
     );
 }
