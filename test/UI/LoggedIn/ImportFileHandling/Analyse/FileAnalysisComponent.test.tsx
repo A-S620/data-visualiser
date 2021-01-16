@@ -44,7 +44,7 @@ describe('File Analysis component', () => {
             expect(component.find('div#example-object').find('p').text()).toBe('Example Data Object:');
         });
     });
-    describe('File Analysis stats', () => {
+    describe('File Analysis stats ', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
@@ -58,7 +58,7 @@ describe('File Analysis component', () => {
             expect(component.find('div#circular-progress-text').text()).toBe('67%');
         });
         it('Should show an example object', () => {
-            expect(component.find('h6#example-object').text()).toBe('{"col1":1,"col2":3}');
+            expect(component.find('div#json-object').text()).toBe('"root":{"col1":1"col2":3}');
         });
     });
 });

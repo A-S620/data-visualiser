@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Fixed large object layout bug">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,16 +132,14 @@
       <recent name="$PROJECT_DIR$/src/domain/interfaces/import" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,8 +197,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.lint" />
         <item itemvalue="npm.security-fix" />
         <item itemvalue="npm.security" />
@@ -360,14 +356,8 @@
       <workItem from="1610631513297" duration="9697000" />
       <workItem from="1610698321023" duration="3560000" />
       <workItem from="1610717642696" duration="3557000" />
-      <workItem from="1610729722218" duration="2020000" />
-    </task>
-    <task id="LOCAL-00096" summary="ImportFiles.tsx component">
-      <created>1609262944529</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1609262944529</updated>
+      <workItem from="1610729722218" duration="2155000" />
+      <workItem from="1610782838647" duration="488000" />
     </task>
     <task id="LOCAL-00097" summary="FileAnalysis.tsx component">
       <created>1609263736609</created>
@@ -705,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610730523742</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start">
+      <created>1610731827658</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1610731827659</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -713,7 +710,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.test.tsx" />
     <MESSAGE value="ReducerActions.tsx, ReducerActionTypes.js updated with line options.&#10;Created files: CreateLinePlotOptions.tsx, GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx&#10;Began TDD on LinePlotHandler.tsx - LinePlotHandler.test.tsx&#10;TODO: Storing Line plot options in Redux" />
     <MESSAGE value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
     <MESSAGE value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
@@ -738,7 +734,8 @@
     <MESSAGE value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
     <MESSAGE value="LinePlottingOptions.tsx colours select updated&#10;LineSeriesVis.tsx integrated with Options and data" />
     <MESSAGE value="LineSeriesVis.tsx visualises data" />
-    <option name="LAST_COMMIT_MESSAGE" value="LineSeriesVis.tsx visualises data" />
+    <MESSAGE value="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
