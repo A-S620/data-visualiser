@@ -84,6 +84,7 @@ describe('Reducer actions', () => {
                 opacity: 2,
                 curveType: CurveType.curveMonotoneY,
                 lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
             };
             const expectedAction = {
                 type: actionTypes.LINE_OPTIONS_ADDED,
@@ -111,6 +112,7 @@ describe('Reducer actions', () => {
                 opacity: 0.5,
                 curveType: CurveType.curveMonotoneY,
                 lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
             };
             const expectedAction = {
                 type: actionTypes.CURRENT_VISUAL_ADDED,

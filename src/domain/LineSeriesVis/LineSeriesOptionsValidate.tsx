@@ -26,6 +26,11 @@ export class LineSeriesOptionsValidate {
                 `The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is ${this.options.opacity}`
             );
         }
+        if (!this.lineWidthIsValid(this.options.lineWidth)) {
+            notifications.addNotification(
+                `The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is ${this.options.lineWidth}`
+            );
+        }
         return notifications;
     }
 

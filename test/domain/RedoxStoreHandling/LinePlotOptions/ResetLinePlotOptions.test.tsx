@@ -16,6 +16,7 @@ describe('ResetLinePlotOptions domain component', () => {
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
         const createLinePlotOptions = new CreateLinePlotOptions(lineOptions);
         createLinePlotOptions.createLinePlotOptions();

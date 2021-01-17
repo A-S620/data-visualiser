@@ -17,6 +17,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
 
         const linePlotHandler = new LinePlotOptionsHandler(testOptions);
@@ -33,6 +34,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
 
         const linePlotHandler = new LinePlotOptionsHandler(testOptions);
@@ -51,6 +53,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
 
         const linePlotHandler = new LinePlotOptionsHandler(testOptions);
@@ -68,6 +71,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
 
         const linePlotHandler = new LinePlotOptionsHandler(testOptions);
@@ -82,6 +86,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         });
     });
     it('Should get the line options from the Redux store', () => {
@@ -94,6 +99,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
 
         const linePlotHandler = new LinePlotOptionsHandler(testOptions);
@@ -110,6 +116,7 @@ describe('Line Plot Handler UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
         };
 
         const linePlotHandler = new LinePlotOptionsHandler(testOptions);

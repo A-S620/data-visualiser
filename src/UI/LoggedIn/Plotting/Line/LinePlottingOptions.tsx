@@ -46,6 +46,7 @@ function LinePlottingOptions(props: any) {
         opacity: number;
         curveType: CurveType | null;
         lineStyle: LineStyle | undefined;
+        lineWidth: number;
     }>({
         xValue: '',
         yValue: '',
@@ -55,6 +56,7 @@ function LinePlottingOptions(props: any) {
         opacity: 1,
         curveType: null,
         lineStyle: undefined,
+        lineWidth: 2,
     });
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
@@ -81,6 +83,7 @@ function LinePlottingOptions(props: any) {
             opacity: options.opacity,
             curveType: options.curveType,
             lineStyle: options.lineStyle,
+            lineWidth: options.lineWidth,
         };
         const validateOptions = new LinePlotOptionsHandler(optionsToValidate);
         const errors: NotificationsHandler = validateOptions.validateOptions();
@@ -285,7 +288,7 @@ function LinePlottingOptions(props: any) {
                         <FormControl style={{ minWidth: 400 }} id={'curve-select'}>
                             <InputLabel className={classes.textColor}>Curve</InputLabel>
                             <Select
-                                value={options.curveType}
+                                // value={options.curveType}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
@@ -295,6 +298,16 @@ function LinePlottingOptions(props: any) {
                                 }}
                                 name="Y Values"
                             >
+                                <option value={CurveType.curveBasis}>Basis</option>
+                                <option value={CurveType.curveBasisClosed}>Basis Closed</option>
+                                <option value={CurveType.curveBasisOpen}>Basis Open</option>
+                                <option value={CurveType.curveBundle}>Bundle</option>
+                                <option value={CurveType.curveCardinal}>Cardinal</option>
+                                <option value={CurveType.curveCardinalClosed}>Cardinal Closed</option>
+                                <option value={CurveType.curveCardinalOpen}>Cardinal Open</option>
+                                <option value={CurveType.curveCatmullRom}>Catmull Rom</option>
+                                <option value={CurveType.curveCatmullRomClosed}>Catmull Rom Closed</option>
+                                <option value={CurveType.curveCatmullRomOpen}>Catmull Rom Open</option>
                                 <option value={CurveType.curveLinear}>Linear</option>
                                 <option value={CurveType.curveLinearClosed}>Linear Closed</option>
                                 <option value={CurveType.curveMonotoneX}>Monotone X</option>
@@ -327,6 +340,25 @@ function LinePlottingOptions(props: any) {
                             </Select>
                         </FormControl>
                         <Box mx={5} />
+                        <TextField
+                            type={'number'}
+                            id="line-width-textfield"
+                            label="Line Width"
+                            variant="outlined"
+                            helperText="Default: 2px"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    lineWidth: parseInt(event.target.value),
+                                });
+                            }}
+                        />
                     </Box>
                     <Box id={'submit-button'}>
                         <Button

@@ -42,6 +42,7 @@ describe('LineSeriesCreateVis domain component', () => {
             expect(createVis.opacity).toEqual(1);
             expect(createVis.curveType).toEqual(null);
             expect(createVis.lineStyle).toEqual(undefined);
+            expect(createVis.lineWidth).toEqual(2);
         });
         it('Should return the correct options from the Redux store when valid options have been imported', async () => {
             const lineOptions: ILinePlotOptions = {
@@ -53,6 +54,7 @@ describe('LineSeriesCreateVis domain component', () => {
                 opacity: 0,
                 curveType: CurveType.curveMonotoneY,
                 lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
             };
             const createLinePlotOptions = new CreateLinePlotOptions(lineOptions);
             await createLinePlotOptions.createLinePlotOptions();
@@ -68,6 +70,7 @@ describe('LineSeriesCreateVis domain component', () => {
             expect(createVis.opacity).toEqual(0);
             expect(createVis.curveType).toEqual(CurveType.curveMonotoneY);
             expect(createVis.lineStyle).toEqual(LineStyle.SOLID);
+            expect(createVis.lineWidth).toEqual(2);
         });
     });
     describe('Data', () => {
