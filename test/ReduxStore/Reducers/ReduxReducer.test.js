@@ -131,7 +131,6 @@ describe('ReduxReducer', () => {
                 opacity: 0.5,
                 curveType: CurveType.curveMonotoneY,
                 lineStyle: LineStyle.SOLID,
-                lineWidth: 2,
             };
             it('Should handle LINE_OPTIONS_ADDED', () => {
                 expect(reduxReducer(linePlotOptions, reducerActions.addLineOptions(lineOptions))).toEqual({
@@ -144,7 +143,6 @@ describe('ReduxReducer', () => {
                         opacity: 0.5,
                         curveType: CurveType.curveMonotoneY,
                         lineStyle: LineStyle.SOLID,
-                        lineWidth: 2,
                     },
                 });
             });
@@ -161,7 +159,6 @@ describe('ReduxReducer', () => {
                                 opacity: 0,
                                 curveType: CurveType.curveMonotoneY,
                                 lineStyle: LineStyle.SOLID,
-                                lineWidth: 2,
                             },
                         },
                         reducerActions.resetLineOptions()
@@ -185,7 +182,6 @@ describe('ReduxReducer', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         it('Should handle CURRENT_VISUAL_ADDED', () => {
             expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentVisual(currentVisual))).toEqual({
@@ -200,7 +196,6 @@ describe('ReduxReducer', () => {
                     opacity: 0.5,
                     curveType: CurveType.curveMonotoneY,
                     lineStyle: LineStyle.SOLID,
-                    lineWidth: 2,
                 },
             });
         });
@@ -219,7 +214,6 @@ describe('ReduxReducer', () => {
                             opacity: 0.5,
                             curveType: CurveType.curveMonotoneY,
                             lineStyle: LineStyle.SOLID,
-                            lineWidth: 2,
                         },
                     },
                     reducerActions.resetCurrentVisual()

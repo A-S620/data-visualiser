@@ -63,10 +63,6 @@ describe('Line Plotting Options Component', () => {
             const select = wrapper.find('div#line-style-select').find('label');
             expect(select.text()).toBe('Line Style');
         });
-        it('Should have a line width textfield', () => {
-            const textfield = wrapper.find('div#line-options').find('label#line-width-textfield-label');
-            expect(textfield.text()).toBe('Line Width');
-        });
         it('Should have a submit button', () => {
             const button = wrapper.find('button#options-submit-button');
             expect(button.text()).toBe('Submit');
@@ -137,7 +133,6 @@ describe('Line Plotting Options Component', () => {
             await selectYVal('col2');
             await selectCurve('curveBasis');
             await selectLineStyle('solid');
-            await inputLineWidth(5);
 
             await clickSubmit();
             expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe('Options Validated');
@@ -170,11 +165,6 @@ function inputHeight(value: number): void {
 }
 function inputWidth(value: number): void {
     wrapper.find('input#width-textfield').simulate('change', {
-        target: { value: value },
-    });
-}
-function inputLineWidth(value: number) {
-    wrapper.find('input#line-width-textfield').simulate('change', {
         target: { value: value },
     });
 }

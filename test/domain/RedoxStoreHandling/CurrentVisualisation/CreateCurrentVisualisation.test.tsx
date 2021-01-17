@@ -23,7 +23,6 @@ describe('CreateCurrentVisualisation domain component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const createCurrentVisual = new CreateCurrentVisualisation(currentVisual);
         createCurrentVisual.createCurrentVisual();

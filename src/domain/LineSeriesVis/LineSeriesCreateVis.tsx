@@ -18,7 +18,6 @@ export class LineSeriesCreateVis {
             opacity: linePlotOptions.opacity,
             curveType: linePlotOptions.curveType,
             lineStyle: linePlotOptions.lineStyle,
-            lineWidth: linePlotOptions.lineWidth,
         };
     }
     private createDefaultOptions(): ILinePlotCreateVis {
@@ -31,7 +30,6 @@ export class LineSeriesCreateVis {
             opacity: 1,
             curveType: null,
             lineStyle: undefined,
-            lineWidth: 2,
         };
     }
 

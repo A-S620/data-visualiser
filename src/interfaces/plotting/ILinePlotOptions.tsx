@@ -7,19 +7,8 @@ export interface ILinePlotOptions {
     opacity: number;
     curveType: CurveType | null;
     lineStyle: LineStyle | undefined;
-    lineWidth: number;
 }
 export enum CurveType {
-    curveBasis = 'curveBasis',
-    curveBasisClosed = 'curveBasisClosed',
-    curveBasisOpen = 'curveBasisOpen',
-    curveBundle = 'curveBundle',
-    curveCardinal = 'curveCardinal',
-    curveCardinalClosed = 'curveCardinalClosed',
-    curveCardinalOpen = 'curveCardinalOpen',
-    curveCatmullRom = 'curveCatmullRom',
-    curveCatmullRomClosed = 'curveCatmullRomClosed',
-    curveCatmullRomOpen = 'curveCatmullRomOpen',
     curveLinear = 'curveLinear',
     curveLinearClosed = 'curveLinearClosed',
     curveMonotoneX = 'curveMonotoneX',

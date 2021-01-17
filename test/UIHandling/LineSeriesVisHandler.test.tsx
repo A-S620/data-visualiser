@@ -24,7 +24,6 @@ const testOptions: ILinePlotOptions = {
     opacity: 0.5,
     curveType: CurveType.curveMonotoneY,
     lineStyle: LineStyle.SOLID,
-    lineWidth: 2,
 };
 beforeAll(() => {
     const testData: IImportedFileData = {
@@ -57,10 +56,9 @@ describe('LineSeriesVis UIHandling Component', () => {
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         });
     });
-    it('Should reset the LinePlotOptions when teh reset method is called', () => {
+    it('Should reset the LinePlotOptions when the reset method is called', () => {
         new LineSeriesVisHandler().resetVisualisation();
         const getCurrentVisual = new GetCurrentVisualisation();
         expect(getCurrentVisual.getCurrentVisualisation()).toEqual({});

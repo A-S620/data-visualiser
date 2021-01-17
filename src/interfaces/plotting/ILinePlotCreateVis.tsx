@@ -8,5 +8,4 @@ export interface ILinePlotCreateVis {
     opacity: number;
     curveType: CurveType | null;
     lineStyle: LineStyle | undefined;
-    lineWidth: number;
 }

@@ -14,7 +14,6 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
@@ -30,7 +29,6 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
@@ -48,7 +46,6 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
@@ -66,7 +63,6 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
@@ -84,7 +80,6 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
@@ -102,7 +97,6 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: 2,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
@@ -120,48 +114,11 @@ describe('LineSeriesOptionsValidate domain component', () => {
             opacity: -1,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
-            lineWidth: 2,
         };
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
             'The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is -1'
-        );
-    });
-    it('Should return a notification when the line width is smaller than the minimum value', () => {
-        const lineOptions: ILinePlotOptions = {
-            xValue: 'test',
-            yValue: 'test2',
-            height: 800,
-            width: 800,
-            colour: '#000000',
-            opacity: 1,
-            curveType: CurveType.curveMonotoneY,
-            lineStyle: LineStyle.SOLID,
-            lineWidth: 0,
-        };
-        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
-        const notifications = lineOptionsValidate.validate();
-        expect(notifications.notification()).toBe(
-            'The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is 0'
-        );
-    });
-    it('Should return a notification when the line width is bigger than the maximum value', () => {
-        const lineOptions: ILinePlotOptions = {
-            xValue: 'test',
-            yValue: 'test2',
-            height: 800,
-            width: 800,
-            colour: '#000000',
-            opacity: 1,
-            curveType: CurveType.curveMonotoneY,
-            lineStyle: LineStyle.SOLID,
-            lineWidth: 11,
-        };
-        const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
-        const notifications = lineOptionsValidate.validate();
-        expect(notifications.notification()).toBe(
-            'The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is 11'
         );
     });
 });
