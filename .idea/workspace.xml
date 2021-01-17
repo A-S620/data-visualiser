@@ -4,7 +4,6 @@
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -347,14 +346,7 @@
       <workItem from="1610717642696" duration="3557000" />
       <workItem from="1610729722218" duration="2155000" />
       <workItem from="1610782838647" duration="488000" />
-      <workItem from="1610869559262" duration="2218000" />
-    </task>
-    <task id="LOCAL-00099" summary="UserNavigation.js updated + unit tests">
-      <created>1609326645565</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1609326645565</updated>
+      <workItem from="1610869559262" duration="5796000" />
     </task>
     <task id="LOCAL-00100" summary="PlottingNav.tsx">
       <created>1609327948238</created>
@@ -692,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610871120844</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart">
+      <created>1610872240286</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1610872240286</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,7 +699,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
     <MESSAGE value="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx" />
     <MESSAGE value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
     <MESSAGE value="LinePlotHandler.tsx + unit tests" />
@@ -725,7 +723,8 @@
     <MESSAGE value="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start" />
     <MESSAGE value="Minor Changes" />
     <MESSAGE value="Removed Line width option" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Line width option" />
+    <MESSAGE value="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart" />
+    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

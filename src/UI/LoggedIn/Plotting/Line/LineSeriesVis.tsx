@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Grid, List } from '@material-ui/core';
-import {
-    LineSeries,
-    XYPlot,
-    VerticalGridLines,
-    HorizontalGridLines,
-    XAxis,
-    YAxis,
-    ChartLabel,
-    Highlight,
-    HighlightArea,
-    Borders,
-} from 'react-vis';
+import { Box, Typography } from '@material-ui/core';
+import { HorizontalGridLines, LineSeries, VerticalGridLines, XAxis, XYPlot, YAxis } from 'react-vis';
 import { connect } from 'react-redux';
-import { Paper } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         width: '100%',
+    },
+    statDescription: {
+        margin: theme.spacing(1),
+        textAlign: 'left',
+        color: theme.palette.text.primary,
     },
 }));
 const data = [
@@ -36,12 +29,6 @@ const data = [
 ];
 function LineSeriesVis(props: any) {
     const classes = useStyles();
-    function formatAxisValue(value: number): number {
-        if (value > 1000) {
-            return value / 100;
-        }
-        return value;
-    }
     return (
         <Box
             display="flex"
@@ -54,42 +41,24 @@ function LineSeriesVis(props: any) {
             id={'line-series'}
             mx={15}
         >
-            <List>
-                <XYPlot height={props.currentVisualisation.height} width={props.currentVisualisation.width} animation>
+            <Box>
+                <XYPlot
+                    height={props.currentVisualisation.height}
+                    width={props.currentVisualisation.width}
+                    margin={{ left: 75 }}
+                >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                     <XAxis
-                        // @ts-ignore
-                        tickFormat={(v) => formatAxisValue(v)}
-                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
+                        //@ts-ignore
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
                     <YAxis
                         // left={50}
-                        // @ts-ignore
-                        tickFormat={(v) => formatAxisValue(v)}
-                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
-                    />
-                    <ChartLabel
-                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
-                        text={props.linePlotOptions.xValue}
-                        className="alt-x-label"
-                        includeMargin={false}
-                        xPercent={0.025}
-                        yPercent={1.01}
+                        //@ts-ignore
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
 
-                    <ChartLabel
-                        style={{
-                            transform: 'rotate(-90)',
-                            textAnchor: 'end',
-                            text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 },
-                        }}
-                        text={props.linePlotOptions.yValue}
-                        className="alt-y-label"
-                        includeMargin={false}
-                        xPercent={0.06}
-                        yPercent={0.06}
-                    />
                     <LineSeries
                         style={{
                             strokeLinejoin: 'round',
@@ -102,7 +71,16 @@ function LineSeriesVis(props: any) {
                         color={props.currentVisualisation.colour}
                     />
                 </XYPlot>
-            </List>
+            </Box>
+            <Box my={15} id="graph-info">
+                <Typography className={classes.statDescription}>Graph Info:</Typography>
+                <Typography
+                    className={classes.statDescription}
+                >{`X Axis - ${props.linePlotOptions.xValue}`}</Typography>
+                <Typography
+                    className={classes.statDescription}
+                >{`Y Axis - ${props.linePlotOptions.yValue}`}</Typography>
+            </Box>
         </Box>
     );
 }
