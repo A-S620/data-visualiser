@@ -298,16 +298,6 @@ function LinePlottingOptions(props: any) {
                                 }}
                                 name="Y Values"
                             >
-                                <option value={CurveType.curveBasis}>Basis</option>
-                                <option value={CurveType.curveBasisClosed}>Basis Closed</option>
-                                <option value={CurveType.curveBasisOpen}>Basis Open</option>
-                                <option value={CurveType.curveBundle}>Bundle</option>
-                                <option value={CurveType.curveCardinal}>Cardinal</option>
-                                <option value={CurveType.curveCardinalClosed}>Cardinal Closed</option>
-                                <option value={CurveType.curveCardinalOpen}>Cardinal Open</option>
-                                <option value={CurveType.curveCatmullRom}>Catmull Rom</option>
-                                <option value={CurveType.curveCatmullRomClosed}>Catmull Rom Closed</option>
-                                <option value={CurveType.curveCatmullRomOpen}>Catmull Rom Open</option>
                                 <option value={CurveType.curveLinear}>Linear</option>
                                 <option value={CurveType.curveLinearClosed}>Linear Closed</option>
                                 <option value={CurveType.curveMonotoneX}>Monotone X</option>

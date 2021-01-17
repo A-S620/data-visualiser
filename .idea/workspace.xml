@@ -347,20 +347,7 @@
       <workItem from="1610717642696" duration="3557000" />
       <workItem from="1610729722218" duration="2155000" />
       <workItem from="1610782838647" duration="488000" />
-    </task>
-    <task id="LOCAL-00097" summary="FileAnalysis.tsx component">
-      <created>1609263736609</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1609263736609</updated>
-    </task>
-    <task id="LOCAL-00098" summary="Unit Tests for UI components">
-      <created>1609326432492</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1609326432492</updated>
+      <workItem from="1610869559262" duration="2218000" />
     </task>
     <task id="LOCAL-00099" summary="UserNavigation.js updated + unit tests">
       <created>1609326645565</created>
@@ -691,7 +678,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610731827659</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="Minor Changes">
+      <created>1610791749234</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1610791749234</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Removed Line width option">
+      <created>1610871120843</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1610871120844</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,8 +700,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ReducerActions.tsx, ReducerActionTypes.js updated with line options.&#10;Created files: CreateLinePlotOptions.tsx, GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx&#10;Began TDD on LinePlotHandler.tsx - LinePlotHandler.test.tsx&#10;TODO: Storing Line plot options in Redux" />
-    <MESSAGE value="PlottingOptions slice added to redux state&#10;ReduxReducer.js - Line options added, line options reset&#10;Did unit tests, need to make them pass" />
     <MESSAGE value="LinePlotOptions slice - ReduxReducer.js + unit tests" />
     <MESSAGE value="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx" />
     <MESSAGE value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
@@ -724,7 +723,9 @@
     <MESSAGE value="LinePlottingOptions.tsx colours select updated&#10;LineSeriesVis.tsx integrated with Options and data" />
     <MESSAGE value="LineSeriesVis.tsx visualises data" />
     <MESSAGE value="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start" />
+    <MESSAGE value="Minor Changes" />
+    <MESSAGE value="Removed Line width option" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Line width option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

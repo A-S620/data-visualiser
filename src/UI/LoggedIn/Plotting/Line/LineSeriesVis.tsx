@@ -61,18 +61,40 @@ function LineSeriesVis(props: any) {
                     <XAxis
                         // @ts-ignore
                         tickFormat={(v) => formatAxisValue(v)}
-                        title={props.linePlotOptions.xValue}
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
                     />
                     <YAxis
-                        title={props.linePlotOptions.yValue}
                         // left={50}
                         // @ts-ignore
                         tickFormat={(v) => formatAxisValue(v)}
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
                     />
+                    <ChartLabel
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 } }}
+                        text={props.linePlotOptions.xValue}
+                        className="alt-x-label"
+                        includeMargin={false}
+                        xPercent={0.025}
+                        yPercent={1.01}
+                    />
 
+                    <ChartLabel
+                        style={{
+                            transform: 'rotate(-90)',
+                            textAnchor: 'end',
+                            text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5 },
+                        }}
+                        text={props.linePlotOptions.yValue}
+                        className="alt-y-label"
+                        includeMargin={false}
+                        xPercent={0.06}
+                        yPercent={0.06}
+                    />
                     <LineSeries
+                        style={{
+                            strokeLinejoin: 'round',
+                            strokeWidth: props.currentVisualisation.lineWidth,
+                        }}
                         strokeStyle={props.currentVisualisation.lineStyle}
                         opacity={props.currentVisualisation.opacity}
                         curve={props.currentVisualisation.curve}
