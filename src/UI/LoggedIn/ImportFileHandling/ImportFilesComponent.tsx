@@ -193,7 +193,8 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                             previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
                             previewChipProps={{ classes: { root: this.classes.previewChip } }}
                             previewText="Selected files"
-                            clearOnUnmount={true}
+                            showAlerts={false}
+                            // clearOnUnmount={true}
                             acceptedFiles={['text/csv']}
                             filesLimit={1}
                         />
