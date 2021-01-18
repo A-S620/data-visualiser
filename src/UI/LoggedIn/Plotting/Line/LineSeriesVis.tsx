@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import { HorizontalGridLines, LineSeries, VerticalGridLines, XAxis, XYPlot, YAxis } from 'react-vis';
 import { connect } from 'react-redux';
 
@@ -43,6 +43,7 @@ function LineSeriesVis(props: any) {
         >
             <Box>
                 <XYPlot
+                    id={'line-series-vis'}
                     height={props.currentVisualisation.height}
                     width={props.currentVisualisation.width}
                     margin={{ left: 75 }}
@@ -55,7 +56,6 @@ function LineSeriesVis(props: any) {
                     />
                     <YAxis
                         // left={50}
-                        //@ts-ignore
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
 
@@ -71,15 +71,6 @@ function LineSeriesVis(props: any) {
                         color={props.currentVisualisation.colour}
                     />
                 </XYPlot>
-            </Box>
-            <Box my={15} id="graph-info">
-                <Typography className={classes.statDescription}>Graph Info:</Typography>
-                <Typography
-                    className={classes.statDescription}
-                >{`X Axis - ${props.linePlotOptions.xValue}`}</Typography>
-                <Typography
-                    className={classes.statDescription}
-                >{`Y Axis - ${props.linePlotOptions.yValue}`}</Typography>
             </Box>
         </Box>
     );

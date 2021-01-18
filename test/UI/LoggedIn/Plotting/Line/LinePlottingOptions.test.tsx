@@ -155,11 +155,6 @@ describe('Line Plotting Options Component', () => {
         });
     });
 });
-// function inputGraphName(graphName: string): void {
-//     wrapper.find('input#graph-name').simulate('change', {
-//         target: { value: graphName },
-//     });
-// }
 function clickSubmit(): void {
     wrapper.find('button#options-submit-button').simulate('click');
 }

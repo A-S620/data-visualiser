@@ -50,8 +50,8 @@ function LinePlottingOptions(props: any) {
     }>({
         xValue: '',
         yValue: '',
-        height: 400,
-        width: 400,
+        height: 800,
+        width: 800,
         colour: '#000000',
         opacity: 1,
         curveType: null,
@@ -203,7 +203,7 @@ function LinePlottingOptions(props: any) {
                             id="height-textfield"
                             label="Height"
                             variant="outlined"
-                            helperText="Default 400"
+                            helperText="Default 800"
                             FormHelperTextProps={{
                                 className: classes.helperTextColor,
                             }}
@@ -223,7 +223,7 @@ function LinePlottingOptions(props: any) {
                             id="width-textfield"
                             label="Width"
                             variant="outlined"
-                            helperText="Default 400"
+                            helperText="Default 800"
                             FormHelperTextProps={{
                                 className: classes.helperTextColor,
                             }}

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LineSeriesVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -133,6 +138,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -348,14 +364,8 @@
       <workItem from="1610729722218" duration="2155000" />
       <workItem from="1610782838647" duration="488000" />
       <workItem from="1610869559262" duration="5796000" />
-      <workItem from="1610973751090" duration="605000" />
-    </task>
-    <task id="LOCAL-00100" summary="PlottingNav.tsx">
-      <created>1609327948238</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1609327948238</updated>
+      <workItem from="1610973751090" duration="758000" />
+      <workItem from="1610996993308" duration="1744000" />
     </task>
     <task id="LOCAL-00101" summary="LinePlottingOptions.tsx">
       <created>1609335047218</created>
@@ -693,7 +703,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610872240286</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="Updated AlertNotification.tsx to be a snackbar">
+      <created>1610974552647</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1610974552648</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,7 +718,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx" />
     <MESSAGE value="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx" />
     <MESSAGE value="LinePlotHandler.tsx + unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx save options in Redux" />
@@ -726,18 +742,8 @@
     <MESSAGE value="Minor Changes" />
     <MESSAGE value="Removed Line width option" />
     <MESSAGE value="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart" />
-    <option name="LAST_COMMIT_MESSAGE" value="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx</url>
-          <line>154</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Updated AlertNotification.tsx to be a snackbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated AlertNotification.tsx to be a snackbar" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

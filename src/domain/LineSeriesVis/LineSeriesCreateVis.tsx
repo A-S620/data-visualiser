@@ -2,6 +2,7 @@ import GetLinePlotOptions from '../ReduxStoreHandling/LinePlotOptions/GetLinePlo
 import GetAnalysedData from '../ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import { ILinePlotCreateVis } from '../../interfaces/plotting/ILinePlotCreateVis';
 import { IAnalysedFileData } from '../../interfaces/import/IAnalysedFileData';
+import { CurveType } from '../../interfaces/plotting/ILinePlotOptions';
 
 export class LineSeriesCreateVis {
     public createVis(): ILinePlotCreateVis {
@@ -25,8 +26,8 @@ export class LineSeriesCreateVis {
         const { integerFields } = this.getAnalysedData();
         return {
             data: this.createDataArray(integerFields[0], integerFields[1]),
-            height: 400,
-            width: 400,
+            height: 800,
+            width: 800,
             colour: '#000000',
             opacity: 1,
             curveType: null,

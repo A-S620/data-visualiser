@@ -36,8 +36,8 @@ describe('LineSeriesCreateVis domain component', () => {
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
             ]);
-            expect(createVis.height).toEqual(400);
-            expect(createVis.width).toEqual(400);
+            expect(createVis.height).toEqual(800);
+            expect(createVis.width).toEqual(800);
             expect(createVis.colour).toEqual('#000000');
             expect(createVis.opacity).toEqual(1);
             expect(createVis.curveType).toEqual(null);
