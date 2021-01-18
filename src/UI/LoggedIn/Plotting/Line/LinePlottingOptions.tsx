@@ -17,7 +17,7 @@ import { CurveType, ILinePlotOptions, LineStyle } from '../../../../interfaces/p
 
 import { AlertType } from '../../../../interfaces/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
-import { AlertNotification } from '../../Notifications/AlertNotification';
+import AlertNotification from '../../Notifications/AlertNotification';
 import { LinePlotOptionsHandler } from '../../../../UIHandling/LinePlotOptionsHandler';
 
 const useStyles = makeStyles((theme) => ({

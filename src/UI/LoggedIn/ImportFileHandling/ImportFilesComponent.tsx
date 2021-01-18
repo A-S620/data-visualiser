@@ -8,7 +8,7 @@ import { AlertType } from '../../../interfaces/INotification';
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 import { ImportFilesHandler } from '../../../UIHandling/ImportFilesHandler';
 
-import { AlertNotification } from '../Notifications/AlertNotification';
+import AlertNotification from '../Notifications/AlertNotification';
 import { IImportedFile } from '../../../interfaces/import/IImportedFile';
 
 import ImportedFileStats from './Import/ImportedFileStats';
