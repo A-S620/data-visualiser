@@ -13,10 +13,12 @@ export class ImportFilesHandler {
     }
 
     public validate(): NotificationsHandler {
-        const notifications = new NotificationsHandler();
-        const importedDataErrors = this.getImportedDataErrors();
-        notifications.concat(importedDataErrors);
-        return notifications;
+        if (this.importedFile.file.length === 0) {
+            const notifications = new NotificationsHandler();
+            notifications.addNotification('File is empty');
+            return notifications;
+        }
+        return this.getImportedDataErrors();
     }
     private getImportedDataErrors(): NotificationsHandler {
         const importData = new ImportFileData(this.importedFile);

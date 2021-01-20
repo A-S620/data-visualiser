@@ -1,5 +1,17 @@
 import React from 'react';
-import { Box, Button, Container, Divider, Grid, IconButton, makeStyles, Paper, Tooltip } from '@material-ui/core';
+import {
+    Box,
+    Button,
+    Container,
+    Divider,
+    Grid,
+    IconButton,
+    makeStyles,
+    Paper,
+    Tooltip,
+    Dialog,
+    DialogContent,
+} from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
@@ -14,6 +26,8 @@ import { IImportedFile } from '../../../interfaces/import/IImportedFile';
 import ImportedFileStats from './Import/ImportedFileStats';
 import { IImportedFileStats } from '../../../interfaces/import/IImportedFileStats';
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
+import Slide from '@material-ui/core/Slide';
+import FieldTypes from './Analyse/FieldTypes';
 
 interface IState {
     importedFiles: Array<File>;
@@ -24,6 +38,7 @@ interface IState {
     files: string;
     fileType: string;
     importedFileStats: IImportedFileStats;
+    fieldTypesDialogOpen: boolean;
 }
 export default class ImportFilesComponent extends React.Component<{}, IState> {
     private classes: any = makeStyles((theme) => ({
@@ -37,10 +52,6 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
         },
         container: {
             width: '100%',
-        },
-        previewChip: {
-            minWidth: 160,
-            maxWidth: 210,
         },
         verticalLine: {
             background: theme.palette.primary.light,
@@ -66,6 +77,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                 fileSize: '',
                 characterCount: undefined,
             },
+            fieldTypesDialogOpen: false,
         };
     }
     private static checkFileType(files: File[]): string {
@@ -104,6 +116,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                 this.setState({
                     outcome: AlertType.SUCCESS,
                     outcomeMessage: 'Files successfully uploaded',
+                    fieldTypesDialogOpen: true,
                 });
             } catch (e) {
                 this.setState({
@@ -122,7 +135,6 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
         };
         const files = new ImportFilesHandler(file);
         files.resetImportedData();
-        files.resetAnalysedData();
         this.setState({
             importedFiles: [],
             submitButtonDisabled: true,
@@ -150,6 +162,9 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                 my={15}
                 mx={15}
             >
+                <Dialog open={this.state.fieldTypesDialogOpen}>
+                    <FieldTypes />
+                </Dialog>
                 <Box style={{ height: '50%', width: '50%' }} my={15} id={'alert-area'}>
                     {this.state.outcome && (
                         <AlertNotification alert={this.state.outcome} notification={this.state.outcomeMessage} />

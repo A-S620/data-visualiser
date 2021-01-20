@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,14 +363,7 @@
       <workItem from="1610973751090" duration="758000" />
       <workItem from="1610996993308" duration="2281000" />
       <workItem from="1611130255943" duration="2224000" />
-      <workItem from="1611172208905" duration="2342000" />
-    </task>
-    <task id="LOCAL-00103" summary="ILinePlottingOptions.tsx interface">
-      <created>1609337392893</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1609337392893</updated>
+      <workItem from="1611172208905" duration="4334000" />
     </task>
     <task id="LOCAL-00104" summary="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx">
       <created>1609339130306</created>
@@ -711,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611132559874</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests">
+      <created>1611174783549</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1611174783549</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +716,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx save options in Redux" />
     <MESSAGE value="LinePlottingOptions.tsx unit tests done" />
     <MESSAGE value="LineSeriesCreateVis.tsx + unit tests" />
     <MESSAGE value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
@@ -744,7 +740,8 @@
     <MESSAGE value="Updated AlertNotification.tsx to be a snackbar" />
     <MESSAGE value="Refactoring and unit tests for LineSeriesVis.tsx" />
     <MESSAGE value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
+    <MESSAGE value="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
