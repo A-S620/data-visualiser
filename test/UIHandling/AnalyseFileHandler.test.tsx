@@ -4,6 +4,7 @@ import GetImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/Ge
 import ResetImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import GetAnalysedData from '../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import { AnalyseFileHandler } from '../../src/UIHandling/AnalyseFileHandler';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n 1,7,baz';
 const testCSV2 = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n cool,7,baz';
@@ -15,67 +16,55 @@ const testJSON = {
     gender: 'Female',
     ip_address: '26.58.193.2',
 };
-//Runs before each test
 beforeEach(() => {
     const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });
-//Runs after all test
+
 afterAll(() => {
     const resetImportedDataState = new ResetImportedData();
     resetImportedDataState.resetImportedDataState();
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });
-describe('ImportFilesHandler UI handling component', () => {
-    it('should add data from the imported file to the importedData slice in the store', () => {
-        const importedFile: IImportedFile = {
-            file: testCSV,
-            fileType: 'text/csv',
-        };
-        const importFileErrors = new ImportFilesHandler(importedFile).validate();
-
-        expect(importFileErrors.notification()).toEqual('');
-    });
-    it('should return a notification when the file is not a CSV file', () => {
-        const importedFile: IImportedFile = {
-            file: JSON.stringify(testJSON),
-            fileType: 'application/json',
-        };
-        const importFileErrors = new ImportFilesHandler(importedFile).validate();
-
-        expect(importFileErrors.notification()).toEqual('File is application/json, only CSV is accepted');
-    });
-    it('should return a notification when the file is empty', () => {
-        const importedFile: IImportedFile = {
-            file: '',
-            fileType: 'text/csv',
-        };
-        const importFileErrors = new ImportFilesHandler(importedFile).validate();
-
-        expect(importFileErrors.notification()).toEqual('File is empty');
-    });
-    it('should create imported data', () => {
+describe('AnalyseFileHandler UI handling component', () => {
+    it('should create analysed data', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
         };
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
-        const getImportedData = new GetImportedData();
-        expect(getImportedData.getImportedData().dataFields).toStrictEqual(['col1', 'col2', 'col3']);
+        const analyseFile = new AnalyseFileHandler();
+        analyseFile.validateAnalysedData();
+        const getAnalysedData = new GetAnalysedData();
+        expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual(['col1', 'col2']);
     });
-    it('should reset imported data', async () => {
+    it('should reset analysed data data', async () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
         };
         const importFile = new ImportFilesHandler(importedFile);
-        await importFile.validate();
-        importFile.resetImportedData();
-        const getImportedData = new GetImportedData();
-        expect(getImportedData.getImportedData().dataFields).toStrictEqual([]);
+        importFile.validate();
+        const analyseFile = new AnalyseFileHandler();
+        analyseFile.resetAnalysedData();
+        const getAnalysedData = new GetAnalysedData();
+        expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual([]);
+    });
+    it('should return a notification when all object sizes are not equal', () => {
+        const importedFile: IImportedFile = {
+            file: testCSV2,
+            fileType: 'text/csv',
+        };
+        const importFile = new ImportFilesHandler(importedFile);
+        importFile.validate();
+        const analyseFileErrors = new AnalyseFileHandler().validateAnalysedData();
+
+        expect(analyseFileErrors.notification()).toEqual(
+            'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
+        );
     });
 });

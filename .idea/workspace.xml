@@ -2,30 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/import/IAnalysedFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/import/IAnalysedFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -153,15 +137,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -383,14 +365,8 @@
       <workItem from="1610869559262" duration="5796000" />
       <workItem from="1610973751090" duration="758000" />
       <workItem from="1610996993308" duration="2281000" />
-      <workItem from="1611130255943" duration="1709000" />
-    </task>
-    <task id="LOCAL-00102" summary="restructuring interfaces folder">
-      <created>1609336475239</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1609336475239</updated>
+      <workItem from="1611130255943" duration="2224000" />
+      <workItem from="1611172208905" duration="2342000" />
     </task>
     <task id="LOCAL-00103" summary="ILinePlottingOptions.tsx interface">
       <created>1609337392893</created>
@@ -728,7 +704,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610998867714</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData">
+      <created>1611132559874</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1611132559874</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -736,7 +719,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlotHandler.tsx + unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx save options in Redux" />
     <MESSAGE value="LinePlottingOptions.tsx unit tests done" />
     <MESSAGE value="LineSeriesCreateVis.tsx + unit tests" />
@@ -761,7 +743,8 @@
     <MESSAGE value="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart" />
     <MESSAGE value="Updated AlertNotification.tsx to be a snackbar" />
     <MESSAGE value="Refactoring and unit tests for LineSeriesVis.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring and unit tests for LineSeriesVis.tsx" />
+    <MESSAGE value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

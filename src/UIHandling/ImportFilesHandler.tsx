@@ -16,26 +16,14 @@ export class ImportFilesHandler {
         const notifications = new NotificationsHandler();
         const importedDataErrors = this.getImportedDataErrors();
         notifications.concat(importedDataErrors);
-        if (notifications.isEmpty()) {
-            const analysedDataErrors = ImportFilesHandler.analyseData();
-            notifications.concat(analysedDataErrors);
-        }
         return notifications;
     }
     private getImportedDataErrors(): NotificationsHandler {
         const importData = new ImportFileData(this.importedFile);
         return importData.validate();
     }
-    private static analyseData(): NotificationsHandler {
-        const analyseData = new AnalyseIntervalData();
-        return analyseData.validateIntervalData();
-    }
     public resetImportedData() {
         const resetImportedData = new ResetImportedData();
         resetImportedData.resetImportedDataState();
-    }
-    public resetAnalysedData() {
-        const resetAnalysedData = new ResetAnalysedData();
-        resetAnalysedData.resetAnalysedData();
     }
 }
