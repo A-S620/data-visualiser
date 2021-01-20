@@ -19,13 +19,13 @@ export const resetImportedData = () => ({
 });
 
 //analysedData Slice
-export const addIntegerFields = (integerFields: Array<string>) => ({
+export const addIntegerFields = (intervalFields: Array<string>) => ({
     type: reducerActionTypes.INTEGER_FIELDS_ADDED,
-    payload: integerFields,
+    payload: intervalFields,
 });
-export const addIntegerDataObjects = (integerDataObjects: Array<object>) => ({
+export const addIntegerDataObjects = (intervalDataObjects: Array<object>) => ({
     type: reducerActionTypes.INTEGER_DATA_OBJECTS_ADDED,
-    payload: integerDataObjects,
+    payload: intervalDataObjects,
 });
 export const resetAnalysedData = () => ({
     type: reducerActionTypes.ANALYSED_DATA_SLICE_RESET,

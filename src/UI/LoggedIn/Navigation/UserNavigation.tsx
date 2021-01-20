@@ -47,7 +47,7 @@ function UserNavigation(props: any) {
         setTab(newValue);
     };
     function tabIsDisabled(): boolean {
-        return props.integerFields.length === 0 && props.integerDataObjects.length === 0;
+        return props.intervalFields.length === 0 && props.intervalDataObjects.length === 0;
     }
 
     return (
@@ -85,7 +85,7 @@ function UserNavigation(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    integerFields: state.analysedData.integerFields,
-    integerDataObjects: state.analysedData.integerDataObjects,
+    intervalFields: state.analysedData.intervalFields,
+    intervalDataObjects: state.analysedData.intervalDataObjects,
 });
 export default connect(mapStateToProps, {})(UserNavigation);

@@ -5,7 +5,7 @@ import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/
 import { LineSeriesCreateVis } from '../../../src/domain/LineSeriesVis/LineSeriesCreateVis';
 import { IImportedFileData } from '../../../src/interfaces/import/IImportedFileData';
 import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { AnalyseFileData } from '../../../src/domain/ImportedFile/AnalyseFileData';
+import { AnalyseIntervalData } from '../../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 //Test data
@@ -25,8 +25,8 @@ beforeAll(() => {
     const createImportedData = new CreateImportedData(testData);
     createImportedData.createDataFields();
     createImportedData.createDataAsObjects();
-    const analyseData = new AnalyseFileData();
-    analyseData.validate();
+    const analyseData = new AnalyseIntervalData();
+    analyseData.validateIntervalData();
 });
 describe('LineSeriesCreateVis domain component', () => {
     describe('Visualisation Options', () => {

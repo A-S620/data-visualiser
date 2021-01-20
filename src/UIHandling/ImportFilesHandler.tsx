@@ -1,7 +1,7 @@
 import { NotificationsHandler } from './NotificationsHandler';
 import { ImportFileData } from '../domain/ImportedFile/ImportFileData';
 import { IImportedFile } from '../interfaces/import/IImportedFile';
-import { AnalyseFileData } from '../domain/ImportedFile/AnalyseFileData';
+import { AnalyseIntervalData } from '../domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import ResetImportedData from '../domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
@@ -27,8 +27,8 @@ export class ImportFilesHandler {
         return importData.validate();
     }
     private static analyseData(): NotificationsHandler {
-        const analyseData = new AnalyseFileData();
-        return analyseData.validate();
+        const analyseData = new AnalyseIntervalData();
+        return analyseData.validateIntervalData();
     }
     public resetImportedData() {
         const resetImportedData = new ResetImportedData();

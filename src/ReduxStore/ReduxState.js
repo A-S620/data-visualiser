@@ -5,8 +5,8 @@ const ReduxState = {
         dataAsArrays: [],
     },
     analysedData: {
-        integerFields: [],
-        integerDataObjects: [],
+        intervalFields: [],
+        intervalDataObjects: [],
     },
     linePlotOptions: {},
     currentVisualisation: {},

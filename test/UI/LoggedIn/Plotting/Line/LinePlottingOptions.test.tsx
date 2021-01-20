@@ -7,9 +7,9 @@ import CreateAnalysedData from '../../../../../src/domain/ReduxStoreHandling/Ana
 import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
 //Test Data
-const integerFields = ['col1', 'col2'];
+const intervalFields = ['col1', 'col2'];
 
-const integerDataObjects = [
+const intervalDataObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },
     { col1: 76, col2: 23 },
@@ -78,9 +78,9 @@ describe('Line Plotting Options Component', () => {
     });
     describe('Integration with Redux store', () => {
         beforeAll(() => {
-            const createAnalysedData = new CreateAnalysedData(integerFields, integerDataObjects);
-            createAnalysedData.createIntegerFields();
-            createAnalysedData.createIntegerDataObjects();
+            const createAnalysedData = new CreateAnalysedData(intervalFields, intervalDataObjects);
+            createAnalysedData.createIntervalFields();
+            createAnalysedData.createIntervalDataObjects();
         });
         afterAll(() => {
             const resetAnalysedData = new ResetAnalysedData();
@@ -97,9 +97,9 @@ describe('Line Plotting Options Component', () => {
     });
     describe('Validation', () => {
         beforeAll(() => {
-            const createAnalysedData = new CreateAnalysedData(integerFields, integerDataObjects);
-            createAnalysedData.createIntegerFields();
-            createAnalysedData.createIntegerDataObjects();
+            const createAnalysedData = new CreateAnalysedData(intervalFields, intervalDataObjects);
+            createAnalysedData.createIntervalFields();
+            createAnalysedData.createIntervalDataObjects();
         });
         afterAll(() => {
             const resetAnalysedData = new ResetAnalysedData();
@@ -124,9 +124,9 @@ describe('Line Plotting Options Component', () => {
     });
     describe('Integration with Line Plot Handler', () => {
         beforeAll(() => {
-            const createAnalysedData = new CreateAnalysedData(integerFields, integerDataObjects);
-            createAnalysedData.createIntegerFields();
-            createAnalysedData.createIntegerDataObjects();
+            const createAnalysedData = new CreateAnalysedData(intervalFields, intervalDataObjects);
+            createAnalysedData.createIntervalFields();
+            createAnalysedData.createIntervalDataObjects();
         });
         afterAll(() => {
             const resetAnalysedData = new ResetAnalysedData();

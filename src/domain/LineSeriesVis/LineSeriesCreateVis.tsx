@@ -23,9 +23,9 @@ export class LineSeriesCreateVis {
         };
     }
     private createDefaultOptions(): ILinePlotCreateVis {
-        const { integerFields } = this.getAnalysedData();
+        const { intervalFields } = this.getAnalysedData();
         return {
-            data: this.createDataArray(integerFields[0], integerFields[1]),
+            data: this.createDataArray(intervalFields[0], intervalFields[1]),
             height: 800,
             width: 800,
             colour: '#000000',

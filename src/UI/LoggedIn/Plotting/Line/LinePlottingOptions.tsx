@@ -160,7 +160,7 @@ function LinePlottingOptions(props: any) {
                                     return `${value}`;
                                 }}
                             >
-                                {props.integerFields.map((integerField: string) => (
+                                {props.intervalFields.map((integerField: string) => (
                                     <option
                                         value={integerField}
                                         id={integerField + '-option'}
@@ -187,7 +187,7 @@ function LinePlottingOptions(props: any) {
                                 }}
                                 name="Y Values"
                             >
-                                {props.integerFields.map((integerField: string) => (
+                                {props.intervalFields.map((integerField: string) => (
                                     <option
                                         value={integerField}
                                         id={integerField + '-option'}
@@ -367,6 +367,6 @@ function LinePlottingOptions(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    integerFields: state.analysedData.integerFields,
+    intervalFields: state.analysedData.intervalFields,
 });
 export default connect(mapStateToProps, {})(LinePlottingOptions);

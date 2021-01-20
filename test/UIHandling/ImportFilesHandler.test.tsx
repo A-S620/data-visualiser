@@ -97,7 +97,7 @@ describe('ImportFilesHandler domain component', () => {
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
         const getAnalysedData = new GetAnalysedData();
-        expect(getAnalysedData.getAnalysedData().integerFields).toStrictEqual(['col1', 'col2']);
+        expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual(['col1', 'col2']);
     });
     it('should reset analysed data data', async () => {
         const importedFile: IImportedFile = {
@@ -108,6 +108,6 @@ describe('ImportFilesHandler domain component', () => {
         await importFile.validate();
         importFile.resetAnalysedData();
         const getAnalysedData = new GetAnalysedData();
-        expect(getAnalysedData.getAnalysedData().integerFields).toStrictEqual([]);
+        expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual([]);
     });
 });

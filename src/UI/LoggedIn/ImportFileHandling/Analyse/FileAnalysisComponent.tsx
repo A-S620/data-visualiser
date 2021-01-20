@@ -35,11 +35,11 @@ function calcIntColumnsPercentage(intColumns: number, allColumns: number): numbe
     }
     return Math.round((intColumns / allColumns) * 100);
 }
-function getExampleObject(integerDataObjects: Array<object>): Object {
-    if (integerDataObjects.length === 0) {
+function getExampleObject(intervalDataObjects: Array<object>): Object {
+    if (intervalDataObjects.length === 0) {
         return {};
     }
-    const [firstObject] = integerDataObjects;
+    const [firstObject] = intervalDataObjects;
     const objectToReturn: Object = {};
     for (const [key, value] of Object.entries(firstObject)) {
         // @ts-ignore
@@ -47,8 +47,8 @@ function getExampleObject(integerDataObjects: Array<object>): Object {
     }
     return objectToReturn;
 }
-function calcNumberOfIgnoredObjects(integerDataObjects: Array<object>, dataAsObjects: Array<object>): number {
-    const analysedDataLength = integerDataObjects.length;
+function calcNumberOfIgnoredObjects(intervalDataObjects: Array<object>, dataAsObjects: Array<object>): number {
+    const analysedDataLength = intervalDataObjects.length;
     const importedDataLength = dataAsObjects.length;
     return importedDataLength - analysedDataLength;
 }
@@ -77,7 +77,7 @@ function FileAnalysisComponent(props: any) {
                         color="primary"
                         thickness={7}
                         size={200}
-                        value={calcIntColumnsPercentage(props.integerFields.length, props.dataFields.length)}
+                        value={calcIntColumnsPercentage(props.intervalFields.length, props.dataFields.length)}
                     />
                     <Box
                         id={'circular-progress-text'}
@@ -91,7 +91,7 @@ function FileAnalysisComponent(props: any) {
                         justifyContent="center"
                     >
                         <Typography variant="h3" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
-                            props.integerFields.length,
+                            props.intervalFields.length,
                             props.dataFields.length
                         )}%`}</Typography>
                     </Box>
@@ -99,21 +99,21 @@ function FileAnalysisComponent(props: any) {
             </Box>
             <Box id="integer-columns" className={classes.boxSize}>
                 <Typography className={classes.statDescription}>Integer Columns:</Typography>
-                {props.integerFields.map((integerField: string) => (
+                {props.intervalFields.map((integerField: string) => (
                     <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
                 ))}
             </Box>
             <Box my={15} id="ignored-objects">
                 <Typography className={classes.statDescription}>Number of Ignored Data Objects:</Typography>
                 <Typography className={classes.statDescription}>
-                    {`${calcNumberOfIgnoredObjects(props.integerDataObjects, props.dataAsObjects)}`}
+                    {`${calcNumberOfIgnoredObjects(props.intervalDataObjects, props.dataAsObjects)}`}
                 </Typography>
             </Box>
             <Box id="example-object" className={classes.boxSize}>
                 <Typography className={classes.statDescription}>Example Data Object:</Typography>
                 <Box id={'json-object'}>
                     <ReactJson
-                        src={getExampleObject(props.integerDataObjects)}
+                        src={getExampleObject(props.intervalDataObjects)}
                         theme="summerfruit:inverted"
                         displayDataTypes={false}
                         displayObjectSize={false}
@@ -125,8 +125,8 @@ function FileAnalysisComponent(props: any) {
 }
 
 const mapStateToProps = (state: any) => ({
-    integerFields: state.analysedData.integerFields,
-    integerDataObjects: state.analysedData.integerDataObjects,
+    intervalFields: state.analysedData.intervalFields,
+    intervalDataObjects: state.analysedData.intervalDataObjects,
     dataFields: state.importedData.dataFields,
     dataAsObjects: state.importedData.dataAsObjects,
 });

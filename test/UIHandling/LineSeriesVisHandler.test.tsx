@@ -6,7 +6,7 @@ import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler'
 import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
 import { IImportedFileData } from '../../src/interfaces/import/IImportedFileData';
 import CreateImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { AnalyseFileData } from '../../src/domain/ImportedFile/AnalyseFileData';
+import { AnalyseIntervalData } from '../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
 //Test data
 const dataAsObjects = [
@@ -35,8 +35,8 @@ beforeAll(() => {
     const createImportedData = new CreateImportedData(testData);
     createImportedData.createDataFields();
     createImportedData.createDataAsObjects();
-    const analyseData = new AnalyseFileData();
-    analyseData.validate();
+    const analyseData = new AnalyseIntervalData();
+    analyseData.validateIntervalData();
     new CreateLinePlotOptions(testOptions).createLinePlotOptions();
 });
 afterAll(() => {

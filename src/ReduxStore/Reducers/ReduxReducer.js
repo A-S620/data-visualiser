@@ -43,7 +43,7 @@ export default function reduxReducer(state = ReduxState, action) {
                 ...state,
                 analysedData: {
                     ...state.analysedData,
-                    integerFields: action.payload,
+                    intervalFields: action.payload,
                 },
             };
         case ReducerActions.INTEGER_DATA_OBJECTS_ADDED:
@@ -51,14 +51,14 @@ export default function reduxReducer(state = ReduxState, action) {
                 ...state,
                 analysedData: {
                     ...state.analysedData,
-                    integerDataObjects: action.payload,
+                    intervalDataObjects: action.payload,
                 },
             };
         case ReducerActions.ANALYSED_DATA_SLICE_RESET:
             return {
                 analysedData: {
-                    integerFields: [],
-                    integerDataObjects: [],
+                    intervalFields: [],
+                    intervalDataObjects: [],
                 },
             };
 

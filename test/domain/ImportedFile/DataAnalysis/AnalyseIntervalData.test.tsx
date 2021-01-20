@@ -1,9 +1,9 @@
 import 'jsdom-global/register';
 
-import { AnalyseFileData } from '../../../src/domain/ImportedFile/AnalyseFileData';
-import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { IImportedFileData } from '../../../src/interfaces/import/IImportedFileData';
-import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import { AnalyseIntervalData } from '../../../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
+import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
+import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 //Test data
 const dataAsObjects = [
@@ -39,8 +39,8 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseFileData();
-        const notifications = analyseData.validate();
+        const analyseData = new AnalyseIntervalData();
+        const notifications = analyseData.validateIntervalData();
         expect(notifications.notification()).toEqual(
             "Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised"
         );
@@ -54,8 +54,8 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseFileData();
-        const notifications = analyseData.validate();
+        const analyseData = new AnalyseIntervalData();
+        const notifications = analyseData.validateIntervalData();
         expect(notifications.notification()).toEqual('');
     });
     it('should return a notification when all object sizes are not equal', () => {
@@ -67,8 +67,8 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseFileData();
-        const notifications = analyseData.validate();
+        const analyseData = new AnalyseIntervalData();
+        const notifications = analyseData.validateIntervalData();
         expect(notifications.notification()).toEqual(
             'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
         );
@@ -82,8 +82,8 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseFileData();
-        analyseData.validate();
+        const analyseData = new AnalyseIntervalData();
+        analyseData.validateIntervalData();
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().integerDataAsObjects).toStrictEqual([
             { col1: 79, col2: 5 },

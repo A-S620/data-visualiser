@@ -4,9 +4,9 @@ import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedD
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
 //Test Data
-const integerFields = ['col1', 'col2', 'col3'];
+const intervalFields = ['col1', 'col2', 'col3'];
 
-const integerDataObjects = [
+const intervalDataObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },
     { col1: 76, col2: 23 },
@@ -22,19 +22,19 @@ afterAll(() => {
     resetAnalysedData.resetAnalysedData();
 });
 describe('ResetAnalysedData domain component', () => {
-    it('Should return the correct integerFields if the getIntegerFields method is called', () => {
-        const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects);
-        createStoreHandler.createIntegerFields();
+    it('Should return the correct intervalFields if the getIntegerFields method is called', () => {
+        const createStoreHandler = new CreateAnalysedData(intervalFields, intervalDataObjects);
+        createStoreHandler.createIntervalFields();
         const getStoreHandler = new GetAnalysedData();
 
-        expect(getStoreHandler.getAnalysedData().integerFields).toStrictEqual(integerFields);
+        expect(getStoreHandler.getAnalysedData().intervalFields).toStrictEqual(intervalFields);
     });
 
     it('Should return the correct data as objects if the getIntegerDataObjects method is called', () => {
-        const createStoreHandler = new CreateAnalysedData(integerFields, integerDataObjects);
-        createStoreHandler.createIntegerDataObjects();
+        const createStoreHandler = new CreateAnalysedData(intervalFields, intervalDataObjects);
+        createStoreHandler.createIntervalDataObjects();
         const getStoreHandler = new GetAnalysedData();
 
-        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual(integerDataObjects);
+        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual(intervalDataObjects);
     });
 });

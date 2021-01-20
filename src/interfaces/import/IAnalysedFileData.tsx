@@ -1,4 +1,4 @@
 export interface IAnalysedFileData {
-    integerFields: Array<string>;
+    intervalFields: Array<string>;
     integerDataAsObjects: Array<object>;
 }

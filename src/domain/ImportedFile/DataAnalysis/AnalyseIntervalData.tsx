@@ -1,21 +1,21 @@
-import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
-import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
-import { store } from '../../ReduxStore/store';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
+import CreateAnalysedData from '../../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
+import { store } from '../../../ReduxStore/store';
 
-export class AnalyseFileData {
+export class AnalyseIntervalData {
     private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
-    private integerFields: Array<string> = [];
+    private intervalFields: Array<string> = [];
     private integerDataAsObjects: Array<object> = [];
-    public validate(): NotificationsHandler {
+    public validateIntervalData(): NotificationsHandler {
         const notifications: NotificationsHandler = new NotificationsHandler();
-        this.analyseData();
-        if (this.integerFields.length < 2) {
+        this.analyseIntervalData();
+        if (this.intervalFields.length < 2) {
             notifications.addNotification(
                 `Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised`
             );
             return notifications;
         }
-        if (this.integerFields.length >= 2) {
+        if (this.intervalFields.length >= 2) {
             notifications.concat(this.validateObjectsLength());
             this.createAnalysedData();
         }
@@ -26,9 +26,9 @@ export class AnalyseFileData {
         for (var objIndex = 0; objIndex < this.integerDataAsObjects.length; objIndex += 1) {
             const currentObject = this.integerDataAsObjects[objIndex];
             const currentObjectLength = Object.keys(currentObject).length;
-            if (currentObjectLength !== this.integerFields.length) {
+            if (currentObjectLength !== this.intervalFields.length) {
                 notifications.addNotification(
-                    `One or more of the objects has ${currentObjectLength} fields, instead of ${this.integerFields.length}. All other values in that column, on other rows are floats. These object will be ignored`
+                    `One or more of the objects has ${currentObjectLength} fields, instead of ${this.intervalFields.length}. All other values in that column, on other rows are floats. These object will be ignored`
                 );
                 this.removeInvalidObject(objIndex);
             }
@@ -39,21 +39,21 @@ export class AnalyseFileData {
         this.integerDataAsObjects.splice(index, 1);
     }
 
-    private analyseData(): Array<string> {
+    private analyseIntervalData(): Array<string> {
         for (var objIndex = 0; objIndex < this.dataAsObjects.length; objIndex += 1) {
             const objectToAdd: Object = {};
             // eslint-disable-next-line prefer-destructuring
             const currentObject: Object = this.dataAsObjects[objIndex];
             for (const [key, value] of Object.entries(currentObject)) {
-                if (AnalyseFileData.dataIsFloat(value) && AnalyseFileData.dataIsNotIPAddress(value)) {
+                if (AnalyseIntervalData.dataIsFloat(value) && AnalyseIntervalData.dataIsNotIPAddress(value)) {
                     // @ts-ignore
-                    objectToAdd[key] = AnalyseFileData.convertDataToFloat(value);
+                    objectToAdd[key] = AnalyseIntervalData.convertDataToFloat(value);
                     this.addKeyToIntegerFields(key);
                 }
             }
             this.integerDataAsObjects.push(objectToAdd);
         }
-        return this.integerFields;
+        return this.intervalFields;
     }
     private static dataIsNotIPAddress(data: string): boolean {
         let decimalPointCount = 0;
@@ -72,16 +72,16 @@ export class AnalyseFileData {
         return parseFloat(data);
     }
     private addKeyToIntegerFields(key: string) {
-        for (let index = 0; index < this.integerFields.length; index += 1) {
-            if (this.integerFields[index] === key) {
+        for (let index = 0; index < this.intervalFields.length; index += 1) {
+            if (this.intervalFields[index] === key) {
                 return;
             }
         }
-        this.integerFields.push(key);
+        this.intervalFields.push(key);
     }
     private createAnalysedData() {
-        const createAnalysedData = new CreateAnalysedData(this.integerFields, this.integerDataAsObjects);
-        createAnalysedData.createIntegerDataObjects();
-        createAnalysedData.createIntegerFields();
+        const createAnalysedData = new CreateAnalysedData(this.intervalFields, this.integerDataAsObjects);
+        createAnalysedData.createIntervalDataObjects();
+        createAnalysedData.createIntervalFields();
     }
 }

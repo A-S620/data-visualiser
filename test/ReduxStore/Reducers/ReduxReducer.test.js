@@ -17,7 +17,7 @@ const dataAsObjects = [
 ];
 const dataFields = ['col1', 'col2', 'col3'];
 
-const integerDataObjects = [
+const intervalDataObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },
     { col1: 76, col2: 23 },
@@ -81,23 +81,23 @@ describe('ReduxReducer', () => {
     describe('Analysed data slice', () => {
         const analysedDataSlice = {
             analysedData: {
-                integerFields: [],
-                integerDataObjects: [],
+                intervalFields: [],
+                intervalDataObjects: [],
             },
         };
         it('Should handle INTEGER_FIELDS_ADDED', () => {
             expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerFields(dataFields))).toEqual({
                 analysedData: {
-                    integerFields: dataFields,
-                    integerDataObjects: [],
+                    intervalFields: dataFields,
+                    intervalDataObjects: [],
                 },
             });
         });
         it('Should handle INTEGER_DATA_OBJECTS_ADDED', () => {
-            expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerDataObjects(integerDataObjects))).toEqual({
+            expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerDataObjects(intervalDataObjects))).toEqual({
                 analysedData: {
-                    integerFields: [],
-                    integerDataObjects: integerDataObjects,
+                    intervalFields: [],
+                    intervalDataObjects: intervalDataObjects,
                 },
             });
         });
@@ -107,8 +107,8 @@ describe('ReduxReducer', () => {
                     [
                         {
                             analysedData: {
-                                integerFields: [],
-                                integerDataObjects: integerDataObjects,
+                                intervalFields: [],
+                                intervalDataObjects: intervalDataObjects,
                             },
                         },
                     ],
