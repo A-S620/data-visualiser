@@ -67,7 +67,7 @@ function FileTypes(props: any) {
                         <TableHead>
                             <TableRow>
                                 <TableCell>Field Name</TableCell>
-                                <TableCell>Field Type</TableCell>
+                                <TableCell align={'center'}>Field Type</TableCell>
                             </TableRow>
                         </TableHead>
                         {props.dataFields.map((value: string) => (
@@ -85,6 +85,7 @@ function FileTypes(props: any) {
                                             <option value={FieldTypes.UNARY}>Unary</option>
                                             <option value={FieldTypes.TIME}>Time</option>
                                             <option value={FieldTypes.DATE}>Date</option>
+                                            <option value={FieldTypes.IGNORE}>Ignore</option>
                                         </Select>
                                     </FormControl>
                                 </TableCell>

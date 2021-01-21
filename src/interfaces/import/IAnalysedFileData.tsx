@@ -10,4 +10,5 @@ export enum FieldTypes {
     UNARY = 'unary',
     TIME = 'time',
     DATE = 'date',
+    IGNORE = 'ignore',
 }

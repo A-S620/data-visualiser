@@ -63,10 +63,8 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
             minWidth: '10%',
         },
         dialogPaper: {
-            minHeight: '300px',
-            maxHeight: '700px',
-            minWidth: '500px',
-            maxWidth: '700px',
+            width: '500px',
+            height: '700px',
         },
     }));
     constructor(props: object) {
@@ -167,7 +165,18 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                         this.setState({ fieldTypesDialogOpen: false });
                     }}
                 >
-                    <FieldTypes />
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        flexDirection="column"
+                        alignItems="center"
+                        className={this.classes.root}
+                        id={'import-file-component'}
+                        my={15}
+                        mx={15}
+                    >
+                        <FieldTypes />{' '}
+                    </Box>
                 </Dialog>
                 <Box
                     display="flex"

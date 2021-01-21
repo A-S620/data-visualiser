@@ -353,14 +353,8 @@
       <workItem from="1610996993308" duration="2281000" />
       <workItem from="1611130255943" duration="2224000" />
       <workItem from="1611172208905" duration="4395000" />
-      <workItem from="1611215968095" duration="2684000" />
-    </task>
-    <task id="LOCAL-00105" summary="LinePlottingOptions.tsx&#10;Started to create state for LinePlottingOptions.tsx">
-      <created>1609339158343</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1609339158343</updated>
+      <workItem from="1611215968095" duration="2767000" />
+      <workItem from="1611257451644" duration="596000" />
     </task>
     <task id="LOCAL-00106" summary="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects">
       <created>1609405260875</created>
@@ -698,7 +692,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611176791767</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain">
+      <created>1611218778556</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1611218778556</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +707,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LineSeriesCreateVis.tsx + unit tests" />
     <MESSAGE value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
     <MESSAGE value="Ran nmp audit fix command" />
     <MESSAGE value="Updating dependencies" />
@@ -731,7 +731,8 @@
     <MESSAGE value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
     <MESSAGE value="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests" />
     <MESSAGE value="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx" />
+    <MESSAGE value="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain" />
+    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
