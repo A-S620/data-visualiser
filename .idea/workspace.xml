@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/FieldsHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/import/IFields.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/FieldsHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/import/IAnalysedFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/import/IAnalysedFileData.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +135,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -354,14 +366,7 @@
       <workItem from="1611130255943" duration="2224000" />
       <workItem from="1611172208905" duration="4395000" />
       <workItem from="1611215968095" duration="2767000" />
-      <workItem from="1611257451644" duration="596000" />
-    </task>
-    <task id="LOCAL-00106" summary="LinePlottingOptions.tsx&#10;Save state for options&#10;added options to selects">
-      <created>1609405260875</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1609405260875</updated>
+      <workItem from="1611257451644" duration="3760000" />
     </task>
     <task id="LOCAL-00107" summary="PlottingNav.tsx unit tests">
       <created>1609406003510</created>
@@ -699,7 +704,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611218778556</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="FieldTypes.tsx UI Component layout + dialog layout">
+      <created>1611258171931</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1611258171932</updated>
+    </task>
+    <option name="localTasksCounter" value="156" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +719,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx" />
     <MESSAGE value="Ran nmp audit fix command" />
     <MESSAGE value="Updating dependencies" />
     <MESSAGE value="Remove destructuring rule from .eslintrc.json" />
@@ -732,7 +743,8 @@
     <MESSAGE value="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests" />
     <MESSAGE value="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx" />
     <MESSAGE value="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain" />
-    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain" />
+    <MESSAGE value="FieldTypes.tsx UI Component layout + dialog layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes.tsx UI Component layout + dialog layout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

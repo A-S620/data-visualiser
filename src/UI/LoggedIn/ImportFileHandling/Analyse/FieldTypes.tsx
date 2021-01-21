@@ -19,6 +19,7 @@ import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { FieldTypes } from '../../../../interfaces/import/IAnalysedFileData';
 import { TableContainer } from '@material-ui/core';
+import { IFields } from '../../../../interfaces/import/IFields';
 const useStyles = makeStyles((theme) => ({
     paper: {
         height: '100%',
@@ -50,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function FileTypes(props: any) {
     const classes = useStyles();
+    const [fields, setFields] = React.useState([]);
     return (
         <Box display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start" id="field-types">
             <Box
@@ -76,8 +78,16 @@ function FileTypes(props: any) {
                                     {value}
                                 </TableCell>
                                 <TableCell>
-                                    <FormControl style={{ minWidth: 150 }} id={value + '-field-type-select'}>
-                                        <Select>
+                                    <FormControl style={{ minWidth: 150 }}>
+                                        <Select
+                                            id={value + '-field-type-select'}
+                                            onChange={(event) => {
+                                                const fieldToAdd = {
+                                                    fields: value,
+                                                    fieldType: event.target.value as FieldTypes,
+                                                };
+                                            }}
+                                        >
                                             <option value={FieldTypes.INTERVAL}>Interval</option>
                                             <option value={FieldTypes.NOMINAL}>Nominal</option>
                                             <option value={FieldTypes.ORDINAL}>Ordinal</option>
