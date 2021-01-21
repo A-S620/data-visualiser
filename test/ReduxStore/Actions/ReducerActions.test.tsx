@@ -2,6 +2,8 @@ import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions'
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 import { ILinePlotCreateVis } from '../../../src/interfaces/plotting/ILinePlotCreateVis';
+import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
+import { IField } from '../../../src/interfaces/import/IField';
 
 //Test Data
 const dataAsArrays = [
@@ -16,6 +18,7 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+const fields: Array<IField> = [{ field: { field: 'col1', fieldType: FieldTypes.INTERVAL } }];
 const intervalDataObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },
@@ -52,6 +55,13 @@ describe('Reducer actions', () => {
         });
     });
     describe('Analysed data actions', () => {
+        it('Should create an action to add the fields', () => {
+            const expectedAction = {
+                type: actionTypes.FIELDS_ADDED,
+                payload: fields,
+            };
+            expect(reducerActions.addFields(fields)).toEqual(expectedAction);
+        });
         it('Should create an action to add the intervalFields', () => {
             const expectedAction = {
                 type: actionTypes.INTEGER_FIELDS_ADDED,

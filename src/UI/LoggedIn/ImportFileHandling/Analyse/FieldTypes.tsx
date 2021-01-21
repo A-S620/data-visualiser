@@ -19,7 +19,7 @@ import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { FieldTypes } from '../../../../interfaces/import/IAnalysedFileData';
 import { TableContainer } from '@material-ui/core';
-import { IFields } from '../../../../interfaces/import/IFields';
+import { IField } from '../../../../interfaces/import/IField';
 const useStyles = makeStyles((theme) => ({
     paper: {
         height: '100%',

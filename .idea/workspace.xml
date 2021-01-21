@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/FieldsHandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/import/IFields.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/FieldsHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/FieldsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/FieldsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/import/IFields.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/import/IField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/FieldsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/FieldsHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,14 +370,7 @@
       <workItem from="1611130255943" duration="2224000" />
       <workItem from="1611172208905" duration="4395000" />
       <workItem from="1611215968095" duration="2767000" />
-      <workItem from="1611257451644" duration="3760000" />
-    </task>
-    <task id="LOCAL-00107" summary="PlottingNav.tsx unit tests">
-      <created>1609406003510</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1609406003510</updated>
+      <workItem from="1611257451644" duration="4854000" />
     </task>
     <task id="LOCAL-00108" summary="LinePlottingOptions.tsx&#10;Unit tests on selects and textfields present&#10;Need to test functionality">
       <created>1609408219092</created>
@@ -711,7 +708,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611258171932</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="FieldsHandler.tsx + unit tests">
+      <created>1611261296576</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1611261296576</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -719,7 +723,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Ran nmp audit fix command" />
     <MESSAGE value="Updating dependencies" />
     <MESSAGE value="Remove destructuring rule from .eslintrc.json" />
     <MESSAGE value="Minor Change" />
@@ -744,7 +747,8 @@
     <MESSAGE value="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx" />
     <MESSAGE value="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain" />
     <MESSAGE value="FieldTypes.tsx UI Component layout + dialog layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes.tsx UI Component layout + dialog layout" />
+    <MESSAGE value="FieldsHandler.tsx + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="FieldsHandler.tsx + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,6 +5,7 @@ const ReduxState = {
         dataAsArrays: [],
     },
     analysedData: {
+        fields: [],
         intervalFields: [],
         intervalDataObjects: [],
     },

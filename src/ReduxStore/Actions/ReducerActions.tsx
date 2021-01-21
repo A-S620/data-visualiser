@@ -1,6 +1,7 @@
 import * as reducerActionTypes from './ReducerActionTypes';
 import { ILinePlotOptions } from '../../interfaces/plotting/ILinePlotOptions';
 import { ILinePlotCreateVis } from '../../interfaces/plotting/ILinePlotCreateVis';
+import { IField } from '../../interfaces/import/IField';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -19,6 +20,10 @@ export const resetImportedData = () => ({
 });
 
 //analysedData Slice
+export const addFields = (fields: Array<IField>) => ({
+    type: reducerActionTypes.FIELDS_ADDED,
+    payload: fields,
+});
 export const addIntegerFields = (intervalFields: Array<string>) => ({
     type: reducerActionTypes.INTEGER_FIELDS_ADDED,
     payload: intervalFields,
