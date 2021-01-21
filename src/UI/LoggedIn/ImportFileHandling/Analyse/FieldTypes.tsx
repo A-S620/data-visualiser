@@ -1,7 +1,24 @@
 import React from 'react';
-import { Box, CssBaseline, Typography, CircularProgress, Chip, Grid } from '@material-ui/core';
+import {
+    Box,
+    CssBaseline,
+    Typography,
+    CircularProgress,
+    Chip,
+    Grid,
+    ListItem,
+    Select,
+    FormControl,
+    Table,
+    Paper,
+    TableHead,
+    TableCell,
+    TableRow,
+} from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
+import { FieldTypes } from '../../../../interfaces/import/IAnalysedFileData';
+import { TableContainer } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     paper: {
         height: '100%',
@@ -25,25 +42,56 @@ const useStyles = makeStyles((theme) => ({
         textColor: theme.palette.text.primary,
     },
     boxSize: {
-        maxWidth: '300px',
+        maxWidth: '500px',
+    },
+    table: {
+        minWidth: 350,
     },
 }));
 function FileTypes(props: any) {
     const classes = useStyles();
     return (
-        <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            id="file-analysis"
-            className={classes.boxSize}
-        >
-            <Box id="all-fields">
-                <Typography className={classes.statDescription}>All Fields:</Typography>
-                {props.dataFields.map((value: string) => {
-                    <Typography>{value}</Typography>;
-                })}
+        <Box display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start" id="field-types">
+            <Box
+                id="all-fields"
+                display="flex"
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+                mx={10}
+                my={10}
+            >
+                <Typography className={classes.statDescription}>Select Field Types:</Typography>
+                <TableContainer component={Paper}>
+                    <Table className={classes.table}>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Field Name</TableCell>
+                                <TableCell>Field Type</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        {props.dataFields.map((value: string) => (
+                            <TableRow key={value + '-row'}>
+                                <TableCell component="th" scope="row" id={value + '-field'}>
+                                    {value}
+                                </TableCell>
+                                <TableCell>
+                                    <FormControl style={{ minWidth: 150 }} id={value + '-field-type-select'}>
+                                        <Select>
+                                            <option value={FieldTypes.INTERVAL}>Interval</option>
+                                            <option value={FieldTypes.NOMINAL}>Nominal</option>
+                                            <option value={FieldTypes.ORDINAL}>Ordinal</option>
+                                            <option value={FieldTypes.BINARY}>Binary</option>
+                                            <option value={FieldTypes.UNARY}>Unary</option>
+                                            <option value={FieldTypes.TIME}>Time</option>
+                                            <option value={FieldTypes.DATE}>Date</option>
+                                        </Select>
+                                    </FormControl>
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </Table>
+                </TableContainer>
             </Box>
         </Box>
     );

@@ -11,6 +11,7 @@ import {
     Tooltip,
     Dialog,
     DialogContent,
+    ClickAwayListener,
 } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
@@ -60,6 +61,12 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
         },
         space: {
             minWidth: '10%',
+        },
+        dialogPaper: {
+            minHeight: '300px',
+            maxHeight: '700px',
+            minWidth: '500px',
+            maxWidth: '700px',
         },
     }));
     constructor(props: object) {
@@ -152,76 +159,84 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
     }
     public render() {
         return (
-            <Box
-                display="flex"
-                justifyContent="center"
-                flexDirection="column"
-                alignItems="center"
-                className={this.classes.root}
-                id={'import-file-component'}
-                my={15}
-                mx={15}
-            >
-                <Dialog open={this.state.fieldTypesDialogOpen}>
+            <main>
+                <Dialog
+                    open={this.state.fieldTypesDialogOpen}
+                    classes={{ paper: this.classes.dialogPaper }}
+                    onBackdropClick={() => {
+                        this.setState({ fieldTypesDialogOpen: false });
+                    }}
+                >
                     <FieldTypes />
                 </Dialog>
-                <Box style={{ height: '50%', width: '50%' }} my={15} id={'alert-area'}>
-                    {this.state.outcome && (
-                        <AlertNotification alert={this.state.outcome} notification={this.state.outcomeMessage} />
-                    )}
-                    {!this.state.errors.isEmpty() && (
-                        <AlertNotification
-                            alert={AlertType.FAILED}
-                            notification={`Error(s): ${this.state.errors.notification()}`}
-                        />
-                    )}
-                </Box>
                 <Box
                     display="flex"
-                    flexDirection="row"
                     justifyContent="center"
-                    alignItems="flex-start"
-                    className={this.classes.componentArea}
+                    flexDirection="column"
+                    alignItems="center"
+                    className={this.classes.root}
+                    id={'import-file-component'}
+                    my={15}
+                    mx={15}
                 >
-                    <Box id="drop-zone-area" mx={15} my={15}>
-                        <Tooltip title="Delete Imported File from system">
-                            <IconButton
-                                color="primary"
-                                style={{ marginRight: 10, borderRadius: '5em' }}
-                                id="delete-import-button"
-                                disabled={this.state.submitButtonDisabled}
-                                onClick={() => {
-                                    this.resetFiles();
-                                }}
-                            >
-                                <DeleteIcon />
-                            </IconButton>
-                        </Tooltip>
-                        <DropzoneArea
-                            showPreviews={true}
-                            onChange={async (files) => {
-                                await this.addFiles(files);
-                                await this.uploadFiles();
-                            }}
-                            showPreviewsInDropzone={false}
-                            useChipsForPreview
-                            previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
-                            previewChipProps={{ classes: { root: this.classes.previewChip } }}
-                            previewText="Selected files"
-                            showAlerts={false}
-                            // clearOnUnmount={true}
-                            acceptedFiles={['text/csv']}
-                            filesLimit={1}
-                        />
-
-                        <ImportedFileStats {...this.state.importedFileStats} />
+                    <Box style={{ height: '50%', width: '50%' }} my={15} id={'alert-area'}>
+                        {this.state.outcome && (
+                            <AlertNotification alert={this.state.outcome} notification={this.state.outcomeMessage} />
+                        )}
+                        {!this.state.errors.isEmpty() && (
+                            <AlertNotification
+                                alert={AlertType.FAILED}
+                                notification={`Error(s): ${this.state.errors.notification()}`}
+                            />
+                        )}
                     </Box>
-                    <Box mx={15} my={15}>
-                        <Divider orientation="vertical" flexItem className={this.classes.verticalLine} />
-                        <FileAnalysisComponent />
+                    <Box
+                        display="flex"
+                        flexDirection="row"
+                        justifyContent="center"
+                        alignItems="flex-start"
+                        className={this.classes.componentArea}
+                    >
+                        <Box id="drop-zone-area" mx={15} my={15}>
+                            <Tooltip title="Delete Imported File from system">
+                                <IconButton
+                                    color="primary"
+                                    style={{ marginRight: 10, borderRadius: '5em' }}
+                                    id="delete-import-button"
+                                    disabled={this.state.submitButtonDisabled}
+                                    onClick={() => {
+                                        this.resetFiles();
+                                    }}
+                                >
+                                    <DeleteIcon />
+                                </IconButton>
+                            </Tooltip>
+                            <DropzoneArea
+                                showPreviews={true}
+                                onChange={async (files) => {
+                                    await this.addFiles(files);
+                                    await this.uploadFiles();
+                                }}
+                                showPreviewsInDropzone={false}
+                                useChipsForPreview
+                                previewGridProps={{ container: { spacing: 1, direction: 'row' } }}
+                                previewChipProps={{ classes: { root: this.classes.previewChip } }}
+                                previewText="Selected files"
+                                showAlerts={false}
+                                // clearOnUnmount={true}
+                                acceptedFiles={['text/csv']}
+                                filesLimit={1}
+                            />
+
+                            <ImportedFileStats {...this.state.importedFileStats} />
+                        </Box>
+                        <Box mx={15} my={15}>
+                            <Divider orientation="vertical" flexItem className={this.classes.verticalLine} />
+                            <FileAnalysisComponent />
+                        </Box>
                     </Box>
                 </Box>
-            </Box>
+            </main>
         );
     }
 }
