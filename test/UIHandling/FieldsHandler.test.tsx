@@ -1,5 +1,5 @@
 import { FieldsHandler } from '../../src/UIHandling/FieldsHandler';
-import { IField } from '../../src/interfaces/import/IField';
+import { IFields } from '../../src/interfaces/import/IFields';
 import { FieldTypes } from '../../src/interfaces/import/IAnalysedFileData';
 import { IImportedFile } from '../../src/interfaces/import/IImportedFile';
 import { ImportFilesHandler } from '../../src/UIHandling/ImportFilesHandler';
@@ -15,8 +15,8 @@ beforeAll(() => {
 });
 describe('FieldsHandler domain component', () => {
     it('Should return a notification if the fields are empty', () => {
-        const field: IField = { field: { field: 'test', fieldType: FieldTypes.IGNORE } };
-        const fieldsHandler = new FieldsHandler([field]);
+        const fieldObject = { field: 'test', fieldType: FieldTypes.IGNORE };
+        const fieldsHandler = new FieldsHandler({ field: [fieldObject] });
         expect(fieldsHandler.validateFields().notification()).toEqual(
             'Field types have not been selected for all fields'
         );

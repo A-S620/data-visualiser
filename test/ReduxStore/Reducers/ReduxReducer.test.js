@@ -2,6 +2,8 @@ import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions'
 import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
+import { IFields } from '../../../src/interfaces/import/IFields';
+import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
 
 //Test Data
 const dataAsArrays = [
@@ -16,6 +18,7 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+const field = { field: { field: 'col1', fieldType: FieldTypes.INTERVAL } };
 
 const intervalDataObjects = [
     { col1: 32, col2: 45 },
@@ -81,13 +84,24 @@ describe('ReduxReducer', () => {
     describe('Analysed data slice', () => {
         const analysedDataSlice = {
             analysedData: {
+                fields: [],
                 intervalFields: [],
                 intervalDataObjects: [],
             },
         };
+        it('Should handle FIELDS_ADDED', () => {
+            expect(reduxReducer(analysedDataSlice, reducerActions.addFields(field))).toEqual({
+                analysedData: {
+                    fields: field,
+                    intervalFields: [],
+                    intervalDataObjects: [],
+                },
+            });
+        });
         it('Should handle INTEGER_FIELDS_ADDED', () => {
             expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerFields(dataFields))).toEqual({
                 analysedData: {
+                    fields: [],
                     intervalFields: dataFields,
                     intervalDataObjects: [],
                 },
@@ -96,6 +110,7 @@ describe('ReduxReducer', () => {
         it('Should handle INTEGER_DATA_OBJECTS_ADDED', () => {
             expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerDataObjects(intervalDataObjects))).toEqual({
                 analysedData: {
+                    fields: [],
                     intervalFields: [],
                     intervalDataObjects: intervalDataObjects,
                 },
@@ -107,6 +122,7 @@ describe('ReduxReducer', () => {
                     [
                         {
                             analysedData: {
+                                fields: [],
                                 intervalFields: [],
                                 intervalDataObjects: intervalDataObjects,
                             },
