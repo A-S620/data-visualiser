@@ -1,19 +1,23 @@
 import { store } from '../../../ReduxStore/store';
-import { addIntegerDataObjects, addIntegerFields } from '../../../ReduxStore/Actions/ReducerActions';
+import { addFields, addIntegerDataObjects, addIntegerFields } from '../../../ReduxStore/Actions/ReducerActions';
+import { IFields } from '../../../interfaces/import/IFields';
 
 export default class CreateAnalysedData {
+    private fields: any;
     private intervalFields: any;
     private intervalDataObjects: any;
-    constructor(intervalFields: Array<string>, intervalDataObjects: Array<object>) {
+    constructor(fields: IFields, intervalFields: Array<string>, intervalDataObjects: Array<object>) {
+        this.fields = fields;
         this.intervalFields = intervalFields;
         this.intervalDataObjects = intervalDataObjects;
     }
-    //create intervalFields in store
     public createIntervalFields() {
         store.dispatch(addIntegerFields(this.intervalFields));
     }
-    //create data as objects in store
     public createIntervalDataObjects() {
         store.dispatch(addIntegerDataObjects(this.intervalDataObjects));
+    }
+    public createFields() {
+        store.dispatch(addFields(this.fields));
     }
 }

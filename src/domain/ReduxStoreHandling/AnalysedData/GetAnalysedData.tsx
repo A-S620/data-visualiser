@@ -8,8 +8,12 @@ export default class GetAnalysedData {
     private static getIntegerDataObjects(): Array<object> {
         return store.getState().analysedData.intervalDataObjects;
     }
+    private static getFields(): Array<object> {
+        return store.getState().analysedData.fields;
+    }
     public getAnalysedData(): IAnalysedFileData {
         return {
+            fields: GetAnalysedData.getFields(),
             intervalFields: GetAnalysedData.getIntegerFields(),
             integerDataAsObjects: GetAnalysedData.getIntegerDataObjects(),
         };
