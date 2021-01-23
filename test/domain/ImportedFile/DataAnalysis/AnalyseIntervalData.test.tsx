@@ -12,52 +12,15 @@ const dataAsObjects = [
     { col1: '76', col2: '23', col3: 'foo' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+const intervalFields = ['col1', 'col2'];
 const dataAsObjects2 = [
     { col1: '32', col2: 'cool', col3: 'foo' },
     { col1: '79', col2: '5', col3: 'foo' },
     { col1: '76', col2: '23', col3: 'foo' },
 ];
 const dataFields2 = ['col1', 'col2', 'col3'];
-const dataWithoutFloats = [
-    {
-        id: '1',
-        first_name: 'Jeanette',
-        last_name: 'Penddreth',
-        email: 'jpenddreth0@census.gov',
-        gender: 'Female',
-        ip_address: '26.58.193.2',
-    },
-];
-const dataWithoutFloatsFields = ['id', 'first_name', 'last_name', 'email', 'gender', 'ip_address'];
-describe('Analyse Data', () => {
-    it('Should return a notification when there are no integer fields in the data', () => {
-        const testData: IImportedFileData = {
-            dataFields: dataWithoutFloatsFields,
-            dataAsObjects: dataWithoutFloats,
-            dataAsArrays: [],
-        };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseIntervalData();
-        const notifications = analyseData.validateIntervalData();
-        expect(notifications.notification()).toEqual(
-            "Imported Data doesn't contain more than 2 integer fields, so it cannot be visualised"
-        );
-    });
-    it('Should not return a notification when there 2 or more integer fields in the data', () => {
-        const testData: IImportedFileData = {
-            dataFields: dataFields,
-            dataAsObjects: dataAsObjects,
-            dataAsArrays: [],
-        };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseIntervalData();
-        const notifications = analyseData.validateIntervalData();
-        expect(notifications.notification()).toEqual('');
-    });
+const intervalFields2 = ['col1', 'col2'];
+describe('AnalyseIntervalData domain component', () => {
     it('should return a notification when all object sizes are not equal', () => {
         const testData: IImportedFileData = {
             dataFields: dataFields2,
@@ -67,7 +30,7 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseIntervalData();
+        const analyseData = new AnalyseIntervalData(intervalFields2);
         const notifications = analyseData.validateIntervalData();
         expect(notifications.notification()).toEqual(
             'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
@@ -82,10 +45,9 @@ describe('Analyse Data', () => {
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
-        const analyseData = new AnalyseIntervalData();
+        const analyseData = new AnalyseIntervalData(intervalFields2);
         analyseData.validateIntervalData();
-        const getAnalysedData = new GetAnalysedData();
-        expect(getAnalysedData.getAnalysedData().integerDataAsObjects).toStrictEqual([
+        expect(analyseData.getAnalysedIntervalData().intervalDataAsObjects).toStrictEqual([
             { col1: 79, col2: 5 },
             { col1: 76, col2: 23 },
         ]);

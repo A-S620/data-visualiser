@@ -8,6 +8,8 @@ import { IImportedFileData } from '../../src/interfaces/import/IImportedFileData
 import CreateImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseIntervalData } from '../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
+import { AnalyseFileData } from '../../src/domain/ImportedFile/AnalyseFileData';
+import { FieldTypes } from '../../src/interfaces/import/IAnalysedFileData';
 //Test data
 const dataAsObjects = [
     { col1: '32', col2: 'cool', col3: 'foo' },
@@ -15,6 +17,7 @@ const dataAsObjects = [
     { col1: '76', col2: '23', col3: 'foo' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
+const intervalFields = ['col1', 'col2'];
 const testOptions: ILinePlotOptions = {
     xValue: 'col1',
     yValue: 'col2',
@@ -35,8 +38,12 @@ beforeAll(() => {
     const createImportedData = new CreateImportedData(testData);
     createImportedData.createDataFields();
     createImportedData.createDataAsObjects();
-    const analyseData = new AnalyseIntervalData();
-    analyseData.validateIntervalData();
+    const analyseData = new AnalyseFileData([
+        { field: 'col1', fieldType: FieldTypes.INTERVAL },
+        { field: 'col2', fieldType: FieldTypes.INTERVAL },
+        { field: 'col3', fieldType: FieldTypes.IGNORE },
+    ]);
+    analyseData.validateAnalysedData();
     new CreateLinePlotOptions(testOptions).createLinePlotOptions();
 });
 afterAll(() => {

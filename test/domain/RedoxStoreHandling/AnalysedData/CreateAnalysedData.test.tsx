@@ -8,7 +8,7 @@ import { FieldTypes, IAnalysedFileData } from '../../../../src/interfaces/import
 //Test Data
 const intervalFields = ['col1', 'col2'];
 
-const integerDataAsObjects = [
+const intervalDataAsObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },
     { col1: 76, col2: 23 },
@@ -18,7 +18,7 @@ const fields = [{ field: 'col1', fieldType: FieldTypes.INTERVAL }];
 const analysedFileData: IAnalysedFileData = {
     fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
     intervalFields: ['col1', 'col2'],
-    integerDataAsObjects: [
+    intervalDataAsObjects: [
         { col1: 32, col2: 45 },
         { col1: 79, col2: 5 },
         { col1: 76, col2: 23 },
@@ -45,7 +45,7 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual(integerDataAsObjects);
+        expect(getStoreHandler.getAnalysedData().intervalDataAsObjects).toStrictEqual(intervalDataAsObjects);
     });
     it('Should fields to the fields attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);

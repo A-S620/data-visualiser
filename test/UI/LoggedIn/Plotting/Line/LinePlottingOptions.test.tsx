@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
+import { AnalyseFileData } from '../../../../../src/domain/ImportedFile/AnalyseFileData';
+import { FieldTypes, IAnalysedFileData } from '../../../../../src/interfaces/import/IAnalysedFileData';
 //Test Data
 const intervalFields = ['col1', 'col2'];
 
@@ -24,7 +26,26 @@ beforeEach(
         ))
 );
 afterEach(() => wrapper.unmount());
+beforeAll(() => {
+    const analysedFileData: IAnalysedFileData = {
+        fields: [
+            { field: 'col1', fieldType: FieldTypes.INTERVAL },
+            { field: 'col2', fieldType: FieldTypes.INTERVAL },
+            { field: 'col3', fieldType: FieldTypes.IGNORE },
+        ],
+        intervalDataAsObjects: intervalDataObjects,
+        intervalFields: intervalFields,
+    };
+    const createAnalysedFileData = new CreateAnalysedData(analysedFileData);
 
+    createAnalysedFileData.createFields();
+    createAnalysedFileData.createIntervalDataObjects();
+    createAnalysedFileData.createIntervalFields();
+});
+afterAll(() => {
+    const resetAnalysedData = new ResetAnalysedData();
+    resetAnalysedData.resetAnalysedData();
+});
 describe('Line Plotting Options Component', () => {
     describe('UI Components', () => {
         it('Should have the correct title', () => {
@@ -77,15 +98,6 @@ describe('Line Plotting Options Component', () => {
         });
     });
     describe('Integration with Redux store', () => {
-        beforeAll(() => {
-            const createAnalysedData = new CreateAnalysedData(intervalFields, intervalDataObjects);
-            createAnalysedData.createIntervalFields();
-            createAnalysedData.createIntervalDataObjects();
-        });
-        afterAll(() => {
-            const resetAnalysedData = new ResetAnalysedData();
-            resetAnalysedData.resetAnalysedData();
-        });
         it('Should allow the first column to get selected in the xValues select', async () => {
             await selectXVal('col2');
             expect(wrapper.find('input').at(0).props().value).toBe('col2');
@@ -96,15 +108,6 @@ describe('Line Plotting Options Component', () => {
         });
     });
     describe('Validation', () => {
-        beforeAll(() => {
-            const createAnalysedData = new CreateAnalysedData(intervalFields, intervalDataObjects);
-            createAnalysedData.createIntervalFields();
-            createAnalysedData.createIntervalDataObjects();
-        });
-        afterAll(() => {
-            const resetAnalysedData = new ResetAnalysedData();
-            resetAnalysedData.resetAnalysedData();
-        });
         it('should enable the submit button when the xValue and yValue selects have valid options selected', async () => {
             await selectXVal('col1');
 
@@ -123,15 +126,6 @@ describe('Line Plotting Options Component', () => {
         });
     });
     describe('Integration with Line Plot Handler', () => {
-        beforeAll(() => {
-            const createAnalysedData = new CreateAnalysedData(intervalFields, intervalDataObjects);
-            createAnalysedData.createIntervalFields();
-            createAnalysedData.createIntervalDataObjects();
-        });
-        afterAll(() => {
-            const resetAnalysedData = new ResetAnalysedData();
-            resetAnalysedData.resetAnalysedData();
-        });
         it('Should give a success notification when valid options are submitted', async () => {
             await selectXVal('col1');
             await selectYVal('col2');

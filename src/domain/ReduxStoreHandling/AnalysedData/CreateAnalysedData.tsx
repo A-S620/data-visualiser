@@ -13,7 +13,7 @@ export default class CreateAnalysedData {
         store.dispatch(addIntegerFields(this.analysedFileData.intervalFields));
     }
     public createIntervalDataObjects() {
-        store.dispatch(addIntegerDataObjects(this.analysedFileData.integerDataAsObjects));
+        store.dispatch(addIntegerDataObjects(this.analysedFileData.intervalDataAsObjects));
     }
     public createFields() {
         store.dispatch(addFields(this.analysedFileData.fields));

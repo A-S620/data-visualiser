@@ -7,32 +7,34 @@ import { IImportedFileData } from '../../../src/interfaces/import/IImportedFileD
 import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseIntervalData } from '../../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
-
-//Test data
-const dataAsObjects = [
-    { col1: '32', col2: 'cool', col3: 'foo' },
-    { col1: '79', col2: '5', col3: 'foo' },
-    { col1: '76', col2: '23', col3: 'foo' },
-];
-const dataFields = ['col1', 'col2', 'col3'];
+import { AnalyseFileData } from '../../../src/domain/ImportedFile/AnalyseFileData';
+import { FieldTypes, IAnalysedFileData } from '../../../src/interfaces/import/IAnalysedFileData';
+import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 
 beforeAll(() => {
-    const testData: IImportedFileData = {
-        dataFields: dataFields,
-        dataAsObjects: dataAsObjects,
-        dataAsArrays: [],
+    const analysedFileData: IAnalysedFileData = {
+        fields: [
+            { field: 'col1', fieldType: FieldTypes.INTERVAL },
+            { field: 'col2', fieldType: FieldTypes.INTERVAL },
+        ],
+        intervalFields: ['col1', 'col2'],
+        intervalDataAsObjects: [
+            { col1: 32, col2: 45 },
+            { col1: 79, col2: 5 },
+            { col1: 76, col2: 23 },
+        ],
     };
-    const createImportedData = new CreateImportedData(testData);
-    createImportedData.createDataFields();
-    createImportedData.createDataAsObjects();
-    const analyseData = new AnalyseIntervalData();
-    analyseData.validateIntervalData();
+    const createAnalysedData = new CreateAnalysedData(analysedFileData);
+    createAnalysedData.createIntervalFields();
+    createAnalysedData.createIntervalDataObjects();
+    createAnalysedData.createFields();
 });
 describe('LineSeriesCreateVis domain component', () => {
     describe('Visualisation Options', () => {
         it('Should return a default values for the options when no options have been selected', async () => {
             const createVis = new LineSeriesCreateVis().createVis();
             expect(createVis.data).toEqual([
+                { x: 32, y: 45 },
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
             ]);
@@ -61,6 +63,7 @@ describe('LineSeriesCreateVis domain component', () => {
 
             const createVis = new LineSeriesCreateVis().createVis();
             expect(createVis.data).toEqual([
+                { x: 32, y: 45 },
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
             ]);

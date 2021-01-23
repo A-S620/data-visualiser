@@ -15,7 +15,7 @@ export default class GetAnalysedData {
         return {
             fields: GetAnalysedData.getFields(),
             intervalFields: GetAnalysedData.getIntegerFields(),
-            integerDataAsObjects: GetAnalysedData.getIntegerDataObjects(),
+            intervalDataAsObjects: GetAnalysedData.getIntegerDataObjects(),
         };
     }
 }

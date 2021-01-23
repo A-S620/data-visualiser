@@ -4,7 +4,7 @@ import CreateAnalysedData from '../../../../src/domain/ReduxStoreHandling/Analys
 import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { IFields } from '../../../../src/interfaces/import/IFields';
-import { FieldTypes } from '../../../../src/interfaces/import/IAnalysedFileData';
+import { FieldTypes, IAnalysedFileData } from '../../../../src/interfaces/import/IAnalysedFileData';
 
 const intervalFields = ['col1', 'col2', 'col3'];
 
@@ -17,7 +17,16 @@ const fields: IFields = { field: [{ field: 'col1', fieldType: FieldTypes.INTERVA
 
 describe('ResetImportedData domain component', () => {
     it('Should reset the intervalFields attribute in the analysedData slice', () => {
-        const createStoreHandler = new CreateAnalysedData(fields, intervalFields, intervalDataObjects);
+        const analysedFileData: IAnalysedFileData = {
+            fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
+            intervalFields: ['col1', 'col2'],
+            intervalDataAsObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalFields();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
@@ -25,16 +34,34 @@ describe('ResetImportedData domain component', () => {
         expect(getStoreHandler.getAnalysedData().intervalFields).toStrictEqual([]);
     });
 
-    it('Should reset the dataAsObjects attribute in the analysedData slice', () => {
-        const createStoreHandler = new CreateAnalysedData(fields, intervalFields, intervalDataObjects);
+    it('Should reset the intervalDataAsObjects attribute in the analysedData slice', () => {
+        const analysedFileData: IAnalysedFileData = {
+            fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
+            intervalFields: ['col1', 'col2'],
+            intervalDataAsObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().integerDataAsObjects).toStrictEqual([]);
+        expect(getStoreHandler.getAnalysedData().intervalDataAsObjects).toStrictEqual([]);
     });
     it('Should reset the fields attribute in the analysedData slice', () => {
-        const createStoreHandler = new CreateAnalysedData(fields, intervalFields, intervalDataObjects);
+        const analysedFileData: IAnalysedFileData = {
+            fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
+            intervalFields: ['col1', 'col2'],
+            intervalDataAsObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createFields();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();

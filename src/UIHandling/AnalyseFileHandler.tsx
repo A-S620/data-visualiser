@@ -3,8 +3,12 @@ import { AnalyseIntervalData } from '../domain/ImportedFile/DataAnalysis/Analyse
 import ResetAnalysedData from '../domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
 export class AnalyseFileHandler {
+    private fields: any;
+    constructor(fields: Array<object>) {
+        this.fields = fields;
+    }
     public validateAnalysedData(): NotificationsHandler {
-        const analyseData = new AnalyseIntervalData();
+        const analyseData = new AnalyseIntervalData(this.fields);
         return analyseData.validateIntervalData();
     }
     public resetAnalysedData() {
