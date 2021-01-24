@@ -48,7 +48,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual(['col1', 'col2']);
     });
-    it('should reset analysed data data', async () => {
+    it('should reset analysed data dat', async () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
