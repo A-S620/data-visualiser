@@ -220,6 +220,21 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                                     <DeleteIcon />
                                 </IconButton>
                             </Tooltip>
+                            <Tooltip title="View and edit the field types">
+                                <Button
+                                    style={{ marginRight: 10, borderRadius: '5em' }}
+                                    id="field-types-button"
+                                    color="primary"
+                                    disabled={this.state.submitButtonDisabled}
+                                    onClick={() => {
+                                        this.setState({
+                                            fieldTypesDialogOpen: true,
+                                        });
+                                    }}
+                                >
+                                    Field Types
+                                </Button>
+                            </Tooltip>
                             <DropzoneArea
                                 showPreviews={true}
                                 onChange={async (files) => {

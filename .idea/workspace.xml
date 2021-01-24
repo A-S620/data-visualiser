@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,14 +378,7 @@
       <workItem from="1611303369972" duration="1552000" />
       <workItem from="1611329069408" duration="220000" />
       <workItem from="1611386474276" duration="7202000" />
-      <workItem from="1611473096274" duration="511000" />
-    </task>
-    <task id="LOCAL-00112" summary="LinePlottingOptions.tsx&#10;Styling">
-      <created>1609582094148</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1609582094148</updated>
+      <workItem from="1611473096274" duration="5095000" />
     </task>
     <task id="LOCAL-00113" summary="PlottingNav.tsx - changed colour of navigation.">
       <created>1609748252892</created>
@@ -723,7 +716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611393817277</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Fixed AnalyseFileHandler unit tests">
+      <created>1611473662214</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1611473662214</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -731,7 +731,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LineSeriesVisHandler.tsx UIHandler component + unit tests" />
     <MESSAGE value="CurrentVisualisation Actions, ActionTypes for ReduxStore + unit tests" />
     <MESSAGE value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
     <MESSAGE value="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test" />
@@ -756,7 +755,8 @@
     <MESSAGE value="Updated ReduxReducer + unit tests with Fields" />
     <MESSAGE value="Updated CreateAnalysedData to take in IAnalysedFileData + unit tests" />
     <MESSAGE value="Multiple Changes&#10;Updated: CreateAnalysedData, GetAnalysedData, ResetAnalysedData.test + unit tests&#10;Updated AnalyseFileHandler UI Handler component, need to do unit tests&#10;Created AnalyseFileData domain component + did unit tests&#10;Updated tests to use AnalyseFileData instead of AnalyseIntervalData&#10;Updated IAnalysedFileData.&#10;TODO: AnalyseFileHandler + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multiple Changes&#10;Updated: CreateAnalysedData, GetAnalysedData, ResetAnalysedData.test + unit tests&#10;Updated AnalyseFileHandler UI Handler component, need to do unit tests&#10;Created AnalyseFileData domain component + did unit tests&#10;Updated tests to use AnalyseFileData instead of AnalyseIntervalData&#10;Updated IAnalysedFileData.&#10;TODO: AnalyseFileHandler + unit tests" />
+    <MESSAGE value="Fixed AnalyseFileHandler unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed AnalyseFileHandler unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -14,7 +14,9 @@ import {
     TableHead,
     TableCell,
     TableRow,
+    LinearProgress,
 } from '@material-ui/core';
+import { LinearProgressProps } from '@material-ui/core/LinearProgress';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { FieldTypes } from '../../../../interfaces/import/IAnalysedFileData';
@@ -49,9 +51,32 @@ const useStyles = makeStyles((theme) => ({
         minWidth: 350,
     },
 }));
+function LinearProgressWithLabel(progProps: LinearProgressProps & { value: number }) {
+    return (
+        <Box display="flex" alignItems="center">
+            <Box width="100%" mr={1}>
+                <LinearProgress variant="determinate" {...progProps} />
+            </Box>
+            <Box minWidth={35}>
+                <Typography variant="body2" color="textSecondary">{`${Math.round(progProps.value)}%`}</Typography>
+            </Box>
+        </Box>
+    );
+}
 function FileTypes(props: any) {
     const classes = useStyles();
-    const [fields, setFields] = React.useState([]);
+    const [fields, setFields] = React.useState<Array<any>>([]);
+    const [fieldsCompleted, setFieldsCompleted] = React.useState(0);
+    function updateFields(fieldToAdd: { field: string; fieldType: FieldTypes }) {
+        for (var objIndex = 0; objIndex < fields.length; objIndex += 1) {
+            if (fields[objIndex] === fieldToAdd) {
+                setFields(fields.filter(({ field }) => field !== fieldToAdd.field));
+                console.log('test' + fields);
+                return;
+            }
+        }
+        setFields([...fields, fieldToAdd]);
+    }
     return (
         <Box display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start" id="field-types">
             <Box
@@ -82,10 +107,12 @@ function FileTypes(props: any) {
                                         <Select
                                             id={value + '-field-type-select'}
                                             onChange={(event) => {
-                                                const fieldToAdd = {
-                                                    fields: value,
+                                                const fieldToAdd: any = {
+                                                    field: value,
                                                     fieldType: event.target.value as FieldTypes,
                                                 };
+                                                updateFields(fieldToAdd);
+                                                console.log(fields);
                                             }}
                                         >
                                             <option value={FieldTypes.INTERVAL}>Interval</option>
