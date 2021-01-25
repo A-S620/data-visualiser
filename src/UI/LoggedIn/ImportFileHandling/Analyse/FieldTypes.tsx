@@ -71,9 +71,8 @@ function LinearProgressWithLabel(progProps: LinearProgressProps & { value: numbe
         </Box>
     );
 }
-
+const fields: Array<object> = [];
 function FileTypes(props: any, dialogOpen: boolean) {
-    const fields: Array<object> = [];
     const classes = useStyles();
     const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
     const [notifications, setNotifications] = React.useState<{
@@ -150,7 +149,9 @@ function FileTypes(props: any, dialogOpen: boolean) {
                 mx={10}
                 my={10}
             >
-                <Typography className={classes.statDescription}>Select Field Types:</Typography>
+                <Typography id={'field-types-title'} className={classes.statDescription}>
+                    Select Field Types:
+                </Typography>
                 <TableContainer component={Paper}>
                     <Table className={classes.table}>
                         <TableHead>
@@ -174,7 +175,6 @@ function FileTypes(props: any, dialogOpen: boolean) {
                                                     fieldType: event.target.value as FieldTypes,
                                                 };
                                                 addField(fieldToAdd);
-                                                console.log(fields);
                                             }}
                                         >
                                             <option value={FieldTypes.INTERVAL}>Interval</option>

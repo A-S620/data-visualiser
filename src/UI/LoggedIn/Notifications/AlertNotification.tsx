@@ -6,7 +6,6 @@ import { Collapse, IconButton, Snackbar } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 export default function AlertNotification(notifications: INotification) {
     const [open, setOpen] = React.useState(true);
-    console.log('beep');
     return (
         <Snackbar
             open={open}

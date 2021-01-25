@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +143,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -368,14 +381,7 @@
       <workItem from="1611473096274" duration="5211000" />
       <workItem from="1611564335553" duration="3799000" />
       <workItem from="1611568798941" duration="8407000" />
-      <workItem from="1611578971974" duration="3886000" />
-    </task>
-    <task id="LOCAL-00117" summary="LinePlottingOptions.tsx colour picker">
-      <created>1609942965661</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1609942965661</updated>
+      <workItem from="1611578971974" duration="4731000" />
     </task>
     <task id="LOCAL-00118" summary="Restructuring folders">
       <created>1609946882023</created>
@@ -713,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611579360704</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="FieldTypes - Analyse File button, integrated with AnalyseFileHandler">
+      <created>1611590451708</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1611590451708</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,7 +734,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests" />
     <MESSAGE value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
     <MESSAGE value="LinePlottingOptions.tsx colours select updated&#10;LineSeriesVis.tsx integrated with Options and data" />
     <MESSAGE value="LineSeriesVis.tsx visualises data" />
@@ -746,7 +758,8 @@
     <MESSAGE value="Changed AnalyseFileHandler to work with fields = unit tests" />
     <MESSAGE value="Removed IFields interface" />
     <MESSAGE value="FieldTypes - save selected field types" />
-    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes - save selected field types" />
+    <MESSAGE value="FieldTypes - Analyse File button, integrated with AnalyseFileHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes - Analyse File button, integrated with AnalyseFileHandler" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -294,7 +294,6 @@ function LinePlottingOptions(props: any) {
                                         ...options,
                                         curveType: event.target.value as CurveType,
                                     });
-                                    console.log(options.curveType);
                                 }}
                                 name="Y Values"
                             >
