@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/FieldsHandler.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/FieldsHandler.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,14 +381,7 @@
       <workItem from="1611329069408" duration="220000" />
       <workItem from="1611386474276" duration="7202000" />
       <workItem from="1611473096274" duration="5211000" />
-      <workItem from="1611564335553" duration="996000" />
-    </task>
-    <task id="LOCAL-00114" summary="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options">
-      <created>1609758770621</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1609758770621</updated>
+      <workItem from="1611564335553" duration="1197000" />
     </task>
     <task id="LOCAL-00115" summary="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options">
       <created>1609758810078</created>
@@ -724,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611478707738</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Changed AnalyseFileHandler to work with fields = unit tests">
+      <created>1611565564766</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1611565564767</updated>
+    </task>
+    <option name="localTasksCounter" value="164" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -732,7 +734,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ReduxReducer.js + state updated with currentVisualisation slice + unit tests" />
     <MESSAGE value="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test" />
     <MESSAGE value="updated LineSeriesVisHandler.tsx + unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests" />
@@ -757,7 +758,8 @@
     <MESSAGE value="Multiple Changes&#10;Updated: CreateAnalysedData, GetAnalysedData, ResetAnalysedData.test + unit tests&#10;Updated AnalyseFileHandler UI Handler component, need to do unit tests&#10;Created AnalyseFileData domain component + did unit tests&#10;Updated tests to use AnalyseFileData instead of AnalyseIntervalData&#10;Updated IAnalysedFileData.&#10;TODO: AnalyseFileHandler + unit tests" />
     <MESSAGE value="Fixed AnalyseFileHandler unit tests" />
     <MESSAGE value="ImportFilesComponent Field Types button - need to do unit tests&#10;FieldTypes - Update state, need to do reselect already chosen option + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="ImportFilesComponent Field Types button - need to do unit tests&#10;FieldTypes - Update state, need to do reselect already chosen option + unit tests" />
+    <MESSAGE value="Changed AnalyseFileHandler to work with fields = unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed AnalyseFileHandler to work with fields = unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

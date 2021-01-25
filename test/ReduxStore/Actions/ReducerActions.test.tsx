@@ -3,7 +3,6 @@ import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 import { ILinePlotCreateVis } from '../../../src/interfaces/plotting/ILinePlotCreateVis';
 import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
-import { IFields } from '../../../src/interfaces/import/IFields';
 
 //Test Data
 const dataAsArrays = [
@@ -18,7 +17,7 @@ const dataAsObjects = [
     { col1: 'c-1', col2: '7', col3: 'baz' },
 ];
 const dataFields = ['col1', 'col2', 'col3'];
-const fields: IFields = { field: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }] };
+const fields = [{ field: 'col1', fieldType: FieldTypes.INTERVAL }];
 const intervalDataObjects = [
     { col1: 32, col2: 45 },
     { col1: 79, col2: 5 },

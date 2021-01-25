@@ -2,7 +2,6 @@ import 'jsdom-global/register';
 import CreateAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import { IFields } from '../../../../src/interfaces/import/IFields';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/interfaces/import/IAnalysedFileData';
 
 //Test Data

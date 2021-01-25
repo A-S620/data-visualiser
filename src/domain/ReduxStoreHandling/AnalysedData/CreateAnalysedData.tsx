@@ -1,6 +1,5 @@
 import { store } from '../../../ReduxStore/store';
 import { addFields, addIntegerDataObjects, addIntegerFields } from '../../../ReduxStore/Actions/ReducerActions';
-import { IFields } from '../../../interfaces/import/IFields';
 import { IAnalysedFileData } from '../../../interfaces/import/IAnalysedFileData';
 
 export default class CreateAnalysedData {
