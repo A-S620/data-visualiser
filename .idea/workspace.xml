@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Removed IFields interface">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,17 +142,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -381,14 +367,9 @@
       <workItem from="1611329069408" duration="220000" />
       <workItem from="1611386474276" duration="7202000" />
       <workItem from="1611473096274" duration="5211000" />
-      <workItem from="1611564335553" duration="1197000" />
-    </task>
-    <task id="LOCAL-00115" summary="LinePlotOptionsValidate.tsx domain component + unit tests&#10;Validate line plotting options">
-      <created>1609758810078</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1609758810078</updated>
+      <workItem from="1611564335553" duration="3799000" />
+      <workItem from="1611568798941" duration="8407000" />
+      <workItem from="1611578971974" duration="288000" />
     </task>
     <task id="LOCAL-00116" summary="Amended unit tests for: LinePlottingOptions.test.tsx, PlottingNav.test.tsx">
       <created>1609938860300</created>
@@ -726,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611565564767</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="Removed IFields interface">
+      <created>1611565778173</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1611565778173</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -734,7 +722,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test" />
     <MESSAGE value="updated LineSeriesVisHandler.tsx + unit tests" />
     <MESSAGE value="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests" />
     <MESSAGE value="integrate LinePlotOptionsHandler.tsx with LineSeriesVisHandler.tsx + unit tests&#10;&#10;Updated LineSeriesVisHandler.tsx to create Current visualisation in ReduxStore" />
@@ -759,7 +746,8 @@
     <MESSAGE value="Fixed AnalyseFileHandler unit tests" />
     <MESSAGE value="ImportFilesComponent Field Types button - need to do unit tests&#10;FieldTypes - Update state, need to do reselect already chosen option + unit tests" />
     <MESSAGE value="Changed AnalyseFileHandler to work with fields = unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed AnalyseFileHandler to work with fields = unit tests" />
+    <MESSAGE value="Removed IFields interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed IFields interface" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

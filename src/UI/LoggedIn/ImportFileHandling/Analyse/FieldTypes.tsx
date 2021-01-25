@@ -62,19 +62,20 @@ function LinearProgressWithLabel(progProps: LinearProgressProps & { value: numbe
         </Box>
     );
 }
+const fields: Array<object> = [];
 function FileTypes(props: any) {
     const classes = useStyles();
-    const [fields, setFields] = React.useState<Array<any>>([]);
-    const [fieldsCompleted, setFieldsCompleted] = React.useState(0);
-    function updateFields(fieldToAdd: { field: string; fieldType: FieldTypes }) {
-        for (var objIndex = 0; objIndex < fields.length; objIndex += 1) {
-            if (fields[objIndex] === fieldToAdd) {
-                setFields(fields.filter(({ field }) => field !== fieldToAdd.field));
-                console.log('test' + fields);
-                return;
+    function addField(fieldToAdd: { field: string; fieldType: FieldTypes }) {
+        if (!fields.includes(fieldToAdd)) {
+            for (var objIndex = 0; objIndex < fields.length; objIndex += 1) {
+                const values = Object.values(fields[objIndex]);
+                if (values[0] === fieldToAdd.field) {
+                    fields[objIndex] = fieldToAdd;
+                    return;
+                }
             }
+            fields.push(fieldToAdd);
         }
-        setFields([...fields, fieldToAdd]);
     }
     return (
         <Box display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start" id="field-types">
@@ -110,7 +111,7 @@ function FileTypes(props: any) {
                                                     field: value,
                                                     fieldType: event.target.value as FieldTypes,
                                                 };
-                                                updateFields(fieldToAdd);
+                                                addField(fieldToAdd);
                                                 console.log(fields);
                                             }}
                                         >
