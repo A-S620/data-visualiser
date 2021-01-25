@@ -36,6 +36,21 @@ afterAll(() => {
     resetAnalysedDataState.resetAnalysedData();
 });
 describe('AnalyseFileHandler UI handling component', () => {
+    it('Should return an error if fields dont match imported columns', () => {
+        const importedFile: IImportedFile = {
+            file: testCSV,
+            fileType: 'text/csv',
+        };
+        const importFile = new ImportFilesHandler(importedFile);
+        importFile.validate();
+        const analyseFile = new AnalyseFileHandler([
+            { field: 'col1', fieldType: FieldTypes.INTERVAL },
+            { field: 'col2', fieldType: FieldTypes.INTERVAL },
+        ]);
+        expect(analyseFile.validateAnalysedData().notification()).toBe(
+            'Field types have not been selected for all fields'
+        );
+    });
     it('should create analysed data', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
@@ -48,7 +63,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual(['col1', 'col2']);
     });
-    it('should reset analysed data dat', async () => {
+    it('should reset analysed data slice', async () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
