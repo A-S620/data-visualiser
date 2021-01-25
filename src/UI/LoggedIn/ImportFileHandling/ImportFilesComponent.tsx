@@ -175,7 +175,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                         my={15}
                         mx={15}
                     >
-                        <FieldTypes />{' '}
+                        <FieldTypes />
                     </Box>
                 </Dialog>
                 <Box

@@ -15,12 +15,17 @@ import {
     TableCell,
     TableRow,
     LinearProgress,
+    Button,
 } from '@material-ui/core';
 import { LinearProgressProps } from '@material-ui/core/LinearProgress';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { FieldTypes } from '../../../../interfaces/import/IAnalysedFileData';
 import { TableContainer } from '@material-ui/core';
+import { AnalyseFileHandler } from '../../../../UIHandling/AnalyseFileHandler';
+import { AlertType } from '../../../../interfaces/INotification';
+import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
+import AlertNotification from '../../Notifications/AlertNotification';
 const useStyles = makeStyles((theme) => ({
     paper: {
         height: '100%',
@@ -49,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
     table: {
         minWidth: 350,
     },
+    dialogPaper: {
+        width: '500px',
+        height: '700px',
+    },
 }));
 function LinearProgressWithLabel(progProps: LinearProgressProps & { value: number }) {
     return (
@@ -62,9 +71,20 @@ function LinearProgressWithLabel(progProps: LinearProgressProps & { value: numbe
         </Box>
     );
 }
-const fields: Array<object> = [];
-function FileTypes(props: any) {
+
+function FileTypes(props: any, dialogOpen: boolean) {
+    const fields: Array<object> = [];
     const classes = useStyles();
+    const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
+    const [notifications, setNotifications] = React.useState<{
+        outcome: AlertType | undefined;
+        outcomeMessage: string;
+        errors: NotificationsHandler;
+    }>({
+        outcome: undefined,
+        outcomeMessage: '',
+        errors: new NotificationsHandler(),
+    });
     function addField(fieldToAdd: { field: string; fieldType: FieldTypes }) {
         if (!fields.includes(fieldToAdd)) {
             for (var objIndex = 0; objIndex < fields.length; objIndex += 1) {
@@ -75,10 +95,52 @@ function FileTypes(props: any) {
                 }
             }
             fields.push(fieldToAdd);
+            enableSubmit();
+        }
+    }
+    function enableSubmit() {
+        if (fields.length === props.dataFields.length) {
+            setSubmitIsDisabled(false);
+            return;
+        }
+    }
+    function analyseFile() {
+        const analyseFileHandler = new AnalyseFileHandler(fields);
+        const errors = analyseFileHandler.validateAnalysedData();
+        if (errors.isEmpty()) {
+            try {
+                setNotifications({
+                    ...notifications,
+                    outcome: AlertType.SUCCESS,
+                    outcomeMessage: 'Options Validated',
+                });
+            } catch (e) {
+                setNotifications({
+                    ...notifications,
+                    outcome: AlertType.FAILED,
+                    outcomeMessage: `${e.notification}`,
+                });
+            }
+        } else {
+            setNotifications({
+                ...notifications,
+                errors: errors,
+            });
         }
     }
     return (
         <Box display="flex" flexDirection="column" justifyContent="flex-start" alignItems="flex-start" id="field-types">
+            <Box style={{ height: '50%', width: '50%' }} id={'alert-area'}>
+                {notifications.outcome && (
+                    <AlertNotification alert={notifications.outcome} notification={notifications.outcomeMessage} />
+                )}
+                {!notifications.errors.isEmpty() && (
+                    <AlertNotification
+                        alert={AlertType.FAILED}
+                        notification={`Error(s): ${notifications.errors.notification()}`}
+                    />
+                )}
+            </Box>
             <Box
                 id="all-fields"
                 display="flex"
@@ -130,6 +192,26 @@ function FileTypes(props: any) {
                         ))}
                     </Table>
                 </TableContainer>
+                <Box
+                    id="all-fields"
+                    display="flex"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignItems="center"
+                    mx={10}
+                    my={10}
+                >
+                    <Button
+                        disabled={submitIsDisabled}
+                        variant="outlined"
+                        color="primary"
+                        id={'analyse-file-button'}
+                        style={{ marginRight: 10, borderRadius: '5em' }}
+                        onClick={analyseFile}
+                    >
+                        Analyse File
+                    </Button>
+                </Box>
             </Box>
         </Box>
     );
