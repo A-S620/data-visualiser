@@ -16,6 +16,8 @@ import {
     TableRow,
     LinearProgress,
     Button,
+    TableBody,
+    InputLabel,
 } from '@material-ui/core';
 import { LinearProgressProps } from '@material-ui/core/LinearProgress';
 import { connect } from 'react-redux';
@@ -58,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
         width: '500px',
         height: '700px',
     },
+    textColor: {
+        color: theme.palette.text.primary,
+    },
 }));
 function LinearProgressWithLabel(progProps: LinearProgressProps & { value: number }) {
     return (
@@ -72,7 +77,7 @@ function LinearProgressWithLabel(progProps: LinearProgressProps & { value: numbe
     );
 }
 const fields: Array<object> = [];
-function FileTypes(props: any, dialogOpen: boolean) {
+function FileTypes(props: any) {
     const classes = useStyles();
     const [submitIsDisabled, setSubmitIsDisabled] = React.useState(true);
     const [notifications, setNotifications] = React.useState<{
@@ -152,44 +157,48 @@ function FileTypes(props: any, dialogOpen: boolean) {
                 <Typography id={'field-types-title'} className={classes.statDescription}>
                     Select Field Types:
                 </Typography>
-                <TableContainer component={Paper}>
+                <TableContainer component={Paper} id={'fields-table'}>
                     <Table className={classes.table}>
                         <TableHead>
-                            <TableRow>
-                                <TableCell>Field Name</TableCell>
-                                <TableCell align={'center'}>Field Type</TableCell>
+                            <TableRow id={'table-headings'}>
+                                <TableCell id={'field-name-cell'}>Field Name</TableCell>
+                                <TableCell align={'center'} id={'field-type-cell'}>
+                                    Field Type
+                                </TableCell>
                             </TableRow>
                         </TableHead>
-                        {props.dataFields.map((value: string) => (
-                            <TableRow key={value + '-row'}>
-                                <TableCell component="th" scope="row" id={value + '-field'}>
-                                    {value}
-                                </TableCell>
-                                <TableCell>
-                                    <FormControl style={{ minWidth: 150 }}>
-                                        <Select
-                                            id={value + '-field-type-select'}
-                                            onChange={(event) => {
-                                                const fieldToAdd: any = {
-                                                    field: value,
-                                                    fieldType: event.target.value as FieldTypes,
-                                                };
-                                                addField(fieldToAdd);
-                                            }}
-                                        >
-                                            <option value={FieldTypes.INTERVAL}>Interval</option>
-                                            <option value={FieldTypes.NOMINAL}>Nominal</option>
-                                            <option value={FieldTypes.ORDINAL}>Ordinal</option>
-                                            <option value={FieldTypes.BINARY}>Binary</option>
-                                            <option value={FieldTypes.UNARY}>Unary</option>
-                                            <option value={FieldTypes.TIME}>Time</option>
-                                            <option value={FieldTypes.DATE}>Date</option>
-                                            <option value={FieldTypes.IGNORE}>Ignore</option>
-                                        </Select>
-                                    </FormControl>
-                                </TableCell>
-                            </TableRow>
-                        ))}
+                        <TableBody>
+                            {props.dataFields.map((value: string) => (
+                                <TableRow key={value + '-row'} id={value + '-table-row'}>
+                                    <TableCell component="th" scope="row" id={value + '-field'}>
+                                        {value}
+                                    </TableCell>
+                                    <TableCell id={value + '-select'}>
+                                        <FormControl style={{ minWidth: 150 }} id={value + '-type-select'}>
+                                            <Select
+                                                name={value + '-select'}
+                                                onChange={(event) => {
+                                                    const fieldToAdd: any = {
+                                                        field: value,
+                                                        fieldType: event.target.value as FieldTypes,
+                                                    };
+                                                    addField(fieldToAdd);
+                                                }}
+                                            >
+                                                <option value={FieldTypes.INTERVAL}>Interval</option>
+                                                <option value={FieldTypes.NOMINAL}>Nominal</option>
+                                                <option value={FieldTypes.ORDINAL}>Ordinal</option>
+                                                <option value={FieldTypes.BINARY}>Binary</option>
+                                                <option value={FieldTypes.UNARY}>Unary</option>
+                                                <option value={FieldTypes.TIME}>Time</option>
+                                                <option value={FieldTypes.DATE}>Date</option>
+                                                <option value={FieldTypes.IGNORE}>Ignore</option>
+                                            </Select>
+                                        </FormControl>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
                     </Table>
                 </TableContainer>
                 <Box

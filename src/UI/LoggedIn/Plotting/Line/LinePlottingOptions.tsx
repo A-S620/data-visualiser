@@ -295,7 +295,7 @@ function LinePlottingOptions(props: any) {
                                         curveType: event.target.value as CurveType,
                                     });
                                 }}
-                                name="Y Values"
+                                name="Curve Type"
                             >
                                 <option value={CurveType.curveLinear}>Linear</option>
                                 <option value={CurveType.curveLinearClosed}>Linear Closed</option>
