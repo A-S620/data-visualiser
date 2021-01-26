@@ -3,11 +3,6 @@ import 'jsdom-global/register';
 import CreateLinePlotOptions from '../../../src/domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 import { LineSeriesCreateVis } from '../../../src/domain/LineSeriesVis/LineSeriesCreateVis';
-import { IImportedFileData } from '../../../src/interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { AnalyseIntervalData } from '../../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
-import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
-import { AnalyseFileData } from '../../../src/domain/ImportedFile/AnalyseFileData';
 import { FieldTypes, IAnalysedFileData } from '../../../src/interfaces/import/IAnalysedFileData';
 import CreateAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 

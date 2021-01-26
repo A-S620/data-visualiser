@@ -6,7 +6,6 @@ import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler'
 import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
 import { IImportedFileData } from '../../src/interfaces/import/IImportedFileData';
 import CreateImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { AnalyseIntervalData } from '../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
 import { AnalyseFileData } from '../../src/domain/ImportedFile/AnalyseFileData';
 import { FieldTypes } from '../../src/interfaces/import/IAnalysedFileData';
