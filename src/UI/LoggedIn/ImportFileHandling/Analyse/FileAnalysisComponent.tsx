@@ -67,20 +67,20 @@ function FileAnalysisComponent(props: any) {
                     File Analysis:
                 </Typography>
             </Box>
-            <Box my={15} id="percent-integer-columns">
-                <Typography className={classes.statDescription}>Percentage of Integer Columns in file:</Typography>
+            <Box my={15} id="percent-interval-fields">
+                <Typography className={classes.statDescription}>Interval fields in file:</Typography>
                 <Box position="relative" display="inline-flex" className={classes.donutChart}>
                     <CircularProgress
-                        id={'circular-progress'}
+                        id={'interval-circular-progress'}
                         variant="determinate"
                         {...props}
                         color="primary"
                         thickness={7}
-                        size={200}
+                        size={100}
                         value={calcIntColumnsPercentage(props.intervalFields.length, props.dataFields.length)}
                     />
                     <Box
-                        id={'circular-progress-text'}
+                        id={'interval-circular-progress-text'}
                         top={0}
                         left={0}
                         bottom={0}
@@ -90,15 +90,14 @@ function FileAnalysisComponent(props: any) {
                         alignItems="center"
                         justifyContent="center"
                     >
-                        <Typography variant="h3" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
+                        <Typography variant="h6" component="div" color="textPrimary">{`${calcIntColumnsPercentage(
                             props.intervalFields.length,
                             props.dataFields.length
                         )}%`}</Typography>
                     </Box>
                 </Box>
             </Box>
-            <Box id="integer-columns" className={classes.boxSize}>
-                <Typography className={classes.statDescription}>Integer Columns:</Typography>
+            <Box id="interval-fields" className={classes.boxSize}>
                 {props.intervalFields.map((integerField: string) => (
                     <Chip className={classes.chips} label={integerField} id={integerField + '-chip'} />
                 ))}
@@ -113,7 +112,7 @@ function FileAnalysisComponent(props: any) {
                 <Typography className={classes.statDescription}>Example Data Object:</Typography>
                 <Box id={'json-object'}>
                     <ReactJson
-                        src={getExampleObject(props.intervalDataObjects)}
+                        src={getExampleObject(props.dataAsObjects)}
                         theme="summerfruit:inverted"
                         displayDataTypes={false}
                         displayObjectSize={false}

@@ -7,6 +7,8 @@ import { store } from '../../../../../src/ReduxStore/store';
 import FileAnalysisComponent from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
+import { AnalyseFileHandler } from '../../../../../src/UIHandling/AnalyseFileHandler';
+import { FieldTypes } from '../../../../../src/interfaces/import/IAnalysedFileData';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
@@ -27,15 +29,11 @@ describe('File Analysis component', () => {
         it('Should have the title File Analysis', () => {
             expect(component.find('div#title').text()).toBe('File Analysis:');
         });
-        it('Should have the Percentage of Integer Columns in file stat', () => {
-            expect(component.find('div#percent-integer-columns').find('p').text()).toBe(
-                'Percentage of Integer Columns in file:'
-            );
+        it('Should have the Percentage of Integer fields in file stat', () => {
+            expect(component.find('div#percent-interval-fields').find('p').text()).toBe('Interval fields in file:');
         });
-        it('Should have the Integer Columns stat', () => {
-            expect(component.find('div#integer-columns').find('p').text()).toBe('Integer Columns:');
-        });
-        it('Should have the INumber of Ignored Data Objects stat', () => {
+
+        it('Should have the Number of Ignored Data Objects stat', () => {
             expect(component.find('div#ignored-objects').find('p').at(0).text()).toBe(
                 'Number of Ignored Data Objects:'
             );
@@ -44,21 +42,44 @@ describe('File Analysis component', () => {
             expect(component.find('div#example-object').find('p').text()).toBe('Example Data Object:');
         });
     });
-    describe('File Analysis stats ', () => {
+    describe('File Analysis stats - Intervals ', () => {
         const importedFile: IImportedFile = {
             file: testCSV,
             fileType: 'text/csv',
         };
         const importFile = new ImportFilesHandler(importedFile).validate();
-        it('Should show the integer Columns in the file', () => {
-            expect(component.find('div#col1-chip').text()).toBe('col1');
-            expect(component.find('div#col2-chip').text()).toBe('col2');
+        const analyseFileHandler = new AnalyseFileHandler([
+            { field: 'col1', fieldType: FieldTypes.INTERVAL },
+            { field: 'col2', fieldType: FieldTypes.INTERVAL },
+            { field: 'col3', fieldType: FieldTypes.IGNORE },
+        ]);
+        analyseFileHandler.validateAnalysedData();
+        it('Should show the integer fields in the file', () => {
+            const intervalColumns = component.find('div#interval-fields');
+            expect(intervalColumns.find('div#col1-chip').text()).toBe('col1');
+            expect(intervalColumns.find('div#col2-chip').text()).toBe('col2');
         });
-        it('Should show the circular  progress with a value of 67%', () => {
-            expect(component.find('div#circular-progress-text').text()).toBe('67%');
+        it('Should show the percent of interval fields in file', () => {
+            expect(component.find('div#interval-circular-progress-text').text()).toBe('67%');
+        });
+    });
+    describe('File Analysis stats - general', () => {
+        const importedFile: IImportedFile = {
+            file: testCSV,
+            fileType: 'text/csv',
+        };
+        const importFile = new ImportFilesHandler(importedFile).validate();
+        const analyseFileHandler = new AnalyseFileHandler([
+            { field: 'col1', fieldType: FieldTypes.INTERVAL },
+            { field: 'col2', fieldType: FieldTypes.INTERVAL },
+            { field: 'col3', fieldType: FieldTypes.IGNORE },
+        ]);
+        analyseFileHandler.validateAnalysedData();
+        it('Should show the number of ignored values', () => {
+            expect(component.find('div#ignored-objects').find('p').at(1).text()).toBe('1');
         });
         it('Should show an example object', () => {
-            expect(component.find('div#json-object').text()).toBe('"root":{"col1":1"col2":3}');
+            expect(component.find('div#json-object').text()).toBe('"root":{"col1":" 1""col2":"3""col3":"foo"}');
         });
     });
 });

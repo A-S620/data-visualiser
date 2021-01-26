@@ -52,4 +52,24 @@ describe('AnalyseIntervalData domain component', () => {
             { col1: 76, col2: 23 },
         ]);
     });
+    it('should not accept IP addresses as intervals', () => {
+        const testData: IImportedFileData = {
+            dataFields: dataFields2,
+            dataAsObjects: [
+                { col1: '32', col2: '21.31.54', col3: 'foo' },
+                { col1: '79', col2: '5', col3: 'foo' },
+                { col1: '76', col2: '23', col3: 'foo' },
+            ],
+            dataAsArrays: [],
+        };
+        const createImportedData = new CreateImportedData(testData);
+        createImportedData.createDataFields();
+        createImportedData.createDataAsObjects();
+        const analyseData = new AnalyseIntervalData(intervalFields2);
+        analyseData.validateIntervalData();
+        expect(analyseData.getAnalysedIntervalData().intervalDataAsObjects).toStrictEqual([
+            { col1: 79, col2: 5 },
+            { col1: 76, col2: 23 },
+        ]);
+    });
 });
