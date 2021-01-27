@@ -125,6 +125,28 @@ describe('ReduxReducer', () => {
                 }
             );
         });
+        it('Should handle NOMINAL_FIELDS_ADDED', () => {
+            expect(reduxReducer(analysedDataSlice, reducerActions.addNominalFields(dataFields))).toEqual({
+                analysedData: {
+                    fields: [],
+                    intervalFields: [],
+                    intervalDataObjects: [],
+                    nominalFields: dataFields,
+                    nominalDataObjects: [],
+                },
+            });
+        });
+        it('Should handle NOMINAL_DATA_OBJECTS_ADDED', () => {
+            expect(reduxReducer(analysedDataSlice, reducerActions.addNominalDataObjects(intervalDataObjects))).toEqual({
+                analysedData: {
+                    fields: [],
+                    intervalFields: [],
+                    intervalDataObjects: [],
+                    nominalFields: [],
+                    nominalDataObjects: intervalDataObjects,
+                },
+            });
+        });
         it('Should handle ANALYSED_DATA_SLICE_RESET', () => {
             expect(
                 reduxReducer(

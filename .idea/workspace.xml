@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -384,13 +383,6 @@
       <workItem from="1611670165857" duration="7772000" />
       <workItem from="1611736523594" duration="6166000" />
     </task>
-    <task id="LOCAL-00123" summary="CreateLinePlotOptions.tsx + unit tests&#10;Created: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx - need to do unit tests.&#10;Refactored ILinePlottingOptions.tsx to ILinePlotOptions.tsx&#10;&#10;TODO: unit tests for: GetLinePlotOptions.tsx, ResetLinePlotOptions.tsx">
-      <created>1610028122018</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1610028122018</updated>
-    </task>
     <task id="LOCAL-00124" summary="LinePlotOptions Redux slice handling&#10;Did unit tests: GetLinePlotOptions.test.tsx, ResetLinePlotOptions.test.tsx">
       <created>1610031706242</created>
       <option name="number" value="00124" />
@@ -727,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611743952300</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="Updated ReducerActions adn ReducerActionTypes with nominal data + updated unit tests">
+      <created>1611745917701</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1611745917701</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +734,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Removed Line width option" />
     <MESSAGE value="LinePlottingOptions removed extra curve options&#10;Line width option connected to chart" />
     <MESSAGE value="Updated AlertNotification.tsx to be a snackbar" />
     <MESSAGE value="Refactoring and unit tests for LineSeriesVis.tsx" />
@@ -760,7 +758,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Analyse Interval Data feature complete" />
     <MESSAGE value="FieldTypes Unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes Unit tests" />
+    <MESSAGE value="Updated ReducerActions adn ReducerActionTypes with nominal data + updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActions adn ReducerActionTypes with nominal data + updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

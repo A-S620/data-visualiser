@@ -62,6 +62,22 @@ export default function reduxReducer(state = ReduxState, action) {
                     intervalDataObjects: action.payload,
                 },
             };
+        case ReducerActions.NOMINAL_FIELDS_ADDED:
+            return {
+                ...state,
+                analysedData: {
+                    ...state.analysedData,
+                    nominalFields: action.payload,
+                },
+            };
+        case ReducerActions.NOMINAL_DATA_OBJECTS_ADDED:
+            return {
+                ...state,
+                analysedData: {
+                    ...state.analysedData,
+                    nominalDataObjects: action.payload,
+                },
+            };
         case ReducerActions.ANALYSED_DATA_SLICE_RESET:
             return {
                 analysedData: {
