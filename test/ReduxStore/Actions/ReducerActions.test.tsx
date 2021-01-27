@@ -63,17 +63,17 @@ describe('Reducer actions', () => {
         });
         it('Should create an action to add the intervalFields', () => {
             const expectedAction = {
-                type: actionTypes.INTEGER_FIELDS_ADDED,
+                type: actionTypes.INTERVAL_FIELDS_ADDED,
                 payload: dataFields,
             };
-            expect(reducerActions.addIntegerFields(dataFields)).toEqual(expectedAction);
+            expect(reducerActions.addIntervalFields(dataFields)).toEqual(expectedAction);
         });
         it('Should create an action to add the intervalDataObjects', () => {
             const expectedAction = {
-                type: actionTypes.INTEGER_DATA_OBJECTS_ADDED,
+                type: actionTypes.INTERVAL_DATA_OBJECTS_ADDED,
                 payload: intervalDataObjects,
             };
-            expect(reducerActions.addIntegerDataObjects(intervalDataObjects)).toEqual(expectedAction);
+            expect(reducerActions.addIntervalDataObjects(intervalDataObjects)).toEqual(expectedAction);
         });
         it('Should create an action to reset analysed data', () => {
             const expectedAction = {

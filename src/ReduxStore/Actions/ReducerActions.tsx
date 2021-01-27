@@ -23,12 +23,12 @@ export const addFields = (fields: Array<object>) => ({
     type: reducerActionTypes.FIELDS_ADDED,
     payload: fields,
 });
-export const addIntegerFields = (intervalFields: Array<string>) => ({
-    type: reducerActionTypes.INTEGER_FIELDS_ADDED,
+export const addIntervalFields = (intervalFields: Array<string>) => ({
+    type: reducerActionTypes.INTERVAL_FIELDS_ADDED,
     payload: intervalFields,
 });
-export const addIntegerDataObjects = (intervalDataObjects: Array<object>) => ({
-    type: reducerActionTypes.INTEGER_DATA_OBJECTS_ADDED,
+export const addIntervalDataObjects = (intervalDataObjects: Array<object>) => ({
+    type: reducerActionTypes.INTERVAL_DATA_OBJECTS_ADDED,
     payload: intervalDataObjects,
 });
 export const resetAnalysedData = () => ({

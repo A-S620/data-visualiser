@@ -86,6 +86,8 @@ describe('ReduxReducer', () => {
                 fields: [],
                 intervalFields: [],
                 intervalDataObjects: [],
+                nominalFields: [],
+                nominalDataObjects: [],
             },
         };
         it('Should handle FIELDS_ADDED', () => {
@@ -94,26 +96,34 @@ describe('ReduxReducer', () => {
                     fields: field,
                     intervalFields: [],
                     intervalDataObjects: [],
+                    nominalFields: [],
+                    nominalDataObjects: [],
                 },
             });
         });
-        it('Should handle INTEGER_FIELDS_ADDED', () => {
-            expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerFields(dataFields))).toEqual({
+        it('Should handle INTERVAL_FIELDS_ADDED', () => {
+            expect(reduxReducer(analysedDataSlice, reducerActions.addIntervalFields(dataFields))).toEqual({
                 analysedData: {
                     fields: [],
                     intervalFields: dataFields,
                     intervalDataObjects: [],
+                    nominalFields: [],
+                    nominalDataObjects: [],
                 },
             });
         });
-        it('Should handle INTEGER_DATA_OBJECTS_ADDED', () => {
-            expect(reduxReducer(analysedDataSlice, reducerActions.addIntegerDataObjects(intervalDataObjects))).toEqual({
-                analysedData: {
-                    fields: [],
-                    intervalFields: [],
-                    intervalDataObjects: intervalDataObjects,
-                },
-            });
+        it('Should handle INTERVAL_DATA_OBJECTS_ADDED', () => {
+            expect(reduxReducer(analysedDataSlice, reducerActions.addIntervalDataObjects(intervalDataObjects))).toEqual(
+                {
+                    analysedData: {
+                        fields: [],
+                        intervalFields: [],
+                        intervalDataObjects: intervalDataObjects,
+                        nominalFields: [],
+                        nominalDataObjects: [],
+                    },
+                }
+            );
         });
         it('Should handle ANALYSED_DATA_SLICE_RESET', () => {
             expect(
@@ -124,6 +134,8 @@ describe('ReduxReducer', () => {
                                 fields: [],
                                 intervalFields: [],
                                 intervalDataObjects: intervalDataObjects,
+                                nominalFields: [],
+                                nominalDataObjects: [],
                             },
                         },
                     ],

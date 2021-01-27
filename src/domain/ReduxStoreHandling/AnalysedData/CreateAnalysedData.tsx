@@ -1,5 +1,5 @@
 import { store } from '../../../ReduxStore/store';
-import { addFields, addIntegerDataObjects, addIntegerFields } from '../../../ReduxStore/Actions/ReducerActions';
+import { addFields, addIntervalDataObjects, addIntervalFields } from '../../../ReduxStore/Actions/ReducerActions';
 import { IAnalysedFileData } from '../../../interfaces/import/IAnalysedFileData';
 
 export default class CreateAnalysedData {
@@ -9,10 +9,10 @@ export default class CreateAnalysedData {
         this.analysedFileData = analysedFileData;
     }
     public createIntervalFields() {
-        store.dispatch(addIntegerFields(this.analysedFileData.intervalFields));
+        store.dispatch(addIntervalFields(this.analysedFileData.intervalFields));
     }
     public createIntervalDataObjects() {
-        store.dispatch(addIntegerDataObjects(this.analysedFileData.intervalDataAsObjects));
+        store.dispatch(addIntervalDataObjects(this.analysedFileData.intervalDataAsObjects));
     }
     public createFields() {
         store.dispatch(addFields(this.analysedFileData.fields));

@@ -8,6 +8,8 @@ const ReduxState = {
         fields: [],
         intervalFields: [],
         intervalDataObjects: [],
+        nominalFields: [],
+        nominalDataObjects: [],
     },
     linePlotOptions: {},
     currentVisualisation: {},
