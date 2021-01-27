@@ -1,5 +1,4 @@
 import { NotificationsHandler } from './NotificationsHandler';
-import { AnalyseIntervalData } from '../domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
 import ResetAnalysedData from '../domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { AnalyseFileData } from '../domain/ImportedFile/AnalyseFileData';
 import GetImportedData from '../domain/ReduxStoreHandling/ImportedData/GetImportedData';

@@ -5,22 +5,21 @@ import { store } from '../../../ReduxStore/store';
 export class AnalyseIntervalData {
     private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
     private intervalFields: any;
-    private intervalDataAsObjects: Array<object> = [];
+    private intervalDataObjects: Array<object> = [];
     constructor(intervalFields: Array<string>) {
         this.intervalFields = intervalFields;
     }
-    public validateIntervalData(): NotificationsHandler {
-        const notifications: NotificationsHandler = new NotificationsHandler();
+    public validateIntervalData(): Array<object> {
         if (this.intervalFields.length > 0) {
             this.analyseIntervalData();
             this.validateObjectsLength();
-            return notifications;
+            return this.getAnalysedIntervalData().intervalDataObjects;
         }
-        return notifications;
+        return [];
     }
     private validateObjectsLength() {
-        for (var objIndex = 0; objIndex < this.intervalDataAsObjects.length; objIndex += 1) {
-            const currentObject = this.intervalDataAsObjects[objIndex];
+        for (var objIndex = 0; objIndex < this.intervalDataObjects.length; objIndex += 1) {
+            const currentObject = this.intervalDataObjects[objIndex];
             const currentObjectLength = Object.keys(currentObject).length;
             if (currentObjectLength !== this.intervalFields.length) {
                 this.removeInvalidObject(objIndex);
@@ -28,7 +27,7 @@ export class AnalyseIntervalData {
         }
     }
     private removeInvalidObject(index: number) {
-        this.intervalDataAsObjects.splice(index, 1);
+        this.intervalDataObjects.splice(index, 1);
     }
 
     private analyseIntervalData() {
@@ -44,7 +43,7 @@ export class AnalyseIntervalData {
                     }
                 }
             }
-            this.intervalDataAsObjects.push(objectToAdd);
+            this.intervalDataObjects.push(objectToAdd);
         }
     }
     private static dataIsNotIPAddress(data: string): boolean {
@@ -63,10 +62,10 @@ export class AnalyseIntervalData {
     private static convertDataToFloat(data: string): number {
         return parseFloat(data);
     }
-    public getAnalysedIntervalData(): { intervalFields: Array<string>; intervalDataAsObjects: Array<object> } {
+    private getAnalysedIntervalData(): { intervalFields: Array<string>; intervalDataObjects: Array<object> } {
         return {
             intervalFields: this.intervalFields,
-            intervalDataAsObjects: this.intervalDataAsObjects,
+            intervalDataObjects: this.intervalDataObjects,
         };
     }
 }

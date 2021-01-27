@@ -6,9 +6,9 @@ import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalyse
 export class AnalyseFileData {
     private fields: Array<object>;
     private intervalfields: Array<string> = [];
-    private intervalDataAsObjects: Array<object> = [];
+    private intervalDataObjects: Array<object> = [];
     private nominalfields: Array<string> = [];
-    private nominalDataAsObjects: Array<object> = [];
+    private nominalDataObjects: Array<object> = [];
     constructor(fields: Array<object>) {
         this.fields = fields;
     }
@@ -17,8 +17,7 @@ export class AnalyseFileData {
         this.getIntervalFields();
         if (this.intervalfields.length > 0) {
             const analyseIntervalData = new AnalyseIntervalData(this.intervalfields);
-            this.intervalDataAsObjects = analyseIntervalData.getAnalysedIntervalData().intervalDataAsObjects;
-            notifications.concat(analyseIntervalData.validateIntervalData());
+            this.intervalDataObjects = analyseIntervalData.validateIntervalData();
         }
         this.createAnalysedData();
         return notifications;
@@ -38,9 +37,9 @@ export class AnalyseFileData {
         const analysedData: IAnalysedFileData = {
             fields: this.fields,
             intervalFields: this.intervalfields,
-            intervalDataObjects: this.intervalDataAsObjects,
+            intervalDataObjects: this.intervalDataObjects,
             nominalFields: this.nominalfields,
-            nominalDataObjects: this.nominalDataAsObjects,
+            nominalDataObjects: this.nominalDataObjects,
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createFields();

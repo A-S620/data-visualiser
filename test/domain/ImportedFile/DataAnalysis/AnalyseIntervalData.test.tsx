@@ -21,7 +21,7 @@ const dataAsObjects2 = [
 const dataFields2 = ['col1', 'col2', 'col3'];
 const intervalFields2 = ['col1', 'col2'];
 describe('AnalyseIntervalData domain component', () => {
-    it('should not return a notification when all object sizes are not equal', () => {
+    it('should add the interval objects correctly', () => {
         const testData: IImportedFileData = {
             dataFields: dataFields2,
             dataAsObjects: dataAsObjects2,
@@ -31,8 +31,10 @@ describe('AnalyseIntervalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseData = new AnalyseIntervalData(intervalFields2);
-        const notifications = analyseData.validateIntervalData();
-        expect(notifications.notification()).toEqual('');
+        expect(analyseData.validateIntervalData()).toEqual([
+            { col1: 79, col2: 5 },
+            { col1: 76, col2: 23 },
+        ]);
     });
     it('should add the correct objects, if one of the objects has the wrong length', () => {
         const testData: IImportedFileData = {
@@ -44,8 +46,7 @@ describe('AnalyseIntervalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseData = new AnalyseIntervalData(intervalFields2);
-        analyseData.validateIntervalData();
-        expect(analyseData.getAnalysedIntervalData().intervalDataAsObjects).toStrictEqual([
+        expect(analyseData.validateIntervalData()).toStrictEqual([
             { col1: 79, col2: 5 },
             { col1: 76, col2: 23 },
         ]);
@@ -64,8 +65,7 @@ describe('AnalyseIntervalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseData = new AnalyseIntervalData(intervalFields2);
-        analyseData.validateIntervalData();
-        expect(analyseData.getAnalysedIntervalData().intervalDataAsObjects).toStrictEqual([
+        expect(analyseData.validateIntervalData()).toStrictEqual([
             { col1: 79, col2: 5 },
             { col1: 76, col2: 23 },
         ]);
