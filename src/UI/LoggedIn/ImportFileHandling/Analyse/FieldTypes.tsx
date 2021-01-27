@@ -116,7 +116,7 @@ function FileTypes(props: any) {
                 setNotifications({
                     ...notifications,
                     outcome: AlertType.SUCCESS,
-                    outcomeMessage: 'Options Validated',
+                    outcomeMessage: 'Field Types Validated',
                 });
             } catch (e) {
                 setNotifications({
@@ -170,31 +170,33 @@ function FileTypes(props: any) {
                         <TableBody>
                             {props.dataFields.map((value: string) => (
                                 <TableRow key={value + '-row'} id={value + '-table-row'}>
-                                    <TableCell component="th" scope="row" id={value + '-field'}>
+                                    <TableCell component="th" scope="row" id={value + '-field-cell'}>
                                         {value}
                                     </TableCell>
-                                    <TableCell id={value + '-select'}>
-                                        <FormControl style={{ minWidth: 150 }} id={value + '-type-select'}>
-                                            <Select
-                                                name={value + '-select'}
-                                                onChange={(event) => {
-                                                    const fieldToAdd: any = {
-                                                        field: value,
-                                                        fieldType: event.target.value as FieldTypes,
-                                                    };
-                                                    addField(fieldToAdd);
-                                                }}
-                                            >
-                                                <option value={FieldTypes.INTERVAL}>Interval</option>
-                                                <option value={FieldTypes.NOMINAL}>Nominal</option>
-                                                <option value={FieldTypes.ORDINAL}>Ordinal</option>
-                                                <option value={FieldTypes.BINARY}>Binary</option>
-                                                <option value={FieldTypes.UNARY}>Unary</option>
-                                                <option value={FieldTypes.TIME}>Time</option>
-                                                <option value={FieldTypes.DATE}>Date</option>
-                                                <option value={FieldTypes.IGNORE}>Ignore</option>
-                                            </Select>
-                                        </FormControl>
+                                    <TableCell id={value + '-select-cell'}>
+                                        <Select
+                                            id={value + '-select'}
+                                            style={{ minWidth: 150 }}
+                                            name={value + '-select'}
+                                            onChange={(event) => {
+                                                const fieldToAdd: any = {
+                                                    field: value,
+                                                    fieldType: event.target.value as FieldTypes,
+                                                };
+                                                addField(fieldToAdd);
+                                            }}
+                                        >
+                                            <option id={'test'} value={FieldTypes.INTERVAL}>
+                                                Interval
+                                            </option>
+                                            <option value={FieldTypes.NOMINAL}>Nominal</option>
+                                            <option value={FieldTypes.ORDINAL}>Ordinal</option>
+                                            <option value={FieldTypes.BINARY}>Binary</option>
+                                            <option value={FieldTypes.UNARY}>Unary</option>
+                                            <option value={FieldTypes.TIME}>Time</option>
+                                            <option value={FieldTypes.DATE}>Date</option>
+                                            <option value={FieldTypes.IGNORE}>Ignore</option>
+                                        </Select>
                                     </TableCell>
                                 </TableRow>
                             ))}

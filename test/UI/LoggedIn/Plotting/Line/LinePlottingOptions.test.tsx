@@ -8,6 +8,7 @@ import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/Anal
 import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
 import { AnalyseFileData } from '../../../../../src/domain/ImportedFile/AnalyseFileData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/interfaces/import/IAnalysedFileData';
+import GetCurrentVisualisation from '../../../../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
 //Test Data
 const intervalFields = ['col1', 'col2'];
 
