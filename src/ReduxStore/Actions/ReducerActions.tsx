@@ -31,6 +31,14 @@ export const addIntervalDataObjects = (intervalDataObjects: Array<object>) => ({
     type: reducerActionTypes.INTERVAL_DATA_OBJECTS_ADDED,
     payload: intervalDataObjects,
 });
+export const addNominalFields = (nominalFields: Array<string>) => ({
+    type: reducerActionTypes.NOMINAL_FIELDS_ADDED,
+    payload: nominalFields,
+});
+export const addNominalDataObjects = (nominalDataObjects: Array<object>) => ({
+    type: reducerActionTypes.NOMINAL_DATA_OBJECTS_ADDED,
+    payload: nominalDataObjects,
+});
 export const resetAnalysedData = () => ({
     type: reducerActionTypes.ANALYSED_DATA_SLICE_RESET,
 });

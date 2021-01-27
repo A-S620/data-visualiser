@@ -75,6 +75,20 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addIntervalDataObjects(intervalDataObjects)).toEqual(expectedAction);
         });
+        it('Should create an action to add the nominalFields', () => {
+            const expectedAction = {
+                type: actionTypes.NOMINAL_FIELDS_ADDED,
+                payload: dataFields,
+            };
+            expect(reducerActions.addNominalFields(dataFields)).toEqual(expectedAction);
+        });
+        it('Should create an action to add the nominalDataObjects', () => {
+            const expectedAction = {
+                type: actionTypes.NOMINAL_DATA_OBJECTS_ADDED,
+                payload: intervalDataObjects,
+            };
+            expect(reducerActions.addNominalDataObjects(intervalDataObjects)).toEqual(expectedAction);
+        });
         it('Should create an action to reset analysed data', () => {
             const expectedAction = {
                 type: actionTypes.ANALYSED_DATA_SLICE_RESET,

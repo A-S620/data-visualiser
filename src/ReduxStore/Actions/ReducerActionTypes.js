@@ -8,6 +8,8 @@ export const IMPORTED_DATA_SLICE_RESET = 'importedDataSliceReset';
 export const FIELDS_ADDED = 'fieldsAdded';
 export const INTERVAL_FIELDS_ADDED = 'integerFieldsAdded';
 export const INTERVAL_DATA_OBJECTS_ADDED = 'integerDataObjectsAdded';
+export const NOMINAL_FIELDS_ADDED = 'nominalFieldsAdded';
+export const NOMINAL_DATA_OBJECTS_ADDED = 'nominalDataObjectsAdded';
 export const ANALYSED_DATA_SLICE_RESET = 'analysedDataSliceReset';
 
 //plottingOptions slice
