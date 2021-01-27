@@ -6,17 +6,8 @@ import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
-import { AnalyseFileData } from '../../../../../src/domain/ImportedFile/AnalyseFileData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/interfaces/import/IAnalysedFileData';
-import GetCurrentVisualisation from '../../../../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
-//Test Data
-const intervalFields = ['col1', 'col2'];
 
-const intervalDataObjects = [
-    { col1: 32, col2: 45 },
-    { col1: 79, col2: 5 },
-    { col1: 76, col2: 23 },
-];
 let wrapper: ReactWrapper;
 beforeEach(
     () =>
@@ -32,10 +23,16 @@ beforeAll(() => {
         fields: [
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
-            { field: 'col3', fieldType: FieldTypes.IGNORE },
+            { field: 'col3', fieldType: FieldTypes.NOMINAL },
         ],
-        intervalDataAsObjects: intervalDataObjects,
-        intervalFields: intervalFields,
+        intervalFields: ['col1', 'col2'],
+        intervalDataObjects: [
+            { col1: 32, col2: 45 },
+            { col1: 79, col2: 5 },
+            { col1: 76, col2: 23 },
+        ],
+        nominalFields: ['col3'],
+        nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
     };
     const createAnalysedFileData = new CreateAnalysedData(analysedFileData);
 

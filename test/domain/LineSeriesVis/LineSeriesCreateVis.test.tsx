@@ -11,13 +11,16 @@ beforeAll(() => {
         fields: [
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
+            { field: 'col3', fieldType: FieldTypes.NOMINAL },
         ],
         intervalFields: ['col1', 'col2'],
-        intervalDataAsObjects: [
+        intervalDataObjects: [
             { col1: 32, col2: 45 },
             { col1: 79, col2: 5 },
             { col1: 76, col2: 23 },
         ],
+        nominalFields: ['col3'],
+        nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
     };
     const createAnalysedData = new CreateAnalysedData(analysedFileData);
     createAnalysedData.createIntervalFields();

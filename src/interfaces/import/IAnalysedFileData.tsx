@@ -1,7 +1,9 @@
 export interface IAnalysedFileData {
     fields: Array<object>;
     intervalFields: Array<string>;
-    intervalDataAsObjects: Array<object>;
+    intervalDataObjects: Array<object>;
+    nominalFields: Array<string>;
+    nominalDataObjects: Array<object>;
 }
 export enum FieldTypes {
     INTERVAL = 'interval',

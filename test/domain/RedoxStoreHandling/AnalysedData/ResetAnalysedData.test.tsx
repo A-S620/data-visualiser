@@ -5,25 +5,45 @@ import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedD
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/interfaces/import/IAnalysedFileData';
 
-const intervalFields = ['col1', 'col2', 'col3'];
-
-const intervalDataObjects = [
-    { col1: 32, col2: 45 },
-    { col1: 79, col2: 5 },
-    { col1: 76, col2: 23 },
-];
-const fields = [{ field: 'col1', fieldType: FieldTypes.INTERVAL }];
-
 describe('ResetImportedData domain component', () => {
-    it('Should reset the intervalFields attribute in the analysedData slice', () => {
+    it('Should reset the fields attribute in the analysedData slice', () => {
         const analysedFileData: IAnalysedFileData = {
-            fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            ],
             intervalFields: ['col1', 'col2'],
-            intervalDataAsObjects: [
+            intervalDataObjects: [
                 { col1: 32, col2: 45 },
                 { col1: 79, col2: 5 },
                 { col1: 76, col2: 23 },
             ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createFields();
+        const resetStoreHandler = new ResetAnalysedData();
+        resetStoreHandler.resetAnalysedData();
+        const getStoreHandler = new GetAnalysedData();
+        expect(getStoreHandler.getAnalysedData().fields).toStrictEqual([]);
+    });
+    it('Should reset the intervalFields attribute in the analysedData slice', () => {
+        const analysedFileData: IAnalysedFileData = {
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            ],
+            intervalFields: ['col1', 'col2'],
+            intervalDataObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalFields();
@@ -35,36 +55,72 @@ describe('ResetImportedData domain component', () => {
 
     it('Should reset the intervalDataAsObjects attribute in the analysedData slice', () => {
         const analysedFileData: IAnalysedFileData = {
-            fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            ],
             intervalFields: ['col1', 'col2'],
-            intervalDataAsObjects: [
+            intervalDataObjects: [
                 { col1: 32, col2: 45 },
                 { col1: 79, col2: 5 },
                 { col1: 76, col2: 23 },
             ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().intervalDataAsObjects).toStrictEqual([]);
+        expect(getStoreHandler.getAnalysedData().intervalDataObjects).toStrictEqual([]);
     });
-    it('Should reset the fields attribute in the analysedData slice', () => {
+    it('Should reset the nominalFields attribute in the analysedData slice', () => {
         const analysedFileData: IAnalysedFileData = {
-            fields: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            ],
             intervalFields: ['col1', 'col2'],
-            intervalDataAsObjects: [
+            intervalDataObjects: [
                 { col1: 32, col2: 45 },
                 { col1: 79, col2: 5 },
                 { col1: 76, col2: 23 },
             ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
-        createStoreHandler.createFields();
+        createStoreHandler.createNominalFields();
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().fields).toStrictEqual([]);
+        expect(getStoreHandler.getAnalysedData().nominalFields).toStrictEqual([]);
+    });
+
+    it('Should reset the nominalDataAsObjects attribute in the analysedData slice', () => {
+        const analysedFileData: IAnalysedFileData = {
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            ],
+            intervalFields: ['col1', 'col2'],
+            intervalDataObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createNominalDataObjects();
+        const resetStoreHandler = new ResetAnalysedData();
+        resetStoreHandler.resetAnalysedData();
+        const getStoreHandler = new GetAnalysedData();
+        expect(getStoreHandler.getAnalysedData().nominalDataObjects).toStrictEqual([]);
     });
 });

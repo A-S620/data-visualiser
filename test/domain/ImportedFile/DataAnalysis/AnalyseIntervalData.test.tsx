@@ -21,7 +21,7 @@ const dataAsObjects2 = [
 const dataFields2 = ['col1', 'col2', 'col3'];
 const intervalFields2 = ['col1', 'col2'];
 describe('AnalyseIntervalData domain component', () => {
-    it('should return a notification when all object sizes are not equal', () => {
+    it('should not return a notification when all object sizes are not equal', () => {
         const testData: IImportedFileData = {
             dataFields: dataFields2,
             dataAsObjects: dataAsObjects2,
@@ -32,9 +32,7 @@ describe('AnalyseIntervalData domain component', () => {
         createImportedData.createDataAsObjects();
         const analyseData = new AnalyseIntervalData(intervalFields2);
         const notifications = analyseData.validateIntervalData();
-        expect(notifications.notification()).toEqual(
-            'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
-        );
+        expect(notifications.notification()).toEqual('');
     });
     it('should add the correct objects, if one of the objects has the wrong length', () => {
         const testData: IImportedFileData = {

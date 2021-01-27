@@ -7,6 +7,8 @@ export class AnalyseFileData {
     private fields: Array<object>;
     private intervalfields: Array<string> = [];
     private intervalDataAsObjects: Array<object> = [];
+    private nominalfields: Array<string> = [];
+    private nominalDataAsObjects: Array<object> = [];
     constructor(fields: Array<object>) {
         this.fields = fields;
     }
@@ -36,7 +38,9 @@ export class AnalyseFileData {
         const analysedData: IAnalysedFileData = {
             fields: this.fields,
             intervalFields: this.intervalfields,
-            intervalDataAsObjects: this.intervalDataAsObjects,
+            intervalDataObjects: this.intervalDataAsObjects,
+            nominalFields: this.nominalfields,
+            nominalDataObjects: this.nominalDataAsObjects,
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createFields();

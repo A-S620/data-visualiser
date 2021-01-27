@@ -13,24 +13,19 @@ export class AnalyseIntervalData {
         const notifications: NotificationsHandler = new NotificationsHandler();
         if (this.intervalFields.length > 0) {
             this.analyseIntervalData();
-            notifications.concat(this.validateObjectsLength());
+            this.validateObjectsLength();
             return notifications;
         }
         return notifications;
     }
-    private validateObjectsLength(): NotificationsHandler {
-        const notifications = new NotificationsHandler();
+    private validateObjectsLength() {
         for (var objIndex = 0; objIndex < this.intervalDataAsObjects.length; objIndex += 1) {
             const currentObject = this.intervalDataAsObjects[objIndex];
             const currentObjectLength = Object.keys(currentObject).length;
             if (currentObjectLength !== this.intervalFields.length) {
-                notifications.addNotification(
-                    `One or more of the objects has ${currentObjectLength} fields, instead of ${this.intervalFields.length}. All other values in that column, on other rows are floats. These object will be ignored`
-                );
                 this.removeInvalidObject(objIndex);
             }
         }
-        return notifications;
     }
     private removeInvalidObject(index: number) {
         this.intervalDataAsObjects.splice(index, 1);

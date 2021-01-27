@@ -75,7 +75,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual([]);
     });
-    it('should return a notification when all object sizes are not equal', () => {
+    it('should not return a notification when all object sizes are not equal', () => {
         const importedFile: IImportedFile = {
             file: testCSV2,
             fileType: 'text/csv',
@@ -84,8 +84,6 @@ describe('AnalyseFileHandler UI handling component', () => {
         importFile.validate();
         const analyseFileErrors = new AnalyseFileHandler(fields).validateAnalysedData();
 
-        expect(analyseFileErrors.notification()).toEqual(
-            'One or more of the objects has 1 fields, instead of 2. All other values in that column, on other rows are floats. These object will be ignored'
-        );
+        expect(analyseFileErrors.notification()).toEqual('');
     });
 });

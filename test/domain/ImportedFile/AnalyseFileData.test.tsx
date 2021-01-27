@@ -49,7 +49,7 @@ describe('AnalyseFileData domain component', () => {
         const getAnalysedData = new GetAnalysedData().getAnalysedData();
         expect(getAnalysedData.fields).toEqual(fields);
         expect(getAnalysedData.intervalFields).toEqual(['col1', 'col2']);
-        expect(getAnalysedData.intervalDataAsObjects).toEqual([
+        expect(getAnalysedData.intervalDataObjects).toEqual([
             { col1: 1, col2: 3 },
             { col1: 2, col2: 5 },
         ]);

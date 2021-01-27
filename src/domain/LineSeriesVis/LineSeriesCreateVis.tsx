@@ -55,7 +55,7 @@ export class LineSeriesCreateVis {
     }
 
     private createDataArray(xValue: string, yValue: string): Array<Object> {
-        const { intervalDataAsObjects: dataObjectsArray } = this.getAnalysedData();
+        const { intervalDataObjects: dataObjectsArray } = this.getAnalysedData();
         const data: Array<Object> = [];
         for (let objIndex = 0; objIndex < dataObjectsArray.length; objIndex += 1) {
             const dataObject = this.createDataObject(xValue, yValue, dataObjectsArray[objIndex]);
