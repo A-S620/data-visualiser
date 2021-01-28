@@ -6,7 +6,7 @@ import {
     addNominalDataObjects,
     addNominalFields,
 } from '../../../ReduxStore/Actions/ReducerActions';
-import { IAnalysedFileData } from '../../../interfaces/import/IAnalysedFileData';
+import { IAnalysedFileData } from '../../../interfaces/Analyse/IAnalysedFileData';
 
 export default class CreateAnalysedData {
     private analysedFileData: any;

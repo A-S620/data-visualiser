@@ -1,6 +1,6 @@
 import 'jsdom-global/register';
 
-import { ImportFileData } from '../../../src/domain/ImportedFile/ImportFileData';
+import { ImportFileData } from '../../../src/domain/ImportFile/ImportFileData';
 
 import { store } from '../../../src/ReduxStore/store';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';

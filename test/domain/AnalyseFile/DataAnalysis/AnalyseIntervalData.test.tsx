@@ -1,6 +1,6 @@
 import 'jsdom-global/register';
 
-import { AnalyseIntervalData } from '../../../../src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData';
+import { AnalyseIntervalData } from '../../../../src/domain/AnalyseFile/DataAnalysis/AnalyseIntervalData';
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
 import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';

@@ -1,5 +1,5 @@
 import 'jsdom-global/register';
-import { AnalyseNominalData } from '../../../../src/domain/ImportedFile/DataAnalysis/AnalyseNominalData';
+import { AnalyseNominalData } from '../../../../src/domain/AnalyseFile/DataAnalysis/AnalyseNominalData';
 import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
 import CreateImportedData from '../../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 

@@ -1,6 +1,6 @@
 import { NotificationsHandler } from './NotificationsHandler';
 import ResetAnalysedData from '../domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import { AnalyseFileData } from '../domain/ImportedFile/AnalyseFileData';
+import { AnalyseFileData } from '../domain/AnalyseFile/AnalyseFileData';
 import GetImportedData from '../domain/ReduxStoreHandling/ImportedData/GetImportedData';
 
 export class AnalyseFileHandler {

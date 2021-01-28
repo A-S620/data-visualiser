@@ -1,5 +1,5 @@
 import { store } from '../../../ReduxStore/store';
-import { IAnalysedFileData } from '../../../interfaces/import/IAnalysedFileData';
+import { IAnalysedFileData } from '../../../interfaces/Analyse/IAnalysedFileData';
 export default class GetAnalysedData {
     private static getFields(): Array<object> {
         return store.getState().analysedData.fields;

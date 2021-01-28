@@ -1,9 +1,9 @@
 import 'jsdom-global/register';
 import ResetImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import { IImportedFile } from '../../../src/interfaces/import/IImportedFile';
-import { ImportFileData } from '../../../src/domain/ImportedFile/ImportFileData';
-import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
-import { AnalyseFileData } from '../../../src/domain/ImportedFile/AnalyseFileData';
+import { ImportFileData } from '../../../src/domain/ImportFile/ImportFileData';
+import { FieldTypes } from '../../../src/interfaces/Analyse/IAnalysedFileData';
+import { AnalyseFileData } from '../../../src/domain/AnalyseFile/AnalyseFileData';
 import GetAnalysedData from '../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import CreateImportedData from '../../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { IImportedFileData } from '../../../src/interfaces/import/IImportedFileData';

@@ -3,7 +3,7 @@ import 'jsdom-global/register';
 import CreateAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import GetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import ResetAnalysedData from '../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import { FieldTypes, IAnalysedFileData } from '../../../../src/interfaces/import/IAnalysedFileData';
+import { FieldTypes, IAnalysedFileData } from '../../../../src/interfaces/Analyse/IAnalysedFileData';
 
 const analysedFileData: IAnalysedFileData = {
     fields: [

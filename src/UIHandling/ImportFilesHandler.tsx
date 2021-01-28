@@ -1,5 +1,5 @@
 import { NotificationsHandler } from './NotificationsHandler';
-import { ImportFileData } from '../domain/ImportedFile/ImportFileData';
+import { ImportFileData } from '../domain/ImportFile/ImportFileData';
 import { IImportedFile } from '../interfaces/import/IImportedFile';
 import ResetImportedData from '../domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 

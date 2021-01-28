@@ -1,6 +1,6 @@
 import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 import { AnalyseIntervalData } from './DataAnalysis/AnalyseIntervalData';
-import { FieldTypes, IAnalysedFileData } from '../../interfaces/import/IAnalysedFileData';
+import { FieldTypes, IAnalysedFileData } from '../../interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 
 export class AnalyseFileData {

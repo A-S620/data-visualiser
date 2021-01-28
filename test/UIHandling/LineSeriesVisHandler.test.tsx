@@ -7,8 +7,8 @@ import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plo
 import { IImportedFileData } from '../../src/interfaces/import/IImportedFileData';
 import CreateImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
-import { AnalyseFileData } from '../../src/domain/ImportedFile/AnalyseFileData';
-import { FieldTypes } from '../../src/interfaces/import/IAnalysedFileData';
+import { AnalyseFileData } from '../../src/domain/AnalyseFile/AnalyseFileData';
+import { FieldTypes } from '../../src/interfaces/Analyse/IAnalysedFileData';
 //Test data
 const dataObjects = [
     { col1: '32', col2: 'cool', col3: 'foo' },

@@ -1,5 +1,5 @@
 import 'jsdom-global/register';
-import CSVProcessor from '../../../../src/domain/ImportedFile/FileProcessors/CSVProcessor';
+import CSVProcessor from '../../../../src/domain/ImportFile/FileProcessors/CSVProcessor';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';

@@ -22,10 +22,10 @@ import {
 import { LinearProgressProps } from '@material-ui/core/LinearProgress';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { FieldTypes } from '../../../../interfaces/import/IAnalysedFileData';
+import { FieldTypes } from '../../../../interfaces/Analyse/IAnalysedFileData';
 import { TableContainer } from '@material-ui/core';
 import { AnalyseFileHandler } from '../../../../UIHandling/AnalyseFileHandler';
-import { AlertType } from '../../../../interfaces/INotification';
+import { AlertType } from '../../../../interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
 const useStyles = makeStyles((theme) => ({

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import ResetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import LinePlottingOptions from '../../../../../src/UI/LoggedIn/Plotting/Line/LinePlottingOptions';
-import { FieldTypes, IAnalysedFileData } from '../../../../../src/interfaces/import/IAnalysedFileData';
+import { FieldTypes, IAnalysedFileData } from '../../../../../src/interfaces/Analyse/IAnalysedFileData';
 
 let wrapper: ReactWrapper;
 beforeEach(

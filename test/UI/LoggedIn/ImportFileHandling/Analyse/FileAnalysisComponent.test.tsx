@@ -8,7 +8,7 @@ import FileAnalysisComponent from '../../../../../src/UI/LoggedIn/ImportFileHand
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
 import { AnalyseFileHandler } from '../../../../../src/UIHandling/AnalyseFileHandler';
-import { FieldTypes } from '../../../../../src/interfaces/import/IAnalysedFileData';
+import { FieldTypes } from '../../../../../src/interfaces/Analyse/IAnalysedFileData';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';

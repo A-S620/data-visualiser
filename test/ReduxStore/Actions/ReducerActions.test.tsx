@@ -2,7 +2,7 @@ import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions'
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
 import { ILinePlotCreateVis } from '../../../src/interfaces/plotting/ILinePlotCreateVis';
-import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
+import { FieldTypes } from '../../../src/interfaces/Analyse/IAnalysedFileData';
 
 //Test Data
 const dataArrays = [

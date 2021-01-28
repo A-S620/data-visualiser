@@ -16,7 +16,7 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
-import { AlertType } from '../../../interfaces/INotification';
+import { AlertType } from '../../../interfaces/Notification/INotification';
 
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 import { ImportFilesHandler } from '../../../UIHandling/ImportFilesHandler';

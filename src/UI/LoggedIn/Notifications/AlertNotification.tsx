@@ -1,7 +1,7 @@
 import React from 'react';
 import Alert from '@material-ui/lab/Alert';
 
-import { INotification } from '../../../interfaces/INotification';
+import { INotification } from '../../../interfaces/Notification/INotification';
 import { Collapse, IconButton, Snackbar } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 export default function AlertNotification(notifications: INotification) {
