@@ -9,14 +9,14 @@ export class AnalyseNominalData {
     constructor(nominalFields: Array<string>) {
         this.nominalFields = nominalFields;
     }
-    public validateNominalData(): { nominalFields: Array<string>; nominalDataObjects: Array<object> } {
+    public validateNominalData(): Array<object> {
         if (this.nominalFields.length > 0) {
             const nominalValues = this.getAllNominalValues();
             for (const value of nominalValues) {
                 this.nominalDataObjects.push(this.createNominalObject(value, nominalValues));
             }
         }
-        return this.getAnalysedNominalData();
+        return this.getAnalysedNominalData().nominalDataObjects;
     }
     private getAllNominalValues(): Array<string> {
         const nominalValues: Array<string> = [];

@@ -2,12 +2,13 @@ import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 import { AnalyseIntervalData } from './DataAnalysis/AnalyseIntervalData';
 import { FieldTypes, IAnalysedFileData } from '../../interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
+import { AnalyseNominalData } from './DataAnalysis/AnalyseNominalData';
 
 export class AnalyseFileData {
-    private fields: Array<object>;
-    private intervalfields: Array<string> = [];
+    private readonly fields: Array<object>;
+    private intervalFields: Array<string> = [];
     private intervalDataObjects: Array<object> = [];
-    private nominalfields: Array<string> = [];
+    private nominalFields: Array<string> = [];
     private nominalDataObjects: Array<object> = [];
     constructor(fields: Array<object>) {
         this.fields = fields;
@@ -15,20 +16,35 @@ export class AnalyseFileData {
     public validateAnalysedData(): NotificationsHandler {
         const notifications = new NotificationsHandler();
         this.getIntervalFields();
-        if (this.intervalfields.length > 0) {
-            const analyseIntervalData = new AnalyseIntervalData(this.intervalfields);
+        this.getNominalFields();
+        if (this.intervalFields.length > 0) {
+            const analyseIntervalData = new AnalyseIntervalData(this.intervalFields);
             this.intervalDataObjects = analyseIntervalData.validateIntervalData();
+        }
+        if (this.nominalFields.length > 0) {
+            const analyseNominalData = new AnalyseNominalData(this.nominalFields);
+            this.nominalDataObjects = analyseNominalData.validateNominalData();
         }
         this.createAnalysedData();
         return notifications;
     }
     private getIntervalFields() {
-        for (var objIndex = 0; objIndex < this.fields.length; objIndex += 1) {
+        for (let objIndex = 0; objIndex < this.fields.length; objIndex += 1) {
             const field = this.fields[objIndex];
             const fieldValue = Object.values(field)[0];
             const fieldTypeValue = Object.values(field)[1];
             if (fieldTypeValue === FieldTypes.INTERVAL) {
-                this.intervalfields.push(fieldValue);
+                this.intervalFields.push(fieldValue);
+            }
+        }
+    }
+    private getNominalFields() {
+        for (let objIndex = 0; objIndex < this.fields.length; objIndex += 1) {
+            const field = this.fields[objIndex];
+            const fieldValue = Object.values(field)[0];
+            const fieldTypeValue = Object.values(field)[1];
+            if (fieldTypeValue === FieldTypes.NOMINAL) {
+                this.nominalFields.push(fieldValue);
             }
         }
     }
@@ -36,14 +52,16 @@ export class AnalyseFileData {
     private createAnalysedData() {
         const analysedData: IAnalysedFileData = {
             fields: this.fields,
-            intervalFields: this.intervalfields,
+            intervalFields: this.intervalFields,
             intervalDataObjects: this.intervalDataObjects,
-            nominalFields: this.nominalfields,
+            nominalFields: this.nominalFields,
             nominalDataObjects: this.nominalDataObjects,
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createFields();
         createAnalysedData.createIntervalFields();
         createAnalysedData.createIntervalDataObjects();
+        createAnalysedData.createNominalFields();
+        createAnalysedData.createNominalDataObjects();
     }
 }

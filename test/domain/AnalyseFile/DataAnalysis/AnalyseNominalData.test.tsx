@@ -19,7 +19,7 @@ describe('AnalyseNominalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseNominalData = new AnalyseNominalData(['col3']);
-        expect(analyseNominalData.validateNominalData().nominalDataObjects).toEqual([
+        expect(analyseNominalData.validateNominalData()).toEqual([
             { name: 'foo', count: 1, percent: 25 },
             { name: 'bar', count: 1, percent: 25 },
             { name: 'tob', count: 2, percent: 50 },
@@ -40,7 +40,7 @@ describe('AnalyseNominalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseNominalData = new AnalyseNominalData(['col3']);
-        expect(analyseNominalData.validateNominalData().nominalDataObjects).toEqual([
+        expect(analyseNominalData.validateNominalData()).toEqual([
             { name: 'foo', count: 1, percent: 33 },
             { name: 'bar', count: 1, percent: 33 },
             { name: 'tob', count: 1, percent: 33 },
@@ -61,7 +61,7 @@ describe('AnalyseNominalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseNominalData = new AnalyseNominalData(['col3']);
-        expect(analyseNominalData.validateNominalData().nominalDataObjects).toEqual([
+        expect(analyseNominalData.validateNominalData()).toEqual([
             { name: 'foo', count: 1, percent: 33 },
             { name: 'bar', count: 1, percent: 33 },
             { name: 'tob', count: 1, percent: 33 },
@@ -82,7 +82,7 @@ describe('AnalyseNominalData domain component', () => {
         createImportedData.createDataFields();
         createImportedData.createDataAsObjects();
         const analyseNominalData = new AnalyseNominalData(['col3']);
-        expect(analyseNominalData.validateNominalData().nominalDataObjects).toEqual([
+        expect(analyseNominalData.validateNominalData()).toEqual([
             { name: 'foo', count: 1, percent: 25 },
             { name: 'bar', count: 1, percent: 25 },
             { name: 'tob', count: 2, percent: 50 },

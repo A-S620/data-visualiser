@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,11 +135,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/interfaces/Notification" />
+      <recent name="$PROJECT_DIR$/src/interfaces/Analyse" />
+      <recent name="$PROJECT_DIR$/test/domain/AnalyseFile" />
+      <recent name="$PROJECT_DIR$/src/domain/AnalyseFile" />
       <recent name="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis" />
-      <recent name="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis" />
-      <recent name="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling" />
-      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling" />
-      <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -386,28 +387,7 @@
       <workItem from="1611749147647" duration="210000" />
       <workItem from="1611753698350" duration="278000" />
       <workItem from="1611761603889" duration="3837000" />
-      <workItem from="1611825447626" duration="4128000" />
-    </task>
-    <task id="LOCAL-00127" summary="LinePlottingOptions.tsx unit tests done">
-      <created>1610184832530</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1610184832530</updated>
-    </task>
-    <task id="LOCAL-00128" summary="LineSeriesCreateVis.tsx + unit tests">
-      <created>1610385745506</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1610385745506</updated>
-    </task>
-    <task id="LOCAL-00129" summary="Rename ImportFiles.tsx UI Component to ImportFilesComponent.tsx">
-      <created>1610440448197</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1610440448198</updated>
+      <workItem from="1611825447626" duration="6793000" />
     </task>
     <task id="LOCAL-00130" summary="Ran nmp audit fix command">
       <created>1610441350938</created>
@@ -731,7 +711,28 @@
       <option name="project" value="LOCAL" />
       <updated>1611762751676</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="AnalyseNominalData domain component + unit tests">
+      <created>1611833867942</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1611833867942</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays">
+      <created>1611834075720</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1611834075720</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Refactoring domain and interfaces folder structure">
+      <created>1611834371991</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1611834371991</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -739,9 +740,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
-    <MESSAGE value="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests" />
-    <MESSAGE value="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx" />
     <MESSAGE value="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain" />
     <MESSAGE value="FieldTypes.tsx UI Component layout + dialog layout" />
     <MESSAGE value="FieldsHandler.tsx + unit tests" />
@@ -764,7 +762,10 @@
     <MESSAGE value="Updated ReduxReducer with nominal data + unit tests" />
     <MESSAGE value="Updated IAnalysedFileData to include nominal data.&#10;Updated CreateAnalysedData, ResetAnalysedData and GetAnalysedData to use nominal data from analysedData slice. updated unit tests" />
     <MESSAGE value="Refactored AnalyseIntervalData" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored AnalyseIntervalData" />
+    <MESSAGE value="AnalyseNominalData domain component + unit tests" />
+    <MESSAGE value="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays" />
+    <MESSAGE value="Refactoring domain and interfaces folder structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring domain and interfaces folder structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
