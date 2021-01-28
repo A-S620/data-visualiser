@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportedFile/DataAnalysis/AnalyseIntervalData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,15 +142,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -389,14 +385,8 @@
       <workItem from="1611736523594" duration="6166000" />
       <workItem from="1611749147647" duration="210000" />
       <workItem from="1611753698350" duration="278000" />
-      <workItem from="1611761603889" duration="945000" />
-    </task>
-    <task id="LOCAL-00126" summary="LinePlottingOptions.tsx save options in Redux">
-      <created>1610104272171</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1610104272172</updated>
+      <workItem from="1611761603889" duration="3837000" />
+      <workItem from="1611825447626" duration="4128000" />
     </task>
     <task id="LOCAL-00127" summary="LinePlottingOptions.tsx unit tests done">
       <created>1610184832530</created>
@@ -734,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611753939787</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="Refactored AnalyseIntervalData">
+      <created>1611762751675</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1611762751676</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -742,7 +739,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring and unit tests for LineSeriesVis.tsx" />
     <MESSAGE value="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData" />
     <MESSAGE value="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests" />
     <MESSAGE value="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx" />
@@ -767,7 +763,8 @@
     <MESSAGE value="Updated ReducerActions adn ReducerActionTypes with nominal data + updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with nominal data + unit tests" />
     <MESSAGE value="Updated IAnalysedFileData to include nominal data.&#10;Updated CreateAnalysedData, ResetAnalysedData and GetAnalysedData to use nominal data from analysedData slice. updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated IAnalysedFileData to include nominal data.&#10;Updated CreateAnalysedData, ResetAnalysedData and GetAnalysedData to use nominal data from analysedData slice. updated unit tests" />
+    <MESSAGE value="Refactored AnalyseIntervalData" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored AnalyseIntervalData" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
