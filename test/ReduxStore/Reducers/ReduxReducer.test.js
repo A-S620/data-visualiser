@@ -5,13 +5,13 @@ import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/
 import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
 
 //Test Data
-const dataAsArrays = [
+const dataArrays = [
     ['col1', 'col2', 'col3'],
     [' 1', '3', 'foo'],
     [' 2', '5', 'bar'],
     ['c-1', '7', 'baz'],
 ];
-const dataAsObjects = [
+const dataObjects = [
     { col1: ' 1', col2: '3', col3: 'foo' },
     { col1: ' 2', col2: '5', col3: 'bar' },
     { col1: 'c-1', col2: '7', col3: 'baz' },
@@ -32,34 +32,34 @@ describe('ReduxReducer', () => {
         const importedDataSlice = {
             importedData: {
                 dataFields: [],
-                dataAsObjects: [],
-                dataAsArrays: [],
+                dataObjects: [],
+                dataArrays: [],
             },
         };
         it('should handle DATA_FIELDS_ADDED', () => {
             expect(reduxReducer(importedDataSlice, reducerActions.addDataFields(dataFields))).toEqual({
                 importedData: {
                     dataFields: dataFields,
-                    dataAsObjects: [],
-                    dataAsArrays: [],
+                    dataObjects: [],
+                    dataArrays: [],
                 },
             });
         });
         it('should handle DATA_AS_ARRAY_ADDED', () => {
-            expect(reduxReducer(importedDataSlice, reducerActions.addDataAsArrays(dataAsArrays))).toEqual({
+            expect(reduxReducer(importedDataSlice, reducerActions.addDataAsArrays(dataArrays))).toEqual({
                 importedData: {
                     dataFields: [],
-                    dataAsObjects: [],
-                    dataAsArrays: dataAsArrays,
+                    dataObjects: [],
+                    dataArrays: dataArrays,
                 },
             });
         });
         it('should handle DATA_AS_OBJECTS_ADDED', () => {
-            expect(reduxReducer(importedDataSlice, reducerActions.addDataAsObjects(dataAsObjects))).toEqual({
+            expect(reduxReducer(importedDataSlice, reducerActions.addDataAsObjects(dataObjects))).toEqual({
                 importedData: {
                     dataFields: [],
-                    dataAsObjects: dataAsObjects,
-                    dataAsArrays: [],
+                    dataObjects: dataObjects,
+                    dataArrays: [],
                 },
             });
         });
@@ -70,8 +70,8 @@ describe('ReduxReducer', () => {
                         {
                             importedData: {
                                 dataFields: dataFields,
-                                dataAsObjects: [],
-                                dataAsArrays: [],
+                                dataObjects: [],
+                                dataArrays: [],
                             },
                         },
                     ],

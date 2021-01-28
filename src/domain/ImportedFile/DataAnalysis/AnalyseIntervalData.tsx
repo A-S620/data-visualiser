@@ -3,7 +3,7 @@ import CreateAnalysedData from '../../ReduxStoreHandling/AnalysedData/CreateAnal
 import { store } from '../../../ReduxStore/store';
 
 export class AnalyseIntervalData {
-    private readonly dataAsObjects = store.getState().importedData.dataAsObjects;
+    private readonly dataObjects = store.getState().importedData.dataObjects;
     private intervalFields: any;
     private intervalDataObjects: Array<object> = [];
     constructor(intervalFields: Array<string>) {
@@ -31,10 +31,10 @@ export class AnalyseIntervalData {
     }
 
     private analyseIntervalData() {
-        for (var objIndex = 0; objIndex < this.dataAsObjects.length; objIndex += 1) {
+        for (var objIndex = 0; objIndex < this.dataObjects.length; objIndex += 1) {
             const objectToAdd: Object = {};
             // eslint-disable-next-line prefer-destructuring
-            const currentObject: Object = this.dataAsObjects[objIndex];
+            const currentObject: Object = this.dataObjects[objIndex];
             for (const [key, value] of Object.entries(currentObject)) {
                 if (this.intervalFields.includes(key)) {
                     if (AnalyseIntervalData.dataIsFloat(value) && AnalyseIntervalData.dataIsNotIPAddress(value)) {

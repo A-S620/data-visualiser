@@ -3,7 +3,7 @@ import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 
 export class AnalyseNominalData {
     private readonly dataFields = store.getState().importedData.dataFields;
-    private readonly dataObjects = store.getState().importedData.dataAsObjects;
+    private readonly dataObjects = store.getState().importedData.dataObjects;
     private nominalFields: any;
     private nominalDataObjects: Array<object> = [];
     constructor(nominalFields: Array<string>) {

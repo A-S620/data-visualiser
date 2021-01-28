@@ -8,13 +8,13 @@ import ResetImportedData from '../../../../src/domain/ReduxStoreHandling/Importe
 import { IImportedFileData } from '../../../../src/interfaces/import/IImportedFileData';
 
 //Test Data
-const dataAsArrays = [
+const dataArrays = [
     ['col1', 'col2', 'col3'],
     [' 1', '3', 'foo'],
     [' 2', '5', 'bar'],
     ['c-1', '7', 'baz'],
 ];
-const dataAsObjects = [
+const dataObjects = [
     { col1: ' 1', col2: '3', col3: 'foo' },
     { col1: ' 2', col2: '5', col3: 'bar' },
     { col1: 'c-1', col2: '7', col3: 'baz' },
@@ -34,34 +34,34 @@ describe('CreateImportedData domain component', () => {
     it('Should add dataFields to the dataFields attribute in the Redux State', () => {
         const importedData: IImportedFileData = {
             dataFields: dataFields,
-            dataAsObjects: dataAsObjects,
-            dataAsArrays: dataAsArrays,
+            dataObjects: dataObjects,
+            dataArrays: dataArrays,
         };
         const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataFields();
         const getStoreHandler = new GetImportedData();
         expect(getStoreHandler.getImportedData().dataFields).toStrictEqual(dataFields);
     });
-    it('Should add data as Arrays to the dataAsArrays attribute in the redux store', () => {
+    it('Should add data as Arrays to the dataArrays attribute in the redux store', () => {
         const importedData: IImportedFileData = {
             dataFields: dataFields,
-            dataAsObjects: dataAsObjects,
-            dataAsArrays: dataAsArrays,
+            dataObjects: dataObjects,
+            dataArrays: dataArrays,
         };
         const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataAsArrays();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getImportedData().dataAsArrays).toStrictEqual(dataAsArrays);
+        expect(getStoreHandler.getImportedData().dataArrays).toStrictEqual(dataArrays);
     });
-    it('Should add data as Objects to the dataAsObjects attribute in the redux store', () => {
+    it('Should add data as Objects to the dataObjects attribute in the redux store', () => {
         const importedData: IImportedFileData = {
             dataFields: dataFields,
-            dataAsObjects: dataAsObjects,
-            dataAsArrays: dataAsArrays,
+            dataObjects: dataObjects,
+            dataArrays: dataArrays,
         };
         const createStoreHandler = new CreateImportedData(importedData);
         createStoreHandler.createDataAsObjects();
         const getStoreHandler = new GetImportedData();
-        expect(getStoreHandler.getImportedData().dataAsObjects).toStrictEqual(dataAsObjects);
+        expect(getStoreHandler.getImportedData().dataObjects).toStrictEqual(dataObjects);
     });
 });

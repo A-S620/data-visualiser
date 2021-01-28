@@ -1,8 +1,8 @@
 const ReduxState = {
     importedData: {
         dataFields: [],
-        dataAsObjects: [],
-        dataAsArrays: [],
+        dataObjects: [],
+        dataArrays: [],
     },
     analysedData: {
         fields: [],

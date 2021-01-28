@@ -27,11 +27,11 @@ describe('CSVProcessor domain component', () => {
     });
     it('should return the testCSV file as an array of objects', () => {
         const processor = new CSVProcessor(testCSV);
-        expect(processor.getImportedFileData().dataAsObjects).toStrictEqual(csvAsObjects);
+        expect(processor.getImportedFileData().dataObjects).toStrictEqual(csvAsObjects);
     });
     it('should return the testCSV file as an array of arrays', () => {
         const processor = new CSVProcessor(testCSV);
-        expect(processor.getImportedFileData().dataAsArrays).toStrictEqual(csvAsArrays);
+        expect(processor.getImportedFileData().dataArrays).toStrictEqual(csvAsArrays);
     });
     it('should return an error when CSV is not valid', () => {
         const processor = new CSVProcessor(invalidCSV);

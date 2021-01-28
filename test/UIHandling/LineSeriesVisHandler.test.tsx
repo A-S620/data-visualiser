@@ -10,7 +10,7 @@ import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/Current
 import { AnalyseFileData } from '../../src/domain/ImportedFile/AnalyseFileData';
 import { FieldTypes } from '../../src/interfaces/import/IAnalysedFileData';
 //Test data
-const dataAsObjects = [
+const dataObjects = [
     { col1: '32', col2: 'cool', col3: 'foo' },
     { col1: '79', col2: '5', col3: 'foo' },
     { col1: '76', col2: '23', col3: 'foo' },
@@ -31,8 +31,8 @@ const testOptions: ILinePlotOptions = {
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: dataFields,
-        dataAsObjects: dataAsObjects,
-        dataAsArrays: [],
+        dataObjects: dataObjects,
+        dataArrays: [],
     };
     const createImportedData = new CreateImportedData(testData);
     createImportedData.createDataFields();

@@ -54,8 +54,8 @@ export class ImportFileData {
         const data = getImportedData.getImportedData();
         return {
             dataFields: data.dataFields,
-            dataAsObjects: data.dataAsObjects,
-            dataAsArrays: data.dataAsArrays,
+            dataObjects: data.dataObjects,
+            dataArrays: data.dataArrays,
         };
     }
 }

@@ -9,12 +9,12 @@ describe('AnalyseIntervalData domain component', () => {
     it('should add the interval objects correctly', () => {
         const testData: IImportedFileData = {
             dataFields: ['col1', 'col2', 'col3'],
-            dataAsObjects: [
+            dataObjects: [
                 { col1: '32', col2: 'cool', col3: 'foo' },
                 { col1: '79', col2: '5', col3: 'foo' },
                 { col1: '76', col2: '23', col3: 'foo' },
             ],
-            dataAsArrays: [],
+            dataArrays: [],
         };
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
@@ -28,12 +28,12 @@ describe('AnalyseIntervalData domain component', () => {
     it('should add the correct objects, if one of the objects has the wrong length', () => {
         const testData: IImportedFileData = {
             dataFields: ['col1', 'col2', 'col3'],
-            dataAsObjects: [
+            dataObjects: [
                 { col1: '32', col2: 'cool', col3: 'foo' },
                 { col1: '79', col2: '5', col3: 'foo' },
                 { col1: '76', col2: '23', col3: 'foo' },
             ],
-            dataAsArrays: [],
+            dataArrays: [],
         };
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();
@@ -47,12 +47,12 @@ describe('AnalyseIntervalData domain component', () => {
     it('should not accept IP addresses as intervals', () => {
         const testData: IImportedFileData = {
             dataFields: ['col1', 'col2', 'col3'],
-            dataAsObjects: [
+            dataObjects: [
                 { col1: '32', col2: '21.31.54', col3: 'foo' },
                 { col1: '79', col2: '5', col3: 'foo' },
                 { col1: '76', col2: '23', col3: 'foo' },
             ],
-            dataAsArrays: [],
+            dataArrays: [],
         };
         const createImportedData = new CreateImportedData(testData);
         createImportedData.createDataFields();

@@ -229,6 +229,6 @@ function FileTypes(props: any) {
 }
 const mapStateToProps = (state: any) => ({
     dataFields: state.importedData.dataFields,
-    dataAsObjects: state.importedData.dataAsObjects,
+    dataObjects: state.importedData.dataObjects,
 });
 export default connect(mapStateToProps, {})(FileTypes);

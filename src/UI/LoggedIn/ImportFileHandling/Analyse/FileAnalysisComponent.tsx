@@ -47,9 +47,9 @@ function getExampleObject(intervalDataObjects: Array<object>): Object {
     }
     return objectToReturn;
 }
-function calcNumberOfIgnoredObjects(intervalDataObjects: Array<object>, dataAsObjects: Array<object>): number {
+function calcNumberOfIgnoredObjects(intervalDataObjects: Array<object>, dataObjects: Array<object>): number {
     const analysedDataLength = intervalDataObjects.length;
-    const importedDataLength = dataAsObjects.length;
+    const importedDataLength = dataObjects.length;
     return importedDataLength - analysedDataLength;
 }
 function FileAnalysisComponent(props: any) {
@@ -105,14 +105,14 @@ function FileAnalysisComponent(props: any) {
             <Box my={15} id="ignored-objects">
                 <Typography className={classes.statDescription}>Number of Ignored Data Objects:</Typography>
                 <Typography className={classes.statDescription}>
-                    {`${calcNumberOfIgnoredObjects(props.intervalDataObjects, props.dataAsObjects)}`}
+                    {`${calcNumberOfIgnoredObjects(props.intervalDataObjects, props.dataObjects)}`}
                 </Typography>
             </Box>
             <Box id="example-object" className={classes.boxSize}>
                 <Typography className={classes.statDescription}>Example Data Object:</Typography>
                 <Box id={'json-object'}>
                     <ReactJson
-                        src={getExampleObject(props.dataAsObjects)}
+                        src={getExampleObject(props.dataObjects)}
                         theme="summerfruit:inverted"
                         displayDataTypes={false}
                         displayObjectSize={false}
@@ -127,6 +127,6 @@ const mapStateToProps = (state: any) => ({
     intervalFields: state.analysedData.intervalFields,
     intervalDataObjects: state.analysedData.intervalDataObjects,
     dataFields: state.importedData.dataFields,
-    dataAsObjects: state.importedData.dataAsObjects,
+    dataObjects: state.importedData.dataObjects,
 });
 export default connect(mapStateToProps, {})(FileAnalysisComponent);

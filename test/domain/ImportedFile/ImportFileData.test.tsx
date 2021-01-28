@@ -66,7 +66,7 @@ describe('Import Data', () => {
         const importData = new ImportFileData(importedFile);
         importData.validate();
         expect(importData.getImportedData().dataFields).toStrictEqual(csvFields);
-        expect(importData.getImportedData().dataAsObjects).toStrictEqual(csvAsObjects);
-        expect(importData.getImportedData().dataAsArrays).toStrictEqual(csvAsArrays);
+        expect(importData.getImportedData().dataObjects).toStrictEqual(csvAsObjects);
+        expect(importData.getImportedData().dataArrays).toStrictEqual(csvAsArrays);
     });
 });

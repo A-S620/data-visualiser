@@ -6,16 +6,16 @@ export default class GetImportedData {
         return store.getState().importedData.dataFields;
     }
     private static getDataAsArrays(): Array<Array<any>> {
-        return store.getState().importedData.dataAsArrays;
+        return store.getState().importedData.dataArrays;
     }
     private static getDataAsObjects(): Array<object> {
-        return store.getState().importedData.dataAsObjects;
+        return store.getState().importedData.dataObjects;
     }
     public getImportedData(): IImportedFileData {
         return {
             dataFields: GetImportedData.getDataFields(),
-            dataAsObjects: GetImportedData.getDataAsObjects(),
-            dataAsArrays: GetImportedData.getDataAsArrays(),
+            dataObjects: GetImportedData.getDataAsObjects(),
+            dataArrays: GetImportedData.getDataAsArrays(),
         };
     }
 }

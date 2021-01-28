@@ -19,13 +19,13 @@ const fields = [
 
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
-        dataAsArrays: [
+        dataArrays: [
             ['col1', 'col2', 'col3'],
             [' 1', '3', 'foo'],
             [' 2', '5', 'bar'],
             ['c-1', '7', 'baz'],
         ],
-        dataAsObjects: [
+        dataObjects: [
             { col1: ' 1', col2: '3', col3: 'foo' },
             { col1: ' 2', col2: '5', col3: 'bar' },
             { col1: 'c-1', col2: '7', col3: 'baz' },

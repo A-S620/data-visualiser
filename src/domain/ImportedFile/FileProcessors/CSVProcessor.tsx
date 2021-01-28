@@ -28,8 +28,8 @@ export default class CSVProcessor {
     public getImportedFileData(): IImportedFileData {
         return {
             dataFields: this.getCSVFields(),
-            dataAsObjects: this.csvToObjects(),
-            dataAsArrays: this.csvToArrays(),
+            dataObjects: this.csvToObjects(),
+            dataArrays: this.csvToArrays(),
         };
     }
     private csvToObjects(): Array<object> {

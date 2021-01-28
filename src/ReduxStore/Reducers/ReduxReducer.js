@@ -16,7 +16,7 @@ export default function reduxReducer(state = ReduxState, action) {
                 ...state,
                 importedData: {
                     ...state.importedData,
-                    dataAsArrays: action.payload,
+                    dataArrays: action.payload,
                 },
             };
         case ReducerActions.DATA_AS_OBJECTS_ADDED:
@@ -24,7 +24,7 @@ export default function reduxReducer(state = ReduxState, action) {
                 ...state,
                 importedData: {
                     ...state.importedData,
-                    dataAsObjects: action.payload,
+                    dataObjects: action.payload,
                 },
             };
 
@@ -32,8 +32,8 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 importedData: {
                     dataFields: [],
-                    dataAsObjects: [],
-                    dataAsArrays: [],
+                    dataObjects: [],
+                    dataArrays: [],
                 },
             };
 

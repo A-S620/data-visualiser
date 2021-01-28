@@ -11,9 +11,9 @@ export default class CreateImportedData {
         store.dispatch(addDataFields(this.importedData.dataFields));
     }
     public createDataAsArrays() {
-        store.dispatch(addDataAsArrays(this.importedData.dataAsArrays));
+        store.dispatch(addDataAsArrays(this.importedData.dataArrays));
     }
     public createDataAsObjects() {
-        store.dispatch(addDataAsObjects(this.importedData.dataAsObjects));
+        store.dispatch(addDataAsObjects(this.importedData.dataObjects));
     }
 }

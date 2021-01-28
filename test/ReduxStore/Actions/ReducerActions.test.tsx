@@ -5,13 +5,13 @@ import { ILinePlotCreateVis } from '../../../src/interfaces/plotting/ILinePlotCr
 import { FieldTypes } from '../../../src/interfaces/import/IAnalysedFileData';
 
 //Test Data
-const dataAsArrays = [
+const dataArrays = [
     ['col1', 'col2', 'col3'],
     [' 1', '3', 'foo'],
     [' 2', '5', 'bar'],
     ['c-1', '7', 'baz'],
 ];
-const dataAsObjects = [
+const dataObjects = [
     { col1: ' 1', col2: '3', col3: 'foo' },
     { col1: ' 2', col2: '5', col3: 'bar' },
     { col1: 'c-1', col2: '7', col3: 'baz' },
@@ -35,16 +35,16 @@ describe('Reducer actions', () => {
         it('Should create an action to add the data as Arrays', () => {
             const expectedAction = {
                 type: actionTypes.DATA_AS_ARRAYS_ADDED,
-                payload: dataAsArrays,
+                payload: dataArrays,
             };
-            expect(reducerActions.addDataAsArrays(dataAsArrays)).toEqual(expectedAction);
+            expect(reducerActions.addDataAsArrays(dataArrays)).toEqual(expectedAction);
         });
         it('Should create an action to add the data as objects', () => {
             const expectedAction = {
                 type: actionTypes.DATA_AS_OBJECTS_ADDED,
-                payload: dataAsObjects,
+                payload: dataObjects,
             };
-            expect(reducerActions.addDataAsObjects(dataAsObjects)).toEqual(expectedAction);
+            expect(reducerActions.addDataAsObjects(dataObjects)).toEqual(expectedAction);
         });
         it('Should create an action to reset imported data', () => {
             const expectedAction = {

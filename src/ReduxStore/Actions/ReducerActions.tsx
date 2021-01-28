@@ -6,13 +6,13 @@ export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
     payload: dataFields,
 });
-export const addDataAsArrays = (dataAsArrays: Array<Array<any>>) => ({
+export const addDataAsArrays = (dataArrays: Array<Array<any>>) => ({
     type: reducerActionTypes.DATA_AS_ARRAYS_ADDED,
-    payload: dataAsArrays,
+    payload: dataArrays,
 });
-export const addDataAsObjects = (dataAsObjects: Array<object>) => ({
+export const addDataAsObjects = (dataObjects: Array<object>) => ({
     type: reducerActionTypes.DATA_AS_OBJECTS_ADDED,
-    payload: dataAsObjects,
+    payload: dataObjects,
 });
 export const resetImportedData = () => ({
     type: reducerActionTypes.IMPORTED_DATA_SLICE_RESET,
