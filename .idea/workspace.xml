@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,14 +389,7 @@
       <workItem from="1611753698350" duration="278000" />
       <workItem from="1611761603889" duration="3837000" />
       <workItem from="1611825447626" duration="7611000" />
-      <workItem from="1611916083448" duration="7622000" />
-    </task>
-    <task id="LOCAL-00136" summary="LineSeriesVisHandler.tsx UIHandler component + unit tests">
-      <created>1610635433752</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1610635433753</updated>
+      <workItem from="1611916083448" duration="11469000" />
     </task>
     <task id="LOCAL-00137" summary="CurrentVisualisation Actions, ActionTypes for ReduxStore + unit tests">
       <created>1610637937423</created>
@@ -736,7 +727,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611927165850</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="Updated CreateAnalysedData. GetAnalysedData and ResetAnalysedData to use ordinal data + updated unit tests">
+      <created>1611929946426</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1611929946426</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -744,7 +742,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Multiple Changes&#10;Updated: CreateAnalysedData, GetAnalysedData, ResetAnalysedData.test + unit tests&#10;Updated AnalyseFileHandler UI Handler component, need to do unit tests&#10;Created AnalyseFileData domain component + did unit tests&#10;Updated tests to use AnalyseFileData instead of AnalyseIntervalData&#10;Updated IAnalysedFileData.&#10;TODO: AnalyseFileHandler + unit tests" />
     <MESSAGE value="Fixed AnalyseFileHandler unit tests" />
     <MESSAGE value="ImportFilesComponent Field Types button - need to do unit tests&#10;FieldTypes - Update state, need to do reselect already chosen option + unit tests" />
     <MESSAGE value="Changed AnalyseFileHandler to work with fields = unit tests" />
@@ -769,7 +766,8 @@
     <MESSAGE value="Updated IAnalysedFileData interface to include: ordinalFields + ordinalDataObjects. updated unit tests" />
     <MESSAGE value="Updated ReducerActions + ReducerActionTypes to include ordina data" />
     <MESSAGE value="Updated ReduxReducer to use ordinal data + updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ReduxReducer to use ordinal data + updated unit tests" />
+    <MESSAGE value="Updated CreateAnalysedData. GetAnalysedData and ResetAnalysedData to use ordinal data + updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated CreateAnalysedData. GetAnalysedData and ResetAnalysedData to use ordinal data + updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

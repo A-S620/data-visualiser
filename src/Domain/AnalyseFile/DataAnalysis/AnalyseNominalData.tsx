@@ -1,5 +1,4 @@
 import { store } from '../../../ReduxStore/store';
-import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 
 export class AnalyseNominalData {
     private readonly dataFields = store.getState().importedData.dataFields;
