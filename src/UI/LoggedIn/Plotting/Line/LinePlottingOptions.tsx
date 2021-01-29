@@ -13,9 +13,9 @@ import {
     Typography,
 } from '@material-ui/core';
 import { connect } from 'react-redux';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../../interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../../Interfaces/plotting/ILinePlotOptions';
 
-import { AlertType } from '../../../../interfaces/Notification/INotification';
+import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
 import { LinePlotOptionsHandler } from '../../../../UIHandling/LinePlotOptionsHandler';

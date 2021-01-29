@@ -1,9 +1,9 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import CreateCurrentVisualisation from '../../../../../src/domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation';
-import { ILinePlotCreateVis } from '../../../../../src/interfaces/plotting/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../../src/interfaces/plotting/ILinePlotOptions';
+import CreateCurrentVisualisation from '../../../../../src/Domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation';
+import { ILinePlotCreateVis } from '../../../../../src/Interfaces/plotting/ILinePlotCreateVis';
+import { CurveType, LineStyle } from '../../../../../src/Interfaces/plotting/ILinePlotOptions';
 import { store } from '../../../../../src/ReduxStore/store';
 import LineSeriesVis from '../../../../../src/UI/LoggedIn/Plotting/Line/LineSeriesVis';
 import { Provider } from 'react-redux';

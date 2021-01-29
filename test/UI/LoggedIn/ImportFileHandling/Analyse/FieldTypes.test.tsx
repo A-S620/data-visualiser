@@ -4,10 +4,10 @@ import 'jsdom-global/register';
 import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
 import FieldTypes from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes';
-import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
+import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
-import ResetImportedData from '../../../../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-import GetAnalysedData from '../../../../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import ResetImportedData from '../../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import GetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n 1,7,baz';
 

@@ -6,9 +6,9 @@ import { Provider } from 'react-redux';
 import { store } from '../../../../../src/ReduxStore/store';
 import FileAnalysisComponent from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
-import { IImportedFile } from '../../../../../src/interfaces/import/IImportedFile';
+import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { AnalyseFileHandler } from '../../../../../src/UIHandling/AnalyseFileHandler';
-import { FieldTypes } from '../../../../../src/interfaces/Analyse/IAnalysedFileData';
+import { FieldTypes } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';

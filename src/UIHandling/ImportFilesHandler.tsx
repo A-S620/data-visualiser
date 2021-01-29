@@ -1,7 +1,7 @@
 import { NotificationsHandler } from './NotificationsHandler';
-import { ImportFileData } from '../domain/ImportFile/ImportFileData';
-import { IImportedFile } from '../interfaces/import/IImportedFile';
-import ResetImportedData from '../domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import { ImportFileData } from '../Domain/ImportFile/ImportFileData';
+import { IImportedFile } from '../Interfaces/import/IImportedFile';
+import ResetImportedData from '../Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 
 export class ImportFilesHandler {
     private importedFile: IImportedFile;

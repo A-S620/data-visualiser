@@ -1,10 +1,10 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../src/interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../src/Interfaces/plotting/ILinePlotOptions';
 import { LinePlotOptionsHandler } from '../../src/UIHandling/LinePlotOptionsHandler';
-import GetLinePlotOptions from '../../src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
-import GetCurrentVisualisation from '../../src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
+import GetLinePlotOptions from '../../src/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
+import GetCurrentVisualisation from '../../src/Domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {

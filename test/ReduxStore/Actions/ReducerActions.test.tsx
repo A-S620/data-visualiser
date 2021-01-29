@@ -1,8 +1,8 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/interfaces/plotting/ILinePlotOptions';
-import { ILinePlotCreateVis } from '../../../src/interfaces/plotting/ILinePlotCreateVis';
-import { FieldTypes } from '../../../src/interfaces/Analyse/IAnalysedFileData';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../../src/Interfaces/plotting/ILinePlotCreateVis';
+import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 
 //Test Data
 const dataArrays = [

@@ -1,9 +1,9 @@
-import { ILinePlotOptions } from '../interfaces/plotting/ILinePlotOptions';
+import { ILinePlotOptions } from '../Interfaces/plotting/ILinePlotOptions';
 import { NotificationsHandler } from './NotificationsHandler';
-import { LineSeriesOptionsValidate } from '../domain/LineSeriesVis/LineSeriesOptionsValidate';
-import GetLinePlotOptions from '../domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
-import CreateLinePlotOptions from '../domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
-import ResetLinePlotOptions from '../domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
+import { LineSeriesOptionsValidate } from '../Domain/LineSeriesVis/LineSeriesOptionsValidate';
+import GetLinePlotOptions from '../Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
+import CreateLinePlotOptions from '../Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
+import ResetLinePlotOptions from '../Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
 import { LineSeriesVisHandler } from './LineSeriesVisHandler';
 
 export class LinePlotOptionsHandler {

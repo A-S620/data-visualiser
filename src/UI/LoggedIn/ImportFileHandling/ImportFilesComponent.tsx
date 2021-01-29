@@ -16,16 +16,16 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
-import { AlertType } from '../../../interfaces/Notification/INotification';
+import { AlertType } from '../../../Interfaces/Notification/INotification';
 
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 import { ImportFilesHandler } from '../../../UIHandling/ImportFilesHandler';
 
 import AlertNotification from '../Notifications/AlertNotification';
-import { IImportedFile } from '../../../interfaces/import/IImportedFile';
+import { IImportedFile } from '../../../Interfaces/import/IImportedFile';
 
 import ImportedFileStats from './Import/ImportedFileStats';
-import { IImportedFileStats } from '../../../interfaces/import/IImportedFileStats';
+import { IImportedFileStats } from '../../../Interfaces/import/IImportedFileStats';
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
 import Slide from '@material-ui/core/Slide';
 import FieldTypes from './Analyse/FieldTypes';

@@ -1,6 +1,6 @@
-import { LineSeriesCreateVis } from '../domain/LineSeriesVis/LineSeriesCreateVis';
-import CreateCurrentVisualisation from '../domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation';
-import ResetCurrentVisualisation from '../domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation';
+import { LineSeriesCreateVis } from '../Domain/LineSeriesVis/LineSeriesCreateVis';
+import CreateCurrentVisualisation from '../Domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation';
+import ResetCurrentVisualisation from '../Domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation';
 
 export class LineSeriesVisHandler {
     public createVisualisation() {

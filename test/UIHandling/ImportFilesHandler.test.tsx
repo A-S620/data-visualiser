@@ -1,9 +1,9 @@
 import { ImportFilesHandler } from '../../src/UIHandling/ImportFilesHandler';
-import { IImportedFile } from '../../src/interfaces/import/IImportedFile';
-import GetImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/GetImportedData';
-import ResetImportedData from '../../src/domain/ReduxStoreHandling/ImportedData/ResetImportedData';
-import ResetAnalysedData from '../../src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import GetAnalysedData from '../../src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import { IImportedFile } from '../../src/Interfaces/import/IImportedFile';
+import GetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/GetImportedData';
+import ResetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import ResetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
+import GetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n 1,7,baz';
 const testCSV2 = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n cool,7,baz';
