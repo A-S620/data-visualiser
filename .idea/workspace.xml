@@ -2,75 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportFile/FileProcessors/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ImportFile/FileProcessors/CSVProcessor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportFile/FileProcessors/PapaParse/PapaParseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ImportFile/FileProcessors/PapaParse/PapaParseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportFile/FileProcessors/PapaParse/PapaUnparseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ImportFile/FileProcessors/PapaParse/PapaUnparseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ImportFile/ImportFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ImportFile/ImportFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/LineSeriesVis/LineSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/GetImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/GetImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/ImportedData/ResetImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Analyse/IAnalysedFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Analyse/IAnalysedFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/Notification/INotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Notification/INotification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/import/IImportedFile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/import/IImportedFile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/import/IImportedFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/import/IImportedFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/import/IImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/import/IImportedFileStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/ILinePlotCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/plotting/ILinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/ILinePlotOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LineSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LineSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportFile/FileProcessors/CSVProcessor.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportFile/FileProcessors/CSVProcessor.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/ImportFile/ImportFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/ImportFile/ImportFileData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/LineSeriesVis/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LinePlotOptionsValidate.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/ResetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/ImportedData/ResetImportedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/CreateLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/CreateLinePlotOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/domain/RedoxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,14 +388,7 @@
       <workItem from="1611753698350" duration="278000" />
       <workItem from="1611761603889" duration="3837000" />
       <workItem from="1611825447626" duration="7611000" />
-      <workItem from="1611916083448" duration="3259000" />
-    </task>
-    <task id="LOCAL-00131" summary="Updating dependencies">
-      <created>1610442360155</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1610442360155</updated>
+      <workItem from="1611916083448" duration="3727000" />
     </task>
     <task id="LOCAL-00132" summary="Remove destructuring rule from .eslintrc.json">
       <created>1610558554222</created>
@@ -799,7 +726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611838278035</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="Refactoring: renamed folders in src + test directories">
+      <created>1611921922747</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1611921922747</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -807,7 +741,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="FieldTypes.tsx UI Component layout + dialog layout" />
     <MESSAGE value="FieldsHandler.tsx + unit tests" />
     <MESSAGE value="Created Fields in AnalysedData Slice in Redux store&#10;Updated ReducerActionTypes.js, ReducerActions.tsx with Fields and updated unit tests.&#10;Refactored IFields into IField" />
     <MESSAGE value="Updated ReduxReducer + unit tests with Fields" />
@@ -832,7 +765,8 @@
     <MESSAGE value="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays" />
     <MESSAGE value="Refactoring domain and interfaces folder structure" />
     <MESSAGE value="AnalyseFileData domain component updated with AnalyseNominalData + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="AnalyseFileData domain component updated with AnalyseNominalData + unit tests" />
+    <MESSAGE value="Refactoring: renamed folders in src + test directories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring: renamed folders in src + test directories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

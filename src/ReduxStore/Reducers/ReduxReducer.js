@@ -86,6 +86,8 @@ export default function reduxReducer(state = ReduxState, action) {
                     intervalDataObjects: [],
                     nominalFields: [],
                     nominalDataObjects: [],
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
                 },
             };
 

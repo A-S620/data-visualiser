@@ -88,6 +88,8 @@ describe('ReduxReducer', () => {
                 intervalDataObjects: [],
                 nominalFields: [],
                 nominalDataObjects: [],
+                ordinalFields: [],
+                ordinalDataObjects: [],
             },
         };
         it('Should handle FIELDS_ADDED', () => {
@@ -98,6 +100,8 @@ describe('ReduxReducer', () => {
                     intervalDataObjects: [],
                     nominalFields: [],
                     nominalDataObjects: [],
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
                 },
             });
         });
@@ -109,6 +113,8 @@ describe('ReduxReducer', () => {
                     intervalDataObjects: [],
                     nominalFields: [],
                     nominalDataObjects: [],
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
                 },
             });
         });
@@ -121,6 +127,8 @@ describe('ReduxReducer', () => {
                         intervalDataObjects: intervalDataObjects,
                         nominalFields: [],
                         nominalDataObjects: [],
+                        ordinalFields: [],
+                        ordinalDataObjects: [],
                     },
                 }
             );
@@ -133,6 +141,8 @@ describe('ReduxReducer', () => {
                     intervalDataObjects: [],
                     nominalFields: dataFields,
                     nominalDataObjects: [],
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
                 },
             });
         });
@@ -144,6 +154,8 @@ describe('ReduxReducer', () => {
                     intervalDataObjects: [],
                     nominalFields: [],
                     nominalDataObjects: intervalDataObjects,
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
                 },
             });
         });
@@ -158,6 +170,8 @@ describe('ReduxReducer', () => {
                                 intervalDataObjects: intervalDataObjects,
                                 nominalFields: [],
                                 nominalDataObjects: [],
+                                ordinalFields: [],
+                                ordinalDataObjects: [],
                             },
                         },
                     ],
