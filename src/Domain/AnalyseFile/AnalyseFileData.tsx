@@ -10,6 +10,8 @@ export class AnalyseFileData {
     private intervalDataObjects: Array<object> = [];
     private nominalFields: Array<string> = [];
     private nominalDataObjects: Array<object> = [];
+    private ordinalFields: Array<string> = [];
+    private ordinalDataObjects: Array<object> = [];
     constructor(fields: Array<object>) {
         this.fields = fields;
     }
@@ -56,6 +58,8 @@ export class AnalyseFileData {
             intervalDataObjects: this.intervalDataObjects,
             nominalFields: this.nominalFields,
             nominalDataObjects: this.nominalDataObjects,
+            ordinalFields: this.ordinalFields,
+            ordinalDataObjects: this.ordinalDataObjects,
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createFields();

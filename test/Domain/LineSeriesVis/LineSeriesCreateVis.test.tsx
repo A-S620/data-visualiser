@@ -21,6 +21,8 @@ beforeAll(() => {
         ],
         nominalFields: ['col3'],
         nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+        ordinalFields: [],
+        ordinalDataObjects: [],
     };
     const createAnalysedData = new CreateAnalysedData(analysedFileData);
     createAnalysedData.createIntervalFields();

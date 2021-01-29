@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Analyse/IAnalysedFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Analyse/IAnalysedFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,14 +391,7 @@
       <workItem from="1611753698350" duration="278000" />
       <workItem from="1611761603889" duration="3837000" />
       <workItem from="1611825447626" duration="7611000" />
-      <workItem from="1611916083448" duration="3727000" />
-    </task>
-    <task id="LOCAL-00132" summary="Remove destructuring rule from .eslintrc.json">
-      <created>1610558554222</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1610558554222</updated>
+      <workItem from="1611916083448" duration="4212000" />
     </task>
     <task id="LOCAL-00133" summary="Remove destructuring rule from .eslintrc.json">
       <created>1610558599339</created>
@@ -733,7 +729,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611921922747</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="Added: ordinalFields + ordinalDataObjects to ReduxState and updtaed unit tests">
+      <created>1611922211541</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1611922211541</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,7 +744,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="FieldsHandler.tsx + unit tests" />
     <MESSAGE value="Created Fields in AnalysedData Slice in Redux store&#10;Updated ReducerActionTypes.js, ReducerActions.tsx with Fields and updated unit tests.&#10;Refactored IFields into IField" />
     <MESSAGE value="Updated ReduxReducer + unit tests with Fields" />
     <MESSAGE value="Updated CreateAnalysedData to take in IAnalysedFileData + unit tests" />
@@ -766,7 +768,8 @@
     <MESSAGE value="Refactoring domain and interfaces folder structure" />
     <MESSAGE value="AnalyseFileData domain component updated with AnalyseNominalData + unit tests" />
     <MESSAGE value="Refactoring: renamed folders in src + test directories" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring: renamed folders in src + test directories" />
+    <MESSAGE value="Added: ordinalFields + ordinalDataObjects to ReduxState and updtaed unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: ordinalFields + ordinalDataObjects to ReduxState and updtaed unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

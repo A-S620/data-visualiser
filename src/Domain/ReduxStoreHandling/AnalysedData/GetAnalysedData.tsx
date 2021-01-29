@@ -24,6 +24,8 @@ export default class GetAnalysedData {
             intervalDataObjects: GetAnalysedData.getIntegerDataObjects(),
             nominalFields: GetAnalysedData.getNominalFields(),
             nominalDataObjects: GetAnalysedData.getNominalDataObjects(),
+            ordinalFields: [],
+            ordinalDataObjects: [],
         };
     }
 }

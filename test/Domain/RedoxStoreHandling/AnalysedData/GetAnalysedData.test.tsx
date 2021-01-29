@@ -30,6 +30,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: [],
+            ordinalDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createFields();
@@ -56,6 +58,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: [],
+            ordinalDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalFields();
@@ -79,6 +83,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: [],
+            ordinalDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
@@ -105,6 +111,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: [],
+            ordinalDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalFields();
@@ -128,6 +136,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: [],
+            ordinalDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalDataObjects();
