@@ -21,6 +21,7 @@ describe('ResetAnalysedData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
             ],
             intervalFields: ['col1', 'col2'],
             intervalDataObjects: [
@@ -30,8 +31,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
-            ordinalFields: [],
-            ordinalDataObjects: [],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createFields();
@@ -41,6 +42,7 @@ describe('ResetAnalysedData domain component', () => {
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            { field: 'col4', fieldType: FieldTypes.ORDINAL },
         ]);
     });
     it('Should return the correct intervalFields if the getIntegerFields method is called', () => {
@@ -49,6 +51,7 @@ describe('ResetAnalysedData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
             ],
             intervalFields: ['col1', 'col2'],
             intervalDataObjects: [
@@ -58,8 +61,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
-            ordinalFields: [],
-            ordinalDataObjects: [],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalFields();
@@ -74,6 +77,7 @@ describe('ResetAnalysedData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
             ],
             intervalFields: ['col1', 'col2'],
             intervalDataObjects: [
@@ -83,8 +87,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
-            ordinalFields: [],
-            ordinalDataObjects: [],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
@@ -102,6 +106,7 @@ describe('ResetAnalysedData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
             ],
             intervalFields: ['col1', 'col2'],
             intervalDataObjects: [
@@ -111,8 +116,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
-            ordinalFields: [],
-            ordinalDataObjects: [],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalFields();
@@ -127,6 +132,7 @@ describe('ResetAnalysedData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
             ],
             intervalFields: ['col1', 'col2'],
             intervalDataObjects: [
@@ -136,8 +142,8 @@ describe('ResetAnalysedData domain component', () => {
             ],
             nominalFields: ['col3'],
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
-            ordinalFields: [],
-            ordinalDataObjects: [],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalDataObjects();
@@ -147,6 +153,58 @@ describe('ResetAnalysedData domain component', () => {
             { col3: 'female' },
             { col3: 'male' },
             { col3: 'female' },
+        ]);
+    });
+    it('Should return the correct ordinalFields if the getNominalFields method is called', () => {
+        const analysedFileData: IAnalysedFileData = {
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
+            ],
+            intervalFields: ['col1', 'col2'],
+            intervalDataObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createOrdinalFields();
+        const getStoreHandler = new GetAnalysedData();
+
+        expect(getStoreHandler.getAnalysedData().ordinalFields).toStrictEqual(['col4']);
+    });
+    it('Should return the correct ordinal data objects if the getNominalDataObjects method is called', () => {
+        const analysedFileData: IAnalysedFileData = {
+            fields: [
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.ORDINAL },
+            ],
+            intervalFields: ['col1', 'col2'],
+            intervalDataObjects: [
+                { col1: 32, col2: 45 },
+                { col1: 79, col2: 5 },
+                { col1: 76, col2: 23 },
+            ],
+            nominalFields: ['col3'],
+            nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+            ordinalFields: ['col4'],
+            ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+        };
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createOrdinalDataObjects();
+        const getStoreHandler = new GetAnalysedData();
+
+        expect(getStoreHandler.getAnalysedData().ordinalDataObjects).toStrictEqual([
+            { name: '15-20', count: 5, percentage: 20 },
         ]);
     });
 });

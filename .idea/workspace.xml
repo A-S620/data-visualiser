@@ -3,21 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentVisualisation/CreateCurrentVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentVisualisation/GetCurrentVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentVisualisation/ResetCurrentVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/ImportedData/CreateImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/CreateImportedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/ImportedData/GetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/GetImportedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/ImportedData/ResetImportedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/ResetImportedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/LinePlotOptions/CreateLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/RedoxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -401,14 +391,7 @@
       <workItem from="1611753698350" duration="278000" />
       <workItem from="1611761603889" duration="3837000" />
       <workItem from="1611825447626" duration="7611000" />
-      <workItem from="1611916083448" duration="6346000" />
-    </task>
-    <task id="LOCAL-00135" summary="Fixed failing test&#10;&#10;Enzyme adapter only works with React 16, needed to use external adapter (enzyme-adapter-react-17) from library for React 17">
-      <created>1610560266810</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1610560266810</updated>
+      <workItem from="1611916083448" duration="7622000" />
     </task>
     <task id="LOCAL-00136" summary="LineSeriesVisHandler.tsx UIHandler component + unit tests">
       <created>1610635433752</created>
@@ -746,7 +729,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611926071357</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <task id="LOCAL-00184" summary="Updated ReduxReducer to use ordinal data + updated unit tests">
+      <created>1611927165850</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1611927165850</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,7 +744,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated CreateAnalysedData to take in IAnalysedFileData + unit tests" />
     <MESSAGE value="Multiple Changes&#10;Updated: CreateAnalysedData, GetAnalysedData, ResetAnalysedData.test + unit tests&#10;Updated AnalyseFileHandler UI Handler component, need to do unit tests&#10;Created AnalyseFileData domain component + did unit tests&#10;Updated tests to use AnalyseFileData instead of AnalyseIntervalData&#10;Updated IAnalysedFileData.&#10;TODO: AnalyseFileHandler + unit tests" />
     <MESSAGE value="Fixed AnalyseFileHandler unit tests" />
     <MESSAGE value="ImportFilesComponent Field Types button - need to do unit tests&#10;FieldTypes - Update state, need to do reselect already chosen option + unit tests" />
@@ -779,7 +768,8 @@
     <MESSAGE value="Added: ordinalFields + ordinalDataObjects to ReduxState and updtaed unit tests" />
     <MESSAGE value="Updated IAnalysedFileData interface to include: ordinalFields + ordinalDataObjects. updated unit tests" />
     <MESSAGE value="Updated ReducerActions + ReducerActionTypes to include ordina data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActions + ReducerActionTypes to include ordina data" />
+    <MESSAGE value="Updated ReduxReducer to use ordinal data + updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReduxReducer to use ordinal data + updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

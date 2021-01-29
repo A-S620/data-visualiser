@@ -10,6 +10,7 @@ const analysedFileData: IAnalysedFileData = {
         { field: 'col1', fieldType: FieldTypes.INTERVAL },
         { field: 'col2', fieldType: FieldTypes.INTERVAL },
         { field: 'col3', fieldType: FieldTypes.NOMINAL },
+        { field: 'col4', fieldType: FieldTypes.ORDINAL },
     ],
     intervalFields: ['col1', 'col2'],
     intervalDataObjects: [
@@ -19,6 +20,8 @@ const analysedFileData: IAnalysedFileData = {
     ],
     nominalFields: ['col3'],
     nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
+    ordinalFields: ['col4'],
+    ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
 };
 //Runs before each test
 beforeEach(() => {
@@ -39,6 +42,7 @@ describe('CreateAnalysedData domain component', () => {
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            { field: 'col4', fieldType: FieldTypes.ORDINAL },
         ]);
     });
     it('Should add intervalFields to the intervalFields attribute in the analysedData slice', () => {
@@ -63,7 +67,7 @@ describe('CreateAnalysedData domain component', () => {
         const getStoreHandler = new GetAnalysedData();
         expect(getStoreHandler.getAnalysedData().nominalFields).toStrictEqual(['col3']);
     });
-    it('Should add nominal data as Objects to the nominalDataObjects attribute in the analysedData slice', () => {
+    it('Should add nominal data Objects to the nominalDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalDataObjects();
         const getStoreHandler = new GetAnalysedData();
@@ -71,6 +75,20 @@ describe('CreateAnalysedData domain component', () => {
             { col3: 'female' },
             { col3: 'male' },
             { col3: 'female' },
+        ]);
+    });
+    it('Should add ordinalFields to the ordinalFields attribute in the analysedData slice', () => {
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createOrdinalFields();
+        const getStoreHandler = new GetAnalysedData();
+        expect(getStoreHandler.getAnalysedData().ordinalFields).toStrictEqual(['col4']);
+    });
+    it('Should add ordinal data Objects to the ordinalDataObjects attribute in the analysedData slice', () => {
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createOrdinalDataObjects();
+        const getStoreHandler = new GetAnalysedData();
+        expect(getStoreHandler.getAnalysedData().ordinalDataObjects).toStrictEqual([
+            { name: '15-20', count: 5, percentage: 20 },
         ]);
     });
 });

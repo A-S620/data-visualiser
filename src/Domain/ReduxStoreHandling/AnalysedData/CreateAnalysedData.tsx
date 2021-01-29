@@ -5,6 +5,8 @@ import {
     addIntervalFields,
     addNominalDataObjects,
     addNominalFields,
+    addOrdinalDataObjects,
+    addOrdinalFields,
 } from '../../../ReduxStore/Actions/ReducerActions';
 import { IAnalysedFileData } from '../../../Interfaces/Analyse/IAnalysedFileData';
 
@@ -28,5 +30,11 @@ export default class CreateAnalysedData {
     }
     public createNominalDataObjects() {
         store.dispatch(addNominalDataObjects(this.analysedFileData.nominalDataObjects));
+    }
+    public createOrdinalFields() {
+        store.dispatch(addOrdinalFields(this.analysedFileData.ordinalFields));
+    }
+    public createOrdinalDataObjects() {
+        store.dispatch(addOrdinalDataObjects(this.analysedFileData.ordinalDataObjects));
     }
 }
