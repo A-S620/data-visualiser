@@ -4,47 +4,50 @@ import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/
 import { ILinePlotCreateVis } from '../../../src/Interfaces/plotting/ILinePlotCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 
-//Test Data
-const dataArrays = [
-    ['col1', 'col2', 'col3'],
-    [' 1', '3', 'foo'],
-    [' 2', '5', 'bar'],
-    ['c-1', '7', 'baz'],
-];
-const dataObjects = [
-    { col1: ' 1', col2: '3', col3: 'foo' },
-    { col1: ' 2', col2: '5', col3: 'bar' },
-    { col1: 'c-1', col2: '7', col3: 'baz' },
-];
-const dataFields = ['col1', 'col2', 'col3'];
-const fields = [{ field: 'col1', fieldType: FieldTypes.INTERVAL }];
-const intervalDataObjects = [
-    { col1: 32, col2: 45 },
-    { col1: 79, col2: 5 },
-    { col1: 76, col2: 23 },
-];
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
         it('Should create an action to add the dataFields', () => {
             const expectedAction = {
                 type: actionTypes.DATA_FIELDS_ADDED,
-                payload: dataFields,
+                payload: ['col1', 'col2', 'col3'],
             };
-            expect(reducerActions.addDataFields(dataFields)).toEqual(expectedAction);
+            expect(reducerActions.addDataFields(['col1', 'col2', 'col3'])).toEqual(expectedAction);
         });
         it('Should create an action to add the data as Arrays', () => {
             const expectedAction = {
                 type: actionTypes.DATA_AS_ARRAYS_ADDED,
-                payload: dataArrays,
+                payload: [
+                    ['col1', 'col2', 'col3'],
+                    [' 1', '3', 'foo'],
+                    [' 2', '5', 'bar'],
+                    ['c-1', '7', 'baz'],
+                ],
             };
-            expect(reducerActions.addDataAsArrays(dataArrays)).toEqual(expectedAction);
+            expect(
+                reducerActions.addDataAsArrays([
+                    ['col1', 'col2', 'col3'],
+                    [' 1', '3', 'foo'],
+                    [' 2', '5', 'bar'],
+                    ['c-1', '7', 'baz'],
+                ])
+            ).toEqual(expectedAction);
         });
         it('Should create an action to add the data as objects', () => {
             const expectedAction = {
                 type: actionTypes.DATA_AS_OBJECTS_ADDED,
-                payload: dataObjects,
+                payload: [
+                    { col1: ' 1', col2: '3', col3: 'foo' },
+                    { col1: ' 2', col2: '5', col3: 'bar' },
+                    { col1: 'c-1', col2: '7', col3: 'baz' },
+                ],
             };
-            expect(reducerActions.addDataAsObjects(dataObjects)).toEqual(expectedAction);
+            expect(
+                reducerActions.addDataAsObjects([
+                    { col1: ' 1', col2: '3', col3: 'foo' },
+                    { col1: ' 2', col2: '5', col3: 'bar' },
+                    { col1: 'c-1', col2: '7', col3: 'baz' },
+                ])
+            ).toEqual(expectedAction);
         });
         it('Should create an action to reset imported data', () => {
             const expectedAction = {
@@ -57,37 +60,83 @@ describe('Reducer actions', () => {
         it('Should create an action to add the fields', () => {
             const expectedAction = {
                 type: actionTypes.FIELDS_ADDED,
-                payload: fields,
+                payload: [{ field: 'col1', fieldType: FieldTypes.INTERVAL }],
             };
-            expect(reducerActions.addFields(fields)).toEqual(expectedAction);
+            expect(reducerActions.addFields([{ field: 'col1', fieldType: FieldTypes.INTERVAL }])).toEqual(
+                expectedAction
+            );
         });
         it('Should create an action to add the intervalFields', () => {
             const expectedAction = {
                 type: actionTypes.INTERVAL_FIELDS_ADDED,
-                payload: dataFields,
+                payload: ['col1', 'col2', 'col3'],
             };
-            expect(reducerActions.addIntervalFields(dataFields)).toEqual(expectedAction);
+            expect(reducerActions.addIntervalFields(['col1', 'col2', 'col3'])).toEqual(expectedAction);
         });
         it('Should create an action to add the intervalDataObjects', () => {
             const expectedAction = {
                 type: actionTypes.INTERVAL_DATA_OBJECTS_ADDED,
-                payload: intervalDataObjects,
+                payload: [
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ],
             };
-            expect(reducerActions.addIntervalDataObjects(intervalDataObjects)).toEqual(expectedAction);
+            expect(
+                reducerActions.addIntervalDataObjects([
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ])
+            ).toEqual(expectedAction);
         });
         it('Should create an action to add the nominalFields', () => {
             const expectedAction = {
                 type: actionTypes.NOMINAL_FIELDS_ADDED,
-                payload: dataFields,
+                payload: ['col1', 'col2', 'col3'],
             };
-            expect(reducerActions.addNominalFields(dataFields)).toEqual(expectedAction);
+            expect(reducerActions.addNominalFields(['col1', 'col2', 'col3'])).toEqual(expectedAction);
         });
         it('Should create an action to add the nominalDataObjects', () => {
             const expectedAction = {
                 type: actionTypes.NOMINAL_DATA_OBJECTS_ADDED,
-                payload: intervalDataObjects,
+                payload: [
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ],
             };
-            expect(reducerActions.addNominalDataObjects(intervalDataObjects)).toEqual(expectedAction);
+            expect(
+                reducerActions.addNominalDataObjects([
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ])
+            ).toEqual(expectedAction);
+        });
+        it('Should create an action to add the ordinalFields', () => {
+            const expectedAction = {
+                type: actionTypes.ORDINAL_FIELDS_ADDED,
+                payload: ['col1', 'col2', 'col3'],
+            };
+            expect(reducerActions.addOrdinalFields(['col1', 'col2', 'col3'])).toEqual(expectedAction);
+        });
+        it('Should create an action to add the ordinalDataObjects', () => {
+            const expectedAction = {
+                type: actionTypes.ORDINAL_DATA_OBJECTS_ADDED,
+                payload: [
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ],
+            };
+            expect(
+                reducerActions.addOrdinalDataObjects([
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ])
+            ).toEqual(expectedAction);
         });
         it('Should create an action to reset analysed data', () => {
             const expectedAction = {

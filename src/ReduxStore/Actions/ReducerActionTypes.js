@@ -10,6 +10,8 @@ export const INTERVAL_FIELDS_ADDED = 'intervalFieldsAdded';
 export const INTERVAL_DATA_OBJECTS_ADDED = 'intervalDataObjectsAdded';
 export const NOMINAL_FIELDS_ADDED = 'nominalFieldsAdded';
 export const NOMINAL_DATA_OBJECTS_ADDED = 'nominalDataObjectsAdded';
+export const ORDINAL_FIELDS_ADDED = 'nominalFieldsAdded';
+export const ORDINAL_DATA_OBJECTS_ADDED = 'nominalDataObjectsAdded';
 export const ANALYSED_DATA_SLICE_RESET = 'analysedDataSliceReset';
 
 //plottingOptions slice

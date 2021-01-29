@@ -39,6 +39,14 @@ export const addNominalDataObjects = (nominalDataObjects: Array<object>) => ({
     type: reducerActionTypes.NOMINAL_DATA_OBJECTS_ADDED,
     payload: nominalDataObjects,
 });
+export const addOrdinalFields = (ordinalFields: Array<string>) => ({
+    type: reducerActionTypes.ORDINAL_FIELDS_ADDED,
+    payload: ordinalFields,
+});
+export const addOrdinalDataObjects = (ordinalDataObjects: Array<object>) => ({
+    type: reducerActionTypes.ORDINAL_DATA_OBJECTS_ADDED,
+    payload: ordinalDataObjects,
+});
 export const resetAnalysedData = () => ({
     type: reducerActionTypes.ANALYSED_DATA_SLICE_RESET,
 });
