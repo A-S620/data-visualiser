@@ -78,6 +78,22 @@ export default function reduxReducer(state = ReduxState, action) {
                     nominalDataObjects: action.payload,
                 },
             };
+        case ReducerActions.ORDINAL_FIELDS_ADDED:
+            return {
+                ...state,
+                analysedData: {
+                    ...state.analysedData,
+                    ordinalFields: action.payload,
+                },
+            };
+        case ReducerActions.ORDINAL_DATA_OBJECTS_ADDED:
+            return {
+                ...state,
+                analysedData: {
+                    ...state.analysedData,
+                    ordinalDataObjects: action.payload,
+                },
+            };
         case ReducerActions.ANALYSED_DATA_SLICE_RESET:
             return {
                 analysedData: {
