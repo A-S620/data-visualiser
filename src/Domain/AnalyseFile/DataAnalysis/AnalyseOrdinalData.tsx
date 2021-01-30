@@ -1,7 +1,6 @@
 import { store } from '../../../ReduxStore/store';
 
 export class AnalyseOrdinalData {
-    private readonly dataFields = store.getState().importedData.dataFields;
     private readonly dataObjects = store.getState().importedData.dataObjects;
     private ordinalFields: any;
     private ordinalDataObjects: Array<object> = [];
@@ -17,14 +16,14 @@ export class AnalyseOrdinalData {
         return this.ordinalDataObjects;
     }
     private getFieldObject(field: string): object {
-        const test: Array<object> = [];
+        const fieldArray: Array<object> = [];
         const objectToReturn: object = {};
         const allOrdinalValuesForField = this.getOrdinalValuesForField(field);
         for (const value of allOrdinalValuesForField) {
-            test.push(this.createOrdinalValueObject(value, allOrdinalValuesForField));
+            fieldArray.push(this.createOrdinalValueObject(value, allOrdinalValuesForField));
         }
         // @ts-ignore
-        objectToReturn[field] = test;
+        objectToReturn[field] = fieldArray;
         return objectToReturn;
     }
     private getOrdinalValuesForField(field: string): Array<string> {

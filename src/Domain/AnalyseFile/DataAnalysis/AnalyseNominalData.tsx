@@ -1,7 +1,6 @@
 import { store } from '../../../ReduxStore/store';
 
 export class AnalyseNominalData {
-    private readonly dataFields = store.getState().importedData.dataFields;
     private readonly dataObjects = store.getState().importedData.dataObjects;
     private nominalFields: any;
     private nominalDataObjects: Array<object> = [];
@@ -10,23 +9,34 @@ export class AnalyseNominalData {
     }
     public validateNominalData(): Array<object> {
         if (this.nominalFields.length > 0) {
-            const nominalValues = this.getAllNominalValues();
-            for (const value of nominalValues) {
-                this.nominalDataObjects.push(this.createNominalObject(value, nominalValues));
+            for (const field of this.nominalFields) {
+                this.nominalDataObjects.push(this.getFieldObject(field));
             }
         }
-        return this.getAnalysedNominalData().nominalDataObjects;
+        return this.nominalDataObjects;
     }
-    private getAllNominalValues(): Array<string> {
+    private getFieldObject(field: string): object {
+        const fieldArray: Array<object> = [];
+        const objectToReturn: object = {};
+        const nominalValues = this.getAllNominalValues(field);
+        for (const value of nominalValues) {
+            fieldArray.push(this.createNominalObject(value, nominalValues));
+        }
+        // @ts-ignore
+        objectToReturn[field] = fieldArray;
+        return objectToReturn;
+    }
+    private getAllNominalValues(field: string): Array<string> {
         const nominalValues: Array<string> = [];
         for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
             const object = this.dataObjects[objectIndex];
             for (var fieldIndex = 0; fieldIndex < this.nominalFields.length; fieldIndex += 1) {
-                const field = this.nominalFields[fieldIndex];
-                const nominalValueToAdd = this.getNominalValue(object, field);
-                if (nominalValueToAdd !== '') {
-                    if (!nominalValues.includes(nominalValueToAdd)) {
-                        nominalValues.push(nominalValueToAdd);
+                if (field === this.nominalFields[fieldIndex]) {
+                    const nominalValueToAdd = this.getNominalValue(object, field);
+                    if (nominalValueToAdd !== '') {
+                        if (!nominalValues.includes(nominalValueToAdd)) {
+                            nominalValues.push(nominalValueToAdd);
+                        }
                     }
                 }
             }
@@ -67,13 +77,6 @@ export class AnalyseNominalData {
             name: nominalValue,
             count: this.getNominalValueCount(nominalValue),
             percent: this.getNominalValuePercent(nominalValue, allValues),
-        };
-    }
-
-    private getAnalysedNominalData(): { nominalFields: Array<string>; nominalDataObjects: Array<object> } {
-        return {
-            nominalFields: this.nominalFields,
-            nominalDataObjects: this.nominalDataObjects,
         };
     }
 }
