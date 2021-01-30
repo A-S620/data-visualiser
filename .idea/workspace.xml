@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,14 +388,7 @@
       <workItem from="1611761603889" duration="3837000" />
       <workItem from="1611825447626" duration="7611000" />
       <workItem from="1611916083448" duration="11808000" />
-      <workItem from="1611991663427" duration="3618000" />
-    </task>
-    <task id="LOCAL-00139" summary="CreateCurrentVisualisation, GetCurrentVisualisation, ResetCurrentVisualisation domain components and unit test">
-      <created>1610640004716</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1610640004716</updated>
+      <workItem from="1611991663427" duration="4951000" />
     </task>
     <task id="LOCAL-00140" summary="updated LineSeriesVisHandler.tsx + unit tests">
       <created>1610640380174</created>
@@ -733,7 +726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611994581326</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Updated AnalyseNominalData + unit tests">
+      <created>1611995684474</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1611995684474</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,7 +741,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed AnalyseFileHandler to work with fields = unit tests" />
     <MESSAGE value="Removed IFields interface" />
     <MESSAGE value="FieldTypes - save selected field types" />
     <MESSAGE value="FieldTypes - Analyse File button, integrated with AnalyseFileHandler" />
@@ -766,7 +765,8 @@
     <MESSAGE value="Updated CreateAnalysedData. GetAnalysedData and ResetAnalysedData to use ordinal data + updated unit tests" />
     <MESSAGE value="Started working on AnalyseOrdinalData" />
     <MESSAGE value="Completed AnalyseOrdinalData + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed AnalyseOrdinalData + unit tests" />
+    <MESSAGE value="Updated AnalyseNominalData + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated AnalyseNominalData + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

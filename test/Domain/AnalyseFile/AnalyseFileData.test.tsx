@@ -91,9 +91,43 @@ describe('AnalyseFileData domain component', () => {
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
             expect(getAnalysedData.nominalDataObjects).toEqual([
-                { name: 'foo', count: 1, percent: 33 },
-                { name: 'bar', count: 1, percent: 33 },
-                { name: 'baz', count: 1, percent: 33 },
+                {
+                    col3: [
+                        { name: 'foo', count: 1, percent: 33 },
+                        { name: 'bar', count: 1, percent: 33 },
+                        { name: 'baz', count: 1, percent: 33 },
+                    ],
+                },
+            ]);
+        });
+    });
+    describe('Analyse ordinal data', () => {
+        it('Should create the ordinal fields in analysedData slice', () => {
+            const analyseFileData = new AnalyseFileData([
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.ORDINAL },
+            ]);
+            analyseFileData.validateAnalysedData();
+            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            expect(getAnalysedData.ordinalFields).toEqual(['col3']);
+        });
+        it('Should create the ordinalDataObjects in the analysedData slice', () => {
+            const analyseFileData = new AnalyseFileData([
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.ORDINAL },
+            ]);
+            analyseFileData.validateAnalysedData();
+            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            expect(getAnalysedData.ordinalDataObjects).toEqual([
+                {
+                    col3: [
+                        { name: 'foo', count: 1, percent: 33 },
+                        { name: 'bar', count: 1, percent: 33 },
+                        { name: 'baz', count: 1, percent: 33 },
+                    ],
+                },
             ]);
         });
     });
