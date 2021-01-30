@@ -9,23 +9,30 @@ export class AnalyseOrdinalData {
         this.ordinalFields = ordinalFields;
     }
     public validateOrdinalData(): Array<object> {
-        const test: Array<object> = [];
         if (this.ordinalFields.length > 0) {
             for (const field of this.ordinalFields) {
-                const allOrdinalValuesForField = this.getOrdinalValuesForField(field);
-                for (const value of allOrdinalValuesForField) {
-                    test.push(this.createOrdinalValueObject(value, allOrdinalValuesForField));
-                }
+                this.ordinalDataObjects.push(this.getFieldObject(field));
             }
         }
-        return test;
+        return this.ordinalDataObjects;
+    }
+    private getFieldObject(field: string): object {
+        const test: Array<object> = [];
+        const objectToReturn: object = {};
+        const allOrdinalValuesForField = this.getOrdinalValuesForField(field);
+        for (const value of allOrdinalValuesForField) {
+            test.push(this.createOrdinalValueObject(value, allOrdinalValuesForField));
+        }
+        // @ts-ignore
+        objectToReturn[field] = test;
+        return objectToReturn;
     }
     private getOrdinalValuesForField(field: string): Array<string> {
         const ordinalValuesForField: Array<string> = [];
         for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
             const object: object = this.dataObjects[objectIndex];
             for (const [key, value] of Object.entries(object)) {
-                if (key === field) {
+                if (key === field && !ordinalValuesForField.includes(value)) {
                     ordinalValuesForField.push(value);
                 }
             }
@@ -49,7 +56,7 @@ export class AnalyseOrdinalData {
         for (const value of allValues) {
             total += this.getOrdinalValueCount(value);
         }
-        const count = this.getOrdinalValuesForField(ordinalValue).length;
+        const count = this.getOrdinalValueCount(ordinalValue);
         return Math.round((count / total) * 100);
     }
     private createOrdinalValueObject(ordinalValue: string, allValues: Array<string>): object {
