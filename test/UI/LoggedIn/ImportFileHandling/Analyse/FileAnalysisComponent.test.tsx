@@ -9,77 +9,99 @@ import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHan
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { AnalyseFileHandler } from '../../../../../src/UIHandling/AnalyseFileHandler';
 import { FieldTypes } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
+import ResetImportedData from '../../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
 
 let component: ReactWrapper;
-beforeEach(
-    () =>
-        (component = mount(
-            <Provider store={store}>
-                <FileAnalysisComponent />
-            </Provider>
-        ))
-);
+beforeEach(() => {
+    component = mount(
+        <Provider store={store}>
+            <FileAnalysisComponent />
+        </Provider>
+    );
+});
 
 afterEach(() => component.unmount());
+afterAll(() => {
+    const resetAnalysedData = new ResetAnalysedData();
+    resetAnalysedData.resetAnalysedData();
+});
 describe('File Analysis component', () => {
     describe('File Analysis stat descriptions', () => {
         it('Should have the title File Analysis', () => {
-            expect(component.find('div#title').text()).toBe('File Analysis:');
+            expect(component.find('div#title').text()).toBe('File Analysis');
         });
-        it('Should have the Percentage of Integer fields in file stat', () => {
-            expect(component.find('div#percent-interval-fields').find('p').text()).toBe('Interval fields in file:');
+        it('Should have total fields stat', () => {
+            expect(component.find('div#total-fields').find('p').at(0).text()).toBe('Total Fields');
         });
-
-        it('Should have the Number of Ignored Data Objects stat', () => {
-            expect(component.find('div#ignored-objects').find('p').at(0).text()).toBe(
-                'Number of Ignored Data Objects:'
-            );
+        it('Should have interval fields stat', () => {
+            expect(component.find('div#interval-fields').find('p').at(0).text()).toBe('Interval Fields');
         });
-        it('Example Data Object stat', () => {
-            expect(component.find('div#example-object').find('p').text()).toBe('Example Data Object:');
+        it('Should have nominal fields stat', () => {
+            expect(component.find('div#nominal-fields').find('p').at(0).text()).toBe('Nominal Fields');
         });
-    });
-    describe('File Analysis stats - Intervals ', () => {
-        const importedFile: IImportedFile = {
-            file: testCSV,
-            fileType: 'text/csv',
-        };
-        const importFile = new ImportFilesHandler(importedFile).validate();
-        const analyseFileHandler = new AnalyseFileHandler([
-            { field: 'col1', fieldType: FieldTypes.INTERVAL },
-            { field: 'col2', fieldType: FieldTypes.INTERVAL },
-            { field: 'col3', fieldType: FieldTypes.IGNORE },
-        ]);
-        analyseFileHandler.validateAnalysedData();
-        it('Should show the integer fields in the file', () => {
-            const intervalColumns = component.find('div#interval-fields');
-            expect(intervalColumns.find('div#col1-chip').text()).toBe('col1');
-            expect(intervalColumns.find('div#col2-chip').text()).toBe('col2');
+        it('Should have ordinal fields stat', () => {
+            expect(component.find('div#ordinal-fields').find('p').at(0).text()).toBe('Ordinal Fields');
         });
-        it('Should show the percent of interval fields in file', () => {
-            expect(component.find('div#interval-circular-progress-text').text()).toBe('67%');
+        it('Should show Example Data Object stat', () => {
+            expect(component.find('div#example-object').find('p').at(0).text()).toBe('Example Data Object:');
+        });
+        it('Should show Example Data Object as empty', () => {
+            expect(component.find('div#json-object').text()).toBe('"root":{}');
         });
     });
-    describe('File Analysis stats - general', () => {
-        const importedFile: IImportedFile = {
-            file: testCSV,
-            fileType: 'text/csv',
-        };
-        const importFile = new ImportFilesHandler(importedFile).validate();
-        const analyseFileHandler = new AnalyseFileHandler([
-            { field: 'col1', fieldType: FieldTypes.INTERVAL },
-            { field: 'col2', fieldType: FieldTypes.INTERVAL },
-            { field: 'col3', fieldType: FieldTypes.IGNORE },
-        ]);
-        analyseFileHandler.validateAnalysedData();
-        it('Should show the number of ignored values', () => {
-            expect(component.find('div#ignored-objects').find('p').at(1).text()).toBe('1');
+    describe('File Analysis stats - After import ', () => {
+        it('Should show the fields in the file', () => {
+            const importedFile: IImportedFile = {
+                file: testCSV,
+                fileType: 'text/csv',
+            };
+            const importFile = new ImportFilesHandler(importedFile).validate();
+            const analyseFileHandler = new AnalyseFileHandler([
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.NOMINAL },
+                { field: 'col3', fieldType: FieldTypes.ORDINAL },
+            ]);
+            analyseFileHandler.validateAnalysedData();
+            const fields = component.find('div#all-fields');
+            console.log(fields.html());
+            expect(fields.text()).toBe('All Data fields:col1col2col3');
+        });
+        it('Should have total fields metric', () => {
+            importAndAnalyseData();
+            expect(component.find('div#total-fields').find('p').at(1).text()).toBe('3');
+        });
+        it('Should have interval fields metric', () => {
+            importAndAnalyseData();
+            expect(component.find('div#interval-fields').find('p').at(1).text()).toBe('1');
+        });
+        it('Should have nominal fields metric', () => {
+            importAndAnalyseData();
+            expect(component.find('div#nominal-fields').find('p').at(1).text()).toBe('1');
+        });
+        it('Should have ordinal fields metric', () => {
+            importAndAnalyseData();
+            expect(component.find('div#ordinal-fields').find('p').at(1).text()).toBe('1');
         });
         it('Should show an example object', () => {
+            importAndAnalyseData();
             expect(component.find('div#json-object').text()).toBe('"root":{"col1":" 1""col2":"3""col3":"foo"}');
         });
     });
 });
+function importAndAnalyseData() {
+    const importedFile: IImportedFile = {
+        file: testCSV,
+        fileType: 'text/csv',
+    };
+    const importFile = new ImportFilesHandler(importedFile).validate();
+    const analyseFileHandler = new AnalyseFileHandler([
+        { field: 'col1', fieldType: FieldTypes.INTERVAL },
+        { field: 'col2', fieldType: FieldTypes.NOMINAL },
+        { field: 'col3', fieldType: FieldTypes.ORDINAL },
+    ]);
+    analyseFileHandler.validateAnalysedData();
+}

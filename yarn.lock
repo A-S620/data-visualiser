@@ -2473,6 +2473,14 @@
   resolved "https://registry.yarnpkg.com/@devexpress/dx-core/-/dx-core-2.7.4.tgz#a2fa69f03e6f59acb23086de46bef311c3064da1"
   integrity sha512-bM56UDr8L0OmTrWYjvC5KkleZrvm/493xiNAzLk1iyQY9Ghbr/viOkDATAlknOEblKWr2l7jGsYIJtzA7f6qLQ==
 
+"@devexpress/dx-react-chart-material-ui@^2.7.4":
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/@devexpress/dx-react-chart-material-ui/-/dx-react-chart-material-ui-2.7.4.tgz#bbb17b525f1e88711316f68f1c7f05a057a383da"
+  integrity sha512-jNnAFvoYefGBmIG9jv00xRtAMyJRLkf/WTlCQBahq6h6sqTZfbS8epvuw9Y4fMfCkOJvD2DT8/0aAMk8xyW4vg==
+  dependencies:
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+
 "@devexpress/dx-react-chart@^2.7.4":
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/@devexpress/dx-react-chart/-/dx-react-chart-2.7.4.tgz#dfd0ad53157cef526d0b9e343c44fba5eff94025"

@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,14 +390,10 @@
       <workItem from="1611761603889" duration="3837000" />
       <workItem from="1611825447626" duration="7611000" />
       <workItem from="1611916083448" duration="11808000" />
-      <workItem from="1611991663427" duration="4951000" />
-    </task>
-    <task id="LOCAL-00140" summary="updated LineSeriesVisHandler.tsx + unit tests">
-      <created>1610640380174</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1610640380174</updated>
+      <workItem from="1611991663427" duration="6646000" />
+      <workItem from="1612097297984" duration="2159000" />
+      <workItem from="1612167159219" duration="2168000" />
+      <workItem from="1612185744509" duration="2991000" />
     </task>
     <task id="LOCAL-00141" summary="LinePlottingOptions.tsx changed colour picker into a select.&#10;Updated unit tests">
       <created>1610642901237</created>
@@ -733,7 +731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611995684474</updated>
     </task>
-    <option name="localTasksCounter" value="189" />
+    <task id="LOCAL-00189" summary="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests">
+      <created>1611997794655</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1611997794655</updated>
+    </task>
+    <option name="localTasksCounter" value="190" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,7 +746,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Removed IFields interface" />
     <MESSAGE value="FieldTypes - save selected field types" />
     <MESSAGE value="FieldTypes - Analyse File button, integrated with AnalyseFileHandler" />
     <MESSAGE value="Refactored: Removed Console.log&#10;TODO: FieldTypes unit tests" />
@@ -766,7 +770,8 @@
     <MESSAGE value="Started working on AnalyseOrdinalData" />
     <MESSAGE value="Completed AnalyseOrdinalData + unit tests" />
     <MESSAGE value="Updated AnalyseNominalData + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated AnalyseNominalData + unit tests" />
+    <MESSAGE value="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
