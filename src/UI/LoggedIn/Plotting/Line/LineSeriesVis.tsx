@@ -15,18 +15,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
     },
 }));
-const data = [
-    { x: 0, y: 8 },
-    { x: 1, y: 5 },
-    { x: 2, y: 4 },
-    { x: 3, y: 9 },
-    { x: 4, y: 1 },
-    { x: 5, y: 7 },
-    { x: 6, y: 6 },
-    { x: 7, y: 3 },
-    { x: 8, y: 2 },
-    { x: 9, y: 0 },
-];
+
 function LineSeriesVis(props: any) {
     const classes = useStyles();
     return (
@@ -44,8 +33,8 @@ function LineSeriesVis(props: any) {
             <Box>
                 <XYPlot
                     id={'line-series-vis'}
-                    height={props.currentVisualisation.height}
-                    width={props.currentVisualisation.width}
+                    height={props.currentLineVisualisation.height}
+                    width={props.currentLineVisualisation.width}
                     margin={{ left: 75 }}
                 >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
@@ -62,13 +51,13 @@ function LineSeriesVis(props: any) {
                     <LineSeries
                         style={{
                             strokeLinejoin: 'round',
-                            strokeWidth: props.currentVisualisation.lineWidth,
+                            strokeWidth: props.currentLineVisualisation.lineWidth,
                         }}
-                        strokeStyle={props.currentVisualisation.lineStyle}
-                        opacity={props.currentVisualisation.opacity}
-                        curve={props.currentVisualisation.curve}
-                        data={props.currentVisualisation.data}
-                        color={props.currentVisualisation.colour}
+                        strokeStyle={props.currentLineVisualisation.lineStyle}
+                        opacity={props.currentLineVisualisation.opacity}
+                        curve={props.currentLineVisualisation.curve}
+                        data={props.currentLineVisualisation.data}
+                        color={props.currentLineVisualisation.colour}
                     />
                 </XYPlot>
             </Box>
@@ -76,7 +65,7 @@ function LineSeriesVis(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    currentVisualisation: state.currentVisualisation,
+    currentLineVisualisation: state.currentLineVisualisation,
     linePlotOptions: state.linePlotOptions,
 });
 export default connect(mapStateToProps, {})(LineSeriesVis);

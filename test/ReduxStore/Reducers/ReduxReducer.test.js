@@ -325,7 +325,7 @@ describe('ReduxReducer', () => {
     });
     describe('Current Visualisation', () => {
         const currentVisualSlice = {
-            currentVisualisation: {},
+            currentLineVisualisation: {},
         };
         const currentVisual = {
             data: [
@@ -341,8 +341,8 @@ describe('ReduxReducer', () => {
             lineWidth: 2,
         };
         it('Should handle CURRENT_VISUAL_ADDED', () => {
-            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentVisual(currentVisual))).toEqual({
-                currentVisualisation: {
+            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentLineVisual(currentVisual))).toEqual({
+                currentLineVisualisation: {
                     data: [
                         { x: 79, y: 5 },
                         { x: 76, y: 23 },
@@ -357,11 +357,11 @@ describe('ReduxReducer', () => {
                 },
             });
         });
-        it('Should handle CURRENT_VISUAL_RESET', () => {
+        it('Should handle CURRENT_LINE_VISUAL_RESET', () => {
             expect(
                 reduxReducer(
                     {
-                        currentVisualisation: {
+                        currentLineVisualisation: {
                             data: [
                                 { x: 79, y: 5 },
                                 { x: 76, y: 23 },
@@ -375,7 +375,7 @@ describe('ReduxReducer', () => {
                             lineWidth: 2,
                         },
                     },
-                    reducerActions.resetCurrentVisual()
+                    reducerActions.resetCurrentLineVisual()
                 )
             ).toEqual(currentVisualSlice);
         });

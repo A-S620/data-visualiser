@@ -18,7 +18,7 @@ export class LinePlotOptionsHandler {
         notifications.concat(optionsErrors);
         if (notifications.isEmpty()) {
             this.createOptions();
-            new LineSeriesVisHandler().createVisualisation();
+            new LineSeriesVisHandler().createLineVisual();
         }
         return notifications;
     }

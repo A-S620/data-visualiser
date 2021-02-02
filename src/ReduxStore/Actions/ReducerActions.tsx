@@ -60,11 +60,11 @@ export const resetLineOptions = () => ({
     type: reducerActionTypes.LINE_OPTIONS_RESET,
 });
 
-//currentVisualisation slice
-export const addCurrentVisual = (currentVisualisation: ILinePlotCreateVis) => ({
-    type: reducerActionTypes.CURRENT_VISUAL_ADDED,
-    payload: currentVisualisation,
+//currentLineVisualisation slice
+export const addCurrentLineVisual = (currentLineVisualisation: ILinePlotCreateVis) => ({
+    type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
+    payload: currentLineVisualisation,
 });
-export const resetCurrentVisual = () => ({
-    type: reducerActionTypes.CURRENT_VISUAL_RESET,
+export const resetCurrentLineVisual = () => ({
+    type: reducerActionTypes.CURRENT_LINE_VISUAL_RESET,
 });

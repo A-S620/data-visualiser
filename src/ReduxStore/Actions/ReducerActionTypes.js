@@ -19,5 +19,5 @@ export const LINE_OPTIONS_ADDED = 'lineOptionsAdded';
 export const LINE_OPTIONS_RESET = 'lineOptionsReset';
 
 //currentVisualisationSlice
-export const CURRENT_VISUAL_ADDED = 'currentVisualAdded';
-export const CURRENT_VISUAL_RESET = 'currentVisualReset';
+export const CURRENT_LINE_VISUAL_ADDED = 'currentLineVisualAdded';
+export const CURRENT_LINE_VISUAL_RESET = 'currentLineVisualReset';

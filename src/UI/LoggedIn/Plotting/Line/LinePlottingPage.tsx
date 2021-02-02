@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
-import { LineSeries, XYPlot, VerticalGridLines, HorizontalGridLines, XAxis, YAxis } from 'react-vis';
 import LineSeriesVis from './LineSeriesVis';
 import LinePlottingOptions from './LinePlottingOptions';
 const useStyles = makeStyles((theme) => ({

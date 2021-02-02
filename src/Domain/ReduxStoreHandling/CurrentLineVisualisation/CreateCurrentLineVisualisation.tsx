@@ -1,13 +1,13 @@
 import { store } from '../../../ReduxStore/store';
-import { addCurrentVisual } from '../../../ReduxStore/Actions/ReducerActions';
+import { addCurrentLineVisual } from '../../../ReduxStore/Actions/ReducerActions';
 import { ILinePlotCreateVis } from '../../../Interfaces/plotting/ILinePlotCreateVis';
 
-export default class CreateCurrentVisualisation {
+export default class CreateCurrentLineVisualisation {
     private currentVisual: ILinePlotCreateVis;
     constructor(currentVisual: ILinePlotCreateVis) {
         this.currentVisual = currentVisual;
     }
-    public createCurrentVisual() {
-        store.dispatch(addCurrentVisual(this.currentVisual));
+    public createCurrentLineVisual() {
+        store.dispatch(addCurrentLineVisual(this.currentVisual));
     }
 }

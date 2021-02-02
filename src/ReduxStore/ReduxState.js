@@ -14,6 +14,6 @@ const ReduxState = {
         ordinalDataObjects: [],
     },
     linePlotOptions: {},
-    currentVisualisation: {},
+    currentLineVisualisation: {},
 };
 export default ReduxState;

@@ -187,16 +187,16 @@ describe('Reducer actions', () => {
                 lineWidth: 2,
             };
             const expectedAction = {
-                type: actionTypes.CURRENT_VISUAL_ADDED,
+                type: actionTypes.CURRENT_LINE_VISUAL_ADDED,
                 payload: currentVisual,
             };
-            expect(reducerActions.addCurrentVisual(currentVisual)).toEqual(expectedAction);
+            expect(reducerActions.addCurrentLineVisual(currentVisual)).toEqual(expectedAction);
         });
         it('Should create an action to rest the current Visualisation', () => {
             const expectedAction = {
-                type: actionTypes.CURRENT_VISUAL_RESET,
+                type: actionTypes.CURRENT_LINE_VISUAL_RESET,
             };
-            expect(reducerActions.resetCurrentVisual()).toEqual(expectedAction);
+            expect(reducerActions.resetCurrentLineVisual()).toEqual(expectedAction);
         });
     });
 });
