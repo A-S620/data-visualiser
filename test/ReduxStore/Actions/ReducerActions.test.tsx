@@ -3,6 +3,8 @@ import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes
 import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILinePlotOptions';
 import { ILinePlotCreateVis } from '../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
+import { IBarPlotOptions } from '../../../src/Interfaces/plotting/Bar/IBarPlotOptions';
+import { IBarPlotCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarPlotCreateVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -201,7 +203,7 @@ describe('Reducer actions', () => {
     });
     describe('Bar Plot Options actions', () => {
         it('Should create an action to add the bar options', () => {
-            const barOptions: ILinePlotOptions = {
+            const barOptions: IBarPlotOptions = {
                 xValue: 'test',
                 yValue: 'test2',
                 height: 800,
@@ -227,7 +229,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Line Visualisation actions', () => {
         it('Should create an action to add the current bar Visualisation', () => {
-            const currentBarVisual: ILinePlotCreateVis = {
+            const currentBarVisual: IBarPlotCreateVis = {
                 data: [
                     { x: 79, y: 5 },
                     { x: 76, y: 23 },

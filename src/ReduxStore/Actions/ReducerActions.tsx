@@ -1,6 +1,8 @@
 import * as reducerActionTypes from './ReducerActionTypes';
 import { ILinePlotOptions } from '../../Interfaces/plotting/Line/ILinePlotOptions';
 import { ILinePlotCreateVis } from '../../Interfaces/plotting/Line/ILinePlotCreateVis';
+import { IBarPlotOptions } from '../../Interfaces/plotting/Bar/IBarPlotOptions';
+import { IBarPlotCreateVis } from '../../Interfaces/plotting/Bar/IBarPlotCreateVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -59,7 +61,7 @@ export const addLineOptions = (linePlotOptions: ILinePlotOptions) => ({
 export const resetLineOptions = () => ({
     type: reducerActionTypes.LINE_OPTIONS_RESET,
 });
-export const addBarOptions = (barPlotOptions: ILinePlotOptions) => ({
+export const addBarOptions = (barPlotOptions: IBarPlotOptions) => ({
     type: reducerActionTypes.BAR_OPTIONS_ADDED,
     payload: barPlotOptions,
 });
@@ -75,7 +77,7 @@ export const addCurrentLineVisual = (currentLineVisualisation: ILinePlotCreateVi
 export const resetCurrentLineVisual = () => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_RESET,
 });
-export const addCurrentBarVisual = (currentBarVisualisation: ILinePlotCreateVis) => ({
+export const addCurrentBarVisual = (currentBarVisualisation: IBarPlotCreateVis) => ({
     type: reducerActionTypes.CURRENT_BAR_VISUAL_ADDED,
     payload: currentBarVisualisation,
 });
