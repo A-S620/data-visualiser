@@ -117,6 +117,16 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 linePlotOptions: {},
             };
+        //barPlotOptions slice
+        case ReducerActions.BAR_OPTIONS_ADDED:
+            return {
+                ...state,
+                barPlotOptions: action.payload,
+            };
+        case ReducerActions.BAR_OPTIONS_RESET:
+            return {
+                barPlotOptions: {},
+            };
         //currentLineVisualisation slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:
             return {
@@ -126,6 +136,16 @@ export default function reduxReducer(state = ReduxState, action) {
         case ReducerActions.CURRENT_LINE_VISUAL_RESET:
             return {
                 currentLineVisualisation: {},
+            };
+        //currentBarVisualisation slice
+        case ReducerActions.CURRENT_BAR_VISUAL_ADDED:
+            return {
+                ...state,
+                currentBarVisualisation: action.payload,
+            };
+        case ReducerActions.CURRENT_BAR_VISUAL_RESET:
+            return {
+                currentBarVisualisation: {},
             };
         default:
             return state;

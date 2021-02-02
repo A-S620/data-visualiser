@@ -270,61 +270,59 @@ describe('ReduxReducer', () => {
             ).toEqual(analysedDataSlice);
         });
     });
-    describe('Plotting options', () => {
-        describe('Line Plot Options slice', () => {
-            const linePlotOptions = {
-                linePlotOptions: {},
-            };
-            const lineOptions = {
-                xValue: 'test',
-                yValue: 'test2',
-                height: 500,
-                width: 500,
-                colour: '#cd3b55',
-                opacity: 0.5,
-                curveType: CurveType.curveMonotoneY,
-                lineStyle: LineStyle.SOLID,
-                lineWidth: 2,
-            };
-            it('Should handle LINE_OPTIONS_ADDED', () => {
-                expect(reduxReducer(linePlotOptions, reducerActions.addLineOptions(lineOptions))).toEqual({
-                    linePlotOptions: {
-                        xValue: 'test',
-                        yValue: 'test2',
-                        height: 500,
-                        width: 500,
-                        colour: '#cd3b55',
-                        opacity: 0.5,
-                        curveType: CurveType.curveMonotoneY,
-                        lineStyle: LineStyle.SOLID,
-                        lineWidth: 2,
-                    },
-                });
-            });
-            it('Should handle LINE_OPTIONS_RESET', () => {
-                expect(
-                    reduxReducer(
-                        {
-                            linePlotOptions: {
-                                xValue: 'test',
-                                yValue: 'test2',
-                                height: 500,
-                                width: 500,
-                                colour: '#cd3b55',
-                                opacity: 0,
-                                curveType: CurveType.curveMonotoneY,
-                                lineStyle: LineStyle.SOLID,
-                                lineWidth: 2,
-                            },
-                        },
-                        reducerActions.resetLineOptions()
-                    )
-                ).toEqual(linePlotOptions);
+    describe('Line Plot Options slice', () => {
+        const linePlotOptions = {
+            linePlotOptions: {},
+        };
+        const lineOptions = {
+            xValue: 'test',
+            yValue: 'test2',
+            height: 500,
+            width: 500,
+            colour: '#cd3b55',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+        it('Should handle LINE_OPTIONS_ADDED', () => {
+            expect(reduxReducer(linePlotOptions, reducerActions.addLineOptions(lineOptions))).toEqual({
+                linePlotOptions: {
+                    xValue: 'test',
+                    yValue: 'test2',
+                    height: 500,
+                    width: 500,
+                    colour: '#cd3b55',
+                    opacity: 0.5,
+                    curveType: CurveType.curveMonotoneY,
+                    lineStyle: LineStyle.SOLID,
+                    lineWidth: 2,
+                },
             });
         });
+        it('Should handle LINE_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        linePlotOptions: {
+                            xValue: 'test',
+                            yValue: 'test2',
+                            height: 500,
+                            width: 500,
+                            colour: '#cd3b55',
+                            opacity: 0,
+                            curveType: CurveType.curveMonotoneY,
+                            lineStyle: LineStyle.SOLID,
+                            lineWidth: 2,
+                        },
+                    },
+                    reducerActions.resetLineOptions()
+                )
+            ).toEqual(linePlotOptions);
+        });
     });
-    describe('Current Visualisation', () => {
-        const currentVisualSlice = {
+    describe('Current Line Visualisation', () => {
+        const currentLineVisualSlice = {
             currentLineVisualisation: {},
         };
         const currentVisual = {
@@ -340,8 +338,8 @@ describe('ReduxReducer', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        it('Should handle CURRENT_VISUAL_ADDED', () => {
-            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentLineVisual(currentVisual))).toEqual({
+        it('Should handle CURRENT_LINE_VISUAL_ADDED', () => {
+            expect(reduxReducer(currentLineVisualSlice, reducerActions.addCurrentLineVisual(currentVisual))).toEqual({
                 currentLineVisualisation: {
                     data: [
                         { x: 79, y: 5 },
@@ -377,7 +375,115 @@ describe('ReduxReducer', () => {
                     },
                     reducerActions.resetCurrentLineVisual()
                 )
-            ).toEqual(currentVisualSlice);
+            ).toEqual(currentLineVisualSlice);
+        });
+    });
+    describe('Bar Plot Options slice', () => {
+        const barPlotOptions = {
+            barPlotOptions: {},
+        };
+        const barOptions = {
+            xValue: 'test',
+            yValue: 'test2',
+            height: 500,
+            width: 500,
+            colour: '#cd3b55',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+        it('Should handle BAR_OPTIONS_ADDED', () => {
+            expect(reduxReducer(barPlotOptions, reducerActions.addBarOptions(barOptions))).toEqual({
+                barPlotOptions: {
+                    xValue: 'test',
+                    yValue: 'test2',
+                    height: 500,
+                    width: 500,
+                    colour: '#cd3b55',
+                    opacity: 0.5,
+                    curveType: CurveType.curveMonotoneY,
+                    lineStyle: LineStyle.SOLID,
+                    lineWidth: 2,
+                },
+            });
+        });
+        it('Should handle BAR_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        barPlotOptions: {
+                            xValue: 'test',
+                            yValue: 'test2',
+                            height: 500,
+                            width: 500,
+                            colour: '#cd3b55',
+                            opacity: 0,
+                            curveType: CurveType.curveMonotoneY,
+                            lineStyle: LineStyle.SOLID,
+                            lineWidth: 2,
+                        },
+                    },
+                    reducerActions.resetBarOptions()
+                )
+            ).toEqual(barPlotOptions);
+        });
+    });
+    describe('Current Bar Visualisation', () => {
+        const currentBarVisualSlice = {
+            currentBarVisualisation: {},
+        };
+        const currentVisual = {
+            data: [
+                { x: 79, y: 5 },
+                { x: 76, y: 23 },
+            ],
+            height: 500,
+            width: 500,
+            colour: '000000',
+            opacity: 0.5,
+            curveType: CurveType.curveMonotoneY,
+            lineStyle: LineStyle.SOLID,
+            lineWidth: 2,
+        };
+        it('Should handle CURRENT_BAR_VISUAL_ADDED', () => {
+            expect(reduxReducer(currentBarVisualSlice, reducerActions.addCurrentBarVisual(currentVisual))).toEqual({
+                currentBarVisualisation: {
+                    data: [
+                        { x: 79, y: 5 },
+                        { x: 76, y: 23 },
+                    ],
+                    height: 500,
+                    width: 500,
+                    colour: '000000',
+                    opacity: 0.5,
+                    curveType: CurveType.curveMonotoneY,
+                    lineStyle: LineStyle.SOLID,
+                    lineWidth: 2,
+                },
+            });
+        });
+        it('Should handle CURRENT_BAR_VISUAL_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        currentBarVisualisation: {
+                            data: [
+                                { x: 79, y: 5 },
+                                { x: 76, y: 23 },
+                            ],
+                            height: 500,
+                            width: 500,
+                            colour: '000000',
+                            opacity: 0.5,
+                            curveType: CurveType.curveMonotoneY,
+                            lineStyle: LineStyle.SOLID,
+                            lineWidth: 2,
+                        },
+                    },
+                    reducerActions.resetCurrentBarVisual()
+                )
+            ).toEqual(currentBarVisualSlice);
         });
     });
 });

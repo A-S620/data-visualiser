@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarPlotCreateVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarPlotOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,14 +394,7 @@
       <workItem from="1612253550812" duration="1047000" />
       <workItem from="1612259214376" duration="6000" />
       <workItem from="1612259747774" duration="275000" />
-      <workItem from="1612272446563" duration="1172000" />
-    </task>
-    <task id="LOCAL-00145" summary="Fixed large object layout bug + removed paper from ImportFilesComponent.tsx, Aligned import part to flex-start">
-      <created>1610731827658</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1610731827659</updated>
+      <workItem from="1612272446563" duration="1885000" />
     </task>
     <task id="LOCAL-00146" summary="Minor Changes">
       <created>1610791749234</created>
@@ -741,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612273437845</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="Created IBarPlotCreateVis and IBarPlotOptions. Updated ReducerActions + unit tests to use new interfaces">
+      <created>1612273744367</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1612273744367</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -749,7 +747,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Analyse Interval Data feature complete" />
     <MESSAGE value="FieldTypes Unit tests" />
     <MESSAGE value="Updated ReducerActions adn ReducerActionTypes with nominal data + updated unit tests" />
@@ -774,7 +771,8 @@
     <MESSAGE value="Added barPlotOptions and currentBarVisualisation to ReduxState" />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with barPlotOptions and currentBarVisualisation" />
     <MESSAGE value="Created Line folder in Plotting in Interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Line folder in Plotting in Interfaces" />
+    <MESSAGE value="Created IBarPlotCreateVis and IBarPlotOptions. Updated ReducerActions + unit tests to use new interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created IBarPlotCreateVis and IBarPlotOptions. Updated ReducerActions + unit tests to use new interfaces" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
