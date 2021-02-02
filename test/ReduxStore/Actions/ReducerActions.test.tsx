@@ -1,7 +1,7 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/ILinePlotOptions';
-import { ILinePlotCreateVis } from '../../../src/Interfaces/plotting/ILinePlotCreateVis';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 
 describe('Reducer actions', () => {

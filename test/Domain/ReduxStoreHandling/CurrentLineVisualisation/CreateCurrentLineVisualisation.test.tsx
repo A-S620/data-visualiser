@@ -4,8 +4,8 @@ import React from 'react';
 import CreateCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
 import GetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
 import ResetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/ResetCurrentLineVisualisation';
-import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
+import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
 beforeEach(() => {
     const resetCurrentVis = new ResetCurrentLineVisualisation();
     resetCurrentVis.resetCurrentLineVisual();

@@ -2,7 +2,7 @@ import 'jsdom-global/register';
 
 import CreateLinePlotOptions from '../../../../src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
 import GetLinePlotOptions from '../../../../src/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../../src/Interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
 describe('GetLinePlotOptions domain component', () => {
     it('Should return the correct line plot options', () => {
         const lineOptions: ILinePlotOptions = {

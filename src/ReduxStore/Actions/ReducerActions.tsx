@@ -1,6 +1,6 @@
 import * as reducerActionTypes from './ReducerActionTypes';
-import { ILinePlotOptions } from '../../Interfaces/plotting/ILinePlotOptions';
-import { ILinePlotCreateVis } from '../../Interfaces/plotting/ILinePlotCreateVis';
+import { ILinePlotOptions } from '../../Interfaces/plotting/Line/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../Interfaces/plotting/Line/ILinePlotCreateVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,

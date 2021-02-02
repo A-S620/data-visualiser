@@ -3,7 +3,7 @@ import 'jsdom-global/register';
 import CreateLinePlotOptions from '../../src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
 import ResetLinePlotOptions from '../../src/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
 import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../src/Interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILinePlotOptions';
 import { IImportedFileData } from '../../src/Interfaces/import/IImportedFileData';
 import CreateImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';

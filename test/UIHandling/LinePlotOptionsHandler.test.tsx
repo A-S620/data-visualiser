@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../src/Interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILinePlotOptions';
 import { LinePlotOptionsHandler } from '../../src/UIHandling/LinePlotOptionsHandler';
 import GetLinePlotOptions from '../../src/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';

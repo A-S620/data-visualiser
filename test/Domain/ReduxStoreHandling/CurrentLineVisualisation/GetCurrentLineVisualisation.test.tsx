@@ -2,8 +2,8 @@ import 'jsdom-global/register';
 
 import CreateCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
 import GetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
-import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/ILinePlotOptions';
+import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
+import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
 describe('GetCurrentLineVisualisation domain component', () => {
     it('Should return the correct Current Visualisation', () => {
         const currentVisual: ILinePlotCreateVis = {

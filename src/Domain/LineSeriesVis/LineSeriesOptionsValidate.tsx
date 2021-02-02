@@ -1,4 +1,4 @@
-import { ILinePlotOptions } from '../../Interfaces/plotting/ILinePlotOptions';
+import { ILinePlotOptions } from '../../Interfaces/plotting/Line/ILinePlotOptions';
 import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 
 export class LineSeriesOptionsValidate {

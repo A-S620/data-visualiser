@@ -13,7 +13,7 @@ import {
     Typography,
 } from '@material-ui/core';
 import { connect } from 'react-redux';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../../Interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../../Interfaces/plotting/Line/ILinePlotOptions';
 
 import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';

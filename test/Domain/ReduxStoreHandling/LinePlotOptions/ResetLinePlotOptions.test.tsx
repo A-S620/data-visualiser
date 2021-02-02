@@ -3,7 +3,7 @@ import 'jsdom-global/register';
 import CreateLinePlotOptions from '../../../../src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
 import GetLinePlotOptions from '../../../../src/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
 import ResetLinePlotOptions from '../../../../src/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../../src/Interfaces/plotting/ILinePlotOptions';
+import { CurveType, ILinePlotOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
 
 describe('ResetLinePlotOptions domain component', () => {
     it('Should reset the line plot options', () => {
