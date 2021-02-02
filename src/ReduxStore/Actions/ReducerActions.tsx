@@ -59,6 +59,13 @@ export const addLineOptions = (linePlotOptions: ILinePlotOptions) => ({
 export const resetLineOptions = () => ({
     type: reducerActionTypes.LINE_OPTIONS_RESET,
 });
+export const addBarOptions = (barPlotOptions: ILinePlotOptions) => ({
+    type: reducerActionTypes.BAR_OPTIONS_ADDED,
+    payload: barPlotOptions,
+});
+export const resetBarOptions = () => ({
+    type: reducerActionTypes.BAR_OPTIONS_RESET,
+});
 
 //currentLineVisualisation slice
 export const addCurrentLineVisual = (currentLineVisualisation: ILinePlotCreateVis) => ({
@@ -67,4 +74,11 @@ export const addCurrentLineVisual = (currentLineVisualisation: ILinePlotCreateVi
 });
 export const resetCurrentLineVisual = () => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_RESET,
+});
+export const addCurrentBarVisual = (currentBarVisualisation: ILinePlotCreateVis) => ({
+    type: reducerActionTypes.CURRENT_BAR_VISUAL_ADDED,
+    payload: currentBarVisualisation,
+});
+export const resetCurrentBarVisual = () => ({
+    type: reducerActionTypes.CURRENT_BAR_VISUAL_RESET,
 });

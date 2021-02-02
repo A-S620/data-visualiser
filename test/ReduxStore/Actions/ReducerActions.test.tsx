@@ -145,7 +145,7 @@ describe('Reducer actions', () => {
             expect(reducerActions.resetAnalysedData()).toEqual(expectedAction);
         });
     });
-    describe('Plotting Options actions', () => {
+    describe('Line Plot Options actions', () => {
         it('Should create an action to add the line options', () => {
             const lineOptions: ILinePlotOptions = {
                 xValue: 'test',
@@ -164,15 +164,15 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addLineOptions(lineOptions)).toEqual(expectedAction);
         });
-        it('Should create an action to rest the options', () => {
+        it('Should create an action to rest the bar options', () => {
             const expectedAction = {
                 type: actionTypes.LINE_OPTIONS_RESET,
             };
             expect(reducerActions.resetLineOptions()).toEqual(expectedAction);
         });
     });
-    describe('Current Visualisation actions', () => {
-        it('Should create an action to add the current Visualisation', () => {
+    describe('Current Line Visualisation actions', () => {
+        it('Should create an action to add the current line Visualisation', () => {
             const currentVisual: ILinePlotCreateVis = {
                 data: [
                     { x: 79, y: 5 },
@@ -192,11 +192,65 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addCurrentLineVisual(currentVisual)).toEqual(expectedAction);
         });
-        it('Should create an action to rest the current Visualisation', () => {
+        it('Should create an action to rest the current line Visualisation', () => {
             const expectedAction = {
                 type: actionTypes.CURRENT_LINE_VISUAL_RESET,
             };
             expect(reducerActions.resetCurrentLineVisual()).toEqual(expectedAction);
+        });
+    });
+    describe('Bar Plot Options actions', () => {
+        it('Should create an action to add the bar options', () => {
+            const barOptions: ILinePlotOptions = {
+                xValue: 'test',
+                yValue: 'test2',
+                height: 800,
+                width: 800,
+                colour: '#000000',
+                opacity: 2,
+                curveType: CurveType.curveMonotoneY,
+                lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
+            };
+            const expectedAction = {
+                type: actionTypes.BAR_OPTIONS_ADDED,
+                payload: barOptions,
+            };
+            expect(reducerActions.addBarOptions(barOptions)).toEqual(expectedAction);
+        });
+        it('Should create an action to rest the bar options', () => {
+            const expectedAction = {
+                type: actionTypes.BAR_OPTIONS_RESET,
+            };
+            expect(reducerActions.resetBarOptions()).toEqual(expectedAction);
+        });
+    });
+    describe('Current Line Visualisation actions', () => {
+        it('Should create an action to add the current bar Visualisation', () => {
+            const currentBarVisual: ILinePlotCreateVis = {
+                data: [
+                    { x: 79, y: 5 },
+                    { x: 76, y: 23 },
+                ],
+                height: 500,
+                width: 500,
+                colour: '000000',
+                opacity: 0.5,
+                curveType: CurveType.curveMonotoneY,
+                lineStyle: LineStyle.SOLID,
+                lineWidth: 2,
+            };
+            const expectedAction = {
+                type: actionTypes.CURRENT_BAR_VISUAL_ADDED,
+                payload: currentBarVisual,
+            };
+            expect(reducerActions.addCurrentBarVisual(currentBarVisual)).toEqual(expectedAction);
+        });
+        it('Should create an action to rest the current bar Visualisation', () => {
+            const expectedAction = {
+                type: actionTypes.CURRENT_BAR_VISUAL_RESET,
+            };
+            expect(reducerActions.resetCurrentBarVisual()).toEqual(expectedAction);
         });
     });
 });
