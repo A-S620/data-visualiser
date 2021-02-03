@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LineSeriesOptions/GetLineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/LineSeriesOptions/ResetLineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Line/ILinePlotCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Line/ILineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Line/ILinePlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Line/ILineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarPlotCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarPlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarSeriesOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LinePlottingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LinePlotOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LinePlotOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentLineVisualisation/ResetCurrentLineVisualisation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/CurrentLineVisualisation/ResetCurrentLineVisualisation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/CreateLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/GetLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/LinePlotOptions/ResetLineSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LinePlotOptions/CreateLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LinePlotOptions/GetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LinePlotOptions/ResetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LineSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LineSeriesVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
@@ -162,11 +150,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line" />
+      <recent name="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line" />
       <recent name="$PROJECT_DIR$/src/Interfaces/plotting/Line" />
       <recent name="$PROJECT_DIR$/src/interfaces/Notification" />
       <recent name="$PROJECT_DIR$/src/interfaces/Analyse" />
-      <recent name="$PROJECT_DIR$/test/domain/AnalyseFile" />
-      <recent name="$PROJECT_DIR$/src/domain/AnalyseFile" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -426,28 +414,7 @@
       <workItem from="1612259214376" duration="6000" />
       <workItem from="1612259747774" duration="275000" />
       <workItem from="1612272446563" duration="1945000" />
-      <workItem from="1612340390104" duration="1596000" />
-    </task>
-    <task id="LOCAL-00149" summary="Updated AlertNotification.tsx to be a snackbar">
-      <created>1610974552647</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1610974552648</updated>
-    </task>
-    <task id="LOCAL-00150" summary="Refactoring and unit tests for LineSeriesVis.tsx">
-      <created>1610998867714</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1610998867714</updated>
-    </task>
-    <task id="LOCAL-00151" summary="Refactored application to use intervalFields and intervalDataObjects instead of integerFields + integerDataAsObjects.&#10;Converted AnalyseFileData into AnalyseIntervalData">
-      <created>1611132559874</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1611132559874</updated>
+      <workItem from="1612340390104" duration="2894000" />
     </task>
     <task id="LOCAL-00152" summary="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests">
       <created>1611174783549</created>
@@ -771,7 +738,28 @@
       <option name="project" value="LOCAL" />
       <updated>1612371407272</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="Refactored LinePlot to LineSeries">
+      <created>1612372019059</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1612372019060</updated>
+    </task>
+    <task id="LOCAL-00199" summary="Refactored BarPlot to BarSeries">
+      <created>1612372184083</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1612372184083</updated>
+    </task>
+    <task id="LOCAL-00200" summary="Restructuring ReduxStoreHandling to include Plotting folder">
+      <created>1612372473558</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1612372473558</updated>
+    </task>
+    <option name="localTasksCounter" value="201" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -779,9 +767,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ReduxReducer with nominal data + unit tests" />
-    <MESSAGE value="Updated IAnalysedFileData to include nominal data.&#10;Updated CreateAnalysedData, ResetAnalysedData and GetAnalysedData to use nominal data from analysedData slice. updated unit tests" />
-    <MESSAGE value="Refactored AnalyseIntervalData" />
     <MESSAGE value="AnalyseNominalData domain component + unit tests" />
     <MESSAGE value="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays" />
     <MESSAGE value="Refactoring domain and interfaces folder structure" />
@@ -804,7 +789,10 @@
     <MESSAGE value="Updated ReduxReducer to work with bar options + current bar visualisation, updated unit tests" />
     <MESSAGE value="Updated colour to stroke in ILinePlotCreateVis and ILinePlotOptions" />
     <MESSAGE value="Updated interfaces IBarPlotCreateVis and IBarPlotOptions + updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated interfaces IBarPlotCreateVis and IBarPlotOptions + updated unit tests" />
+    <MESSAGE value="Refactored LinePlot to LineSeries" />
+    <MESSAGE value="Refactored BarPlot to BarSeries" />
+    <MESSAGE value="Restructuring ReduxStoreHandling to include Plotting folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructuring ReduxStoreHandling to include Plotting folder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

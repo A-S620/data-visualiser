@@ -43,10 +43,10 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateLineSeriesOptions(testOptions).createLinePlotOptions();
+    new CreateLineSeriesOptions(testOptions).createLineSeriesOptions();
 });
 afterAll(() => {
-    new ResetLineSeriesOptions().resetLinePlotOptions();
+    new ResetLineSeriesOptions().resetLineSeriesOptions();
 });
 describe('LineSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createLineVisual method is called', () => {

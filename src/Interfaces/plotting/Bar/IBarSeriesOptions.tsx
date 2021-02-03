@@ -1,4 +1,4 @@
-export interface IBarPlotOptions {
+export interface IBarSeriesOptions {
     xValue: string;
     yValue: string;
     height: number;

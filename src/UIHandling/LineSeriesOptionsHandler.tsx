@@ -24,14 +24,14 @@ export class LineSeriesOptionsHandler {
     }
     private createOptions() {
         const createLienPlotOptions = new CreateLineSeriesOptions(this.options);
-        createLienPlotOptions.createLinePlotOptions();
+        createLienPlotOptions.createLineSeriesOptions();
     }
     public getOptions(): ILineSeriesOptions {
-        const getLinePlotOptions = new GetLineSeriesOptions();
-        return getLinePlotOptions.getLinePlotOptions();
+        const getLineSeriesOptions = new GetLineSeriesOptions();
+        return getLineSeriesOptions.getLineSeriesOptions();
     }
     public resetOptions() {
-        const resetLinePlotOptions = new ResetLineSeriesOptions();
-        resetLinePlotOptions.resetLinePlotOptions();
+        const resetLineSeriesOptions = new ResetLineSeriesOptions();
+        resetLineSeriesOptions.resetLineSeriesOptions();
     }
 }

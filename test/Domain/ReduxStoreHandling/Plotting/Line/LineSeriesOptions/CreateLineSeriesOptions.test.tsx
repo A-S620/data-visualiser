@@ -1,14 +1,21 @@
 import 'jsdom-global/register';
+import React from 'react';
 
 import CreateLineSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
 import GetLineSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
+import ResetLineSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
 import {
     CurveType,
     ILineSeriesOptions,
     LineStyle,
 } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
-describe('GetLineSeriesOptions domain component', () => {
-    it('Should return the correct line plot options', () => {
+
+beforeEach(() => {
+    const resetLineSeriesOptions = new ResetLineSeriesOptions();
+    resetLineSeriesOptions.resetLineSeriesOptions();
+});
+describe('CreateLineSeriesOptions domain component', () => {
+    it('Should add the line plot options to the Redux store', () => {
         const lineOptions: ILineSeriesOptions = {
             xValue: 'test',
             yValue: 'test2',
@@ -20,9 +27,9 @@ describe('GetLineSeriesOptions domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const createLinePlotOptions = new CreateLineSeriesOptions(lineOptions);
-        createLinePlotOptions.createLinePlotOptions();
-        const getLinePlotOptions = new GetLineSeriesOptions();
-        expect(getLinePlotOptions.getLinePlotOptions()).toEqual(lineOptions);
+        const createLineSeriesOptions = new CreateLineSeriesOptions(lineOptions);
+        createLineSeriesOptions.createLineSeriesOptions();
+        const getLineSeriesOptions = new GetLineSeriesOptions();
+        expect(getLineSeriesOptions.getLineSeriesOptions()).toEqual(lineOptions);
     });
 });

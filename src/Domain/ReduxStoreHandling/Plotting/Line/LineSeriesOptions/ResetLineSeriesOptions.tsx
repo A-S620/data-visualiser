@@ -2,7 +2,7 @@ import { store } from '../../../../../ReduxStore/store';
 import { resetLineOptions } from '../../../../../ReduxStore/Actions/ReducerActions';
 
 export default class ResetLineSeriesOptions {
-    public resetLinePlotOptions() {
+    public resetLineSeriesOptions() {
         store.dispatch(resetLineOptions());
     }
 }

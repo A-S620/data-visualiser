@@ -58,8 +58,8 @@ describe('Line Plot Handler UIHandling Component', () => {
 
         const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
         linePlotHandler.validateOptions();
-        const getLinePlotOptions = new GetLineSeriesOptions();
-        expect(getLinePlotOptions.getLinePlotOptions()).toBe(testOptions);
+        const getLineSeriesOptions = new GetLineSeriesOptions();
+        expect(getLineSeriesOptions.getLineSeriesOptions()).toBe(testOptions);
     });
     it('Should create the current visualisation in the Redux store if the options are valid', () => {
         const testOptions: ILineSeriesOptions = {

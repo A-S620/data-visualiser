@@ -58,8 +58,8 @@ describe('LineSeriesCreateVis domain component', () => {
                 lineStyle: LineStyle.SOLID,
                 lineWidth: 2,
             };
-            const createLinePlotOptions = new CreateLineSeriesOptions(lineOptions);
-            await createLinePlotOptions.createLinePlotOptions();
+            const createLineSeriesOptions = new CreateLineSeriesOptions(lineOptions);
+            await createLineSeriesOptions.createLineSeriesOptions();
 
             const createVis = new LineSeriesCreateVis().createVis();
             expect(createVis.data).toEqual([

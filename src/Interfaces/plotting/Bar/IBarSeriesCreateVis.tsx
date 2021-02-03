@@ -1,4 +1,4 @@
-export interface IBarPlotCreateVis {
+export interface IBarSeriesCreateVis {
     data: Array<Object>;
     height: number;
     width: number;

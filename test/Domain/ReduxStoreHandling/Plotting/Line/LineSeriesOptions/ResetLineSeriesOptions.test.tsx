@@ -22,11 +22,11 @@ describe('ResetLineSeriesOptions domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const createLinePlotOptions = new CreateLineSeriesOptions(lineOptions);
-        createLinePlotOptions.createLinePlotOptions();
-        const resetLinePlotOptions = new ResetLineSeriesOptions();
-        resetLinePlotOptions.resetLinePlotOptions();
-        const getLinePlotOptions = new GetLineSeriesOptions();
-        expect(getLinePlotOptions.getLinePlotOptions()).toEqual({});
+        const createLineSeriesOptions = new CreateLineSeriesOptions(lineOptions);
+        createLineSeriesOptions.createLineSeriesOptions();
+        const resetLineSeriesOptions = new ResetLineSeriesOptions();
+        resetLineSeriesOptions.resetLineSeriesOptions();
+        const getLineSeriesOptions = new GetLineSeriesOptions();
+        expect(getLineSeriesOptions.getLineSeriesOptions()).toEqual({});
     });
 });

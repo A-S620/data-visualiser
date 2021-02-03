@@ -8,7 +8,7 @@ export default class CreateLineSeriesOptions {
     constructor(lineOptions: ILineSeriesOptions) {
         this.lineOptions = lineOptions;
     }
-    public createLinePlotOptions() {
+    public createLineSeriesOptions() {
         store.dispatch(addLineOptions(this.lineOptions));
     }
 }

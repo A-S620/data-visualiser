@@ -3,8 +3,8 @@ import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes
 import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { ILineSeriesCreateVis } from '../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
-import { IBarPlotOptions } from '../../../src/Interfaces/plotting/Bar/IBarPlotOptions';
-import { IBarPlotCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarPlotCreateVis';
+import { IBarSeriesOptions } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -203,7 +203,7 @@ describe('Reducer actions', () => {
     });
     describe('Bar Plot Options actions', () => {
         it('Should create an action to add the bar options', () => {
-            const barOptions: IBarPlotOptions = {
+            const barOptions: IBarSeriesOptions = {
                 barWidth: 0,
                 colour: '',
                 fill: '',
@@ -229,7 +229,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Line Visualisation actions', () => {
         it('Should create an action to add the current bar Visualisation', () => {
-            const currentBarVisual: IBarPlotCreateVis = {
+            const currentBarVisual: IBarSeriesCreateVis = {
                 barWidth: 0,
                 fill: '',
                 data: [

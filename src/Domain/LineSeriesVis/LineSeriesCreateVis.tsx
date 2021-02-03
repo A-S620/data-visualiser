@@ -6,7 +6,7 @@ import { CurveType } from '../../Interfaces/plotting/Line/ILineSeriesOptions';
 
 export class LineSeriesCreateVis {
     public createVis(): ILineSeriesCreateVis {
-        const lineSeriesOptions = new GetLineSeriesOptions().getLinePlotOptions();
+        const lineSeriesOptions = new GetLineSeriesOptions().getLineSeriesOptions();
         if (Object.keys(lineSeriesOptions).length === 0) {
             return this.createDefaultOptions();
         }
