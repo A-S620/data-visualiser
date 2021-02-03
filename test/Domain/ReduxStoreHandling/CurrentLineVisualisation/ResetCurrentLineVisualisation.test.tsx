@@ -15,7 +15,7 @@ describe('ResetCurrentLineVisualisation domain component', () => {
             ],
             height: 500,
             width: 500,
-            colour: '000000',
+            stroke: '000000',
             opacity: 0.5,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,

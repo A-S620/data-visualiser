@@ -40,7 +40,7 @@ describe('LineSeriesCreateVis domain component', () => {
             ]);
             expect(createVis.height).toEqual(800);
             expect(createVis.width).toEqual(800);
-            expect(createVis.colour).toEqual('#000000');
+            expect(createVis.stroke).toEqual('#000000');
             expect(createVis.opacity).toEqual(1);
             expect(createVis.curveType).toEqual(null);
             expect(createVis.lineStyle).toEqual(undefined);
@@ -52,7 +52,7 @@ describe('LineSeriesCreateVis domain component', () => {
                 yValue: 'col2',
                 height: 500,
                 width: 500,
-                colour: '#cd3b55',
+                stroke: '#cd3b55',
                 opacity: 0,
                 curveType: CurveType.curveMonotoneY,
                 lineStyle: LineStyle.SOLID,
@@ -69,7 +69,7 @@ describe('LineSeriesCreateVis domain component', () => {
             ]);
             expect(createVis.height).toEqual(500);
             expect(createVis.width).toEqual(500);
-            expect(createVis.colour).toEqual('#cd3b55');
+            expect(createVis.stroke).toEqual('#cd3b55');
             expect(createVis.opacity).toEqual(0);
             expect(createVis.curveType).toEqual(CurveType.curveMonotoneY);
             expect(createVis.lineStyle).toEqual(LineStyle.SOLID);

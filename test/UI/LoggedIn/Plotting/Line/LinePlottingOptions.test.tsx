@@ -68,12 +68,12 @@ describe('Line Plotting Options Component', () => {
             const textfield = wrapper.find('div#size-textfields').find('label#width-textfield-label');
             expect(textfield.text()).toBe('Width');
         });
-        it('Should have a colour select', () => {
-            const colourSelect = wrapper.find('div#colour-textfields').find('div#colour-select').find('label');
+        it('Should have a stroke select', () => {
+            const colourSelect = wrapper.find('div#stroke-textfields').find('div#stroke-select').find('label');
             expect(colourSelect.text()).toEqual('Colour');
         });
         it('Should have a opacity textfield', () => {
-            const textfield = wrapper.find('div#colour-textfields').find('label#opacity-textfield-label');
+            const textfield = wrapper.find('div#stroke-textfields').find('label#opacity-textfield-label');
             expect(textfield.text()).toBe('Opacity');
         });
         it('Should have a curve select', () => {

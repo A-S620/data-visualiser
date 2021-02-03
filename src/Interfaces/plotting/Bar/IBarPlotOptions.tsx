@@ -5,7 +5,7 @@ export interface IBarPlotOptions {
     yValue: string;
     height: number;
     width: number;
-    colour: string;
+    stroke: string;
     opacity: number;
     curveType: CurveType | null;
     lineStyle: LineStyle | undefined;

@@ -42,7 +42,7 @@ function LinePlottingOptions(props: any) {
         yValue: string;
         height: number;
         width: number;
-        colour: string;
+        stroke: string;
         opacity: number;
         curveType: CurveType | null;
         lineStyle: LineStyle | undefined;
@@ -52,7 +52,7 @@ function LinePlottingOptions(props: any) {
         yValue: '',
         height: 800,
         width: 800,
-        colour: '#000000',
+        stroke: '#000000',
         opacity: 1,
         curveType: null,
         lineStyle: undefined,
@@ -79,7 +79,7 @@ function LinePlottingOptions(props: any) {
             yValue: options.yValue,
             height: options.height,
             width: options.width,
-            colour: options.colour,
+            stroke: options.stroke,
             opacity: options.opacity,
             curveType: options.curveType,
             lineStyle: options.lineStyle,
@@ -238,18 +238,18 @@ function LinePlottingOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'colour-textfields'}>
-                        <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
+                        <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
                             <InputLabel className={classes.textColor}>Colour</InputLabel>
                             <Select
                                 value={options.lineStyle}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
-                                        colour: event.target.value as string,
+                                        stroke: event.target.value as string,
                                     });
                                 }}
-                                name="colour"
+                                name="stroke"
                             >
                                 <option value={'red'}>red</option>
                                 <option value={'green'}>green</option>

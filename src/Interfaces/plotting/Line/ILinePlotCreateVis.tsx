@@ -4,7 +4,7 @@ export interface ILinePlotCreateVis {
     data: Array<Object>;
     height: number;
     width: number;
-    colour: string;
+    stroke: string;
     opacity: number;
     curveType: CurveType | null;
     lineStyle: LineStyle | undefined;

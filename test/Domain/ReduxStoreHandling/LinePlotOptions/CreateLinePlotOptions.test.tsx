@@ -17,7 +17,7 @@ describe('CreateLinePlotOptions domain component', () => {
             yValue: 'test2',
             height: 500,
             width: 500,
-            colour: '#cd3b55',
+            stroke: '#cd3b55',
             opacity: 0,
             curveType: CurveType.curveMonotoneY,
             lineStyle: LineStyle.SOLID,
