@@ -57,7 +57,7 @@ function LineSeriesVis(props: any) {
                         opacity={props.currentLineVisualisation.opacity}
                         curve={props.currentLineVisualisation.curve}
                         data={props.currentLineVisualisation.data}
-                        color={props.currentLineVisualisation.stroke}
+                        stroke={props.currentLineVisualisation.stroke}
                     />
                 </XYPlot>
             </Box>

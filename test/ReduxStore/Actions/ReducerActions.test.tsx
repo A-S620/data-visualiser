@@ -204,15 +204,15 @@ describe('Reducer actions', () => {
     describe('Bar Plot Options actions', () => {
         it('Should create an action to add the bar options', () => {
             const barOptions: IBarPlotOptions = {
+                barWidth: 0,
+                colour: '',
+                fill: '',
                 xValue: 'test',
                 yValue: 'test2',
                 height: 800,
                 width: 800,
                 stroke: '#000000',
                 opacity: 2,
-                curveType: CurveType.curveMonotoneY,
-                lineStyle: LineStyle.SOLID,
-                lineWidth: 2,
             };
             const expectedAction = {
                 type: actionTypes.BAR_OPTIONS_ADDED,
@@ -230,6 +230,8 @@ describe('Reducer actions', () => {
     describe('Current Line Visualisation actions', () => {
         it('Should create an action to add the current bar Visualisation', () => {
             const currentBarVisual: IBarPlotCreateVis = {
+                barWidth: 0,
+                fill: '',
                 data: [
                     { x: 79, y: 5 },
                     { x: 76, y: 23 },
@@ -238,9 +240,7 @@ describe('Reducer actions', () => {
                 width: 500,
                 stroke: '000000',
                 opacity: 0.5,
-                curveType: CurveType.curveMonotoneY,
-                lineStyle: LineStyle.SOLID,
-                lineWidth: 2,
+                colour: '000000',
             };
             const expectedAction = {
                 type: actionTypes.CURRENT_BAR_VISUAL_ADDED,
