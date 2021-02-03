@@ -3,8 +3,8 @@ import React from 'react';
 import 'jsdom-global/register';
 import { CurveType, ILineSeriesOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { LineSeriesOptionsHandler } from '../../src/UIHandling/LineSeriesOptionsHandler';
-import GetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/LineSeriesOptions/GetLineSeriesOptions';
-import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
+import GetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
+import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/GetCurrentLineVisualisation';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {

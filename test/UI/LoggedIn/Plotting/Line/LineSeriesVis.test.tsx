@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import CreateCurrentLineVisualisation from '../../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
+import CreateCurrentLineVisualisation from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/CreateCurrentLineVisualisation';
 import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';

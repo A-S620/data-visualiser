@@ -1,12 +1,12 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions';
-import ResetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/LineSeriesOptions/ResetLineSeriesOptions';
+import CreateLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
+import ResetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
 import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler';
 import { CurveType, ILineSeriesOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { IImportedFileData } from '../../src/Interfaces/import/IImportedFileData';
 import CreateImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
+import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/GetCurrentLineVisualisation';
 import { AnalyseFileData } from '../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../src/Interfaces/Analyse/IAnalysedFileData';
 //Test data

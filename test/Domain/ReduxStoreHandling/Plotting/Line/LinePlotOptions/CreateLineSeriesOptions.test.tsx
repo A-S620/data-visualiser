@@ -1,10 +1,14 @@
 import 'jsdom-global/register';
 import React from 'react';
 
-import CreateLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions';
-import GetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/LineSeriesOptions/GetLineSeriesOptions';
-import ResetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/LineSeriesOptions/ResetLineSeriesOptions';
-import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import CreateLineSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
+import GetLineSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
+import ResetLineSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
+import {
+    CurveType,
+    ILineSeriesOptions,
+    LineStyle,
+} from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 
 beforeEach(() => {
     const resetLinePlotOptions = new ResetLineSeriesOptions();

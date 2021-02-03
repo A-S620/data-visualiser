@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLineSeriesOptions from '../../../src/Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions';
+import CreateLineSeriesOptions from '../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
 import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { LineSeriesCreateVis } from '../../../src/Domain/LineSeriesVis/LineSeriesCreateVis';
 import { FieldTypes, IAnalysedFileData } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
