@@ -66,6 +66,6 @@ function LineSeriesVis(props: any) {
 }
 const mapStateToProps = (state: any) => ({
     currentLineVisualisation: state.currentLineVisualisation,
-    linePlotOptions: state.linePlotOptions,
+    lineSeriesOptions: state.lineSeriesOptions,
 });
 export default connect(mapStateToProps, {})(LineSeriesVis);

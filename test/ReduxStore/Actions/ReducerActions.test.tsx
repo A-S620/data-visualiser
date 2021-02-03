@@ -1,7 +1,7 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILinePlotOptions';
-import { ILinePlotCreateVis } from '../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import { ILineSeriesCreateVis } from '../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { IBarPlotOptions } from '../../../src/Interfaces/plotting/Bar/IBarPlotOptions';
 import { IBarPlotCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarPlotCreateVis';
@@ -149,7 +149,7 @@ describe('Reducer actions', () => {
     });
     describe('Line Plot Options actions', () => {
         it('Should create an action to add the line options', () => {
-            const lineOptions: ILinePlotOptions = {
+            const lineOptions: ILineSeriesOptions = {
                 xValue: 'test',
                 yValue: 'test2',
                 height: 800,
@@ -175,7 +175,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Line Visualisation actions', () => {
         it('Should create an action to add the current line Visualisation', () => {
-            const currentVisual: ILinePlotCreateVis = {
+            const currentVisual: ILineSeriesCreateVis = {
                 data: [
                     { x: 79, y: 5 },
                     { x: 76, y: 23 },

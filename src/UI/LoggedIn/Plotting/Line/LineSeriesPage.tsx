@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
 import LineSeriesVis from './LineSeriesVis';
-import LinePlottingOptions from './LinePlottingOptions';
+import LinePlottingOptions from './LineSeriesOptions';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function LinePlottingPage() {
+export default function LineSeriesPage() {
     const classes = useStyles();
     return (
         <Box

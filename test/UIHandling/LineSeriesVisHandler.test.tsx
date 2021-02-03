@@ -1,9 +1,9 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLinePlotOptions from '../../src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
-import ResetLinePlotOptions from '../../src/Domain/ReduxStoreHandling/LinePlotOptions/ResetLinePlotOptions';
+import CreateLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions';
+import ResetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/LineSeriesOptions/ResetLineSeriesOptions';
 import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { IImportedFileData } from '../../src/Interfaces/import/IImportedFileData';
 import CreateImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
@@ -17,7 +17,7 @@ const dataObjects = [
 ];
 const dataFields = ['col1', 'col2', 'col3'];
 const intervalFields = ['col1', 'col2'];
-const testOptions: ILinePlotOptions = {
+const testOptions: ILineSeriesOptions = {
     xValue: 'col1',
     yValue: 'col2',
     height: 500,
@@ -43,10 +43,10 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateLinePlotOptions(testOptions).createLinePlotOptions();
+    new CreateLineSeriesOptions(testOptions).createLinePlotOptions();
 });
 afterAll(() => {
-    new ResetLinePlotOptions().resetLinePlotOptions();
+    new ResetLineSeriesOptions().resetLinePlotOptions();
 });
 describe('LineSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createLineVisual method is called', () => {

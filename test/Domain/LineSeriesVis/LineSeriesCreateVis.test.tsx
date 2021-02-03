@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLinePlotOptions from '../../../src/Domain/ReduxStoreHandling/LinePlotOptions/CreateLinePlotOptions';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import CreateLineSeriesOptions from '../../../src/Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { LineSeriesCreateVis } from '../../../src/Domain/LineSeriesVis/LineSeriesCreateVis';
 import { FieldTypes, IAnalysedFileData } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
@@ -47,7 +47,7 @@ describe('LineSeriesCreateVis domain component', () => {
             expect(createVis.lineWidth).toEqual(2);
         });
         it('Should return the correct options from the Redux store when valid options have been imported', async () => {
-            const lineOptions: ILinePlotOptions = {
+            const lineOptions: ILineSeriesOptions = {
                 xValue: 'col1',
                 yValue: 'col2',
                 height: 500,
@@ -58,7 +58,7 @@ describe('LineSeriesCreateVis domain component', () => {
                 lineStyle: LineStyle.SOLID,
                 lineWidth: 2,
             };
-            const createLinePlotOptions = new CreateLinePlotOptions(lineOptions);
+            const createLinePlotOptions = new CreateLineSeriesOptions(lineOptions);
             await createLinePlotOptions.createLinePlotOptions();
 
             const createVis = new LineSeriesCreateVis().createVis();

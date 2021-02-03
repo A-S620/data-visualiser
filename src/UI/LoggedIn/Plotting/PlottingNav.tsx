@@ -11,7 +11,7 @@ import GraphicEqIcon from '@material-ui/icons/GraphicEq';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import StreetviewIcon from '@material-ui/icons/Streetview';
 
-import LinePlottingPage from './Line/LinePlottingPage';
+import LineSeriesPage from './Line/LineSeriesPage';
 
 //Switches tabs
 function TabPanel(props: any) {
@@ -75,7 +75,7 @@ export default function PlottingNav() {
     return (
         <div className={classes.root} id={'plotting-tab-panel'}>
             <TabPanel value={value} index={0}>
-                <LinePlottingPage />
+                <LineSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={1}>
                 Item Two

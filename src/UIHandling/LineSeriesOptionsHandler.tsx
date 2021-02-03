@@ -1,0 +1,37 @@
+import { ILineSeriesOptions } from '../Interfaces/plotting/Line/ILineSeriesOptions';
+import { NotificationsHandler } from './NotificationsHandler';
+import { LineSeriesOptionsValidate } from '../Domain/LineSeriesVis/LineSeriesOptionsValidate';
+import GetLineSeriesOptions from '../Domain/ReduxStoreHandling/LineSeriesOptions/GetLineSeriesOptions';
+import CreateLineSeriesOptions from '../Domain/ReduxStoreHandling/LineSeriesOptions/CreateLineSeriesOptions';
+import ResetLineSeriesOptions from '../Domain/ReduxStoreHandling/LineSeriesOptions/ResetLineSeriesOptions';
+import { LineSeriesVisHandler } from './LineSeriesVisHandler';
+
+export class LineSeriesOptionsHandler {
+    private options: ILineSeriesOptions;
+    constructor(options: ILineSeriesOptions) {
+        this.options = options;
+    }
+    public validateOptions(): NotificationsHandler {
+        const notifications = new NotificationsHandler();
+        const lineSeriesOptions = new LineSeriesOptionsValidate(this.options);
+        const optionsErrors = lineSeriesOptions.validate();
+        notifications.concat(optionsErrors);
+        if (notifications.isEmpty()) {
+            this.createOptions();
+            new LineSeriesVisHandler().createLineVisual();
+        }
+        return notifications;
+    }
+    private createOptions() {
+        const createLienPlotOptions = new CreateLineSeriesOptions(this.options);
+        createLienPlotOptions.createLinePlotOptions();
+    }
+    public getOptions(): ILineSeriesOptions {
+        const getLinePlotOptions = new GetLineSeriesOptions();
+        return getLinePlotOptions.getLinePlotOptions();
+    }
+    public resetOptions() {
+        const resetLinePlotOptions = new ResetLineSeriesOptions();
+        resetLinePlotOptions.resetLinePlotOptions();
+    }
+}

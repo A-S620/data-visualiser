@@ -4,15 +4,15 @@ import React from 'react';
 import CreateCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
 import GetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
 import ResetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/ResetCurrentLineVisualisation';
-import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { ILineSeriesCreateVis } from '../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
+import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 beforeEach(() => {
     const resetCurrentVis = new ResetCurrentLineVisualisation();
     resetCurrentVis.resetCurrentLineVisual();
 });
 describe('CreateCurrentLineVisualisation domain component', () => {
     it('Should add the current visualisation to the redux store', () => {
-        const currentVisual: ILinePlotCreateVis = {
+        const currentVisual: ILineSeriesCreateVis = {
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },

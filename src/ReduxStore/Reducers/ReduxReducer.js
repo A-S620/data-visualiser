@@ -107,15 +107,15 @@ export default function reduxReducer(state = ReduxState, action) {
                 },
             };
 
-        //linePlotOptions slice
+        //lineSeriesOptions slice
         case ReducerActions.LINE_OPTIONS_ADDED:
             return {
                 ...state,
-                linePlotOptions: action.payload,
+                lineSeriesOptions: action.payload,
             };
         case ReducerActions.LINE_OPTIONS_RESET:
             return {
-                linePlotOptions: {},
+                lineSeriesOptions: {},
             };
         //barPlotOptions slice
         case ReducerActions.BAR_OPTIONS_ADDED:

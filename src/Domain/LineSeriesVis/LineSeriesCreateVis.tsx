@@ -1,28 +1,28 @@
-import GetLinePlotOptions from '../ReduxStoreHandling/LinePlotOptions/GetLinePlotOptions';
+import GetLineSeriesOptions from '../ReduxStoreHandling/LineSeriesOptions/GetLineSeriesOptions';
 import GetAnalysedData from '../ReduxStoreHandling/AnalysedData/GetAnalysedData';
-import { ILinePlotCreateVis } from '../../Interfaces/plotting/Line/ILinePlotCreateVis';
+import { ILineSeriesCreateVis } from '../../Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { IAnalysedFileData } from '../../Interfaces/Analyse/IAnalysedFileData';
-import { CurveType } from '../../Interfaces/plotting/Line/ILinePlotOptions';
+import { CurveType } from '../../Interfaces/plotting/Line/ILineSeriesOptions';
 
 export class LineSeriesCreateVis {
-    public createVis(): ILinePlotCreateVis {
-        const linePlotOptions = new GetLinePlotOptions().getLinePlotOptions();
-        if (Object.keys(linePlotOptions).length === 0) {
+    public createVis(): ILineSeriesCreateVis {
+        const lineSeriesOptions = new GetLineSeriesOptions().getLinePlotOptions();
+        if (Object.keys(lineSeriesOptions).length === 0) {
             return this.createDefaultOptions();
         }
 
         return {
-            data: this.createDataArray(linePlotOptions.xValue, linePlotOptions.yValue),
-            height: linePlotOptions.height,
-            width: linePlotOptions.width,
-            stroke: linePlotOptions.stroke,
-            opacity: linePlotOptions.opacity,
-            curveType: linePlotOptions.curveType,
-            lineStyle: linePlotOptions.lineStyle,
-            lineWidth: linePlotOptions.lineWidth,
+            data: this.createDataArray(lineSeriesOptions.xValue, lineSeriesOptions.yValue),
+            height: lineSeriesOptions.height,
+            width: lineSeriesOptions.width,
+            stroke: lineSeriesOptions.stroke,
+            opacity: lineSeriesOptions.opacity,
+            curveType: lineSeriesOptions.curveType,
+            lineStyle: lineSeriesOptions.lineStyle,
+            lineWidth: lineSeriesOptions.lineWidth,
         };
     }
-    private createDefaultOptions(): ILinePlotCreateVis {
+    private createDefaultOptions(): ILineSeriesCreateVis {
         const { intervalFields } = this.getAnalysedData();
         return {
             data: this.createDataArray(intervalFields[0], intervalFields[1]),

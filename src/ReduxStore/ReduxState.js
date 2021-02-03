@@ -13,7 +13,7 @@ const ReduxState = {
         ordinalFields: [],
         ordinalDataObjects: [],
     },
-    linePlotOptions: {},
+    lineSeriesOptions: {},
     currentLineVisualisation: {},
     barPlotOptions: {},
     currentBarVisualisation: {},

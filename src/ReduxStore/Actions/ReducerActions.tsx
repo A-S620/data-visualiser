@@ -1,6 +1,6 @@
 import * as reducerActionTypes from './ReducerActionTypes';
-import { ILinePlotOptions } from '../../Interfaces/plotting/Line/ILinePlotOptions';
-import { ILinePlotCreateVis } from '../../Interfaces/plotting/Line/ILinePlotCreateVis';
+import { ILineSeriesOptions } from '../../Interfaces/plotting/Line/ILineSeriesOptions';
+import { ILineSeriesCreateVis } from '../../Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { IBarPlotOptions } from '../../Interfaces/plotting/Bar/IBarPlotOptions';
 import { IBarPlotCreateVis } from '../../Interfaces/plotting/Bar/IBarPlotCreateVis';
 
@@ -54,9 +54,9 @@ export const resetAnalysedData = () => ({
 });
 
 //plottingOptions slice
-export const addLineOptions = (linePlotOptions: ILinePlotOptions) => ({
+export const addLineOptions = (lineSeriesOptions: ILineSeriesOptions) => ({
     type: reducerActionTypes.LINE_OPTIONS_ADDED,
-    payload: linePlotOptions,
+    payload: lineSeriesOptions,
 });
 export const resetLineOptions = () => ({
     type: reducerActionTypes.LINE_OPTIONS_RESET,
@@ -70,7 +70,7 @@ export const resetBarOptions = () => ({
 });
 
 //currentLineVisualisation slice
-export const addCurrentLineVisual = (currentLineVisualisation: ILinePlotCreateVis) => ({
+export const addCurrentLineVisual = (currentLineVisualisation: ILineSeriesCreateVis) => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
     payload: currentLineVisualisation,
 });

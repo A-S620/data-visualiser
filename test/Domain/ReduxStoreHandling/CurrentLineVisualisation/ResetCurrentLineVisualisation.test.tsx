@@ -3,12 +3,12 @@ import 'jsdom-global/register';
 import CreateCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
 import GetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
 import ResetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/ResetCurrentLineVisualisation';
-import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { ILineSeriesCreateVis } from '../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
+import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 
 describe('ResetCurrentLineVisualisation domain component', () => {
     it('Should reset the Current Visualisation', () => {
-        const currentVisual: ILinePlotCreateVis = {
+        const currentVisual: ILineSeriesCreateVis = {
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },

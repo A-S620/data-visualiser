@@ -2,14 +2,14 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 import CreateCurrentLineVisualisation from '../../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
-import { ILinePlotCreateVis } from '../../../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
+import { CurveType, LineStyle } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';
 import LineSeriesVis from '../../../../../src/UI/LoggedIn/Plotting/Line/LineSeriesVis';
 import { Provider } from 'react-redux';
 let wrapper: ReactWrapper;
 beforeAll(() => {
-    const currentVisual: ILinePlotCreateVis = {
+    const currentVisual: ILineSeriesCreateVis = {
         data: [
             { x: 79, y: 5 },
             { x: 76, y: 23 },

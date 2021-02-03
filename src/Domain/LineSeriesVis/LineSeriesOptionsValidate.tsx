@@ -1,10 +1,10 @@
-import { ILinePlotOptions } from '../../Interfaces/plotting/Line/ILinePlotOptions';
+import { ILineSeriesOptions } from '../../Interfaces/plotting/Line/ILineSeriesOptions';
 import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 
 export class LineSeriesOptionsValidate {
-    private readonly options: ILinePlotOptions;
-    constructor(linePlotOptions: ILinePlotOptions) {
-        this.options = linePlotOptions;
+    private readonly options: ILineSeriesOptions;
+    constructor(lineSeriesOptions: ILineSeriesOptions) {
+        this.options = lineSeriesOptions;
     }
     public validate(): NotificationsHandler {
         const notifications: NotificationsHandler = new NotificationsHandler();

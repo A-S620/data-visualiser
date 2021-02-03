@@ -1,11 +1,11 @@
 import { store } from '../../../ReduxStore/store';
 import { addLineOptions } from '../../../ReduxStore/Actions/ReducerActions';
-import { ILinePlotOptions } from '../../../Interfaces/plotting/Line/ILinePlotOptions';
+import { ILineSeriesOptions } from '../../../Interfaces/plotting/Line/ILineSeriesOptions';
 
-export default class CreateLinePlotOptions {
-    private lineOptions: ILinePlotOptions;
+export default class CreateLineSeriesOptions {
+    private lineOptions: ILineSeriesOptions;
 
-    constructor(lineOptions: ILinePlotOptions) {
+    constructor(lineOptions: ILineSeriesOptions) {
         this.lineOptions = lineOptions;
     }
     public createLinePlotOptions() {

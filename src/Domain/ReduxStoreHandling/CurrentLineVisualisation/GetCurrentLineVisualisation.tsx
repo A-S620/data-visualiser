@@ -1,7 +1,7 @@
 import { store } from '../../../ReduxStore/store';
-import { ILinePlotCreateVis } from '../../../Interfaces/plotting/Line/ILinePlotCreateVis';
+import { ILineSeriesCreateVis } from '../../../Interfaces/plotting/Line/ILineSeriesCreateVis';
 export default class GetCurrentLineVisualisation {
-    public getCurrentLineVisual(): ILinePlotCreateVis {
+    public getCurrentLineVisual(): ILineSeriesCreateVis {
         return store.getState().currentLineVisualisation;
     }
 }

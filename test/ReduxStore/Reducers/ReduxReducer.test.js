@@ -1,7 +1,7 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 
 describe('ReduxReducer', () => {
@@ -271,8 +271,8 @@ describe('ReduxReducer', () => {
         });
     });
     describe('Line Plot Options slice', () => {
-        const linePlotOptions = {
-            linePlotOptions: {},
+        const lineSeriesOptions = {
+            lineSeriesOptions: {},
         };
         const lineOptions = {
             xValue: 'test',
@@ -286,8 +286,8 @@ describe('ReduxReducer', () => {
             lineWidth: 2,
         };
         it('Should handle LINE_OPTIONS_ADDED', () => {
-            expect(reduxReducer(linePlotOptions, reducerActions.addLineOptions(lineOptions))).toEqual({
-                linePlotOptions: {
+            expect(reduxReducer(lineSeriesOptions, reducerActions.addLineOptions(lineOptions))).toEqual({
+                lineSeriesOptions: {
                     xValue: 'test',
                     yValue: 'test2',
                     height: 500,
@@ -304,7 +304,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        linePlotOptions: {
+                        lineSeriesOptions: {
                             xValue: 'test',
                             yValue: 'test2',
                             height: 500,
@@ -318,7 +318,7 @@ describe('ReduxReducer', () => {
                     },
                     reducerActions.resetLineOptions()
                 )
-            ).toEqual(linePlotOptions);
+            ).toEqual(lineSeriesOptions);
         });
     });
     describe('Current Line Visualisation', () => {

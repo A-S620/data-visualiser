@@ -13,12 +13,12 @@ import {
     Typography,
 } from '@material-ui/core';
 import { connect } from 'react-redux';
-import { CurveType, ILinePlotOptions, LineStyle } from '../../../../Interfaces/plotting/Line/ILinePlotOptions';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../Interfaces/plotting/Line/ILineSeriesOptions';
 
 import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
-import { LinePlotOptionsHandler } from '../../../../UIHandling/LinePlotOptionsHandler';
+import { LineSeriesOptionsHandler } from '../../../../UIHandling/LineSeriesOptionsHandler';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.disabled,
     },
 }));
-function LinePlottingOptions(props: any) {
+function LineSeriesOptions(props: any) {
     const classes = useStyles();
     const [options, setOptions] = React.useState<{
         xValue: string;
@@ -74,7 +74,7 @@ function LinePlottingOptions(props: any) {
         return options.xValue !== options.yValue;
     }
     function validateDataOptions() {
-        const optionsToValidate: ILinePlotOptions = {
+        const optionsToValidate: ILineSeriesOptions = {
             xValue: options.xValue,
             yValue: options.yValue,
             height: options.height,
@@ -85,7 +85,7 @@ function LinePlottingOptions(props: any) {
             lineStyle: options.lineStyle,
             lineWidth: options.lineWidth,
         };
-        const validateOptions = new LinePlotOptionsHandler(optionsToValidate);
+        const validateOptions = new LineSeriesOptionsHandler(optionsToValidate);
         const errors: NotificationsHandler = validateOptions.validateOptions();
         if (errors.isEmpty()) {
             try {
@@ -368,4 +368,4 @@ function LinePlottingOptions(props: any) {
 const mapStateToProps = (state: any) => ({
     intervalFields: state.analysedData.intervalFields,
 });
-export default connect(mapStateToProps, {})(LinePlottingOptions);
+export default connect(mapStateToProps, {})(LineSeriesOptions);

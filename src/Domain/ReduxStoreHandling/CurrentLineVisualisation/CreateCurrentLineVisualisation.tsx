@@ -1,10 +1,10 @@
 import { store } from '../../../ReduxStore/store';
 import { addCurrentLineVisual } from '../../../ReduxStore/Actions/ReducerActions';
-import { ILinePlotCreateVis } from '../../../Interfaces/plotting/Line/ILinePlotCreateVis';
+import { ILineSeriesCreateVis } from '../../../Interfaces/plotting/Line/ILineSeriesCreateVis';
 
 export default class CreateCurrentLineVisualisation {
-    private currentVisual: ILinePlotCreateVis;
-    constructor(currentVisual: ILinePlotCreateVis) {
+    private currentVisual: ILineSeriesCreateVis;
+    constructor(currentVisual: ILineSeriesCreateVis) {
         this.currentVisual = currentVisual;
     }
     public createCurrentLineVisual() {

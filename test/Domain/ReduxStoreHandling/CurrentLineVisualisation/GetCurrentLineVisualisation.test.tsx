@@ -2,11 +2,11 @@ import 'jsdom-global/register';
 
 import CreateCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/CreateCurrentLineVisualisation';
 import GetCurrentLineVisualisation from '../../../../src/Domain/ReduxStoreHandling/CurrentLineVisualisation/GetCurrentLineVisualisation';
-import { ILinePlotCreateVis } from '../../../../src/Interfaces/plotting/Line/ILinePlotCreateVis';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILinePlotOptions';
+import { ILineSeriesCreateVis } from '../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
+import { CurveType, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 describe('GetCurrentLineVisualisation domain component', () => {
     it('Should return the correct Current Visualisation', () => {
-        const currentVisual: ILinePlotCreateVis = {
+        const currentVisual: ILineSeriesCreateVis = {
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
