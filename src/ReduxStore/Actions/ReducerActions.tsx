@@ -61,9 +61,9 @@ export const addLineOptions = (lineSeriesOptions: ILineSeriesOptions) => ({
 export const resetLineOptions = () => ({
     type: reducerActionTypes.LINE_OPTIONS_RESET,
 });
-export const addBarOptions = (barPlotOptions: IBarPlotOptions) => ({
+export const addBarOptions = (barSeriesOptions: IBarPlotOptions) => ({
     type: reducerActionTypes.BAR_OPTIONS_ADDED,
-    payload: barPlotOptions,
+    payload: barSeriesOptions,
 });
 export const resetBarOptions = () => ({
     type: reducerActionTypes.BAR_OPTIONS_RESET,

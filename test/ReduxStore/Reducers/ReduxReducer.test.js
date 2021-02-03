@@ -379,8 +379,8 @@ describe('ReduxReducer', () => {
         });
     });
     describe('Bar Plot Options slice', () => {
-        const barPlotOptions = {
-            barPlotOptions: {},
+        const barSeriesOptions = {
+            barSeriesOptions: {},
         };
         const barOptions = {
             xValue: 'test',
@@ -394,8 +394,8 @@ describe('ReduxReducer', () => {
             lineWidth: 2,
         };
         it('Should handle BAR_OPTIONS_ADDED', () => {
-            expect(reduxReducer(barPlotOptions, reducerActions.addBarOptions(barOptions))).toEqual({
-                barPlotOptions: {
+            expect(reduxReducer(barSeriesOptions, reducerActions.addBarOptions(barOptions))).toEqual({
+                barSeriesOptions: {
                     xValue: 'test',
                     yValue: 'test2',
                     height: 500,
@@ -412,7 +412,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        barPlotOptions: {
+                        barSeriesOptions: {
                             xValue: 'test',
                             yValue: 'test2',
                             height: 500,
@@ -426,7 +426,7 @@ describe('ReduxReducer', () => {
                     },
                     reducerActions.resetBarOptions()
                 )
-            ).toEqual(barPlotOptions);
+            ).toEqual(barSeriesOptions);
         });
     });
     describe('Current Bar Visualisation', () => {

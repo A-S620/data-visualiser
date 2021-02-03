@@ -117,15 +117,15 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 lineSeriesOptions: {},
             };
-        //barPlotOptions slice
+        //barSeriesOptions slice
         case ReducerActions.BAR_OPTIONS_ADDED:
             return {
                 ...state,
-                barPlotOptions: action.payload,
+                barSeriesOptions: action.payload,
             };
         case ReducerActions.BAR_OPTIONS_RESET:
             return {
-                barPlotOptions: {},
+                barSeriesOptions: {},
             };
         //currentLineVisualisation slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:

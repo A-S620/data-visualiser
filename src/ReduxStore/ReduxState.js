@@ -15,7 +15,7 @@ const ReduxState = {
     },
     lineSeriesOptions: {},
     currentLineVisualisation: {},
-    barPlotOptions: {},
+    barSeriesOptions: {},
     currentBarVisualisation: {},
 };
 export default ReduxState;
