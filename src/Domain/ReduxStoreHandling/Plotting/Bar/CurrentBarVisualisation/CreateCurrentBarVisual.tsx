@@ -7,7 +7,7 @@ export default class CreateCurrentBarVisual {
     constructor(currentVisual: IBarSeriesCreateVis) {
         this.currentVisual = currentVisual;
     }
-    public createCurrentLineVisual() {
+    public createCurrentBarVisual() {
         store.dispatch(addCurrentBarVisual(this.currentVisual));
     }
 }

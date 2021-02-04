@@ -1,9 +1,9 @@
 import 'jsdom-global/register';
 import React from 'react';
 
-import CreateCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/CreateCurrentLineVisualisation';
-import GetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/GetCurrentLineVisualisation';
-import ResetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/ResetCurrentLineVisualisation';
+import CreateCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisualisation';
+import GetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisualisation';
+import ResetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisualisation';
 import { ILineSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { CurveType, LineStyle } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 beforeEach(() => {
@@ -11,7 +11,7 @@ beforeEach(() => {
     resetCurrentVis.resetCurrentLineVisual();
 });
 describe('CreateCurrentLineVisualisation domain component', () => {
-    it('Should add the current visualisation to the redux store', () => {
+    it('Should add the current line visualisation to the redux store', () => {
         const currentVisual: ILineSeriesCreateVis = {
             data: [
                 { x: 79, y: 5 },

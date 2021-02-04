@@ -1,6 +1,6 @@
 import { LineSeriesCreateVis } from '../Domain/LineSeriesVis/LineSeriesCreateVis';
-import CreateCurrentLineVisualisation from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/CreateCurrentLineVisualisation';
-import ResetCurrentLineVisualisation from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisualisation/ResetCurrentLineVisualisation';
+import CreateCurrentLineVisualisation from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisualisation';
+import ResetCurrentLineVisualisation from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisualisation';
 
 export class LineSeriesVisHandler {
     public createLineVisual() {
