@@ -8,13 +8,8 @@ describe('FrontNavigation Component', () => {
     const wrapper = mount(<FrontNavigation />);
 
     it('should have the correct items in the menu', () => {
-        const pages = ['Home', 'About', 'Privacy Policy', 'terms Of Use', 'Documentation'];
-        //TODO: Fix test
         const menu = wrapper.find('div#menu-tabs');
 
-        expect(menu.find('button#simple-tab-0').text()).toBe(pages[0]);
-        expect(menu.find('button#simple-tab-1').text()).toBe(pages[1]);
-        expect(menu.find('button#simple-tab-2').text()).toBe(pages[2]);
-        expect(menu.find('button#simple-tab-3').text()).toBe(pages[3]);
+        expect(menu.text()).toBe('HomeAboutPrivacy PolicyTerms Of UseDocumentation');
     });
 });
