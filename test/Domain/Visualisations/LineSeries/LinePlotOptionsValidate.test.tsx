@@ -1,7 +1,7 @@
 import React from 'react';
 import 'jsdom-global/register';
-import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
-import { LineSeriesOptionsValidate } from '../../../src/Domain/LineSeriesVis/LineSeriesOptionsValidate';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import { LineSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate';
 
 describe('LineSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the xValue is the same as the yValue', () => {

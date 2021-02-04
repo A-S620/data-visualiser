@@ -1,5 +1,5 @@
-import { ILineSeriesOptions } from '../../Interfaces/plotting/Line/ILineSeriesOptions';
-import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
+import { ILineSeriesOptions } from '../../../Interfaces/plotting/Line/ILineSeriesOptions';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 
 export class LineSeriesOptionsValidate {
     private readonly options: ILineSeriesOptions;
