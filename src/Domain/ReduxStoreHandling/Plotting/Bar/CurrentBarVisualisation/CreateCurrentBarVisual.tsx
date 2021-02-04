@@ -1,0 +1,13 @@
+import { store } from '../../../../../ReduxStore/store';
+import { addCurrentBarVisual } from '../../../../../ReduxStore/Actions/ReducerActions';
+import { IBarSeriesCreateVis } from '../../../../../Interfaces/plotting/Bar/IBarSeriesCreateVis';
+
+export default class CreateCurrentBarVisual {
+    private currentVisual: IBarSeriesCreateVis;
+    constructor(currentVisual: IBarSeriesCreateVis) {
+        this.currentVisual = currentVisual;
+    }
+    public createCurrentLineVisual() {
+        store.dispatch(addCurrentBarVisual(this.currentVisual));
+    }
+}

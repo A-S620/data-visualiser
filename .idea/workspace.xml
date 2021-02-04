@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/CreateCurrentBarVisual.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/GetCurrentBarVisual.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/ResetCurrentBarVisual.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,14 +398,7 @@
       <workItem from="1612272446563" duration="1945000" />
       <workItem from="1612340390104" duration="2993000" />
       <workItem from="1612383307880" duration="620000" />
-      <workItem from="1612426375959" duration="1154000" />
-    </task>
-    <task id="LOCAL-00153" summary="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx">
-      <created>1611176791767</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1611176791767</updated>
+      <workItem from="1612426375959" duration="1760000" />
     </task>
     <task id="LOCAL-00154" summary="FieldTypes.tsx UI Component &#10;TODO: Unit tests, connect to UI handling + domain">
       <created>1611218778556</created>
@@ -747,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612373246898</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="Did unit tests for: CreateBarSeriesOptions, GetBarSeriesOptions and ResetBarSeriesOptions">
+      <created>1612427752460</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1612427752460</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -755,7 +751,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays" />
     <MESSAGE value="Refactoring domain and interfaces folder structure" />
     <MESSAGE value="AnalyseFileData domain component updated with AnalyseNominalData + unit tests" />
     <MESSAGE value="Refactoring: renamed folders in src + test directories" />
@@ -780,7 +775,8 @@
     <MESSAGE value="Refactored BarPlot to BarSeries" />
     <MESSAGE value="Restructuring ReduxStoreHandling to include Plotting folder" />
     <MESSAGE value="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests" />
+    <MESSAGE value="Did unit tests for: CreateBarSeriesOptions, GetBarSeriesOptions and ResetBarSeriesOptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did unit tests for: CreateBarSeriesOptions, GetBarSeriesOptions and ResetBarSeriesOptions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
