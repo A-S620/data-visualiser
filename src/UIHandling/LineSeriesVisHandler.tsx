@@ -1,14 +1,14 @@
 import { LineSeriesCreateVis } from '../Domain/LineSeriesVis/LineSeriesCreateVis';
-import CreateCurrentLineVisualisation from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisualisation';
-import ResetCurrentLineVisualisation from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisualisation';
+import CreateCurrentLineVisual from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
+import ResetCurrentLineVisual from '../Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisual';
 
 export class LineSeriesVisHandler {
     public createLineVisual() {
         const createLineVis = new LineSeriesCreateVis().createVis();
-        const createCurrentLineVisual = new CreateCurrentLineVisualisation(createLineVis);
+        const createCurrentLineVisual = new CreateCurrentLineVisual(createLineVis);
         createCurrentLineVisual.createCurrentLineVisual();
     }
     public resetLineVisual() {
-        new ResetCurrentLineVisualisation().resetCurrentLineVisual();
+        new ResetCurrentLineVisual().resetCurrentLineVisual();
     }
 }

@@ -1,16 +1,16 @@
 import 'jsdom-global/register';
 import React from 'react';
 
-import CreateCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisualisation';
-import GetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisualisation';
-import ResetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisualisation';
+import CreateCurrentLineVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
+import GetCurrentLineVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
+import ResetCurrentLineVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisual';
 import { ILineSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { CurveType, LineStyle } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 beforeEach(() => {
-    const resetCurrentVis = new ResetCurrentLineVisualisation();
+    const resetCurrentVis = new ResetCurrentLineVisual();
     resetCurrentVis.resetCurrentLineVisual();
 });
-describe('CreateCurrentLineVisualisation domain component', () => {
+describe('CreateCurrentLineVisual domain component', () => {
     it('Should add the current line visualisation to the redux store', () => {
         const currentVisual: ILineSeriesCreateVis = {
             data: [
@@ -25,9 +25,9 @@ describe('CreateCurrentLineVisualisation domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const createCurrentVisual = new CreateCurrentLineVisualisation(currentVisual);
+        const createCurrentVisual = new CreateCurrentLineVisual(currentVisual);
         createCurrentVisual.createCurrentLineVisual();
-        const getCurrentVisual = new GetCurrentLineVisualisation();
+        const getCurrentVisual = new GetCurrentLineVisual();
         expect(getCurrentVisual.getCurrentLineVisual()).toEqual(currentVisual);
     });
 });

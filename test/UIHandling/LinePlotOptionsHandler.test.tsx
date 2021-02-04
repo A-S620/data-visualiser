@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { CurveType, ILineSeriesOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { LineSeriesOptionsHandler } from '../../src/UIHandling/LineSeriesOptionsHandler';
 import GetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
-import GetCurrentLineVisualisation from '../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisualisation';
+import GetCurrentLineVisual from '../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -77,7 +77,7 @@ describe('Line Plot Handler UIHandling Component', () => {
         const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
         linePlotHandler.validateOptions();
 
-        const getCurrentVisual = new GetCurrentLineVisualisation();
+        const getCurrentVisual = new GetCurrentLineVisual();
         expect(getCurrentVisual.getCurrentLineVisual()).toEqual({
             data: [],
             height: 500,

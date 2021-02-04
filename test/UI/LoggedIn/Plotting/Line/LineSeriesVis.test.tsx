@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import CreateCurrentLineVisualisation from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisualisation';
+import CreateCurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
 import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';
@@ -22,7 +22,7 @@ beforeAll(() => {
         lineStyle: LineStyle.SOLID,
         lineWidth: 2,
     };
-    const currentVis = new CreateCurrentLineVisualisation(currentVisual).createCurrentLineVisual();
+    const currentVis = new CreateCurrentLineVisual(currentVisual).createCurrentLineVisual();
 });
 beforeEach(
     () =>

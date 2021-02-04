@@ -1,10 +1,10 @@
 import 'jsdom-global/register';
 
-import CreateCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisualisation';
-import GetCurrentLineVisualisation from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisualisation';
+import CreateCurrentLineVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
+import GetCurrentLineVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
 import { ILineSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { CurveType, LineStyle } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
-describe('GetCurrentLineVisualisation domain component', () => {
+describe('GetCurrentLineVisual domain component', () => {
     it('Should return the correct Current line Visualisation', () => {
         const currentVisual: ILineSeriesCreateVis = {
             data: [
@@ -19,9 +19,9 @@ describe('GetCurrentLineVisualisation domain component', () => {
             lineStyle: LineStyle.SOLID,
             lineWidth: 2,
         };
-        const createCurrentVisual = new CreateCurrentLineVisualisation(currentVisual);
+        const createCurrentVisual = new CreateCurrentLineVisual(currentVisual);
         createCurrentVisual.createCurrentLineVisual();
-        const getCurrentVisual = new GetCurrentLineVisualisation();
+        const getCurrentVisual = new GetCurrentLineVisual();
         expect(getCurrentVisual.getCurrentLineVisual()).toEqual(currentVisual);
     });
 });
