@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/LineSeriesVis/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarPlotCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarPlotOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/LineSeriesVis/LineSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LinePlotOptions/CreateLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LinePlotOptions/GetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LinePlotOptions/ResetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,16 +145,14 @@
       <recent name="$PROJECT_DIR$/src/interfaces/Analyse" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -414,14 +400,9 @@
       <workItem from="1612259214376" duration="6000" />
       <workItem from="1612259747774" duration="275000" />
       <workItem from="1612272446563" duration="1945000" />
-      <workItem from="1612340390104" duration="2894000" />
-    </task>
-    <task id="LOCAL-00152" summary="ImportFilesHandler separated with analyse file functionality. created AnalyseFileHandler + unit tests">
-      <created>1611174783549</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1611174783549</updated>
+      <workItem from="1612340390104" duration="2993000" />
+      <workItem from="1612383307880" duration="620000" />
+      <workItem from="1612426375959" duration="1154000" />
     </task>
     <task id="LOCAL-00153" summary="Started creating dialog in ImportFilesComponent.tsx with FieldTypes.tsx">
       <created>1611176791767</created>
@@ -759,7 +740,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612372473558</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests">
+      <created>1612373246898</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1612373246898</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -767,7 +755,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="AnalyseNominalData domain component + unit tests" />
     <MESSAGE value="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays" />
     <MESSAGE value="Refactoring domain and interfaces folder structure" />
     <MESSAGE value="AnalyseFileData domain component updated with AnalyseNominalData + unit tests" />
@@ -792,7 +779,8 @@
     <MESSAGE value="Refactored LinePlot to LineSeries" />
     <MESSAGE value="Refactored BarPlot to BarSeries" />
     <MESSAGE value="Restructuring ReduxStoreHandling to include Plotting folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructuring ReduxStoreHandling to include Plotting folder" />
+    <MESSAGE value="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

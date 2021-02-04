@@ -10,7 +10,7 @@ import {
 } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 
 describe('ResetLineSeriesOptions domain component', () => {
-    it('Should reset the line plot options', () => {
+    it('Should reset the line series options', () => {
         const lineOptions: ILineSeriesOptions = {
             xValue: 'test',
             yValue: 'test2',

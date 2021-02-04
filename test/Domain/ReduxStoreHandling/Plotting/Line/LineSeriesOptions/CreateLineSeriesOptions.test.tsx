@@ -15,7 +15,7 @@ beforeEach(() => {
     resetLineSeriesOptions.resetLineSeriesOptions();
 });
 describe('CreateLineSeriesOptions domain component', () => {
-    it('Should add the line plot options to the Redux store', () => {
+    it('Should add the line series options to the Redux store', () => {
         const lineOptions: ILineSeriesOptions = {
             xValue: 'test',
             yValue: 'test2',

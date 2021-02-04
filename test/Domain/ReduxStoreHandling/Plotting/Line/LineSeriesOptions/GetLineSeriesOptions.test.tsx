@@ -8,7 +8,7 @@ import {
     LineStyle,
 } from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 describe('GetLineSeriesOptions domain component', () => {
-    it('Should return the correct line plot options', () => {
+    it('Should return the correct line series options', () => {
         const lineOptions: ILineSeriesOptions = {
             xValue: 'test',
             yValue: 'test2',
