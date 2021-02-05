@@ -3,7 +3,7 @@ import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes
 import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { ILineSeriesCreateVis } from '../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
-import { IBarSeriesOptions } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions, yValue } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 import { IBarSeriesCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
 
 describe('Reducer actions', () => {
@@ -208,7 +208,7 @@ describe('Reducer actions', () => {
                 colour: '',
                 fill: '',
                 xValue: 'test',
-                yValue: 'test2',
+                yValue: yValue.count,
                 height: 800,
                 width: 800,
                 stroke: '#000000',

@@ -3,7 +3,7 @@ import React from 'react';
 import CreateBarSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';
 import GetBarSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
 import ResetBarSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions';
-import { IBarSeriesOptions } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions, yValue } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 
 beforeEach(() => {
     const resetBarSeriesOptions = new ResetBarSeriesOptions();
@@ -21,7 +21,7 @@ describe('CreateBarSeriesOptions domain component', () => {
             stroke: '#cd3b55',
             width: 500,
             xValue: 'test',
-            yValue: 'count',
+            yValue: yValue.count,
         };
         const createBarSeriesOptions = new CreateBarSeriesOptions(barOptions);
         createBarSeriesOptions.createBarSeriesOptions();
