@@ -144,7 +144,7 @@ describe('Line Plotting Options Component', () => {
             await inputWidth(500);
             await clickSubmit();
             expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe(
-                'Error(s): The maximum value for Height is 800, the minimum value for Height is 100. The current height is 50'
+                'Error(s): The minimum value for Height is 100, the maximum value for Height is 800. The current height is 50'
             );
         });
     });

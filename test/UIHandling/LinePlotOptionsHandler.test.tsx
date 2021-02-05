@@ -40,7 +40,7 @@ describe('Line Plot Handler UIHandling Component', () => {
         const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
         const notifications = linePlotHandler.validateOptions();
         expect(notifications.notification()).toBe(
-            'The maximum value for Height is 800, the minimum value for Height is 100. The current height is 0'
+            'The minimum value for Height is 100, the maximum value for Height is 800. The current height is 0'
         );
     });
     it('Should save valid options in the Redux store', () => {

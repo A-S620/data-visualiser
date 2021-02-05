@@ -35,7 +35,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Height is 800, the minimum value for Height is 100. The current height is 801'
+            'The minimum value for Height is 100, the maximum value for Height is 800. The current height is 801'
         );
     });
     it('Should return a notification when the height is smaller than the minimum value', () => {
@@ -53,7 +53,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Height is 800, the minimum value for Height is 100. The current height is 50'
+            'The minimum value for Height is 100, the maximum value for Height is 800. The current height is 50'
         );
     });
     it('Should return a notification when the width is bigger than the maximum value', () => {
@@ -71,7 +71,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Width is 800, the minimum value for Width is 100. The current width is 801'
+            'The minimum value for Width is 100, the maximum value for Width is 800. The current width is 801'
         );
     });
     it('Should return a notification when the width is smaller than the minimum value', () => {
@@ -89,7 +89,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Width is 800, the minimum value for Width is 100. The current width is 50'
+            'The minimum value for Width is 100, the maximum value for Width is 800. The current width is 50'
         );
     });
     it('Should return a notification when the opacity is bigger than the maximum value', () => {
@@ -107,7 +107,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The minimum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is 2'
+            'The minimum value for Opacity is 0, the maximum value for Opacity is 1. The current Opacity is 2'
         );
     });
     it('Should return a notification when the opacity is smaller than the minimum value', () => {
@@ -125,7 +125,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The minimum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is -1'
+            'The minimum value for Opacity is 0, the maximum value for Opacity is 1. The current Opacity is -1'
         );
     });
     it('Should return a notification when the line width is smaller than the minimum value', () => {
@@ -143,7 +143,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is 0'
+            'The minimum value for Line Width is 1, the maximum value for Line Width is 10. The current line width is 0'
         );
     });
     it('Should return a notification when the line width is bigger than the maximum value', () => {
@@ -161,7 +161,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is 11'
+            'The minimum value for Line Width is 1, the maximum value for Line Width is 10. The current line width is 11'
         );
     });
 });

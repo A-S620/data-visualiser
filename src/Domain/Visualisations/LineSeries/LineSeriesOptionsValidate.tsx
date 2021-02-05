@@ -13,22 +13,22 @@ export class LineSeriesOptionsValidate {
         }
         if (!this.lengthIsValid(this.options.height)) {
             notifications.addNotification(
-                `The maximum value for Height is 800, the minimum value for Height is 100. The current height is ${this.options.height}`
+                `The minimum value for Height is 100, the maximum value for Height is 800. The current height is ${this.options.height}`
             );
         }
         if (!this.lengthIsValid(this.options.width)) {
             notifications.addNotification(
-                `The maximum value for Width is 800, the minimum value for Width is 100. The current width is ${this.options.width}`
+                `The minimum value for Width is 100, the maximum value for Width is 800. The current width is ${this.options.width}`
             );
         }
         if (!this.opacityIsValid(this.options.opacity)) {
             notifications.addNotification(
-                `The minimum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is ${this.options.opacity}`
+                `The minimum value for Opacity is 0, the maximum value for Opacity is 1. The current Opacity is ${this.options.opacity}`
             );
         }
         if (!this.lineWidthIsValid(this.options.lineWidth)) {
             notifications.addNotification(
-                `The maximum value for Line Width is 10, the minimum value for Line Width is 1. The current line width is ${this.options.lineWidth}`
+                `The minimum value for Line Width is 1, the maximum value for Line Width is 10. The current line width is ${this.options.lineWidth}`
             );
         }
         return notifications;

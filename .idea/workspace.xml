@@ -5,7 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LinePlotOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LinePlotOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Line/LinePlottingOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +110,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="CSV-Groovy.csv.groovy" />
     <property name="database.data.extractors.current.id" value="CSV-Groovy.csv.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../learning" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -123,7 +126,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="MTCustomThemeConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -398,21 +401,13 @@
       <workItem from="1612426375959" duration="1826000" />
       <workItem from="1612435493744" duration="1946000" />
       <workItem from="1612513203906" duration="377000" />
-      <workItem from="1612513660914" duration="1394000" />
-    </task>
-    <task id="LOCAL-00160" summary="Multiple Changes&#10;Updated: CreateAnalysedData, GetAnalysedData, ResetAnalysedData.test + unit tests&#10;Updated AnalyseFileHandler UI Handler component, need to do unit tests&#10;Created AnalyseFileData domain component + did unit tests&#10;Updated tests to use AnalyseFileData instead of AnalyseIntervalData&#10;Updated IAnalysedFileData.&#10;TODO: AnalyseFileHandler + unit tests">
-      <created>1611393817277</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1611393817277</updated>
-    </task>
-    <task id="LOCAL-00161" summary="Fixed AnalyseFileHandler unit tests">
-      <created>1611473662214</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1611473662214</updated>
+      <workItem from="1612513660914" duration="1522000" />
+      <workItem from="1612524126132" duration="103000" />
+      <workItem from="1612524514497" duration="3000" />
+      <workItem from="1612524723724" duration="309000" />
+      <workItem from="1612525146343" duration="362000" />
+      <workItem from="1612525528393" duration="19000" />
+      <workItem from="1612529844706" duration="1265000" />
     </task>
     <task id="LOCAL-00162" summary="ImportFilesComponent Field Types button - need to do unit tests&#10;FieldTypes - Update state, need to do reselect already chosen option + unit tests">
       <created>1611478707738</created>
@@ -743,7 +738,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612437406021</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="Started BarSeriesOptionsValidate TDD">
+      <created>1612515366569</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1612515366569</updated>
+    </task>
+    <task id="LOCAL-00210" summary="Started BarSeriesOptionsValidate TDD">
+      <created>1612515394797</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1612515394797</updated>
+    </task>
+    <option name="localTasksCounter" value="211" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -751,7 +760,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ReduxReducer to use ordinal data + updated unit tests" />
     <MESSAGE value="Updated CreateAnalysedData. GetAnalysedData and ResetAnalysedData to use ordinal data + updated unit tests" />
     <MESSAGE value="Started working on AnalyseOrdinalData" />
     <MESSAGE value="Completed AnalyseOrdinalData + unit tests" />
@@ -776,7 +784,8 @@
     <MESSAGE value="Refactored Domain folder to include visualisations folder" />
     <MESSAGE value="Fixed failing unit tests" />
     <MESSAGE value="Created BarSeriesCreateVis and BarSeriesOptionsValidate domain components basic file&#10;TODO: TDD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created BarSeriesCreateVis and BarSeriesOptionsValidate domain components basic file&#10;TODO: TDD" />
+    <MESSAGE value="Started BarSeriesOptionsValidate TDD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started BarSeriesOptionsValidate TDD" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
