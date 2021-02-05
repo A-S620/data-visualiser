@@ -107,7 +107,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is 2'
+            'The minimum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is 2'
         );
     });
     it('Should return a notification when the opacity is smaller than the minimum value', () => {
@@ -125,7 +125,7 @@ describe('LineSeriesOptionsValidate domain component', () => {
         const lineOptionsValidate = new LineSeriesOptionsValidate(lineOptions);
         const notifications = lineOptionsValidate.validate();
         expect(notifications.notification()).toBe(
-            'The maximum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is -1'
+            'The minimum value for Opacity is 0, the minimum value for Opacity is 1. The current Opacity is -1'
         );
     });
     it('Should return a notification when the line width is smaller than the minimum value', () => {
