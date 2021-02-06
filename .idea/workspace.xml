@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Refactored LineS">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Bar/IBarSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,17 +144,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -411,14 +394,10 @@
       <workItem from="1612524723724" duration="309000" />
       <workItem from="1612525146343" duration="362000" />
       <workItem from="1612525528393" duration="19000" />
-      <workItem from="1612529844706" duration="2134000" />
-    </task>
-    <task id="LOCAL-00163" summary="Changed AnalyseFileHandler to work with fields = unit tests">
-      <created>1611565564766</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1611565564767</updated>
+      <workItem from="1612529844706" duration="2440000" />
+      <workItem from="1612545263975" duration="203000" />
+      <workItem from="1612597187858" duration="739000" />
+      <workItem from="1612597960087" duration="4634000" />
     </task>
     <task id="LOCAL-00164" summary="Removed IFields interface">
       <created>1611565778173</created>
@@ -756,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612531278884</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="Refactored IBarSeriesOptions to include yValue enum">
+      <created>1612532312171</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1612532312171</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +750,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Started working on AnalyseOrdinalData" />
     <MESSAGE value="Completed AnalyseOrdinalData + unit tests" />
     <MESSAGE value="Updated AnalyseNominalData + unit tests" />
     <MESSAGE value="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests" />
@@ -789,7 +774,8 @@
     <MESSAGE value="Created BarSeriesCreateVis and BarSeriesOptionsValidate domain components basic file&#10;TODO: TDD" />
     <MESSAGE value="Started BarSeriesOptionsValidate TDD" />
     <MESSAGE value="Refactored LineSeriesOptionsValidate error messages + updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored LineSeriesOptionsValidate error messages + updated unit tests" />
+    <MESSAGE value="Refactored IBarSeriesOptions to include yValue enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored IBarSeriesOptions to include yValue enum" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -76,7 +76,4 @@ describe('LineSeriesCreateVis domain component', () => {
             expect(createVis.lineWidth).toEqual(2);
         });
     });
-    describe('Data', () => {
-        it('Should return example data when no data has been selected', () => {});
-    });
 });

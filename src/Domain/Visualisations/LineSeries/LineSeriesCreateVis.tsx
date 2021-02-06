@@ -53,7 +53,7 @@ export class LineSeriesCreateVis {
         return {};
     }
 
-    private createDataArray(xValue: string, yValue: string): Array<Object> {
+    private createDataArray(xValue: string, yValue: string): Array<object> {
         const { intervalDataObjects: dataObjectsArray } = this.getAnalysedData();
         const data: Array<Object> = [];
         for (let objIndex = 0; objIndex < dataObjectsArray.length; objIndex += 1) {
