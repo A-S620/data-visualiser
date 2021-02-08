@@ -52,9 +52,11 @@ export class BarSeriesCreateVis {
     }
     private getFieldValues(xValue: string): object {
         const { nominalDataObjects } = this.getAnalysedData();
-        for (var index = 0; index < nominalDataObjects.length; index += 1) {
-            if (Object.keys(nominalDataObjects[index])[0] === xValue) {
-                return nominalDataObjects[index];
+        const { ordinalDataObjects } = this.getAnalysedData();
+        const allObjects = nominalDataObjects.concat(ordinalDataObjects);
+        for (var index = 0; index < allObjects.length; index += 1) {
+            if (Object.keys(allObjects[index])[0] === xValue) {
+                return allObjects[index];
             }
         }
         return {};
