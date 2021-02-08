@@ -1,14 +1,14 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
-import ResetLineSeriesOptions from '../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
-import { LineSeriesVisHandler } from '../../src/UIHandling/LineSeriesVisHandler';
-import { CurveType, ILineSeriesOptions, LineStyle } from '../../src/Interfaces/plotting/Line/ILineSeriesOptions';
-import { IImportedFileData } from '../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import GetCurrentLineVisual from '../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
-import { AnalyseFileData } from '../../src/Domain/AnalyseFile/AnalyseFileData';
-import { FieldTypes } from '../../src/Interfaces/Analyse/IAnalysedFileData';
+import CreateLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
+import ResetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
+import { LineSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
+import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import GetCurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
+import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
+import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 //Test data
 const dataObjects = [
     { col1: '32', col2: 'cool', col3: 'foo' },

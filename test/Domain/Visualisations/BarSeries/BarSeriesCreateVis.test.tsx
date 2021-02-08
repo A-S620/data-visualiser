@@ -12,6 +12,7 @@ beforeAll(() => {
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            { field: 'col4', fieldType: FieldTypes.ORDINAL },
         ],
         intervalFields: ['col1', 'col2'],
         intervalDataObjects: [
@@ -29,12 +30,22 @@ beforeAll(() => {
                 ],
             },
         ],
-        ordinalFields: [],
-        ordinalDataObjects: [],
+        ordinalFields: ['col4'],
+        ordinalDataObjects: [
+            {
+                col4: [
+                    { name: '10-20', count: 1, percent: 25 },
+                    { name: '20-30', count: 1, percent: 25 },
+                    { name: '30-40', count: 2, percent: 50 },
+                ],
+            },
+        ],
     };
     const createAnalysedData = new CreateAnalysedData(analysedFileData);
     createAnalysedData.createNominalFields();
     createAnalysedData.createNominalDataObjects();
+    createAnalysedData.createOrdinalDataObjects();
+    createAnalysedData.createOrdinalFields();
     createAnalysedData.createFields();
 });
 describe('BarSeriesCreateVis domain component', () => {
@@ -49,7 +60,7 @@ describe('BarSeriesCreateVis domain component', () => {
         expect(createVis.colour).toEqual('#000000');
         expect(createVis.barWidth).toEqual(0.5);
     });
-    it('Should return the correct options from the Redux store when valid options have been imported', async () => {
+    it('Should return the correct options from the Redux store when valid options have been imported - nominal', async () => {
         const barOptions: IBarSeriesOptions = {
             barWidth: 1,
             colour: 'cd3b54',
@@ -68,6 +79,34 @@ describe('BarSeriesCreateVis domain component', () => {
             { x: 'foo', y: 25 },
             { x: 'bar', y: 25 },
             { x: 'tob', y: 50 },
+        ]);
+        expect(createVis.height).toEqual(100);
+        expect(createVis.width).toEqual(100);
+        expect(createVis.stroke).toEqual('cd3b54');
+        expect(createVis.opacity).toEqual(1);
+        expect(createVis.fill).toEqual('cd3b54');
+        expect(createVis.colour).toEqual('cd3b54');
+        expect(createVis.barWidth).toEqual(1);
+    });
+    it('Should return the correct options from the Redux store when valid options have been imported - ordinal', async () => {
+        const barOptions: IBarSeriesOptions = {
+            barWidth: 1,
+            colour: 'cd3b54',
+            fill: 'cd3b54',
+            height: 100,
+            opacity: 1,
+            stroke: 'cd3b54',
+            width: 100,
+            xValue: 'col4',
+            yValue: yValue.percent,
+        };
+        const creatBarSeriesOptions = new CreateBarSeriesOptions(barOptions);
+        await creatBarSeriesOptions.createBarSeriesOptions();
+        const createVis = new BarSeriesCreateVis().createVis();
+        expect(createVis.data).toEqual([
+            { x: '10-20', y: 25 },
+            { x: '20-30', y: 25 },
+            { x: '30-40', y: 50 },
         ]);
         expect(createVis.height).toEqual(100);
         expect(createVis.width).toEqual(100);

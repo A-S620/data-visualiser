@@ -18,7 +18,7 @@ import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../Interfaces
 import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
-import { LineSeriesOptionsHandler } from '../../../../UIHandling/LineSeriesOptionsHandler';
+import { LineSeriesOptionsHandler } from '../../../../UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler';
 
 const useStyles = makeStyles((theme) => ({
     paper: {

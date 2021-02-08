@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +35,9 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="A-S620 &lt;48350000+a-s620@users.noreply.github.com&gt;" />
         <option value="A-S620 &lt;aatikaseedat00@gmail.com&gt;" />
         <option value="A" />
-        <option value="A-S620 &lt;48350000+a-s620@users.noreply.github.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -124,7 +132,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MTCustomThemeConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -144,6 +152,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -398,13 +417,14 @@
       <workItem from="1612545263975" duration="203000" />
       <workItem from="1612597187858" duration="739000" />
       <workItem from="1612597960087" duration="4634000" />
-    </task>
-    <task id="LOCAL-00164" summary="Removed IFields interface">
-      <created>1611565778173</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1611565778173</updated>
+      <workItem from="1612603146363" duration="291000" />
+      <workItem from="1612603549179" duration="36000" />
+      <workItem from="1612603608078" duration="69000" />
+      <workItem from="1612603715322" duration="150000" />
+      <workItem from="1612604131374" duration="209000" />
+      <workItem from="1612604376498" duration="212000" />
+      <workItem from="1612604716604" duration="142000" />
+      <workItem from="1612772331479" duration="530000" />
     </task>
     <task id="LOCAL-00165" summary="FieldTypes - save selected field types">
       <created>1611579360704</created>
@@ -742,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612532312171</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data">
+      <created>1612603198422</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1612603198422</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -750,7 +777,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Completed AnalyseOrdinalData + unit tests" />
     <MESSAGE value="Updated AnalyseNominalData + unit tests" />
     <MESSAGE value="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests" />
     <MESSAGE value="FileAnalysisComponent + unit tests" />
@@ -775,7 +801,8 @@
     <MESSAGE value="Started BarSeriesOptionsValidate TDD" />
     <MESSAGE value="Refactored LineSeriesOptionsValidate error messages + updated unit tests" />
     <MESSAGE value="Refactored IBarSeriesOptions to include yValue enum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored IBarSeriesOptions to include yValue enum" />
+    <MESSAGE value="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
