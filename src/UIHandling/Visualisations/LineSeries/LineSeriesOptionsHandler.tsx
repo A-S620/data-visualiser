@@ -23,8 +23,8 @@ export class LineSeriesOptionsHandler {
         return notifications;
     }
     private createOptions() {
-        const createLienPlotOptions = new CreateLineSeriesOptions(this.options);
-        createLienPlotOptions.createLineSeriesOptions();
+        const createLineSeriesOptions = new CreateLineSeriesOptions(this.options);
+        createLineSeriesOptions.createLineSeriesOptions();
     }
     public getOptions(): ILineSeriesOptions {
         const getLineSeriesOptions = new GetLineSeriesOptions();

@@ -20,8 +20,8 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
-        const notifications = linePlotHandler.validateOptions();
+        const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
+        const notifications = lineSeriesHandler.validateOptions();
         expect(notifications.notification()).toBe('');
     });
     it('Should give an error if one of the options are invalid', () => {
@@ -37,8 +37,8 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
-        const notifications = linePlotHandler.validateOptions();
+        const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
+        const notifications = lineSeriesHandler.validateOptions();
         expect(notifications.notification()).toBe(
             'The minimum value for Height is 100, the maximum value for Height is 800. The current height is 0'
         );
@@ -56,8 +56,8 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
-        linePlotHandler.validateOptions();
+        const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
+        lineSeriesHandler.validateOptions();
         const getLineSeriesOptions = new GetLineSeriesOptions();
         expect(getLineSeriesOptions.getLineSeriesOptions()).toBe(testOptions);
     });
@@ -74,8 +74,8 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
-        linePlotHandler.validateOptions();
+        const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
+        lineSeriesHandler.validateOptions();
 
         const getCurrentVisual = new GetCurrentLineVisual();
         expect(getCurrentVisual.getCurrentLineVisual()).toEqual({
@@ -102,9 +102,9 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
-        linePlotHandler.validateOptions();
-        expect(linePlotHandler.getOptions()).toBe(testOptions);
+        const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
+        lineSeriesHandler.validateOptions();
+        expect(lineSeriesHandler.getOptions()).toBe(testOptions);
     });
     it('Should reset the line options from the Redux store', () => {
         const testOptions: ILineSeriesOptions = {
@@ -119,9 +119,9 @@ describe('Line Plot Handler UIHandling Component', () => {
             lineWidth: 2,
         };
 
-        const linePlotHandler = new LineSeriesOptionsHandler(testOptions);
-        linePlotHandler.validateOptions();
-        linePlotHandler.resetOptions();
-        expect(linePlotHandler.getOptions()).toStrictEqual({});
+        const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
+        lineSeriesHandler.validateOptions();
+        lineSeriesHandler.resetOptions();
+        expect(lineSeriesHandler.getOptions()).toStrictEqual({});
     });
 });

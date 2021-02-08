@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/BarSeries/BarSeriesVisHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/LineSeriesOptionsHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,11 +137,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries" />
+      <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
+      <recent name="$PROJECT_DIR$/src/UIHandling" />
       <recent name="$PROJECT_DIR$/src/Domain/Visualisations" />
       <recent name="$PROJECT_DIR$/test/Domain/Visualisations" />
-      <recent name="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line" />
-      <recent name="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line" />
-      <recent name="$PROJECT_DIR$/src/Interfaces/plotting/Line" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -424,21 +417,7 @@
       <workItem from="1612604131374" duration="209000" />
       <workItem from="1612604376498" duration="212000" />
       <workItem from="1612604716604" duration="142000" />
-      <workItem from="1612772331479" duration="530000" />
-    </task>
-    <task id="LOCAL-00165" summary="FieldTypes - save selected field types">
-      <created>1611579360704</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1611579360704</updated>
-    </task>
-    <task id="LOCAL-00166" summary="FieldTypes - Analyse File button, integrated with AnalyseFileHandler">
-      <created>1611590451708</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1611590451708</updated>
+      <workItem from="1612772331479" duration="1826000" />
     </task>
     <task id="LOCAL-00167" summary="Refactored: Removed Console.log&#10;TODO: FieldTypes unit tests">
       <created>1611591303732</created>
@@ -769,7 +748,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612603198422</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="Refactored UI Handling folder to include Visualisations folder">
+      <created>1612772904648</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1612772904648</updated>
+    </task>
+    <task id="LOCAL-00215" summary="Updated BarSeriesCreateVis to include ordinal fields.">
+      <created>1612773358852</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1612773358852</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -777,8 +770,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated AnalyseNominalData + unit tests" />
-    <MESSAGE value="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests" />
     <MESSAGE value="FileAnalysisComponent + unit tests" />
     <MESSAGE value="Added barPlotOptions and currentBarVisualisation to ReduxState" />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with barPlotOptions and currentBarVisualisation" />
@@ -802,7 +793,9 @@
     <MESSAGE value="Refactored LineSeriesOptionsValidate error messages + updated unit tests" />
     <MESSAGE value="Refactored IBarSeriesOptions to include yValue enum" />
     <MESSAGE value="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data" />
+    <MESSAGE value="Refactored UI Handling folder to include Visualisations folder" />
+    <MESSAGE value="Updated BarSeriesCreateVis to include ordinal fields." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated BarSeriesCreateVis to include ordinal fields." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
