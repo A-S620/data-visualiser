@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,15 +144,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -423,21 +419,8 @@
       <workItem from="1612772331479" duration="1960000" />
       <workItem from="1612777646567" duration="271000" />
       <workItem from="1612812934053" duration="1948000" />
-      <workItem from="1612857957946" duration="2265000" />
-    </task>
-    <task id="LOCAL-00169" summary="Refactoring">
-      <created>1611678072998</created>
-      <option name="number" value="00169" />
-      <option name="presentableId" value="LOCAL-00169" />
-      <option name="project" value="LOCAL" />
-      <updated>1611678072998</updated>
-    </task>
-    <task id="LOCAL-00170" summary="Analyse Interval Data feature complete">
-      <created>1611679516875</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1611679516876</updated>
+      <workItem from="1612857957946" duration="2360000" />
+      <workItem from="1612897880505" duration="3346000" />
     </task>
     <task id="LOCAL-00171" summary="FieldTypes Unit tests">
       <created>1611743952300</created>
@@ -768,7 +751,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612814995925</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components">
+      <created>1612860751295</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1612860751295</updated>
+    </task>
+    <task id="LOCAL-00219" summary="Refactoring">
+      <created>1612900695916</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1612900695917</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,8 +773,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ReducerActions and ReducerActionTypes with barPlotOptions and currentBarVisualisation" />
-    <MESSAGE value="Created Line folder in Plotting in Interfaces" />
     <MESSAGE value="Created IBarPlotCreateVis and IBarPlotOptions. Updated ReducerActions + unit tests to use new interfaces" />
     <MESSAGE value="Updated ReduxReducer to work with bar options + current bar visualisation, updated unit tests" />
     <MESSAGE value="Updated colour to stroke in ILinePlotCreateVis and ILinePlotOptions" />
@@ -801,7 +796,9 @@
     <MESSAGE value="Updated BarSeriesCreateVis to include ordinal fields." />
     <MESSAGE value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
+    <MESSAGE value="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components" />
+    <MESSAGE value="Refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

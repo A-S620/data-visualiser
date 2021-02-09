@@ -1,22 +1,12 @@
 import React from 'react';
-import { ColorPicker } from 'material-ui-color';
-import {
-    Box,
-    Button,
-    FormControl,
-    FormHelperText,
-    InputLabel,
-    Paper,
-    Select,
-    TextField,
-    Typography,
-} from '@material-ui/core';
+import { Box, Button, FormControl, FormHelperText, InputLabel, Select, TextField, Typography } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
-import { yValue } from '../../../../Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions, yValue } from '../../../../Interfaces/plotting/Bar/IBarSeriesOptions';
 import AlertNotification from '../../Notifications/AlertNotification';
+import { BarSeriesOptionsHandler } from '../../../../UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -38,7 +28,7 @@ function BarSeriesOptions(props: any) {
     // @ts-ignore
     const [options, setOptions] = React.useState<{
         xValue: string;
-        yValue: yValue | undefined;
+        yValue: yValue;
         height: number;
         width: number;
         colour: string;
@@ -55,7 +45,7 @@ function BarSeriesOptions(props: any) {
         stroke: '#000000',
         width: 800,
         xValue: '',
-        yValue: undefined,
+        yValue: yValue.count,
     });
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
@@ -66,6 +56,44 @@ function BarSeriesOptions(props: any) {
         outcomeMessage: '',
         errors: new NotificationsHandler(),
     });
+    function submitIsEnabled(): boolean {
+        return !(options.xValue.length !== 0 && options.yValue !== undefined);
+    }
+    function validateDataOptions() {
+        const optionsToValidate: IBarSeriesOptions = {
+            barWidth: options.barWidth,
+            colour: options.colour,
+            fill: '',
+            xValue: options.xValue,
+            yValue: options.yValue,
+            height: options.height,
+            width: options.width,
+            stroke: options.stroke,
+            opacity: options.opacity,
+        };
+        const validateOptions = new BarSeriesOptionsHandler(optionsToValidate);
+        const errors: NotificationsHandler = validateOptions.validateOptions();
+        if (errors.isEmpty()) {
+            try {
+                setNotifications({
+                    ...notifications,
+                    outcome: AlertType.SUCCESS,
+                    outcomeMessage: 'Options Validated',
+                });
+            } catch (e) {
+                setNotifications({
+                    ...notifications,
+                    outcome: AlertType.FAILED,
+                    outcomeMessage: `${e.notification}`,
+                });
+            }
+        } else {
+            setNotifications({
+                ...notifications,
+                errors: errors,
+            });
+        }
+    }
     return (
         <Box
             display="flex"
@@ -125,7 +153,19 @@ function BarSeriesOptions(props: any) {
                         <Box mx={5} />
                         <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
                             <InputLabel className={classes.textColor}>Y Value</InputLabel>
-                            <Select name="Y Values" value={options.yValue}></Select>
+                            <Select
+                                name="Y Values"
+                                value={options.yValue}
+                                onChange={(event) => {
+                                    setOptions({
+                                        ...options,
+                                        yValue: event.target.value as yValue,
+                                    });
+                                }}
+                            >
+                                <option value={yValue.count}>Count</option>
+                                <option value={yValue.percent}>Percent</option>
+                            </Select>
                             <FormHelperText className={classes.helperTextColor}>Data on Y-Axis</FormHelperText>
                         </FormControl>
                     </Box>
@@ -170,7 +210,53 @@ function BarSeriesOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
+                        <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
+                            <InputLabel className={classes.textColor}>Bar Fill Colour</InputLabel>
+                            <Select
+                                value={options.stroke}
+                                onChange={(event) => {
+                                    setOptions({
+                                        ...options,
+                                        colour: event.target.value as string,
+                                    });
+                                }}
+                                name="stroke"
+                            >
+                                <option value={'red'}>red</option>
+                                <option value={'green'}>green</option>
+                                <option value={'blue'}>blue</option>
+                                <option value={'purple'}>purple</option>
+                                <option value={'orange'}>orange</option>
+                                <option value={'black'}>black</option>
+                                <option value={'yellow'}>yellow</option>
+                                <option value={'brown'}>brown</option>
+                                <option value={'pink'}>pink</option>
+                                <option value={'turquoise'}>turquoise</option>
+                            </Select>
+                        </FormControl>
+                        <Box mx={5} />
+                        <TextField
+                            type={'number'}
+                            id="opacity-textfield"
+                            label="Bar Fill Opacity"
+                            variant="outlined"
+                            helperText="Value must be between 0 and 1"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    opacity: parseFloat(event.target.value),
+                                });
+                            }}
+                        />
+                    </Box>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'other-textfields'}>
                         <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
                             <InputLabel className={classes.textColor}>Line Colour</InputLabel>
                             <Select
@@ -198,8 +284,8 @@ function BarSeriesOptions(props: any) {
                         <Box mx={5} />
                         <TextField
                             type={'number'}
-                            id="opacity-textfield"
-                            label="Opacity"
+                            id="bar-width-textfield"
+                            label="Bar Width"
                             variant="outlined"
                             helperText="Value must be between 0 and 1"
                             FormHelperTextProps={{
@@ -211,10 +297,21 @@ function BarSeriesOptions(props: any) {
                             onChange={(event) => {
                                 setOptions({
                                     ...options,
-                                    opacity: parseFloat(event.target.value),
+                                    barWidth: parseFloat(event.target.value),
                                 });
                             }}
                         />
+                    </Box>
+                    <Box id={'submit-button'}>
+                        <Button
+                            variant="outlined"
+                            color="primary"
+                            disabled={submitIsEnabled()}
+                            id={'options-submit-button'}
+                            onClick={validateDataOptions}
+                        >
+                            Submit
+                        </Button>
                     </Box>
                 </Box>
             </div>
