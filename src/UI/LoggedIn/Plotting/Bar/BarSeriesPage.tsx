@@ -1,16 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Grid } from '@material-ui/core';
-import LineSeriesVis from './LineSeriesVis';
-import LineSeriesOptions from './LineSeriesOptions';
+import BarSeriesOptions from './BarSeriesOptions';
+import BarSeriesVis from './BarSeriesVis';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
         width: '100%',
     },
 }));
-
-export default function LineSeriesPage() {
+export default function BarSeriesPage() {
     const classes = useStyles();
     return (
         <Box
@@ -19,13 +19,13 @@ export default function LineSeriesPage() {
             flexDirection="row"
             alignItems="center"
             className={classes.root}
-            id={'line-plotting-page'}
+            id={'bar-series-page'}
         >
             <Box mx={10}>
-                <LineSeriesVis />
+                <BarSeriesVis />
             </Box>
             <Box mx={10}>
-                <LineSeriesOptions />
+                <BarSeriesOptions />
             </Box>
         </Box>
     );

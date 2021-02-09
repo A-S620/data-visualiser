@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/BarSeriesVisHandler.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/LineSeriesOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Line/LineSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/PlottingNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,21 +138,23 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar" />
       <recent name="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries" />
       <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
       <recent name="$PROJECT_DIR$/src/UIHandling" />
       <recent name="$PROJECT_DIR$/src/Domain/Visualisations" />
-      <recent name="$PROJECT_DIR$/test/Domain/Visualisations" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -417,14 +422,8 @@
       <workItem from="1612604716604" duration="142000" />
       <workItem from="1612772331479" duration="1960000" />
       <workItem from="1612777646567" duration="271000" />
-      <workItem from="1612812934053" duration="1861000" />
-    </task>
-    <task id="LOCAL-00168" summary="Started FieldTypes unit tests">
-      <created>1611677444872</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1611677444873</updated>
+      <workItem from="1612812934053" duration="1948000" />
+      <workItem from="1612857957946" duration="2265000" />
     </task>
     <task id="LOCAL-00169" summary="Refactoring">
       <created>1611678072998</created>
@@ -762,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612774507806</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler">
+      <created>1612814995925</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1612814995925</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -770,7 +776,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added barPlotOptions and currentBarVisualisation to ReduxState" />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with barPlotOptions and currentBarVisualisation" />
     <MESSAGE value="Created Line folder in Plotting in Interfaces" />
     <MESSAGE value="Created IBarPlotCreateVis and IBarPlotOptions. Updated ReducerActions + unit tests to use new interfaces" />
@@ -795,7 +800,8 @@
     <MESSAGE value="Refactored UI Handling folder to include Visualisations folder" />
     <MESSAGE value="Updated BarSeriesCreateVis to include ordinal fields." />
     <MESSAGE value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
+    <MESSAGE value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

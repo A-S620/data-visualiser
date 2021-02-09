@@ -12,6 +12,7 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import StreetviewIcon from '@material-ui/icons/Streetview';
 
 import LineSeriesPage from './Line/LineSeriesPage';
+import BarSeriesPage from './Bar/BarSeriesPage';
 
 //Switches tabs
 function TabPanel(props: any) {
@@ -78,7 +79,7 @@ export default function PlottingNav() {
                 <LineSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Item Two
+                <BarSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Item Three

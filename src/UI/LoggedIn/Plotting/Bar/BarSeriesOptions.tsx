@@ -1,0 +1,228 @@
+import React from 'react';
+import { ColorPicker } from 'material-ui-color';
+import {
+    Box,
+    Button,
+    FormControl,
+    FormHelperText,
+    InputLabel,
+    Paper,
+    Select,
+    TextField,
+    Typography,
+} from '@material-ui/core';
+import { connect } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
+import { AlertType } from '../../../../Interfaces/Notification/INotification';
+import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
+import { yValue } from '../../../../Interfaces/plotting/Bar/IBarSeriesOptions';
+import AlertNotification from '../../Notifications/AlertNotification';
+
+const useStyles = makeStyles((theme) => ({
+    paper: {
+        flexGrow: 1,
+        width: '100%',
+    },
+    root: {
+        // width: '100%',
+    },
+    textColor: {
+        color: theme.palette.text.primary,
+    },
+    helperTextColor: {
+        color: theme.palette.text.disabled,
+    },
+}));
+function BarSeriesOptions(props: any) {
+    const classes = useStyles();
+    // @ts-ignore
+    const [options, setOptions] = React.useState<{
+        xValue: string;
+        yValue: yValue | undefined;
+        height: number;
+        width: number;
+        colour: string;
+        stroke: string;
+        opacity: number;
+        fill: string;
+        barWidth: number;
+    }>({
+        barWidth: 1,
+        colour: '#000000',
+        fill: '#000000',
+        height: 800,
+        opacity: 1,
+        stroke: '#000000',
+        width: 800,
+        xValue: '',
+        yValue: undefined,
+    });
+    const [notifications, setNotifications] = React.useState<{
+        outcome: AlertType | undefined;
+        outcomeMessage: string;
+        errors: NotificationsHandler;
+    }>({
+        outcome: undefined,
+        outcomeMessage: '',
+        errors: new NotificationsHandler(),
+    });
+    return (
+        <Box
+            display="flex"
+            justifyContent="center"
+            flexDirection="column"
+            alignItems="center"
+            className={classes.root}
+            id={'bar-plotting-options'}
+            mx={15}
+        >
+            <Box style={{ height: '50%', width: '50%' }} id={'alert-area'}>
+                {notifications.outcome && (
+                    <AlertNotification alert={notifications.outcome} notification={notifications.outcomeMessage} />
+                )}
+                {!notifications.errors.isEmpty() && (
+                    <AlertNotification
+                        alert={AlertType.FAILED}
+                        notification={`Error(s): ${notifications.errors.notification()}`}
+                    />
+                )}
+            </Box>
+            <div className={classes.paper}>
+                <Box
+                    display="flex"
+                    justifyContent="center"
+                    flexDirection="column"
+                    alignItems="center"
+                    className={classes.root}
+                    id={'bar-plotting-options'}
+                    px={20}
+                    py={20}
+                >
+                    <Typography id={'bar-plotting-title'}>Bar Series Options</Typography>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center">
+                        <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
+                            <InputLabel className={classes.textColor}>X Value</InputLabel>
+                            <Select
+                                id={'select-xValue'}
+                                onChange={(event) => {
+                                    setOptions({
+                                        ...options,
+                                        xValue: event.target.value as string,
+                                    });
+                                }}
+                                name="X Values"
+                                value={options.xValue}
+                            >
+                                {props.nominalFields.map((nominalField: string) => (
+                                    <option
+                                        value={nominalField}
+                                        id={nominalField + '-option'}
+                                    >{`${nominalField}`}</option>
+                                ))}
+                            </Select>
+                            <FormHelperText className={classes.helperTextColor}>Data on X-Axis</FormHelperText>
+                        </FormControl>
+                        <Box mx={5} />
+                        <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
+                            <InputLabel className={classes.textColor}>Y Value</InputLabel>
+                            <Select name="Y Values" value={options.yValue}></Select>
+                            <FormHelperText className={classes.helperTextColor}>Data on Y-Axis</FormHelperText>
+                        </FormControl>
+                    </Box>
+                    <Box display="flex" flexDirection="row" justifyContent="center" id={'size-textfields'}>
+                        <TextField
+                            type={'number'}
+                            id="height-textfield"
+                            label="Height"
+                            variant="outlined"
+                            helperText="Default 800"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    height: parseInt(event.target.value),
+                                });
+                            }}
+                        />
+                        <Box mx={5} />
+                        <TextField
+                            type={'number'}
+                            id="width-textfield"
+                            label="Width"
+                            variant="outlined"
+                            helperText="Default 800"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    width: parseInt(event.target.value),
+                                });
+                            }}
+                        />
+                    </Box>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
+                        <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
+                            <InputLabel className={classes.textColor}>Line Colour</InputLabel>
+                            <Select
+                                value={options.stroke}
+                                onChange={(event) => {
+                                    setOptions({
+                                        ...options,
+                                        stroke: event.target.value as string,
+                                    });
+                                }}
+                                name="stroke"
+                            >
+                                <option value={'red'}>red</option>
+                                <option value={'green'}>green</option>
+                                <option value={'blue'}>blue</option>
+                                <option value={'purple'}>purple</option>
+                                <option value={'orange'}>orange</option>
+                                <option value={'black'}>black</option>
+                                <option value={'yellow'}>yellow</option>
+                                <option value={'brown'}>brown</option>
+                                <option value={'pink'}>pink</option>
+                                <option value={'turquoise'}>turquoise</option>
+                            </Select>
+                        </FormControl>
+                        <Box mx={5} />
+                        <TextField
+                            type={'number'}
+                            id="opacity-textfield"
+                            label="Opacity"
+                            variant="outlined"
+                            helperText="Value must be between 0 and 1"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    opacity: parseFloat(event.target.value),
+                                });
+                            }}
+                        />
+                    </Box>
+                </Box>
+            </div>
+        </Box>
+    );
+}
+const mapStateToProps = (state: any) => ({
+    nominalFields: state.analysedData.nominalFields,
+    ordinalFields: state.analysedData.ordinalFields,
+});
+export default connect(mapStateToProps, {})(BarSeriesOptions);
