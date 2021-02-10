@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Bar/BarSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -422,14 +418,7 @@
       <workItem from="1612857957946" duration="2360000" />
       <workItem from="1612897880505" duration="3417000" />
       <workItem from="1612944753014" duration="1864000" />
-      <workItem from="1612950462918" duration="1577000" />
-    </task>
-    <task id="LOCAL-00173" summary="Updated ReduxReducer with nominal data + unit tests">
-      <created>1611746178929</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1611746178929</updated>
+      <workItem from="1612950462918" duration="1958000" />
     </task>
     <task id="LOCAL-00174" summary="Updated IAnalysedFileData to include nominal data.&#10;Updated CreateAnalysedData, ResetAnalysedData and GetAnalysedData to use nominal data from analysedData slice. updated unit tests">
       <created>1611753939787</created>
@@ -767,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612946642310</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="Completed BarSeriesVis UI Component and unit tests">
+      <created>1612952303338</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1612952303338</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,7 +771,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated colour to stroke in ILinePlotCreateVis and ILinePlotOptions" />
     <MESSAGE value="Updated interfaces IBarPlotCreateVis and IBarPlotOptions + updated unit tests" />
     <MESSAGE value="Refactored LinePlot to LineSeries" />
     <MESSAGE value="Refactored BarPlot to BarSeries" />
@@ -800,7 +795,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Started BarSeriesOptions + unit tests" />
     <MESSAGE value="Completed BarSeriesOptions UI Component and unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed BarSeriesOptions UI Component and unit tests" />
+    <MESSAGE value="Completed BarSeriesVis UI Component and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed BarSeriesVis UI Component and unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
