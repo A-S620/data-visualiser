@@ -3,7 +3,6 @@ import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
 import { CurveType, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
-import { yValue } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 
 describe('ReduxReducer', () => {
     it('should return the initial state', () => {
@@ -499,7 +498,7 @@ describe('ReduxReducer', () => {
             stroke: '',
             width: 0,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         it('Should handle MARK_OPTIONS_ADDED', () => {
             expect(reduxReducer(markSeriesOptions, reducerActions.addMarkOptions(markOptions))).toEqual({
@@ -511,7 +510,7 @@ describe('ReduxReducer', () => {
                     stroke: '',
                     width: 0,
                     xValue: 'test',
-                    yValue: yValue.percent,
+                    yValue: 'test',
                 },
             });
         });
@@ -527,7 +526,7 @@ describe('ReduxReducer', () => {
                             stroke: '',
                             width: 0,
                             xValue: 'test',
-                            yValue: yValue.percent,
+                            yValue: 'test',
                         },
                     },
                     reducerActions.resetMarkOptions()

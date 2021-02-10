@@ -1,7 +1,5 @@
 import React from 'react';
 import 'jsdom-global/register';
-import { IBarSeriesOptions, yValue } from '../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
-import { BarSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate';
 import { IMarkSeriesOptions } from '../../../../src/Interfaces/plotting/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate';
 
@@ -15,7 +13,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             stroke: '',
             width: 500,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const optionsValidate = new MarkSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -32,7 +30,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             stroke: '',
             width: 500,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const optionsValidate = new MarkSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -49,7 +47,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             stroke: '',
             width: 801,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const optionsValidate = new MarkSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -66,7 +64,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             stroke: '',
             width: 50,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const optionsValidate = new MarkSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -83,7 +81,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             stroke: '',
             width: 500,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const optionsValidate = new MarkSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -100,7 +98,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             stroke: '',
             width: 500,
             xValue: 'test',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const optionsValidate = new MarkSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();

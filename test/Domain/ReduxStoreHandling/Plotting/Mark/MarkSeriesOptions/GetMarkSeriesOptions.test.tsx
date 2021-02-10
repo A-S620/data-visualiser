@@ -14,7 +14,7 @@ describe('GetMarkSeriesOptions domain component', () => {
             stroke: '',
             width: 0,
             xValue: '',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const createOptions = new CreateMarkSeriesOptions(options);
         createOptions.createMarkSeriesOptions();

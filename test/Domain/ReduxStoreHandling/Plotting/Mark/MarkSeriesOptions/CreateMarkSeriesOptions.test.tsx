@@ -1,6 +1,5 @@
 import 'jsdom-global/register';
 import React from 'react';
-import { yValue } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 import ResetMarkSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions';
 import { IMarkSeriesOptions } from '../../../../../../src/Interfaces/plotting/Mark/IMarkSeriesOptions';
 import CreateMarkSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
@@ -21,7 +20,7 @@ describe('CreateMarkSeriesOptions domain component', () => {
             stroke: '',
             width: 0,
             xValue: '',
-            yValue: yValue.percent,
+            yValue: 'test',
         };
         const createOptions = new CreateMarkSeriesOptions(options);
         createOptions.createMarkSeriesOptions();

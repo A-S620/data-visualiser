@@ -2,7 +2,7 @@ import { yValue } from '../Bar/IBarSeriesOptions';
 
 export interface IMarkSeriesOptions {
     xValue: string;
-    yValue: yValue;
+    yValue: string;
     height: number;
     width: number;
     colour: string;
