@@ -2,7 +2,16 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import { connect } from 'react-redux';
-
+import {
+    XYPlot,
+    XAxis,
+    YAxis,
+    VerticalGridLines,
+    HorizontalGridLines,
+    VerticalBarSeries,
+    VerticalBarSeriesCanvas,
+    LabelSeries,
+} from 'react-vis';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -16,6 +25,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 function BarSeriesVis(props: any) {
     const classes = useStyles();
+    const [useCanvas, setUseCanvas] = React.useState(false);
+    const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
     return (
         <Box
             display="flex"
@@ -28,7 +39,35 @@ function BarSeriesVis(props: any) {
             id={'bar-series'}
             mx={15}
         >
-            <Box></Box>
+            <Box>
+                <XYPlot
+                    id={'bar-series-vis'}
+                    xType="ordinal"
+                    width={props.currentBarVisualisation.width}
+                    height={props.currentBarVisualisation.height}
+                    margin={{ left: 75 }}
+                    xDistance={100}
+                >
+                    <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
+                    <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
+                    <BarSeries
+                        barWidth={props.currentBarVisualisation.barWidth}
+                        color={props.currentBarVisualisation.colour}
+                        opacity={props.currentBarVisualisation.opacity}
+                        stroke={props.currentBarVisualisation.stroke}
+                        className="vertical-bar-series-example"
+                        data={props.currentBarVisualisation.data}
+                    />
+                    <XAxis
+                        //@ts-ignore
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
+                    />
+                    <YAxis
+                        //@ts-ignore
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
+                    />
+                </XYPlot>
+            </Box>
         </Box>
     );
 }

@@ -212,14 +212,14 @@ function BarSeriesOptions(props: any) {
                         <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
                             <InputLabel className={classes.textColor}>Bar Fill Colour</InputLabel>
                             <Select
-                                value={options.stroke}
+                                value={options.colour}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
                                         colour: event.target.value as string,
                                     });
                                 }}
-                                name="stroke"
+                                name="colour"
                             >
                                 <option value={'red'}>red</option>
                                 <option value={'green'}>green</option>

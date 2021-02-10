@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Bar/BarSeriesVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Plotting/Bar/BarSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar/BarSeriesVis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,15 +144,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -423,14 +421,8 @@
       <workItem from="1612812934053" duration="1948000" />
       <workItem from="1612857957946" duration="2360000" />
       <workItem from="1612897880505" duration="3417000" />
-      <workItem from="1612944753014" duration="1782000" />
-    </task>
-    <task id="LOCAL-00172" summary="Updated ReducerActions adn ReducerActionTypes with nominal data + updated unit tests">
-      <created>1611745917701</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1611745917701</updated>
+      <workItem from="1612944753014" duration="1864000" />
+      <workItem from="1612950462918" duration="1577000" />
     </task>
     <task id="LOCAL-00173" summary="Updated ReduxReducer with nominal data + unit tests">
       <created>1611746178929</created>
@@ -768,7 +760,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612901369670</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="Completed BarSeriesOptions UI Component and unit tests">
+      <created>1612946642309</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1612946642310</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,7 +775,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ReduxReducer to work with bar options + current bar visualisation, updated unit tests" />
     <MESSAGE value="Updated colour to stroke in ILinePlotCreateVis and ILinePlotOptions" />
     <MESSAGE value="Updated interfaces IBarPlotCreateVis and IBarPlotOptions + updated unit tests" />
     <MESSAGE value="Refactored LinePlot to LineSeries" />
@@ -801,7 +799,8 @@
     <MESSAGE value="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Started BarSeriesOptions + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started BarSeriesOptions + unit tests" />
+    <MESSAGE value="Completed BarSeriesOptions UI Component and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed BarSeriesOptions UI Component and unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
