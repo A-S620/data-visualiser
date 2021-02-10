@@ -3,6 +3,7 @@ import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
 import { CurveType, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
+import { yValue } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 
 describe('ReduxReducer', () => {
     it('should return the initial state', () => {
@@ -484,6 +485,108 @@ describe('ReduxReducer', () => {
                     reducerActions.resetCurrentBarVisual()
                 )
             ).toEqual(currentBarVisualSlice);
+        });
+    });
+    describe('Mark Plot Options slice', () => {
+        const markSeriesOptions = {
+            markSeriesOptions: {},
+        };
+        const markOptions = {
+            colour: '',
+            fill: '',
+            height: 0,
+            opacity: 0,
+            stroke: '',
+            width: 0,
+            xValue: 'test',
+            yValue: yValue.percent,
+        };
+        it('Should handle MARK_OPTIONS_ADDED', () => {
+            expect(reduxReducer(markSeriesOptions, reducerActions.addMarkOptions(markOptions))).toEqual({
+                markSeriesOptions: {
+                    colour: '',
+                    fill: '',
+                    height: 0,
+                    opacity: 0,
+                    stroke: '',
+                    width: 0,
+                    xValue: 'test',
+                    yValue: yValue.percent,
+                },
+            });
+        });
+        it('Should handle MARK_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        markSeriesOptions: {
+                            colour: '',
+                            fill: '',
+                            height: 0,
+                            opacity: 0,
+                            stroke: '',
+                            width: 0,
+                            xValue: 'test',
+                            yValue: yValue.percent,
+                        },
+                    },
+                    reducerActions.resetMarkOptions()
+                )
+            ).toEqual(markSeriesOptions);
+        });
+    });
+    describe('Current Mark Visualisation', () => {
+        const currentMarkVisualSlice = {
+            currentMarkVisualisation: {},
+        };
+        const currentVisual = {
+            colour: '',
+            data: [
+                { x: 79, y: 5 },
+                { x: 76, y: 23 },
+            ],
+            fill: '',
+            height: 0,
+            opacity: 0,
+            stroke: '',
+            width: 0,
+        };
+        it('Should handle CURRENT_MARK_VISUAL_ADDED', () => {
+            expect(reduxReducer(currentMarkVisualSlice, reducerActions.addCurrentMarkVisual(currentVisual))).toEqual({
+                currentMarkVisualisation: {
+                    colour: '',
+                    data: [
+                        { x: 79, y: 5 },
+                        { x: 76, y: 23 },
+                    ],
+                    fill: '',
+                    height: 0,
+                    opacity: 0,
+                    stroke: '',
+                    width: 0,
+                },
+            });
+        });
+        it('Should handle CURRENT_MARK_VISUAL_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        currentMarkVisualisation: {
+                            colour: '',
+                            data: [
+                                { x: 79, y: 5 },
+                                { x: 76, y: 23 },
+                            ],
+                            fill: '',
+                            height: 0,
+                            opacity: 0,
+                            stroke: '',
+                            width: 0,
+                        },
+                    },
+                    reducerActions.resetCurrentMarkVisual()
+                )
+            ).toEqual(currentMarkVisualSlice);
         });
     });
 });

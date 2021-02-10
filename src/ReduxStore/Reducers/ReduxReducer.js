@@ -127,6 +127,17 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 barSeriesOptions: {},
             };
+        //markSeriesOptions slice
+        case ReducerActions.MARK_OPTIONS_ADDED:
+            return {
+                ...state,
+                markSeriesOptions: action.payload,
+            };
+        case ReducerActions.MARK_OPTIONS_RESET:
+            return {
+                markSeriesOptions: {},
+            };
+
         //currentLineVisualisation slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:
             return {
@@ -146,6 +157,16 @@ export default function reduxReducer(state = ReduxState, action) {
         case ReducerActions.CURRENT_BAR_VISUAL_RESET:
             return {
                 currentBarVisualisation: {},
+            };
+        //currentMarkVisualisation slice
+        case ReducerActions.CURRENT_MARK_VISUAL_ADDED:
+            return {
+                ...state,
+                currentMarkVisualisation: action.payload,
+            };
+        case ReducerActions.CURRENT_MARK_VISUAL_RESET:
+            return {
+                currentMarkVisualisation: {},
             };
         default:
             return state;

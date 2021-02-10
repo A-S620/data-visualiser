@@ -4,8 +4,8 @@
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -421,14 +421,7 @@
       <workItem from="1612857957946" duration="2360000" />
       <workItem from="1612897880505" duration="3417000" />
       <workItem from="1612944753014" duration="1864000" />
-      <workItem from="1612950462918" duration="3213000" />
-    </task>
-    <task id="LOCAL-00177" summary="Refactoring dataAsObjects and dataAsArrays into dataObjects and dataArrays">
-      <created>1611834075720</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1611834075720</updated>
+      <workItem from="1612950462918" duration="4138000" />
     </task>
     <task id="LOCAL-00178" summary="Refactoring domain and interfaces folder structure">
       <created>1611834371991</created>
@@ -766,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612953664411</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests">
+      <created>1612954352137</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1612954352137</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -774,7 +774,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Restructuring ReduxStoreHandling to include Plotting folder" />
     <MESSAGE value="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests" />
     <MESSAGE value="Did unit tests for: CreateBarSeriesOptions, GetBarSeriesOptions and ResetBarSeriesOptions" />
     <MESSAGE value="Created CreateCurrentBarVisual, GetCurrentBarVisual and ResetCurrentBarVisual &#10;TODO: unit tests" />
@@ -799,7 +798,8 @@
     <MESSAGE value="Added markSeriesOptions, currentMarkVisualisation to Redux Store" />
     <MESSAGE value="Updated ReducerActionTypes with mark options and mark current visualisation" />
     <MESSAGE value="Created IMarkSeriesCreateVis and IMarkSeriesOptions interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created IMarkSeriesCreateVis and IMarkSeriesOptions interfaces" />
+    <MESSAGE value="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
