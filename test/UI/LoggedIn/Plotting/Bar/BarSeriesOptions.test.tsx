@@ -7,6 +7,8 @@ import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/Ana
 import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import BarSeriesOptions from '../../../../../src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions';
+import GetBarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
+import { yValue } from '../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 let wrapper: ReactWrapper;
 beforeEach(
     () =>
@@ -61,9 +63,7 @@ beforeAll(() => {
     };
     const createAnalysedFileData = new CreateAnalysedData(analysedFileData);
 
-    createAnalysedFileData.createFields();
-    createAnalysedFileData.createIntervalDataObjects();
-    createAnalysedFileData.createIntervalFields();
+    createAnalysedFileData.createAll();
 });
 describe('Bar Series Options UI component', () => {
     describe('UI Components', () => {
@@ -113,14 +113,67 @@ describe('Bar Series Options UI component', () => {
         });
     });
     describe('Integration with Redux store', () => {
-        it('Should allow the xValue to be selected in the xValues select', async () => {});
+        it('Should allow the xValue to be selected in the xValues select', async () => {
+            await selectXVal('col3');
+            expect(wrapper.find('input').at(0).props().value).toBe('col3');
+        });
+        it('Should allow the yValue to be selected in the yValues select', async () => {
+            await selectYVal('Count');
+            expect(wrapper.find('input').at(1).props().value).toBe('count');
+        });
     });
     describe('Validation', () => {
-        it('should enable the submit button when the xValue and yValue selects have valid options selected', async () => {});
+        it('should enable the submit button when the xValue and yValue selects have valid options selected', async () => {
+            await selectXVal('col3');
+
+            await selectYVal('Count');
+
+            const button = wrapper.find('button#options-submit-button');
+            expect(button.props().disabled).toBe(false);
+        });
     });
     describe('Integration with BarSeriesHandler UI Handler component', () => {
-        it('Should give a success notification when valid options are submitted', async () => {});
-        it('Should give an error notification when invalid options are submitted', async () => {});
+        it('Should give a success notification when valid options are submitted', async () => {
+            await selectXVal('col3');
+            await selectYVal('Count');
+            await inputOpacity(1);
+            await inputHeight(800);
+            await inputWidth(800);
+            await clickSubmit();
+            expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe('Options Validated');
+        });
+        it('Should give an error notification when invalid options are submitted', async () => {
+            await selectXVal('col3');
+            await selectYVal('Count');
+            await inputHeight(50);
+            await inputWidth(800);
+            await inputStrokeColour('red');
+            await clickSubmit();
+            expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe(
+                'Error(s): The minimum value for Height is 100, the maximum value for Height is 800. The current height is 50'
+            );
+        });
+        it('Should create the Bar Series Options in the Redux Store', async () => {
+            await selectXVal('col3');
+            await selectYVal('Count');
+            await inputOpacity(1);
+            await inputHeight(800);
+            await inputWidth(800);
+            await inputStrokeColour('red');
+            await clickSubmit();
+            const getbarSeriesOptions = new GetBarSeriesOptions();
+            expect(getbarSeriesOptions.getBarSeriesOptions()).toEqual({
+                barWidth: 1,
+                colour: '#000000',
+                fill: '',
+                height: 800,
+                opacity: 1,
+                stroke: 'red',
+                width: 800,
+                xValue: 'col3',
+                yValue: yValue.count,
+            });
+        });
     });
 });
 function clickSubmit(): void {
@@ -135,6 +188,18 @@ function inputWidth(value: number): void {
     wrapper.find('input#width-textfield').simulate('change', {
         target: { value: value },
     });
+}
+function inputOpacity(value: number): void {
+    wrapper.find('input#opacity-textfield').simulate('change', {
+        target: { value: value },
+    });
+}
+function inputStrokeColour(value: string) {
+    const element = wrapper.find('div#stroke-select');
+    element
+        .find('input')
+        .at(0)
+        .simulate('change', { target: { value: value } });
 }
 function selectXVal(value: string) {
     const xValSelect = wrapper.find('div#x-values-select');

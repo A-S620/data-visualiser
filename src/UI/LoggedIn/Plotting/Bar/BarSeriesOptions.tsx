@@ -47,6 +47,7 @@ function BarSeriesOptions(props: any) {
         xValue: '',
         yValue: yValue.count,
     });
+    const allValues = props.nominalFields.concat(props.ordinalFields);
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
         outcomeMessage: string;
@@ -141,11 +142,8 @@ function BarSeriesOptions(props: any) {
                                 name="X Values"
                                 value={options.xValue}
                             >
-                                {props.nominalFields.map((nominalField: string) => (
-                                    <option
-                                        value={nominalField}
-                                        id={nominalField + '-option'}
-                                    >{`${nominalField}`}</option>
+                                {allValues.map((field: string) => (
+                                    <option value={field} id={field + '-option'}>{`${field}`}</option>
                                 ))}
                             </Select>
                             <FormHelperText className={classes.helperTextColor}>Data on X-Axis</FormHelperText>

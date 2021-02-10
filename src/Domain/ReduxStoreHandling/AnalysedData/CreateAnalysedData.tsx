@@ -37,4 +37,13 @@ export default class CreateAnalysedData {
     public createOrdinalDataObjects() {
         store.dispatch(addOrdinalDataObjects(this.analysedFileData.ordinalDataObjects));
     }
+    public createAll() {
+        this.createFields();
+        this.createIntervalFields();
+        this.createIntervalDataObjects();
+        this.createNominalFields();
+        this.createNominalDataObjects();
+        this.createOrdinalFields();
+        this.createOrdinalDataObjects();
+    }
 }
