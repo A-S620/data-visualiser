@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/plotting/Mark/IMarkSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Mark/IMarkSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,14 +423,7 @@
       <workItem from="1612897880505" duration="3417000" />
       <workItem from="1612944753014" duration="1864000" />
       <workItem from="1612950462918" duration="6542000" />
-      <workItem from="1612984750478" duration="1286000" />
-    </task>
-    <task id="LOCAL-00182" summary="Updated IAnalysedFileData interface to include: ordinalFields + ordinalDataObjects. updated unit tests">
-      <created>1611922698824</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1611922698825</updated>
+      <workItem from="1612984750478" duration="1784000" />
     </task>
     <task id="LOCAL-00183" summary="Updated ReducerActions + ReducerActionTypes to include ordina data">
       <created>1611926071357</created>
@@ -774,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612957931003</updated>
     </task>
-    <option name="localTasksCounter" value="231" />
+    <task id="LOCAL-00231" summary="Created MarkSeriesCreateVis + unit tests">
+      <created>1612986107242</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1612986107242</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +776,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored CurrentLineVisual folder" />
     <MESSAGE value="Refactored Domain folder to include visualisations folder" />
     <MESSAGE value="Fixed failing unit tests" />
     <MESSAGE value="Created BarSeriesCreateVis and BarSeriesOptionsValidate domain components basic file&#10;TODO: TDD" />
@@ -807,7 +800,8 @@
     <MESSAGE value="Created Redux Store handling components: CreateMarkSeriesOptions, ResetMarkSeriesOptions and GetMarkSeriesOptions and did unit tests" />
     <MESSAGE value="Created Redux Store handling components: CreateCurrentMarkVisual, ResetCurrentMarkVisual and GetCurrentMarkVisual and did unit tests" />
     <MESSAGE value="Created MarkSeriesOptionsValidate domain component + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created MarkSeriesOptionsValidate domain component + unit tests" />
+    <MESSAGE value="Created MarkSeriesCreateVis + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created MarkSeriesCreateVis + unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
