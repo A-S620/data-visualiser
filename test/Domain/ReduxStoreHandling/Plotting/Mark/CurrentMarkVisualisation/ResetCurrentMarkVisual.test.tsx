@@ -1,9 +1,5 @@
 import 'jsdom-global/register';
 import React from 'react';
-import CreateCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/CreateCurrentBarVisual';
-import GetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/GetCurrentBarVisual';
-import ResetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/ResetCurrentBarVisual';
-import { IBarSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
 import { IMarkSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Mark/IMarkSeriesCreateVis';
 import CreateCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CreateCurrentMarkVisual';
 import GetCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/GetCurrentMarkVisual';
