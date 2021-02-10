@@ -3,6 +3,8 @@ import { ILineSeriesOptions } from '../../Interfaces/plotting/Line/ILineSeriesOp
 import { ILineSeriesCreateVis } from '../../Interfaces/plotting/Line/ILineSeriesCreateVis';
 import { IBarSeriesOptions } from '../../Interfaces/plotting/Bar/IBarSeriesOptions';
 import { IBarSeriesCreateVis } from '../../Interfaces/plotting/Bar/IBarSeriesCreateVis';
+import { IMarkSeriesOptions } from '../../Interfaces/plotting/Mark/IMarkSeriesOptions';
+import { IMarkSeriesCreateVis } from '../../Interfaces/plotting/Mark/IMarkSeriesCreateVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -68,19 +70,32 @@ export const addBarOptions = (barSeriesOptions: IBarSeriesOptions) => ({
 export const resetBarOptions = () => ({
     type: reducerActionTypes.BAR_OPTIONS_RESET,
 });
-
+export const addMarkOptions = (markSeriesOptions: IMarkSeriesOptions) => ({
+    type: reducerActionTypes.MARK_OPTIONS_ADDED,
+    payload: markSeriesOptions,
+});
+export const resetMarkOptions = () => ({
+    type: reducerActionTypes.MARK_OPTIONS_RESET,
+});
 //currentLineVisualisation slice
-export const addCurrentLineVisual = (currentLineVisualisation: ILineSeriesCreateVis) => ({
+export const addCurrentLineVisual = (currentLineVisual: ILineSeriesCreateVis) => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
-    payload: currentLineVisualisation,
+    payload: currentLineVisual,
 });
 export const resetCurrentLineVisual = () => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_RESET,
 });
-export const addCurrentBarVisual = (currentBarVisualisation: IBarSeriesCreateVis) => ({
+export const addCurrentBarVisual = (currentBarVisual: IBarSeriesCreateVis) => ({
     type: reducerActionTypes.CURRENT_BAR_VISUAL_ADDED,
-    payload: currentBarVisualisation,
+    payload: currentBarVisual,
 });
 export const resetCurrentBarVisual = () => ({
     type: reducerActionTypes.CURRENT_BAR_VISUAL_RESET,
+});
+export const addCurrentMarkVisual = (currentMarkVisual: IMarkSeriesCreateVis) => ({
+    type: reducerActionTypes.CURRENT_MARK_VISUAL_ADDED,
+    payload: currentMarkVisual,
+});
+export const resetCurrentMarkVisual = () => ({
+    type: reducerActionTypes.CURRENT_MARK_VISUAL_RESET,
 });

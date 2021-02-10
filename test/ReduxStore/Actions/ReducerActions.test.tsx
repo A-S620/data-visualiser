@@ -5,6 +5,8 @@ import { ILineSeriesCreateVis } from '../../../src/Interfaces/plotting/Line/ILin
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { IBarSeriesOptions, yValue } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
 import { IBarSeriesCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
+import { IMarkSeriesOptions } from '../../../src/Interfaces/plotting/Mark/IMarkSeriesOptions';
+import { IMarkSeriesCreateVis } from '../../../src/Interfaces/plotting/Mark/IMarkSeriesCreateVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -147,7 +149,7 @@ describe('Reducer actions', () => {
             expect(reducerActions.resetAnalysedData()).toEqual(expectedAction);
         });
     });
-    describe('Line Plot Options actions', () => {
+    describe('Line series Options actions', () => {
         it('Should create an action to add the line options', () => {
             const lineOptions: ILineSeriesOptions = {
                 xValue: 'test',
@@ -166,7 +168,7 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addLineOptions(lineOptions)).toEqual(expectedAction);
         });
-        it('Should create an action to rest the bar options', () => {
+        it('Should create an action to reset the bar options', () => {
             const expectedAction = {
                 type: actionTypes.LINE_OPTIONS_RESET,
             };
@@ -194,14 +196,14 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addCurrentLineVisual(currentVisual)).toEqual(expectedAction);
         });
-        it('Should create an action to rest the current line Visualisation', () => {
+        it('Should create an action to reset the current line Visualisation', () => {
             const expectedAction = {
                 type: actionTypes.CURRENT_LINE_VISUAL_RESET,
             };
             expect(reducerActions.resetCurrentLineVisual()).toEqual(expectedAction);
         });
     });
-    describe('Bar Plot Options actions', () => {
+    describe('Bar series Options actions', () => {
         it('Should create an action to add the bar options', () => {
             const barOptions: IBarSeriesOptions = {
                 barWidth: 0,
@@ -220,14 +222,14 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addBarOptions(barOptions)).toEqual(expectedAction);
         });
-        it('Should create an action to rest the bar options', () => {
+        it('Should create an action to reset the bar options', () => {
             const expectedAction = {
                 type: actionTypes.BAR_OPTIONS_RESET,
             };
             expect(reducerActions.resetBarOptions()).toEqual(expectedAction);
         });
     });
-    describe('Current Line Visualisation actions', () => {
+    describe('Current Bar Visualisation actions', () => {
         it('Should create an action to add the current bar Visualisation', () => {
             const currentBarVisual: IBarSeriesCreateVis = {
                 barWidth: 0,
@@ -248,11 +250,63 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addCurrentBarVisual(currentBarVisual)).toEqual(expectedAction);
         });
-        it('Should create an action to rest the current bar Visualisation', () => {
+        it('Should create an action to reset the current bar Visualisation', () => {
             const expectedAction = {
                 type: actionTypes.CURRENT_BAR_VISUAL_RESET,
             };
             expect(reducerActions.resetCurrentBarVisual()).toEqual(expectedAction);
+        });
+    });
+    describe('Mark Series Options actions', () => {
+        it('Should create an action to add the mark options', () => {
+            const markOptions: IMarkSeriesOptions = {
+                colour: '',
+                fill: '',
+                height: 0,
+                opacity: 0,
+                stroke: '',
+                width: 0,
+                xValue: 'test',
+                yValue: yValue.percent,
+            };
+            const expectedAction = {
+                type: actionTypes.MARK_OPTIONS_ADDED,
+                payload: markOptions,
+            };
+            expect(reducerActions.addMarkOptions(markOptions)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset the mark options', () => {
+            const expectedAction = {
+                type: actionTypes.MARK_OPTIONS_RESET,
+            };
+            expect(reducerActions.resetMarkOptions()).toEqual(expectedAction);
+        });
+    });
+    describe('Current Mark Visualisation actions', () => {
+        it('Should create an action to add the current mark Visualisation', () => {
+            const currentMarkVisual: IMarkSeriesCreateVis = {
+                colour: '',
+                data: [
+                    { x: 79, y: 5 },
+                    { x: 76, y: 23 },
+                ],
+                fill: '',
+                height: 0,
+                opacity: 0,
+                stroke: '',
+                width: 0,
+            };
+            const expectedAction = {
+                type: actionTypes.CURRENT_MARK_VISUAL_ADDED,
+                payload: currentMarkVisual,
+            };
+            expect(reducerActions.addCurrentMarkVisual(currentMarkVisual)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset the current mark Visualisation', () => {
+            const expectedAction = {
+                type: actionTypes.CURRENT_MARK_VISUAL_RESET,
+            };
+            expect(reducerActions.resetCurrentMarkVisual()).toEqual(expectedAction);
         });
     });
 });
