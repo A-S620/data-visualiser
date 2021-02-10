@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Mark/IMarkSeriesCreateVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/plotting/Mark/IMarkSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -418,21 +421,7 @@
       <workItem from="1612857957946" duration="2360000" />
       <workItem from="1612897880505" duration="3417000" />
       <workItem from="1612944753014" duration="1864000" />
-      <workItem from="1612950462918" duration="1958000" />
-    </task>
-    <task id="LOCAL-00174" summary="Updated IAnalysedFileData to include nominal data.&#10;Updated CreateAnalysedData, ResetAnalysedData and GetAnalysedData to use nominal data from analysedData slice. updated unit tests">
-      <created>1611753939787</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1611753939787</updated>
-    </task>
-    <task id="LOCAL-00175" summary="Refactored AnalyseIntervalData">
-      <created>1611762751675</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1611762751676</updated>
+      <workItem from="1612950462918" duration="2391000" />
     </task>
     <task id="LOCAL-00176" summary="AnalyseNominalData domain component + unit tests">
       <created>1611833867942</created>
@@ -763,7 +752,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612952303338</updated>
     </task>
-    <option name="localTasksCounter" value="223" />
+    <task id="LOCAL-00223" summary="Added markSeriesOptions, currentMarkVisualisation to Redux Store">
+      <created>1612953050998</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1612953050998</updated>
+    </task>
+    <task id="LOCAL-00224" summary="Updated ReducerActionTypes with mark options and mark current visualisation">
+      <created>1612953170898</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1612953170898</updated>
+    </task>
+    <option name="localTasksCounter" value="225" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -771,8 +774,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated interfaces IBarPlotCreateVis and IBarPlotOptions + updated unit tests" />
-    <MESSAGE value="Refactored LinePlot to LineSeries" />
     <MESSAGE value="Refactored BarPlot to BarSeries" />
     <MESSAGE value="Restructuring ReduxStoreHandling to include Plotting folder" />
     <MESSAGE value="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests" />
@@ -796,7 +797,9 @@
     <MESSAGE value="Started BarSeriesOptions + unit tests" />
     <MESSAGE value="Completed BarSeriesOptions UI Component and unit tests" />
     <MESSAGE value="Completed BarSeriesVis UI Component and unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed BarSeriesVis UI Component and unit tests" />
+    <MESSAGE value="Added markSeriesOptions, currentMarkVisualisation to Redux Store" />
+    <MESSAGE value="Updated ReducerActionTypes with mark options and mark current visualisation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActionTypes with mark options and mark current visualisation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
