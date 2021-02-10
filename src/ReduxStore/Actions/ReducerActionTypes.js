@@ -19,9 +19,13 @@ export const LINE_OPTIONS_ADDED = 'lineOptionsAdded';
 export const LINE_OPTIONS_RESET = 'lineOptionsReset';
 export const BAR_OPTIONS_ADDED = 'barOptionsAdded';
 export const BAR_OPTIONS_RESET = 'barOptionsReset';
+export const MARK_OPTIONS_ADDED = 'markOptionsAdded';
+export const MARK_OPTIONS_RESET = 'markOptionsReset';
 
 //currentVisualisationSlice
 export const CURRENT_LINE_VISUAL_ADDED = 'currentLineVisualAdded';
 export const CURRENT_LINE_VISUAL_RESET = 'currentLineVisualReset';
 export const CURRENT_BAR_VISUAL_ADDED = 'currentBarVisualAdded';
 export const CURRENT_BAR_VISUAL_RESET = 'currentBarVisualReset';
+export const CURRENT_MARK_VISUAL_ADDED = 'currentMarkVisualAdded';
+export const CURRENT_MARK_VISUAL_RESET = 'currentMarkVisualReset';
