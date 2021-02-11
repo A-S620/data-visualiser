@@ -7,7 +7,7 @@ import Home from '../Home/Home';
 import Export from '../Export/Export';
 import Settings from '../Settings/Settings';
 import TabPanel from './TabPanel';
-import PlottingPage from '../Plotting/PlottingPage';
+import PlottingPage from '../Visualisation/PlottingPage';
 
 const useStyles = makeStyles((theme) => ({
     root: {
