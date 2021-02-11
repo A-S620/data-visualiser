@@ -6,7 +6,7 @@ import {
     CurveType,
     ILineSeriesOptions,
     LineStyle,
-} from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+} from '../../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 describe('GetLineSeriesOptions domain component', () => {
     it('Should return the correct line series options', () => {
         const lineOptions: ILineSeriesOptions = {

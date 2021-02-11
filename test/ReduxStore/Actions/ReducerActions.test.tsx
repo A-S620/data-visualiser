@@ -1,12 +1,16 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import * as actionTypes from '../../../src/ReduxStore/Actions/ReducerActionTypes';
-import { CurveType, ILineSeriesOptions, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
-import { ILineSeriesCreateVis } from '../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
+import {
+    CurveType,
+    ILineSeriesOptions,
+    LineStyle,
+} from '../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
+import { ILineSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
-import { IBarSeriesOptions, yValue } from '../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
-import { IBarSeriesCreateVis } from '../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
-import { IMarkSeriesOptions } from '../../../src/Interfaces/plotting/Mark/IMarkSeriesOptions';
-import { IMarkSeriesCreateVis } from '../../../src/Interfaces/plotting/Mark/IMarkSeriesCreateVis';
+import { IBarSeriesOptions, yValue } from '../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
+import { IBarSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IMarkSeriesOptions } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
+import { IMarkSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {

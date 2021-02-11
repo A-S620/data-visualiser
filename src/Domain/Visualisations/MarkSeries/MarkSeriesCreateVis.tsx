@@ -1,7 +1,7 @@
 import { IAnalysedFileData } from '../../../Interfaces/Analyse/IAnalysedFileData';
 import GetAnalysedData from '../../ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import GetMarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
-import { IMarkSeriesCreateVis } from '../../../Interfaces/plotting/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesCreateVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 
 export class MarkSeriesCreateVis {
     public createVis(): IMarkSeriesCreateVis {

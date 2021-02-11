@@ -1,4 +1,4 @@
-import { IMarkSeriesOptions } from '../../../Interfaces/plotting/Mark/IMarkSeriesOptions';
+import { IMarkSeriesOptions } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 
 export class MarkSeriesOptionsValidate {

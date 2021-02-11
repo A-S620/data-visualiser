@@ -1,6 +1,6 @@
 import 'jsdom-global/register';
 import React from 'react';
-import { IMarkSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesCreateVis } from '../../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 import CreateCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CreateCurrentMarkVisual';
 import GetCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/GetCurrentMarkVisual';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jsdom-global/register';
-import { IBarSeriesOptions, yValue } from '../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions, yValue } from '../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { BarSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate';
 
 describe('BarSeriesOptionsValidate domain component', () => {

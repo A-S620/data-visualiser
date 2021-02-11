@@ -1,10 +1,10 @@
 import * as reducerActionTypes from './ReducerActionTypes';
-import { ILineSeriesOptions } from '../../Interfaces/plotting/Line/ILineSeriesOptions';
-import { ILineSeriesCreateVis } from '../../Interfaces/plotting/Line/ILineSeriesCreateVis';
-import { IBarSeriesOptions } from '../../Interfaces/plotting/Bar/IBarSeriesOptions';
-import { IBarSeriesCreateVis } from '../../Interfaces/plotting/Bar/IBarSeriesCreateVis';
-import { IMarkSeriesOptions } from '../../Interfaces/plotting/Mark/IMarkSeriesOptions';
-import { IMarkSeriesCreateVis } from '../../Interfaces/plotting/Mark/IMarkSeriesCreateVis';
+import { ILineSeriesOptions } from '../../Interfaces/Visualisations/Line/ILineSeriesOptions';
+import { ILineSeriesCreateVis } from '../../Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { IBarSeriesOptions } from '../../Interfaces/Visualisations/Bar/IBarSeriesOptions';
+import { IBarSeriesCreateVis } from '../../Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IMarkSeriesOptions } from '../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
+import { IMarkSeriesCreateVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,

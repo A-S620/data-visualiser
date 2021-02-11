@@ -1,6 +1,6 @@
 import 'jsdom-global/register';
-import { yValue } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
-import { IMarkSeriesOptions } from '../../../../../../src/Interfaces/plotting/Mark/IMarkSeriesOptions';
+import { yValue } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
+import { IMarkSeriesOptions } from '../../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import CreateMarkSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
 import GetMarkSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
 

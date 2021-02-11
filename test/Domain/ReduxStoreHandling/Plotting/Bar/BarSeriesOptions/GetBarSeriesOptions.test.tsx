@@ -1,7 +1,7 @@
 import 'jsdom-global/register';
 import CreateBarSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';
 import GetBarSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
-import { IBarSeriesOptions, yValue } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions, yValue } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 
 describe('GetBarSeriesOptions domain component', () => {
     it('Should return the correct bar series options', () => {

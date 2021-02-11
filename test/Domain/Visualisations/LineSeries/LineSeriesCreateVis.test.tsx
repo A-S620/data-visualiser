@@ -1,7 +1,11 @@
 import React from 'react';
 import 'jsdom-global/register';
 import CreateLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
-import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import {
+    CurveType,
+    ILineSeriesOptions,
+    LineStyle,
+} from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { LineSeriesCreateVis } from '../../../../src/Domain/Visualisations/LineSeries/LineSeriesCreateVis';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';

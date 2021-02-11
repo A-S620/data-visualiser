@@ -1,7 +1,7 @@
 import * as reducerActions from '../../../src/ReduxStore/Actions/ReducerActions';
 import reduxReducer from '../../../src/ReduxStore/Reducers/ReduxReducer';
 import ReduxState from '../../../src/ReduxStore/ReduxState';
-import { CurveType, LineStyle } from '../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import { CurveType, LineStyle } from '../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 
 describe('ReduxReducer', () => {

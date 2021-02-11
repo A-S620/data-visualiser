@@ -3,7 +3,7 @@ import React from 'react';
 import CreateCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/CreateCurrentBarVisual';
 import GetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/GetCurrentBarVisual';
 import ResetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/ResetCurrentBarVisual';
-import { IBarSeriesCreateVis } from '../../../../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
+import { IBarSeriesCreateVis } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
 
 describe('ResetCurrentBarVisual domain component', () => {
     it('Should reset the Current bar Visualisation', () => {

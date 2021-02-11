@@ -1,4 +1,4 @@
-import { IBarSeriesOptions } from '../../../Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions } from '../../../Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 
 export class BarSeriesOptionsValidate {

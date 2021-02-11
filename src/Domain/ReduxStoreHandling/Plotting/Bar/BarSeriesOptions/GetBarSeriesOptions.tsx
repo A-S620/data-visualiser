@@ -1,5 +1,5 @@
 import { store } from '../../../../../ReduxStore/store';
-import { IBarSeriesOptions } from '../../../../../Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions } from '../../../../../Interfaces/Visualisations/Bar/IBarSeriesOptions';
 
 export default class GetBarSeriesOptions {
     public getBarSeriesOptions(): IBarSeriesOptions {

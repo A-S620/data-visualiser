@@ -5,9 +5,9 @@ import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import BarSeriesOptions from '../../../../../src/UI/LoggedIn/Plotting/Bar/BarSeriesOptions';
+import BarSeriesOptions from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesOptions';
 import GetBarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
-import { yValue } from '../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 let wrapper: ReactWrapper;
 beforeEach(
     () =>

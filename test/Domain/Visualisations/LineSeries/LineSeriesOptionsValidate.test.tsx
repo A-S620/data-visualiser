@@ -1,6 +1,10 @@
 import React from 'react';
 import 'jsdom-global/register';
-import { CurveType, ILineSeriesOptions, LineStyle } from '../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import {
+    CurveType,
+    ILineSeriesOptions,
+    LineStyle,
+} from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { LineSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate';
 
 describe('LineSeriesOptionsValidate domain component', () => {

@@ -8,7 +8,7 @@ import {
     CurveType,
     ILineSeriesOptions,
     LineStyle,
-} from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+} from '../../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 
 beforeEach(() => {
     const resetLineSeriesOptions = new ResetLineSeriesOptions();

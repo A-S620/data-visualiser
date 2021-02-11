@@ -1,4 +1,4 @@
-import { ILineSeriesOptions } from '../../../Interfaces/plotting/Line/ILineSeriesOptions';
+import { ILineSeriesOptions } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { NotificationsHandler } from '../../NotificationsHandler';
 import { LineSeriesOptionsValidate } from '../../../Domain/Visualisations/LineSeries/LineSeriesOptionsValidate';
 import GetLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';

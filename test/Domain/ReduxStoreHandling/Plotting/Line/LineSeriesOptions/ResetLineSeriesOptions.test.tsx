@@ -7,7 +7,7 @@ import {
     CurveType,
     ILineSeriesOptions,
     LineStyle,
-} from '../../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+} from '../../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 
 describe('ResetLineSeriesOptions domain component', () => {
     it('Should reset the line series options', () => {

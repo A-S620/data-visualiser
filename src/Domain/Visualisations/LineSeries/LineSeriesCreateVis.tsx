@@ -1,6 +1,6 @@
 import GetLineSeriesOptions from '../../ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
 import GetAnalysedData from '../../ReduxStoreHandling/AnalysedData/GetAnalysedData';
-import { ILineSeriesCreateVis } from '../../../Interfaces/plotting/Line/ILineSeriesCreateVis';
+import { ILineSeriesCreateVis } from '../../../Interfaces/Visualisations/Line/ILineSeriesCreateVis';
 import { IAnalysedFileData } from '../../../Interfaces/Analyse/IAnalysedFileData';
 
 export class LineSeriesCreateVis {

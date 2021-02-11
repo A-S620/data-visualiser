@@ -1,4 +1,4 @@
-import { IBarSeriesOptions } from '../../../Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesOptions } from '../../../Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { NotificationsHandler } from '../../NotificationsHandler';
 import { BarSeriesOptionsValidate } from '../../../Domain/Visualisations/BarSeries/BarSeriesOptionsValidate';
 import CreateBarSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';

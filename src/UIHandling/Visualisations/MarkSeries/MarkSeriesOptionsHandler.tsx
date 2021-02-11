@@ -1,11 +1,11 @@
-import { ILineSeriesOptions } from '../../../Interfaces/plotting/Line/ILineSeriesOptions';
+import { ILineSeriesOptions } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { NotificationsHandler } from '../../NotificationsHandler';
 import { LineSeriesOptionsValidate } from '../../../Domain/Visualisations/LineSeries/LineSeriesOptionsValidate';
 import { LineSeriesVisHandler } from '../LineSeries/LineSeriesVisHandler';
 import CreateLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
 import GetLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
 import ResetLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
-import { IMarkSeriesOptions } from '../../../Interfaces/plotting/Mark/IMarkSeriesOptions';
+import { IMarkSeriesOptions } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsValidate } from '../../../Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate';
 import CreateMarkSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
 import GetMarkSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';

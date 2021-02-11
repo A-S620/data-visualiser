@@ -1,6 +1,6 @@
 import { store } from '../../../../../ReduxStore/store';
 import { addMarkOptions } from '../../../../../ReduxStore/Actions/ReducerActions';
-import { IMarkSeriesOptions } from '../../../../../Interfaces/plotting/Mark/IMarkSeriesOptions';
+import { IMarkSeriesOptions } from '../../../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 
 export default class CreateMarkSeriesOptions {
     private markOptions: IMarkSeriesOptions;

@@ -3,14 +3,14 @@ import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import CreateCurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/CreateCurrentBarVisual';
-import { IBarSeriesCreateVis } from '../../../../../src/Interfaces/plotting/Bar/IBarSeriesCreateVis';
-import { yValue } from '../../../../../src/Interfaces/plotting/Bar/IBarSeriesOptions';
+import { IBarSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';
-import BarSeriesVis from '../../../../../src/UI/LoggedIn/Plotting/Bar/BarSeriesVis';
-import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesCreateVis';
-import { CurveType, LineStyle } from '../../../../../src/Interfaces/plotting/Line/ILineSeriesOptions';
+import BarSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis';
+import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import CreateCurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
-import LineSeriesVis from '../../../../../src/UI/LoggedIn/Plotting/Line/LineSeriesVis';
+import LineSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Line/LineSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IBarSeriesCreateVis = {
