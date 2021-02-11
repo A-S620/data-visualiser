@@ -8,7 +8,7 @@ export class MarkSeriesVisHandler {
         const currentVisual = new CreateCurrentMarkVisual(createVis);
         currentVisual.createCurrentMarkVisual();
     }
-    public resetLineVisual() {
+    public resetMarkVisual() {
         new ResetCurrentMarkVisual().resetCurrentMarkVisual();
     }
 }
