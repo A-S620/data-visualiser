@@ -246,7 +246,7 @@ function LineSeriesOptions(props: any) {
                         <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
                             <InputLabel className={classes.textColor}>Colour</InputLabel>
                             <Select
-                                value={options.lineStyle}
+                                value={options.stroke}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
