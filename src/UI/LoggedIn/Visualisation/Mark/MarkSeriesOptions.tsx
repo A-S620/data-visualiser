@@ -17,8 +17,6 @@ import { connect } from 'react-redux';
 import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
-import { LineSeriesOptionsHandler } from '../../../../UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler';
-import { ILineSeriesOptions } from '../../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { IMarkSeriesOptions } from '../../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsHandler } from '../../../../UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler';
 
@@ -239,7 +237,7 @@ function MarkSeriesOptions(props: any) {
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
                         <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
-                            <InputLabel className={classes.textColor}>Line Colour</InputLabel>
+                            <InputLabel className={classes.textColor}>Mark Colour</InputLabel>
                             <Select
                                 value={options.stroke}
                                 onChange={(event) => {
