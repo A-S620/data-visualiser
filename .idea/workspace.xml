@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/Routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ViewImportedData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,11 +138,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData" />
       <recent name="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar" />
       <recent name="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries" />
       <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
       <recent name="$PROJECT_DIR$/src/UIHandling" />
-      <recent name="$PROJECT_DIR$/src/Domain/Visualisations" />
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
@@ -425,14 +428,7 @@
       <workItem from="1612984750478" duration="1921000" />
       <workItem from="1613031240608" duration="1963000" />
       <workItem from="1613070762798" duration="2377000" />
-      <workItem from="1613202328076" duration="1083000" />
-    </task>
-    <task id="LOCAL-00188" summary="Updated AnalyseNominalData + unit tests">
-      <created>1611995684474</created>
-      <option name="number" value="00188" />
-      <option name="presentableId" value="LOCAL-00188" />
-      <option name="project" value="LOCAL" />
-      <updated>1611995684474</updated>
+      <workItem from="1613202328076" duration="1896000" />
     </task>
     <task id="LOCAL-00189" summary="Integrated AnalyseOrdinalData with AnalyseFileData + updated unit tests">
       <created>1611997794655</created>
@@ -770,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613073607028</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="Unit tests for MarkSeriesOptions and MarkSeriesVis">
+      <created>1613203463056</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1613203463057</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,7 +781,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored LineSeriesOptionsValidate error messages + updated unit tests" />
     <MESSAGE value="Refactored IBarSeriesOptions to include yValue enum" />
     <MESSAGE value="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data" />
     <MESSAGE value="Refactored UI Handling folder to include Visualisations folder" />
@@ -803,7 +805,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Created MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis basic UI components" />
     <MESSAGE value="Added functionality to MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis UI components.&#10;TODO: Unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis UI components.&#10;TODO: Unit tests" />
+    <MESSAGE value="Unit tests for MarkSeriesOptions and MarkSeriesVis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit tests for MarkSeriesOptions and MarkSeriesVis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

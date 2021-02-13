@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Settings() {
+export default function ViewAnalysedData() {
     const classes = useStyles();
     return (
         <Grid className={classes.root} container direction="column" justify="flex-start" alignItems="center">

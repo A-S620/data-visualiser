@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 
 import Home from '../Home/Home';
 import Export from '../Export/Export';
-import Settings from '../Settings/Settings';
+import ViewImportedData from '../ViewImportedData/ViewImportedData';
 import TabPanel from './TabPanel';
-import PlottingPage from '../Visualisation/PlottingPage';
+import ViewAnalysedData from '../ViewAnalysedData/ViewAnalysedData';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -65,9 +65,9 @@ function UserNavigation(props: any) {
                     id="menu-tabs"
                 >
                     <Tab label={'Home'} {...a11yProps(0)} />
-                    <Tab label={'Plotting'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(1)} />
-                    <Tab label={'Export'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(2)} />
-                    <Tab label={'Settings'} {...a11yProps(3)} />
+                    <Tab label={'Imported Data'} {...a11yProps(1)} />
+                    <Tab label={'Analysed Data'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(2)} />
+                    <Tab label={'Plotting'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
 
@@ -75,13 +75,13 @@ function UserNavigation(props: any) {
                 <Home />
             </TabPanel>
             <TabPanel value={tab} index={1}>
-                <PlottingPage />
+                <ViewImportedData />
             </TabPanel>
             <TabPanel value={tab} index={2}>
                 <Export />
             </TabPanel>
             <TabPanel value={tab} index={3}>
-                <Settings />
+                <ViewAnalysedData />
             </TabPanel>
         </div>
     );
