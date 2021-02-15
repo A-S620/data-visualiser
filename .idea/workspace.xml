@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ImportedDataTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ViewImportedData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ViewImportedData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,17 +141,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -429,14 +414,8 @@
       <workItem from="1613070762798" duration="2377000" />
       <workItem from="1613202328076" duration="2169000" />
       <workItem from="1613379191976" duration="9000" />
-      <workItem from="1613379216142" duration="5422000" />
-    </task>
-    <task id="LOCAL-00190" summary="FileAnalysisComponent + unit tests">
-      <created>1612189959669</created>
-      <option name="number" value="00190" />
-      <option name="presentableId" value="LOCAL-00190" />
-      <option name="project" value="LOCAL" />
-      <updated>1612189959676</updated>
+      <workItem from="1613379216142" duration="5699000" />
+      <workItem from="1613387555113" duration="50000" />
     </task>
     <task id="LOCAL-00191" summary="Added barPlotOptions and currentBarVisualisation to ReduxState">
       <created>1612272563087</created>
@@ -774,7 +753,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613204299044</updated>
     </task>
-    <option name="localTasksCounter" value="239" />
+    <task id="LOCAL-00239" summary="Created ImportedDataTable UI Component and Unit tests">
+      <created>1613386411347</created>
+      <option name="number" value="00239" />
+      <option name="presentableId" value="LOCAL-00239" />
+      <option name="project" value="LOCAL" />
+      <updated>1613386411347</updated>
+    </task>
+    <option name="localTasksCounter" value="240" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -782,7 +768,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data" />
     <MESSAGE value="Refactored UI Handling folder to include Visualisations folder" />
     <MESSAGE value="Updated BarSeriesCreateVis to include ordinal fields." />
     <MESSAGE value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
@@ -807,7 +792,8 @@
     <MESSAGE value="Added functionality to MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis UI components.&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for MarkSeriesOptions and MarkSeriesVis" />
     <MESSAGE value="Created ViewAnalysedData and ViewImportedData pages and updated UserNavigation + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ViewAnalysedData and ViewImportedData pages and updated UserNavigation + unit tests" />
+    <MESSAGE value="Created ImportedDataTable UI Component and Unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created ImportedDataTable UI Component and Unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,6 +8,7 @@ import Export from '../Export/Export';
 import ViewImportedData from '../ViewImportedData/ViewImportedData';
 import TabPanel from './TabPanel';
 import ViewAnalysedData from '../ViewAnalysedData/ViewAnalysedData';
+import PlottingPage from '../Visualisation/PlottingPage';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -78,10 +79,10 @@ function UserNavigation(props: any) {
                 <ViewImportedData />
             </TabPanel>
             <TabPanel value={tab} index={2}>
-                <Export />
+                <ViewAnalysedData />
             </TabPanel>
             <TabPanel value={tab} index={3}>
-                <ViewAnalysedData />
+                <PlottingPage />
             </TabPanel>
         </div>
     );
