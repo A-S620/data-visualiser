@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/NominalDataTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/OrdinalDataTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -432,14 +429,7 @@
       <workItem from="1613379191976" duration="9000" />
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
-      <workItem from="1613465928885" duration="6084000" />
-    </task>
-    <task id="LOCAL-00193" summary="Created Line folder in Plotting in Interfaces">
-      <created>1612273437845</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1612273437845</updated>
+      <workItem from="1613465928885" duration="6761000" />
     </task>
     <task id="LOCAL-00194" summary="Created IBarPlotCreateVis and IBarPlotOptions. Updated ReducerActions + unit tests to use new interfaces">
       <created>1612273744367</created>
@@ -777,7 +767,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613469196989</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable">
+      <created>1613472900045</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1613472900045</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -785,7 +782,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
     <MESSAGE value="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components" />
     <MESSAGE value="Started BarSeriesOptions + unit tests" />
@@ -810,7 +806,8 @@
     <MESSAGE value="Created ImportedDataTable UI Component and Unit tests" />
     <MESSAGE value="Updated UserNavigation" />
     <MESSAGE value="Addressing terminal warnings and refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Addressing terminal warnings and refactoring" />
+    <MESSAGE value="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
