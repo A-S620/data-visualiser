@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" afterDir="false" />
     </list>
@@ -427,14 +428,7 @@
       <workItem from="1613379191976" duration="9000" />
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
-      <workItem from="1613465928885" duration="7279000" />
-    </task>
-    <task id="LOCAL-00196" summary="Updated colour to stroke in ILinePlotCreateVis and ILinePlotOptions">
-      <created>1612370793297</created>
-      <option name="number" value="00196" />
-      <option name="presentableId" value="LOCAL-00196" />
-      <option name="project" value="LOCAL" />
-      <updated>1612370793298</updated>
+      <workItem from="1613465928885" duration="7528000" />
     </task>
     <task id="LOCAL-00197" summary="Updated interfaces IBarPlotCreateVis and IBarPlotOptions + updated unit tests">
       <created>1612371407272</created>
@@ -772,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613475318372</updated>
     </task>
-    <option name="localTasksCounter" value="245" />
+    <task id="LOCAL-00245" summary="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it">
+      <created>1613475904931</created>
+      <option name="number" value="00245" />
+      <option name="presentableId" value="LOCAL-00245" />
+      <option name="project" value="LOCAL" />
+      <updated>1613475904931</updated>
+    </task>
+    <option name="localTasksCounter" value="246" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -780,7 +781,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
     <MESSAGE value="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components" />
     <MESSAGE value="Started BarSeriesOptions + unit tests" />
     <MESSAGE value="Completed BarSeriesOptions UI Component and unit tests" />
@@ -805,7 +805,8 @@
     <MESSAGE value="Addressing terminal warnings and refactoring" />
     <MESSAGE value="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

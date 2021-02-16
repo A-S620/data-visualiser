@@ -9,7 +9,7 @@ import ResetImportedData from '../../../../src/Domain/ReduxStoreHandling/Importe
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import NominalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/NominalDataTable';
+import OrdinalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/OrdinalDataTable';
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [
@@ -43,22 +43,22 @@ beforeEach(() => {
     createImportedData.createDataAsObjects();
     createImportedData.createDataFields();
     const analyseFileData = new AnalyseFileData([
-        { field: 'col1', fieldType: FieldTypes.NOMINAL },
-        { field: 'col2', fieldType: FieldTypes.NOMINAL },
-        { field: 'col3', fieldType: FieldTypes.NOMINAL },
-        { field: 'col4', fieldType: FieldTypes.NOMINAL },
-        { field: 'col5', fieldType: FieldTypes.NOMINAL },
-        { field: 'col6', fieldType: FieldTypes.NOMINAL },
-        { field: 'col7', fieldType: FieldTypes.NOMINAL },
-        { field: 'col8', fieldType: FieldTypes.NOMINAL },
-        { field: 'col9', fieldType: FieldTypes.NOMINAL },
-        { field: 'col10', fieldType: FieldTypes.NOMINAL },
-        { field: 'col11', fieldType: FieldTypes.NOMINAL },
-        { field: 'col12', fieldType: FieldTypes.NOMINAL },
-        { field: 'col13', fieldType: FieldTypes.NOMINAL },
-        { field: 'col14', fieldType: FieldTypes.NOMINAL },
-        { field: 'col15', fieldType: FieldTypes.NOMINAL },
-        { field: 'col16', fieldType: FieldTypes.NOMINAL },
+        { field: 'col1', fieldType: FieldTypes.ORDINAL },
+        { field: 'col2', fieldType: FieldTypes.ORDINAL },
+        { field: 'col3', fieldType: FieldTypes.ORDINAL },
+        { field: 'col4', fieldType: FieldTypes.ORDINAL },
+        { field: 'col5', fieldType: FieldTypes.ORDINAL },
+        { field: 'col6', fieldType: FieldTypes.ORDINAL },
+        { field: 'col7', fieldType: FieldTypes.ORDINAL },
+        { field: 'col8', fieldType: FieldTypes.ORDINAL },
+        { field: 'col9', fieldType: FieldTypes.ORDINAL },
+        { field: 'col10', fieldType: FieldTypes.ORDINAL },
+        { field: 'col11', fieldType: FieldTypes.ORDINAL },
+        { field: 'col12', fieldType: FieldTypes.ORDINAL },
+        { field: 'col13', fieldType: FieldTypes.ORDINAL },
+        { field: 'col14', fieldType: FieldTypes.ORDINAL },
+        { field: 'col15', fieldType: FieldTypes.ORDINAL },
+        { field: 'col16', fieldType: FieldTypes.ORDINAL },
     ]);
     analyseFileData.validateAnalysedData();
 });
@@ -73,7 +73,7 @@ beforeEach(
     () =>
         (component = mount(
             <Provider store={store}>
-                <NominalDataTable />
+                <OrdinalDataTable />
             </Provider>
         ))
 );
@@ -84,7 +84,7 @@ describe('NominalDataTable UI Component', () => {
             expect(component.find('table')).toBeTruthy();
         });
         it('should have the correct table column', () => {
-            expect(component.find('thead').text()).toBe('Nominal Objects');
+            expect(component.find('thead').text()).toBe('Ordinal Objects');
         });
         it('should have the correct values in the first row', () => {
             const element = component.find('tbody').find('tr').at(0);
