@@ -10,7 +10,6 @@ import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileD
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import IntervalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/IntervalDataTable';
-import { resetAnalysedData } from '../../../../src/ReduxStore/Actions/ReducerActions';
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [
