@@ -1,10 +1,8 @@
 import React from 'react';
-import clsx from 'clsx';
-import { Box, CssBaseline, Typography, CircularProgress, Chip, Grid, Paper } from '@material-ui/core';
+import { Box, Typography, Chip } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import ReactJson from 'react-json-view';
-import { Title } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -58,15 +56,6 @@ function getExampleObject(intervalDataObjects: Array<object>): Object {
 }
 function FileAnalysisComponent(props: any) {
     const classes = useStyles();
-    const data = [
-        { fieldType: 'Interval', count: props.intervalFields.length },
-        { fieldType: 'Nominal', count: props.nominalFields.length },
-        { fieldType: 'Ordinal', count: props.ordinalFields.length },
-        { fieldType: 'Binary', count: 0 },
-        { fieldType: 'Unary', count: 0 },
-        { fieldType: 'Ignored', count: 0 },
-    ];
-    const fixedHeightPaper = clsx(classes.paper2, classes.fixedHeight);
 
     return (
         <Box

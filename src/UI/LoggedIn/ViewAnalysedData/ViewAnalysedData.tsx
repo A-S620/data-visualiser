@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 import IntervalDataTable from './IntervalDataTable';
 import NominalDataTable from './NominalDataTable';
 import OrdinalDataTable from './OrdinalDataTable';

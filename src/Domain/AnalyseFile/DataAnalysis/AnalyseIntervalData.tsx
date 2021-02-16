@@ -1,5 +1,3 @@
-import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
-import CreateAnalysedData from '../../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { store } from '../../../ReduxStore/store';
 
 export class AnalyseIntervalData {

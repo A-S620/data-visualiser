@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box, Grid } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import MarkSeriesVis from './MarkSeriesVis';
 import MarkSeriesOptions from './MarkSeriesOptions';
 const useStyles = makeStyles((theme) => ({

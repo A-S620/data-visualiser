@@ -4,7 +4,6 @@ import { Tab, Tabs, AppBar } from '@material-ui/core';
 import { connect } from 'react-redux';
 
 import Home from '../Home/Home';
-import Export from '../Export/Export';
 import ViewImportedData from '../ViewImportedData/ViewImportedData';
 import TabPanel from './TabPanel';
 import ViewAnalysedData from '../ViewAnalysedData/ViewAnalysedData';

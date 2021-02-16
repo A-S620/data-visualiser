@@ -1,17 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { ColorPicker } from 'material-ui-color';
-import {
-    Box,
-    Button,
-    FormControl,
-    FormHelperText,
-    InputLabel,
-    Paper,
-    Select,
-    TextField,
-    Typography,
-} from '@material-ui/core';
+import { Box, Button, FormControl, FormHelperText, InputLabel, Select, TextField, Typography } from '@material-ui/core';
 import { connect } from 'react-redux';
 
 import { AlertType } from '../../../../Interfaces/Notification/INotification';

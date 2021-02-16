@@ -1,7 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, makeStyles, Typography } from '@material-ui/core';
-import { connect } from 'react-redux';
-import ReactJson from 'react-json-view';
+import { Box, makeStyles } from '@material-ui/core';
 import ImportedDataTable from './ImportedDataTable';
 const useStyles = makeStyles((theme) => ({
     root: {

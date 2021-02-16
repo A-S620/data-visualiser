@@ -10,7 +10,6 @@ import {
     HorizontalGridLines,
     VerticalBarSeries,
     VerticalBarSeriesCanvas,
-    LabelSeries,
 } from 'react-vis';
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function BarSeriesVis(props: any) {
     const classes = useStyles();
-    const [useCanvas, setUseCanvas] = React.useState(false);
+    const [useCanvas] = React.useState(false);
     const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
     return (
         <Box

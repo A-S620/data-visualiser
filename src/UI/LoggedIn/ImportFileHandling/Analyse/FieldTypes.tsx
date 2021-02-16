@@ -1,25 +1,16 @@
 import React from 'react';
 import {
     Box,
-    CssBaseline,
     Typography,
-    CircularProgress,
-    Chip,
-    Grid,
-    ListItem,
     Select,
-    FormControl,
     Table,
     Paper,
     TableHead,
     TableCell,
     TableRow,
-    LinearProgress,
     Button,
     TableBody,
-    InputLabel,
 } from '@material-ui/core';
-import { LinearProgressProps } from '@material-ui/core/LinearProgress';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { FieldTypes } from '../../../../Interfaces/Analyse/IAnalysedFileData';
@@ -64,18 +55,6 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.primary,
     },
 }));
-function LinearProgressWithLabel(progProps: LinearProgressProps & { value: number }) {
-    return (
-        <Box display="flex" alignItems="center">
-            <Box width="100%" mr={1}>
-                <LinearProgress variant="determinate" {...progProps} />
-            </Box>
-            <Box minWidth={35}>
-                <Typography variant="body2" color="textSecondary">{`${Math.round(progProps.value)}%`}</Typography>
-            </Box>
-        </Box>
-    );
-}
 const fields: Array<object> = [];
 function FileTypes(props: any) {
     const classes = useStyles();

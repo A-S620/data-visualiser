@@ -1,18 +1,5 @@
 import React from 'react';
-import {
-    Box,
-    Button,
-    Container,
-    Divider,
-    Grid,
-    IconButton,
-    makeStyles,
-    Paper,
-    Tooltip,
-    Dialog,
-    DialogContent,
-    ClickAwayListener,
-} from '@material-ui/core';
+import { Box, Button, Divider, IconButton, makeStyles, Tooltip, Dialog } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { DropzoneArea } from 'material-ui-dropzone';
 
@@ -27,7 +14,6 @@ import { IImportedFile } from '../../../Interfaces/import/IImportedFile';
 import ImportedFileStats from './Import/ImportedFileStats';
 import { IImportedFileStats } from '../../../Interfaces/import/IImportedFileStats';
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
-import Slide from '@material-ui/core/Slide';
 import FieldTypes from './Analyse/FieldTypes';
 
 interface IState {

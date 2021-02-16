@@ -56,7 +56,7 @@ export class AnalyseNominalData {
         let count = 0;
         for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
             const object = this.dataObjects[objectIndex];
-            for (const [key, value] of Object.entries(object)) {
+            for (const value of Object.values(object)) {
                 if (value === nominalValue) {
                     count += 1;
                 }

@@ -50,7 +50,7 @@ describe('File Analysis component', () => {
             expect(component.find('div#example-object').find('p').at(0).text()).toBe('Example Data Object:');
         });
         it('Should show Example Data Object as empty', () => {
-            expect(component.find('div#json-object').text()).toBe('"root":{}');
+            expect(component.find('div#json-object').text()).toBe('"Example Object":{}');
         });
     });
     describe('File Analysis stats - After import ', () => {
@@ -88,7 +88,9 @@ describe('File Analysis component', () => {
         });
         it('Should show an example object', () => {
             importAndAnalyseData();
-            expect(component.find('div#json-object').text()).toBe('"root":{"col1":" 1""col2":"3""col3":"foo"}');
+            expect(component.find('div#json-object').text()).toBe(
+                '"Example Object":{"col1":"' + ' 1""col2":"3""col3":"foo"}'
+            );
         });
     });
 });
