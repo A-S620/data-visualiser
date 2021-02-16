@@ -3,12 +3,12 @@ import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import { store } from '../../../../src/ReduxStore/store';
-import PlottingNav from '../../../../src/UI/LoggedIn/Visualisation/PlottingNav';
+import VisualiseNav from '../../../../src/UI/LoggedIn/Visualisation/VisualiseNav';
 
 describe('Plotting Navigation Component', () => {
     const wrapper = mount(
         <Provider store={store}>
-            <PlottingNav />
+            <VisualiseNav />
         </Provider>
     );
 

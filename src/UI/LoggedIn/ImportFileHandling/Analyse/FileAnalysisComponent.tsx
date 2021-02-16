@@ -118,6 +118,7 @@ function FileAnalysisComponent(props: any) {
                 <Typography className={classes.statDescription}>Example Data Object:</Typography>
                 <Box id={'json-object'}>
                     <ReactJson
+                        name={'Example Object'}
                         src={getExampleObject(props.dataObjects)}
                         theme="summerfruit:inverted"
                         displayDataTypes={false}

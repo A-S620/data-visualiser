@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function PlottingNav() {
+export default function VisualiseNav() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 

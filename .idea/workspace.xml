@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/NominalDataTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/OrdinalDataTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Visualisations.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/PlottingPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/PlottingNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/PlottingNav.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +153,17 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -415,14 +438,8 @@
       <workItem from="1613202328076" duration="2169000" />
       <workItem from="1613379191976" duration="9000" />
       <workItem from="1613379216142" duration="5699000" />
-      <workItem from="1613387555113" duration="50000" />
-    </task>
-    <task id="LOCAL-00191" summary="Added barPlotOptions and currentBarVisualisation to ReduxState">
-      <created>1612272563087</created>
-      <option name="number" value="00191" />
-      <option name="presentableId" value="LOCAL-00191" />
-      <option name="project" value="LOCAL" />
-      <updated>1612272563087</updated>
+      <workItem from="1613387555113" duration="124000" />
+      <workItem from="1613465928885" duration="2822000" />
     </task>
     <task id="LOCAL-00192" summary="Updated ReducerActions and ReducerActionTypes with barPlotOptions and currentBarVisualisation">
       <created>1612273347013</created>
@@ -760,7 +777,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613386411347</updated>
     </task>
-    <option name="localTasksCounter" value="240" />
+    <task id="LOCAL-00240" summary="Updated UserNavigation">
+      <created>1613387670719</created>
+      <option name="number" value="00240" />
+      <option name="presentableId" value="LOCAL-00240" />
+      <option name="project" value="LOCAL" />
+      <updated>1613387670720</updated>
+    </task>
+    <option name="localTasksCounter" value="241" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -768,7 +792,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored UI Handling folder to include Visualisations folder" />
     <MESSAGE value="Updated BarSeriesCreateVis to include ordinal fields." />
     <MESSAGE value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
@@ -793,7 +816,8 @@
     <MESSAGE value="Unit tests for MarkSeriesOptions and MarkSeriesVis" />
     <MESSAGE value="Created ViewAnalysedData and ViewImportedData pages and updated UserNavigation + unit tests" />
     <MESSAGE value="Created ImportedDataTable UI Component and Unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ImportedDataTable UI Component and Unit tests" />
+    <MESSAGE value="Updated UserNavigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated UserNavigation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
