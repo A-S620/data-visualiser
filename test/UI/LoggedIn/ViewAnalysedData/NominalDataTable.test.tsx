@@ -20,30 +20,23 @@ beforeEach(() => {
             ['c-1', '7', 'baz'],
         ],
         dataObjects: [
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
+            {
+                col1: 'lmao',
+                col2: 'huh',
+                col3: 'bruh',
+                col4: 'oop',
+                col5: 'meh',
+                col6: 'brr',
+                col8: 'eek',
+                col9: 'lol',
+                col10: 'uwu',
+                col11: 'owa',
+                col12: 'nope',
+                col13: 'lool',
+                col14: 'eh',
+                col15: 'eew',
+                col16: 'eugh',
+            },
         ],
         dataFields: ['col1', 'col2', 'col3'],
     };
@@ -51,9 +44,22 @@ beforeEach(() => {
     createImportedData.createDataAsObjects();
     createImportedData.createDataFields();
     const analyseFileData = new AnalyseFileData([
-        { field: 'col1', fieldType: FieldTypes.INTERVAL },
-        { field: 'col2', fieldType: FieldTypes.INTERVAL },
+        { field: 'col1', fieldType: FieldTypes.NOMINAL },
+        { field: 'col2', fieldType: FieldTypes.NOMINAL },
         { field: 'col3', fieldType: FieldTypes.NOMINAL },
+        { field: 'col4', fieldType: FieldTypes.NOMINAL },
+        { field: 'col5', fieldType: FieldTypes.NOMINAL },
+        { field: 'col6', fieldType: FieldTypes.NOMINAL },
+        { field: 'col7', fieldType: FieldTypes.NOMINAL },
+        { field: 'col8', fieldType: FieldTypes.NOMINAL },
+        { field: 'col9', fieldType: FieldTypes.NOMINAL },
+        { field: 'col10', fieldType: FieldTypes.NOMINAL },
+        { field: 'col11', fieldType: FieldTypes.NOMINAL },
+        { field: 'col12', fieldType: FieldTypes.NOMINAL },
+        { field: 'col13', fieldType: FieldTypes.NOMINAL },
+        { field: 'col14', fieldType: FieldTypes.NOMINAL },
+        { field: 'col15', fieldType: FieldTypes.NOMINAL },
+        { field: 'col16', fieldType: FieldTypes.NOMINAL },
     ]);
     analyseFileData.validateAnalysedData();
 });
@@ -83,7 +89,7 @@ describe('IntervalDataTable UI Component', () => {
         });
         it('should have the correct values in the first row', () => {
             const element = component.find('tbody').find('tr').at(0);
-            expect(element.find('td').text()).toEqual('"Object 0":{...}2 items');
+            expect(element.find('td').text()).toEqual('"Object 0":{...}1 item');
         });
         it('Should show the correct number of rows in the table footer', () => {
             expect(component.find('tfoot').find('p').at(1).text()).toBe('1-5 of 16');
@@ -126,26 +132,26 @@ describe('IntervalDataTable UI Component', () => {
         it('Should go to the next page when the next page button is clicked', async () => {
             await clickNextPage();
             const element = component.find('tbody').find('tr').at(0);
-            expect(element.find('td').text()).toEqual('"Object 5":{...}2 items');
+            expect(element.find('td').text()).toEqual('"Object 5":{...}1 item');
         });
         it('Should go to the last page when the last page button is clicked', async () => {
             await clickLastPage();
             const element = component.find('tbody').find('tr').at(0);
-            expect(element.find('td').text()).toEqual('"Object 15":{...}2 items');
+            expect(element.find('td').text()).toEqual('"Object 15":{...}1 item');
         });
         it('Should go to the first page when the first page button is clicked', async () => {
             await clickLastPage();
             await clickFirstPage();
 
             const element = component.find('tbody').find('tr').at(0);
-            expect(element.find('td').text()).toEqual('"Object 0":{...}2 items');
+            expect(element.find('td').text()).toEqual('"Object 0":{...}1 item');
         });
         it('Should go to the previous page when the previous page button is clicked', async () => {
             await clickLastPage();
             await clickPreviousPage();
 
             const element = component.find('tbody').find('tr').at(0);
-            expect(element.find('td').text()).toEqual('"Object 10":{...}2 items');
+            expect(element.find('td').text()).toEqual('"Object 10":{...}1 item');
         });
     });
 });
