@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import { Box, Container, Grid, makeStyles, Typography } from '@material-ui/core';
+import IntervalDataTable from './IntervalDataTable';
+import NominalDataTable from './NominalDataTable';
+import OrdinalDataTable from './OrdinalDataTable';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,12 +27,24 @@ const useStyles = makeStyles((theme) => ({
 export default function ViewAnalysedData() {
     const classes = useStyles();
     return (
-        <Grid className={classes.root} container direction="column" justify="flex-start" alignItems="center">
-            <Container style={{ marginBottom: 20 }}>
-                <Typography variant="h6" style={{ marginBottom: 5 }}>
-                    Settings
-                </Typography>
-            </Container>
-        </Grid>
+        <Box
+            display="flex"
+            justifyContent="center"
+            flexDirection="row"
+            alignItems="center"
+            className={classes.root}
+            id={'view-imported-data'}
+            my={15}
+        >
+            <Box mx={5}>
+                <IntervalDataTable />
+            </Box>
+            <Box mx={5}>
+                <NominalDataTable />
+            </Box>
+            <Box mx={5}>
+                <OrdinalDataTable />
+            </Box>
+        </Box>
     );
 }

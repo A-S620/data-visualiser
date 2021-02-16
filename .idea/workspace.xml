@@ -5,17 +5,10 @@
       <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/NominalDataTable.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/OrdinalDataTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Visualisations.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/PlottingNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/PlottingPage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/PlottingNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/PlottingNav.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,14 +432,7 @@
       <workItem from="1613379191976" duration="9000" />
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
-      <workItem from="1613465928885" duration="2822000" />
-    </task>
-    <task id="LOCAL-00192" summary="Updated ReducerActions and ReducerActionTypes with barPlotOptions and currentBarVisualisation">
-      <created>1612273347013</created>
-      <option name="number" value="00192" />
-      <option name="presentableId" value="LOCAL-00192" />
-      <option name="project" value="LOCAL" />
-      <updated>1612273347013</updated>
+      <workItem from="1613465928885" duration="6084000" />
     </task>
     <task id="LOCAL-00193" summary="Created Line folder in Plotting in Interfaces">
       <created>1612273437845</created>
@@ -784,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613387670720</updated>
     </task>
-    <option name="localTasksCounter" value="241" />
+    <task id="LOCAL-00241" summary="Addressing terminal warnings and refactoring">
+      <created>1613469196988</created>
+      <option name="number" value="00241" />
+      <option name="presentableId" value="LOCAL-00241" />
+      <option name="project" value="LOCAL" />
+      <updated>1613469196989</updated>
+    </task>
+    <option name="localTasksCounter" value="242" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -792,7 +785,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated BarSeriesCreateVis to include ordinal fields." />
     <MESSAGE value="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler" />
     <MESSAGE value="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components" />
@@ -817,7 +809,8 @@
     <MESSAGE value="Created ViewAnalysedData and ViewImportedData pages and updated UserNavigation + unit tests" />
     <MESSAGE value="Created ImportedDataTable UI Component and Unit tests" />
     <MESSAGE value="Updated UserNavigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated UserNavigation" />
+    <MESSAGE value="Addressing terminal warnings and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Addressing terminal warnings and refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
