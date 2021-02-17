@@ -8,7 +8,7 @@ afterEach(() => {
     resetData.resetImportedDataState();
 });
 describe('AnalyseBinaryData domain component', () => {
-    it('Should add binary objects correctly', () => {
+    it('Should add binary objects correctly ', () => {
         const testData: IImportedFileData = {
             dataFields: ['col1', 'col2', 'col3'],
             dataObjects: [
