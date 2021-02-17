@@ -12,6 +12,8 @@ export const NOMINAL_FIELDS_ADDED = 'nominalFieldsAdded';
 export const NOMINAL_DATA_OBJECTS_ADDED = 'nominalDataObjectsAdded';
 export const ORDINAL_FIELDS_ADDED = 'ordinalFieldsAdded';
 export const ORDINAL_DATA_OBJECTS_ADDED = 'ordinalDataObjectsAdded';
+export const BINARY_FIELDS_ADDED = 'binaryFieldsAdded';
+export const BINARY_DATA_OBJECTS_ADDED = 'binaryDataObjectsAdded';
 export const ANALYSED_DATA_SLICE_RESET = 'analysedDataSliceReset';
 
 //plottingOptions slice

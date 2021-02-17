@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Analyse/IAnalysedFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Analyse/IAnalysedFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/BarSeries/BarSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +143,19 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -428,14 +432,7 @@
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
       <workItem from="1613465928885" duration="8324000" />
-      <workItem from="1613552708939" duration="968000" />
-    </task>
-    <task id="LOCAL-00200" summary="Restructuring ReduxStoreHandling to include Plotting folder">
-      <created>1612372473558</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1612372473558</updated>
+      <workItem from="1613552708939" duration="1375000" />
     </task>
     <task id="LOCAL-00201" summary="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests">
       <created>1612373246898</created>
@@ -773,7 +770,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613553286012</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests.">
+      <created>1613553793904</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1613553793904</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,7 +785,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Completed BarSeriesVis UI Component and unit tests" />
     <MESSAGE value="Added markSeriesOptions, currentMarkVisualisation to Redux Store" />
     <MESSAGE value="Updated ReducerActionTypes with mark options and mark current visualisation" />
     <MESSAGE value="Created IMarkSeriesCreateVis and IMarkSeriesOptions interfaces" />
@@ -806,7 +809,8 @@
     <MESSAGE value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Fixing all TypeScript errors" />
     <MESSAGE value="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice" />
+    <MESSAGE value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

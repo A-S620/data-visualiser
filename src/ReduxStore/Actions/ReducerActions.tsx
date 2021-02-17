@@ -51,6 +51,14 @@ export const addOrdinalDataObjects = (ordinalDataObjects: Array<object>) => ({
     type: reducerActionTypes.ORDINAL_DATA_OBJECTS_ADDED,
     payload: ordinalDataObjects,
 });
+export const addBinaryFields = (binaryFields: Array<string>) => ({
+    type: reducerActionTypes.BINARY_FIELDS_ADDED,
+    payload: binaryFields,
+});
+export const addBinaryDataObjects = (binaryDataObjects: Array<object>) => ({
+    type: reducerActionTypes.BINARY_DATA_OBJECTS_ADDED,
+    payload: binaryDataObjects,
+});
 export const resetAnalysedData = () => ({
     type: reducerActionTypes.ANALYSED_DATA_SLICE_RESET,
 });
