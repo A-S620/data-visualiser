@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -432,14 +431,7 @@
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
       <workItem from="1613465928885" duration="8324000" />
-      <workItem from="1613552708939" duration="1375000" />
-    </task>
-    <task id="LOCAL-00201" summary="Refactored Plot to Series&#10;Created: CreateBarSeriesOptions, GetBarSeriesOptions, ResetBarSeriesOptions&#10;TODO: Unit tests">
-      <created>1612373246898</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1612373246898</updated>
+      <workItem from="1613552708939" duration="1645000" />
     </task>
     <task id="LOCAL-00202" summary="Did unit tests for: CreateBarSeriesOptions, GetBarSeriesOptions and ResetBarSeriesOptions">
       <created>1612427752460</created>
@@ -777,7 +769,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613553793904</updated>
     </task>
-    <option name="localTasksCounter" value="250" />
+    <task id="LOCAL-00250" summary="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests">
+      <created>1613554157101</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1613554157101</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -785,7 +784,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added markSeriesOptions, currentMarkVisualisation to Redux Store" />
     <MESSAGE value="Updated ReducerActionTypes with mark options and mark current visualisation" />
     <MESSAGE value="Created IMarkSeriesCreateVis and IMarkSeriesOptions interfaces" />
     <MESSAGE value="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests" />
@@ -810,7 +808,8 @@
     <MESSAGE value="Fixing all TypeScript errors" />
     <MESSAGE value="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice" />
     <MESSAGE value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
+    <MESSAGE value="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
