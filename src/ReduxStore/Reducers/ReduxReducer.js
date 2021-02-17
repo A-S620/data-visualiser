@@ -104,6 +104,8 @@ export default function reduxReducer(state = ReduxState, action) {
                     nominalDataObjects: [],
                     ordinalFields: [],
                     ordinalDataObjects: [],
+                    binaryFields: [],
+                    binaryDataObjects: [],
                 },
             };
 

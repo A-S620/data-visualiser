@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ViewImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ViewImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,17 +143,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -445,14 +418,8 @@
       <workItem from="1613379191976" duration="9000" />
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
-      <workItem from="1613465928885" duration="8223000" />
-    </task>
-    <task id="LOCAL-00198" summary="Refactored LinePlot to LineSeries">
-      <created>1612372019059</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1612372019060</updated>
+      <workItem from="1613465928885" duration="8324000" />
+      <workItem from="1613552708939" duration="461000" />
     </task>
     <task id="LOCAL-00199" summary="Refactored BarPlot to BarSeries">
       <created>1612372184083</created>
@@ -790,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613476039871</updated>
     </task>
-    <option name="localTasksCounter" value="247" />
+    <task id="LOCAL-00247" summary="Fixing all TypeScript errors">
+      <created>1613476790160</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1613476790160</updated>
+    </task>
+    <option name="localTasksCounter" value="248" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -798,7 +772,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Started BarSeriesOptions + unit tests" />
     <MESSAGE value="Completed BarSeriesOptions UI Component and unit tests" />
     <MESSAGE value="Completed BarSeriesVis UI Component and unit tests" />
     <MESSAGE value="Added markSeriesOptions, currentMarkVisualisation to Redux Store" />
@@ -823,7 +796,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
+    <MESSAGE value="Fixing all TypeScript errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing all TypeScript errors" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
