@@ -20,7 +20,7 @@ export class AnalyseNominalData {
         const objectToReturn: object = {};
         const nominalValues = this.getAllNominalValues(field);
         for (const value of nominalValues) {
-            fieldArray.push(this.createNominalObject(value, nominalValues));
+            fieldArray.push(this.createNominalObject(field, value, nominalValues));
         }
         // @ts-ignore
         objectToReturn[field] = fieldArray;
@@ -52,31 +52,31 @@ export class AnalyseNominalData {
         }
         return '';
     }
-    private getNominalValueCount(nominalValue: string): number {
+    private getNominalValueCount(field: string, nominalValue: string): number {
         let count = 0;
         for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
             const object = this.dataObjects[objectIndex];
-            for (const value of Object.values(object)) {
-                if (value === nominalValue) {
+            for (const [key, value] of Object.entries(object)) {
+                if (key === field && value === nominalValue) {
                     count += 1;
                 }
             }
         }
         return count;
     }
-    private getNominalValuePercent(nominalValue: string, allValues: Array<string>): number {
+    private getNominalValuePercent(field: string, nominalValue: string, allValues: Array<string>): number {
         let total = 0;
         for (const value of allValues) {
-            total += this.getNominalValueCount(value);
+            total += this.getNominalValueCount(field, value);
         }
-        const count = this.getNominalValueCount(nominalValue);
+        const count = this.getNominalValueCount(field, nominalValue);
         return Math.round((count / total) * 100);
     }
-    private createNominalObject(nominalValue: string, allValues: Array<string>): object {
+    private createNominalObject(field: string, nominalValue: string, allValues: Array<string>): object {
         return {
             name: nominalValue,
-            count: this.getNominalValueCount(nominalValue),
-            percent: this.getNominalValuePercent(nominalValue, allValues),
+            count: this.getNominalValueCount(field, nominalValue),
+            percent: this.getNominalValuePercent(field, nominalValue, allValues),
         };
     }
 }

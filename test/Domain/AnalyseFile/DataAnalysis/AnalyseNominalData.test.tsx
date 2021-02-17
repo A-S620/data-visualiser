@@ -2,6 +2,7 @@ import 'jsdom-global/register';
 import { AnalyseNominalData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import { AnalyseOrdinalData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData';
 
 describe('AnalyseNominalData domain component', () => {
     it('Should add nominal objects correctly', () => {
@@ -60,7 +61,7 @@ describe('AnalyseNominalData domain component', () => {
             dataObjects: [
                 { col1: '32', col2: 'cool', col3: 'foo' },
                 { col1: '79', col2: '5', col3: 'bar' },
-                { col1: '76', col2: '23', col4: 'bob' },
+                { col1: '76', col2: '23', col4: 'tob' },
                 { col1: '7', col2: '3', col3: 'tob' },
             ],
             dataArrays: [],
@@ -103,5 +104,22 @@ describe('AnalyseNominalData domain component', () => {
                 ],
             },
         ]);
+    });
+    it('Should be empty if there are no nominal fields', () => {
+        const testData: IImportedFileData = {
+            dataFields: ['col1', 'col2', 'col3'],
+            dataObjects: [
+                { col1: '32', col2: 'cool', col3: 'yes' },
+                { col1: '79', col3: 'yes' },
+                { col1: '76', col2: '23', col3: 'no' },
+                { col1: '7', col2: '3', col3: 'no' },
+            ],
+            dataArrays: [],
+        };
+        const createImportedData = new CreateImportedData(testData);
+        createImportedData.createDataFields();
+        createImportedData.createDataAsObjects();
+        const analyseData = new AnalyseNominalData([]);
+        expect(analyseData.validateNominalData()).toEqual([]);
     });
 });

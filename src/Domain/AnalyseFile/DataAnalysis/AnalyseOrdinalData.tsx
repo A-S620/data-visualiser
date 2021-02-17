@@ -20,7 +20,7 @@ export class AnalyseOrdinalData {
         const objectToReturn: object = {};
         const allOrdinalValuesForField = this.getOrdinalValuesForField(field);
         for (const value of allOrdinalValuesForField) {
-            fieldArray.push(this.createOrdinalValueObject(value, allOrdinalValuesForField));
+            fieldArray.push(this.createOrdinalValueObject(field, value, allOrdinalValuesForField));
         }
         // @ts-ignore
         objectToReturn[field] = fieldArray;
@@ -38,31 +38,31 @@ export class AnalyseOrdinalData {
         }
         return ordinalValuesForField;
     }
-    private getOrdinalValueCount(ordinalValue: string): number {
+    private getOrdinalValueCount(field: string, ordinalValue: string): number {
         let count = 0;
         for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
             const object = this.dataObjects[objectIndex];
-            for (const value of Object.values(object)) {
-                if (value === ordinalValue) {
+            for (const [key, value] of Object.entries(object)) {
+                if (key === field && value === ordinalValue) {
                     count += 1;
                 }
             }
         }
         return count;
     }
-    private getOrdinalValuePercent(ordinalValue: string, allValues: Array<string>): number {
+    private getOrdinalValuePercent(field: string, ordinalValue: string, allValues: Array<string>): number {
         let total = 0;
         for (const value of allValues) {
-            total += this.getOrdinalValueCount(value);
+            total += this.getOrdinalValueCount(field, value);
         }
-        const count = this.getOrdinalValueCount(ordinalValue);
+        const count = this.getOrdinalValueCount(field, ordinalValue);
         return Math.round((count / total) * 100);
     }
-    private createOrdinalValueObject(ordinalValue: string, allValues: Array<string>): object {
+    private createOrdinalValueObject(field: string, ordinalValue: string, allValues: Array<string>): object {
         return {
             name: ordinalValue,
-            count: this.getOrdinalValueCount(ordinalValue),
-            percent: this.getOrdinalValuePercent(ordinalValue, allValues),
+            count: this.getOrdinalValueCount(field, ordinalValue),
+            percent: this.getOrdinalValuePercent(field, ordinalValue, allValues),
         };
     }
 }

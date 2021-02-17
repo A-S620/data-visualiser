@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,8 +126,10 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -434,14 +437,7 @@
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
       <workItem from="1613465928885" duration="8324000" />
-      <workItem from="1613552708939" duration="2630000" />
-    </task>
-    <task id="LOCAL-00203" summary="Created CreateCurrentBarVisual, GetCurrentBarVisual and ResetCurrentBarVisual &#10;TODO: unit tests">
-      <created>1612428357196</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1612428357196</updated>
+      <workItem from="1613552708939" duration="6651000" />
     </task>
     <task id="LOCAL-00204" summary="Did unit tests for CreateCurrentBarVisual, GetCurrentBarVisual and ResetCurrentBarVisual">
       <created>1612436376277</created>
@@ -779,7 +775,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613554405543</updated>
     </task>
-    <option name="localTasksCounter" value="252" />
+    <task id="LOCAL-00252" summary="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests">
+      <created>1613555393832</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1613555393832</updated>
+    </task>
+    <option name="localTasksCounter" value="253" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -787,7 +790,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created IMarkSeriesCreateVis and IMarkSeriesOptions interfaces" />
     <MESSAGE value="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with mark series options and current mark visual. Updated unit tests" />
     <MESSAGE value="Created Redux Store handling components: CreateMarkSeriesOptions, ResetMarkSeriesOptions and GetMarkSeriesOptions and did unit tests" />
@@ -812,7 +814,8 @@
     <MESSAGE value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with binaryFields and binaryDataObjects. Updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ReduxReducer with binaryFields and binaryDataObjects. Updated unit tests" />
+    <MESSAGE value="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
