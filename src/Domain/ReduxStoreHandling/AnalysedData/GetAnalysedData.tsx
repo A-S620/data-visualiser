@@ -23,6 +23,12 @@ export default class GetAnalysedData {
     private static getOrdinalDataObjects(): Array<object> {
         return store.getState().analysedData.ordinalDataObjects;
     }
+    private static getBinaryFields(): Array<string> {
+        return store.getState().analysedData.binaryFields;
+    }
+    private static getBinaryDataObjects(): Array<object> {
+        return store.getState().analysedData.binaryDataObjects;
+    }
     public getAnalysedData(): IAnalysedFileData {
         return {
             fields: GetAnalysedData.getFields(),
@@ -32,8 +38,8 @@ export default class GetAnalysedData {
             nominalDataObjects: GetAnalysedData.getNominalDataObjects(),
             ordinalFields: GetAnalysedData.getOrdinalFields(),
             ordinalDataObjects: GetAnalysedData.getOrdinalDataObjects(),
-            binaryFields: [],
-            binaryDataObjects: [],
+            binaryFields: GetAnalysedData.getBinaryFields(),
+            binaryDataObjects: GetAnalysedData.getBinaryDataObjects(),
         };
     }
 }

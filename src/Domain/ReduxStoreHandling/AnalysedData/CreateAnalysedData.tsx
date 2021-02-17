@@ -1,5 +1,7 @@
 import { store } from '../../../ReduxStore/store';
 import {
+    addBinaryDataObjects,
+    addBinaryFields,
     addFields,
     addIntervalDataObjects,
     addIntervalFields,
@@ -37,6 +39,12 @@ export default class CreateAnalysedData {
     public createOrdinalDataObjects() {
         store.dispatch(addOrdinalDataObjects(this.analysedFileData.ordinalDataObjects));
     }
+    public createBinaryFields() {
+        store.dispatch(addBinaryFields(this.analysedFileData.binaryFields));
+    }
+    public createBinaryDataObjects() {
+        store.dispatch(addBinaryDataObjects(this.analysedFileData.binaryDataObjects));
+    }
     public createAll() {
         this.createFields();
         this.createIntervalFields();
@@ -45,5 +53,7 @@ export default class CreateAnalysedData {
         this.createNominalDataObjects();
         this.createOrdinalFields();
         this.createOrdinalDataObjects();
+        this.createBinaryFields();
+        this.createBinaryDataObjects();
     }
 }
