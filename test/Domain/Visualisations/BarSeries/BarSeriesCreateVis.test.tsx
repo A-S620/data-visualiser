@@ -40,6 +40,8 @@ beforeAll(() => {
                 ],
             },
         ],
+        binaryFields: [],
+        binaryDataObjects: [],
     };
     const createAnalysedData = new CreateAnalysedData(analysedFileData);
     createAnalysedData.createNominalFields();

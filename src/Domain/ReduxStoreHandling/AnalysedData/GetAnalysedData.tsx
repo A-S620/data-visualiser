@@ -32,6 +32,8 @@ export default class GetAnalysedData {
             nominalDataObjects: GetAnalysedData.getNominalDataObjects(),
             ordinalFields: GetAnalysedData.getOrdinalFields(),
             ordinalDataObjects: GetAnalysedData.getOrdinalDataObjects(),
+            binaryFields: [],
+            binaryDataObjects: [],
         };
     }
 }

@@ -35,6 +35,8 @@ beforeAll(() => {
         nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
         ordinalFields: [],
         ordinalDataObjects: [],
+        binaryFields: [],
+        binaryDataObjects: [],
     };
     const createAnalysedFileData = new CreateAnalysedData(analysedFileData);
 

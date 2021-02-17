@@ -76,6 +76,8 @@ export class AnalyseFileData {
             nominalDataObjects: this.nominalDataObjects,
             ordinalFields: this.ordinalFields,
             ordinalDataObjects: this.ordinalDataObjects,
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createFields();

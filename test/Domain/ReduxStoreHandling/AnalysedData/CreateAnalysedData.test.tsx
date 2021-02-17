@@ -22,6 +22,8 @@ const analysedFileData: IAnalysedFileData = {
     nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
     ordinalFields: ['col4'],
     ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+    binaryFields: [],
+    binaryDataObjects: [],
 };
 //Runs before each test
 beforeEach(() => {

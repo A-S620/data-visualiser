@@ -33,6 +33,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createFields();
@@ -63,6 +65,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalFields();
@@ -89,6 +93,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
@@ -118,6 +124,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalFields();
@@ -144,6 +152,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalDataObjects();
@@ -173,6 +183,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createOrdinalFields();
@@ -198,6 +210,8 @@ describe('ResetAnalysedData domain component', () => {
             nominalDataObjects: [{ col3: 'female' }, { col3: 'male' }, { col3: 'female' }],
             ordinalFields: ['col4'],
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
+            binaryFields: [],
+            binaryDataObjects: [],
         };
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createOrdinalDataObjects();
