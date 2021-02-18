@@ -9,7 +9,7 @@ import ResetImportedData from '../../../../src/Domain/ReduxStoreHandling/Importe
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import OrdinalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/OrdinalDataTable';
+import OrdinalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/Tables/OrdinalDataTable';
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [

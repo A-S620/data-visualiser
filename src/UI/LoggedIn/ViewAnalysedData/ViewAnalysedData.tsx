@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box, makeStyles } from '@material-ui/core';
-import IntervalDataTable from './IntervalDataTable';
-import NominalDataTable from './NominalDataTable';
-import OrdinalDataTable from './OrdinalDataTable';
+import IntervalDataTable from './Tables/IntervalDataTable';
+import NominalDataTable from './Tables/NominalDataTable';
+import OrdinalDataTable from './Tables/OrdinalDataTable';
+import BinaryDataTable from './Tables/BinaryDataTable';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -44,6 +45,9 @@ export default function ViewAnalysedData() {
             </Box>
             <Box mx={5}>
                 <OrdinalDataTable />
+            </Box>
+            <Box mx={5}>
+                <BinaryDataTable />
             </Box>
         </Box>
     );

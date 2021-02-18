@@ -9,7 +9,7 @@ import ResetImportedData from '../../../../src/Domain/ReduxStoreHandling/Importe
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import NominalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/Tables/NominalDataTable';
+import BinaryDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/Tables/BinaryDataTable';
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [
@@ -20,21 +20,21 @@ beforeEach(() => {
         ],
         dataObjects: [
             {
-                col1: 'lmao',
-                col2: 'huh',
-                col3: 'bruh',
-                col4: 'oop',
-                col5: 'meh',
-                col6: 'brr',
-                col8: 'eek',
-                col9: 'lol',
-                col10: 'uwu',
-                col11: 'owa',
-                col12: 'nope',
-                col13: 'lool',
-                col14: 'eh',
-                col15: 'eew',
-                col16: 'eugh',
+                col1: 'yes',
+                col2: 'true',
+                col3: 'red',
+                col4: 'yes',
+                col5: 'true',
+                col6: 'red',
+                col8: 'yes',
+                col9: 'false',
+                col10: 'blue',
+                col11: 'no',
+                col12: 'red',
+                col13: 'false',
+                col14: 'no',
+                col15: 'red',
+                col16: 'false',
             },
         ],
         dataFields: ['col1', 'col2', 'col3'],
@@ -43,22 +43,22 @@ beforeEach(() => {
     createImportedData.createDataAsObjects();
     createImportedData.createDataFields();
     const analyseFileData = new AnalyseFileData([
-        { field: 'col1', fieldType: FieldTypes.NOMINAL },
-        { field: 'col2', fieldType: FieldTypes.NOMINAL },
-        { field: 'col3', fieldType: FieldTypes.NOMINAL },
-        { field: 'col4', fieldType: FieldTypes.NOMINAL },
-        { field: 'col5', fieldType: FieldTypes.NOMINAL },
-        { field: 'col6', fieldType: FieldTypes.NOMINAL },
-        { field: 'col7', fieldType: FieldTypes.NOMINAL },
-        { field: 'col8', fieldType: FieldTypes.NOMINAL },
-        { field: 'col9', fieldType: FieldTypes.NOMINAL },
-        { field: 'col10', fieldType: FieldTypes.NOMINAL },
-        { field: 'col11', fieldType: FieldTypes.NOMINAL },
-        { field: 'col12', fieldType: FieldTypes.NOMINAL },
-        { field: 'col13', fieldType: FieldTypes.NOMINAL },
-        { field: 'col14', fieldType: FieldTypes.NOMINAL },
-        { field: 'col15', fieldType: FieldTypes.NOMINAL },
-        { field: 'col16', fieldType: FieldTypes.NOMINAL },
+        { field: 'col1', fieldType: FieldTypes.BINARY },
+        { field: 'col2', fieldType: FieldTypes.BINARY },
+        { field: 'col3', fieldType: FieldTypes.BINARY },
+        { field: 'col4', fieldType: FieldTypes.BINARY },
+        { field: 'col5', fieldType: FieldTypes.BINARY },
+        { field: 'col6', fieldType: FieldTypes.BINARY },
+        { field: 'col7', fieldType: FieldTypes.BINARY },
+        { field: 'col8', fieldType: FieldTypes.BINARY },
+        { field: 'col9', fieldType: FieldTypes.BINARY },
+        { field: 'col10', fieldType: FieldTypes.BINARY },
+        { field: 'col11', fieldType: FieldTypes.BINARY },
+        { field: 'col12', fieldType: FieldTypes.BINARY },
+        { field: 'col13', fieldType: FieldTypes.BINARY },
+        { field: 'col14', fieldType: FieldTypes.BINARY },
+        { field: 'col15', fieldType: FieldTypes.BINARY },
+        { field: 'col16', fieldType: FieldTypes.BINARY },
     ]);
     analyseFileData.validateAnalysedData();
 });
@@ -73,18 +73,18 @@ beforeEach(
     () =>
         (component = mount(
             <Provider store={store}>
-                <NominalDataTable />
+                <BinaryDataTable />
             </Provider>
         ))
 );
 afterEach(() => component.unmount());
-describe('NominalDataTable UI Component', () => {
+describe('BinaryDataTable UI Component', () => {
     describe('General', () => {
         it('Should have a table', () => {
             expect(component.find('table')).toBeTruthy();
         });
         it('should have the correct table column', () => {
-            expect(component.find('thead').text()).toBe('Nominal Objects');
+            expect(component.find('thead').text()).toBe('Binary Objects');
         });
         it('should have the correct values in the first row', () => {
             const element = component.find('tbody').find('tr').at(0);
