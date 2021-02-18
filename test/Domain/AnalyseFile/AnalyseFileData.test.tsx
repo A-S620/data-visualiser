@@ -9,17 +9,17 @@ import { IImportedFileData } from '../../../src/Interfaces/import/IImportedFileD
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [
-            ['col1', 'col2', 'col3'],
-            [' 1', '3', 'foo'],
-            [' 2', '5', 'bar'],
-            ['c-1', '7', 'baz'],
+            ['col1', 'col2', 'col3', 'col4'],
+            [' 1', '3', 'foo', 'yes'],
+            [' 2', '5', 'bar', 'no'],
+            ['c-1', '7', 'baz', 'yes'],
         ],
         dataObjects: [
-            { col1: ' 1', col2: '3', col3: 'foo' },
-            { col1: ' 2', col2: '5', col3: 'bar' },
-            { col1: 'c-1', col2: '7', col3: 'baz' },
+            { col1: ' 1', col2: '3', col3: 'foo', col4: 'yes' },
+            { col1: ' 2', col2: '5', col3: 'bar', col4: 'no' },
+            { col1: 'c-1', col2: '7', col3: 'baz', col4: 'yes' },
         ],
-        dataFields: ['col1', 'col2', 'col3'],
+        dataFields: ['col1', 'col2', 'col3', 'col4'],
     };
     const createImportedData = new CreateImportedData(importedFileData);
     createImportedData.createDataAsObjects();
@@ -37,6 +37,7 @@ describe('AnalyseFileData domain component', () => {
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            { field: 'col4', fieldType: FieldTypes.BINARY },
         ]);
         analyseFileData.validateAnalysedData();
         const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -44,6 +45,7 @@ describe('AnalyseFileData domain component', () => {
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
+            { field: 'col4', fieldType: FieldTypes.BINARY },
         ]);
     });
     describe('Analyse Interval Data', () => {
@@ -52,6 +54,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -62,6 +65,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -77,6 +81,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -87,6 +92,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -101,12 +107,44 @@ describe('AnalyseFileData domain component', () => {
             ]);
         });
     });
+    describe('Analyse Binary Data', () => {
+        it('Should create the binary fields analysedData slice', () => {
+            const analyseFileData = new AnalyseFileData([
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
+            ]);
+            analyseFileData.validateAnalysedData();
+            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            expect(getAnalysedData.binaryFields).toEqual(['col4']);
+        });
+        it('Should create the binaryDataObjects in the analysedData slice', () => {
+            const analyseFileData = new AnalyseFileData([
+                { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
+            ]);
+            analyseFileData.validateAnalysedData();
+            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            expect(getAnalysedData.binaryDataObjects).toEqual([
+                {
+                    col4: [
+                        { value: 'yes', count: 2, percent: 67 },
+                        { value: 'no', count: 1, percent: 33 },
+                    ],
+                },
+            ]);
+        });
+    });
     describe('Analyse ordinal data', () => {
         it('Should create the ordinal fields in analysedData slice', () => {
             const analyseFileData = new AnalyseFileData([
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.ORDINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -117,6 +155,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },
                 { field: 'col3', fieldType: FieldTypes.ORDINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -137,6 +176,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.IGNORE },
                 { field: 'col2', fieldType: FieldTypes.IGNORE },
                 { field: 'col3', fieldType: FieldTypes.IGNORE },
+                { field: 'col4', fieldType: FieldTypes.IGNORE },
             ]);
             analyseFileData.validateAnalysedData();
             const getAnalysedData = new GetAnalysedData().getAnalysedData();
@@ -144,6 +184,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col1', fieldType: FieldTypes.IGNORE },
                 { field: 'col2', fieldType: FieldTypes.IGNORE },
                 { field: 'col3', fieldType: FieldTypes.IGNORE },
+                { field: 'col4', fieldType: FieldTypes.IGNORE },
             ]);
             expect(getAnalysedData.intervalFields).toEqual([]);
             expect(getAnalysedData.intervalDataObjects).toEqual([]);

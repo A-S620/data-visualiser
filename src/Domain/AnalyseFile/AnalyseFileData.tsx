@@ -4,6 +4,7 @@ import { FieldTypes, IAnalysedFileData } from '../../Interfaces/Analyse/IAnalyse
 import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { AnalyseNominalData } from './DataAnalysis/AnalyseNominalData';
 import { AnalyseOrdinalData } from './DataAnalysis/AnalyseOrdinalData';
+import { AnalyseBinaryData } from './DataAnalysis/AnalyseBinaryData';
 
 export class AnalyseFileData {
     private readonly fields: Array<object>;
@@ -13,6 +14,8 @@ export class AnalyseFileData {
     private nominalDataObjects: Array<object> = [];
     private ordinalFields: Array<string> = [];
     private ordinalDataObjects: Array<object> = [];
+    private binaryFields: Array<string> = [];
+    private binaryDataObjects: Array<object> = [];
     constructor(fields: Array<object>) {
         this.fields = fields;
     }
@@ -21,6 +24,7 @@ export class AnalyseFileData {
         this.getIntervalFields();
         this.getNominalFields();
         this.getOrdinalFields();
+        this.getBinaryFields();
         if (this.intervalFields.length > 0) {
             const analyseIntervalData = new AnalyseIntervalData(this.intervalFields);
             this.intervalDataObjects = analyseIntervalData.validateIntervalData();
@@ -32,6 +36,10 @@ export class AnalyseFileData {
         if (this.ordinalFields.length > 0) {
             const analyseOrdinalData = new AnalyseOrdinalData(this.ordinalFields);
             this.ordinalDataObjects = analyseOrdinalData.validateOrdinalData();
+        }
+        if (this.binaryFields.length > 0) {
+            const analyseBinaryData = new AnalyseBinaryData(this.binaryFields);
+            this.binaryDataObjects = analyseBinaryData.validateBinaryData();
         }
         this.createAnalysedData();
         return notifications;
@@ -66,6 +74,16 @@ export class AnalyseFileData {
             }
         }
     }
+    private getBinaryFields() {
+        for (let objIndex = 0; objIndex < this.fields.length; objIndex += 1) {
+            const field = this.fields[objIndex];
+            const fieldValue = Object.values(field)[0];
+            const fieldTypeValue = Object.values(field)[1];
+            if (fieldTypeValue === FieldTypes.BINARY) {
+                this.binaryFields.push(fieldValue);
+            }
+        }
+    }
 
     private createAnalysedData() {
         const analysedData: IAnalysedFileData = {
@@ -76,16 +94,10 @@ export class AnalyseFileData {
             nominalDataObjects: this.nominalDataObjects,
             ordinalFields: this.ordinalFields,
             ordinalDataObjects: this.ordinalDataObjects,
-            binaryFields: [],
-            binaryDataObjects: [],
+            binaryFields: this.binaryFields,
+            binaryDataObjects: this.binaryDataObjects,
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
-        createAnalysedData.createFields();
-        createAnalysedData.createIntervalFields();
-        createAnalysedData.createIntervalDataObjects();
-        createAnalysedData.createNominalFields();
-        createAnalysedData.createNominalDataObjects();
-        createAnalysedData.createOrdinalFields();
-        createAnalysedData.createOrdinalDataObjects();
+        createAnalysedData.createAll();
     }
 }

@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,15 +144,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -437,21 +431,8 @@
       <workItem from="1613379216142" duration="5699000" />
       <workItem from="1613387555113" duration="124000" />
       <workItem from="1613465928885" duration="8324000" />
-      <workItem from="1613552708939" duration="6651000" />
-    </task>
-    <task id="LOCAL-00204" summary="Did unit tests for CreateCurrentBarVisual, GetCurrentBarVisual and ResetCurrentBarVisual">
-      <created>1612436376277</created>
-      <option name="number" value="00204" />
-      <option name="presentableId" value="LOCAL-00204" />
-      <option name="project" value="LOCAL" />
-      <updated>1612436376278</updated>
-    </task>
-    <task id="LOCAL-00205" summary="Refactored CurrentLineVisual folder">
-      <created>1612436598510</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1612436598511</updated>
+      <workItem from="1613552708939" duration="6867000" />
+      <workItem from="1613639678561" duration="788000" />
     </task>
     <task id="LOCAL-00206" summary="Refactored Domain folder to include visualisations folder">
       <created>1612436742383</created>
@@ -782,7 +763,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613555393832</updated>
     </task>
-    <option name="localTasksCounter" value="253" />
+    <task id="LOCAL-00253" summary="Refactoring AnalyseNominalData and AnalyseOrdinalData and unit tests">
+      <created>1613561121988</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
+      <option name="project" value="LOCAL" />
+      <updated>1613561121988</updated>
+    </task>
+    <task id="LOCAL-00254" summary="Created AnalyseBinaryData domain componenet and did unit tests">
+      <created>1613561192849</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1613561192849</updated>
+    </task>
+    <option name="localTasksCounter" value="255" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -790,8 +785,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests" />
-    <MESSAGE value="Updated ReduxReducer with mark series options and current mark visual. Updated unit tests" />
     <MESSAGE value="Created Redux Store handling components: CreateMarkSeriesOptions, ResetMarkSeriesOptions and GetMarkSeriesOptions and did unit tests" />
     <MESSAGE value="Created Redux Store handling components: CreateCurrentMarkVisual, ResetCurrentMarkVisual and GetCurrentMarkVisual and did unit tests" />
     <MESSAGE value="Created MarkSeriesOptionsValidate domain component + unit tests" />
@@ -815,7 +808,9 @@
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests" />
+    <MESSAGE value="Refactoring AnalyseNominalData and AnalyseOrdinalData and unit tests" />
+    <MESSAGE value="Created AnalyseBinaryData domain componenet and did unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created AnalyseBinaryData domain componenet and did unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
