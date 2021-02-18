@@ -13,7 +13,7 @@ import ResetImportedData from '../../../../../src/Domain/ReduxStoreHandling/Impo
 import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
 //Test Data
-const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
+const testCSV = 'col1,col2,col3,col4\n 1,3,foo,yes\n 2,5,bar,no\nc-1,7,baz,yes';
 
 let component: ReactWrapper;
 beforeEach(() => {
@@ -64,15 +64,16 @@ describe('File Analysis component', () => {
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.NOMINAL },
                 { field: 'col3', fieldType: FieldTypes.ORDINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileHandler.validateAnalysedData();
             const fields = component.find('div#all-fields');
             console.log(fields.html());
-            expect(fields.text()).toBe('All Data fields:col1col2col3');
+            expect(fields.text()).toBe('All Data fields:col1col2col3col4');
         });
         it('Should have total fields metric', () => {
             importAndAnalyseData();
-            expect(component.find('div#total-fields').find('p').at(1).text()).toBe('3');
+            expect(component.find('div#total-fields').find('p').at(1).text()).toBe('4');
         });
         it('Should have interval fields metric', () => {
             importAndAnalyseData();
@@ -86,10 +87,14 @@ describe('File Analysis component', () => {
             importAndAnalyseData();
             expect(component.find('div#ordinal-fields').find('p').at(1).text()).toBe('1');
         });
+        it('Should have binary fields metric', () => {
+            importAndAnalyseData();
+            expect(component.find('div#binary-fields').find('p').at(1).text()).toBe('1');
+        });
         it('Should show an example object', () => {
             importAndAnalyseData();
             expect(component.find('div#json-object').text()).toBe(
-                '"Example Object":{"col1":"' + ' 1""col2":"3""col3":"foo"}'
+                '"Example Object":{"col1":"' + ' 1""col2":"3""col3":"foo""col4":"yes"}'
             );
         });
     });

@@ -71,29 +71,37 @@ function FileAnalysisComponent(props: any) {
                 </Typography>
             </Box>
 
-            <Box my={15} id="field-types-metrics" display="flex" flexDirection="row" className={classes.boxSize}>
-                <Box display="flex" flexDirection="column" id="total-fields">
+            <Box my={15} id="field-types-metrics1" display="flex" flexDirection="row" className={classes.boxSize}>
+                <Box display="flex" flexDirection="column" id="total-fields" mx={5}>
                     <Typography>Total Fields</Typography>
                     <Typography component="p" variant="h4">
                         {props.dataFields.length}
                     </Typography>
                 </Box>
-                <Box display="flex" flexDirection="column" id="interval-fields">
+                <Box display="flex" flexDirection="column" id="interval-fields" mx={5}>
                     <Typography>Interval Fields</Typography>
                     <Typography component="p" variant="h4">
                         {props.intervalFields.length}
                     </Typography>
                 </Box>
-                <Box display="flex" flexDirection="column" id="nominal-fields">
+                <Box display="flex" flexDirection="column" id="nominal-fields" mx={5}>
                     <Typography>Nominal Fields</Typography>
                     <Typography component="p" variant="h4">
                         {props.nominalFields.length}
                     </Typography>
                 </Box>
-                <Box display="flex" flexDirection="column" id="ordinal-fields">
+            </Box>
+            <Box my={15} id="field-types-metrics2" display="flex" flexDirection="row" className={classes.boxSize}>
+                <Box display="flex" flexDirection="column" id="ordinal-fields" mx={5}>
                     <Typography>Ordinal Fields</Typography>
                     <Typography component="p" variant="h4">
                         {props.ordinalFields.length}
+                    </Typography>
+                </Box>
+                <Box display="flex" flexDirection="column" id="binary-fields" mx={5}>
+                    <Typography>Binary Fields</Typography>
+                    <Typography component="p" variant="h4">
+                        {props.binaryFields.length}
                     </Typography>
                 </Box>
             </Box>
@@ -126,6 +134,8 @@ const mapStateToProps = (state: any) => ({
     nominalDataObjects: state.analysedData.nominalDataObjects,
     ordinalFields: state.analysedData.ordinalFields,
     ordinalDataObjects: state.analysedData.ordinalDataObjects,
+    binaryFields: state.analysedData.binaryFields,
+    binaryDataObjects: state.analysedData.binaryDataObjects,
     dataFields: state.importedData.dataFields,
     dataObjects: state.importedData.dataObjects,
 });

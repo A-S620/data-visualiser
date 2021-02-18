@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -432,14 +433,7 @@
       <workItem from="1613387555113" duration="124000" />
       <workItem from="1613465928885" duration="8324000" />
       <workItem from="1613552708939" duration="6867000" />
-      <workItem from="1613639678561" duration="788000" />
-    </task>
-    <task id="LOCAL-00206" summary="Refactored Domain folder to include visualisations folder">
-      <created>1612436742383</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1612436742383</updated>
+      <workItem from="1613639678561" duration="1322000" />
     </task>
     <task id="LOCAL-00207" summary="Fixed failing unit tests">
       <created>1612437082121</created>
@@ -777,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613561192849</updated>
     </task>
-    <option name="localTasksCounter" value="255" />
+    <task id="LOCAL-00255" summary="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests">
+      <created>1613640687909</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1613640687910</updated>
+    </task>
+    <option name="localTasksCounter" value="256" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -785,7 +786,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created Redux Store handling components: CreateMarkSeriesOptions, ResetMarkSeriesOptions and GetMarkSeriesOptions and did unit tests" />
     <MESSAGE value="Created Redux Store handling components: CreateCurrentMarkVisual, ResetCurrentMarkVisual and GetCurrentMarkVisual and did unit tests" />
     <MESSAGE value="Created MarkSeriesOptionsValidate domain component + unit tests" />
     <MESSAGE value="Created MarkSeriesCreateVis + unit tests" />
@@ -810,7 +810,8 @@
     <MESSAGE value="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Refactoring AnalyseNominalData and AnalyseOrdinalData and unit tests" />
     <MESSAGE value="Created AnalyseBinaryData domain componenet and did unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created AnalyseBinaryData domain componenet and did unit tests" />
+    <MESSAGE value="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
