@@ -53,7 +53,8 @@ export class BarSeriesCreateVis {
     private getFieldValues(xValue: string): object {
         const { nominalDataObjects } = this.getAnalysedData();
         const { ordinalDataObjects } = this.getAnalysedData();
-        const allObjects = nominalDataObjects.concat(ordinalDataObjects);
+        const { binaryDataObjects } = this.getAnalysedData();
+        const allObjects = [...nominalDataObjects, ...ordinalDataObjects, ...binaryDataObjects];
         for (var index = 0; index < allObjects.length; index += 1) {
             if (Object.keys(allObjects[index])[0] === xValue) {
                 return allObjects[index];
@@ -69,6 +70,7 @@ export class BarSeriesCreateVis {
             const valueObject = arrayOfValues[index];
             const dataObject = this.createDataObject(valueObject, yValue);
             data.push(dataObject);
+            console.log(dataObject);
         }
         return data;
     }

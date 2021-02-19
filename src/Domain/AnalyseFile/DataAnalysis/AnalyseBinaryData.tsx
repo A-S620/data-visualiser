@@ -60,7 +60,7 @@ export class AnalyseBinaryData {
     }
     private createValueObject(field: string, binaryValue: string, allValues: Array<string>): object {
         return {
-            value: binaryValue,
+            name: binaryValue,
             count: this.getValueCount(field, binaryValue),
             percent: this.getValuePercent(field, binaryValue, allValues),
         };

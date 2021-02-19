@@ -131,8 +131,8 @@ describe('AnalyseFileData domain component', () => {
             expect(getAnalysedData.binaryDataObjects).toEqual([
                 {
                     col4: [
-                        { value: 'yes', count: 2, percent: 67 },
-                        { value: 'no', count: 1, percent: 33 },
+                        { name: 'yes', count: 2, percent: 67 },
+                        { name: 'no', count: 1, percent: 33 },
                     ],
                 },
             ]);

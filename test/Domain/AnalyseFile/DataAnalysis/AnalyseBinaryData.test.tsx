@@ -27,12 +27,12 @@ describe('AnalyseBinaryData domain component', () => {
             {
                 col3: [
                     {
-                        value: 'yes',
+                        name: 'yes',
                         count: 2,
                         percent: 50,
                     },
                     {
-                        value: 'no',
+                        name: 'no',
                         count: 2,
                         percent: 50,
                     },
@@ -41,12 +41,12 @@ describe('AnalyseBinaryData domain component', () => {
             {
                 col4: [
                     {
-                        value: 'true',
+                        name: 'true',
                         count: 2,
                         percent: 50,
                     },
                     {
-                        value: 'false',
+                        name: 'false',
                         count: 2,
                         percent: 50,
                     },
@@ -73,12 +73,12 @@ describe('AnalyseBinaryData domain component', () => {
             {
                 col3: [
                     {
-                        value: 'no',
+                        name: 'no',
                         count: 2,
                         percent: 67,
                     },
                     {
-                        value: 'yes',
+                        name: 'yes',
                         count: 1,
                         percent: 33,
                     },
@@ -105,12 +105,12 @@ describe('AnalyseBinaryData domain component', () => {
             {
                 col3: [
                     {
-                        value: 'yes',
+                        name: 'yes',
                         count: 2,
                         percent: 67,
                     },
                     {
-                        value: 'no',
+                        name: 'no',
                         count: 1,
                         percent: 33,
                     },
@@ -137,12 +137,12 @@ describe('AnalyseBinaryData domain component', () => {
             {
                 col3: [
                     {
-                        value: 'yes',
+                        name: 'yes',
                         count: 2,
                         percent: 50,
                     },
                     {
-                        value: 'no',
+                        name: 'no',
                         count: 2,
                         percent: 50,
                     },

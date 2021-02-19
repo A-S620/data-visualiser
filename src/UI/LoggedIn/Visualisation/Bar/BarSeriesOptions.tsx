@@ -47,7 +47,7 @@ function BarSeriesOptions(props: any) {
         xValue: '',
         yValue: yValue.count,
     });
-    const allValues = props.nominalFields.concat(props.ordinalFields);
+    const allValues = [...props.nominalFields, ...props.ordinalFields, ...props.binaryFields];
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
         outcomeMessage: string;
@@ -319,5 +319,6 @@ function BarSeriesOptions(props: any) {
 const mapStateToProps = (state: any) => ({
     nominalFields: state.analysedData.nominalFields,
     ordinalFields: state.analysedData.ordinalFields,
+    binaryFields: state.analysedData.binaryFields,
 });
 export default connect(mapStateToProps, {})(BarSeriesOptions);
