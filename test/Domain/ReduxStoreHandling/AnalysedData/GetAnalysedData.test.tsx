@@ -26,6 +26,8 @@ beforeEach(() => {
         ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         binaryFields: ['col5'],
         binaryDataObjects: [{ name: 'true', count: 5, percentage: 20 }],
+        ignoreFields: [],
+        ignoreDataObjects: [],
     };
     const createStoreHandler = new CreateAnalysedData(analysedFileData);
     createStoreHandler.createAll();

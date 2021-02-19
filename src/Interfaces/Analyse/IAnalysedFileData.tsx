@@ -8,6 +8,8 @@ export interface IAnalysedFileData {
     ordinalDataObjects: Array<object>;
     binaryFields: Array<string>;
     binaryDataObjects: Array<object>;
+    ignoreFields: Array<string>;
+    ignoreDataObjects: Array<object>;
 }
 export enum FieldTypes {
     INTERVAL = 'interval',

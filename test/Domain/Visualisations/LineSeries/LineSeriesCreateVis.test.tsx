@@ -29,6 +29,8 @@ beforeAll(() => {
         ordinalDataObjects: [],
         binaryFields: [],
         binaryDataObjects: [],
+        ignoreFields: [],
+        ignoreDataObjects: [],
     };
     const createAnalysedData = new CreateAnalysedData(analysedFileData);
     createAnalysedData.createIntervalFields();

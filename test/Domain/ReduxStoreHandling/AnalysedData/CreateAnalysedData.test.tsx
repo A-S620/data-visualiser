@@ -25,6 +25,8 @@ const analysedFileData: IAnalysedFileData = {
     ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
     binaryFields: ['col5'],
     binaryDataObjects: [{ name: 'true', count: 5, percentage: 20 }],
+    ignoreFields: [],
+    ignoreDataObjects: [],
 };
 //Runs before each test
 beforeEach(() => {
@@ -133,6 +135,8 @@ describe('CreateAnalysedData domain component', () => {
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
             binaryFields: ['col5'],
             binaryDataObjects: [{ name: 'true', count: 5, percentage: 20 }],
+            ignoreFields: [],
+            ignoreDataObjects: [],
         });
     });
 });

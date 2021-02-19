@@ -70,7 +70,6 @@ export class BarSeriesCreateVis {
             const valueObject = arrayOfValues[index];
             const dataObject = this.createDataObject(valueObject, yValue);
             data.push(dataObject);
-            console.log(dataObject);
         }
         return data;
     }

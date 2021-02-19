@@ -61,6 +61,8 @@ beforeAll(() => {
         ],
         binaryFields: [],
         binaryDataObjects: [],
+        ignoreFields: [],
+        ignoreDataObjects: [],
     };
     const createAnalysedFileData = new CreateAnalysedData(analysedFileData);
 

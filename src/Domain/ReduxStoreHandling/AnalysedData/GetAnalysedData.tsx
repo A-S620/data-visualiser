@@ -40,6 +40,8 @@ export default class GetAnalysedData {
             ordinalDataObjects: GetAnalysedData.getOrdinalDataObjects(),
             binaryFields: GetAnalysedData.getBinaryFields(),
             binaryDataObjects: GetAnalysedData.getBinaryDataObjects(),
+            ignoreFields: [],
+            ignoreDataObjects: [],
         };
     }
 }

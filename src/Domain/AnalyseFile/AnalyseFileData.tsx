@@ -96,6 +96,8 @@ export class AnalyseFileData {
             ordinalDataObjects: this.ordinalDataObjects,
             binaryFields: this.binaryFields,
             binaryDataObjects: this.binaryDataObjects,
+            ignoreFields: [],
+            ignoreDataObjects: [],
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createAll();
