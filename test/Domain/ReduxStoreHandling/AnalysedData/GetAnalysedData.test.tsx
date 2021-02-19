@@ -13,6 +13,7 @@ beforeEach(() => {
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
             { field: 'col4', fieldType: FieldTypes.ORDINAL },
             { field: 'col5', fieldType: FieldTypes.BINARY },
+            { field: 'col6', fieldType: FieldTypes.IGNORE },
         ],
         intervalFields: ['col1', 'col2'],
         intervalDataObjects: [
@@ -26,8 +27,8 @@ beforeEach(() => {
         ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
         binaryFields: ['col5'],
         binaryDataObjects: [{ name: 'true', count: 5, percentage: 20 }],
-        ignoreFields: [],
-        ignoreDataObjects: [],
+        ignoreFields: ['col6'],
+        ignoreDataObjects: [{ col6: 'female' }, { col6: 'male' }, { col6: 'female' }],
     };
     const createStoreHandler = new CreateAnalysedData(analysedFileData);
     createStoreHandler.createAll();
@@ -47,6 +48,7 @@ describe('ResetAnalysedData domain component', () => {
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
             { field: 'col4', fieldType: FieldTypes.ORDINAL },
             { field: 'col5', fieldType: FieldTypes.BINARY },
+            { field: 'col6', fieldType: FieldTypes.IGNORE },
         ]);
     });
     it('Should return the correct intervalFields if the getIntegerFields method is called', () => {
@@ -101,6 +103,20 @@ describe('ResetAnalysedData domain component', () => {
 
         expect(getStoreHandler.getAnalysedData().binaryDataObjects).toStrictEqual([
             { name: 'true', count: 5, percentage: 20 },
+        ]);
+    });
+    it('Should return the correct ignoreFields if the getIgnoreFields method is called', () => {
+        const getStoreHandler = new GetAnalysedData();
+
+        expect(getStoreHandler.getAnalysedData().ignoreFields).toStrictEqual(['col6']);
+    });
+    it('Should return the correct ignore data objects if the getIgnoreDataObjects method is called', () => {
+        const getStoreHandler = new GetAnalysedData();
+
+        expect(getStoreHandler.getAnalysedData().ignoreDataObjects).toStrictEqual([
+            { col6: 'female' },
+            { col6: 'male' },
+            { col6: 'female' },
         ]);
     });
 });

@@ -3,6 +3,8 @@ import {
     addBinaryDataObjects,
     addBinaryFields,
     addFields,
+    addIgnoreDataObjects,
+    addIgnoreFields,
     addIntervalDataObjects,
     addIntervalFields,
     addNominalDataObjects,
@@ -45,6 +47,12 @@ export default class CreateAnalysedData {
     public createBinaryDataObjects() {
         store.dispatch(addBinaryDataObjects(this.analysedFileData.binaryDataObjects));
     }
+    public createIgnoreFields() {
+        store.dispatch(addIgnoreFields(this.analysedFileData.ignoreFields));
+    }
+    public createIgnoreDataObjects() {
+        store.dispatch(addIgnoreDataObjects(this.analysedFileData.ignoreDataObjects));
+    }
     public createAll() {
         this.createFields();
         this.createIntervalFields();
@@ -55,5 +63,7 @@ export default class CreateAnalysedData {
         this.createOrdinalDataObjects();
         this.createBinaryFields();
         this.createBinaryDataObjects();
+        this.createIgnoreFields();
+        this.createIgnoreDataObjects();
     }
 }

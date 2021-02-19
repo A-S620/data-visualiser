@@ -29,6 +29,12 @@ export default class GetAnalysedData {
     private static getBinaryDataObjects(): Array<object> {
         return store.getState().analysedData.binaryDataObjects;
     }
+    private static getIgnoreFields(): Array<string> {
+        return store.getState().analysedData.ignoreFields;
+    }
+    private static getIgnoreDataObjects(): Array<object> {
+        return store.getState().analysedData.ignoreDataObjects;
+    }
     public getAnalysedData(): IAnalysedFileData {
         return {
             fields: GetAnalysedData.getFields(),
@@ -40,8 +46,8 @@ export default class GetAnalysedData {
             ordinalDataObjects: GetAnalysedData.getOrdinalDataObjects(),
             binaryFields: GetAnalysedData.getBinaryFields(),
             binaryDataObjects: GetAnalysedData.getBinaryDataObjects(),
-            ignoreFields: [],
-            ignoreDataObjects: [],
+            ignoreFields: GetAnalysedData.getIgnoreFields(),
+            ignoreDataObjects: GetAnalysedData.getIgnoreDataObjects(),
         };
     }
 }

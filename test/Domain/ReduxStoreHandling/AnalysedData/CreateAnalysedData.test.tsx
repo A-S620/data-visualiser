@@ -12,6 +12,7 @@ const analysedFileData: IAnalysedFileData = {
         { field: 'col3', fieldType: FieldTypes.NOMINAL },
         { field: 'col4', fieldType: FieldTypes.ORDINAL },
         { field: 'col5', fieldType: FieldTypes.BINARY },
+        { field: 'col6', fieldType: FieldTypes.IGNORE },
     ],
     intervalFields: ['col1', 'col2'],
     intervalDataObjects: [
@@ -25,8 +26,8 @@ const analysedFileData: IAnalysedFileData = {
     ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
     binaryFields: ['col5'],
     binaryDataObjects: [{ name: 'true', count: 5, percentage: 20 }],
-    ignoreFields: [],
-    ignoreDataObjects: [],
+    ignoreFields: ['col6'],
+    ignoreDataObjects: [{ col6: 'female' }, { col6: 'male' }, { col6: 'female' }],
 };
 //Runs before each test
 beforeEach(() => {
@@ -49,6 +50,7 @@ describe('CreateAnalysedData domain component', () => {
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
             { field: 'col4', fieldType: FieldTypes.ORDINAL },
             { field: 'col5', fieldType: FieldTypes.BINARY },
+            { field: 'col6', fieldType: FieldTypes.IGNORE },
         ]);
     });
     it('Should add intervalFields to the intervalFields attribute in the analysedData slice', () => {
@@ -111,6 +113,22 @@ describe('CreateAnalysedData domain component', () => {
             { name: 'true', count: 5, percentage: 20 },
         ]);
     });
+    it('Should add ignore fields to the ignoreFields attribute in the analysedData slice', () => {
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createIgnoreFields();
+        const getStoreHandler = new GetAnalysedData();
+        expect(getStoreHandler.getAnalysedData().ignoreFields).toEqual(['col6']);
+    });
+    it('Should add ignore data Objects to the ignoreDataObjects attribute in the analysedData slice', () => {
+        const createStoreHandler = new CreateAnalysedData(analysedFileData);
+        createStoreHandler.createIgnoreDataObjects();
+        const getStoreHandler = new GetAnalysedData();
+        expect(getStoreHandler.getAnalysedData().ignoreDataObjects).toEqual([
+            { col6: 'female' },
+            { col6: 'male' },
+            { col6: 'female' },
+        ]);
+    });
     it('Should create all analysed data when the createAll method is used', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createAll();
@@ -122,6 +140,7 @@ describe('CreateAnalysedData domain component', () => {
                 { field: 'col3', fieldType: FieldTypes.NOMINAL },
                 { field: 'col4', fieldType: FieldTypes.ORDINAL },
                 { field: 'col5', fieldType: FieldTypes.BINARY },
+                { field: 'col6', fieldType: FieldTypes.IGNORE },
             ],
             intervalFields: ['col1', 'col2'],
             intervalDataObjects: [
@@ -135,8 +154,8 @@ describe('CreateAnalysedData domain component', () => {
             ordinalDataObjects: [{ name: '15-20', count: 5, percentage: 20 }],
             binaryFields: ['col5'],
             binaryDataObjects: [{ name: 'true', count: 5, percentage: 20 }],
-            ignoreFields: [],
-            ignoreDataObjects: [],
+            ignoreFields: ['col6'],
+            ignoreDataObjects: [{ col6: 'female' }, { col6: 'male' }, { col6: 'female' }],
         });
     });
 });
