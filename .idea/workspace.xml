@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -439,14 +437,7 @@
       <workItem from="1613465928885" duration="8324000" />
       <workItem from="1613552708939" duration="6867000" />
       <workItem from="1613639678561" duration="2230000" />
-      <workItem from="1613745203607" duration="2581000" />
-    </task>
-    <task id="LOCAL-00213" summary="Added functionality to BarSeriesCreateVis + did unit tests&#10;TODO: Handle nominal data">
-      <created>1612603198422</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1612603198422</updated>
+      <workItem from="1613745203607" duration="2817000" />
     </task>
     <task id="LOCAL-00214" summary="Refactored UI Handling folder to include Visualisations folder">
       <created>1612772904648</created>
@@ -784,7 +775,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613747979816</updated>
     </task>
-    <option name="localTasksCounter" value="262" />
+    <task id="LOCAL-00262" summary="Updated ReducerActions and ReducerActionTypes with ignoreFields,ignoreDataObjects and updated unit tests">
+      <created>1613748280750</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1613748280750</updated>
+    </task>
+    <option name="localTasksCounter" value="263" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -792,7 +790,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added functionality to MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis UI components.&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for MarkSeriesOptions and MarkSeriesVis" />
     <MESSAGE value="Created ViewAnalysedData and ViewImportedData pages and updated UserNavigation + unit tests" />
     <MESSAGE value="Created ImportedDataTable UI Component and Unit tests" />
@@ -817,7 +814,8 @@
     <MESSAGE value="Updated ReduxState with ignoreFields, ignoreDataObjects and updated unit test" />
     <MESSAGE value="Fixed Binary Data to work with BarSeries" />
     <MESSAGE value="Updated IAnalysedFileData with ignoreFields,ignoreDataObjects and updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated IAnalysedFileData with ignoreFields,ignoreDataObjects and updated unit tests" />
+    <MESSAGE value="Updated ReducerActions and ReducerActionTypes with ignoreFields,ignoreDataObjects and updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActions and ReducerActionTypes with ignoreFields,ignoreDataObjects and updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

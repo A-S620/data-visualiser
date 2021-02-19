@@ -324,6 +324,53 @@ describe('ReduxReducer', () => {
                 },
             });
         });
+        it('Should handle IGNORE_FIELDS_ADDED', () => {
+            expect(reduxReducer(analysedDataSlice, reducerActions.addIgnoreFields(['col1', 'col2', 'col3']))).toEqual({
+                analysedData: {
+                    fields: [],
+                    intervalFields: [],
+                    intervalDataObjects: [],
+                    nominalFields: [],
+                    nominalDataObjects: [],
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
+                    binaryFields: [],
+                    binaryDataObjects: [],
+                    ignoreFields: ['col1', 'col2', 'col3'],
+                    ignoreDataObjects: [],
+                },
+            });
+        });
+        it('Should handle IGNORE_DATA_OBJECTS_ADDED', () => {
+            expect(
+                reduxReducer(
+                    analysedDataSlice,
+                    reducerActions.addIgnoreDataObjects([
+                        { col1: 32, col2: 45 },
+                        { col1: 79, col2: 5 },
+                        { col1: 76, col2: 23 },
+                    ])
+                )
+            ).toEqual({
+                analysedData: {
+                    fields: [],
+                    intervalFields: [],
+                    intervalDataObjects: [],
+                    nominalFields: [],
+                    nominalDataObjects: [],
+                    ordinalFields: [],
+                    ordinalDataObjects: [],
+                    binaryFields: [],
+                    binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [
+                        { col1: 32, col2: 45 },
+                        { col1: 79, col2: 5 },
+                        { col1: 76, col2: 23 },
+                    ],
+                },
+            });
+        });
         it('Should handle ANALYSED_DATA_SLICE_RESET', () => {
             expect(
                 reduxReducer(

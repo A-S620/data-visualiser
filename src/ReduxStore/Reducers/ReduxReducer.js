@@ -110,6 +110,22 @@ export default function reduxReducer(state = ReduxState, action) {
                     binaryDataObjects: action.payload,
                 },
             };
+        case ReducerActions.IGNORE_FIELDS_ADDED:
+            return {
+                ...state,
+                analysedData: {
+                    ...state.analysedData,
+                    ignoreFields: action.payload,
+                },
+            };
+        case ReducerActions.IGNORE_DATA_OBJECTS_ADDED:
+            return {
+                ...state,
+                analysedData: {
+                    ...state.analysedData,
+                    ignoreDataObjects: action.payload,
+                },
+            };
         case ReducerActions.ANALYSED_DATA_SLICE_RESET:
             return {
                 analysedData: {
