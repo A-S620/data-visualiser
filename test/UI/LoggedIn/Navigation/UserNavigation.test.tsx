@@ -27,6 +27,7 @@ describe('UserNavigation Component', () => {
     });
     it('Should have the Plotting and Analysed Data tabs disabled when the component is first rendered', () => {
         const menu = wrapper.find('div#menu-tabs');
+        expect(menu.find('button#simple-tab-1').props().disabled).toBe(true);
         expect(menu.find('button#simple-tab-2').props().disabled).toBe(true);
         expect(menu.find('button#simple-tab-3').props().disabled).toBe(true);
     });

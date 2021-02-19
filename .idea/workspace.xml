@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/BinaryDataTable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IntervalDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/NominalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/NominalDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/OrdinalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/OrdinalDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,19 +145,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -446,14 +426,8 @@
       <workItem from="1613387555113" duration="124000" />
       <workItem from="1613465928885" duration="8324000" />
       <workItem from="1613552708939" duration="6867000" />
-      <workItem from="1613639678561" duration="2083000" />
-    </task>
-    <task id="LOCAL-00208" summary="Created BarSeriesCreateVis and BarSeriesOptionsValidate domain components basic file&#10;TODO: TDD">
-      <created>1612437406021</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1612437406021</updated>
+      <workItem from="1613639678561" duration="2230000" />
+      <workItem from="1613745203607" duration="251000" />
     </task>
     <task id="LOCAL-00209" summary="Started BarSeriesOptionsValidate TDD">
       <created>1612515366569</created>
@@ -791,7 +765,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613641226348</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests">
+      <created>1613642302173</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1613642302173</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -799,7 +780,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created MarkSeriesOptionsValidate domain component + unit tests" />
     <MESSAGE value="Created MarkSeriesCreateVis + unit tests" />
     <MESSAGE value="Created MarkSeriesOptionsHandler and MarkSeriesVisHandler&#10;TODO: Unit test" />
     <MESSAGE value="Unit tests for MarkSeriesOptionsHandler and MarkSeriesVisHandler" />
@@ -824,7 +804,8 @@
     <MESSAGE value="Created AnalyseBinaryData domain componenet and did unit tests" />
     <MESSAGE value="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests" />
     <MESSAGE value="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test" />
+    <MESSAGE value="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

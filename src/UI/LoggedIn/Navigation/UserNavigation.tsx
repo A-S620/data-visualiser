@@ -48,8 +48,14 @@ function UserNavigation(props: any) {
     };
     function tabIsDisabled(): boolean {
         return (
-            props.intervalFields.length === 0 && props.nominalFields.length === 0 && props.ordinalFields.length === 0
+            props.intervalFields.length === 0 &&
+            props.nominalFields.length === 0 &&
+            props.ordinalFields.length === 0 &&
+            props.binaryFields.length === 0
         );
+    }
+    function importTabIsDisabled(): boolean {
+        return props.dataFields.length === 0;
     }
 
     return (
@@ -65,7 +71,12 @@ function UserNavigation(props: any) {
                     id="menu-tabs"
                 >
                     <Tab label={'Home'} {...a11yProps(0)} />
-                    <Tab label={'Imported Data'} {...a11yProps(1)} />
+                    <Tab
+                        label={'Imported Data'}
+                        disabled={importTabIsDisabled()}
+                        className={classes.tab}
+                        {...a11yProps(1)}
+                    />
                     <Tab label={'Analysed Data'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(2)} />
                     <Tab label={'Plotting'} disabled={tabIsDisabled()} className={classes.tab} {...a11yProps(3)} />
                 </Tabs>
@@ -87,8 +98,10 @@ function UserNavigation(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
+    dataFields: state.importedData.dataFields,
     intervalFields: state.analysedData.intervalFields,
     nominalFields: state.analysedData.nominalFields,
     ordinalFields: state.analysedData.ordinalFields,
+    binaryFields: state.analysedData.binaryFields,
 });
 export default connect(mapStateToProps, {})(UserNavigation);
