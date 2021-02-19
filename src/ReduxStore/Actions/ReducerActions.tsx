@@ -59,6 +59,14 @@ export const addBinaryDataObjects = (binaryDataObjects: Array<object>) => ({
     type: reducerActionTypes.BINARY_DATA_OBJECTS_ADDED,
     payload: binaryDataObjects,
 });
+export const addIgnoreFields = (ignoreFields: Array<string>) => ({
+    type: reducerActionTypes.IGNORE_FIELDS_ADDED,
+    payload: ignoreFields,
+});
+export const addIgnoreDataObjects = (ignoreDataObjects: Array<object>) => ({
+    type: reducerActionTypes.IGNORE_DATA_OBJECTS_ADDED,
+    payload: ignoreDataObjects,
+});
 export const resetAnalysedData = () => ({
     type: reducerActionTypes.ANALYSED_DATA_SLICE_RESET,
 });

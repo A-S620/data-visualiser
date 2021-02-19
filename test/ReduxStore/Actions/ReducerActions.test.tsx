@@ -170,6 +170,30 @@ describe('Reducer actions', () => {
                 ])
             ).toEqual(expectedAction);
         });
+        it('Should create an action to add the ignoreFields', () => {
+            const expectedAction = {
+                type: actionTypes.IGNORE_FIELDS_ADDED,
+                payload: ['col1', 'col2', 'col3'],
+            };
+            expect(reducerActions.addIgnoreFields(['col1', 'col2', 'col3'])).toEqual(expectedAction);
+        });
+        it('Should create an action to add the ignoreDataObjects', () => {
+            const expectedAction = {
+                type: actionTypes.IGNORE_DATA_OBJECTS_ADDED,
+                payload: [
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ],
+            };
+            expect(
+                reducerActions.addIgnoreDataObjects([
+                    { col1: 32, col2: 45 },
+                    { col1: 79, col2: 5 },
+                    { col1: 76, col2: 23 },
+                ])
+            ).toEqual(expectedAction);
+        });
         it('Should create an action to reset analysed data', () => {
             const expectedAction = {
                 type: actionTypes.ANALYSED_DATA_SLICE_RESET,
