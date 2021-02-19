@@ -14,6 +14,8 @@ const ReduxState = {
         ordinalDataObjects: [],
         binaryFields: [],
         binaryDataObjects: [],
+        ignoreFields: [],
+        ignoreDataObjects: [],
     },
     lineSeriesOptions: {},
     currentLineVisualisation: {},

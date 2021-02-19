@@ -100,6 +100,8 @@ describe('ReduxReducer', () => {
                 ordinalDataObjects: [],
                 binaryFields: [],
                 binaryDataObjects: [],
+                ignoreFields: [],
+                ignoreDataObjects: [],
             },
         };
         it('Should handle FIELDS_ADDED', () => {
@@ -127,6 +129,8 @@ describe('ReduxReducer', () => {
                     ordinalDataObjects: [],
                     binaryFields: [],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -143,6 +147,8 @@ describe('ReduxReducer', () => {
                         ordinalDataObjects: [],
                         binaryFields: [],
                         binaryDataObjects: [],
+                        ignoreFields: [],
+                        ignoreDataObjects: [],
                     },
                 }
             );
@@ -172,6 +178,8 @@ describe('ReduxReducer', () => {
                     ordinalDataObjects: [],
                     binaryFields: [],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -187,6 +195,8 @@ describe('ReduxReducer', () => {
                     ordinalDataObjects: [],
                     binaryFields: [],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -215,6 +225,8 @@ describe('ReduxReducer', () => {
                     ordinalDataObjects: [],
                     binaryFields: [],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -230,6 +242,8 @@ describe('ReduxReducer', () => {
                     ordinalDataObjects: [],
                     binaryFields: [],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -258,6 +272,8 @@ describe('ReduxReducer', () => {
                     ],
                     binaryFields: [],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -273,6 +289,8 @@ describe('ReduxReducer', () => {
                     ordinalDataObjects: [],
                     binaryFields: ['col1', 'col2', 'col3'],
                     binaryDataObjects: [],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -301,6 +319,8 @@ describe('ReduxReducer', () => {
                         { col1: 79, col2: 5 },
                         { col1: 76, col2: 23 },
                     ],
+                    ignoreFields: [],
+                    ignoreDataObjects: [],
                 },
             });
         });
@@ -323,6 +343,8 @@ describe('ReduxReducer', () => {
                                 ordinalDataObjects: [],
                                 binaryFields: [],
                                 binaryDataObjects: [],
+                                ignoreFields: [],
+                                ignoreDataObjects: [],
                             },
                         },
                     ],

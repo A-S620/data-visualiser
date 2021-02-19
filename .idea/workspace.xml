@@ -4,8 +4,9 @@
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,14 +428,7 @@
       <workItem from="1613465928885" duration="8324000" />
       <workItem from="1613552708939" duration="6867000" />
       <workItem from="1613639678561" duration="2230000" />
-      <workItem from="1613745203607" duration="251000" />
-    </task>
-    <task id="LOCAL-00209" summary="Started BarSeriesOptionsValidate TDD">
-      <created>1612515366569</created>
-      <option name="number" value="00209" />
-      <option name="presentableId" value="LOCAL-00209" />
-      <option name="project" value="LOCAL" />
-      <updated>1612515366569</updated>
+      <workItem from="1613745203607" duration="643000" />
     </task>
     <task id="LOCAL-00210" summary="Started BarSeriesOptionsValidate TDD">
       <created>1612515394797</created>
@@ -772,7 +766,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613642302173</updated>
     </task>
-    <option name="localTasksCounter" value="258" />
+    <task id="LOCAL-00258" summary="Updated Imported Data tab to be  disabled when no data is imported and updated UserNavigation unit tests">
+      <created>1613745568546</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
+      <option name="project" value="LOCAL" />
+      <updated>1613745568546</updated>
+    </task>
+    <option name="localTasksCounter" value="259" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -780,7 +781,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created MarkSeriesCreateVis + unit tests" />
     <MESSAGE value="Created MarkSeriesOptionsHandler and MarkSeriesVisHandler&#10;TODO: Unit test" />
     <MESSAGE value="Unit tests for MarkSeriesOptionsHandler and MarkSeriesVisHandler" />
     <MESSAGE value="Created MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis basic UI components" />
@@ -805,7 +805,8 @@
     <MESSAGE value="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests" />
     <MESSAGE value="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test" />
     <MESSAGE value="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests" />
+    <MESSAGE value="Updated Imported Data tab to be  disabled when no data is imported and updated UserNavigation unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Imported Data tab to be  disabled when no data is imported and updated UserNavigation unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
