@@ -10,13 +10,13 @@ beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [
             ['col1', 'col2', 'col3', 'col4'],
-            [' 1', '3', 'foo', 'yes'],
-            [' 2', '5', 'bar', 'no'],
+            ['1', '3', 'foo', 'yes'],
+            ['2', '5', 'bar', 'no'],
             ['c-1', '7', 'baz', 'yes'],
         ],
         dataObjects: [
-            { col1: ' 1', col2: '3', col3: 'foo', col4: 'yes' },
-            { col1: ' 2', col2: '5', col3: 'bar', col4: 'no' },
+            { col1: '1', col2: '3', col3: 'foo', col4: 'yes' },
+            { col1: '2', col2: '5', col3: 'bar', col4: 'no' },
             { col1: 'c-1', col2: '7', col3: 'baz', col4: 'yes' },
         ],
         dataFields: ['col1', 'col2', 'col3', 'col4'],
@@ -135,6 +135,34 @@ describe('AnalyseFileData domain component', () => {
                         { name: 'no', count: 1, percent: 33 },
                     ],
                 },
+            ]);
+        });
+    });
+    describe('Analyse Ignore Data', () => {
+        it('Should create the ignore fields analysedData slice', () => {
+            const analyseFileData = new AnalyseFileData([
+                { field: 'col1', fieldType: FieldTypes.IGNORE },
+                { field: 'col2', fieldType: FieldTypes.IGNORE },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
+            ]);
+            analyseFileData.validateAnalysedData();
+            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            expect(getAnalysedData.ignoreFields).toEqual(['col1', 'col2']);
+        });
+        it('Should create the ignoreDataObjects in the analysedData slice', () => {
+            const analyseFileData = new AnalyseFileData([
+                { field: 'col1', fieldType: FieldTypes.IGNORE },
+                { field: 'col2', fieldType: FieldTypes.IGNORE },
+                { field: 'col3', fieldType: FieldTypes.NOMINAL },
+                { field: 'col4', fieldType: FieldTypes.BINARY },
+            ]);
+            analyseFileData.validateAnalysedData();
+            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            expect(getAnalysedData.ignoreDataObjects).toEqual([
+                { col1: '1', col2: '3' },
+                { col1: '2', col2: '5' },
+                { col1: 'c-1', col2: '7' },
             ]);
         });
     });

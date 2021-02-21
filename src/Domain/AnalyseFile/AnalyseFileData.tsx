@@ -5,6 +5,7 @@ import CreateAnalysedData from '../ReduxStoreHandling/AnalysedData/CreateAnalyse
 import { AnalyseNominalData } from './DataAnalysis/AnalyseNominalData';
 import { AnalyseOrdinalData } from './DataAnalysis/AnalyseOrdinalData';
 import { AnalyseBinaryData } from './DataAnalysis/AnalyseBinaryData';
+import { AnalyseIgnoreData } from './DataAnalysis/AnalyseIgnoreData';
 
 export class AnalyseFileData {
     private readonly fields: Array<object>;
@@ -16,6 +17,8 @@ export class AnalyseFileData {
     private ordinalDataObjects: Array<object> = [];
     private binaryFields: Array<string> = [];
     private binaryDataObjects: Array<object> = [];
+    private ignoreFields: Array<string> = [];
+    private ignoreDataObjects: Array<object> = [];
     constructor(fields: Array<object>) {
         this.fields = fields;
     }
@@ -25,6 +28,7 @@ export class AnalyseFileData {
         this.getNominalFields();
         this.getOrdinalFields();
         this.getBinaryFields();
+        this.getIgnoreFields();
         if (this.intervalFields.length > 0) {
             const analyseIntervalData = new AnalyseIntervalData(this.intervalFields);
             this.intervalDataObjects = analyseIntervalData.validateIntervalData();
@@ -40,6 +44,10 @@ export class AnalyseFileData {
         if (this.binaryFields.length > 0) {
             const analyseBinaryData = new AnalyseBinaryData(this.binaryFields);
             this.binaryDataObjects = analyseBinaryData.validateBinaryData();
+        }
+        if (this.ignoreFields.length > 0) {
+            const analyseIgnoreData = new AnalyseIgnoreData(this.ignoreFields);
+            this.ignoreDataObjects = analyseIgnoreData.validateIgnoreData();
         }
         this.createAnalysedData();
         return notifications;
@@ -84,6 +92,16 @@ export class AnalyseFileData {
             }
         }
     }
+    private getIgnoreFields() {
+        for (let objIndex = 0; objIndex < this.fields.length; objIndex += 1) {
+            const field = this.fields[objIndex];
+            const fieldValue = Object.values(field)[0];
+            const fieldTypeValue = Object.values(field)[1];
+            if (fieldTypeValue === FieldTypes.IGNORE) {
+                this.ignoreFields.push(fieldValue);
+            }
+        }
+    }
 
     private createAnalysedData() {
         const analysedData: IAnalysedFileData = {
@@ -96,8 +114,8 @@ export class AnalyseFileData {
             ordinalDataObjects: this.ordinalDataObjects,
             binaryFields: this.binaryFields,
             binaryDataObjects: this.binaryDataObjects,
-            ignoreFields: [],
-            ignoreDataObjects: [],
+            ignoreFields: this.ignoreFields,
+            ignoreDataObjects: this.ignoreDataObjects,
         };
         const createAnalysedData = new CreateAnalysedData(analysedData);
         createAnalysedData.createAll();
