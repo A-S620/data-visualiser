@@ -51,6 +51,7 @@ function UserNavigation(props: any) {
             props.intervalFields.length === 0 &&
             props.nominalFields.length === 0 &&
             props.ordinalFields.length === 0 &&
+            props.ignoreFields.length === 0 &&
             props.binaryFields.length === 0
         );
     }
@@ -103,5 +104,6 @@ const mapStateToProps = (state: any) => ({
     nominalFields: state.analysedData.nominalFields,
     ordinalFields: state.analysedData.ordinalFields,
     binaryFields: state.analysedData.binaryFields,
+    ignoreFields: state.analysedData.ignoreFields,
 });
 export default connect(mapStateToProps, {})(UserNavigation);

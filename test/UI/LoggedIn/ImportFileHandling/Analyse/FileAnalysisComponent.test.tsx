@@ -13,7 +13,7 @@ import ResetImportedData from '../../../../../src/Domain/ReduxStoreHandling/Impo
 import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
 //Test Data
-const testCSV = 'col1,col2,col3,col4\n 1,3,foo,yes\n 2,5,bar,no\nc-1,7,baz,yes';
+const testCSV = 'col1,col2,col3,col4,col5\n 1,3,foo,yes,beep\n 2,5,bar,no,beep\nc-1,7,baz,yes,beep';
 
 let component: ReactWrapper;
 beforeEach(() => {
@@ -46,6 +46,12 @@ describe('File Analysis component', () => {
         it('Should have ordinal fields stat', () => {
             expect(component.find('div#ordinal-fields').find('p').at(0).text()).toBe('Ordinal Fields');
         });
+        it('Should have binary fields stat', () => {
+            expect(component.find('div#binary-fields').find('p').at(0).text()).toBe('Binary Fields');
+        });
+        it('Should have ignore fields stat', () => {
+            expect(component.find('div#ignore-fields').find('p').at(0).text()).toBe('Ignore Fields');
+        });
         it('Should show Example Data Object stat', () => {
             expect(component.find('div#example-object').find('p').at(0).text()).toBe('Example Data Object:');
         });
@@ -65,15 +71,15 @@ describe('File Analysis component', () => {
                 { field: 'col2', fieldType: FieldTypes.NOMINAL },
                 { field: 'col3', fieldType: FieldTypes.ORDINAL },
                 { field: 'col4', fieldType: FieldTypes.BINARY },
+                { field: 'col5', fieldType: FieldTypes.IGNORE },
             ]);
             analyseFileHandler.validateAnalysedData();
             const fields = component.find('div#all-fields');
-            console.log(fields.html());
-            expect(fields.text()).toBe('All Data fields:col1col2col3col4');
+            expect(fields.text()).toBe('All Data fields:col1col2col3col4col5');
         });
         it('Should have total fields metric', () => {
             importAndAnalyseData();
-            expect(component.find('div#total-fields').find('p').at(1).text()).toBe('4');
+            expect(component.find('div#total-fields').find('p').at(1).text()).toBe('5');
         });
         it('Should have interval fields metric', () => {
             importAndAnalyseData();
@@ -91,10 +97,14 @@ describe('File Analysis component', () => {
             importAndAnalyseData();
             expect(component.find('div#binary-fields').find('p').at(1).text()).toBe('1');
         });
+        it('Should have ignore fields metric', () => {
+            importAndAnalyseData();
+            expect(component.find('div#ignore-fields').find('p').at(1).text()).toBe('1');
+        });
         it('Should show an example object', () => {
             importAndAnalyseData();
             expect(component.find('div#json-object').text()).toBe(
-                '"Example Object":{"col1":"' + ' 1""col2":"3""col3":"foo""col4":"yes"}'
+                '"Example Object":{"col1":"' + ' 1""col2":"3""col3":"foo""col4":"yes""col5":"beep"}'
             );
         });
     });

@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IgnoreDataTable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/AnalyseFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,15 +149,13 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -442,14 +443,9 @@
       <workItem from="1613552708939" duration="6867000" />
       <workItem from="1613639678561" duration="2230000" />
       <workItem from="1613745203607" duration="3460000" />
-      <workItem from="1613891454329" duration="1565000" />
-    </task>
-    <task id="LOCAL-00216" summary="Created BarSeriesOptionsHandler and BarSeriesVisHandler&#10;&#10;TODO: Unit tests">
-      <created>1612774507806</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1612774507806</updated>
+      <workItem from="1613891454329" duration="1886000" />
+      <workItem from="1613893376584" duration="73000" />
+      <workItem from="1613893476600" duration="1935000" />
     </task>
     <task id="LOCAL-00217" summary="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler">
       <created>1612814995925</created>
@@ -787,7 +783,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613749046274</updated>
     </task>
-    <option name="localTasksCounter" value="265" />
+    <task id="LOCAL-00265" summary="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests">
+      <created>1613893149675</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1613893149675</updated>
+    </task>
+    <option name="localTasksCounter" value="266" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -795,7 +798,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created ImportedDataTable UI Component and Unit tests" />
     <MESSAGE value="Updated UserNavigation" />
     <MESSAGE value="Addressing terminal warnings and refactoring" />
     <MESSAGE value="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable" />
@@ -820,7 +822,8 @@
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with ignoreFields,ignoreDataObjects and updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with ignoreFields,ignoreDataObjects and updated unit tests" />
     <MESSAGE value="Updated GetAnalysedData, CreateAnalysedData adn ResetAnalysedData with ignore data and updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated GetAnalysedData, CreateAnalysedData adn ResetAnalysedData with ignore data and updated unit tests" />
+    <MESSAGE value="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

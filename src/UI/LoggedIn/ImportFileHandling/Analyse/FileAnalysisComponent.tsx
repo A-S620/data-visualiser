@@ -42,11 +42,11 @@ const useStyles = makeStyles((theme) => ({
         height: 140,
     },
 }));
-function getExampleObject(intervalDataObjects: Array<object>): Object {
-    if (intervalDataObjects.length === 0) {
+function getExampleObject(objects: Array<object>): Object {
+    if (objects.length === 0) {
         return {};
     }
-    const [firstObject] = intervalDataObjects;
+    const [firstObject] = objects;
     const objectToReturn: Object = {};
     for (const [key, value] of Object.entries(firstObject)) {
         // @ts-ignore
@@ -104,6 +104,12 @@ function FileAnalysisComponent(props: any) {
                         {props.binaryFields.length}
                     </Typography>
                 </Box>
+                <Box display="flex" flexDirection="column" id="ignore-fields" mx={5}>
+                    <Typography>Ignore Fields</Typography>
+                    <Typography component="p" variant="h4">
+                        {props.ignoreFields.length}
+                    </Typography>
+                </Box>
             </Box>
             <Box id="all-fields" className={classes.boxSize} my={15}>
                 <Typography className={classes.statDescription}>All Data fields:</Typography>
@@ -129,13 +135,10 @@ function FileAnalysisComponent(props: any) {
 
 const mapStateToProps = (state: any) => ({
     intervalFields: state.analysedData.intervalFields,
-    intervalDataObjects: state.analysedData.intervalDataObjects,
     nominalFields: state.analysedData.nominalFields,
-    nominalDataObjects: state.analysedData.nominalDataObjects,
     ordinalFields: state.analysedData.ordinalFields,
-    ordinalDataObjects: state.analysedData.ordinalDataObjects,
     binaryFields: state.analysedData.binaryFields,
-    binaryDataObjects: state.analysedData.binaryDataObjects,
+    ignoreFields: state.analysedData.ignoreFields,
     dataFields: state.importedData.dataFields,
     dataObjects: state.importedData.dataObjects,
 });
