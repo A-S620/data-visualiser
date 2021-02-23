@@ -116,7 +116,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                 });
             }
         } else {
-            this.setState({ errors });
+            this.setState({ errors: errors });
         }
     }
     private resetFiles() {
@@ -181,7 +181,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                         {!this.state.errors.isEmpty() && (
                             <AlertNotification
                                 alert={AlertType.FAILED}
-                                notification={`Error(s): ${this.state.errors.notification()}`}
+                                notification={`Error(s): ${this.state.errors.getNotifications()}`}
                             />
                         )}
                     </Box>
