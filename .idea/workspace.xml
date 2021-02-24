@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ImportedDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ImportedDataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/BinaryDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/BinaryDataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IgnoreDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IgnoreDataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IntervalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IntervalDataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/NominalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/NominalDataTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/OrdinalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/OrdinalDataTable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,13 +429,8 @@
       <workItem from="1614071111927" duration="1218000" />
       <workItem from="1614107958040" duration="1597000" />
       <workItem from="1614154864369" duration="335000" />
-    </task>
-    <task id="LOCAL-00217" summary="Unit tests for BarSeriesOptionsHandler and BarSeriesVisHandler">
-      <created>1612814995925</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1612814995925</updated>
+      <workItem from="1614155205849" duration="742000" />
+      <workItem from="1614193756201" duration="485000" />
     </task>
     <task id="LOCAL-00218" summary="Started making BarSeriesOptions, BarSeriesPage and BarSeriesVis UI components">
       <created>1612860751295</created>
@@ -770,7 +768,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613893149675</updated>
     </task>
-    <option name="localTasksCounter" value="266" />
+    <task id="LOCAL-00266" summary="Fixing imports on ImportedDataTable">
+      <created>1614155242049</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1614155242050</updated>
+    </task>
+    <option name="localTasksCounter" value="267" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -778,7 +783,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated UserNavigation" />
     <MESSAGE value="Addressing terminal warnings and refactoring" />
     <MESSAGE value="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable" />
     <MESSAGE value="Refactoring" />
@@ -803,7 +807,8 @@
     <MESSAGE value="Updated ReduxReducer with ignoreFields,ignoreDataObjects and updated unit tests" />
     <MESSAGE value="Updated GetAnalysedData, CreateAnalysedData adn ResetAnalysedData with ignore data and updated unit tests" />
     <MESSAGE value="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests" />
+    <MESSAGE value="Fixing imports on ImportedDataTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing imports on ImportedDataTable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
