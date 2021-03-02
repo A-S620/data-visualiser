@@ -3,7 +3,7 @@ import React from 'react';
 import 'jsdom-global/register';
 import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
-import FieldTypes from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes';
+import FieldTypes from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes';
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import ResetImportedData from '../../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';

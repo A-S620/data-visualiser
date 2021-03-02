@@ -14,7 +14,7 @@ import { IImportedFile } from '../../../Interfaces/import/IImportedFile';
 import ImportedFileStats from './Import/ImportedFileStats';
 import { IImportedFileStats } from '../../../Interfaces/import/IImportedFileStats';
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
-import FieldTypes from './Analyse/FieldTypes';
+import FieldTypes from './Analyse/DataTypes';
 
 interface IState {
     importedFiles: Array<File>;
