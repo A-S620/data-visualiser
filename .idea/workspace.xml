@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/ResetDataHandler.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,8 +21,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="A-S620 &lt;48350000+a-s620@users.noreply.github.com&gt;" />
         <option value="A-S620 &lt;aatikaseedat00@gmail.com&gt;" />
+        <option value="A-S620 &lt;48350000+a-s620@users.noreply.github.com&gt;" />
         <option value="A" />
       </list>
     </option>
@@ -114,7 +112,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" />
   </component>
@@ -435,14 +433,7 @@
       <workItem from="1614798728478" duration="587000" />
       <workItem from="1614856343096" duration="43000" />
       <workItem from="1615192006618" duration="2044000" />
-      <workItem from="1615232066608" duration="612000" />
-    </task>
-    <task id="LOCAL-00220" summary="Started BarSeriesOptions + unit tests">
-      <created>1612901369670</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
-      <option name="project" value="LOCAL" />
-      <updated>1612901369670</updated>
+      <workItem from="1615232066608" duration="830000" />
     </task>
     <task id="LOCAL-00221" summary="Completed BarSeriesOptions UI Component and unit tests">
       <created>1612946642309</created>
@@ -780,7 +771,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615232555026</updated>
     </task>
-    <option name="localTasksCounter" value="269" />
+    <task id="LOCAL-00269" summary="Created ResetDataHandler">
+      <created>1615232711505</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
+      <option name="project" value="LOCAL" />
+      <updated>1615232711505</updated>
+    </task>
+    <option name="localTasksCounter" value="270" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -788,7 +786,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Fixing all TypeScript errors" />
@@ -813,7 +810,8 @@
     <MESSAGE value="Fixing imports on ImportedDataTable" />
     <MESSAGE value="Refactoring imports" />
     <MESSAGE value="Refactoring files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring files" />
+    <MESSAGE value="Created ResetDataHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created ResetDataHandler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
