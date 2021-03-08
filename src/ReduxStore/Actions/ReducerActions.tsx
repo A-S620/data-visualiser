@@ -115,3 +115,7 @@ export const addCurrentMarkVisual = (currentMarkVisual: IMarkSeriesCreateVis) =>
 export const resetCurrentMarkVisual = () => ({
     type: reducerActionTypes.CURRENT_MARK_VISUAL_RESET,
 });
+//Reset Application State
+export const resetApplicationState = () => ({
+    type: reducerActionTypes.RESET_APPLICATION_STATE,
+});

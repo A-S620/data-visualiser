@@ -204,6 +204,8 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 currentMarkVisualisation: {},
             };
+        case ReducerActions.RESET_APPLICATION_STATE:
+            return ReduxState;
         default:
             return state;
     }

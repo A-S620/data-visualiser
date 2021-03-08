@@ -15,6 +15,7 @@ import ImportedFileStats from './Import/ImportedFileStats';
 import { IImportedFileStats } from '../../../Interfaces/import/IImportedFileStats';
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
 import FieldTypes from './Analyse/DataTypes';
+import { ResetDataHandler } from '../../../UIHandling/ResetDataHandler';
 
 interface IState {
     importedFiles: Array<File>;
@@ -120,12 +121,8 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
         }
     }
     private resetFiles() {
-        const file: IImportedFile = {
-            file: this.state.files,
-            fileType: this.state.fileType,
-        };
-        const files = new ImportFilesHandler(file);
-        files.resetImportedData();
+        const resetData = new ResetDataHandler();
+        resetData.resetData();
         this.setState({
             importedFiles: [],
             submitButtonDisabled: true,
@@ -193,7 +190,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                         className={this.classes.componentArea}
                     >
                         <Box id="drop-zone-area" mx={15} my={15}>
-                            <Tooltip title="Delete Imported File from system">
+                            <Tooltip title="Reset Application">
                                 <IconButton
                                     color="primary"
                                     style={{ marginRight: 10, borderRadius: '5em' }}

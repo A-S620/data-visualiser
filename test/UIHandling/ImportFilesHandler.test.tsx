@@ -67,15 +67,4 @@ describe('ImportFilesHandler UI handling component', () => {
         const getImportedData = new GetImportedData();
         expect(getImportedData.getImportedData().dataFields).toStrictEqual(['col1', 'col2', 'col3']);
     });
-    it('should reset imported data', async () => {
-        const importedFile: IImportedFile = {
-            file: testCSV,
-            fileType: 'text/csv',
-        };
-        const importFile = new ImportFilesHandler(importedFile);
-        await importFile.validate();
-        importFile.resetImportedData();
-        const getImportedData = new GetImportedData();
-        expect(getImportedData.getImportedData().dataFields).toStrictEqual([]);
-    });
 });

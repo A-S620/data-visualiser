@@ -13,7 +13,6 @@ export default function AlertNotification(notifications: INotification) {
                 vertical: 'top',
                 horizontal: 'center',
             }}
-            // severity={notifications.alert}
             action={
                 <IconButton
                     aria-label="close"
