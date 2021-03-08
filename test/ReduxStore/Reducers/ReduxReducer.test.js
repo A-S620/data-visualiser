@@ -718,4 +718,65 @@ describe('ReduxReducer', () => {
             ).toEqual(currentMarkVisualSlice);
         });
     });
+    describe('Reset application state', () => {
+        const state = {
+            importedData: {
+                dataFields: [],
+                dataObjects: [],
+                dataArrays: [],
+            },
+            analysedData: {
+                fields: [],
+                intervalFields: [],
+                intervalDataObjects: [],
+                nominalFields: [],
+                nominalDataObjects: [],
+                ordinalFields: [],
+                ordinalDataObjects: [],
+                binaryFields: [],
+                binaryDataObjects: [],
+                ignoreFields: [],
+                ignoreDataObjects: [],
+            },
+            lineSeriesOptions: {},
+            currentLineVisualisation: {},
+            barSeriesOptions: {},
+            currentBarVisualisation: {},
+            markSeriesOptions: {},
+            currentMarkVisualisation: {},
+        };
+        it('Should handle RESET_APPLICATION_STATE', () => {
+            expect(
+                reduxReducer(
+                    {
+                        importedData: {
+                            dataFields: ['test', 'test', 'test'],
+                            dataObjects: [],
+                            dataArrays: [],
+                        },
+                        analysedData: {
+                            fields: ['test', 'test', 'test'],
+                            intervalFields: ['test', 'test', 'test'],
+                            intervalDataObjects: [],
+                            nominalFields: [],
+                            nominalDataObjects: [],
+                            ordinalFields: [],
+                            ordinalDataObjects: [],
+                            binaryFields: [],
+                            binaryDataObjects: [],
+                            ignoreFields: ['test', 'test', 'test'],
+                            ignoreDataObjects: [],
+                        },
+                        lineSeriesOptions: {},
+                        currentLineVisualisation: {},
+                        barSeriesOptions: {},
+                        currentBarVisualisation: {},
+                        markSeriesOptions: {},
+                        currentMarkVisualisation: {},
+                    },
+                    reducerActions.resetApplicationState()
+                )
+            ).toEqual(state);
+        });
+    });
 });

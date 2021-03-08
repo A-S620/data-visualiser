@@ -1,6 +1,5 @@
 import { ImportFilesHandler } from '../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../src/Interfaces/import/IImportedFile';
-import GetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/GetImportedData';
 import ResetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import GetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';

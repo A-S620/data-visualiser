@@ -361,4 +361,12 @@ describe('Reducer actions', () => {
             expect(reducerActions.resetCurrentMarkVisual()).toEqual(expectedAction);
         });
     });
+    describe('Reset Application State actions', () => {
+        it('Should create an action to reset the application state', () => {
+            const expectedAction = {
+                type: actionTypes.RESET_APPLICATION_STATE,
+            };
+            expect(reducerActions.resetApplicationState()).toEqual(expectedAction);
+        });
+    });
 });
