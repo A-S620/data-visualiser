@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/UIHandling/ResetDataHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -444,14 +435,7 @@
       <workItem from="1614798728478" duration="587000" />
       <workItem from="1614856343096" duration="43000" />
       <workItem from="1615192006618" duration="2044000" />
-      <workItem from="1615232066608" duration="282000" />
-    </task>
-    <task id="LOCAL-00219" summary="Refactoring">
-      <created>1612900695916</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1612900695917</updated>
+      <workItem from="1615232066608" duration="612000" />
     </task>
     <task id="LOCAL-00220" summary="Started BarSeriesOptions + unit tests">
       <created>1612901369670</created>
@@ -789,7 +773,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614194383713</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="Refactoring files">
+      <created>1615232555026</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1615232555026</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -797,7 +788,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created IntervalDataTable for ViewAnalysedData.&#10;Did unit tests for IntervalDataTable&#10;Refactored unit tests for ImportedDataTable" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
@@ -822,7 +812,8 @@
     <MESSAGE value="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests" />
     <MESSAGE value="Fixing imports on ImportedDataTable" />
     <MESSAGE value="Refactoring imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring imports" />
+    <MESSAGE value="Refactoring files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
