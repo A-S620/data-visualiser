@@ -32,7 +32,7 @@ describe('Import Files', () => {
     });
     describe('Buttons', () => {
         it('should disable delete button when no files have been inputted', () => {
-            expect(component.find('button#delete-import-button').props().disabled).toBe(true);
+            expect(component.find('button#reset-application-button').props().disabled).toBe(true);
         });
     });
     describe('Imported file statistics', () => {

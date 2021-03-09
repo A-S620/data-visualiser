@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/ResetDataHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,27 +138,28 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint" />
-      </scripts>
+    <configuration name="Import Files" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" />
+      <test-names>
+        <test-name value="Import Files" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -206,10 +206,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.watch" />
+        <item itemvalue="Jest.Import Files" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.security" />
         <item itemvalue="npm.security-fix" />
-        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -452,14 +452,9 @@
       <workItem from="1614798728478" duration="587000" />
       <workItem from="1614856343096" duration="43000" />
       <workItem from="1615192006618" duration="2044000" />
-      <workItem from="1615232066608" duration="1753000" />
-    </task>
-    <task id="LOCAL-00222" summary="Completed BarSeriesVis UI Component and unit tests">
-      <created>1612952303338</created>
-      <option name="number" value="00222" />
-      <option name="presentableId" value="LOCAL-00222" />
-      <option name="project" value="LOCAL" />
-      <updated>1612952303338</updated>
+      <workItem from="1615232066608" duration="1937000" />
+      <workItem from="1615278173808" duration="425000" />
+      <workItem from="1615318729142" duration="328000" />
     </task>
     <task id="LOCAL-00223" summary="Added markSeriesOptions, currentMarkVisualisation to Redux Store">
       <created>1612953050998</created>
@@ -797,7 +792,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615232919817</updated>
     </task>
-    <option name="localTasksCounter" value="271" />
+    <task id="LOCAL-00271" summary="Unit Test for reset application state">
+      <created>1615233925736</created>
+      <option name="number" value="00271" />
+      <option name="presentableId" value="LOCAL-00271" />
+      <option name="project" value="LOCAL" />
+      <updated>1615233925736</updated>
+    </task>
+    <option name="localTasksCounter" value="272" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -805,7 +807,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created NominalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Fixing all TypeScript errors" />
     <MESSAGE value="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice" />
@@ -830,7 +831,8 @@
     <MESSAGE value="Refactoring imports" />
     <MESSAGE value="Refactoring files" />
     <MESSAGE value="Created ResetDataHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created ResetDataHandler" />
+    <MESSAGE value="Unit Test for reset application state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit Test for reset application state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

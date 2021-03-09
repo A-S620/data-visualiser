@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Divider, IconButton, makeStyles, Tooltip, Dialog } from '@material-ui/core';
 import DeleteIcon from '@material-ui/icons/Delete';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import { DropzoneArea } from 'material-ui-dropzone';
 
 import { AlertType } from '../../../Interfaces/Notification/INotification';
@@ -194,13 +195,13 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                                 <IconButton
                                     color="primary"
                                     style={{ marginRight: 10, borderRadius: '5em' }}
-                                    id="delete-import-button"
+                                    id="reset-application-button"
                                     disabled={this.state.submitButtonDisabled}
                                     onClick={() => {
                                         this.resetFiles();
                                     }}
                                 >
-                                    <DeleteIcon />
+                                    <RotateLeftIcon />
                                 </IconButton>
                             </Tooltip>
                             <Tooltip title="View and edit the field types">
