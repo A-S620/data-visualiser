@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -454,14 +452,7 @@
       <workItem from="1615192006618" duration="2044000" />
       <workItem from="1615232066608" duration="1937000" />
       <workItem from="1615278173808" duration="425000" />
-      <workItem from="1615318729142" duration="328000" />
-    </task>
-    <task id="LOCAL-00223" summary="Added markSeriesOptions, currentMarkVisualisation to Redux Store">
-      <created>1612953050998</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1612953050998</updated>
+      <workItem from="1615318729142" duration="974000" />
     </task>
     <task id="LOCAL-00224" summary="Updated ReducerActionTypes with mark options and mark current visualisation">
       <created>1612953170898</created>
@@ -799,7 +790,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615233925736</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <task id="LOCAL-00272" summary="Updated ImportFilesComponent and unit tests">
+      <created>1615319381369</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1615319381369</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -807,7 +805,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it" />
     <MESSAGE value="Fixing all TypeScript errors" />
     <MESSAGE value="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice" />
     <MESSAGE value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
@@ -832,7 +829,8 @@
     <MESSAGE value="Refactoring files" />
     <MESSAGE value="Created ResetDataHandler" />
     <MESSAGE value="Unit Test for reset application state" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unit Test for reset application state" />
+    <MESSAGE value="Updated ImportFilesComponent and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ImportFilesComponent and unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

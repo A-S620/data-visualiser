@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Button, Divider, IconButton, makeStyles, Tooltip, Dialog } from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete';
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import { DropzoneArea } from 'material-ui-dropzone';
 
