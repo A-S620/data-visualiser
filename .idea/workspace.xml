@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/ResetHeatmapSeriesOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -459,21 +460,7 @@
       <workItem from="1615318729142" duration="1269000" />
       <workItem from="1615320106904" duration="184000" />
       <workItem from="1615364761282" duration="349000" />
-      <workItem from="1615403493445" duration="1865000" />
-    </task>
-    <task id="LOCAL-00226" summary="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests">
-      <created>1612954352137</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1612954352137</updated>
-    </task>
-    <task id="LOCAL-00227" summary="Updated ReduxReducer with mark series options and current mark visual. Updated unit tests">
-      <created>1612955611863</created>
-      <option name="number" value="00227" />
-      <option name="presentableId" value="LOCAL-00227" />
-      <option name="project" value="LOCAL" />
-      <updated>1612955611863</updated>
+      <workItem from="1615403493445" duration="2313000" />
     </task>
     <task id="LOCAL-00228" summary="Created Redux Store handling components: CreateMarkSeriesOptions, ResetMarkSeriesOptions and GetMarkSeriesOptions and did unit tests">
       <created>1612956494837</created>
@@ -804,7 +791,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615404607587</updated>
     </task>
-    <option name="localTasksCounter" value="275" />
+    <task id="LOCAL-00275" summary="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests">
+      <created>1615405408960</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1615405408960</updated>
+    </task>
+    <task id="LOCAL-00276" summary="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests">
+      <created>1615405650077</created>
+      <option name="number" value="00276" />
+      <option name="presentableId" value="LOCAL-00276" />
+      <option name="project" value="LOCAL" />
+      <updated>1615405650077</updated>
+    </task>
+    <option name="localTasksCounter" value="277" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,7 +813,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests" />
@@ -837,7 +837,8 @@
     <MESSAGE value="Updated ImportFilesComponent and unit tests" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
+    <MESSAGE value="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
