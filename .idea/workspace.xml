@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +65,9 @@
         </option>
       </RecentBranches>
     </option>
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="c8b55bc9-bb80-4155-9005-68d1cea1459f" />
   </component>
   <component name="JupyterTrust" id="e96eeed0-2211-4143-92c3-5a31ee1938ff" />
   <component name="KubernetesApiPersistence">
@@ -460,14 +459,7 @@
       <workItem from="1615318729142" duration="1269000" />
       <workItem from="1615320106904" duration="184000" />
       <workItem from="1615364761282" duration="349000" />
-      <workItem from="1615403493445" duration="1014000" />
-    </task>
-    <task id="LOCAL-00225" summary="Created IMarkSeriesCreateVis and IMarkSeriesOptions interfaces">
-      <created>1612953664411</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1612953664411</updated>
+      <workItem from="1615403493445" duration="1865000" />
     </task>
     <task id="LOCAL-00226" summary="Updated ReducerActions with mark series option s and mark series current vis. Updated unit tests">
       <created>1612954352137</created>
@@ -805,7 +797,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615320022938</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions">
+      <created>1615404607587</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1615404607587</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,7 +812,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice" />
     <MESSAGE value="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests." />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with binaryFields and binaryDataObjects. Updated unit tests" />
@@ -838,7 +836,8 @@
     <MESSAGE value="Unit Test for reset application state" />
     <MESSAGE value="Updated ImportFilesComponent and unit tests" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
