@@ -173,7 +173,16 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 markSeriesOptions: {},
             };
-
+        //heatmapSeriesOptions slice
+        case ReducerActions.HEATMAP_OPTIONS_ADDED:
+            return {
+                ...state,
+                heatmapSeriesOptions: action.payload,
+            };
+        case ReducerActions.HEATMAP_OPTIONS_RESET:
+            return {
+                heatmapSeriesOptions: {},
+            };
         //currentLineVisualisation slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:
             return {

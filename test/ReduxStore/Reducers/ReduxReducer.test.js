@@ -718,6 +718,54 @@ describe('ReduxReducer', () => {
             ).toEqual(currentMarkVisualSlice);
         });
     });
+    describe('Heatmap Options slice', () => {
+        const optionsSlice = {
+            heatmapSeriesOptions: {},
+        };
+        const options = {
+            colour: '',
+            fill: '',
+            height: 0,
+            opacity: 0,
+            stroke: '',
+            width: 0,
+            xValue: 'test',
+            yValue: 'test',
+        };
+        it('Should handle HEATMAP_OPTIONS_ADDED', () => {
+            expect(reduxReducer(optionsSlice, reducerActions.addHeatmapOptions(options))).toEqual({
+                heatmapSeriesOptions: {
+                    colour: '',
+                    fill: '',
+                    height: 0,
+                    opacity: 0,
+                    stroke: '',
+                    width: 0,
+                    xValue: 'test',
+                    yValue: 'test',
+                },
+            });
+        });
+        it('Should handle HEATMAP_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        heatmapSeriesOptions: {
+                            colour: '',
+                            fill: '',
+                            height: 0,
+                            opacity: 0,
+                            stroke: '',
+                            width: 0,
+                            xValue: 'test',
+                            yValue: 'test',
+                        },
+                    },
+                    reducerActions.resetHeatmapOptions()
+                )
+            ).toEqual(optionsSlice);
+        });
+    });
     describe('Reset application state', () => {
         const state = {
             importedData: {
