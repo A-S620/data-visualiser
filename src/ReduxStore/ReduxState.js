@@ -23,5 +23,6 @@ const ReduxState = {
     currentBarVisualisation: {},
     markSeriesOptions: {},
     currentMarkVisualisation: {},
+    heatmapSeriesOptions: {},
 };
 export default ReduxState;

@@ -5,6 +5,7 @@ import { IBarSeriesOptions } from '../../Interfaces/Visualisations/Bar/IBarSerie
 import { IBarSeriesCreateVis } from '../../Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
 import { IMarkSeriesOptions } from '../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { IMarkSeriesCreateVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IHeatmapSeriesOptions } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -92,6 +93,13 @@ export const addMarkOptions = (markSeriesOptions: IMarkSeriesOptions) => ({
 });
 export const resetMarkOptions = () => ({
     type: reducerActionTypes.MARK_OPTIONS_RESET,
+});
+export const addHeatmapOptions = (heatmapSeriesOptions: IHeatmapSeriesOptions) => ({
+    type: reducerActionTypes.HEATMAP_OPTIONS_ADDED,
+    payload: heatmapSeriesOptions,
+});
+export const resetHeatmapOptions = () => ({
+    type: reducerActionTypes.HEATMAP_OPTIONS_RESET,
 });
 //currentLineVisualisation slice
 export const addCurrentLineVisual = (currentLineVisual: ILineSeriesCreateVis) => ({

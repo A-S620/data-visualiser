@@ -11,6 +11,7 @@ import { IBarSeriesOptions, yValue } from '../../../src/Interfaces/Visualisation
 import { IBarSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
 import { IMarkSeriesOptions } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { IMarkSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IHeatmapSeriesOptions } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -367,6 +368,32 @@ describe('Reducer actions', () => {
                 type: actionTypes.RESET_APPLICATION_STATE,
             };
             expect(reducerActions.resetApplicationState()).toEqual(expectedAction);
+        });
+    });
+    describe('Heatmap Series Options actions', () => {
+        it('Should create an action to add the heatmap options', () => {
+            const options: IHeatmapSeriesOptions = {
+                colour: '',
+                colourRange: [],
+                fill: '',
+                height: 0,
+                opacity: 0,
+                stroke: '',
+                width: 0,
+                xValue: '',
+                yValue: '',
+            };
+            const expectedAction = {
+                type: actionTypes.HEATMAP_OPTIONS_ADDED,
+                payload: options,
+            };
+            expect(reducerActions.addHeatmapOptions(options)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset the heatmap options', () => {
+            const expectedAction = {
+                type: actionTypes.HEATMAP_OPTIONS_RESET,
+            };
+            expect(reducerActions.resetHeatmapOptions()).toEqual(expectedAction);
         });
     });
 });

@@ -25,6 +25,8 @@ export const BAR_OPTIONS_ADDED = 'barOptionsAdded';
 export const BAR_OPTIONS_RESET = 'barOptionsReset';
 export const MARK_OPTIONS_ADDED = 'markOptionsAdded';
 export const MARK_OPTIONS_RESET = 'markOptionsReset';
+export const HEATMAP_OPTIONS_ADDED = 'heatmapOptionsAdded';
+export const HEATMAP_OPTIONS_RESET = 'heatmapOptionsReset';
 
 //currentVisualisationSlice
 export const CURRENT_LINE_VISUAL_ADDED = 'currentLineVisualAdded';

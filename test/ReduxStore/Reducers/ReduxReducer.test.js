@@ -744,6 +744,7 @@ describe('ReduxReducer', () => {
             currentBarVisualisation: {},
             markSeriesOptions: {},
             currentMarkVisualisation: {},
+            heatmapSeriesOptions: {},
         };
         it('Should handle RESET_APPLICATION_STATE', () => {
             expect(
@@ -773,6 +774,7 @@ describe('ReduxReducer', () => {
                         currentBarVisualisation: {},
                         markSeriesOptions: {},
                         currentMarkVisualisation: {},
+                        heatmapSeriesOptions: {},
                     },
                     reducerActions.resetApplicationState()
                 )
