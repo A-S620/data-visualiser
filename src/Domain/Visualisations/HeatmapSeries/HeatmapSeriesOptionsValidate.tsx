@@ -1,6 +1,6 @@
 import { IHeatmapSeriesOptions } from '../../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
-
+//TODO: Unit tests
 export class HeatmapSeriesOptionsValidate {
     private readonly options: IHeatmapSeriesOptions;
     constructor(options: IHeatmapSeriesOptions) {
