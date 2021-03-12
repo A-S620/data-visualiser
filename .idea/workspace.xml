@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -466,14 +466,7 @@
       <workItem from="1615489936047" duration="2410000" />
       <workItem from="1615538118961" duration="8000" />
       <workItem from="1615539003585" duration="53000" />
-      <workItem from="1615576484751" duration="1756000" />
-    </task>
-    <task id="LOCAL-00232" summary="Created MarkSeriesOptionsHandler and MarkSeriesVisHandler&#10;TODO: Unit test">
-      <created>1612986584256</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1612986584256</updated>
+      <workItem from="1615576484751" duration="3818000" />
     </task>
     <task id="LOCAL-00233" summary="Unit tests for MarkSeriesOptionsHandler and MarkSeriesVisHandler">
       <created>1613032286577</created>
@@ -811,7 +804,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615492441905</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="Did HeatmapSeriesOptionsValidate Domain component &#10;Unit test">
+      <created>1615578341243</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1615578341244</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -819,7 +819,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created AnalyseBinaryData domain componenet and did unit tests" />
     <MESSAGE value="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests" />
     <MESSAGE value="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test" />
     <MESSAGE value="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests" />
@@ -844,7 +843,8 @@
     <MESSAGE value="Unit tests for: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions" />
     <MESSAGE value="Created HeatmapSeriesOptionsValidate Domain component" />
     <MESSAGE value="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test" />
+    <MESSAGE value="Did HeatmapSeriesOptionsValidate Domain component &#10;Unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did HeatmapSeriesOptionsValidate Domain component &#10;Unit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
