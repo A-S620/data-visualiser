@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +140,7 @@
       <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch">
+  <component name="RunManager" selected="npm.lint">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -164,11 +167,11 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="security-fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="security-fix" />
+        <script value="lint" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -207,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.watch" />
         <item itemvalue="Jest.Import Files" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.security" />
-        <item itemvalue="npm.security-fix" />
       </list>
     </recent_temporary>
   </component>
@@ -460,14 +463,10 @@
       <workItem from="1615320106904" duration="184000" />
       <workItem from="1615364761282" duration="349000" />
       <workItem from="1615403493445" duration="2535000" />
-      <workItem from="1615489936047" duration="2373000" />
-    </task>
-    <task id="LOCAL-00231" summary="Created MarkSeriesCreateVis + unit tests">
-      <created>1612986107242</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1612986107242</updated>
+      <workItem from="1615489936047" duration="2410000" />
+      <workItem from="1615538118961" duration="8000" />
+      <workItem from="1615539003585" duration="53000" />
+      <workItem from="1615576484751" duration="1756000" />
     </task>
     <task id="LOCAL-00232" summary="Created MarkSeriesOptionsHandler and MarkSeriesVisHandler&#10;TODO: Unit test">
       <created>1612986584256</created>
@@ -805,7 +804,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615492385029</updated>
     </task>
-    <option name="localTasksCounter" value="280" />
+    <task id="LOCAL-00280" summary="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test">
+      <created>1615492441905</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1615492441905</updated>
+    </task>
+    <option name="localTasksCounter" value="281" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -813,7 +819,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring AnalyseNominalData and AnalyseOrdinalData and unit tests" />
     <MESSAGE value="Created AnalyseBinaryData domain componenet and did unit tests" />
     <MESSAGE value="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests" />
     <MESSAGE value="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test" />
@@ -838,7 +843,8 @@
     <MESSAGE value="Redux store handling for heatmapSeriesOptions&#10;Created: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions" />
     <MESSAGE value="Created HeatmapSeriesOptionsValidate Domain component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created HeatmapSeriesOptionsValidate Domain component" />
+    <MESSAGE value="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

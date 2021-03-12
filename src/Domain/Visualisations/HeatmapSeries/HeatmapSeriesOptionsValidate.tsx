@@ -8,6 +8,9 @@ export class HeatmapSeriesOptionsValidate {
     }
     public validate(): NotificationsHandler {
         const notifications = new NotificationsHandler();
+        if (this.options.xValue === this.options.yValue) {
+            notifications.addNotification(`Cannot select the same fields for X Value and Y Value`);
+        }
         if (!this.lengthIsValid(this.options.height)) {
             notifications.addNotification(
                 `The minimum value for Height is 100, the maximum value for Height is 800. The current height is ${this.options.height}`
