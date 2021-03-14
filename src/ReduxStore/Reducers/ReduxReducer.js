@@ -213,6 +213,16 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 currentMarkVisualisation: {},
             };
+        //currentHeatmapVisualisation slice
+        case ReducerActions.CURRENT_HEATMAP_VISUAL_ADDED:
+            return {
+                ...state,
+                currentHeatmapVisualisation: action.payload,
+            };
+        case ReducerActions.CURRENT_HEATMAP_VISUAL_RESET:
+            return {
+                currentHeatmapVisualisation: {},
+            };
         case ReducerActions.RESET_APPLICATION_STATE:
             return ReduxState;
         default:

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -467,14 +464,7 @@
       <workItem from="1615538118961" duration="8000" />
       <workItem from="1615539003585" duration="53000" />
       <workItem from="1615576484751" duration="3950000" />
-      <workItem from="1615708203120" duration="1142000" />
-    </task>
-    <task id="LOCAL-00236" summary="Added functionality to MarkSeriesOptions, MarkSeriesPage, MarkSeriesVis UI components.&#10;TODO: Unit tests">
-      <created>1613073607027</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1613073607028</updated>
+      <workItem from="1615708203120" duration="1613000" />
     </task>
     <task id="LOCAL-00237" summary="Unit tests for MarkSeriesOptions and MarkSeriesVis">
       <created>1613203463056</created>
@@ -812,7 +802,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615708654975</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="Updated ReducerActions AND ReducerActionTypes&#10;with currentHeatmapVisualisation and updated unit tests">
+      <created>1615709828416</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1615709828416</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -820,7 +817,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated Imported Data tab to be  disabled when no data is imported and updated UserNavigation unit tests" />
     <MESSAGE value="Updated ReduxState with ignoreFields, ignoreDataObjects and updated unit test" />
     <MESSAGE value="Fixed Binary Data to work with BarSeries" />
     <MESSAGE value="Updated IAnalysedFileData with ignoreFields,ignoreDataObjects and updated unit tests" />
@@ -845,7 +841,8 @@
     <MESSAGE value="Created HeatmapSeriesOptionsHandler and created unit&#10;tests" />
     <MESSAGE value="Created IHeatmapSeriesCreateVis interface" />
     <MESSAGE value="Created currentHeatmapVisualisation and&#10;heatmapHeatmapOptions in Redux store" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created currentHeatmapVisualisation and&#10;heatmapHeatmapOptions in Redux store" />
+    <MESSAGE value="Updated ReducerActions AND ReducerActionTypes&#10;with currentHeatmapVisualisation and updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ReducerActions AND ReducerActionTypes&#10;with currentHeatmapVisualisation and updated unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

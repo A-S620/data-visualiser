@@ -831,4 +831,58 @@ describe('ReduxReducer', () => {
             ).toEqual(state);
         });
     });
+    describe('Current Heatmap Visualisation', () => {
+        const currentVisualSlice = {
+            currentHeatmapVisualisation: {},
+        };
+        const currentVisual = {
+            colour: '',
+            data: [
+                { x: 79, y: 5 },
+                { x: 76, y: 23 },
+            ],
+            fill: '',
+            height: 0,
+            opacity: 0,
+            stroke: '',
+            width: 0,
+        };
+        it('Should handle CURRENT_HEATMAP_VISUAL_ADDED', () => {
+            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentHeatmapVisual(currentVisual))).toEqual({
+                currentHeatmapVisualisation: {
+                    colour: '',
+                    data: [
+                        { x: 79, y: 5 },
+                        { x: 76, y: 23 },
+                    ],
+                    fill: '',
+                    height: 0,
+                    opacity: 0,
+                    stroke: '',
+                    width: 0,
+                },
+            });
+        });
+        it('Should handle CURRENT_HEATMAP_VISUAL_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        currentHeatmapVisualisation: {
+                            colour: '',
+                            data: [
+                                { x: 79, y: 5 },
+                                { x: 76, y: 23 },
+                            ],
+                            fill: '',
+                            height: 0,
+                            opacity: 0,
+                            stroke: '',
+                            width: 0,
+                        },
+                    },
+                    reducerActions.resetCurrentHeatmapVisual()
+                )
+            ).toEqual(currentVisualSlice);
+        });
+    });
 });
