@@ -6,6 +6,7 @@ import { IBarSeriesCreateVis } from '../../Interfaces/Visualisations/Bar/IBarSer
 import { IMarkSeriesOptions } from '../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { IMarkSeriesCreateVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 import { IHeatmapSeriesOptions } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
+import { IHeatmapSeriesCreateVis } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -122,6 +123,13 @@ export const addCurrentMarkVisual = (currentMarkVisual: IMarkSeriesCreateVis) =>
 });
 export const resetCurrentMarkVisual = () => ({
     type: reducerActionTypes.CURRENT_MARK_VISUAL_RESET,
+});
+export const addCurrentHeatmapVisual = (currentVisual: IHeatmapSeriesCreateVis) => ({
+    type: reducerActionTypes.CURRENT_HEATMAP_VISUAL_ADDED,
+    payload: currentVisual,
+});
+export const resetCurrentHeatmapVisual = () => ({
+    type: reducerActionTypes.CURRENT_HEATMAP_VISUAL_RESET,
 });
 //Reset Application State
 export const resetApplicationState = () => ({

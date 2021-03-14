@@ -12,6 +12,7 @@ import { IBarSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Bar/
 import { IMarkSeriesOptions } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { IMarkSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 import { IHeatmapSeriesOptions } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
+import { IHeatmapSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -394,6 +395,34 @@ describe('Reducer actions', () => {
                 type: actionTypes.HEATMAP_OPTIONS_RESET,
             };
             expect(reducerActions.resetHeatmapOptions()).toEqual(expectedAction);
+        });
+    });
+    describe('Current Heatmap Visualisation actions', () => {
+        it('Should create an action to add the current heatmap Visualisation', () => {
+            const currentVisual: IHeatmapSeriesCreateVis = {
+                colourRange: [],
+                colour: '',
+                data: [
+                    { x: 79, y: 5 },
+                    { x: 76, y: 23 },
+                ],
+                fill: '',
+                height: 0,
+                opacity: 0,
+                stroke: '',
+                width: 0,
+            };
+            const expectedAction = {
+                type: actionTypes.CURRENT_HEATMAP_VISUAL_ADDED,
+                payload: currentVisual,
+            };
+            expect(reducerActions.addCurrentHeatmapVisual(currentVisual)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset the current heatmap Visualisation', () => {
+            const expectedAction = {
+                type: actionTypes.CURRENT_HEATMAP_VISUAL_RESET,
+            };
+            expect(reducerActions.resetCurrentHeatmapVisual()).toEqual(expectedAction);
         });
     });
 });

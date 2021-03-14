@@ -35,5 +35,7 @@ export const CURRENT_BAR_VISUAL_ADDED = 'currentBarVisualAdded';
 export const CURRENT_BAR_VISUAL_RESET = 'currentBarVisualReset';
 export const CURRENT_MARK_VISUAL_ADDED = 'currentMarkVisualAdded';
 export const CURRENT_MARK_VISUAL_RESET = 'currentMarkVisualReset';
+export const CURRENT_HEATMAP_VISUAL_ADDED = 'currentHeatmapVisualAdded';
+export const CURRENT_HEATMAP_VISUAL_RESET = 'currentHeatmapVisualReset';
 
 export const RESET_APPLICATION_STATE = 'resetApplicationState';
