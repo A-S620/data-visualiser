@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/CreateCurrentHeeatmapVisual.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/ResetCurrentHeatmapVisual.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -468,14 +466,7 @@
       <workItem from="1615539003585" duration="53000" />
       <workItem from="1615576484751" duration="3950000" />
       <workItem from="1615708203120" duration="2014000" />
-      <workItem from="1615835430169" duration="1376000" />
-    </task>
-    <task id="LOCAL-00239" summary="Created ImportedDataTable UI Component and Unit tests">
-      <created>1613386411347</created>
-      <option name="number" value="00239" />
-      <option name="presentableId" value="LOCAL-00239" />
-      <option name="project" value="LOCAL" />
-      <updated>1613386411347</updated>
+      <workItem from="1615835430169" duration="1902000" />
     </task>
     <task id="LOCAL-00240" summary="Updated UserNavigation">
       <created>1613387670719</created>
@@ -813,7 +804,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615710561916</updated>
     </task>
-    <option name="localTasksCounter" value="288" />
+    <task id="LOCAL-00288" summary="Unit tests for Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual">
+      <created>1615836861577</created>
+      <option name="number" value="00288" />
+      <option name="presentableId" value="LOCAL-00288" />
+      <option name="project" value="LOCAL" />
+      <updated>1615836861577</updated>
+    </task>
+    <option name="localTasksCounter" value="289" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -821,7 +819,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated IAnalysedFileData with ignoreFields,ignoreDataObjects and updated unit tests" />
     <MESSAGE value="Updated ReducerActions and ReducerActionTypes with ignoreFields,ignoreDataObjects and updated unit tests" />
     <MESSAGE value="Updated ReduxReducer with ignoreFields,ignoreDataObjects and updated unit tests" />
     <MESSAGE value="Updated GetAnalysedData, CreateAnalysedData adn ResetAnalysedData with ignore data and updated unit tests" />
@@ -846,7 +843,8 @@
     <MESSAGE value="Updated ReducerActions AND ReducerActionTypes&#10;with currentHeatmapVisualisation and updated unit tests" />
     <MESSAGE value="Updated ReduxReducer and unit tests with &#10;currentHeatmapVisualisation" />
     <MESSAGE value="Created Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual&#10;&#10;TODO: Unit Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual&#10;&#10;TODO: Unit Tests" />
+    <MESSAGE value="Unit tests for Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit tests for Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
