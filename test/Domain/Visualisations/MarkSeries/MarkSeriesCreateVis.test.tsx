@@ -4,7 +4,6 @@ import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/Analys
 import { MarkSeriesCreateVis } from '../../../../src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis';
 import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import CreateMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
-import { BarSeriesCreateVis } from '../../../../src/Domain/Visualisations/BarSeries/BarSeriesCreateVis';
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
         fields: [
