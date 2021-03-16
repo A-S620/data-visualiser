@@ -8,6 +8,9 @@ import CreateMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/P
 import ResetMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions';
 import { MarkSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler';
 import GetCurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/GetCurrentMarkVisual';
+import { HeatmapVisHandler } from '../../../../src/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler';
+import GetCurrentHeatmapVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual';
+import CreateHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -27,7 +30,8 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateMarkSeriesOptions({
+    new CreateHeatmapSeriesOptions({
+        colourRange: [],
         colour: '',
         fill: '',
         height: 500,
@@ -36,31 +40,30 @@ beforeAll(() => {
         width: 500,
         xValue: 'col1',
         yValue: 'col2',
-    }).createMarkSeriesOptions();
+    }).createHeatmapSeriesOptions();
 });
 afterAll(() => {
     new ResetMarkSeriesOptions().resetMarkSeriesOptions();
 });
-describe('MarkSeriesVis UIHandling Component', () => {
-    it('Should return the visualisation options when the createMrkVisual method is called', () => {
-        const visHandler = new MarkSeriesVisHandler().createVisual();
-        const getCurrentVisual = new GetCurrentMarkVisual();
-        expect(getCurrentVisual.getCurrentMarkVisual()).toEqual({
+describe('HeatmapVis UIHandling Component', () => {
+    it('Should return the visualisation options when the createHeatmapVisual method is called', () => {
+        new HeatmapVisHandler().createVisual();
+        expect(new GetCurrentHeatmapVisual().getCurrentVisual()).toEqual({
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
             ],
-            height: 500,
-            width: 500,
-            stroke: '',
-            opacity: 1,
+            colourRange: [],
             colour: '',
             fill: '',
+            height: 500,
+            opacity: 1,
+            stroke: '',
+            width: 500,
         });
     });
-    it('Should reset the MarkSeriesVisual when the reset method is called', () => {
-        new MarkSeriesVisHandler().resetMarkVisual();
-        const getCurrentVisual = new GetCurrentMarkVisual();
-        expect(getCurrentVisual.getCurrentMarkVisual()).toEqual({});
+    it('Should reset the HeatmapVisHandler when the reset method is called', () => {
+        new HeatmapVisHandler().resetHeatmapVisual();
+        expect(new GetCurrentHeatmapVisual().getCurrentVisual()).toEqual({});
     });
 });
