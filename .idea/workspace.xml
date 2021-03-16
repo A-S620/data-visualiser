@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/ResetDataHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ResetDataHandler.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,13 +143,15 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -468,14 +472,8 @@
       <workItem from="1615708203120" duration="2014000" />
       <workItem from="1615835430169" duration="2358000" />
       <workItem from="1615887493853" duration="53000" />
-      <workItem from="1615910739905" duration="731000" />
-    </task>
-    <task id="LOCAL-00243" summary="Refactoring">
-      <created>1613475279489</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1613475279489</updated>
+      <workItem from="1615910739905" duration="1031000" />
+      <workItem from="1615922379011" duration="1672000" />
     </task>
     <task id="LOCAL-00244" summary="Refactoring">
       <created>1613475318372</created>
@@ -813,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615837780664</updated>
     </task>
-    <option name="localTasksCounter" value="292" />
+    <task id="LOCAL-00292" summary="Created HeatmapVisHandler component and unit tests">
+      <created>1615911552752</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1615911552753</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -821,7 +826,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated GetAnalysedData, CreateAnalysedData adn ResetAnalysedData with ignore data and updated unit tests" />
     <MESSAGE value="Created AnalyseIgnoreData domain component and unit &#10;tests&#10;Updated AnalyseFileData Domain component with ignore&#10;data and updated unit tests" />
     <MESSAGE value="Fixing imports on ImportedDataTable" />
     <MESSAGE value="Refactoring imports" />
@@ -846,7 +850,8 @@
     <MESSAGE value="Unit tests for Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual" />
     <MESSAGE value="Created HeatmapCreateVis domain component" />
     <MESSAGE value="Created HeatmapCreateVis unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created HeatmapCreateVis unit tests" />
+    <MESSAGE value="Created HeatmapVisHandler component and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created HeatmapVisHandler component and unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

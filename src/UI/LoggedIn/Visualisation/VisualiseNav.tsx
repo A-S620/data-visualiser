@@ -14,6 +14,7 @@ import StreetviewIcon from '@material-ui/icons/Streetview';
 import LineSeriesPage from './Line/LineSeriesPage';
 import BarSeriesPage from './Bar/BarSeriesPage';
 import MarkSeriesPage from './Mark/MarkSeriesPage';
+import HeatmapPage from './Heatmap/HeatmapPage';
 
 //Switches tabs
 function TabPanel(props: any) {
@@ -86,7 +87,7 @@ export default function VisualiseNav() {
                 <MarkSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                Item Four
+                Hexbin
             </TabPanel>
             <TabPanel value={value} index={4}>
                 Item Five
@@ -95,7 +96,7 @@ export default function VisualiseNav() {
                 Item Six
             </TabPanel>
             <TabPanel value={value} index={6}>
-                Item Seven
+                <HeatmapPage />
             </TabPanel>
 
             <AppBar position="static" color="default" style={{ position: 'fixed' }}>
