@@ -4,6 +4,8 @@ import { HeatmapSeriesOptionsValidate } from '../../../Domain/Visualisations/Hea
 import CreateHeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
 import GetHeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions';
 import ResetHeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/ResetHeatmapSeriesOptions';
+import { HeatmapVisHandler } from './HeatmapVisHandler';
+import GetCurrentHeatmapVisual from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual';
 
 export class HeatmapSeriesOptionsHandler {
     private options: IHeatmapSeriesOptions;
@@ -17,7 +19,8 @@ export class HeatmapSeriesOptionsHandler {
         notifications.concat(optionsErrors);
         if (notifications.isEmpty()) {
             this.createOptions();
-            // new MarkSeriesVisHandler().createVisual();
+            new HeatmapVisHandler().createVisual();
+            console.log(new GetCurrentHeatmapVisual().getCurrentVisual());
         }
         return notifications;
     }

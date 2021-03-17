@@ -61,6 +61,5 @@ function MarkSeriesVis(props: any) {
 }
 const mapStateToProps = (state: any) => ({
     currentMarkVisualisation: state.currentMarkVisualisation,
-    markSeriesOptions: state.markSeriesOptions,
 });
 export default connect(mapStateToProps, {})(MarkSeriesVis);
