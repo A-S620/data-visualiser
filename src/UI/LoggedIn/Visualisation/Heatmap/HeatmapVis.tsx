@@ -31,7 +31,7 @@ function HeatmapVis(props: any) {
         >
             <Box>
                 <XYPlot
-                    id={'heatmap-series-vis'}
+                    id={'heatmap-series'}
                     height={props.currentHeatmapVisualisation.height}
                     width={props.currentHeatmapVisualisation.width}
                     margin={{ left: 75 }}
@@ -43,7 +43,6 @@ function HeatmapVis(props: any) {
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
                     <YAxis
-                        // left={50}
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
                     <HeatmapSeries
@@ -52,7 +51,6 @@ function HeatmapVis(props: any) {
                         sizeRange={[5, 15]}
                         fill={props.currentHeatmapVisualisation.fill}
                         data={props.currentHeatmapVisualisation.data}
-                        color={props.currentHeatmapVisualisation.colour}
                     />
                 </XYPlot>
             </Box>

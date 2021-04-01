@@ -227,7 +227,7 @@ function HeatmapOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'visuals-textfields'}>
                         <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
                             <InputLabel className={classes.textColor}>Stroke</InputLabel>
                             <Select
@@ -299,30 +299,6 @@ function HeatmapOptions(props: any) {
                             </Select>
                         </FormControl>
                         <Box mx={5} />
-                        <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
-                            <InputLabel className={classes.textColor}>Colour</InputLabel>
-                            <Select
-                                value={options.colour}
-                                onChange={(event) => {
-                                    setOptions({
-                                        ...options,
-                                        colour: event.target.value as string,
-                                    });
-                                }}
-                                name="colour"
-                            >
-                                <option value={'red'}>red</option>
-                                <option value={'green'}>green</option>
-                                <option value={'blue'}>blue</option>
-                                <option value={'purple'}>purple</option>
-                                <option value={'orange'}>orange</option>
-                                <option value={'black'}>black</option>
-                                <option value={'yellow'}>yellow</option>
-                                <option value={'brown'}>brown</option>
-                                <option value={'pink'}>pink</option>
-                                <option value={'turquoise'}>turquoise</option>
-                            </Select>
-                        </FormControl>
                     </Box>
                     <Box id={'submit-button'} my={15}>
                         <Button
