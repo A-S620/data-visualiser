@@ -77,7 +77,6 @@ export class HeatmapCreateVis {
                 uniqueArrayXY.push(item);
             }
         }
-        console.log(uniqueArrayXY);
         return arrayXYColour;
     }
     private arrayIncludesObject(obj: object, array: Array<object>): boolean {

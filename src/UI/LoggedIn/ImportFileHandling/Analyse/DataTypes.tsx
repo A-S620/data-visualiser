@@ -155,6 +155,7 @@ function DataTypes(props: any) {
                                     <TableCell id={value + '-select-cell'}>
                                         <Select
                                             id={value + '-select'}
+                                            defaultValue={FieldTypes.IGNORE}
                                             style={{ minWidth: 150 }}
                                             name={value + '-select'}
                                             onChange={(event) => {
@@ -165,9 +166,7 @@ function DataTypes(props: any) {
                                                 addField(fieldToAdd);
                                             }}
                                         >
-                                            <option id={'test'} value={FieldTypes.INTERVAL}>
-                                                Interval
-                                            </option>
+                                            <option value={FieldTypes.INTERVAL}>Interval</option>
                                             <option value={FieldTypes.NOMINAL}>Nominal</option>
                                             <option value={FieldTypes.ORDINAL}>Ordinal</option>
                                             <option value={FieldTypes.BINARY}>Binary</option>

@@ -17,6 +17,8 @@ beforeAll(() => {
             { col1: 32, col2: 45 },
             { col1: 32, col2: 45 },
             { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
+            { col1: 32, col2: 47 },
             { col1: 79, col2: 5 },
             { col1: 79, col2: 5 },
         ],
@@ -53,7 +55,8 @@ describe('HeatmapCreateVis domain component', () => {
     it('Should return a default values for the options when no options have been selected', async () => {
         const createVis = new HeatmapCreateVis().createVis();
         expect(createVis.data).toEqual([
-            { x: 32, y: 45, color: 3 },
+            { x: 32, y: 45, color: 4 },
+            { x: 32, y: 47, color: 1 },
             { x: 79, y: 5, color: 2 },
         ]);
         expect(createVis.height).toEqual(800);
@@ -79,7 +82,8 @@ describe('HeatmapCreateVis domain component', () => {
         createOptions.createHeatmapSeriesOptions();
         const createVis = new HeatmapCreateVis().createVis();
         expect(createVis.data).toEqual([
-            { x: 32, y: 45, color: 3 },
+            { x: 32, y: 45, color: 4 },
+            { x: 32, y: 47, color: 1 },
             { x: 79, y: 5, color: 2 },
         ]);
         expect(createVis.height).toEqual(500);
