@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +141,7 @@
       <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch">
+  <component name="RunManager" selected="Jest.HeatmapCreateVis domain component">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -155,6 +152,29 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="HeatmapCreateVis domain component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" />
+      <test-names>
+        <test-name value="HeatmapCreateVis domain component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="HeatmapCreateVis.test.tsx" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" />
+      <method v="2" />
     </configuration>
     <configuration name="Import Files" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -179,27 +199,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="security" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="security" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <package-manager value="npm" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -212,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.HeatmapCreateVis domain component" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="Jest.HeatmapCreateVis.test.tsx" />
         <item itemvalue="npm.lint" />
         <item itemvalue="Jest.Import Files" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.security" />
       </list>
     </recent_temporary>
   </component>
@@ -478,21 +477,9 @@
       <workItem from="1616672598107" duration="346000" />
       <workItem from="1617015737741" duration="687000" />
       <workItem from="1617017125052" duration="94000" />
-      <workItem from="1617288468138" duration="3716000" />
-    </task>
-    <task id="LOCAL-00246" summary="Created OrdinalDataTable for ViewAnalysedData&#10;Did unit tests for it">
-      <created>1613476039871</created>
-      <option name="number" value="00246" />
-      <option name="presentableId" value="LOCAL-00246" />
-      <option name="project" value="LOCAL" />
-      <updated>1613476039871</updated>
-    </task>
-    <task id="LOCAL-00247" summary="Fixing all TypeScript errors">
-      <created>1613476790160</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1613476790160</updated>
+      <workItem from="1617288468138" duration="3808000" />
+      <workItem from="1617866143490" duration="2653000" />
+      <workItem from="1617906821900" duration="6989000" />
     </task>
     <task id="LOCAL-00248" summary="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice">
       <created>1613553286012</created>
@@ -823,7 +810,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615970911515</updated>
     </task>
-    <option name="localTasksCounter" value="295" />
+    <task id="LOCAL-00295" summary="Created HeatmapVis and HeatmapOptions and unit tests">
+      <created>1617294370571</created>
+      <option name="number" value="00295" />
+      <option name="presentableId" value="LOCAL-00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1617294370571</updated>
+    </task>
+    <task id="LOCAL-00296" summary="FieldTypes.test fixes">
+      <created>1617867524893</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1617867524894</updated>
+    </task>
+    <option name="localTasksCounter" value="297" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -831,8 +832,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring imports" />
-    <MESSAGE value="Refactoring files" />
     <MESSAGE value="Created ResetDataHandler" />
     <MESSAGE value="Unit Test for reset application state" />
     <MESSAGE value="Updated ImportFilesComponent and unit tests" />
@@ -856,7 +855,9 @@
     <MESSAGE value="Created HeatmapVisHandler component and unit tests" />
     <MESSAGE value="Created HeatmapOptions, HeatmapPage.&#10;Todo: HeatmapVis and unit tests" />
     <MESSAGE value="Updated HeatmapOptions, HeatmapPage.&#10;Created HeatmapVis&#10;TODO: Unit test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated HeatmapOptions, HeatmapPage.&#10;Created HeatmapVis&#10;TODO: Unit test" />
+    <MESSAGE value="Created HeatmapVis and HeatmapOptions and unit tests" />
+    <MESSAGE value="FieldTypes.test fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes.test fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -12,7 +12,7 @@ export class HeatmapCreateVis {
 
         return {
             colourRange: options.colourRange,
-            data: this.createDataArray(options.xValue, options.yValue),
+            data: this.createDataAndColorArray(options.xValue, options.yValue),
             height: options.height,
             width: options.width,
             stroke: options.stroke,
@@ -25,7 +25,7 @@ export class HeatmapCreateVis {
         const { intervalFields } = this.getAnalysedData();
         return {
             colourRange: ['black', 'red'],
-            data: this.createDataArray(intervalFields[0], intervalFields[1]),
+            data: this.createDataAndColorArray(intervalFields[0], intervalFields[1]),
             height: 800,
             width: 800,
             stroke: 'black',
@@ -61,5 +61,41 @@ export class HeatmapCreateVis {
             data.push(dataObject);
         }
         return data;
+    }
+    private createDataAndColorArray(xValue: string, yValue: string): Array<object> {
+        const arrayXY = this.createDataArray(xValue, yValue);
+        const uniqueArrayXY: Array<object> = [];
+        const arrayXYColour: Array<object> = [];
+        for (var item of arrayXY) {
+            var countOfItem = this.getCountOfObject(item, arrayXY);
+            if (!this.arrayIncludesObject(item, uniqueArrayXY)) {
+                arrayXYColour.push({
+                    x: Object.values(item)[0],
+                    y: Object.values(item)[1],
+                    color: countOfItem,
+                });
+                uniqueArrayXY.push(item);
+            }
+        }
+        console.log(uniqueArrayXY);
+        return arrayXYColour;
+    }
+    private arrayIncludesObject(obj: object, array: Array<object>): boolean {
+        const [x, y] = Object.values(obj);
+        for (var item of array) {
+            if (Object.values(item)[0] === x && Object.values(item)[1] === y) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private getCountOfObject(obj: object, array: Array<object>): number {
+        var count = 0;
+        for (var item of array) {
+            if (JSON.stringify(item) === JSON.stringify(obj)) {
+                count += 1;
+            }
+        }
+        return count;
     }
 }

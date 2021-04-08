@@ -1,11 +1,7 @@
 import 'jsdom-global/register';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
-import { MarkSeriesCreateVis } from '../../../../src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis';
-import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
-import CreateMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
 import { HeatmapCreateVis } from '../../../../src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis';
-import { IHeatmapSeriesCreateVis } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
 import { IHeatmapSeriesOptions } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import CreateHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
 beforeAll(() => {
@@ -19,8 +15,10 @@ beforeAll(() => {
         intervalFields: ['col1', 'col2'],
         intervalDataObjects: [
             { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
             { col1: 79, col2: 5 },
-            { col1: 76, col2: 23 },
+            { col1: 79, col2: 5 },
         ],
         nominalFields: ['col3'],
         nominalDataObjects: [
@@ -55,9 +53,8 @@ describe('HeatmapCreateVis domain component', () => {
     it('Should return a default values for the options when no options have been selected', async () => {
         const createVis = new HeatmapCreateVis().createVis();
         expect(createVis.data).toEqual([
-            { x: 32, y: 45 },
-            { x: 79, y: 5 },
-            { x: 76, y: 23 },
+            { x: 32, y: 45, color: 3 },
+            { x: 79, y: 5, color: 2 },
         ]);
         expect(createVis.height).toEqual(800);
         expect(createVis.width).toEqual(800);
@@ -82,9 +79,8 @@ describe('HeatmapCreateVis domain component', () => {
         createOptions.createHeatmapSeriesOptions();
         const createVis = new HeatmapCreateVis().createVis();
         expect(createVis.data).toEqual([
-            { x: 32, y: 45 },
-            { x: 79, y: 5 },
-            { x: 76, y: 23 },
+            { x: 32, y: 45, color: 3 },
+            { x: 79, y: 5, color: 2 },
         ]);
         expect(createVis.height).toEqual(500);
         expect(createVis.width).toEqual(500);
