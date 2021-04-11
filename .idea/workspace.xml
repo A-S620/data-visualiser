@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -469,14 +467,7 @@
       <workItem from="1617288468138" duration="3808000" />
       <workItem from="1617866143490" duration="2653000" />
       <workItem from="1617906821900" duration="7324000" />
-      <workItem from="1618125131892" duration="6988000" />
-    </task>
-    <task id="LOCAL-00250" summary="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests">
-      <created>1613554157101</created>
-      <option name="number" value="00250" />
-      <option name="presentableId" value="LOCAL-00250" />
-      <option name="project" value="LOCAL" />
-      <updated>1613554157101</updated>
+      <workItem from="1618125131892" duration="8138000" />
     </task>
     <task id="LOCAL-00251" summary="Updated ReduxReducer with binaryFields and binaryDataObjects. Updated unit tests">
       <created>1613554405543</created>
@@ -814,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617914206443</updated>
     </task>
-    <option name="localTasksCounter" value="299" />
+    <task id="LOCAL-00299" summary="Refactoring HeatmapCreateVis">
+      <created>1618133355502</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1618133355506</updated>
+    </task>
+    <option name="localTasksCounter" value="300" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -822,7 +820,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated ImportFilesComponent and unit tests" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
     <MESSAGE value="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests" />
@@ -847,7 +844,8 @@
     <MESSAGE value="FieldTypes.test fixes" />
     <MESSAGE value="Updated HeatmapCreateVis to Add count to x-y values after a user selects x value and y value in heatmap options, this becomes the colour (intensity) of the element" />
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="Refactoring HeatmapCreateVis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring HeatmapCreateVis" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

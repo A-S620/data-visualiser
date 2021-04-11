@@ -34,53 +34,30 @@ export class HeatmapCreateVis {
             colour: 'black',
         };
     }
-    private createDataAndColorArray2(xValue: string, yValue: string): Array<object> {
+    private createDataAndColorArray(xValue: string, yValue: string): Array<object> {
+        const dataMap = this.createDataMap(xValue, yValue);
+        const data: Array<Object> = [];
+        dataMap.forEach((value, key) => {
+            const keyValues = Object.values(JSON.parse(key));
+            const countValue = Object.values(value);
+            data.push({ x: keyValues[0], y: keyValues[1], color: countValue[0] });
+        });
+        return data;
+    }
+    private createDataMap(xValue: string, yValue: string) {
         const analysedData = this.getAnalysedData().intervalDataObjects;
         const dataMap = new Map();
         analysedData.forEach((obj) => {
-            // @ts-ignore
-            const { x, y } = this.createDataObject(xValue, yValue, obj);
-            console.log({ x, y });
-            if (dataMap.has({ x, y })) {
-                console.log('beep');
-                dataMap.get({ x, y }).count += 1;
+            const convertedObj = JSON.stringify(this.createDataObject(xValue, yValue, obj));
+            if (dataMap.has(convertedObj)) {
+                dataMap.get(convertedObj).count += 1;
             } else {
-                dataMap.set({ x, y }, { count: 1 });
+                dataMap.set(convertedObj, { count: 1 });
             }
         });
-        console.log(dataMap);
-        const data: Array<Object> = [];
-        dataMap.forEach((value, key) => {
-            // @ts-ignore
-            const { x, y } = Object.entries(key);
-            // @ts-ignore
-            const { count } = Object.entries(value);
-            data.push({ x: x, y: y, color: count });
-        });
-        return data;
+        return dataMap;
     }
-    private createDataAndColorArray(xValue: string, yValue: string): Array<object> {
-        const arrayXY = this.createDataArray(xValue, yValue);
-        const dataMap = new Map();
-        console.log(this.createDataAndColorArray2(xValue, yValue));
-        for (var item of arrayXY) {
-            var countOfItem = this.getCountOfObject(item, arrayXY);
-            const [itemX, itemY] = Object.values(item);
-            if (!dataMap.has(`${itemX},${itemY}`)) {
-                dataMap.set(`${itemX},${itemY}`, { x: itemX, y: itemY, color: countOfItem });
-            }
-        }
-        return Array.from(dataMap.values());
-    }
-    private createDataArray(xValue: string, yValue: string): Array<object> {
-        const { intervalDataObjects: dataObjectsArray } = this.getAnalysedData();
-        const data: Array<Object> = [];
-        for (let objIndex = 0; objIndex < dataObjectsArray.length; objIndex += 1) {
-            const dataObject = this.createDataObject(xValue, yValue, dataObjectsArray[objIndex]);
-            data.push(dataObject);
-        }
-        return data;
-    }
+
     private createDataObject(xValue: string, yValue: string, currentObject: Object): Object {
         let x: number = 0;
         let y: number = 0;
@@ -94,17 +71,7 @@ export class HeatmapCreateVis {
         }
         return {};
     }
-    private getCountOfObject(obj: object, array: Array<object>): number {
-        var count = 0;
-        const objAsString = JSON.stringify(obj);
-        for (var item of array) {
-            const itemAsString = JSON.stringify(item);
-            if (itemAsString === objAsString) {
-                count += 1;
-            }
-        }
-        return count;
-    }
+
     private getAnalysedData(): IAnalysedFileData {
         const getAnalysedData = new GetAnalysedData();
         return getAnalysedData.getAnalysedData();

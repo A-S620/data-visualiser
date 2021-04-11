@@ -50,7 +50,7 @@ describe('Field Types UI Component', () => {
         });
         it('Should have the correct columns in the table', () => {
             const tableBody = component.find('div#fields-table').find('table').find('tbody');
-            expect(tableBody.text()).toEqual('col1Ignorecol2Ignorecol3Ignore');
+            expect(tableBody.text()).toEqual('col1​col2​col3​');
         });
         it('should have the correct number of selects', () => {
             const tableBody = component.find('div#fields-table').find('table').find('tbody');
