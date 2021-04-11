@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,18 +141,7 @@
       <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.HeatmapCreateVis domain component">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="npm.watch">
     <configuration name="HeatmapCreateVis domain component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -211,8 +200,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.HeatmapCreateVis domain component" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="Jest.HeatmapCreateVis domain component" />
         <item itemvalue="Jest.HeatmapCreateVis.test.tsx" />
         <item itemvalue="npm.lint" />
         <item itemvalue="Jest.Import Files" />
@@ -479,21 +468,8 @@
       <workItem from="1617017125052" duration="94000" />
       <workItem from="1617288468138" duration="3808000" />
       <workItem from="1617866143490" duration="2653000" />
-      <workItem from="1617906821900" duration="6989000" />
-    </task>
-    <task id="LOCAL-00248" summary="Updated ReduxState AnalysedData slice with  binaryFields, binaryDataObjects. Updated unit tests that use AnalysedData slice">
-      <created>1613553286012</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1613553286012</updated>
-    </task>
-    <task id="LOCAL-00249" summary="Updated IAnalysedFileData with  binaryFields,binaryDataObjects. Updated existing unit tests.">
-      <created>1613553793904</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1613553793904</updated>
+      <workItem from="1617906821900" duration="7324000" />
+      <workItem from="1618125131892" duration="6988000" />
     </task>
     <task id="LOCAL-00250" summary="Updated ReducerActions and ReducerActionTypes with binaryFields and binaryDataObjects. Updated unit tests">
       <created>1613554157101</created>
@@ -824,7 +800,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617867524894</updated>
     </task>
-    <option name="localTasksCounter" value="297" />
+    <task id="LOCAL-00297" summary="Updated HeatmapCreateVis to Add count to x-y values after a user selects x value and y value in heatmap options, this becomes the colour (intensity) of the element">
+      <created>1617914056538</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1617914056539</updated>
+    </task>
+    <task id="LOCAL-00298" summary="Minor changes">
+      <created>1617914206443</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1617914206443</updated>
+    </task>
+    <option name="localTasksCounter" value="299" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -832,8 +822,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created ResetDataHandler" />
-    <MESSAGE value="Unit Test for reset application state" />
     <MESSAGE value="Updated ImportFilesComponent and unit tests" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
@@ -857,7 +845,9 @@
     <MESSAGE value="Updated HeatmapOptions, HeatmapPage.&#10;Created HeatmapVis&#10;TODO: Unit test" />
     <MESSAGE value="Created HeatmapVis and HeatmapOptions and unit tests" />
     <MESSAGE value="FieldTypes.test fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="FieldTypes.test fixes" />
+    <MESSAGE value="Updated HeatmapCreateVis to Add count to x-y values after a user selects x value and y value in heatmap options, this becomes the colour (intensity) of the element" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

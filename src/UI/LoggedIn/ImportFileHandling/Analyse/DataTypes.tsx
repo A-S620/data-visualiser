@@ -155,7 +155,7 @@ function DataTypes(props: any) {
                                     <TableCell id={value + '-select-cell'}>
                                         <Select
                                             id={value + '-select'}
-                                            defaultValue={FieldTypes.IGNORE}
+                                            // defaultValue={FieldTypes.IGNORE}
                                             style={{ minWidth: 150 }}
                                             name={value + '-select'}
                                             onChange={(event) => {

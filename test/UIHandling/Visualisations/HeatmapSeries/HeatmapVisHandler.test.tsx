@@ -50,8 +50,8 @@ describe('HeatmapVis UIHandling Component', () => {
         new HeatmapVisHandler().createVisual();
         expect(new GetCurrentHeatmapVisual().getCurrentVisual()).toEqual({
             data: [
-                { x: 79, y: 5 },
-                { x: 76, y: 23 },
+                { x: 79, y: 5, color: 1 },
+                { x: 76, y: 23, color: 1 },
             ],
             colourRange: [],
             colour: '',
