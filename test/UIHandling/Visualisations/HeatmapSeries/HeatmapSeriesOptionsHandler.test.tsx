@@ -9,7 +9,10 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
         const testOptions: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test1',
@@ -26,7 +29,10 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
     it('Should give an error if one of the options are invalid', () => {
         const testOptions: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test1',
@@ -45,7 +51,10 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
     it('Should save valid options in the Redux store', () => {
         const testOptions: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test1',
@@ -62,7 +71,10 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
     it('Should get the heatmap options from the Redux store', () => {
         const testOptions: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test1',
@@ -79,7 +91,10 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
     it('Should reset the heatmap options from the Redux store', () => {
         const testOptions: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test1',

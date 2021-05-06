@@ -7,7 +7,10 @@ import CreateCurrentHeatmapVisual from '../../../../../../src/Domain/ReduxStoreH
 describe('GetCurrentHeatmapVisual domain component', () => {
     it('Should return the correct Current Visualisation', () => {
         const currentVisual: IHeatmapSeriesCreateVis = {
-            colourRange: ['000000', '000000'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             colour: '000000',
             data: [
                 { x: 79, y: 5 },

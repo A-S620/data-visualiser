@@ -8,7 +8,10 @@ describe('ResetHeatmapSeriesOptions domain component', () => {
     it('Should return the correct heatmap series options', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             height: 500,
             opacity: 1,

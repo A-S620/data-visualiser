@@ -3,7 +3,7 @@ export interface IHeatmapSeriesOptions {
     yValue: string;
     height: number;
     width: number;
-    colourRange: string[];
+    colourRange: { colour1: string; colour2: string };
     colour: string;
     stroke: string;
     opacity: number;

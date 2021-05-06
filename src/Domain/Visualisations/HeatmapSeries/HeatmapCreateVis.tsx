@@ -24,7 +24,10 @@ export class HeatmapCreateVis {
     private createDefaultOptions(): IHeatmapSeriesCreateVis {
         const { intervalFields } = this.getAnalysedData();
         return {
-            colourRange: ['black', 'red'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             data: this.createDataAndColorArray(intervalFields[0], intervalFields[1]),
             height: 800,
             width: 800,

@@ -7,7 +7,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the xValue is the same as the yValue', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test',
@@ -23,7 +26,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the height is bigger than the maximum value', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test2',
@@ -41,7 +47,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the height is smaller than the minimum value', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test2',
@@ -59,7 +68,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the width is bigger than the maximum value', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test2',
@@ -77,7 +89,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the width is smaller than the minimum value', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test2',
@@ -95,7 +110,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the opacity is bigger than the maximum value', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test2',
@@ -113,7 +131,10 @@ describe('HeatmapSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the opacity is smaller than the minimum value', () => {
         const options: IHeatmapSeriesOptions = {
             colour: '#cd3b55',
-            colourRange: ['#cd3b55', '#cd3b55'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             fill: '#cd3b55',
             xValue: 'test',
             yValue: 'test2',

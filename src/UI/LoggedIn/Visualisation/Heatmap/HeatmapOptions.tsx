@@ -31,7 +31,7 @@ function HeatmapOptions(props: any) {
         yValue: string;
         height: number;
         width: number;
-        colourRange: string[];
+        colourRange: { colour1: string; colour2: string };
         colour: string;
         stroke: string;
         opacity: number;
@@ -41,7 +41,7 @@ function HeatmapOptions(props: any) {
         yValue: '',
         height: 500,
         width: 500,
-        colourRange: ['#000000', '#00F000'],
+        colourRange: { colour1: '#000000', colour2: '#00F000' },
         colour: '#000000',
         stroke: '#000000',
         opacity: 1,
@@ -275,14 +275,46 @@ function HeatmapOptions(props: any) {
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
                         <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
-                            <InputLabel className={classes.textColor}>Fill</InputLabel>
+                            <InputLabel className={classes.textColor}>Colour 1</InputLabel>
                             <Select
                                 value={options.fill}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
-                                        fill: event.target.value as string,
+                                        colourRange: {
+                                            ...options.colourRange,
+                                            colour1: event.target.value as string,
+                                        },
                                     });
+                                }}
+                                name="colour"
+                            >
+                                <option value={'red'}>red</option>
+                                <option value={'green'}>green</option>
+                                <option value={'blue'}>blue</option>
+                                <option value={'purple'}>purple</option>
+                                <option value={'orange'}>orange</option>
+                                <option value={'black'}>black</option>
+                                <option value={'yellow'}>yellow</option>
+                                <option value={'brown'}>brown</option>
+                                <option value={'pink'}>pink</option>
+                                <option value={'turquoise'}>turquoise</option>
+                            </Select>
+                        </FormControl>
+                        <Box mx={5} />
+                        <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
+                            <InputLabel className={classes.textColor}>Colour 2</InputLabel>
+                            <Select
+                                value={options.fill}
+                                onChange={(event) => {
+                                    setOptions({
+                                        ...options,
+                                        colourRange: {
+                                            ...options.colourRange,
+                                            colour2: event.target.value as string,
+                                        },
+                                    });
+                                    console.log(options.colourRange);
                                 }}
                                 name="colour"
                             >

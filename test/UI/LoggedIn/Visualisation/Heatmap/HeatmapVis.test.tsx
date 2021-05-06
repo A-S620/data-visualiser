@@ -9,7 +9,10 @@ import HeatmapVis from '../../../../../src/UI/LoggedIn/Visualisation/Heatmap/Hea
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IHeatmapSeriesCreateVis = {
-        colourRange: [],
+        colourRange: {
+            colour1: '',
+            colour2: '',
+        },
         colour: 'red',
         data: [
             { x: 79, y: 5 },

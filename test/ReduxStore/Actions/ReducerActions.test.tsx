@@ -375,7 +375,10 @@ describe('Reducer actions', () => {
         it('Should create an action to add the heatmap options', () => {
             const options: IHeatmapSeriesOptions = {
                 colour: '',
-                colourRange: [],
+                colourRange: {
+                    colour1: '',
+                    colour2: '',
+                },
                 fill: '',
                 height: 0,
                 opacity: 0,
@@ -400,7 +403,10 @@ describe('Reducer actions', () => {
     describe('Current Heatmap Visualisation actions', () => {
         it('Should create an action to add the current heatmap Visualisation', () => {
             const currentVisual: IHeatmapSeriesCreateVis = {
-                colourRange: [],
+                colourRange: {
+                    colour1: '',
+                    colour2: '',
+                },
                 colour: '',
                 data: [
                     { x: 79, y: 5 },

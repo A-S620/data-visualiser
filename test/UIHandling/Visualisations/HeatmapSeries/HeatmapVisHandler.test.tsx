@@ -31,7 +31,10 @@ beforeAll(() => {
     ]);
     analyseData.validateAnalysedData();
     new CreateHeatmapSeriesOptions({
-        colourRange: [],
+        colourRange: {
+            colour1: '',
+            colour2: '',
+        },
         colour: '',
         fill: '',
         height: 500,
@@ -53,7 +56,10 @@ describe('HeatmapVis UIHandling Component', () => {
                 { x: 79, y: 5, color: 1 },
                 { x: 76, y: 23, color: 1 },
             ],
-            colourRange: [],
+            colourRange: {
+                colour1: '',
+                colour2: '',
+            },
             colour: '',
             fill: '',
             height: 500,

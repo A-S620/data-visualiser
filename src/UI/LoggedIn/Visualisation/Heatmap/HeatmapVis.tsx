@@ -49,8 +49,9 @@ function HeatmapVis(props: any) {
                         stroke={props.currentHeatmapVisualisation.stroke}
                         opacity={props.currentHeatmapVisualisation.opacity}
                         sizeRange={[5, 15]}
-                        fill={props.currentHeatmapVisualisation.fill}
+                        // fill={props.currentHeatmapVisualisation.fill}
                         data={props.currentHeatmapVisualisation.data}
+                        colorRange={['red', 'blue']}
                     />
                 </XYPlot>
             </Box>

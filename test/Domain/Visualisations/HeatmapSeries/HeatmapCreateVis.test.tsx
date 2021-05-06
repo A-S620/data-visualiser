@@ -4,6 +4,7 @@ import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/Analys
 import { HeatmapCreateVis } from '../../../../src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis';
 import { IHeatmapSeriesOptions } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import CreateHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
+import { green } from '@material-ui/core/colors';
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
         fields: [
@@ -68,7 +69,10 @@ describe('HeatmapCreateVis domain component', () => {
     });
     it('Should return the correct options from the Redux store when valid options have been imported - interval', async () => {
         const options: IHeatmapSeriesOptions = {
-            colourRange: ['red', 'green'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             colour: 'red',
             fill: 'red',
             height: 500,
@@ -92,6 +96,9 @@ describe('HeatmapCreateVis domain component', () => {
         expect(createVis.opacity).toEqual(1);
         expect(createVis.fill).toEqual('red');
         expect(createVis.colour).toEqual('red');
-        expect(createVis.colourRange).toEqual(['red', 'green']);
+        expect(createVis.colourRange).toEqual({
+            colour1: 'red',
+            colour2: 'green',
+        });
     });
 });

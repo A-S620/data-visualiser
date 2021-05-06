@@ -9,7 +9,10 @@ import ResetCurrentHeatmapVisual from '../../../../../../src/Domain/ReduxStoreHa
 describe('ResetCurrentBarVisual domain component', () => {
     it('Should reset the Current bar Visualisation', () => {
         const currentVisual: IHeatmapSeriesCreateVis = {
-            colourRange: ['000000', '000000'],
+            colourRange: {
+                colour1: 'red',
+                colour2: 'green',
+            },
             colour: '000000',
             data: [
                 { x: 79, y: 5 },
