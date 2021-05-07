@@ -4,23 +4,8 @@
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/CreateCurrentHeeatmapVisual.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/CreateCurrentHeeatmapVisual.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/ResetCurrentHeatmapVisual.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/ResetCurrentHeatmapVisual.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/ResetHeatmapSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/ResetHeatmapSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +102,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.data.extractors.current.export.id" value="CSV-Groovy.csv.groovy" />
     <property name="database.data.extractors.current.id" value="CSV-Groovy.csv.groovy" />
+    <property name="js.last.introduce.type" value="CONST" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -156,17 +142,6 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.watch">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HeatmapCreateVis domain component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -495,14 +470,8 @@
       <workItem from="1617866143490" duration="2653000" />
       <workItem from="1617906821900" duration="7324000" />
       <workItem from="1618125131892" duration="8250000" />
-      <workItem from="1620280823817" duration="2824000" />
-    </task>
-    <task id="LOCAL-00252" summary="Updated CreateAnalysedData, GetAnalysedData and ResetAnalysedData with binaryFields and binaryDataObjects. Updated unit tests">
-      <created>1613555393832</created>
-      <option name="number" value="00252" />
-      <option name="presentableId" value="LOCAL-00252" />
-      <option name="project" value="LOCAL" />
-      <updated>1613555393832</updated>
+      <workItem from="1620280823817" duration="3071000" />
+      <workItem from="1620366782467" duration="3110000" />
     </task>
     <task id="LOCAL-00253" summary="Refactoring AnalyseNominalData and AnalyseOrdinalData and unit tests">
       <created>1613561121988</created>
@@ -840,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618134490585</updated>
     </task>
-    <option name="localTasksCounter" value="301" />
+    <task id="LOCAL-00301" summary="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state">
+      <created>1620283920077</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1620283920077</updated>
+    </task>
+    <option name="localTasksCounter" value="302" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +824,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions" />
     <MESSAGE value="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests" />
     <MESSAGE value="Redux store handling for heatmapSeriesOptions&#10;Created: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions&#10;TODO: Unit tests" />
     <MESSAGE value="Unit tests for: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions" />
@@ -873,7 +848,8 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Refactoring HeatmapCreateVis" />
     <MESSAGE value="Refactored HeatmapCreateVis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored HeatmapCreateVis" />
+    <MESSAGE value="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

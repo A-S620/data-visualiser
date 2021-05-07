@@ -277,7 +277,7 @@ function HeatmapOptions(props: any) {
                         <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
                             <InputLabel className={classes.textColor}>Colour 1</InputLabel>
                             <Select
-                                value={options.fill}
+                                value={options.colourRange.colour1}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
@@ -300,12 +300,13 @@ function HeatmapOptions(props: any) {
                                 <option value={'pink'}>pink</option>
                                 <option value={'turquoise'}>turquoise</option>
                             </Select>
+                            <FormHelperText className={classes.helperTextColor}>Low frequency</FormHelperText>
                         </FormControl>
                         <Box mx={5} />
                         <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
                             <InputLabel className={classes.textColor}>Colour 2</InputLabel>
                             <Select
-                                value={options.fill}
+                                value={options.colourRange.colour2}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
@@ -314,7 +315,6 @@ function HeatmapOptions(props: any) {
                                             colour2: event.target.value as string,
                                         },
                                     });
-                                    console.log(options.colourRange);
                                 }}
                                 name="colour"
                             >
@@ -329,6 +329,7 @@ function HeatmapOptions(props: any) {
                                 <option value={'pink'}>pink</option>
                                 <option value={'turquoise'}>turquoise</option>
                             </Select>
+                            <FormHelperText className={classes.helperTextColor}>High frequency</FormHelperText>
                         </FormControl>
                         <Box mx={5} />
                     </Box>

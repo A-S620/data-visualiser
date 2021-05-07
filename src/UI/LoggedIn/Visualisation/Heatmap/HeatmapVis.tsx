@@ -17,6 +17,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 function HeatmapVis(props: any) {
     const classes = useStyles();
+    const options = props.currentHeatmapVisualisation;
+    const colourRange = () => {
+        if (options.colourRange) {
+            return [options.colourRange.colour1, options.colourRange.colour2];
+        }
+        return [];
+    };
     return (
         <Box
             display="flex"
@@ -30,12 +37,7 @@ function HeatmapVis(props: any) {
             mx={15}
         >
             <Box>
-                <XYPlot
-                    id={'heatmap-series'}
-                    height={props.currentHeatmapVisualisation.height}
-                    width={props.currentHeatmapVisualisation.width}
-                    margin={{ left: 75 }}
-                >
+                <XYPlot id={'heatmap-series'} height={options.height} width={options.width} margin={{ left: 75 }}>
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                     <XAxis
@@ -46,12 +48,11 @@ function HeatmapVis(props: any) {
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
                     <HeatmapSeries
-                        stroke={props.currentHeatmapVisualisation.stroke}
-                        opacity={props.currentHeatmapVisualisation.opacity}
+                        stroke={options.stroke}
+                        opacity={options.opacity}
                         sizeRange={[5, 15]}
-                        // fill={props.currentHeatmapVisualisation.fill}
-                        data={props.currentHeatmapVisualisation.data}
-                        colorRange={['red', 'blue']}
+                        data={options.data}
+                        colorRange={colourRange()}
                     />
                 </XYPlot>
             </Box>
