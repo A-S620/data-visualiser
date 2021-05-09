@@ -79,8 +79,10 @@ describe('heatmap Plotting Options Component', () => {
             expect(textfield.text()).toBe('Opacity');
         });
         it('Should have a colour select', () => {
-            const select = wrapper.find('div#colour-options').find('div#fill-select').find('label');
-            expect(select.text()).toBe('Fill');
+            const select1 = wrapper.find('div#colour-options').find('div#colour1-select').find('label');
+            expect(select1.text()).toBe('Colour 1');
+            const select2 = wrapper.find('div#colour-options').find('div#colour2-select').find('label');
+            expect(select2.text()).toBe('Colour 2');
         });
         it('Should have a submit button', () => {
             const button = wrapper.find('button#options-submit-button');
@@ -124,7 +126,6 @@ describe('heatmap Plotting Options Component', () => {
             await selectXVal('col1');
             await selectYVal('col2');
             await selectStroke('red');
-            await selectFill('red');
 
             await clickSubmit();
             expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe('Options Validated');
@@ -173,13 +174,6 @@ function selectYVal(value: string) {
 function selectStroke(value: string) {
     const stroke = wrapper.find('div#stroke-select');
     stroke
-        .find('input')
-        .at(0)
-        .simulate('change', { target: { value: value } });
-}
-function selectFill(value: string) {
-    const select = wrapper.find('div#fill-select');
-    select
         .find('input')
         .at(0)
         .simulate('change', { target: { value: value } });

@@ -274,7 +274,7 @@ function HeatmapOptions(props: any) {
                         />
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
-                        <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
+                        <FormControl style={{ minWidth: 200 }} id={'colour1-select'}>
                             <InputLabel className={classes.textColor}>Colour 1</InputLabel>
                             <Select
                                 value={options.colourRange.colour1}
@@ -303,7 +303,7 @@ function HeatmapOptions(props: any) {
                             <FormHelperText className={classes.helperTextColor}>Low frequency</FormHelperText>
                         </FormControl>
                         <Box mx={5} />
-                        <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
+                        <FormControl style={{ minWidth: 200 }} id={'colour2-select'}>
                             <InputLabel className={classes.textColor}>Colour 2</InputLabel>
                             <Select
                                 value={options.colourRange.colour2}
