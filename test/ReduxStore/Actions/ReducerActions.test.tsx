@@ -13,6 +13,8 @@ import { IMarkSeriesOptions } from '../../../src/Interfaces/Visualisations/Mark/
 import { IMarkSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 import { IHeatmapSeriesOptions } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { IHeatmapSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
+import { IPolygonSeriesOptions } from '../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
+import { IPolygonSeriesVis } from '../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -429,6 +431,38 @@ describe('Reducer actions', () => {
                 type: actionTypes.CURRENT_HEATMAP_VISUAL_RESET,
             };
             expect(reducerActions.resetCurrentHeatmapVisual()).toEqual(expectedAction);
+        });
+    });
+    describe('Polygon Series Options actions', () => {
+        it('Should create an action to add the polygon options', () => {
+            const options: IPolygonSeriesOptions = {};
+            const expectedAction = {
+                type: actionTypes.POLYGON_OPTIONS_ADDED,
+                payload: options,
+            };
+            expect(reducerActions.addPolygonOptions(options)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset the polygon options', () => {
+            const expectedAction = {
+                type: actionTypes.POLYGON_OPTIONS_RESET,
+            };
+            expect(reducerActions.resetPolygonOptions()).toEqual(expectedAction);
+        });
+        describe('Current polygon Visualisation actions', () => {
+            it('Should create an action to add the current polygon Visualisation', () => {
+                const currentVisual: IPolygonSeriesVis = {};
+                const expectedAction = {
+                    type: actionTypes.CURRENT_POLYGON_VISUAL_ADDED,
+                    payload: currentVisual,
+                };
+                expect(reducerActions.addCurrentPolygonVisual(currentVisual)).toEqual(expectedAction);
+            });
+            it('Should create an action to reset the current polygon Visualisation', () => {
+                const expectedAction = {
+                    type: actionTypes.CURRENT_POLYGON_VISUAL_RESET,
+                };
+                expect(reducerActions.resetCurrentPolygonVisual()).toEqual(expectedAction);
+            });
         });
     });
 });

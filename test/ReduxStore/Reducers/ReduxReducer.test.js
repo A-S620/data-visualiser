@@ -794,6 +794,8 @@ describe('ReduxReducer', () => {
             currentMarkVisualisation: {},
             heatmapSeriesOptions: {},
             currentHeatmapVisualisation: {},
+            polygonSeriesOptions: {},
+            currentPolygonVisualisation: {},
         };
         it('Should handle RESET_APPLICATION_STATE', () => {
             expect(
@@ -825,6 +827,8 @@ describe('ReduxReducer', () => {
                         currentMarkVisualisation: {},
                         heatmapSeriesOptions: {},
                         currentHeatmapVisualisation: {},
+                        polygonSeriesOptions: {},
+                        currentPolygonVisualisation: {},
                     },
                     reducerActions.resetApplicationState()
                 )

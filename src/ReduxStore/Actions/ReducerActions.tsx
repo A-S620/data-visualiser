@@ -7,6 +7,8 @@ import { IMarkSeriesOptions } from '../../Interfaces/Visualisations/Mark/IMarkSe
 import { IMarkSeriesCreateVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 import { IHeatmapSeriesOptions } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { IHeatmapSeriesCreateVis } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
+import { IPolygonSeriesOptions } from '../../Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
+import { IPolygonSeriesVis } from '../../Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -102,6 +104,13 @@ export const addHeatmapOptions = (heatmapSeriesOptions: IHeatmapSeriesOptions) =
 export const resetHeatmapOptions = () => ({
     type: reducerActionTypes.HEATMAP_OPTIONS_RESET,
 });
+export const addPolygonOptions = (options: IPolygonSeriesOptions) => ({
+    type: reducerActionTypes.POLYGON_OPTIONS_ADDED,
+    payload: options,
+});
+export const resetPolygonOptions = () => ({
+    type: reducerActionTypes.POLYGON_OPTIONS_RESET,
+});
 //currentLineVisualisation slice
 export const addCurrentLineVisual = (currentLineVisual: ILineSeriesCreateVis) => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
@@ -130,6 +139,13 @@ export const addCurrentHeatmapVisual = (currentVisual: IHeatmapSeriesCreateVis) 
 });
 export const resetCurrentHeatmapVisual = () => ({
     type: reducerActionTypes.CURRENT_HEATMAP_VISUAL_RESET,
+});
+export const addCurrentPolygonVisual = (currentVisual: IPolygonSeriesVis) => ({
+    type: reducerActionTypes.CURRENT_POLYGON_VISUAL_ADDED,
+    payload: currentVisual,
+});
+export const resetCurrentPolygonVisual = () => ({
+    type: reducerActionTypes.CURRENT_POLYGON_VISUAL_RESET,
 });
 //Reset Application State
 export const resetApplicationState = () => ({

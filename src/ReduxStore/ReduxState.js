@@ -25,5 +25,7 @@ const ReduxState = {
     currentMarkVisualisation: {},
     heatmapSeriesOptions: {},
     currentHeatmapVisualisation: {},
+    polygonSeriesOptions: {},
+    currentPolygonVisualisation: {},
 };
 export default ReduxState;

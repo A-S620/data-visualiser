@@ -49,12 +49,11 @@ afterAll(() => {
 });
 describe('LineSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createLineVisual method is called', () => {
-        const lineVisHandler = new LineSeriesVisHandler().createLineVisual();
         const getCurrentVisual = new GetCurrentLineVisual();
         expect(getCurrentVisual.getCurrentLineVisual()).toEqual({
             data: [
-                { x: 79, y: 5 },
                 { x: 76, y: 23 },
+                { x: 79, y: 5 },
             ],
             height: 500,
             width: 500,

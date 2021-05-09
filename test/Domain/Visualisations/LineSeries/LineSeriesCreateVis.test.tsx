@@ -48,8 +48,8 @@ describe('LineSeriesCreateVis domain component', () => {
             const createVis = new LineSeriesCreateVis().createVis();
             expect(createVis.data).toEqual([
                 { x: 32, y: 45 },
-                { x: 79, y: 5 },
                 { x: 76, y: 23 },
+                { x: 79, y: 5 },
             ]);
             expect(createVis.height).toEqual(800);
             expect(createVis.width).toEqual(800);
@@ -77,8 +77,8 @@ describe('LineSeriesCreateVis domain component', () => {
             const createVis = new LineSeriesCreateVis().createVis();
             expect(createVis.data).toEqual([
                 { x: 32, y: 45 },
-                { x: 79, y: 5 },
                 { x: 76, y: 23 },
+                { x: 79, y: 5 },
             ]);
             expect(createVis.height).toEqual(500);
             expect(createVis.width).toEqual(500);

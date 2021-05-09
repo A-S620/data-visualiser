@@ -3,14 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Refactored and created DataHandler so that code can be reused">
       <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Polygon/IPolygonSeriesVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Util/DataHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/DataHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -488,14 +490,7 @@
       <workItem from="1618125131892" duration="8250000" />
       <workItem from="1620280823817" duration="3071000" />
       <workItem from="1620366782467" duration="3251000" />
-      <workItem from="1620566124607" duration="6985000" />
-    </task>
-    <task id="LOCAL-00256" summary="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test">
-      <created>1613641226348</created>
-      <option name="number" value="00256" />
-      <option name="presentableId" value="LOCAL-00256" />
-      <option name="project" value="LOCAL" />
-      <updated>1613641226348</updated>
+      <workItem from="1620566124607" duration="7903000" />
     </task>
     <task id="LOCAL-00257" summary="Created BinaryDataTable for ViewAnalysedData UI Component and updated unit tests">
       <created>1613642302173</created>
@@ -833,7 +828,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620572677671</updated>
     </task>
-    <option name="localTasksCounter" value="305" />
+    <task id="LOCAL-00305" summary="Refactored and created DataHandler so that code can be reused">
+      <created>1620577169491</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1620577169491</updated>
+    </task>
+    <option name="localTasksCounter" value="306" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
