@@ -2,7 +2,7 @@ import { IAnalysedFileData } from '../Interfaces/Analyse/IAnalysedFileData';
 import GetAnalysedData from '../Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 export class DataHandler {
-    public createDataMap(xValue: string, yValue: string, analysedData: Array<object>) {
+    public createDataMapWithCount(xValue: string, yValue: string, analysedData: Array<object>) {
         const dataMap = new Map();
         analysedData.forEach((obj) => {
             const convertedObj = JSON.stringify(this.createIntegerDataObject(xValue, yValue, obj));
@@ -13,6 +13,15 @@ export class DataHandler {
             }
         });
         return dataMap;
+    }
+
+    public createArrayFromDataMap(xValue: string, yValue: string, dataMap: Map<any, any>) {
+        const data: Array<object> = [];
+        dataMap.forEach((value, key) => {
+            const keyValues = Object.values(JSON.parse(key));
+            data.push({ x: keyValues[0], y: keyValues[1] });
+        });
+        return data.sort((a, b) => (Object.values(a)[0] > Object.values(b)[0] ? 1 : -1));
     }
 
     public createIntegerDataObject(xValue: string, yValue: string, currentObject: Object): Object {

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Util/DataHandler.tsx" afterDir="false" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Refactored and created DataHandler so that code can be reused">
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesCreateVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/DataHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/DataHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/LineSeries/LineSeriesCreateVis.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -487,14 +488,7 @@
       <workItem from="1618125131892" duration="8250000" />
       <workItem from="1620280823817" duration="3071000" />
       <workItem from="1620366782467" duration="3251000" />
-      <workItem from="1620566124607" duration="4134000" />
-    </task>
-    <task id="LOCAL-00255" summary="Updated AnalyseFileData with AnalyseBinaryData nad updated unit tests">
-      <created>1613640687909</created>
-      <option name="number" value="00255" />
-      <option name="presentableId" value="LOCAL-00255" />
-      <option name="project" value="LOCAL" />
-      <updated>1613640687910</updated>
+      <workItem from="1620566124607" duration="6985000" />
     </task>
     <task id="LOCAL-00256" summary="Updated FileAnalysisComponent UI Component with Binary fields and updated unit test">
       <created>1613641226348</created>
@@ -832,7 +826,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620568329558</updated>
     </task>
-    <option name="localTasksCounter" value="304" />
+    <task id="LOCAL-00304" summary="Refactored and created DataHandler so that code can be reused">
+      <created>1620572677671</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1620572677671</updated>
+    </task>
+    <option name="localTasksCounter" value="305" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -840,7 +841,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Unit tests for: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions" />
     <MESSAGE value="Created HeatmapSeriesOptionsValidate Domain component" />
     <MESSAGE value="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test" />
     <MESSAGE value="Did HeatmapSeriesOptionsValidate Domain component &#10;Unit test" />
@@ -865,7 +865,8 @@
     <MESSAGE value="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state" />
     <MESSAGE value="Fixed HeatmapVis colour range, it now shows colours&#10;correctly.&#10;TODO: HeatmapOptions unit tests" />
     <MESSAGE value="HeatmapOptions unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="HeatmapOptions unit tests" />
+    <MESSAGE value="Refactored and created DataHandler so that code can be reused" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored and created DataHandler so that code can be reused" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

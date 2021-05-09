@@ -40,8 +40,8 @@ export class HeatmapCreateVis {
     }
     private createDataAndColorArray(xValue: string, yValue: string): Array<object> {
         const analysedData = this.dataHandler.getAnalysedData().intervalDataObjects;
-        const dataMap = this.dataHandler.createDataMap(xValue, yValue, analysedData);
-        const data: Array<Object> = [];
+        const dataMap = this.dataHandler.createDataMapWithCount(xValue, yValue, analysedData);
+        const data: Array<object> = [];
         dataMap.forEach((value, key) => {
             const keyValues = Object.values(JSON.parse(key));
             const countValue = Object.values(value);

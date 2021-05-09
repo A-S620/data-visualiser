@@ -10,12 +10,16 @@ export class LineSeriesCreateVis {
             return this.createDefaultOptions();
         }
 
+        const dataMap = this.dataHandler.createDataMapWithCount(
+            lineSeriesOptions.xValue,
+            lineSeriesOptions.yValue,
+            this.dataHandler.getAnalysedData().intervalDataObjects
+        );
+        console.log(
+            this.dataHandler.createArrayFromDataMap(lineSeriesOptions.xValue, lineSeriesOptions.yValue, dataMap)
+        );
         return {
-            data: this.dataHandler.createIntegerDataArray(
-                lineSeriesOptions.xValue,
-                lineSeriesOptions.yValue,
-                this.dataHandler.getAnalysedData().intervalDataObjects
-            ),
+            data: this.dataHandler.createArrayFromDataMap(lineSeriesOptions.xValue, lineSeriesOptions.yValue, dataMap),
             height: lineSeriesOptions.height,
             width: lineSeriesOptions.width,
             stroke: lineSeriesOptions.stroke,
@@ -27,12 +31,13 @@ export class LineSeriesCreateVis {
     }
     private createDefaultOptions(): ILineSeriesCreateVis {
         const { intervalFields } = this.dataHandler.getAnalysedData();
+        const dataMap = this.dataHandler.createDataMapWithCount(
+            intervalFields[0],
+            intervalFields[1],
+            this.dataHandler.getAnalysedData().intervalDataObjects
+        );
         return {
-            data: this.dataHandler.createIntegerDataArray(
-                intervalFields[0],
-                intervalFields[1],
-                this.dataHandler.getAnalysedData().intervalDataObjects
-            ),
+            data: this.dataHandler.createArrayFromDataMap(intervalFields[0], intervalFields[1], dataMap),
             height: 800,
             width: 800,
             stroke: '#000000',

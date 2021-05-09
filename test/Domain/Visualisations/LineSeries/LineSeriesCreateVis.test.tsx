@@ -20,6 +20,11 @@ beforeAll(() => {
         intervalFields: ['col1', 'col2'],
         intervalDataObjects: [
             { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
+            { col1: 32, col2: 45 },
             { col1: 79, col2: 5 },
             { col1: 76, col2: 23 },
         ],
