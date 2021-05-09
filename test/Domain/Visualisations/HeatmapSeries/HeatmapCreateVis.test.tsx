@@ -4,7 +4,6 @@ import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/Analys
 import { HeatmapCreateVis } from '../../../../src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis';
 import { IHeatmapSeriesOptions } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import CreateHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
-import { green } from '@material-ui/core/colors';
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
         fields: [

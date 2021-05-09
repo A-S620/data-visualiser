@@ -1,9 +1,9 @@
-import { IAnalysedFileData } from '../../../Interfaces/Analyse/IAnalysedFileData';
-import GetAnalysedData from '../../ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import GetMarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
 import { IMarkSeriesCreateVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { DataHandler } from '../../../Util/DataHandler';
 
 export class MarkSeriesCreateVis {
+    private dataHandler = new DataHandler();
     public createVis(): IMarkSeriesCreateVis {
         const options = new GetMarkSeriesOptions().getMarkSeriesOptions();
         if (Object.keys(options).length === 0) {
@@ -11,7 +11,11 @@ export class MarkSeriesCreateVis {
         }
 
         return {
-            data: this.createDataArray(options.xValue, options.yValue),
+            data: this.dataHandler.createIntegerDataArray(
+                options.xValue,
+                options.yValue,
+                this.dataHandler.getAnalysedData().intervalDataObjects
+            ),
             height: options.height,
             width: options.width,
             stroke: options.stroke,
@@ -21,9 +25,13 @@ export class MarkSeriesCreateVis {
         };
     }
     private createDefaultOptions(): IMarkSeriesCreateVis {
-        const { intervalFields } = this.getAnalysedData();
+        const { intervalFields } = this.dataHandler.getAnalysedData();
         return {
-            data: this.createDataArray(intervalFields[0], intervalFields[1]),
+            data: this.dataHandler.createIntegerDataArray(
+                intervalFields[0],
+                intervalFields[1],
+                this.dataHandler.getAnalysedData().intervalDataObjects
+            ),
             height: 800,
             width: 800,
             stroke: 'black',
@@ -31,33 +39,5 @@ export class MarkSeriesCreateVis {
             fill: 'black',
             colour: 'black',
         };
-    }
-
-    private getAnalysedData(): IAnalysedFileData {
-        const getAnalysedData = new GetAnalysedData();
-        return getAnalysedData.getAnalysedData();
-    }
-    private createDataObject(xValue: string, yValue: string, currentObject: Object): Object {
-        let x: number = 0;
-        let y: number = 0;
-        for (const [key, value] of Object.entries(currentObject)) {
-            if (key === xValue) {
-                x = value;
-            } else if (key === yValue) {
-                y = value;
-                return { x, y };
-            }
-        }
-        return {};
-    }
-
-    private createDataArray(xValue: string, yValue: string): Array<object> {
-        const { intervalDataObjects: dataObjectsArray } = this.getAnalysedData();
-        const data: Array<Object> = [];
-        for (let objIndex = 0; objIndex < dataObjectsArray.length; objIndex += 1) {
-            const dataObject = this.createDataObject(xValue, yValue, dataObjectsArray[objIndex]);
-            data.push(dataObject);
-        }
-        return data;
     }
 }
