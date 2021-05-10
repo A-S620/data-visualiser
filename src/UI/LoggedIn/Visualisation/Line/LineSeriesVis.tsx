@@ -33,8 +33,8 @@ function LineSeriesVis(props: any) {
             <Box>
                 <XYPlot
                     id={'line-series-vis'}
-                    height={props.currentLineVisualisation.height}
-                    width={props.currentLineVisualisation.width}
+                    height={props.currentLineVisual.height}
+                    width={props.currentLineVisual.width}
                     margin={{ left: 75 }}
                 >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
@@ -51,13 +51,13 @@ function LineSeriesVis(props: any) {
                     <LineSeries
                         style={{
                             strokeLinejoin: 'round',
-                            strokeWidth: props.currentLineVisualisation.lineWidth,
+                            strokeWidth: props.currentLineVisual.lineWidth,
                         }}
-                        strokeStyle={props.currentLineVisualisation.lineStyle}
-                        opacity={props.currentLineVisualisation.opacity}
-                        curve={props.currentLineVisualisation.curve}
-                        data={props.currentLineVisualisation.data}
-                        stroke={props.currentLineVisualisation.stroke}
+                        strokeStyle={props.currentLineVisual.lineStyle}
+                        opacity={props.currentLineVisual.opacity}
+                        curve={props.currentLineVisual.curve}
+                        data={props.currentLineVisual.data}
+                        stroke={props.currentLineVisual.stroke}
                     />
                 </XYPlot>
             </Box>
@@ -65,7 +65,7 @@ function LineSeriesVis(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    currentLineVisualisation: state.currentLineVisualisation,
+    currentLineVisual: state.currentLineVisual,
     lineSeriesOptions: state.lineSeriesOptions,
 });
 export default connect(mapStateToProps, {})(LineSeriesVis);

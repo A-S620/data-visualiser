@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function HeatmapVis(props: any) {
     const classes = useStyles();
-    const options = props.currentHeatmapVisualisation;
+    const options = props.currentHeatmapVisual;
     const colourRange = () => {
         if (options.colourRange) {
             return [options.colourRange.colour1, options.colourRange.colour2];
@@ -60,7 +60,7 @@ function HeatmapVis(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    currentHeatmapVisualisation: state.currentHeatmapVisualisation,
+    currentHeatmapVisual: state.currentHeatmapVisual,
     heatmapSeriesOptions: state.heatmapSeriesOptions,
 });
 export default connect(mapStateToProps, {})(HeatmapVis);

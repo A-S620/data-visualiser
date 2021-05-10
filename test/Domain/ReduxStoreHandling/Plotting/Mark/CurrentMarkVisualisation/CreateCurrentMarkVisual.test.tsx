@@ -1,9 +1,9 @@
 import 'jsdom-global/register';
 import React from 'react';
-import ResetCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/ResetCurrentMarkVisual';
+import ResetCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/ResetCurrentMarkVisual';
 import { IMarkSeriesCreateVis } from '../../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
-import CreateCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CreateCurrentMarkVisual';
-import GetCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/GetCurrentMarkVisual';
+import CreateCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/CreateCurrentMarkVisual';
+import GetCurrentMarkVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/GetCurrentMarkVisual';
 beforeEach(() => {
     const resetCurrentVis = new ResetCurrentMarkVisual();
     resetCurrentVis.resetCurrentMarkVisual();

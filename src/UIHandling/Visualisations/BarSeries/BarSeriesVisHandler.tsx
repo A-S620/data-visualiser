@@ -1,6 +1,6 @@
 import { BarSeriesCreateVis } from '../../../Domain/Visualisations/BarSeries/BarSeriesCreateVis';
-import CreateCurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/CreateCurrentBarVisual';
-import ResetCurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/ResetCurrentBarVisual';
+import CreateCurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
+import ResetCurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/ResetCurrentBarVisual';
 
 export class BarSeriesVisHandler {
     public createBarVisual() {

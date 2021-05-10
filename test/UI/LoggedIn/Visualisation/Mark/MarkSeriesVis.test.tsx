@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
 import { IMarkSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
-import CreateCurrentMarkVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CreateCurrentMarkVisual';
+import CreateCurrentMarkVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/CreateCurrentMarkVisual';
 import MarkSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {

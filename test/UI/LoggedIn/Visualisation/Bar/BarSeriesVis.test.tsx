@@ -2,7 +2,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
-import CreateCurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisualisation/CreateCurrentBarVisual';
+import CreateCurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
 import { IBarSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
 import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';

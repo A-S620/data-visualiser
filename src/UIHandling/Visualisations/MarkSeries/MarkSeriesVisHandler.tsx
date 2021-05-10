@@ -1,6 +1,6 @@
 import { MarkSeriesCreateVis } from '../../../Domain/Visualisations/MarkSeries/MarkSeriesCreateVis';
-import CreateCurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CreateCurrentMarkVisual';
-import ResetCurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/ResetCurrentMarkVisual';
+import CreateCurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/CreateCurrentMarkVisual';
+import ResetCurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/ResetCurrentMarkVisual';
 
 export class MarkSeriesVisHandler {
     public createVisual() {

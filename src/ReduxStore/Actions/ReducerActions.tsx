@@ -111,7 +111,7 @@ export const addPolygonOptions = (options: IPolygonSeriesOptions) => ({
 export const resetPolygonOptions = () => ({
     type: reducerActionTypes.POLYGON_OPTIONS_RESET,
 });
-//currentLineVisualisation slice
+//currentLineVisual slice
 export const addCurrentLineVisual = (currentLineVisual: ILineSeriesCreateVis) => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
     payload: currentLineVisual,

@@ -32,8 +32,8 @@ function MarkSeriesVis(props: any) {
             <Box>
                 <XYPlot
                     id={'mark-series-vis'}
-                    height={props.currentMarkVisualisation.height}
-                    width={props.currentMarkVisualisation.width}
+                    height={props.currentMarkVisual.height}
+                    width={props.currentMarkVisual.width}
                     margin={{ left: 75 }}
                 >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
@@ -48,11 +48,11 @@ function MarkSeriesVis(props: any) {
                     />
                     <MarkSeries
                         strokeWidth={2}
-                        stroke={props.currentMarkVisualisation.stroke}
-                        opacity={props.currentMarkVisualisation.opacity}
+                        stroke={props.currentMarkVisual.stroke}
+                        opacity={props.currentMarkVisual.opacity}
                         sizeRange={[5, 15]}
-                        fill={props.currentMarkVisualisation.colour}
-                        data={props.currentMarkVisualisation.data}
+                        fill={props.currentMarkVisual.colour}
+                        data={props.currentMarkVisual.data}
                     />
                 </XYPlot>
             </Box>
@@ -60,6 +60,6 @@ function MarkSeriesVis(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    currentMarkVisualisation: state.currentMarkVisualisation,
+    currentMarkVisual: state.currentMarkVisual,
 });
 export default connect(mapStateToProps, {})(MarkSeriesVis);

@@ -453,7 +453,7 @@ describe('ReduxReducer', () => {
     });
     describe('Current Line Visualisation', () => {
         const currentLineVisualSlice = {
-            currentLineVisualisation: {},
+            currentLineVisual: {},
         };
         const currentVisual = {
             data: [
@@ -470,7 +470,7 @@ describe('ReduxReducer', () => {
         };
         it('Should handle CURRENT_LINE_VISUAL_ADDED', () => {
             expect(reduxReducer(currentLineVisualSlice, reducerActions.addCurrentLineVisual(currentVisual))).toEqual({
-                currentLineVisualisation: {
+                currentLineVisual: {
                     data: [
                         { x: 79, y: 5 },
                         { x: 76, y: 23 },
@@ -489,7 +489,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        currentLineVisualisation: {
+                        currentLineVisual: {
                             data: [
                                 { x: 79, y: 5 },
                                 { x: 76, y: 23 },
@@ -561,7 +561,7 @@ describe('ReduxReducer', () => {
     });
     describe('Current Bar Visualisation', () => {
         const currentBarVisualSlice = {
-            currentBarVisualisation: {},
+            currentBarVisual: {},
         };
         const currentVisual = {
             data: [
@@ -578,7 +578,7 @@ describe('ReduxReducer', () => {
         };
         it('Should handle CURRENT_BAR_VISUAL_ADDED', () => {
             expect(reduxReducer(currentBarVisualSlice, reducerActions.addCurrentBarVisual(currentVisual))).toEqual({
-                currentBarVisualisation: {
+                currentBarVisual: {
                     data: [
                         { x: 79, y: 5 },
                         { x: 76, y: 23 },
@@ -597,7 +597,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        currentBarVisualisation: {
+                        currentBarVisual: {
                             data: [
                                 { x: 79, y: 5 },
                                 { x: 76, y: 23 },
@@ -666,7 +666,7 @@ describe('ReduxReducer', () => {
     });
     describe('Current Mark Visualisation', () => {
         const currentMarkVisualSlice = {
-            currentMarkVisualisation: {},
+            currentMarkVisual: {},
         };
         const currentVisual = {
             colour: '',
@@ -682,7 +682,7 @@ describe('ReduxReducer', () => {
         };
         it('Should handle CURRENT_MARK_VISUAL_ADDED', () => {
             expect(reduxReducer(currentMarkVisualSlice, reducerActions.addCurrentMarkVisual(currentVisual))).toEqual({
-                currentMarkVisualisation: {
+                currentMarkVisual: {
                     colour: '',
                     data: [
                         { x: 79, y: 5 },
@@ -700,7 +700,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        currentMarkVisualisation: {
+                        currentMarkVisual: {
                             colour: '',
                             data: [
                                 { x: 79, y: 5 },
@@ -766,6 +766,45 @@ describe('ReduxReducer', () => {
             ).toEqual(optionsSlice);
         });
     });
+    describe('Polygon Options slice', () => {
+        const optionsSlice = {
+            polygonSeriesOptions: {},
+        };
+        const options = {
+            colour: '',
+            height: 0,
+            width: 0,
+            xValue: 'test',
+            yValue: 'test',
+        };
+        it('Should handle POLYGON_OPTIONS_ADDED', () => {
+            expect(reduxReducer(optionsSlice, reducerActions.addPolygonOptions(options))).toEqual({
+                polygonSeriesOptions: {
+                    colour: '',
+                    height: 0,
+                    width: 0,
+                    xValue: 'test',
+                    yValue: 'test',
+                },
+            });
+        });
+        it('Should handle POLYGON_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        polygonSeriesOptions: {
+                            colour: '',
+                            height: 0,
+                            width: 0,
+                            xValue: 'test',
+                            yValue: 'test',
+                        },
+                    },
+                    reducerActions.resetPolygonOptions()
+                )
+            ).toEqual(optionsSlice);
+        });
+    });
     describe('Reset application state', () => {
         const state = {
             importedData: {
@@ -787,15 +826,15 @@ describe('ReduxReducer', () => {
                 ignoreDataObjects: [],
             },
             lineSeriesOptions: {},
-            currentLineVisualisation: {},
+            currentLineVisual: {},
             barSeriesOptions: {},
-            currentBarVisualisation: {},
+            currentBarVisual: {},
             markSeriesOptions: {},
-            currentMarkVisualisation: {},
+            currentMarkVisual: {},
             heatmapSeriesOptions: {},
-            currentHeatmapVisualisation: {},
+            currentHeatmapVisual: {},
             polygonSeriesOptions: {},
-            currentPolygonVisualisation: {},
+            currentPolygonVisual: {},
         };
         it('Should handle RESET_APPLICATION_STATE', () => {
             expect(
@@ -820,15 +859,15 @@ describe('ReduxReducer', () => {
                             ignoreDataObjects: [],
                         },
                         lineSeriesOptions: {},
-                        currentLineVisualisation: {},
+                        currentLineVisual: {},
                         barSeriesOptions: {},
-                        currentBarVisualisation: {},
+                        currentBarVisual: {},
                         markSeriesOptions: {},
-                        currentMarkVisualisation: {},
+                        currentMarkVisual: {},
                         heatmapSeriesOptions: {},
-                        currentHeatmapVisualisation: {},
+                        currentHeatmapVisual: {},
                         polygonSeriesOptions: {},
-                        currentPolygonVisualisation: {},
+                        currentPolygonVisual: {},
                     },
                     reducerActions.resetApplicationState()
                 )
@@ -837,7 +876,7 @@ describe('ReduxReducer', () => {
     });
     describe('Current Heatmap Visualisation', () => {
         const currentVisualSlice = {
-            currentHeatmapVisualisation: {},
+            currentHeatmapVisual: {},
         };
         const currentVisual = {
             colour: '',
@@ -853,7 +892,7 @@ describe('ReduxReducer', () => {
         };
         it('Should handle CURRENT_HEATMAP_VISUAL_ADDED', () => {
             expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentHeatmapVisual(currentVisual))).toEqual({
-                currentHeatmapVisualisation: {
+                currentHeatmapVisual: {
                     colour: '',
                     data: [
                         { x: 79, y: 5 },
@@ -871,7 +910,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        currentHeatmapVisualisation: {
+                        currentHeatmapVisual: {
                             colour: '',
                             data: [
                                 { x: 79, y: 5 },
@@ -885,6 +924,51 @@ describe('ReduxReducer', () => {
                         },
                     },
                     reducerActions.resetCurrentHeatmapVisual()
+                )
+            ).toEqual(currentVisualSlice);
+        });
+    });
+    describe('Current Polygon Visualisation', () => {
+        const currentVisualSlice = {
+            currentPolygonVisual: {},
+        };
+        const currentVisual = {
+            colour: '',
+            data: [
+                { x: 79, y: 5 },
+                { x: 76, y: 23 },
+            ],
+            height: 0,
+            width: 0,
+        };
+        it('Should handle CURRENT_POLYGON_VISUAL_ADDED', () => {
+            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentPolygonVisual(currentVisual))).toEqual({
+                currentPolygonVisual: {
+                    colour: '',
+                    data: [
+                        { x: 79, y: 5 },
+                        { x: 76, y: 23 },
+                    ],
+                    height: 0,
+                    width: 0,
+                },
+            });
+        });
+        it('Should handle CURRENT_POLYGON_VISUAL_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        currentPolygonVisual: {
+                            colour: '',
+                            data: [
+                                { x: 79, y: 5 },
+                                { x: 76, y: 23 },
+                            ],
+                            height: 0,
+                            width: 0,
+                        },
+                    },
+                    reducerActions.resetCurrentPolygonVisual()
                 )
             ).toEqual(currentVisualSlice);
         });

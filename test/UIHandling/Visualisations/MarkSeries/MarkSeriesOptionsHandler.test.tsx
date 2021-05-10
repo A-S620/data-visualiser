@@ -4,7 +4,7 @@ import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Ma
 import { MarkSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler';
 import GetMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
 import GetCurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
-import GetCurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/GetCurrentMarkVisual';
+import GetCurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/GetCurrentMarkVisual';
 import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 
 describe('Mark Series Handler UIHandling Component', () => {

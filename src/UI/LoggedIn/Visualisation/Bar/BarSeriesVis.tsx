@@ -42,20 +42,20 @@ function BarSeriesVis(props: any) {
                 <XYPlot
                     id={'bar-series-vis'}
                     xType="ordinal"
-                    width={props.currentBarVisualisation.width}
-                    height={props.currentBarVisualisation.height}
+                    width={props.currentBarVisual.width}
+                    height={props.currentBarVisual.height}
                     margin={{ left: 75 }}
                     xDistance={100}
                 >
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                     <BarSeries
-                        barWidth={props.currentBarVisualisation.barWidth}
-                        color={props.currentBarVisualisation.colour}
-                        opacity={props.currentBarVisualisation.opacity}
-                        stroke={props.currentBarVisualisation.stroke}
+                        barWidth={props.currentBarVisual.barWidth}
+                        color={props.currentBarVisual.colour}
+                        opacity={props.currentBarVisual.opacity}
+                        stroke={props.currentBarVisual.stroke}
                         className="vertical-bar-series-example"
-                        data={props.currentBarVisualisation.data}
+                        data={props.currentBarVisual.data}
                     />
                     <XAxis
                         //@ts-ignore
@@ -71,7 +71,7 @@ function BarSeriesVis(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    currentBarVisualisation: state.currentBarVisualisation,
+    currentBarVisual: state.currentBarVisual,
     barSeriesOptions: state.barSeriesOptions,
 });
 export default connect(mapStateToProps, {})(BarSeriesVis);

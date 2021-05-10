@@ -2,7 +2,6 @@ import ReduxState from '../ReduxState';
 import * as ReducerActions from '../Actions/ReducerActionTypes';
 export default function reduxReducer(state = ReduxState, action) {
     switch (action.type) {
-        //importedData slice
         case ReducerActions.DATA_FIELDS_ADDED:
             return {
                 ...state,
@@ -183,45 +182,65 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 heatmapSeriesOptions: {},
             };
-        //currentLineVisualisation slice
+        //polygonSeriesOptions slice
+        case ReducerActions.POLYGON_OPTIONS_ADDED:
+            return {
+                ...state,
+                polygonSeriesOptions: action.payload,
+            };
+        case ReducerActions.POLYGON_OPTIONS_RESET:
+            return {
+                polygonSeriesOptions: {},
+            };
+        //currentLineVisual slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:
             return {
                 ...state,
-                currentLineVisualisation: action.payload,
+                currentLineVisual: action.payload,
             };
         case ReducerActions.CURRENT_LINE_VISUAL_RESET:
             return {
-                currentLineVisualisation: {},
+                currentLineVisual: {},
             };
-        //currentBarVisualisation slice
+        //currentBarVisual slice
         case ReducerActions.CURRENT_BAR_VISUAL_ADDED:
             return {
                 ...state,
-                currentBarVisualisation: action.payload,
+                currentBarVisual: action.payload,
             };
         case ReducerActions.CURRENT_BAR_VISUAL_RESET:
             return {
-                currentBarVisualisation: {},
+                currentBarVisual: {},
             };
-        //currentMarkVisualisation slice
+        //currentMarkVisual slice
         case ReducerActions.CURRENT_MARK_VISUAL_ADDED:
             return {
                 ...state,
-                currentMarkVisualisation: action.payload,
+                currentMarkVisual: action.payload,
             };
         case ReducerActions.CURRENT_MARK_VISUAL_RESET:
             return {
-                currentMarkVisualisation: {},
+                currentMarkVisual: {},
             };
-        //currentHeatmapVisualisation slice
+        //currentHeatmapVisual slice
         case ReducerActions.CURRENT_HEATMAP_VISUAL_ADDED:
             return {
                 ...state,
-                currentHeatmapVisualisation: action.payload,
+                currentHeatmapVisual: action.payload,
             };
         case ReducerActions.CURRENT_HEATMAP_VISUAL_RESET:
             return {
-                currentHeatmapVisualisation: {},
+                currentHeatmapVisual: {},
+            };
+        //currentPolygonVisual slice
+        case ReducerActions.CURRENT_POLYGON_VISUAL_ADDED:
+            return {
+                ...state,
+                currentPolygonVisual: action.payload,
+            };
+        case ReducerActions.CURRENT_POLYGON_VISUAL_RESET:
+            return {
+                currentPolygonVisual: {},
             };
         case ReducerActions.RESET_APPLICATION_STATE:
             return ReduxState;
