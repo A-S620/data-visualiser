@@ -3,9 +3,7 @@ import 'jsdom-global/register';
 import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler';
 import GetMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
-import GetCurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
-import GetCurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/GetCurrentMarkVisual';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
+import CurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
 
 describe('Mark Series Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -69,8 +67,8 @@ describe('Mark Series Handler UIHandling Component', () => {
         };
         const seriesHandler = new MarkSeriesOptionsHandler(testOptions);
         seriesHandler.validateOptions();
-        const getCurrentVisual = new GetCurrentMarkVisual();
-        expect(getCurrentVisual.getCurrentMarkVisual()).toEqual({
+        const getCurrentVisual = new CurrentMarkVisual();
+        expect(getCurrentVisual.get()).toEqual({
             data: [],
             height: 500,
             width: 500,

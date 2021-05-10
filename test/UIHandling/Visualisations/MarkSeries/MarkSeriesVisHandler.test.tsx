@@ -7,7 +7,7 @@ import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData
 import CreateMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
 import ResetMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions';
 import { MarkSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler';
-import GetCurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/GetCurrentMarkVisual';
+import CurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -43,9 +43,8 @@ afterAll(() => {
 });
 describe('MarkSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createMrkVisual method is called', () => {
-        const visHandler = new MarkSeriesVisHandler().createVisual();
-        const getCurrentVisual = new GetCurrentMarkVisual();
-        expect(getCurrentVisual.getCurrentMarkVisual()).toEqual({
+        new MarkSeriesVisHandler().createVisual();
+        expect(new CurrentMarkVisual().get()).toEqual({
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
@@ -59,8 +58,7 @@ describe('MarkSeriesVis UIHandling Component', () => {
         });
     });
     it('Should reset the MarkSeriesVisual when the reset method is called', () => {
-        new MarkSeriesVisHandler().resetMarkVisual();
-        const getCurrentVisual = new GetCurrentMarkVisual();
-        expect(getCurrentVisual.getCurrentMarkVisual()).toEqual({});
+        new MarkSeriesVisHandler().reset();
+        expect(new CurrentMarkVisual().get()).toEqual({});
     });
 });

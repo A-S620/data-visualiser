@@ -1,14 +1,13 @@
 import { MarkSeriesCreateVis } from '../../../Domain/Visualisations/MarkSeries/MarkSeriesCreateVis';
-import CreateCurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/CreateCurrentMarkVisual';
-import ResetCurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/ResetCurrentMarkVisual';
+import CurrentMarkVisual from '../../../Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
 
 export class MarkSeriesVisHandler {
     public createVisual() {
         const createVis = new MarkSeriesCreateVis().createVis();
-        const currentVisual = new CreateCurrentMarkVisual(createVis);
-        currentVisual.createCurrentMarkVisual();
+        const currentVisual = new CurrentMarkVisual();
+        currentVisual.create(createVis);
     }
-    public resetMarkVisual() {
-        new ResetCurrentMarkVisual().resetCurrentMarkVisual();
+    public reset() {
+        new CurrentMarkVisual().reset();
     }
 }
