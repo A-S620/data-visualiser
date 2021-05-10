@@ -1,5 +1,3 @@
-import { yValue } from '../Bar/IBarSeriesOptions';
-
 export interface IMarkSeriesOptions {
     xValue: string;
     yValue: string;
