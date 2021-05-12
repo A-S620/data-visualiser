@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/CreateCurrentMarkVisual.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/CurrentMarkVisual.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/GetCurrentMarkVisual.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual/ResetCurrentMarkVisual.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CreateCurrentMarkVisual.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/CurrentMarkVisual.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/GetCurrentMarkVisual.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisualisation/ResetCurrentMarkVisual.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVisual/CurrentPolygonVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVisual/CurrentPolygonVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisual.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/ResetCurrentLineVisual.test.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVisual/CurrentPolygonVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LinePlotOptionsHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -143,23 +145,21 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon" />
+      <recent name="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Polygon" />
+      <recent name="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark" />
+      <recent name="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark" />
       <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables" />
-      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData" />
-      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/Plotting/Bar" />
-      <recent name="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries" />
-      <recent name="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -495,14 +495,9 @@
       <workItem from="1620280823817" duration="3071000" />
       <workItem from="1620366782467" duration="3251000" />
       <workItem from="1620566124607" duration="8698000" />
-      <workItem from="1620661972525" duration="4735000" />
-    </task>
-    <task id="LOCAL-00263" summary="Updated ReduxReducer with ignoreFields,ignoreDataObjects and updated unit tests">
-      <created>1613748448362</created>
-      <option name="number" value="00263" />
-      <option name="presentableId" value="LOCAL-00263" />
-      <option name="project" value="LOCAL" />
-      <updated>1613748448362</updated>
+      <workItem from="1620661972525" duration="5233000" />
+      <workItem from="1620667560924" duration="38000" />
+      <workItem from="1620836537608" duration="1007000" />
     </task>
     <task id="LOCAL-00264" summary="Updated GetAnalysedData, CreateAnalysedData adn ResetAnalysedData with ignore data and updated unit tests">
       <created>1613749046274</created>
@@ -840,7 +835,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620665596356</updated>
     </task>
-    <option name="localTasksCounter" value="312" />
+    <task id="LOCAL-00312" summary="Refactored CreateCurrentMarkVis, GetCurrentMarkVis&#10;and ResetCurrentMarkVis into CurrentMarkVis&#10;single component + unit tests">
+      <created>1620667211970</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1620667211970</updated>
+    </task>
+    <option name="localTasksCounter" value="313" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +850,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created currentHeatmapVisualisation and&#10;heatmapHeatmapOptions in Redux store" />
     <MESSAGE value="Updated ReducerActions AND ReducerActionTypes&#10;with currentHeatmapVisualisation and updated unit tests" />
     <MESSAGE value="Updated ReduxReducer and unit tests with &#10;currentHeatmapVisualisation" />
     <MESSAGE value="Created Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual&#10;&#10;TODO: Unit Tests" />
@@ -873,7 +874,8 @@
     <MESSAGE value="Refactoring names" />
     <MESSAGE value="Created CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis" />
     <MESSAGE value="Refactored CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis into CurrentPolygonVis&#10;single component + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis into CurrentPolygonVis&#10;single component + unit tests" />
+    <MESSAGE value="Refactored CreateCurrentMarkVis, GetCurrentMarkVis&#10;and ResetCurrentMarkVis into CurrentMarkVis&#10;single component + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored CreateCurrentMarkVis, GetCurrentMarkVis&#10;and ResetCurrentMarkVis into CurrentMarkVis&#10;single component + unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -6,9 +6,9 @@ import { LineSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/
 import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import GetCurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
+import CurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -46,8 +46,8 @@ afterAll(() => {
 describe('LineSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createLineVisual method is called', () => {
         new LineSeriesVisHandler().createLineVisual();
-        const getCurrentVisual = new GetCurrentLineVisual();
-        expect(getCurrentVisual.getCurrentLineVisual()).toEqual({
+        const getCurrentVisual = new CurrentLineVisual().get();
+        expect(getCurrentVisual).toEqual({
             data: [
                 { x: 76, y: 23 },
                 { x: 79, y: 5 },
@@ -63,7 +63,7 @@ describe('LineSeriesVis UIHandling Component', () => {
     });
     it('Should reset the LinePlotOptions when the reset method is called', () => {
         new LineSeriesVisHandler().resetLineVisual();
-        const getCurrentVisual = new GetCurrentLineVisual();
-        expect(getCurrentVisual.getCurrentLineVisual()).toEqual({});
+        const getCurrentVisual = new CurrentLineVisual().get();
+        expect(getCurrentVisual).toEqual({});
     });
 });

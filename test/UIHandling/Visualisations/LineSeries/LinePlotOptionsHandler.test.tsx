@@ -7,7 +7,7 @@ import {
 } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { LineSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler';
 import GetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
-import GetCurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/GetCurrentLineVisual';
+import CurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -80,8 +80,8 @@ describe('Line Plot Handler UIHandling Component', () => {
         const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
         lineSeriesHandler.validateOptions();
 
-        const getCurrentVisual = new GetCurrentLineVisual();
-        expect(getCurrentVisual.getCurrentLineVisual()).toEqual({
+        const getCurrentVisual = new CurrentLineVisual().get();
+        expect(getCurrentVisual).toEqual({
             data: [],
             height: 500,
             width: 500,

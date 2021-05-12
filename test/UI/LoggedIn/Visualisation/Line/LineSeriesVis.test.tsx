@@ -1,12 +1,12 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import CreateCurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
 import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';
 import LineSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Line/LineSeriesVis';
 import { Provider } from 'react-redux';
+import CurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: ILineSeriesCreateVis = {
@@ -22,7 +22,7 @@ beforeAll(() => {
         lineStyle: LineStyle.SOLID,
         lineWidth: 2,
     };
-    const currentVis = new CreateCurrentLineVisual(currentVisual).createCurrentLineVisual();
+    const currentVis = new CurrentLineVisual().create(currentVisual);
 });
 beforeEach(
     () =>
