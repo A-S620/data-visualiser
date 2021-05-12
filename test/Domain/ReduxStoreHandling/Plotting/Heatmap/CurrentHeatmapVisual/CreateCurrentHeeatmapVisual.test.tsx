@@ -3,10 +3,9 @@ import React from 'react';
 import { IHeatmapSeriesCreateVis } from '../../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
 import CreateCurrentHeatmapVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/CreateCurrentHeatmapVisual';
 import GetCurrentHeatmapVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual';
-import ResetHeatmapSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/ResetHeatmapSeriesOptions';
+import HeatmapSeriesOptions from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 beforeEach(() => {
-    const resetCurrentVis = new ResetHeatmapSeriesOptions();
-    resetCurrentVis.resetHeatmapSeriesOptions();
+    new HeatmapSeriesOptions().reset();
 });
 
 describe('CreateHeatmapSeriesOptions domain component', () => {

@@ -6,8 +6,8 @@ import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileD
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { HeatmapVisHandler } from '../../../../src/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler';
 import GetCurrentHeatmapVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual';
-import CreateHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
 import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
+import HeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -27,7 +27,7 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateHeatmapSeriesOptions({
+    new HeatmapSeriesOptions().create({
         colourRange: {
             colour1: '',
             colour2: '',
@@ -40,7 +40,7 @@ beforeAll(() => {
         width: 500,
         xValue: 'col1',
         yValue: 'col2',
-    }).createHeatmapSeriesOptions();
+    });
 });
 afterAll(() => {
     new MarkSeriesOptions().reset();

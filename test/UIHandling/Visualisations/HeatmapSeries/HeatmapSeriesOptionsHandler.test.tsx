@@ -2,8 +2,8 @@ import React from 'react';
 import 'jsdom-global/register';
 import { IHeatmapSeriesOptions } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { HeatmapSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate';
-import GetHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions';
 import { HeatmapSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler';
+import HeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 
 describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -65,8 +65,8 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
         };
         const optionsSeriesHandlers = new HeatmapSeriesOptionsHandler(testOptions);
         optionsSeriesHandlers.validateOptions();
-        const getSeriesOptions = new GetHeatmapSeriesOptions();
-        expect(getSeriesOptions.getHeatmapSeriesOptions()).toBe(testOptions);
+        const getSeriesOptions = new HeatmapSeriesOptions();
+        expect(getSeriesOptions.get()).toBe(testOptions);
     });
     it('Should get the heatmap options from the Redux store', () => {
         const testOptions: IHeatmapSeriesOptions = {
@@ -107,7 +107,7 @@ describe('HeatmapSeriesOptionsValidate UIHandling Component', () => {
         const optionsSeriesHandlers = new HeatmapSeriesOptionsHandler(testOptions);
         optionsSeriesHandlers.validateOptions();
         optionsSeriesHandlers.resetOptions();
-        const getSeriesOptions = new GetHeatmapSeriesOptions();
-        expect(getSeriesOptions.getHeatmapSeriesOptions()).toEqual({});
+        const getSeriesOptions = new HeatmapSeriesOptions();
+        expect(getSeriesOptions.get()).toEqual({});
     });
 });

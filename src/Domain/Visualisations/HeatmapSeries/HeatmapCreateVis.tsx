@@ -1,12 +1,12 @@
 import { IHeatmapSeriesCreateVis } from '../../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
-import GetHeatmapSeriesOptions from '../../ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions';
 import { DataHandler } from '../../../Util/DataHandler';
+import HeatmapSeriesOptions from '../../ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 
 export class HeatmapCreateVis {
     private dataHandler = new DataHandler();
 
     public createVis(): IHeatmapSeriesCreateVis {
-        const options = new GetHeatmapSeriesOptions().getHeatmapSeriesOptions();
+        const options = new HeatmapSeriesOptions().get();
         if (Object.keys(options).length === 0) {
             return this.createDefaultOptions();
         }

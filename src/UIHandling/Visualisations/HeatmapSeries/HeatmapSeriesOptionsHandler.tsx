@@ -1,14 +1,12 @@
 import { NotificationsHandler } from '../../NotificationsHandler';
 import { IHeatmapSeriesOptions } from '../../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { HeatmapSeriesOptionsValidate } from '../../../Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate';
-import CreateHeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
-import GetHeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/GetHeatmapSeriesOptions';
-import ResetHeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/ResetHeatmapSeriesOptions';
 import { HeatmapVisHandler } from './HeatmapVisHandler';
-import GetCurrentHeatmapVisual from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual';
+import HeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 
 export class HeatmapSeriesOptionsHandler {
     private options: IHeatmapSeriesOptions;
+    private reduxHandler = new HeatmapSeriesOptions();
     constructor(options: IHeatmapSeriesOptions) {
         this.options = options;
     }
@@ -20,20 +18,16 @@ export class HeatmapSeriesOptionsHandler {
         if (notifications.isEmpty()) {
             this.createOptions();
             new HeatmapVisHandler().createVisual();
-            console.log(new GetCurrentHeatmapVisual().getCurrentVisual());
         }
         return notifications;
     }
     private createOptions() {
-        const createSeriesOptions = new CreateHeatmapSeriesOptions(this.options);
-        createSeriesOptions.createHeatmapSeriesOptions();
+        this.reduxHandler.create(this.options);
     }
     public getOptions(): IHeatmapSeriesOptions {
-        const getSeriesOptions = new GetHeatmapSeriesOptions();
-        return getSeriesOptions.getHeatmapSeriesOptions();
+        return this.reduxHandler.get();
     }
     public resetOptions() {
-        const resetSeriesOptions = new ResetHeatmapSeriesOptions();
-        resetSeriesOptions.resetHeatmapSeriesOptions();
+        this.reduxHandler.reset();
     }
 }

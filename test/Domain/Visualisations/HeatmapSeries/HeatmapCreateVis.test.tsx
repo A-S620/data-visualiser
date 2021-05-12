@@ -3,7 +3,7 @@ import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analys
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { HeatmapCreateVis } from '../../../../src/Domain/Visualisations/HeatmapSeries/HeatmapCreateVis';
 import { IHeatmapSeriesOptions } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
-import CreateHeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions/CreateHeatmapSeriesOptions';
+import HeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
         fields: [
@@ -81,8 +81,8 @@ describe('HeatmapCreateVis domain component', () => {
             xValue: 'col1',
             yValue: 'col2',
         };
-        const createOptions = new CreateHeatmapSeriesOptions(options);
-        createOptions.createHeatmapSeriesOptions();
+        const createOptions = new HeatmapSeriesOptions();
+        createOptions.create(options);
         const createVis = new HeatmapCreateVis().createVis();
         expect(createVis.data).toEqual([
             { x: 32, y: 45, color: 4 },
