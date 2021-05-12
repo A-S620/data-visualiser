@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.disabled,
     },
 }));
-function MarkSeriesOptions(props: any) {
+function MarkSeriesOptionsComponent(props: any) {
     const classes = useStyles();
     const [options, setOptions] = React.useState<{
         xValue: string;
@@ -315,4 +315,4 @@ function MarkSeriesOptions(props: any) {
 const mapStateToProps = (state: any) => ({
     intervalFields: state.analysedData.intervalFields,
 });
-export default connect(mapStateToProps, {})(MarkSeriesOptions);
+export default connect(mapStateToProps, {})(MarkSeriesOptionsComponent);

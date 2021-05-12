@@ -1,13 +1,12 @@
 import { NotificationsHandler } from '../../NotificationsHandler';
 import { IMarkSeriesOptions } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsValidate } from '../../../Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate';
-import CreateMarkSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
-import GetMarkSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
-import ResetMarkSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions';
 import { MarkSeriesVisHandler } from './MarkSeriesVisHandler';
+import MarkSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 
 export class MarkSeriesOptionsHandler {
-    private options: IMarkSeriesOptions;
+    private readonly options: IMarkSeriesOptions;
+    private markSeriesOptions = new MarkSeriesOptions();
     constructor(options: IMarkSeriesOptions) {
         this.options = options;
     }
@@ -23,15 +22,12 @@ export class MarkSeriesOptionsHandler {
         return notifications;
     }
     private createOptions() {
-        const createSeriesOptions = new CreateMarkSeriesOptions(this.options);
-        createSeriesOptions.createMarkSeriesOptions();
+        this.markSeriesOptions.create(this.options);
     }
     public getOptions(): IMarkSeriesOptions {
-        const getSeriesOptions = new GetMarkSeriesOptions();
-        return getSeriesOptions.getMarkSeriesOptions();
+        return this.markSeriesOptions.get();
     }
     public resetOptions() {
-        const resetSeriesOptions = new ResetMarkSeriesOptions();
-        resetSeriesOptions.resetMarkSeriesOptions();
+        this.markSeriesOptions.reset();
     }
 }

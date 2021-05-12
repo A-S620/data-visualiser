@@ -2,8 +2,8 @@ import React from 'react';
 import 'jsdom-global/register';
 import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler';
-import GetMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
 import CurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
+import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 
 describe('Mark Series Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -51,8 +51,8 @@ describe('Mark Series Handler UIHandling Component', () => {
         };
         const seriesHandler = new MarkSeriesOptionsHandler(testOptions);
         seriesHandler.validateOptions();
-        const getSeries = new GetMarkSeriesOptions();
-        expect(getSeries.getMarkSeriesOptions()).toBe(testOptions);
+        const getSeries = new MarkSeriesOptions().get();
+        expect(getSeries).toBe(testOptions);
     });
     it('Should create the current visualisation in the Redux store if the options are valid', () => {
         const testOptions: IMarkSeriesOptions = {

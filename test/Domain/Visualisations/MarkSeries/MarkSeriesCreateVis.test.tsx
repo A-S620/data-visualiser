@@ -3,7 +3,7 @@ import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analys
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { MarkSeriesCreateVis } from '../../../../src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis';
 import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
-import CreateMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
+import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
         fields: [
@@ -73,8 +73,7 @@ describe('MarkSeriesCreateVis domain component', () => {
             xValue: 'col1',
             yValue: 'col2',
         };
-        const createOptions = new CreateMarkSeriesOptions(options);
-        createOptions.createMarkSeriesOptions();
+        new MarkSeriesOptions().create(options);
         const createVis = new MarkSeriesCreateVis().createVis();
         expect(createVis.data).toEqual([
             { x: 32, y: 45 },

@@ -4,10 +4,9 @@ import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFi
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import CreateMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/CreateMarkSeriesOptions';
-import ResetMarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/ResetMarkSeriesOptions';
 import { MarkSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler';
 import CurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
+import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -27,7 +26,7 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateMarkSeriesOptions({
+    new MarkSeriesOptions().create({
         colour: '',
         fill: '',
         height: 500,
@@ -36,10 +35,10 @@ beforeAll(() => {
         width: 500,
         xValue: 'col1',
         yValue: 'col2',
-    }).createMarkSeriesOptions();
+    });
 });
 afterAll(() => {
-    new ResetMarkSeriesOptions().resetMarkSeriesOptions();
+    new MarkSeriesOptions().reset();
 });
 describe('MarkSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createMrkVisual method is called', () => {

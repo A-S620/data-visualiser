@@ -1,11 +1,11 @@
-import GetMarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions/GetMarkSeriesOptions';
 import { IMarkSeriesCreateVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
 import { DataHandler } from '../../../Util/DataHandler';
+import MarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 
 export class MarkSeriesCreateVis {
     private dataHandler = new DataHandler();
     public createVis(): IMarkSeriesCreateVis {
-        const options = new GetMarkSeriesOptions().getMarkSeriesOptions();
+        const options = new MarkSeriesOptions().get();
         if (Object.keys(options).length === 0) {
             return this.createDefaultOptions();
         }

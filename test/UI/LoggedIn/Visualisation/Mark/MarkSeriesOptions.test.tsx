@@ -6,7 +6,7 @@ import { store } from '../../../../../src/ReduxStore/store';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import MarkSeriesOptions from '../../../../../src/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions';
+import MarkSeriesOptions from '../../../../../src/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptionsComponent';
 
 let wrapper: ReactWrapper;
 beforeEach(
