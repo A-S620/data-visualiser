@@ -1,13 +1,12 @@
 import { ILineSeriesOptions } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { NotificationsHandler } from '../../NotificationsHandler';
 import { LineSeriesOptionsValidate } from '../../../Domain/Visualisations/LineSeries/LineSeriesOptionsValidate';
-import GetLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
-import CreateLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
-import ResetLineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
 import { LineSeriesVisHandler } from './LineSeriesVisHandler';
+import LineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 
 export class LineSeriesOptionsHandler {
     private options: ILineSeriesOptions;
+    private lineSeriesOptions = new LineSeriesOptions();
     constructor(options: ILineSeriesOptions) {
         this.options = options;
     }
@@ -23,15 +22,12 @@ export class LineSeriesOptionsHandler {
         return notifications;
     }
     private createOptions() {
-        const createLineSeriesOptions = new CreateLineSeriesOptions(this.options);
-        createLineSeriesOptions.createLineSeriesOptions();
+        this.lineSeriesOptions.create(this.options);
     }
     public getOptions(): ILineSeriesOptions {
-        const getLineSeriesOptions = new GetLineSeriesOptions();
-        return getLineSeriesOptions.getLineSeriesOptions();
+        return this.lineSeriesOptions.get();
     }
     public resetOptions() {
-        const resetLineSeriesOptions = new ResetLineSeriesOptions();
-        resetLineSeriesOptions.resetLineSeriesOptions();
+        this.lineSeriesOptions.reset();
     }
 }

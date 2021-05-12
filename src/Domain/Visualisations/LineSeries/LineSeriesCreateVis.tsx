@@ -1,11 +1,11 @@
-import GetLineSeriesOptions from '../../ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
 import { ILineSeriesCreateVis } from '../../../Interfaces/Visualisations/Line/ILineSeriesCreateVis';
 import { DataHandler } from '../../../Util/DataHandler';
+import LineSeriesOptions from '../../ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 
 export class LineSeriesCreateVis {
     private dataHandler = new DataHandler();
     public createVis(): ILineSeriesCreateVis {
-        const lineSeriesOptions = new GetLineSeriesOptions().getLineSeriesOptions();
+        const lineSeriesOptions = new LineSeriesOptions().get();
         if (Object.keys(lineSeriesOptions).length === 0) {
             return this.createDefaultOptions();
         }

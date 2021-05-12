@@ -1,7 +1,5 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
-import ResetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
 import { LineSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler';
 import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
@@ -9,6 +7,7 @@ import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/Import
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
+import LineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -28,7 +27,7 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateLineSeriesOptions({
+    new LineSeriesOptions().create({
         xValue: 'col1',
         yValue: 'col2',
         height: 500,
@@ -38,10 +37,10 @@ beforeAll(() => {
         curveType: CurveType.curveMonotoneY,
         lineStyle: LineStyle.SOLID,
         lineWidth: 2,
-    }).createLineSeriesOptions();
+    });
 });
 afterAll(() => {
-    new ResetLineSeriesOptions().resetLineSeriesOptions();
+    new LineSeriesOptions().reset();
 });
 describe('LineSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createLineVisual method is called', () => {

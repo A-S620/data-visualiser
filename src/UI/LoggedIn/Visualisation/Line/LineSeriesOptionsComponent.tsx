@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.disabled,
     },
 }));
-function LineSeriesOptions(props: any) {
+function LineSeriesOptionsComponent(props: any) {
     const classes = useStyles();
     const [options, setOptions] = React.useState<{
         xValue: string;
@@ -361,4 +361,4 @@ function LineSeriesOptions(props: any) {
 const mapStateToProps = (state: any) => ({
     intervalFields: state.analysedData.intervalFields,
 });
-export default connect(mapStateToProps, {})(LineSeriesOptions);
+export default connect(mapStateToProps, {})(LineSeriesOptionsComponent);

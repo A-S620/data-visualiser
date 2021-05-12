@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
 import {
     CurveType,
     ILineSeriesOptions,
@@ -9,6 +8,7 @@ import {
 import { LineSeriesCreateVis } from '../../../../src/Domain/Visualisations/LineSeries/LineSeriesCreateVis';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
+import LineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
@@ -71,8 +71,8 @@ describe('LineSeriesCreateVis domain component', () => {
                 lineStyle: LineStyle.SOLID,
                 lineWidth: 2,
             };
-            const createLineSeriesOptions = new CreateLineSeriesOptions(lineOptions);
-            await createLineSeriesOptions.createLineSeriesOptions();
+            const lineSeriesOptions = new LineSeriesOptions();
+            await lineSeriesOptions.create(lineOptions);
 
             const createVis = new LineSeriesCreateVis().createVis();
             expect(createVis.data).toEqual([

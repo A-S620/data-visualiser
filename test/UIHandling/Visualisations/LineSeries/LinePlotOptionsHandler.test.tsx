@@ -6,8 +6,8 @@ import {
     LineStyle,
 } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { LineSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler';
-import GetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/GetLineSeriesOptions';
 import CurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
+import LineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 
 describe('Line Plot Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -61,8 +61,8 @@ describe('Line Plot Handler UIHandling Component', () => {
 
         const lineSeriesHandler = new LineSeriesOptionsHandler(testOptions);
         lineSeriesHandler.validateOptions();
-        const getLineSeriesOptions = new GetLineSeriesOptions();
-        expect(getLineSeriesOptions.getLineSeriesOptions()).toBe(testOptions);
+        const lineSeriesOptions = new LineSeriesOptions();
+        expect(lineSeriesOptions.get()).toBe(testOptions);
     });
     it('Should create the current visualisation in the Redux store if the options are valid', () => {
         const testOptions: ILineSeriesOptions = {
