@@ -1,14 +1,12 @@
 import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
 import CSVProcessor from './FileProcessors/CSVProcessor';
-import CreateImportedData from '../ReduxStoreHandling/ImportedData/CreateImportedData';
-import GetImportedData from '../ReduxStoreHandling/ImportedData/GetImportedData';
 
 import { IImportedFileData } from '../../Interfaces/import/IImportedFileData';
 import { IImportedFile } from '../../Interfaces/import/IImportedFile';
+import ImportedData from '../ReduxStoreHandling/ImportedData/ImportedData';
 
 export class ImportFileData {
     private readonly importedFile: IImportedFile;
-
     constructor(importedFile: IImportedFile) {
         this.importedFile = importedFile;
     }
@@ -44,14 +42,10 @@ export class ImportFileData {
         ImportFileData.createImportedData(importedData);
     }
     private static createImportedData(importedData: IImportedFileData) {
-        const createImportedData = new CreateImportedData(importedData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsArrays();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(importedData);
     }
     public getImportedData(): IImportedFileData {
-        const getImportedData = new GetImportedData();
-        const data = getImportedData.getImportedData();
+        const data = new ImportedData().get();
         return {
             dataFields: data.dataFields,
             dataObjects: data.dataObjects,

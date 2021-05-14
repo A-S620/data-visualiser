@@ -1,9 +1,8 @@
 import 'jsdom-global/register';
 
 import { AnalyseIntervalData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import GetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 describe('AnalyseIntervalData domain component', () => {
     it('should add the interval objects correctly', () => {
@@ -16,9 +15,7 @@ describe('AnalyseIntervalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseIntervalData = new AnalyseIntervalData(['col1', 'col2']);
         expect(analyseIntervalData.validateIntervalData()).toEqual([
             { col1: 79, col2: 5 },
@@ -35,9 +32,7 @@ describe('AnalyseIntervalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseIntervalData = new AnalyseIntervalData(['col1', 'col2']);
         expect(analyseIntervalData.validateIntervalData()).toStrictEqual([
             { col1: 79, col2: 5 },
@@ -54,9 +49,7 @@ describe('AnalyseIntervalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseIntervalData = new AnalyseIntervalData(['col1', 'col2']);
         expect(analyseIntervalData.validateIntervalData()).toStrictEqual([
             { col1: 79, col2: 5 },

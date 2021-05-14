@@ -4,12 +4,11 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from '../../../../src/ReduxStore/store';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import ResetImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import OrdinalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/Tables/OrdinalDataTable';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
         dataArrays: [
@@ -39,9 +38,7 @@ beforeEach(() => {
         ],
         dataFields: ['col1', 'col2', 'col3'],
     };
-    const createImportedData = new CreateImportedData(importedFileData);
-    createImportedData.createDataAsObjects();
-    createImportedData.createDataFields();
+    new ImportedData().create(importedFileData);
     const analyseFileData = new AnalyseFileData([
         { field: 'col1', fieldType: FieldTypes.ORDINAL },
         { field: 'col2', fieldType: FieldTypes.ORDINAL },
@@ -63,8 +60,7 @@ beforeEach(() => {
     analyseFileData.validateAnalysedData();
 });
 afterEach(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
     const resetAnalysedData = new ResetAnalysedData();
     resetAnalysedData.resetAnalysedData();
 });

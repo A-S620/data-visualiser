@@ -1,11 +1,9 @@
 import 'jsdom-global/register';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseBinaryData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData';
-import ResetImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 afterEach(() => {
-    const resetData = new ResetImportedData();
-    resetData.resetImportedDataState();
+    new ImportedData().reset();
 });
 describe('AnalyseBinaryData domain component', () => {
     it('Should add binary objects correctly ', () => {
@@ -19,9 +17,7 @@ describe('AnalyseBinaryData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseBinaryData(['col3', 'col4']);
         expect(analyseData.validateBinaryData()).toEqual([
             {
@@ -65,9 +61,7 @@ describe('AnalyseBinaryData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseBinaryData(['col3']);
         expect(analyseData.validateBinaryData()).toEqual([
             {
@@ -97,9 +91,7 @@ describe('AnalyseBinaryData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseBinaryData(['col3']);
         expect(analyseData.validateBinaryData()).toEqual([
             {
@@ -129,9 +121,7 @@ describe('AnalyseBinaryData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseBinaryData(['col3']);
         expect(analyseData.validateBinaryData()).toEqual([
             {
@@ -161,9 +151,7 @@ describe('AnalyseBinaryData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseBinaryData([]);
         expect(analyseData.validateBinaryData()).toEqual([]);
     });

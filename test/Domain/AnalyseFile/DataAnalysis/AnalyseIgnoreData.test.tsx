@@ -1,8 +1,8 @@
 import 'jsdom-global/register';
 
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import { AnalyseIgnoreData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 describe('AnalyseIgnoreData domain component', () => {
     it('should add the ignore objects correctly', () => {
@@ -15,9 +15,7 @@ describe('AnalyseIgnoreData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseIgnoreData(['col1', 'col2']);
         expect(analyseData.validateIgnoreData()).toEqual([
             { col1: '32', col2: 'cool' },
@@ -35,9 +33,7 @@ describe('AnalyseIgnoreData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseIgnoreData(['col1', 'col2']);
         expect(analyseData.validateIgnoreData()).toEqual([
             { col1: '32' },
@@ -55,9 +51,7 @@ describe('AnalyseIgnoreData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseIgnoreData([]);
         expect(analyseData.validateIgnoreData()).toEqual([]);
     });

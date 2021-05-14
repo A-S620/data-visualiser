@@ -1,8 +1,7 @@
 import 'jsdom-global/register';
 import { AnalyseNominalData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
-import { AnalyseOrdinalData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 describe('AnalyseNominalData domain component', () => {
     it('Should add nominal objects correctly', () => {
@@ -16,9 +15,7 @@ describe('AnalyseNominalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseNominalData = new AnalyseNominalData(['col3']);
         expect(analyseNominalData.validateNominalData()).toEqual([
             {
@@ -41,9 +38,7 @@ describe('AnalyseNominalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseNominalData = new AnalyseNominalData(['col3']);
         expect(analyseNominalData.validateNominalData()).toEqual([
             {
@@ -66,9 +61,7 @@ describe('AnalyseNominalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseNominalData = new AnalyseNominalData(['col3']);
         expect(analyseNominalData.validateNominalData()).toEqual([
             {
@@ -91,9 +84,7 @@ describe('AnalyseNominalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseNominalData = new AnalyseNominalData(['col3']);
         expect(analyseNominalData.validateNominalData()).toEqual([
             {
@@ -116,9 +107,7 @@ describe('AnalyseNominalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseNominalData([]);
         expect(analyseData.validateNominalData()).toEqual([]);
     });

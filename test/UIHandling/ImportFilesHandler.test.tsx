@@ -1,12 +1,9 @@
 import { ImportFilesHandler } from '../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../src/Interfaces/import/IImportedFile';
-import GetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/GetImportedData';
-import ResetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import GetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import ImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n 1,7,baz';
-const testCSV2 = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n cool,7,baz';
 const testJSON = {
     id: 1,
     first_name: 'Jeanette',
@@ -17,15 +14,13 @@ const testJSON = {
 };
 //Runs before each test
 beforeEach(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });
 //Runs after all test
 afterAll(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });
@@ -64,7 +59,6 @@ describe('ImportFilesHandler UI handling component', () => {
         };
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
-        const getImportedData = new GetImportedData();
-        expect(getImportedData.getImportedData().dataFields).toStrictEqual(['col1', 'col2', 'col3']);
+        expect(new ImportedData().get().dataFields).toStrictEqual(['col1', 'col2', 'col3']);
     });
 });

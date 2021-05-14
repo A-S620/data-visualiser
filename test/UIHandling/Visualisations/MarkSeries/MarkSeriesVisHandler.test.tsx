@@ -1,12 +1,12 @@
 import React from 'react';
 import 'jsdom-global/register';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { MarkSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler';
 import CurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
 import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -17,9 +17,7 @@ beforeAll(() => {
         ],
         dataArrays: [],
     };
-    const createImportedData = new CreateImportedData(testData);
-    createImportedData.createDataFields();
-    createImportedData.createDataAsObjects();
+    new ImportedData().create(testData);
     const analyseData = new AnalyseFileData([
         { field: 'col1', fieldType: FieldTypes.INTERVAL },
         { field: 'col2', fieldType: FieldTypes.INTERVAL },

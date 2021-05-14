@@ -1,10 +1,9 @@
 import 'jsdom-global/register';
-import ResetImportedData from '../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { AnalyseFileData } from '../../../src/Domain/AnalyseFile/AnalyseFileData';
 import GetAnalysedData from '../../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
-import CreateImportedData from '../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { IImportedFileData } from '../../../src/Interfaces/import/IImportedFileData';
+import ImportedData from '../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 beforeEach(() => {
     const importedFileData: IImportedFileData = {
@@ -21,14 +20,11 @@ beforeEach(() => {
         ],
         dataFields: ['col1', 'col2', 'col3', 'col4'],
     };
-    const createImportedData = new CreateImportedData(importedFileData);
-    createImportedData.createDataAsObjects();
-    createImportedData.createDataFields();
+    new ImportedData().create(importedFileData);
 });
 //Runs after all test
 afterEach(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
 });
 
 describe('AnalyseFileData domain component', () => {

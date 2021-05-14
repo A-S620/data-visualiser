@@ -3,11 +3,11 @@ import 'jsdom-global/register';
 import { IBarSeriesOptions, yValue } from '../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { BarSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 import BarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 beforeAll(() => {
     const testData: IImportedFileData = {
@@ -19,9 +19,7 @@ beforeAll(() => {
         ],
         dataArrays: [],
     };
-    const createImportedData = new CreateImportedData(testData);
-    createImportedData.createDataFields();
-    createImportedData.createDataAsObjects();
+    new ImportedData().create(testData);
     const analyseData = new AnalyseFileData([
         { field: 'col1', fieldType: FieldTypes.NOMINAL },
         { field: 'col2', fieldType: FieldTypes.NOMINAL },

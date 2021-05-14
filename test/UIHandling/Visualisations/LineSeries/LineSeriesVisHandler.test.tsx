@@ -3,11 +3,11 @@ import 'jsdom-global/register';
 import { LineSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler';
 import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CurrentLineVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
 import LineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -18,9 +18,7 @@ beforeAll(() => {
         ],
         dataArrays: [],
     };
-    const createImportedData = new CreateImportedData(testData);
-    createImportedData.createDataFields();
-    createImportedData.createDataAsObjects();
+    new ImportedData().create(testData);
     const analyseData = new AnalyseFileData([
         { field: 'col1', fieldType: FieldTypes.INTERVAL },
         { field: 'col2', fieldType: FieldTypes.INTERVAL },

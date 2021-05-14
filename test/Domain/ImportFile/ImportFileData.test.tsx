@@ -2,9 +2,8 @@ import 'jsdom-global/register';
 
 import { ImportFileData } from '../../../src/Domain/ImportFile/ImportFileData';
 
-import { store } from '../../../src/ReduxStore/store';
-import ResetImportedData from '../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import { IImportedFile } from '../../../src/Interfaces/import/IImportedFile';
+import ImportedData from '../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\nc-1,7,baz';
 const invalidCSV = 'col1,,col2,col3\n,foo\n 2,5,bar\nc-1,7,baz';
@@ -23,13 +22,11 @@ const csvFields = ['col1', 'col2', 'col3'];
 
 //Runs before each test
 beforeEach(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
 });
 //Runs after all test
 afterAll(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
 });
 describe('Import Data', () => {
     it('should return file is empty when files are empty', () => {

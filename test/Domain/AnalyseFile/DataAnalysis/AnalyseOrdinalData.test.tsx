@@ -1,12 +1,10 @@
 import 'jsdom-global/register';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseOrdinalData } from '../../../../src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData';
-import ResetImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 afterEach(() => {
-    const resetData = new ResetImportedData();
-    resetData.resetImportedDataState();
+    new ImportedData().reset();
 });
 describe('AnalyseOrdinalData domain component', () => {
     it('Should add ordinal objects correctly', () => {
@@ -20,9 +18,7 @@ describe('AnalyseOrdinalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseOrdinalData = new AnalyseOrdinalData(['col3', 'col4']);
         expect(analyseOrdinalData.validateOrdinalData()).toEqual([
             {
@@ -77,9 +73,7 @@ describe('AnalyseOrdinalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseOrdinalData = new AnalyseOrdinalData(['col3']);
         expect(analyseOrdinalData.validateOrdinalData()).toEqual([
             {
@@ -114,9 +108,7 @@ describe('AnalyseOrdinalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseOrdinalData = new AnalyseOrdinalData(['col3']);
         expect(analyseOrdinalData.validateOrdinalData()).toEqual([
             {
@@ -151,9 +143,7 @@ describe('AnalyseOrdinalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseOrdinalData = new AnalyseOrdinalData(['col3']);
         expect(analyseOrdinalData.validateOrdinalData()).toEqual([
             {
@@ -188,9 +178,7 @@ describe('AnalyseOrdinalData domain component', () => {
             ],
             dataArrays: [],
         };
-        const createImportedData = new CreateImportedData(testData);
-        createImportedData.createDataFields();
-        createImportedData.createDataAsObjects();
+        new ImportedData().create(testData);
         const analyseData = new AnalyseOrdinalData([]);
         expect(analyseData.validateOrdinalData()).toEqual([]);
     });

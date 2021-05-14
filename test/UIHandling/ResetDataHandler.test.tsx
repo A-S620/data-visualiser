@@ -4,7 +4,7 @@ import { AnalyseFileHandler } from '../../src/UIHandling/AnalyseFileHandler';
 import { FieldTypes } from '../../src/Interfaces/Analyse/IAnalysedFileData';
 import { ResetDataHandler } from '../../src/UIHandling/ResetDataHandler';
 import GetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
-import GetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/GetImportedData';
+import ImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 beforeAll(() => {
     const importedFile: IImportedFile = {
@@ -34,7 +34,7 @@ describe('ResetDataHandler UI Handling component', () => {
             ignoreFields: [],
             ignoreDataObjects: [],
         });
-        expect(new GetImportedData().getImportedData()).toEqual({
+        expect(new ImportedData().get()).toEqual({
             dataFields: [],
             dataObjects: [],
             dataArrays: [],

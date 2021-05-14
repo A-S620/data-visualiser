@@ -1,10 +1,10 @@
 import { ImportFilesHandler } from '../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../src/Interfaces/import/IImportedFile';
-import ResetImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import GetAnalysedData from '../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 import { AnalyseFileHandler } from '../../src/UIHandling/AnalyseFileHandler';
 import { FieldTypes } from '../../src/Interfaces/Analyse/IAnalysedFileData';
+import ImportedData from '../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 //Test Data
 const testCSV = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n 1,7,baz';
 const fields = [
@@ -13,24 +13,14 @@ const fields = [
     { field: 'col3', fieldType: FieldTypes.IGNORE },
 ];
 const testCSV2 = 'col1,col2,col3\n 1,3,foo\n 2,5,bar\n cool,7,baz';
-const testJSON = {
-    id: 1,
-    first_name: 'Jeanette',
-    last_name: 'Penddreth',
-    email: 'jpenddreth0@census.gov',
-    gender: 'Female',
-    ip_address: '26.58.193.2',
-};
 beforeEach(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });
 
 afterAll(() => {
-    const resetImportedDataState = new ResetImportedData();
-    resetImportedDataState.resetImportedDataState();
+    new ImportedData().reset();
     const resetAnalysedDataState = new ResetAnalysedData();
     resetAnalysedDataState.resetAnalysedData();
 });

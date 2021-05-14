@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { store } from '../../../../src/ReduxStore/store';
 import ImportedDataTable from '../../../../src/UI/LoggedIn/ViewImportedData/ImportedDataTable';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
-import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
+import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 let component: ReactWrapper;
 beforeAll(() => {
@@ -36,9 +36,7 @@ beforeAll(() => {
             ['c-1', '7', 'baz'],
         ],
     };
-    const createImportedData = new CreateImportedData(importedData);
-    createImportedData.createDataFields();
-    createImportedData.createDataAsObjects();
+    new ImportedData().create(importedData);
 });
 beforeEach(
     () =>

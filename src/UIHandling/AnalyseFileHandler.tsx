@@ -1,7 +1,7 @@
 import { NotificationsHandler } from './NotificationsHandler';
 import ResetAnalysedData from '../Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 import { AnalyseFileData } from '../Domain/AnalyseFile/AnalyseFileData';
-import GetImportedData from '../Domain/ReduxStoreHandling/ImportedData/GetImportedData';
+import ImportedData from '../Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 export class AnalyseFileHandler {
     private fields: any;
@@ -10,7 +10,7 @@ export class AnalyseFileHandler {
     }
     public validateAnalysedData(): NotificationsHandler {
         const notifications = new NotificationsHandler();
-        const getImportedColumns = new GetImportedData().getImportedData().dataFields;
+        const getImportedColumns = new ImportedData().get().dataFields;
         if (this.fields.length !== getImportedColumns.length) {
             notifications.addNotification('Field types have not been selected for all fields');
             return notifications;
