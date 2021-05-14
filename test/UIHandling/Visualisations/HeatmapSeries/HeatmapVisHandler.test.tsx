@@ -5,9 +5,9 @@ import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/Import
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { HeatmapVisHandler } from '../../../../src/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler';
-import GetCurrentHeatmapVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/GetCurrentHeatmapVisual';
 import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 import HeatmapSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
+import CurrentHeatmapVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -48,7 +48,7 @@ afterAll(() => {
 describe('HeatmapVis UIHandling Component', () => {
     it('Should return the visualisation options when the createHeatmapVisual method is called', () => {
         new HeatmapVisHandler().createVisual();
-        expect(new GetCurrentHeatmapVisual().getCurrentVisual()).toEqual({
+        expect(new CurrentHeatmapVisual().get()).toEqual({
             data: [
                 { x: 79, y: 5, color: 1 },
                 { x: 76, y: 23, color: 1 },
@@ -67,6 +67,6 @@ describe('HeatmapVis UIHandling Component', () => {
     });
     it('Should reset the HeatmapVisHandler when the reset method is called', () => {
         new HeatmapVisHandler().resetHeatmapVisual();
-        expect(new GetCurrentHeatmapVisual().getCurrentVisual()).toEqual({});
+        expect(new CurrentHeatmapVisual().get()).toEqual({});
     });
 });

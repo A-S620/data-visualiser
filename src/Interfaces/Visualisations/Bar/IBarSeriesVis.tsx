@@ -1,4 +1,4 @@
-export interface IMarkSeriesCreateVis {
+export interface IBarSeriesVis {
     data: Array<Object>;
     height: number;
     width: number;
@@ -6,4 +6,5 @@ export interface IMarkSeriesCreateVis {
     stroke: string;
     opacity: number;
     fill: string;
+    barWidth: number;
 }

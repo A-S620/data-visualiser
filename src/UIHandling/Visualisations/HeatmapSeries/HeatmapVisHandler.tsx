@@ -1,14 +1,13 @@
 import { HeatmapCreateVis } from '../../../Domain/Visualisations/HeatmapSeries/HeatmapCreateVis';
-import CreateCurrentHeatmapVisual from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/CreateCurrentHeatmapVisual';
-import ResetCurrentHeatmapVisual from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/ResetCurrentHeatmapVisual';
+import CurrentHeatmapVisual from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual';
 
 export class HeatmapVisHandler {
     public createVisual() {
         const createVis = new HeatmapCreateVis().createVis();
-        const currentVisual = new CreateCurrentHeatmapVisual(createVis);
-        currentVisual.createCurrentVisual();
+        const currentVisual = new CurrentHeatmapVisual();
+        currentVisual.create(createVis);
     }
     public resetHeatmapVisual() {
-        new ResetCurrentHeatmapVisual().resetCurrentVisual();
+        new CurrentHeatmapVisual().reset();
     }
 }

@@ -1,10 +1,10 @@
 import { store } from '../../../../../ReduxStore/store';
 import { addCurrentBarVisual } from '../../../../../ReduxStore/Actions/ReducerActions';
-import { IBarSeriesCreateVis } from '../../../../../Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IBarSeriesVis } from '../../../../../Interfaces/Visualisations/Bar/IBarSeriesVis';
 
 export default class CreateCurrentBarVisual {
-    private currentVisual: IBarSeriesCreateVis;
-    constructor(currentVisual: IBarSeriesCreateVis) {
+    private currentVisual: IBarSeriesVis;
+    constructor(currentVisual: IBarSeriesVis) {
         this.currentVisual = currentVisual;
     }
     public createCurrentBarVisual() {

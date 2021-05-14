@@ -1,7 +1,7 @@
 import 'jsdom-global/register';
 import React from 'react';
 import CurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
-import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { ILineSeriesVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import HeatmapSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 import { IHeatmapSeriesOptions } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';

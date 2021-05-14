@@ -1,12 +1,12 @@
 import * as reducerActionTypes from './ReducerActionTypes';
 import { ILineSeriesOptions } from '../../Interfaces/Visualisations/Line/ILineSeriesOptions';
-import { ILineSeriesCreateVis } from '../../Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { ILineSeriesVis } from '../../Interfaces/Visualisations/Line/ILineSeriesVis';
 import { IBarSeriesOptions } from '../../Interfaces/Visualisations/Bar/IBarSeriesOptions';
-import { IBarSeriesCreateVis } from '../../Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IBarSeriesVis } from '../../Interfaces/Visualisations/Bar/IBarSeriesVis';
 import { IMarkSeriesOptions } from '../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
-import { IMarkSeriesCreateVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { IHeatmapSeriesOptions } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
-import { IHeatmapSeriesCreateVis } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
+import { IHeatmapSeriesVis } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
 import { IPolygonSeriesOptions } from '../../Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
 import { IPolygonSeriesVis } from '../../Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
 
@@ -112,28 +112,28 @@ export const resetPolygonOptions = () => ({
     type: reducerActionTypes.POLYGON_OPTIONS_RESET,
 });
 //currentLineVisual slice
-export const addCurrentLineVisual = (currentLineVisual: ILineSeriesCreateVis) => ({
+export const addCurrentLineVisual = (currentLineVisual: ILineSeriesVis) => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
     payload: currentLineVisual,
 });
 export const resetCurrentLineVisual = () => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_RESET,
 });
-export const addCurrentBarVisual = (currentBarVisual: IBarSeriesCreateVis) => ({
+export const addCurrentBarVisual = (currentBarVisual: IBarSeriesVis) => ({
     type: reducerActionTypes.CURRENT_BAR_VISUAL_ADDED,
     payload: currentBarVisual,
 });
 export const resetCurrentBarVisual = () => ({
     type: reducerActionTypes.CURRENT_BAR_VISUAL_RESET,
 });
-export const addCurrentMarkVisual = (currentMarkVisual: IMarkSeriesCreateVis) => ({
+export const addCurrentMarkVisual = (currentMarkVisual: IMarkSeriesVis) => ({
     type: reducerActionTypes.CURRENT_MARK_VISUAL_ADDED,
     payload: currentMarkVisual,
 });
 export const resetCurrentMarkVisual = () => ({
     type: reducerActionTypes.CURRENT_MARK_VISUAL_RESET,
 });
-export const addCurrentHeatmapVisual = (currentVisual: IHeatmapSeriesCreateVis) => ({
+export const addCurrentHeatmapVisual = (currentVisual: IHeatmapSeriesVis) => ({
     type: reducerActionTypes.CURRENT_HEATMAP_VISUAL_ADDED,
     payload: currentVisual,
 });

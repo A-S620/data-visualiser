@@ -3,12 +3,12 @@ import React from 'react';
 import 'jsdom-global/register';
 import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
-import { IMarkSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesVis } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import CurrentMarkVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
 import MarkSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {
-    const currentVisual: IMarkSeriesCreateVis = {
+    const currentVisual: IMarkSeriesVis = {
         colour: 'red',
         data: [
             { x: 79, y: 5 },

@@ -5,14 +5,14 @@ import {
     ILineSeriesOptions,
     LineStyle,
 } from '../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
-import { ILineSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { ILineSeriesVis } from '../../../src/Interfaces/Visualisations/Line/ILineSeriesVis';
 import { FieldTypes } from '../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { IBarSeriesOptions, yValue } from '../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
-import { IBarSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IBarSeriesVis } from '../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
 import { IMarkSeriesOptions } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
-import { IMarkSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { IHeatmapSeriesOptions } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
-import { IHeatmapSeriesCreateVis } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
+import { IHeatmapSeriesVis } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
 import { IPolygonSeriesOptions } from '../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
 import { IPolygonSeriesVis } from '../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
 
@@ -233,7 +233,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Line Visualisation actions', () => {
         it('Should create an action to add the current line Visualisation', () => {
-            const currentVisual: ILineSeriesCreateVis = {
+            const currentVisual: ILineSeriesVis = {
                 data: [
                     { x: 79, y: 5 },
                     { x: 76, y: 23 },
@@ -287,7 +287,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Bar Visualisation actions', () => {
         it('Should create an action to add the current bar Visualisation', () => {
-            const currentBarVisual: IBarSeriesCreateVis = {
+            const currentBarVisual: IBarSeriesVis = {
                 barWidth: 0,
                 fill: '',
                 data: [
@@ -340,7 +340,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Mark Visualisation actions', () => {
         it('Should create an action to add the current mark Visualisation', () => {
-            const currentMarkVisual: IMarkSeriesCreateVis = {
+            const currentMarkVisual: IMarkSeriesVis = {
                 colour: '',
                 data: [
                     { x: 79, y: 5 },
@@ -404,7 +404,7 @@ describe('Reducer actions', () => {
     });
     describe('Current Heatmap Visualisation actions', () => {
         it('Should create an action to add the current heatmap Visualisation', () => {
-            const currentVisual: IHeatmapSeriesCreateVis = {
+            const currentVisual: IHeatmapSeriesVis = {
                 colourRange: {
                     colour1: '',
                     colour2: '',
@@ -435,7 +435,7 @@ describe('Reducer actions', () => {
     });
     describe('Polygon Series Options actions', () => {
         it('Should create an action to add the polygon options', () => {
-            const options: IPolygonSeriesOptions = {};
+            const options: IPolygonSeriesOptions = { colour: '', height: 0, width: 0, xValue: '', yValue: '' };
             const expectedAction = {
                 type: actionTypes.POLYGON_OPTIONS_ADDED,
                 payload: options,
@@ -450,7 +450,7 @@ describe('Reducer actions', () => {
         });
         describe('Current polygon Visualisation actions', () => {
             it('Should create an action to add the current polygon Visualisation', () => {
-                const currentVisual: IPolygonSeriesVis = {};
+                const currentVisual: IPolygonSeriesVis = { colour: '', data: [], height: 0, width: 0 };
                 const expectedAction = {
                     type: actionTypes.CURRENT_POLYGON_VISUAL_ADDED,
                     payload: currentVisual,

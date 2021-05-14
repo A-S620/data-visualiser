@@ -1,10 +1,10 @@
-import { IMarkSeriesCreateVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { DataHandler } from '../../../Util/DataHandler';
 import MarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 
 export class MarkSeriesCreateVis {
     private dataHandler = new DataHandler();
-    public createVis(): IMarkSeriesCreateVis {
+    public createVis(): IMarkSeriesVis {
         const options = new MarkSeriesOptions().get();
         if (Object.keys(options).length === 0) {
             return this.createDefaultOptions();
@@ -24,7 +24,7 @@ export class MarkSeriesCreateVis {
             colour: options.colour,
         };
     }
-    private createDefaultOptions(): IMarkSeriesCreateVis {
+    private createDefaultOptions(): IMarkSeriesVis {
         const { intervalFields } = this.dataHandler.getAnalysedData();
         return {
             data: this.dataHandler.createIntegerDataArray(

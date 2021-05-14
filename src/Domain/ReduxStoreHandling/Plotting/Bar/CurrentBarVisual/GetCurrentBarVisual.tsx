@@ -1,7 +1,7 @@
 import { store } from '../../../../../ReduxStore/store';
-import { IBarSeriesCreateVis } from '../../../../../Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IBarSeriesVis } from '../../../../../Interfaces/Visualisations/Bar/IBarSeriesVis';
 export default class GetCurrentBarVisual {
-    public getCurrentBarVisual(): IBarSeriesCreateVis {
+    public getCurrentBarVisual(): IBarSeriesVis {
         return store.getState().currentBarVisual;
     }
 }

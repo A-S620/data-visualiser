@@ -2,11 +2,11 @@ import 'jsdom-global/register';
 import React from 'react';
 import CreateCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
 import GetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/GetCurrentBarVisual';
-import { IBarSeriesCreateVis } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IBarSeriesVis } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
 
 describe('GetCurrentBarVisual domain component', () => {
     it('Should return the correct Current line Visualisation', () => {
-        const currentVisual: IBarSeriesCreateVis = {
+        const currentVisual: IBarSeriesVis = {
             barWidth: 0,
             colour: '000000',
             data: [

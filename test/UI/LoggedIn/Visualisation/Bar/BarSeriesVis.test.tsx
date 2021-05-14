@@ -3,17 +3,12 @@ import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import CreateCurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
-import { IBarSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
-import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
+import { IBarSeriesVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
 import { store } from '../../../../../src/ReduxStore/store';
 import BarSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis';
-import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
-import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
-import CreateCurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual/CreateCurrentLineVisual';
-import LineSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Line/LineSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {
-    const currentVisual: IBarSeriesCreateVis = {
+    const currentVisual: IBarSeriesVis = {
         barWidth: 1,
         colour: 'red',
         data: [
@@ -27,7 +22,7 @@ beforeAll(() => {
         stroke: 'red',
         width: 500,
     };
-    const currentVis = new CreateCurrentBarVisual(currentVisual).createCurrentBarVisual();
+    new CreateCurrentBarVisual(currentVisual).createCurrentBarVisual();
 });
 beforeEach(
     () =>

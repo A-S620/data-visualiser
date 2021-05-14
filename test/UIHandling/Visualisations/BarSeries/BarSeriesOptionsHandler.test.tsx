@@ -6,10 +6,6 @@ import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFi
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import CreateLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/CreateLineSeriesOptions';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
-import ResetLineSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions/ResetLineSeriesOptions';
-import CreateBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';
 import ResetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions';
 import GetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
 import GetCurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/GetCurrentBarVisual';

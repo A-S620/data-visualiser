@@ -3,7 +3,7 @@ import React from 'react';
 import CreateCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
 import GetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/GetCurrentBarVisual';
 import ResetCurrentBarVisual from '../../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/ResetCurrentBarVisual';
-import { IBarSeriesCreateVis } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesCreateVis';
+import { IBarSeriesVis } from '../../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
 beforeEach(() => {
     const resetCurrentVis = new ResetCurrentBarVisual();
     resetCurrentVis.resetCurrentBarVisual();
@@ -11,7 +11,7 @@ beforeEach(() => {
 
 describe('CreateCurrentBarVisual domain component', () => {
     it('Should add the current bar visualisation to the redux store', () => {
-        const currentVisual: IBarSeriesCreateVis = {
+        const currentVisual: IBarSeriesVis = {
             barWidth: 0,
             colour: '000000',
             data: [

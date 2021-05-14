@@ -1,10 +1,10 @@
-import { ILineSeriesCreateVis } from '../../../Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { ILineSeriesVis } from '../../../Interfaces/Visualisations/Line/ILineSeriesVis';
 import { DataHandler } from '../../../Util/DataHandler';
 import LineSeriesOptions from '../../ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 
 export class LineSeriesCreateVis {
     private dataHandler = new DataHandler();
-    public createVis(): ILineSeriesCreateVis {
+    public createVis(): ILineSeriesVis {
         const lineSeriesOptions = new LineSeriesOptions().get();
         if (Object.keys(lineSeriesOptions).length === 0) {
             return this.createDefaultOptions();
@@ -29,7 +29,7 @@ export class LineSeriesCreateVis {
             lineWidth: lineSeriesOptions.lineWidth,
         };
     }
-    private createDefaultOptions(): ILineSeriesCreateVis {
+    private createDefaultOptions(): ILineSeriesVis {
         const { intervalFields } = this.dataHandler.getAnalysedData();
         const dataMap = this.dataHandler.createDataMapWithCount(
             intervalFields[0],

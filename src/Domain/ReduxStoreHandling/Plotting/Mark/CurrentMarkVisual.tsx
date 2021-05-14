@@ -1,12 +1,12 @@
 import { store } from '../../../../ReduxStore/store';
 import { addCurrentMarkVisual, resetCurrentMarkVisual } from '../../../../ReduxStore/Actions/ReducerActions';
-import { IMarkSeriesCreateVis } from '../../../../Interfaces/Visualisations/Mark/IMarkSeriesCreateVis';
+import { IMarkSeriesVis } from '../../../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
 
 export default class CurrentMarkVisual {
-    public create(currentVisual: IMarkSeriesCreateVis) {
+    public create(currentVisual: IMarkSeriesVis) {
         store.dispatch(addCurrentMarkVisual(currentVisual));
     }
-    public get(): IMarkSeriesCreateVis {
+    public get(): IMarkSeriesVis {
         return store.getState().currentMarkVisual;
     }
     public reset() {

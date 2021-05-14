@@ -1,27 +1,27 @@
 import 'jsdom-global/register';
 import React from 'react';
 import CurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
-import { ILineSeriesVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesVis';
-import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
+import { IHeatmapSeriesVis } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
+import CurrentHeatmapVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual';
 
 beforeEach(() => {
     const resetCurrentVis = new CurrentLineVisual();
     resetCurrentVis.reset();
 });
 
-describe('CurrentLineVisual domain component', () => {
+describe('CurrentHeatmapVisual domain component', () => {
     it('Should do the correct methods to the redux store', () => {
-        const currentVisual: ILineSeriesVis = {
-            curveType: CurveType.curveLinear,
+        const currentVisual: IHeatmapSeriesVis = {
+            colour: '',
+            colourRange: { colour1: '', colour2: '' },
             data: [],
+            fill: '',
             height: 0,
-            lineStyle: LineStyle.DASHED,
-            lineWidth: 0,
             opacity: 0,
             stroke: '',
             width: 0,
         };
-        const currentVisHandling = new CurrentLineVisual();
+        const currentVisHandling = new CurrentHeatmapVisual();
         currentVisHandling.create(currentVisual);
         expect(currentVisHandling.get()).toEqual(currentVisual);
         currentVisHandling.reset();

@@ -1,6 +1,6 @@
-import { CurveType, ILineSeriesOptions, LineStyle } from './ILineSeriesOptions';
+import { CurveType, LineStyle } from './ILineSeriesOptions';
 
-export interface ILineSeriesCreateVis {
+export interface ILineSeriesVis {
     data: Array<Object>;
     height: number;
     width: number;

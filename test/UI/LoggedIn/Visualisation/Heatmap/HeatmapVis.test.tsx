@@ -3,12 +3,12 @@ import React from 'react';
 import 'jsdom-global/register';
 import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
-import { IHeatmapSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesCreateVis';
-import CreateCurrentHeatmapVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual/CreateCurrentHeatmapVisual';
+import { IHeatmapSeriesVis } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
 import HeatmapVis from '../../../../../src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis';
+import CurrentHeatmapVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual';
 let wrapper: ReactWrapper;
 beforeAll(() => {
-    const currentVisual: IHeatmapSeriesCreateVis = {
+    const currentVisual: IHeatmapSeriesVis = {
         colourRange: {
             colour1: '',
             colour2: '',
@@ -24,7 +24,7 @@ beforeAll(() => {
         opacity: 0.5,
         fill: 'red',
     };
-    const currentVis = new CreateCurrentHeatmapVisual(currentVisual).createCurrentVisual();
+    new CurrentHeatmapVisual().create(currentVisual);
 });
 beforeEach(
     () =>

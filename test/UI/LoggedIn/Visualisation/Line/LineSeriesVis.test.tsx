@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { ILineSeriesCreateVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { ILineSeriesVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { store } from '../../../../../src/ReduxStore/store';
 import LineSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Line/LineSeriesVis';
@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import CurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
 let wrapper: ReactWrapper;
 beforeAll(() => {
-    const currentVisual: ILineSeriesCreateVis = {
+    const currentVisual: ILineSeriesVis = {
         data: [
             { x: 79, y: 5 },
             { x: 76, y: 23 },

@@ -1,12 +1,12 @@
 import { store } from '../../../../ReduxStore/store';
 import { addCurrentLineVisual, resetCurrentLineVisual } from '../../../../ReduxStore/Actions/ReducerActions';
-import { ILineSeriesCreateVis } from '../../../../Interfaces/Visualisations/Line/ILineSeriesCreateVis';
+import { ILineSeriesVis } from '../../../../Interfaces/Visualisations/Line/ILineSeriesVis';
 
 export default class CurrentLineVisual {
-    public create(currentVisual: ILineSeriesCreateVis) {
+    public create(currentVisual: ILineSeriesVis) {
         store.dispatch(addCurrentLineVisual(currentVisual));
     }
-    public get(): ILineSeriesCreateVis {
+    public get(): ILineSeriesVis {
         return store.getState().currentLineVisual;
     }
     public reset() {
