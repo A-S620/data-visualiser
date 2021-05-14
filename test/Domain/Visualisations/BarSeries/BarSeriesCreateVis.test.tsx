@@ -1,10 +1,10 @@
 import React from 'react';
 import 'jsdom-global/register';
-import CreateBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';
 import { IBarSeriesOptions, yValue } from '../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { BarSeriesCreateVis } from '../../../../src/Domain/Visualisations/BarSeries/BarSeriesCreateVis';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
+import BarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
 
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
@@ -76,8 +76,8 @@ describe('BarSeriesCreateVis domain component', () => {
             xValue: 'col3',
             yValue: yValue.percent,
         };
-        const creatBarSeriesOptions = new CreateBarSeriesOptions(barOptions);
-        await creatBarSeriesOptions.createBarSeriesOptions();
+        const barSeriesOptions = new BarSeriesOptions();
+        await barSeriesOptions.create(barOptions);
         const createVis = new BarSeriesCreateVis().createVis();
         expect(createVis.data).toEqual([
             { x: 'foo', y: 25 },
@@ -104,8 +104,8 @@ describe('BarSeriesCreateVis domain component', () => {
             xValue: 'col4',
             yValue: yValue.percent,
         };
-        const creatBarSeriesOptions = new CreateBarSeriesOptions(barOptions);
-        await creatBarSeriesOptions.createBarSeriesOptions();
+        const barSeriesOptions = new BarSeriesOptions();
+        await barSeriesOptions.create(barOptions);
         const createVis = new BarSeriesCreateVis().createVis();
         expect(createVis.data).toEqual([
             { x: '10-20', y: 25 },

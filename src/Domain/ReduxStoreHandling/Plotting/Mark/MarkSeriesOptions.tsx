@@ -3,8 +3,8 @@ import { addMarkOptions, resetMarkOptions } from '../../../../ReduxStore/Actions
 import { IMarkSeriesOptions } from '../../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 
 export default class MarkSeriesOptions {
-    public create(markOptions: IMarkSeriesOptions) {
-        store.dispatch(addMarkOptions(markOptions));
+    public create(options: IMarkSeriesOptions) {
+        store.dispatch(addMarkOptions(options));
     }
     public get(): IMarkSeriesOptions {
         return store.getState().markSeriesOptions;

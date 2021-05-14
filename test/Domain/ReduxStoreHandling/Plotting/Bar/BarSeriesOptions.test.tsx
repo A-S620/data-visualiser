@@ -1,27 +1,27 @@
 import 'jsdom-global/register';
 import React from 'react';
-import HeatmapSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
-import { IHeatmapSeriesOptions } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
+import BarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
+import { IBarSeriesOptions, yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 
 beforeEach(() => {
-    const resetCurrentVis = new HeatmapSeriesOptions();
+    const resetCurrentVis = new BarSeriesOptions();
     resetCurrentVis.reset();
 });
 
-describe('HeatmapSeriesOptions domain component', () => {
+describe('BarSeriesOptions domain component', () => {
     it('Should do the correct methods to the redux store', () => {
-        const currentVisual: IHeatmapSeriesOptions = {
+        const currentVisual: IBarSeriesOptions = {
+            barWidth: 0,
             colour: '',
-            colourRange: { colour1: '', colour2: '' },
             fill: '',
             height: 0,
             opacity: 0,
             stroke: '',
             width: 0,
             xValue: '',
-            yValue: '',
+            yValue: yValue.count,
         };
-        const currentVisHandling = new HeatmapSeriesOptions();
+        const currentVisHandling = new BarSeriesOptions();
         currentVisHandling.create(currentVisual);
         expect(currentVisHandling.get()).toEqual(currentVisual);
         currentVisHandling.reset();

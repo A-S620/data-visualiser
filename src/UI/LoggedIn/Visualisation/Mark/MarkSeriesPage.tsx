@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import MarkSeriesVis from './MarkSeriesVis';
-import MarkSeriesOptions from './MarkSeriesOptionsComponent';
+import MarkSeriesOptions from './MarkOptions';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,

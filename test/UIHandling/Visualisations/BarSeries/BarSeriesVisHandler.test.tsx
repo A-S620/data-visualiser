@@ -5,10 +5,9 @@ import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFi
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import CreateBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';
 import { yValue } from '../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
-import ResetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions';
 import CurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
+import BarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
 
 beforeAll(() => {
     const testData: IImportedFileData = {
@@ -29,7 +28,7 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new CreateBarSeriesOptions({
+    new BarSeriesOptions().create({
         barWidth: 1,
         colour: '000000',
         fill: '000000',
@@ -39,10 +38,10 @@ beforeAll(() => {
         width: 500,
         xValue: 'col1',
         yValue: yValue.count,
-    }).createBarSeriesOptions();
+    });
 });
 afterAll(() => {
-    new ResetBarSeriesOptions().resetBarSeriesOptions();
+    new BarSeriesOptions().reset();
 });
 describe('BarSeriesVisHandler domain component', () => {
     it('Should return the visualisation options when the createBarVisual method is called', () => {

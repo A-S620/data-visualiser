@@ -5,15 +5,15 @@ import { store } from '../../../../../src/ReduxStore/store';
 import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import BarSeriesOptions from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesOptions';
-import GetBarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
 import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
+import BarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
+import BarOptions from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarOptions';
 let wrapper: ReactWrapper;
 beforeEach(
     () =>
         (wrapper = mount(
             <Provider store={store}>
-                <BarSeriesOptions />
+                <BarOptions />
             </Provider>
         ))
 );
@@ -164,8 +164,8 @@ describe('Bar Series Options UI component', () => {
             await inputWidth(800);
             await inputStrokeColour('red');
             await clickSubmit();
-            const getbarSeriesOptions = new GetBarSeriesOptions();
-            expect(getbarSeriesOptions.getBarSeriesOptions()).toEqual({
+            const seriesOptions = new BarSeriesOptions();
+            expect(seriesOptions.get()).toEqual({
                 barWidth: 1,
                 colour: '#000000',
                 fill: '',

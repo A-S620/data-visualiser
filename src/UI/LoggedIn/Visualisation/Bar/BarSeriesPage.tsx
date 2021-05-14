@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
-import BarSeriesOptions from './BarSeriesOptions';
+import BarSeriesOptions from './BarOptions';
 import BarSeriesVis from './BarSeriesVis';
 
 const useStyles = makeStyles((theme) => ({

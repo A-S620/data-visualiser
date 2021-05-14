@@ -1,11 +1,11 @@
-import GetBarSeriesOptions from '../../ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
 import { IBarSeriesVis } from '../../../Interfaces/Visualisations/Bar/IBarSeriesVis';
 import { DataHandler } from '../../../Util/DataHandler';
+import BarSeriesOptions from '../../ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
 
 export class BarSeriesCreateVis {
     private dataHandler = new DataHandler();
     public createVis(): IBarSeriesVis {
-        const barSeriesOptions = new GetBarSeriesOptions().getBarSeriesOptions();
+        const barSeriesOptions = new BarSeriesOptions().get();
         if (Object.keys(barSeriesOptions).length === 0) {
             return this.createDefaultOptions();
         }

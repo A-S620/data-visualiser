@@ -6,9 +6,8 @@ import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFi
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import ResetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions';
-import GetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
 import CurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
+import BarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
 
 beforeAll(() => {
     const testData: IImportedFileData = {
@@ -31,7 +30,7 @@ beforeAll(() => {
     analyseData.validateAnalysedData();
 });
 afterAll(() => {
-    new ResetBarSeriesOptions().resetBarSeriesOptions();
+    new BarSeriesOptions().reset();
 });
 describe('BarSeriesOptionsHandler UI Handling component', () => {
     it('Should not give an error if all options are valid', () => {
@@ -83,8 +82,8 @@ describe('BarSeriesOptionsHandler UI Handling component', () => {
         const barSeriesHandler = new BarSeriesOptionsHandler(testOptions);
         barSeriesHandler.validateOptions();
 
-        const getBarSeriesOptions = new GetBarSeriesOptions();
-        expect(getBarSeriesOptions.getBarSeriesOptions()).toBe(testOptions);
+        const barSeriesOptions = new BarSeriesOptions();
+        expect(barSeriesOptions.get()).toBe(testOptions);
     });
     it('Should create the current visualisation in the Redux store if the options are valid', () => {
         const testOptions: IBarSeriesOptions = {
