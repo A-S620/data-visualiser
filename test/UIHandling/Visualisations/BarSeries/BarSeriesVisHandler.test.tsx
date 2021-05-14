@@ -1,8 +1,6 @@
 import React from 'react';
 import 'jsdom-global/register';
 import { BarSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/BarSeries/BarSeriesVisHandler';
-import GetCurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/GetCurrentBarVisual';
-import { CurveType, LineStyle } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import CreateImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
@@ -10,6 +8,7 @@ import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData
 import CreateBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/CreateBarSeriesOptions';
 import { yValue } from '../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import ResetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions';
+import CurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 
 beforeAll(() => {
     const testData: IImportedFileData = {
@@ -48,8 +47,8 @@ afterAll(() => {
 describe('BarSeriesVisHandler domain component', () => {
     it('Should return the visualisation options when the createBarVisual method is called', () => {
         const barVisHandler = new BarSeriesVisHandler().createBarVisual();
-        const getCurrentVisual = new GetCurrentBarVisual();
-        expect(getCurrentVisual.getCurrentBarVisual()).toEqual({
+        const getCurrentVisual = new CurrentBarVisual().get();
+        expect(getCurrentVisual).toEqual({
             data: [
                 { x: 'hot', y: 1 },
                 { x: 'cold', y: 1 },
@@ -66,8 +65,8 @@ describe('BarSeriesVisHandler domain component', () => {
     });
     it('Should reset the LinePlotOptions when the reset method is called', () => {
         new BarSeriesVisHandler().resetBarVisual();
-        const getCurrentVisual = new GetCurrentBarVisual();
+        const getCurrentVisual = new CurrentBarVisual();
 
-        expect(getCurrentVisual.getCurrentBarVisual()).toEqual({});
+        expect(getCurrentVisual.get()).toEqual({});
     });
 });

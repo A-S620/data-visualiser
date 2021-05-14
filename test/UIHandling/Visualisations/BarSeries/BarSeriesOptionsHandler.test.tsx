@@ -8,7 +8,7 @@ import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileD
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/ResetBarSeriesOptions';
 import GetBarSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions/GetBarSeriesOptions';
-import GetCurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/GetCurrentBarVisual';
+import CurrentBarVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 
 beforeAll(() => {
     const testData: IImportedFileData = {
@@ -101,8 +101,8 @@ describe('BarSeriesOptionsHandler UI Handling component', () => {
         const barSeriesHandler = new BarSeriesOptionsHandler(testOptions);
         barSeriesHandler.validateOptions();
 
-        const getCurrentVisual = new GetCurrentBarVisual();
-        expect(getCurrentVisual.getCurrentBarVisual()).toEqual({
+        const getCurrentVisual = new CurrentBarVisual().get();
+        expect(getCurrentVisual).toEqual({
             data: [
                 { x: 'hot', y: 1 },
                 { x: 'cold', y: 1 },

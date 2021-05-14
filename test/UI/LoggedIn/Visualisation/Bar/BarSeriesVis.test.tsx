@@ -2,10 +2,10 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
-import CreateCurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
 import { IBarSeriesVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
 import { store } from '../../../../../src/ReduxStore/store';
 import BarSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis';
+import CurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IBarSeriesVis = {
@@ -22,7 +22,7 @@ beforeAll(() => {
         stroke: 'red',
         width: 500,
     };
-    new CreateCurrentBarVisual(currentVisual).createCurrentBarVisual();
+    new CurrentBarVisual().create(currentVisual);
 });
 beforeEach(
     () =>

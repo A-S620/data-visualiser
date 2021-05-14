@@ -1,14 +1,13 @@
 import { BarSeriesCreateVis } from '../../../Domain/Visualisations/BarSeries/BarSeriesCreateVis';
-import CreateCurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/CreateCurrentBarVisual';
-import ResetCurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual/ResetCurrentBarVisual';
+import CurrentBarVisual from '../../../Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 
 export class BarSeriesVisHandler {
     public createBarVisual() {
         const createBarVis = new BarSeriesCreateVis().createVis();
-        const createCurrentBarVisual = new CreateCurrentBarVisual(createBarVis);
-        createCurrentBarVisual.createCurrentBarVisual();
+        const createCurrentBarVisual = new CurrentBarVisual();
+        createCurrentBarVisual.create(createBarVis);
     }
     public resetBarVisual() {
-        new ResetCurrentBarVisual().resetCurrentBarVisual();
+        new CurrentBarVisual().reset();
     }
 }
