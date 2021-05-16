@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/PolygonSeries/PolygonSeriesCreateVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/PolygonSeries/PolygonSeriesOptionsValidate.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/PolygonSeries/PolygonSeriesCreateVis.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/PolygonSeries/PolygonSeriesOptionsValidate.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/PolygonSeries/PolygonSeriesOptionsHandler.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/PolygonSeries/PolygonSeriesVisHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/PolygonSeries/PolygonSeriesOptionsHandler.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/PolygonSeries/PolygonSeriesVisHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -491,14 +492,7 @@
       <workItem from="1620836537608" duration="4053000" />
       <workItem from="1620980774855" duration="6989000" />
       <workItem from="1620996760045" duration="401000" />
-      <workItem from="1621167074364" duration="2176000" />
-    </task>
-    <task id="LOCAL-00273" summary="Refactoring">
-      <created>1615320022937</created>
-      <option name="number" value="00273" />
-      <option name="presentableId" value="LOCAL-00273" />
-      <option name="project" value="LOCAL" />
-      <updated>1615320022938</updated>
+      <workItem from="1621167074364" duration="3810000" />
     </task>
     <task id="LOCAL-00274" summary="Added heatmapSeriesOptions to ReduxState,&#10;Updated ReducerActions and ReducerActionTypes with&#10;heatmapSeriesOptions + updated unit tests&#10;Created IHeatmapSeriesOptions">
       <created>1615404607587</created>
@@ -836,7 +830,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621167571967</updated>
     </task>
-    <option name="localTasksCounter" value="322" />
+    <task id="LOCAL-00322" summary="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests">
+      <created>1621170267462</created>
+      <option name="number" value="00322" />
+      <option name="presentableId" value="LOCAL-00322" />
+      <option name="project" value="LOCAL" />
+      <updated>1621170267462</updated>
+    </task>
+    <option name="localTasksCounter" value="323" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -844,7 +845,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created HeatmapVis and HeatmapOptions and unit tests" />
     <MESSAGE value="FieldTypes.test fixes" />
     <MESSAGE value="Updated HeatmapCreateVis to Add count to x-y values after a user selects x value and y value in heatmap options, this becomes the colour (intensity) of the element" />
     <MESSAGE value="Minor changes" />
@@ -869,7 +869,8 @@
     <MESSAGE value="Refactored CreateBarSeriesOptions,&#10;GetBarSeriesOptions&#10;and ResetBarSeriesOptions into&#10;BarSeriesOptions single component + unit tests" />
     <MESSAGE value="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests" />
     <MESSAGE value="Created PolygonSeriesOptions redux store handling&#10;component and unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created PolygonSeriesOptions redux store handling&#10;component and unit tests" />
+    <MESSAGE value="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,10 +3,10 @@ import 'jsdom-global/register';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import { MarkSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler';
-import CurrentMarkVisual from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
-import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
+import PolygonSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions';
+import { PolygonSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/PolygonSeries/PolygonSeriesVisHandler';
+import CurrentPolygonVis from '../../../../src/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVis';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -24,38 +24,32 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new MarkSeriesOptions().create({
+    new PolygonSeriesOptions().create({
         colour: '',
-        fill: '',
         height: 500,
-        opacity: 1,
-        stroke: '',
         width: 500,
         xValue: 'col1',
         yValue: 'col2',
     });
 });
 afterAll(() => {
-    new MarkSeriesOptions().reset();
+    new PolygonSeriesOptions().reset();
 });
-describe('MarkSeriesVis UIHandling Component', () => {
+describe('PolygonSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createVisual method is called', () => {
-        new MarkSeriesVisHandler().createVisual();
-        expect(new CurrentMarkVisual().get()).toEqual({
+        new PolygonSeriesVisHandler().createVisual();
+        expect(new CurrentPolygonVis().get()).toEqual({
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
             ],
             height: 500,
             width: 500,
-            stroke: '',
-            opacity: 1,
             colour: '',
-            fill: '',
         });
     });
     it('Should reset when the reset method is called', () => {
-        new MarkSeriesVisHandler().reset();
-        expect(new CurrentMarkVisual().get()).toEqual({});
+        new PolygonSeriesVisHandler().reset();
+        expect(new CurrentPolygonVis().get()).toEqual({});
     });
 });
