@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
-import { HorizontalGridLines, PolygonSeries, VerticalGridLines, XAxis, XYPlot, YAxis } from 'react-vis';
+import { AreaSeries, HorizontalGridLines, VerticalGridLines, XAxis, XYPlot, YAxis } from 'react-vis';
 import { connect } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
@@ -46,14 +46,11 @@ function AreaSeriesVis(props: any) {
                         // left={50}
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
                     />
-                    <PolygonSeries
+                    <AreaSeries
                         stroke={props.currentAreaVisual.stroke}
-                        color={props.currentAreaVisual.colour}
-                        data={[
-                            { x: 0, y: 0 },
-                            { x: 1, y: 0 },
-                            { x: 0, y: 1 },
-                        ]}
+                        fill={props.currentAreaVisual.colour}
+                        opacity={props.currentAreaVisual.opacity}
+                        data={props.currentAreaVisual.data}
                     />
                 </XYPlot>
             </Box>

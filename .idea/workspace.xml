@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/AreaSeries/AreaSeriesOptionsHandler.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/AreaSeries/AreaSeriesVisHandler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/PolygonSeries/PolygonSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/PolygonSeries/PolygonSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Area/IAreaSeriesOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Visualisations/Polygon/IPolygonSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Area/IAreaSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/PolygonSeries/PolygonSeriesOptionsHandler.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/PolygonSeries/PolygonSeriesVisHandler.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/PolygonSeries/PolygonSeriesCreateVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/AreaSeries/AreaSeriesCreateVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/PolygonSeries/PolygonSeriesOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/PolygonSeries/PolygonSeriesOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/AreaSeries/AreaSeriesOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/PolygonSeries/PolygonSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/AreaSeries/AreaSeriesVisHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -515,14 +490,7 @@
       <workItem from="1620836537608" duration="4053000" />
       <workItem from="1620980774855" duration="6989000" />
       <workItem from="1620996760045" duration="401000" />
-      <workItem from="1621167074364" duration="7647000" />
-    </task>
-    <task id="LOCAL-00275" summary="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests">
-      <created>1615405408960</created>
-      <option name="number" value="00275" />
-      <option name="presentableId" value="LOCAL-00275" />
-      <option name="project" value="LOCAL" />
-      <updated>1615405408960</updated>
+      <workItem from="1621167074364" duration="8548000" />
     </task>
     <task id="LOCAL-00276" summary="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests">
       <created>1615405650077</created>
@@ -860,7 +828,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621171955066</updated>
     </task>
-    <option name="localTasksCounter" value="324" />
+    <task id="LOCAL-00324" summary="Changing PolygonSeries components into AreaSeries">
+      <created>1621177547256</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1621177547256</updated>
+    </task>
+    <option name="localTasksCounter" value="325" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -868,7 +843,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated HeatmapCreateVis to Add count to x-y values after a user selects x value and y value in heatmap options, this becomes the colour (intensity) of the element" />
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Refactoring HeatmapCreateVis" />
     <MESSAGE value="Refactored HeatmapCreateVis" />
@@ -893,7 +867,8 @@
     <MESSAGE value="Created PolygonSeriesOptions redux store handling&#10;component and unit tests" />
     <MESSAGE value="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests" />
     <MESSAGE value="Created PolygonSeriesVisHandler and&#10;PolygonSeriesOptionsHandler UI Handling components and&#10;unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created PolygonSeriesVisHandler and&#10;PolygonSeriesOptionsHandler UI Handling components and&#10;unit tests" />
+    <MESSAGE value="Changing PolygonSeries components into AreaSeries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing PolygonSeries components into AreaSeries" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

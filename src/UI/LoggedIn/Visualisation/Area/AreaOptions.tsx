@@ -225,18 +225,18 @@ function AreaOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
-                        <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
+                        <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
                             <InputLabel className={classes.textColor}>Fill</InputLabel>
                             <Select
-                                value={options.fill}
+                                value={options.stroke}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
                                         fill: event.target.value as string,
                                     });
                                 }}
-                                name="colour"
+                                name="stroke"
                             >
                                 <option value={'red'}>red</option>
                                 <option value={'green'}>green</option>
@@ -271,32 +271,61 @@ function AreaOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box>
-                        <FormControl style={{ minWidth: 400 }} id={'curve-select'}>
-                            <InputLabel className={classes.textColor}>Curve</InputLabel>
-                            <Select
-                                // value={options.curveType}
-                                onChange={(event) => {
-                                    setOptions({
-                                        ...options,
-                                        curveType: event.target.value as CurveType,
-                                    });
-                                }}
-                                name="Curve Type"
-                            >
-                                <option value={CurveType.curveLinear}>Linear</option>
-                                <option value={CurveType.curveLinearClosed}>Linear Closed</option>
-                                <option value={CurveType.curveMonotoneX}>Monotone X</option>
-                                <option value={CurveType.curveMonotoneY}>Monotone Y</option>
-                                <option value={CurveType.curveNatural}>Natural</option>
-                                <option value={CurveType.curveStep}>Step</option>
-                                <option value={CurveType.curveStepAfter}>Step After</option>
-                                <option value={CurveType.curveStepBefore}>Step Before</option>
-                            </Select>
-                            <FormHelperText className={classes.helperTextColor}>
-                                Function used to create curve
-                            </FormHelperText>
-                        </FormControl>
+                    <Box display="flex" flexDirection="row" justifyContent="center" id={'line-textfields'}>
+                        <Box>
+                            <FormControl style={{ minWidth: 200 }} id={'curve-select'}>
+                                <InputLabel className={classes.textColor}>Curve</InputLabel>
+                                <Select
+                                    // value={options.curveType}
+                                    onChange={(event) => {
+                                        setOptions({
+                                            ...options,
+                                            curveType: event.target.value as CurveType,
+                                        });
+                                    }}
+                                    name="Curve Type"
+                                >
+                                    <option value={CurveType.curveLinear}>Linear</option>
+                                    <option value={CurveType.curveLinearClosed}>Linear Closed</option>
+                                    <option value={CurveType.curveMonotoneX}>Monotone X</option>
+                                    <option value={CurveType.curveMonotoneY}>Monotone Y</option>
+                                    <option value={CurveType.curveNatural}>Natural</option>
+                                    <option value={CurveType.curveStep}>Step</option>
+                                    <option value={CurveType.curveStepAfter}>Step After</option>
+                                    <option value={CurveType.curveStepBefore}>Step Before</option>
+                                </Select>
+                                <FormHelperText className={classes.helperTextColor}>
+                                    Function used to create curve
+                                </FormHelperText>
+                            </FormControl>
+                        </Box>
+                        <Box mx={5} />
+                        <Box>
+                            <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
+                                <InputLabel className={classes.textColor}>Stroke</InputLabel>
+                                <Select
+                                    value={options.stroke}
+                                    onChange={(event) => {
+                                        setOptions({
+                                            ...options,
+                                            stroke: event.target.value as string,
+                                        });
+                                    }}
+                                    name="stroke"
+                                >
+                                    <option value={'red'}>red</option>
+                                    <option value={'green'}>green</option>
+                                    <option value={'blue'}>blue</option>
+                                    <option value={'purple'}>purple</option>
+                                    <option value={'orange'}>orange</option>
+                                    <option value={'black'}>black</option>
+                                    <option value={'yellow'}>yellow</option>
+                                    <option value={'brown'}>brown</option>
+                                    <option value={'pink'}>pink</option>
+                                    <option value={'turquoise'}>turquoise</option>
+                                </Select>
+                            </FormControl>
+                        </Box>
                     </Box>
                     <Box id={'submit-button'} my={15}>
                         <Button
