@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/ImportedData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/ImportedData.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ImportFile/ImportFileData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ImportFile/ImportFileData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/CreateImportedData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/GetImportedData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/AnalyseFileData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ImportFile/ImportFileData.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ImportFile/ImportFileData.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/CreateImportedData.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/GetImportedData.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/ImportedData/ResetImportedData.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ImportFilesHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ResetDataHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ResetDataHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/BarSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/BarSeries/BarSeriesVisHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/HeatmapSeries/HeatmapVisHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/LineSeries/LineSeriesVisHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/MarkSeries/MarkSeriesVisHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,15 +142,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -521,14 +487,9 @@
       <workItem from="1620661972525" duration="5233000" />
       <workItem from="1620667560924" duration="38000" />
       <workItem from="1620836537608" duration="4053000" />
-      <workItem from="1620980774855" duration="6159000" />
-    </task>
-    <task id="LOCAL-00271" summary="Unit Test for reset application state">
-      <created>1615233925736</created>
-      <option name="number" value="00271" />
-      <option name="presentableId" value="LOCAL-00271" />
-      <option name="project" value="LOCAL" />
-      <updated>1615233925736</updated>
+      <workItem from="1620980774855" duration="6989000" />
+      <workItem from="1620996760045" duration="401000" />
+      <workItem from="1621167074364" duration="408000" />
     </task>
     <task id="LOCAL-00272" summary="Updated ImportFilesComponent and unit tests">
       <created>1615319381369</created>
@@ -866,7 +827,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620986115817</updated>
     </task>
-    <option name="localTasksCounter" value="320" />
+    <task id="LOCAL-00320" summary="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests">
+      <created>1620990686160</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1620990686161</updated>
+    </task>
+    <option name="localTasksCounter" value="321" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -874,7 +842,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created HeatmapOptions, HeatmapPage.&#10;Todo: HeatmapVis and unit tests" />
     <MESSAGE value="Updated HeatmapOptions, HeatmapPage.&#10;Created HeatmapVis&#10;TODO: Unit test" />
     <MESSAGE value="Created HeatmapVis and HeatmapOptions and unit tests" />
     <MESSAGE value="FieldTypes.test fixes" />
@@ -899,7 +866,8 @@
     <MESSAGE value="Refactored CreateCurrentHeatmapVisual,&#10;GetCurrentHeatmapVisual&#10;and ResetCurrentHeatmapVisual into&#10;CurrentHeatmapVisual single component + unit tests&#10;Refactored interfaces" />
     <MESSAGE value="Refactored CreateCurrentBarVisual,&#10;GetCurrentBarVisual&#10;and ResetCurrentBarVisual into&#10;CurrentBarVisual single component + unit tests" />
     <MESSAGE value="Refactored CreateBarSeriesOptions,&#10;GetBarSeriesOptions&#10;and ResetBarSeriesOptions into&#10;BarSeriesOptions single component + unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored CreateBarSeriesOptions,&#10;GetBarSeriesOptions&#10;and ResetBarSeriesOptions into&#10;BarSeriesOptions single component + unit tests" />
+    <MESSAGE value="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
