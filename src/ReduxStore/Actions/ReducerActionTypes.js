@@ -27,8 +27,8 @@ export const MARK_OPTIONS_ADDED = 'markOptionsAdded';
 export const MARK_OPTIONS_RESET = 'markOptionsReset';
 export const HEATMAP_OPTIONS_ADDED = 'heatmapOptionsAdded';
 export const HEATMAP_OPTIONS_RESET = 'heatmapOptionsReset';
-export const POLYGON_OPTIONS_ADDED = 'polygonOptionsAdded';
-export const POLYGON_OPTIONS_RESET = 'polygonOptionsReset';
+export const AREA_OPTIONS_ADDED = 'areaOptionsAdded';
+export const AREA_OPTIONS_RESET = 'areaOptionsReset';
 
 //currentVisualisationSlice
 export const CURRENT_LINE_VISUAL_ADDED = 'currentLineVisualAdded';
@@ -39,7 +39,7 @@ export const CURRENT_MARK_VISUAL_ADDED = 'currentMarkVisualAdded';
 export const CURRENT_MARK_VISUAL_RESET = 'currentMarkVisualReset';
 export const CURRENT_HEATMAP_VISUAL_ADDED = 'currentHeatmapVisualAdded';
 export const CURRENT_HEATMAP_VISUAL_RESET = 'currentHeatmapVisualReset';
-export const CURRENT_POLYGON_VISUAL_ADDED = 'currentPolygonVisualAdded';
-export const CURRENT_POLYGON_VISUAL_RESET = 'currentPolygonVisualReset';
+export const CURRENT_AREA_VISUAL_ADDED = 'currentAreaVisualAdded';
+export const CURRENT_AREA_VISUAL_RESET = 'currentAreaVisualReset';
 
 export const RESET_APPLICATION_STATE = 'resetApplicationState';

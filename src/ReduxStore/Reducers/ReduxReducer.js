@@ -182,15 +182,15 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 heatmapSeriesOptions: {},
             };
-        //polygonSeriesOptions slice
-        case ReducerActions.POLYGON_OPTIONS_ADDED:
+        //areaSeriesOptions slice
+        case ReducerActions.AREA_OPTIONS_ADDED:
             return {
                 ...state,
-                polygonSeriesOptions: action.payload,
+                areaSeriesOptions: action.payload,
             };
-        case ReducerActions.POLYGON_OPTIONS_RESET:
+        case ReducerActions.AREA_OPTIONS_RESET:
             return {
-                polygonSeriesOptions: {},
+                areaSeriesOptions: {},
             };
         //currentLineVisual slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:
@@ -232,15 +232,15 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 currentHeatmapVisual: {},
             };
-        //currentPolygonVisual slice
-        case ReducerActions.CURRENT_POLYGON_VISUAL_ADDED:
+        //currentAreaVisual slice
+        case ReducerActions.CURRENT_AREA_VISUAL_ADDED:
             return {
                 ...state,
-                currentPolygonVisual: action.payload,
+                currentAreaVisual: action.payload,
             };
-        case ReducerActions.CURRENT_POLYGON_VISUAL_RESET:
+        case ReducerActions.CURRENT_AREA_VISUAL_RESET:
             return {
-                currentPolygonVisual: {},
+                currentAreaVisual: {},
             };
         case ReducerActions.RESET_APPLICATION_STATE:
             return ReduxState;

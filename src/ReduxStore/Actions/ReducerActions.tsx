@@ -7,8 +7,8 @@ import { IMarkSeriesOptions } from '../../Interfaces/Visualisations/Mark/IMarkSe
 import { IMarkSeriesVis } from '../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { IHeatmapSeriesOptions } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { IHeatmapSeriesVis } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
-import { IPolygonSeriesOptions } from '../../Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
-import { IPolygonSeriesVis } from '../../Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
+import { IAreaSeriesOptions } from '../../Interfaces/Visualisations/Area/IAreaSeriesOptions';
+import { IAreaSeriesVis } from '../../Interfaces/Visualisations/Area/IAreaSeriesVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -104,12 +104,12 @@ export const addHeatmapOptions = (heatmapSeriesOptions: IHeatmapSeriesOptions) =
 export const resetHeatmapOptions = () => ({
     type: reducerActionTypes.HEATMAP_OPTIONS_RESET,
 });
-export const addPolygonOptions = (options: IPolygonSeriesOptions) => ({
-    type: reducerActionTypes.POLYGON_OPTIONS_ADDED,
+export const addAreaOptions = (options: IAreaSeriesOptions) => ({
+    type: reducerActionTypes.AREA_OPTIONS_ADDED,
     payload: options,
 });
-export const resetPolygonOptions = () => ({
-    type: reducerActionTypes.POLYGON_OPTIONS_RESET,
+export const resetAreaOptions = () => ({
+    type: reducerActionTypes.AREA_OPTIONS_RESET,
 });
 //currentLineVisual slice
 export const addCurrentLineVisual = (currentLineVisual: ILineSeriesVis) => ({
@@ -140,12 +140,12 @@ export const addCurrentHeatmapVisual = (currentVisual: IHeatmapSeriesVis) => ({
 export const resetCurrentHeatmapVisual = () => ({
     type: reducerActionTypes.CURRENT_HEATMAP_VISUAL_RESET,
 });
-export const addCurrentPolygonVisual = (currentVisual: IPolygonSeriesVis) => ({
-    type: reducerActionTypes.CURRENT_POLYGON_VISUAL_ADDED,
+export const addCurrentAreaVisual = (currentVisual: IAreaSeriesVis) => ({
+    type: reducerActionTypes.CURRENT_AREA_VISUAL_ADDED,
     payload: currentVisual,
 });
-export const resetCurrentPolygonVisual = () => ({
-    type: reducerActionTypes.CURRENT_POLYGON_VISUAL_RESET,
+export const resetCurrentAreaVisual = () => ({
+    type: reducerActionTypes.CURRENT_AREA_VISUAL_RESET,
 });
 //Reset Application State
 export const resetApplicationState = () => ({

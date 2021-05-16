@@ -1,12 +1,11 @@
 import 'jsdom-global/register';
 import { FieldTypes, IAnalysedFileData } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
-import { MarkSeriesCreateVis } from '../../../../src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis';
-import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
-import MarkSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
-import { PolygonSeriesCreateVis } from '../../../../src/Domain/Visualisations/PolygonSeries/PolygonSeriesCreateVis';
-import { IPolygonSeriesOptions } from '../../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
-import PolygonSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions';
+import { AreaSeriesCreateVis } from '../../../../src/Domain/Visualisations/AreaSeries/AreaSeriesCreateVis';
+import { IAreaSeriesOptions } from '../../../../src/Interfaces/Visualisations/Area/IAreaSeriesOptions';
+import AreaSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions';
+import { CurveType } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
+
 beforeAll(() => {
     const analysedFileData: IAnalysedFileData = {
         fields: [
@@ -50,9 +49,9 @@ beforeAll(() => {
     createAnalysedData.createAll();
 });
 
-describe('PolygonSeriesCreateVis domain component', () => {
+describe('AreaSeriesCreateVis domain component', () => {
     it('Should return a default values for the options when no options have been selected', async () => {
-        const createVis = new PolygonSeriesCreateVis().createVis();
+        const createVis = new AreaSeriesCreateVis().createVis();
         expect(createVis.data).toEqual([
             { x: 32, y: 45 },
             { x: 79, y: 5 },
@@ -60,18 +59,24 @@ describe('PolygonSeriesCreateVis domain component', () => {
         ]);
         expect(createVis.height).toEqual(800);
         expect(createVis.width).toEqual(800);
-        expect(createVis.colour).toEqual('black');
+        expect(createVis.fill).toEqual('#000000');
+        expect(createVis.opacity).toEqual(1);
+        expect(createVis.curveType).toEqual(CurveType.curveLinear);
+        expect(createVis.stroke).toEqual('#000000');
     });
     it('Should return the correct options from the Redux store when valid options have been imported - interval', async () => {
-        const options: IPolygonSeriesOptions = {
-            colour: 'red',
+        const options: IAreaSeriesOptions = {
+            curveType: CurveType.curveLinear,
+            fill: 'red',
+            opacity: 1,
+            stroke: 'blue',
             height: 500,
             width: 500,
             xValue: 'col1',
             yValue: 'col2',
         };
-        new PolygonSeriesOptions().create(options);
-        const createVis = new PolygonSeriesCreateVis().createVis();
+        new AreaSeriesOptions().create(options);
+        const createVis = new AreaSeriesCreateVis().createVis();
         expect(createVis.data).toEqual([
             { x: 32, y: 45 },
             { x: 79, y: 5 },
@@ -79,6 +84,9 @@ describe('PolygonSeriesCreateVis domain component', () => {
         ]);
         expect(createVis.height).toEqual(500);
         expect(createVis.width).toEqual(500);
-        expect(createVis.colour).toEqual('red');
+        expect(createVis.fill).toEqual('red');
+        expect(createVis.stroke).toEqual('blue');
+        expect(createVis.opacity).toEqual(1);
+        expect(createVis.curveType).toEqual(CurveType.curveLinear);
     });
 });

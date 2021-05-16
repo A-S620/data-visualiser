@@ -1,9 +1,9 @@
 import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
-import { IPolygonSeriesOptions } from '../../../Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
+import { IAreaSeriesOptions } from '../../../Interfaces/Visualisations/Area/IAreaSeriesOptions';
 
-export class PolygonSeriesOptionsValidate {
-    private readonly options: IPolygonSeriesOptions;
-    constructor(options: IPolygonSeriesOptions) {
+export class AreaSeriesOptionsValidate {
+    private readonly options: IAreaSeriesOptions;
+    constructor(options: IAreaSeriesOptions) {
         this.options = options;
     }
     public validate(): NotificationsHandler {
@@ -18,9 +18,17 @@ export class PolygonSeriesOptionsValidate {
                 `The minimum value for Width is 100, the maximum value for Width is 800. The current width is ${this.options.width}`
             );
         }
+        if (!this.opacityIsValid(this.options.opacity)) {
+            notifications.addNotification(
+                `The minimum value for Opacity is 0, the maximum value for Opacity is 1. The current Opacity is ${this.options.opacity}`
+            );
+        }
         return notifications;
     }
     private lengthIsValid(length: number): boolean {
         return !(length > 800 || length < 100);
+    }
+    private opacityIsValid(opacity: number): boolean {
+        return !(opacity > 1 || opacity < 0);
     }
 }

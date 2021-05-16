@@ -15,6 +15,7 @@ import LineSeriesPage from './Line/LineSeriesPage';
 import BarSeriesPage from './Bar/BarSeriesPage';
 import MarkSeriesPage from './Mark/MarkSeriesPage';
 import HeatmapPage from './Heatmap/HeatmapPage';
+import AreaSeriesPage from './Area/AreaSeriesPage';
 
 //Switches tabs
 function TabPanel(props: any) {
@@ -90,10 +91,10 @@ export default function VisualiseNav() {
                 Hexbin
             </TabPanel>
             <TabPanel value={value} index={4}>
-                Item Five
+                <AreaSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={5}>
-                Item Six
+                Donut
             </TabPanel>
             <TabPanel value={value} index={6}>
                 <HeatmapPage />
@@ -133,10 +134,10 @@ export default function VisualiseNav() {
                         className={classes.tab}
                     />
                     <Tab
-                        label="Polygon"
+                        label="Area"
                         icon={<GraphicEqIcon />}
                         {...a11yProps(4)}
-                        id={'polygon-tab'}
+                        id={'area-tab'}
                         className={classes.tab}
                     />
                     <Tab

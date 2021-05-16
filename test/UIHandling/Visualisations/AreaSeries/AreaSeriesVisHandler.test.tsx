@@ -4,9 +4,10 @@ import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFi
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
-import PolygonSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions';
-import { PolygonSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/PolygonSeries/PolygonSeriesVisHandler';
-import CurrentPolygonVis from '../../../../src/Domain/ReduxStoreHandling/Plotting/Polygon/CurrentPolygonVis';
+import AreaSeriesOptions from '../../../../src/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions';
+import { AreaSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/AreaSeries/AreaSeriesVisHandler';
+import CurrentAreaVis from '../../../../src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis';
+import { CurveType } from '../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 beforeAll(() => {
     const testData: IImportedFileData = {
         dataFields: ['col1', 'col2', 'col3'],
@@ -24,8 +25,11 @@ beforeAll(() => {
         { field: 'col3', fieldType: FieldTypes.IGNORE },
     ]);
     analyseData.validateAnalysedData();
-    new PolygonSeriesOptions().create({
-        colour: '',
+    new AreaSeriesOptions().create({
+        stroke: '#000000',
+        opacity: 1,
+        curveType: CurveType.curveLinear,
+        fill: '#000000',
         height: 500,
         width: 500,
         xValue: 'col1',
@@ -33,23 +37,26 @@ beforeAll(() => {
     });
 });
 afterAll(() => {
-    new PolygonSeriesOptions().reset();
+    new AreaSeriesOptions().reset();
 });
 describe('PolygonSeriesVis UIHandling Component', () => {
     it('Should return the visualisation options when the createVisual method is called', () => {
-        new PolygonSeriesVisHandler().createVisual();
-        expect(new CurrentPolygonVis().get()).toEqual({
+        new AreaSeriesVisHandler().createVisual();
+        expect(new CurrentAreaVis().get()).toEqual({
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },
             ],
             height: 500,
             width: 500,
-            colour: '',
+            stroke: '#000000',
+            opacity: 1,
+            curveType: CurveType.curveLinear,
+            fill: '#000000',
         });
     });
     it('Should reset when the reset method is called', () => {
-        new PolygonSeriesVisHandler().reset();
-        expect(new CurrentPolygonVis().get()).toEqual({});
+        new AreaSeriesVisHandler().reset();
+        expect(new CurrentAreaVis().get()).toEqual({});
     });
 });

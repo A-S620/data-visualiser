@@ -768,7 +768,7 @@ describe('ReduxReducer', () => {
     });
     describe('Polygon Options slice', () => {
         const optionsSlice = {
-            polygonSeriesOptions: {},
+            areaSeriesOptions: {},
         };
         const options = {
             colour: '',
@@ -778,8 +778,8 @@ describe('ReduxReducer', () => {
             yValue: 'test',
         };
         it('Should handle POLYGON_OPTIONS_ADDED', () => {
-            expect(reduxReducer(optionsSlice, reducerActions.addPolygonOptions(options))).toEqual({
-                polygonSeriesOptions: {
+            expect(reduxReducer(optionsSlice, reducerActions.addAreaOptions(options))).toEqual({
+                areaSeriesOptions: {
                     colour: '',
                     height: 0,
                     width: 0,
@@ -792,7 +792,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        polygonSeriesOptions: {
+                        areaSeriesOptions: {
                             colour: '',
                             height: 0,
                             width: 0,
@@ -800,7 +800,7 @@ describe('ReduxReducer', () => {
                             yValue: 'test',
                         },
                     },
-                    reducerActions.resetPolygonOptions()
+                    reducerActions.resetAreaOptions()
                 )
             ).toEqual(optionsSlice);
         });
@@ -833,8 +833,8 @@ describe('ReduxReducer', () => {
             currentMarkVisual: {},
             heatmapSeriesOptions: {},
             currentHeatmapVisual: {},
-            polygonSeriesOptions: {},
-            currentPolygonVisual: {},
+            areaSeriesOptions: {},
+            currentAreaVisual: {},
         };
         it('Should handle RESET_APPLICATION_STATE', () => {
             expect(
@@ -866,8 +866,8 @@ describe('ReduxReducer', () => {
                         currentMarkVisual: {},
                         heatmapSeriesOptions: {},
                         currentHeatmapVisual: {},
-                        polygonSeriesOptions: {},
-                        currentPolygonVisual: {},
+                        areaSeriesOptions: {},
+                        currentAreaVisual: {},
                     },
                     reducerActions.resetApplicationState()
                 )
@@ -930,7 +930,7 @@ describe('ReduxReducer', () => {
     });
     describe('Current Polygon Visualisation', () => {
         const currentVisualSlice = {
-            currentPolygonVisual: {},
+            currentAreaVisual: {},
         };
         const currentVisual = {
             colour: '',
@@ -942,8 +942,8 @@ describe('ReduxReducer', () => {
             width: 0,
         };
         it('Should handle CURRENT_POLYGON_VISUAL_ADDED', () => {
-            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentPolygonVisual(currentVisual))).toEqual({
-                currentPolygonVisual: {
+            expect(reduxReducer(currentVisualSlice, reducerActions.addCurrentAreaVisual(currentVisual))).toEqual({
+                currentAreaVisual: {
                     colour: '',
                     data: [
                         { x: 79, y: 5 },
@@ -958,7 +958,7 @@ describe('ReduxReducer', () => {
             expect(
                 reduxReducer(
                     {
-                        currentPolygonVisual: {
+                        currentAreaVisual: {
                             colour: '',
                             data: [
                                 { x: 79, y: 5 },
@@ -968,7 +968,7 @@ describe('ReduxReducer', () => {
                             width: 0,
                         },
                     },
-                    reducerActions.resetCurrentPolygonVisual()
+                    reducerActions.resetCurrentAreaVisual()
                 )
             ).toEqual(currentVisualSlice);
         });

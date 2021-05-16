@@ -1,13 +1,12 @@
-import { IMarkSeriesVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { DataHandler } from '../../../Util/DataHandler';
-import MarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
-import { IPolygonSeriesVis } from '../../../Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
-import PolygonSeriesOptions from '../../ReduxStoreHandling/Plotting/Polygon/PolygonSeriesOptions';
+import { IAreaSeriesVis } from '../../../Interfaces/Visualisations/Area/IAreaSeriesVis';
+import AreaSeriesOptions from '../../ReduxStoreHandling/Plotting/Area/AreaSeriesOptions';
+import { CurveType } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 
-export class PolygonSeriesCreateVis {
+export class AreaSeriesCreateVis {
     private dataHandler = new DataHandler();
-    public createVis(): IPolygonSeriesVis {
-        const options = new PolygonSeriesOptions().get();
+    public createVis(): IAreaSeriesVis {
+        const options = new AreaSeriesOptions().get();
         if (Object.keys(options).length === 0) {
             return this.createDefaultOptions();
         }
@@ -20,10 +19,13 @@ export class PolygonSeriesCreateVis {
             ),
             height: options.height,
             width: options.width,
-            colour: options.colour,
+            fill: options.fill,
+            stroke: options.stroke,
+            opacity: options.opacity,
+            curveType: options.curveType,
         };
     }
-    private createDefaultOptions(): IPolygonSeriesVis {
+    private createDefaultOptions(): IAreaSeriesVis {
         const { intervalFields } = this.dataHandler.getAnalysedData();
         return {
             data: this.dataHandler.createIntegerDataArray(
@@ -33,7 +35,10 @@ export class PolygonSeriesCreateVis {
             ),
             height: 800,
             width: 800,
-            colour: 'black',
+            fill: '#000000',
+            stroke: '#000000',
+            opacity: 1,
+            curveType: CurveType.curveLinear,
         };
     }
 }

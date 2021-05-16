@@ -13,8 +13,8 @@ import { IMarkSeriesOptions } from '../../../src/Interfaces/Visualisations/Mark/
 import { IMarkSeriesVis } from '../../../src/Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { IHeatmapSeriesOptions } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { IHeatmapSeriesVis } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
-import { IPolygonSeriesOptions } from '../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesOptions';
-import { IPolygonSeriesVis } from '../../../src/Interfaces/Visualisations/Polygon/IPolygonSeriesVis';
+import { IAreaSeriesOptions } from '../../../src/Interfaces/Visualisations/Area/IAreaSeriesOptions';
+import { IAreaSeriesVis } from '../../../src/Interfaces/Visualisations/Area/IAreaSeriesVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -435,33 +435,50 @@ describe('Reducer actions', () => {
     });
     describe('Polygon Series Options actions', () => {
         it('Should create an action to add the polygon options', () => {
-            const options: IPolygonSeriesOptions = { colour: '', height: 0, width: 0, xValue: '', yValue: '' };
+            const options: IAreaSeriesOptions = {
+                stroke: '',
+                opacity: 0,
+                curveType: CurveType.curveLinear,
+                fill: '',
+                height: 0,
+                width: 0,
+                xValue: '',
+                yValue: '',
+            };
             const expectedAction = {
-                type: actionTypes.POLYGON_OPTIONS_ADDED,
+                type: actionTypes.AREA_OPTIONS_ADDED,
                 payload: options,
             };
-            expect(reducerActions.addPolygonOptions(options)).toEqual(expectedAction);
+            expect(reducerActions.addAreaOptions(options)).toEqual(expectedAction);
         });
         it('Should create an action to reset the polygon options', () => {
             const expectedAction = {
-                type: actionTypes.POLYGON_OPTIONS_RESET,
+                type: actionTypes.AREA_OPTIONS_RESET,
             };
-            expect(reducerActions.resetPolygonOptions()).toEqual(expectedAction);
+            expect(reducerActions.resetAreaOptions()).toEqual(expectedAction);
         });
         describe('Current polygon Visualisation actions', () => {
             it('Should create an action to add the current polygon Visualisation', () => {
-                const currentVisual: IPolygonSeriesVis = { colour: '', data: [], height: 0, width: 0 };
+                const currentVisual: IAreaSeriesVis = {
+                    stroke: '',
+                    opacity: 1,
+                    curveType: CurveType.curveLinear,
+                    fill: '0',
+                    data: [],
+                    height: 0,
+                    width: 0,
+                };
                 const expectedAction = {
-                    type: actionTypes.CURRENT_POLYGON_VISUAL_ADDED,
+                    type: actionTypes.CURRENT_AREA_VISUAL_ADDED,
                     payload: currentVisual,
                 };
-                expect(reducerActions.addCurrentPolygonVisual(currentVisual)).toEqual(expectedAction);
+                expect(reducerActions.addCurrentAreaVisual(currentVisual)).toEqual(expectedAction);
             });
             it('Should create an action to reset the current polygon Visualisation', () => {
                 const expectedAction = {
-                    type: actionTypes.CURRENT_POLYGON_VISUAL_RESET,
+                    type: actionTypes.CURRENT_AREA_VISUAL_RESET,
                 };
-                expect(reducerActions.resetCurrentPolygonVisual()).toEqual(expectedAction);
+                expect(reducerActions.resetCurrentAreaVisual()).toEqual(expectedAction);
             });
         });
     });
