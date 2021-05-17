@@ -26,12 +26,12 @@ function AreaSeriesVis(props: any) {
             flexDirection="column"
             alignItems="center"
             className={classes.root}
-            id={'mark-series'}
+            id={'area-series'}
             mx={15}
         >
             <Box>
                 <XYPlot
-                    id={'mark-series-vis'}
+                    id={'area-series-vis'}
                     height={props.currentAreaVisual.height}
                     width={props.currentAreaVisual.width}
                     margin={{ left: 75 }}
@@ -48,7 +48,7 @@ function AreaSeriesVis(props: any) {
                     />
                     <AreaSeries
                         stroke={props.currentAreaVisual.stroke}
-                        fill={props.currentAreaVisual.colour}
+                        fill={props.currentAreaVisual.fill}
                         opacity={props.currentAreaVisual.opacity}
                         data={props.currentAreaVisual.data}
                     />

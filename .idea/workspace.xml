@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaOptions.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaOptions.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,13 +146,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -490,14 +495,8 @@
       <workItem from="1620836537608" duration="4053000" />
       <workItem from="1620980774855" duration="6989000" />
       <workItem from="1620996760045" duration="401000" />
-      <workItem from="1621167074364" duration="8548000" />
-    </task>
-    <task id="LOCAL-00276" summary="Updated ReduxReducer with heatmapSeriesOptions and&#10;unit tests">
-      <created>1615405650077</created>
-      <option name="number" value="00276" />
-      <option name="presentableId" value="LOCAL-00276" />
-      <option name="project" value="LOCAL" />
-      <updated>1615405650077</updated>
+      <workItem from="1621167074364" duration="8739000" />
+      <workItem from="1621275503548" duration="2730000" />
     </task>
     <task id="LOCAL-00277" summary="Redux store handling for heatmapSeriesOptions&#10;Created: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions&#10;TODO: Unit tests">
       <created>1615405929951</created>
@@ -835,7 +834,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621177547256</updated>
     </task>
-    <option name="localTasksCounter" value="325" />
+    <task id="LOCAL-00325" summary="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests">
+      <created>1621178519832</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1621178519832</updated>
+    </task>
+    <option name="localTasksCounter" value="326" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -843,7 +849,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Minor changes" />
     <MESSAGE value="Refactoring HeatmapCreateVis" />
     <MESSAGE value="Refactored HeatmapCreateVis" />
     <MESSAGE value="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state" />
@@ -868,7 +873,8 @@
     <MESSAGE value="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests" />
     <MESSAGE value="Created PolygonSeriesVisHandler and&#10;PolygonSeriesOptionsHandler UI Handling components and&#10;unit tests" />
     <MESSAGE value="Changing PolygonSeries components into AreaSeries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing PolygonSeries components into AreaSeries" />
+    <MESSAGE value="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

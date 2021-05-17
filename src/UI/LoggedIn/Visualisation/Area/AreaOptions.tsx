@@ -127,7 +127,7 @@ function AreaOptions(props: any) {
                     px={20}
                     py={20}
                 >
-                    <Typography id={'polygon-plotting-title'}>Polygon Series Options</Typography>
+                    <Typography id={'area-plotting-title'}>Area Series Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
                             <InputLabel className={classes.textColor}>X Value</InputLabel>
@@ -225,18 +225,18 @@ function AreaOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'fill-textfields'}>
                         <FormControl style={{ minWidth: 200 }} id={'fill-select'}>
                             <InputLabel className={classes.textColor}>Fill</InputLabel>
                             <Select
-                                value={options.stroke}
+                                value={options.fill}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
                                         fill: event.target.value as string,
                                     });
                                 }}
-                                name="stroke"
+                                name="fill"
                             >
                                 <option value={'red'}>red</option>
                                 <option value={'green'}>green</option>
