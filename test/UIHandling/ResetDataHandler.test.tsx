@@ -13,7 +13,7 @@ beforeAll(() => {
     };
     const importFile = new ImportFilesHandler(importedFile);
     importFile.validate();
-    const analyseFile = new AnalyseFileHandler([
+    new AnalyseFileHandler().validateAnalysedData([
         { field: 'col1', fieldType: FieldTypes.INTERVAL },
         { field: 'col2', fieldType: FieldTypes.INTERVAL },
     ]);

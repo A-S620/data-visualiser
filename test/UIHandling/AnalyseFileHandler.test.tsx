@@ -32,13 +32,15 @@ describe('AnalyseFileHandler UI handling component', () => {
         };
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
-        const analyseFile = new AnalyseFileHandler([
-            { field: 'col1', fieldType: FieldTypes.INTERVAL },
-            { field: 'col2', fieldType: FieldTypes.INTERVAL },
-        ]);
-        expect(analyseFile.validateAnalysedData().notification()).toBe(
-            'Field types have not been selected for all fields'
-        );
+        const analyseFile = new AnalyseFileHandler();
+        expect(
+            analyseFile
+                .validateAnalysedData([
+                    { field: 'col1', fieldType: FieldTypes.INTERVAL },
+                    { field: 'col2', fieldType: FieldTypes.INTERVAL },
+                ])
+                .notification()
+        ).toBe('Field types have not been selected for all fields');
     });
     it('should create analysed data', () => {
         const importedFile: IImportedFile = {
@@ -47,8 +49,8 @@ describe('AnalyseFileHandler UI handling component', () => {
         };
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
-        const analyseFile = new AnalyseFileHandler(fields);
-        analyseFile.validateAnalysedData();
+        const analyseFile = new AnalyseFileHandler();
+        analyseFile.validateAnalysedData(fields);
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual(['col1', 'col2']);
     });
@@ -59,7 +61,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         };
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
-        const analyseFile = new AnalyseFileHandler(fields);
+        const analyseFile = new AnalyseFileHandler();
         analyseFile.resetAnalysedData();
         const getAnalysedData = new GetAnalysedData();
         expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual([]);
@@ -71,7 +73,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         };
         const importFile = new ImportFilesHandler(importedFile);
         importFile.validate();
-        const analyseFileErrors = new AnalyseFileHandler(fields).validateAnalysedData();
+        const analyseFileErrors = new AnalyseFileHandler().validateAnalysedData(fields);
 
         expect(analyseFileErrors.notification()).toEqual('');
     });

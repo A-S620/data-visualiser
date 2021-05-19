@@ -9,7 +9,6 @@ import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHan
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { AnalyseFileHandler } from '../../../../../src/UIHandling/AnalyseFileHandler';
 import { FieldTypes } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import ResetImportedData from '../../../../../src/Domain/ReduxStoreHandling/ImportedData/ResetImportedData';
 import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
 
 //Test Data
@@ -66,14 +65,14 @@ describe('File Analysis component', () => {
                 fileType: 'text/csv',
             };
             const importFile = new ImportFilesHandler(importedFile).validate();
-            const analyseFileHandler = new AnalyseFileHandler([
+            const analyseFileHandler = new AnalyseFileHandler();
+            analyseFileHandler.validateAnalysedData([
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.NOMINAL },
                 { field: 'col3', fieldType: FieldTypes.ORDINAL },
                 { field: 'col4', fieldType: FieldTypes.BINARY },
                 { field: 'col5', fieldType: FieldTypes.IGNORE },
             ]);
-            analyseFileHandler.validateAnalysedData();
             const fields = component.find('div#all-fields');
             expect(fields.text()).toBe('All Data fields:col1col2col3col4col5');
         });
@@ -115,10 +114,10 @@ function importAndAnalyseData() {
         fileType: 'text/csv',
     };
     const importFile = new ImportFilesHandler(importedFile).validate();
-    const analyseFileHandler = new AnalyseFileHandler([
+    const analyseFileHandler = new AnalyseFileHandler();
+    analyseFileHandler.validateAnalysedData([
         { field: 'col1', fieldType: FieldTypes.INTERVAL },
         { field: 'col2', fieldType: FieldTypes.NOMINAL },
         { field: 'col3', fieldType: FieldTypes.ORDINAL },
     ]);
-    analyseFileHandler.validateAnalysedData();
 }

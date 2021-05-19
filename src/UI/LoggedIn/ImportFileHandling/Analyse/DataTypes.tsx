@@ -88,8 +88,8 @@ function DataTypes(props: any) {
         }
     }
     function analyseFile() {
-        const analyseFileHandler = new AnalyseFileHandler(fields);
-        const errors = analyseFileHandler.validateAnalysedData();
+        const analyseFileHandler = new AnalyseFileHandler();
+        const errors = analyseFileHandler.validateAnalysedData(fields);
         if (errors.isEmpty()) {
             try {
                 setNotifications({
