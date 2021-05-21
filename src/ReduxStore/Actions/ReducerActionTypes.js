@@ -29,6 +29,8 @@ export const HEATMAP_OPTIONS_ADDED = 'heatmapOptionsAdded';
 export const HEATMAP_OPTIONS_RESET = 'heatmapOptionsReset';
 export const AREA_OPTIONS_ADDED = 'areaOptionsAdded';
 export const AREA_OPTIONS_RESET = 'areaOptionsReset';
+export const RADIAL_OPTIONS_ADDED = 'radialOptionsAdded';
+export const RADIAL_OPTIONS_RESET = 'radialOptionsReset';
 
 //currentVisualisationSlice
 export const CURRENT_LINE_VISUAL_ADDED = 'currentLineVisualAdded';
@@ -41,5 +43,7 @@ export const CURRENT_HEATMAP_VISUAL_ADDED = 'currentHeatmapVisualAdded';
 export const CURRENT_HEATMAP_VISUAL_RESET = 'currentHeatmapVisualReset';
 export const CURRENT_AREA_VISUAL_ADDED = 'currentAreaVisualAdded';
 export const CURRENT_AREA_VISUAL_RESET = 'currentAreaVisualReset';
+export const CURRENT_RADIAL_VISUAL_ADDED = 'currentRadialVisualAdded';
+export const CURRENT_RADIAL_VISUAL_RESET = 'currentRadialVisualReset';
 
 export const RESET_APPLICATION_STATE = 'resetApplicationState';

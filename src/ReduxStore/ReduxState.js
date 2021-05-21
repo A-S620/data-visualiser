@@ -27,5 +27,7 @@ const ReduxState = {
     currentHeatmapVisual: {},
     areaSeriesOptions: {},
     currentAreaVisual: {},
+    radialSeriesOptions: {},
+    currentRadialVisual: {},
 };
 export default ReduxState;

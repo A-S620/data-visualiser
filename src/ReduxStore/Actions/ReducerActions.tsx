@@ -9,6 +9,8 @@ import { IHeatmapSeriesOptions } from '../../Interfaces/Visualisations/Heatmap/I
 import { IHeatmapSeriesVis } from '../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
 import { IAreaSeriesOptions } from '../../Interfaces/Visualisations/Area/IAreaSeriesOptions';
 import { IAreaSeriesVis } from '../../Interfaces/Visualisations/Area/IAreaSeriesVis';
+import { IRadialSeriesOptions } from '../../Interfaces/Visualisations/Radial/IRadialSeriesOptions';
+import { IRadialSeriesVis } from '../../Interfaces/Visualisations/Radial/IRadialSeriesVis';
 
 export const addDataFields = (dataFields: Array<string>) => ({
     type: reducerActionTypes.DATA_FIELDS_ADDED,
@@ -111,6 +113,13 @@ export const addAreaOptions = (options: IAreaSeriesOptions) => ({
 export const resetAreaOptions = () => ({
     type: reducerActionTypes.AREA_OPTIONS_RESET,
 });
+export const addRadialOptions = (options: IRadialSeriesOptions) => ({
+    type: reducerActionTypes.RADIAL_OPTIONS_ADDED,
+    payload: options,
+});
+export const resetRadialOptions = () => ({
+    type: reducerActionTypes.RADIAL_OPTIONS_RESET,
+});
 //currentLineVisual slice
 export const addCurrentLineVisual = (currentLineVisual: ILineSeriesVis) => ({
     type: reducerActionTypes.CURRENT_LINE_VISUAL_ADDED,
@@ -146,6 +155,13 @@ export const addCurrentAreaVisual = (currentVisual: IAreaSeriesVis) => ({
 });
 export const resetCurrentAreaVisual = () => ({
     type: reducerActionTypes.CURRENT_AREA_VISUAL_RESET,
+});
+export const addCurrentRadialVisual = (currentVisual: IRadialSeriesVis) => ({
+    type: reducerActionTypes.CURRENT_RADIAL_VISUAL_ADDED,
+    payload: currentVisual,
+});
+export const resetCurrentRadialVisual = () => ({
+    type: reducerActionTypes.CURRENT_RADIAL_VISUAL_RESET,
 });
 //Reset Application State
 export const resetApplicationState = () => ({

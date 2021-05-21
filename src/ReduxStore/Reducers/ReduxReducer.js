@@ -192,6 +192,16 @@ export default function reduxReducer(state = ReduxState, action) {
             return {
                 areaSeriesOptions: {},
             };
+        //radialSeriesOptions slice
+        case ReducerActions.RADIAL_OPTIONS_ADDED:
+            return {
+                ...state,
+                radialSeriesOptions: action.payload,
+            };
+        case ReducerActions.RADIAL_OPTIONS_RESET:
+            return {
+                radialSeriesOptions: {},
+            };
         //currentLineVisual slice
         case ReducerActions.CURRENT_LINE_VISUAL_ADDED:
             return {
@@ -241,6 +251,16 @@ export default function reduxReducer(state = ReduxState, action) {
         case ReducerActions.CURRENT_AREA_VISUAL_RESET:
             return {
                 currentAreaVisual: {},
+            };
+        //currentRadialVisual slice
+        case ReducerActions.CURRENT_RADIAL_VISUAL_ADDED:
+            return {
+                ...state,
+                currentRadialVisual: action.payload,
+            };
+        case ReducerActions.CURRENT_AREA_VISUAL_RESET:
+            return {
+                currentRadialVisual: {},
             };
         case ReducerActions.RESET_APPLICATION_STATE:
             return ReduxState;

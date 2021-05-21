@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Radial/IRadialSeriesOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Radial/IRadialSeriesVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/AnalyseFileHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/AnalyseFileHandler.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/ResetDataHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/ResetDataHandler.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,13 +151,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -496,14 +502,8 @@
       <workItem from="1620996760045" duration="401000" />
       <workItem from="1621167074364" duration="8739000" />
       <workItem from="1621275503548" duration="3565000" />
-      <workItem from="1621403659520" duration="642000" />
-    </task>
-    <task id="LOCAL-00278" summary="Unit tests for: CreateHeatmapSeriesOptions&#10;GetHeatmapSeriesOptions&#10;ResetHeatmapSeriesOptions">
-      <created>1615491670727</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1615491670727</updated>
+      <workItem from="1621403659520" duration="2653000" />
+      <workItem from="1621623944711" duration="3698000" />
     </task>
     <task id="LOCAL-00279" summary="Created HeatmapSeriesOptionsValidate Domain component">
       <created>1615492385029</created>
@@ -841,7 +841,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621278646679</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="Refactored AnalyseFileHandler and unit tests">
+      <created>1621404543127</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1621404543127</updated>
+    </task>
+    <option name="localTasksCounter" value="328" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -849,7 +856,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored HeatmapCreateVis" />
     <MESSAGE value="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state" />
     <MESSAGE value="Fixed HeatmapVis colour range, it now shows colours&#10;correctly.&#10;TODO: HeatmapOptions unit tests" />
     <MESSAGE value="HeatmapOptions unit tests" />
@@ -874,7 +880,8 @@
     <MESSAGE value="Changing PolygonSeries components into AreaSeries" />
     <MESSAGE value="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests" />
     <MESSAGE value="Created AreaOptions and AreaSeriesVis Unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created AreaOptions and AreaSeriesVis Unit tests" />
+    <MESSAGE value="Refactored AnalyseFileHandler and unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored AnalyseFileHandler and unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
