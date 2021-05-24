@@ -94,7 +94,7 @@ export default function VisualiseNav() {
                 <AreaSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={5}>
-                Donut
+                Radial
             </TabPanel>
             <TabPanel value={value} index={6}>
                 <HeatmapPage />
@@ -141,10 +141,10 @@ export default function VisualiseNav() {
                         className={classes.tab}
                     />
                     <Tab
-                        label="Donut"
+                        label="Radial"
                         icon={<DonutLargeIcon />}
                         {...a11yProps(5)}
-                        id={'donut-tab'}
+                        id={'radial-tab'}
                         className={classes.tab}
                     />
                     <Tab
