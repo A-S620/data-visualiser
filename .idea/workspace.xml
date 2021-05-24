@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Radial/IRadialSeriesOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Radial/IRadialSeriesVis.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Actions/ReducerActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/ReduxState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,19 +147,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HeatmapCreateVis domain component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -503,21 +486,8 @@
       <workItem from="1621167074364" duration="8739000" />
       <workItem from="1621275503548" duration="3565000" />
       <workItem from="1621403659520" duration="2653000" />
-      <workItem from="1621623944711" duration="3698000" />
-    </task>
-    <task id="LOCAL-00279" summary="Created HeatmapSeriesOptionsValidate Domain component">
-      <created>1615492385029</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1615492385029</updated>
-    </task>
-    <task id="LOCAL-00280" summary="Created HeatmapSeriesOptionsValidate Domain component&#10;TODO: Unit test">
-      <created>1615492441905</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1615492441905</updated>
+      <workItem from="1621623944711" duration="4406000" />
+      <workItem from="1621884649245" duration="2429000" />
     </task>
     <task id="LOCAL-00281" summary="Did HeatmapSeriesOptionsValidate Domain component &#10;Unit test">
       <created>1615578341243</created>
@@ -848,7 +818,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621404543127</updated>
     </task>
-    <option name="localTasksCounter" value="328" />
+    <task id="LOCAL-00328" summary="Created IRadialSeriesOptions, IRadialSeriesVis,&#10;CurrentRadialVisual, RadialSeriesOptions,&#10;RadialSeriesOptionsValidate,&#10;Added radial series to ReducerActions,&#10;ReducerActionTypes, ReduxReducer, ReduxState">
+      <created>1621628783498</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1621628783499</updated>
+    </task>
+    <task id="LOCAL-00329" summary="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx">
+      <created>1621885339336</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1621885339337</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -856,8 +840,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state" />
-    <MESSAGE value="Fixed HeatmapVis colour range, it now shows colours&#10;correctly.&#10;TODO: HeatmapOptions unit tests" />
     <MESSAGE value="HeatmapOptions unit tests" />
     <MESSAGE value="Refactored and created DataHandler so that code can be reused" />
     <MESSAGE value="Created IPolygonSeriesVis and IPolygonSeriesOptions&#10;Updated ReduxState, ReducerActions and&#10;ReducerActionTypes with Polygon options and&#10;visualisation and unit tests" />
@@ -881,7 +863,9 @@
     <MESSAGE value="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests" />
     <MESSAGE value="Created AreaOptions and AreaSeriesVis Unit tests" />
     <MESSAGE value="Refactored AnalyseFileHandler and unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored AnalyseFileHandler and unit tests" />
+    <MESSAGE value="Created IRadialSeriesOptions, IRadialSeriesVis,&#10;CurrentRadialVisual, RadialSeriesOptions,&#10;RadialSeriesOptionsValidate,&#10;Added radial series to ReducerActions,&#10;ReducerActionTypes, ReduxReducer, ReduxState" />
+    <MESSAGE value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

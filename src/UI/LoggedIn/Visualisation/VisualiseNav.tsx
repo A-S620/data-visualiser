@@ -16,6 +16,7 @@ import BarSeriesPage from './Bar/BarSeriesPage';
 import MarkSeriesPage from './Mark/MarkSeriesPage';
 import HeatmapPage from './Heatmap/HeatmapPage';
 import AreaSeriesPage from './Area/AreaSeriesPage';
+import RadialSeriesPage from './Radial/RadialSeriesPage';
 
 //Switches tabs
 function TabPanel(props: any) {
@@ -94,7 +95,7 @@ export default function VisualiseNav() {
                 <AreaSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={5}>
-                Radial
+                <RadialSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={6}>
                 <HeatmapPage />

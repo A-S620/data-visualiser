@@ -1,6 +1,4 @@
 import { DataHandler } from '../../../Util/DataHandler';
-import { IMarkSeriesVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
-import MarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 import { IRadialSeriesVis } from '../../../Interfaces/Visualisations/Radial/IRadialSeriesVis';
 import RadialSeriesOptions from '../../ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions';
 
@@ -13,14 +11,13 @@ export class RadialSeriesCreateVis {
         }
 
         return {
-            data: [{ angle: 1 }, { angle: 5 }, { angle: 2 }],
+            data: [{ angle: 5 }, { angle: 2 }, { angle: 3 }],
             height: options.height,
             width: options.width,
             colour: options.colour,
         };
     }
     private createDefaultOptions(): IRadialSeriesVis {
-        const { intervalFields } = this.dataHandler.getAnalysedData();
         return {
             data: [{ angle: 1 }, { angle: 5 }, { angle: 2 }],
             height: 800,

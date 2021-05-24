@@ -258,7 +258,7 @@ export default function reduxReducer(state = ReduxState, action) {
                 ...state,
                 currentRadialVisual: action.payload,
             };
-        case ReducerActions.CURRENT_AREA_VISUAL_RESET:
+        case ReducerActions.CURRENT_RADIAL_VISUAL_RESET:
             return {
                 currentRadialVisual: {},
             };
