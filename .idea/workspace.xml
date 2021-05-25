@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,14 +492,7 @@
       <workItem from="1621403659520" duration="2653000" />
       <workItem from="1621623944711" duration="4406000" />
       <workItem from="1621884649245" duration="2523000" />
-      <workItem from="1621970927060" duration="1434000" />
-    </task>
-    <task id="LOCAL-00283" summary="Created IHeatmapSeriesCreateVis interface">
-      <created>1615708342556</created>
-      <option name="number" value="00283" />
-      <option name="presentableId" value="LOCAL-00283" />
-      <option name="project" value="LOCAL" />
-      <updated>1615708342557</updated>
+      <workItem from="1621970927060" duration="1656000" />
     </task>
     <task id="LOCAL-00284" summary="Created currentHeatmapVisualisation and&#10;heatmapHeatmapOptions in Redux store">
       <created>1615708654974</created>
@@ -840,7 +830,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621972094449</updated>
     </task>
-    <option name="localTasksCounter" value="332" />
+    <task id="LOCAL-00332" summary="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions">
+      <created>1621972421162</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1621972421162</updated>
+    </task>
+    <option name="localTasksCounter" value="333" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -848,7 +845,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created IPolygonSeriesVis and IPolygonSeriesOptions&#10;Updated ReduxState, ReducerActions and&#10;ReducerActionTypes with Polygon options and&#10;visualisation and unit tests" />
     <MESSAGE value="Added attributes to IPolygonSeriesVis and&#10;IPolygonSeriesOptions&#10;Updated ReduxReducer and unit tests" />
     <MESSAGE value="Refactoring names" />
     <MESSAGE value="Created CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis" />
@@ -873,7 +869,8 @@
     <MESSAGE value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
     <MESSAGE value="Created RadialOptions, RadialSeriesVis and&#10;RadialSeriesPage UI components&#10;Refactored other radial components" />
     <MESSAGE value="Radial series unit tests for ReducerActions and&#10;ReduxReducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radial series unit tests for ReducerActions and&#10;ReduxReducer" />
+    <MESSAGE value="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
