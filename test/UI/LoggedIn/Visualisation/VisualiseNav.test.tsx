@@ -13,7 +13,7 @@ describe('Plotting Navigation Component', () => {
     );
 
     it('should have the correct items in the menu', () => {
-        const pages = ['Line', 'Bar', 'Mark', 'Hexbin', 'Area', 'Donut', 'Heatmap'];
+        const pages = ['Line', 'Bar', 'Mark', 'Hexbin', 'Area', 'Radial', 'Heatmap'];
 
         const menu = wrapper.find('div#plotting-tabs');
 
@@ -22,7 +22,7 @@ describe('Plotting Navigation Component', () => {
         expect(menu.find('button#mark-tab').text()).toBe(pages[2]);
         expect(menu.find('button#hexbin-tab').text()).toBe(pages[3]);
         expect(menu.find('button#area-tab').text()).toBe(pages[4]);
-        expect(menu.find('button#donut-tab').text()).toBe(pages[5]);
+        expect(menu.find('button#radial-tab').text()).toBe(pages[5]);
         expect(menu.find('button#heatmap-tab').text()).toBe(pages[6]);
     });
 });

@@ -15,6 +15,8 @@ import { IHeatmapSeriesOptions } from '../../../src/Interfaces/Visualisations/He
 import { IHeatmapSeriesVis } from '../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
 import { IAreaSeriesOptions } from '../../../src/Interfaces/Visualisations/Area/IAreaSeriesOptions';
 import { IAreaSeriesVis } from '../../../src/Interfaces/Visualisations/Area/IAreaSeriesVis';
+import { IRadialSeriesOptions } from '../../../src/Interfaces/Visualisations/Radial/IRadialSeriesOptions';
+import { IRadialSeriesVis } from '../../../src/Interfaces/Visualisations/Radial/IRadialSeriesVis';
 
 describe('Reducer actions', () => {
     describe('Imported data actions', () => {
@@ -433,8 +435,8 @@ describe('Reducer actions', () => {
             expect(reducerActions.resetCurrentHeatmapVisual()).toEqual(expectedAction);
         });
     });
-    describe('Polygon Series Options actions', () => {
-        it('Should create an action to add the polygon options', () => {
+    describe('Area Series Options actions', () => {
+        it('Should create an action to add the area options', () => {
             const options: IAreaSeriesOptions = {
                 stroke: '',
                 opacity: 0,
@@ -451,14 +453,14 @@ describe('Reducer actions', () => {
             };
             expect(reducerActions.addAreaOptions(options)).toEqual(expectedAction);
         });
-        it('Should create an action to reset the polygon options', () => {
+        it('Should create an action to reset the area options', () => {
             const expectedAction = {
                 type: actionTypes.AREA_OPTIONS_RESET,
             };
             expect(reducerActions.resetAreaOptions()).toEqual(expectedAction);
         });
-        describe('Current polygon Visualisation actions', () => {
-            it('Should create an action to add the current polygon Visualisation', () => {
+        describe('Current area Visualisation actions', () => {
+            it('Should create an action to add the current area Visualisation', () => {
                 const currentVisual: IAreaSeriesVis = {
                     stroke: '',
                     opacity: 1,
@@ -474,11 +476,54 @@ describe('Reducer actions', () => {
                 };
                 expect(reducerActions.addCurrentAreaVisual(currentVisual)).toEqual(expectedAction);
             });
-            it('Should create an action to reset the current polygon Visualisation', () => {
+            it('Should create an action to reset the current area Visualisation', () => {
                 const expectedAction = {
                     type: actionTypes.CURRENT_AREA_VISUAL_RESET,
                 };
                 expect(reducerActions.resetCurrentAreaVisual()).toEqual(expectedAction);
+            });
+        });
+    });
+    describe('Radial Series Options actions', () => {
+        it('Should create an action to add the radial options', () => {
+            const options: IRadialSeriesOptions = {
+                colour: '',
+                height: 0,
+                width: 0,
+                xValue: '',
+                yValue: '',
+            };
+            const expectedAction = {
+                type: actionTypes.RADIAL_OPTIONS_ADDED,
+                payload: options,
+            };
+            expect(reducerActions.addRadialOptions(options)).toEqual(expectedAction);
+        });
+        it('Should create an action to reset the radial options', () => {
+            const expectedAction = {
+                type: actionTypes.RADIAL_OPTIONS_RESET,
+            };
+            expect(reducerActions.resetRadialOptions()).toEqual(expectedAction);
+        });
+        describe('Current Radial Visualisation actions', () => {
+            it('Should create an action to add the current radial Visualisation', () => {
+                const currentVisual: IRadialSeriesVis = {
+                    data: [],
+                    colour: '',
+                    height: 0,
+                    width: 0,
+                };
+                const expectedAction = {
+                    type: actionTypes.CURRENT_RADIAL_VISUAL_ADDED,
+                    payload: currentVisual,
+                };
+                expect(reducerActions.addCurrentRadialVisual(currentVisual)).toEqual(expectedAction);
+            });
+            it('Should create an action to reset the current radial Visualisation', () => {
+                const expectedAction = {
+                    type: actionTypes.CURRENT_RADIAL_VISUAL_RESET,
+                };
+                expect(reducerActions.resetCurrentRadialVisual()).toEqual(expectedAction);
             });
         });
     });

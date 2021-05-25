@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/Reducers/ReduxReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Reducers/ReduxReducer.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +144,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HeatmapCreateVis domain component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -487,14 +495,8 @@
       <workItem from="1621275503548" duration="3565000" />
       <workItem from="1621403659520" duration="2653000" />
       <workItem from="1621623944711" duration="4406000" />
-      <workItem from="1621884649245" duration="2429000" />
-    </task>
-    <task id="LOCAL-00281" summary="Did HeatmapSeriesOptionsValidate Domain component &#10;Unit test">
-      <created>1615578341243</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1615578341244</updated>
+      <workItem from="1621884649245" duration="2523000" />
+      <workItem from="1621970927060" duration="1109000" />
     </task>
     <task id="LOCAL-00282" summary="Created HeatmapSeriesOptionsHandler and created unit&#10;tests">
       <created>1615580429256</created>
@@ -832,7 +834,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621885339337</updated>
     </task>
-    <option name="localTasksCounter" value="330" />
+    <task id="LOCAL-00330" summary="Created RadialOptions, RadialSeriesVis and&#10;RadialSeriesPage UI components&#10;Refactored other radial components">
+      <created>1621887416196</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1621887416196</updated>
+    </task>
+    <option name="localTasksCounter" value="331" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -840,7 +849,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HeatmapOptions unit tests" />
     <MESSAGE value="Refactored and created DataHandler so that code can be reused" />
     <MESSAGE value="Created IPolygonSeriesVis and IPolygonSeriesOptions&#10;Updated ReduxState, ReducerActions and&#10;ReducerActionTypes with Polygon options and&#10;visualisation and unit tests" />
     <MESSAGE value="Added attributes to IPolygonSeriesVis and&#10;IPolygonSeriesOptions&#10;Updated ReduxReducer and unit tests" />
@@ -865,7 +873,8 @@
     <MESSAGE value="Refactored AnalyseFileHandler and unit tests" />
     <MESSAGE value="Created IRadialSeriesOptions, IRadialSeriesVis,&#10;CurrentRadialVisual, RadialSeriesOptions,&#10;RadialSeriesOptionsValidate,&#10;Added radial series to ReducerActions,&#10;ReducerActionTypes, ReduxReducer, ReduxState" />
     <MESSAGE value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
+    <MESSAGE value="Created RadialOptions, RadialSeriesVis and&#10;RadialSeriesPage UI components&#10;Refactored other radial components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created RadialOptions, RadialSeriesVis and&#10;RadialSeriesPage UI components&#10;Refactored other radial components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

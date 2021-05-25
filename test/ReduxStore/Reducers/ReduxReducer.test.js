@@ -766,7 +766,7 @@ describe('ReduxReducer', () => {
             ).toEqual(optionsSlice);
         });
     });
-    describe('Polygon Options slice', () => {
+    describe('Area Options slice', () => {
         const optionsSlice = {
             areaSeriesOptions: {},
         };
@@ -777,7 +777,7 @@ describe('ReduxReducer', () => {
             xValue: 'test',
             yValue: 'test',
         };
-        it('Should handle POLYGON_OPTIONS_ADDED', () => {
+        it('Should handle AREA_OPTIONS_ADDED', () => {
             expect(reduxReducer(optionsSlice, reducerActions.addAreaOptions(options))).toEqual({
                 areaSeriesOptions: {
                     colour: '',
@@ -788,7 +788,7 @@ describe('ReduxReducer', () => {
                 },
             });
         });
-        it('Should handle POLYGON_OPTIONS_RESET', () => {
+        it('Should handle AREA_OPTIONS_RESET', () => {
             expect(
                 reduxReducer(
                     {
@@ -801,6 +801,45 @@ describe('ReduxReducer', () => {
                         },
                     },
                     reducerActions.resetAreaOptions()
+                )
+            ).toEqual(optionsSlice);
+        });
+    });
+    describe('Radial Options slice', () => {
+        const optionsSlice = {
+            radialSeriesOptions: {},
+        };
+        const options = {
+            colour: '',
+            height: 0,
+            width: 0,
+            xValue: 'test',
+            yValue: 'test',
+        };
+        it('Should handle RADIAL_OPTIONS_ADDED', () => {
+            expect(reduxReducer(optionsSlice, reducerActions.addRadialOptions(options))).toEqual({
+                radialSeriesOptions: {
+                    colour: '',
+                    height: 0,
+                    width: 0,
+                    xValue: 'test',
+                    yValue: 'test',
+                },
+            });
+        });
+        it('Should handle RADIAL_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        radialSeriesOptions: {
+                            colour: '',
+                            height: 0,
+                            width: 0,
+                            xValue: 'test',
+                            yValue: 'test',
+                        },
+                    },
+                    reducerActions.resetRadialOptions()
                 )
             ).toEqual(optionsSlice);
         });
@@ -835,6 +874,8 @@ describe('ReduxReducer', () => {
             currentHeatmapVisual: {},
             areaSeriesOptions: {},
             currentAreaVisual: {},
+            radialSeriesOptions: {},
+            currentRadialVisual: {},
         };
         it('Should handle RESET_APPLICATION_STATE', () => {
             expect(
@@ -868,6 +909,8 @@ describe('ReduxReducer', () => {
                         currentHeatmapVisual: {},
                         areaSeriesOptions: {},
                         currentAreaVisual: {},
+                        radialSeriesOptions: {},
+                        currentRadialVisual: {},
                     },
                     reducerActions.resetApplicationState()
                 )
@@ -971,6 +1014,84 @@ describe('ReduxReducer', () => {
                     reducerActions.resetCurrentAreaVisual()
                 )
             ).toEqual(currentVisualSlice);
+        });
+    });
+    describe('Radial Options', () => {
+        const optionsSlice = {
+            radialSeriesOptions: {},
+        };
+        const options = {
+            height: 0,
+            width: 0,
+            xValue: 'test',
+            yValue: 'test',
+        };
+        it('Should handle RADIAL_OPTIONS_ADDED', () => {
+            expect(reduxReducer(optionsSlice, reducerActions.addRadialOptions(options))).toEqual({
+                radialSeriesOptions: {
+                    height: 0,
+                    width: 0,
+                    xValue: 'test',
+                    yValue: 'test',
+                },
+            });
+        });
+        it('Should handle RADIAL_OPTIONS_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        radialSeriesOptions: {
+                            height: 0,
+                            width: 0,
+                            xValue: 'test',
+                            yValue: 'test',
+                        },
+                    },
+                    reducerActions.resetRadialOptions()
+                )
+            ).toEqual(optionsSlice);
+        });
+    });
+    describe('Current Radial Visualisation', () => {
+        const slice = {
+            currentRadialVisual: {},
+        };
+        const currentVisual = {
+            data: [
+                { x: 79, y: 5 },
+                { x: 76, y: 23 },
+            ],
+            height: 0,
+            width: 0,
+        };
+        it('Should handle CURRENT_RADIAL_VISUAL_ADDED', () => {
+            expect(reduxReducer(slice, reducerActions.addCurrentRadialVisual(currentVisual))).toEqual({
+                currentRadialVisual: {
+                    data: [
+                        { x: 79, y: 5 },
+                        { x: 76, y: 23 },
+                    ],
+                    height: 0,
+                    width: 0,
+                },
+            });
+        });
+        it('Should handle CURRENT_RADIAL_VISUAL_RESET', () => {
+            expect(
+                reduxReducer(
+                    {
+                        currentRadialVisual: {
+                            data: [
+                                { x: 79, y: 5 },
+                                { x: 76, y: 23 },
+                            ],
+                            height: 0,
+                            width: 0,
+                        },
+                    },
+                    reducerActions.resetCurrentRadialVisual()
+                )
+            ).toEqual(slice);
         });
     });
 });
