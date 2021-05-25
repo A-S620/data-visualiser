@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -494,14 +493,7 @@
       <workItem from="1621403659520" duration="2653000" />
       <workItem from="1621623944711" duration="4406000" />
       <workItem from="1621884649245" duration="2523000" />
-      <workItem from="1621970927060" duration="1901000" />
-    </task>
-    <task id="LOCAL-00285" summary="Updated ReducerActions AND ReducerActionTypes&#10;with currentHeatmapVisualisation and updated unit tests">
-      <created>1615709828416</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1615709828416</updated>
+      <workItem from="1621970927060" duration="2439000" />
     </task>
     <task id="LOCAL-00286" summary="Updated ReduxReducer and unit tests with &#10;currentHeatmapVisualisation">
       <created>1615710257827</created>
@@ -839,7 +831,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621972660679</updated>
     </task>
-    <option name="localTasksCounter" value="334" />
+    <task id="LOCAL-00334" summary="Radial series unit tests for RadialSeriesVis">
+      <created>1621972975224</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1621972975224</updated>
+    </task>
+    <option name="localTasksCounter" value="335" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -847,7 +846,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactoring names" />
     <MESSAGE value="Created CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis" />
     <MESSAGE value="Refactored CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis into CurrentPolygonVis&#10;single component + unit tests" />
     <MESSAGE value="Refactored CreateCurrentMarkVis, GetCurrentMarkVis&#10;and ResetCurrentMarkVis into CurrentMarkVis&#10;single component + unit tests" />
@@ -872,7 +870,8 @@
     <MESSAGE value="Radial series unit tests for ReducerActions and&#10;ReduxReducer" />
     <MESSAGE value="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions" />
     <MESSAGE value="Radial series unit tests for&#10;RadialSeriesOptionsValidate" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radial series unit tests for&#10;RadialSeriesOptionsValidate" />
+    <MESSAGE value="Radial series unit tests for RadialSeriesVis" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radial series unit tests for RadialSeriesVis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
