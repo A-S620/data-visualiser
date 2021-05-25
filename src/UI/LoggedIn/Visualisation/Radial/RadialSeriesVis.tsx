@@ -26,7 +26,7 @@ function RadialSeriesVis(props: any) {
             flexDirection="column"
             alignItems="center"
             className={classes.root}
-            id={'mark-series'}
+            id={'radial-series'}
             mx={15}
         >
             <Box>
