@@ -1,6 +1,5 @@
 export interface IRadialSeriesOptions {
-    xValue: string;
-    yValue: string;
+    column: string;
     height: number;
     width: number;
     colour: string;

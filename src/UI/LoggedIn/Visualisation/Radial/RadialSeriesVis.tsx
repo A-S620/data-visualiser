@@ -31,9 +31,9 @@ function RadialSeriesVis(props: any) {
         >
             <Box>
                 <RadialChart
-                    height={props.currentRadialVisual.height}
-                    width={props.currentRadialVisual.width}
-                    data={props.currentRadialVisual.data}
+                    height={props.currentRadialVisual.height ? props.currentRadialVisual.height : 0}
+                    width={props.currentRadialVisual.width ? props.currentRadialVisual.width : 0}
+                    data={props.currentRadialVisual.data ? props.currentRadialVisual.data : []}
                 />
             </Box>
         </Box>

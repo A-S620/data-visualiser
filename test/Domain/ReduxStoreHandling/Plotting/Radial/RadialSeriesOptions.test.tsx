@@ -14,8 +14,7 @@ describe('RadialSeriesOptions domain component', () => {
             colour: '',
             height: 0,
             width: 0,
-            xValue: '',
-            yValue: '',
+            column: 'test',
         };
         const currentVisHandling = new RadialSeriesOptions();
         currentVisHandling.create(currentVisual);

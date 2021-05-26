@@ -27,13 +27,13 @@ const useStyles = makeStyles((theme) => ({
 function RadialOptions(props: any) {
     const classes = useStyles();
     const [options, setOptions] = React.useState<{
-        xValue: string;
+        column: string;
         yValue: string;
         height: number;
         width: number;
         colour: string;
     }>({
-        xValue: '',
+        column: '',
         yValue: '',
         height: 800,
         width: 800,
@@ -49,15 +49,14 @@ function RadialOptions(props: any) {
         errors: new NotificationsHandler(),
     });
     function submitIsEnabled(): boolean {
-        return !(options.xValue.length !== 0 && options.yValue.length !== 0 && xValAndYValIsEqual());
+        return !(options.column.length !== 0 && xValAndYValIsEqual());
     }
     function xValAndYValIsEqual(): boolean {
-        return options.xValue !== options.yValue;
+        return options.column !== options.yValue;
     }
     function validateDataOptions() {
         const optionsToValidate: IRadialSeriesOptions = {
-            xValue: options.xValue,
-            yValue: options.yValue,
+            column: options.column,
             height: options.height,
             width: options.width,
             colour: options.colour,
@@ -92,7 +91,7 @@ function RadialOptions(props: any) {
             flexDirection="column"
             alignItems="center"
             className={classes.root}
-            id={'mark-plotting-options'}
+            id={'radial-plotting-options'}
             mx={15}
         >
             <Box style={{ height: '50%', width: '50%' }} id={'alert-area'}>
@@ -113,20 +112,20 @@ function RadialOptions(props: any) {
                     flexDirection="column"
                     alignItems="center"
                     className={classes.root}
-                    id={'mark-plotting-options'}
+                    id={'radial-plotting-options'}
                     px={20}
                     py={20}
                 >
-                    <Typography id={'mark-plotting-title'}>Mark Series Options</Typography>
+                    <Typography id={'radial-plotting-title'}>Radial Series Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
-                            <InputLabel className={classes.textColor}>X Value</InputLabel>
+                            <InputLabel className={classes.textColor}>Column</InputLabel>
                             <Select
-                                id={'select-xValue'}
+                                id={'select-column'}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
-                                        xValue: event.target.value as string,
+                                        column: event.target.value as string,
                                     });
                                 }}
                                 name="X Values"
@@ -145,33 +144,6 @@ function RadialOptions(props: any) {
                                 ))}
                             </Select>
                             <FormHelperText className={classes.helperTextColor}>Data on X-Axis</FormHelperText>
-                        </FormControl>
-                        <Box mx={5} />
-                        <FormControl required style={{ minWidth: 200 }} id={'y-values-select'}>
-                            <InputLabel className={classes.textColor}>Y Value</InputLabel>
-                            <Select
-                                renderValue={(value) => {
-                                    if (!xValAndYValIsEqual()) {
-                                        return `⚠️  - ${value}`;
-                                    }
-                                    return `${value}`;
-                                }}
-                                onChange={(event) => {
-                                    setOptions({
-                                        ...options,
-                                        yValue: event.target.value as string,
-                                    });
-                                }}
-                                name="Y Values"
-                            >
-                                {props.intervalFields.map((integerField: string) => (
-                                    <option
-                                        value={integerField}
-                                        id={integerField + '-option'}
-                                    >{`${integerField}`}</option>
-                                ))}
-                            </Select>
-                            <FormHelperText className={classes.helperTextColor}>Data on Y-Axis</FormHelperText>
                         </FormControl>
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'size-textfields'}>
@@ -217,7 +189,7 @@ function RadialOptions(props: any) {
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
                         <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
-                            <InputLabel className={classes.textColor}>Mark Fill Colour</InputLabel>
+                            <InputLabel className={classes.textColor}>Colour</InputLabel>
                             <Select
                                 value={options.colour}
                                 onChange={(event) => {

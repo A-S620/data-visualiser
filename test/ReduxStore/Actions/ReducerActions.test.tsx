@@ -490,8 +490,7 @@ describe('Reducer actions', () => {
                 colour: '',
                 height: 0,
                 width: 0,
-                xValue: '',
-                yValue: '',
+                column: '',
             };
             const expectedAction = {
                 type: actionTypes.RADIAL_OPTIONS_ADDED,

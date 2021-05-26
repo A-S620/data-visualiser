@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Visualisations/Radial/IRadialSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/Visualisations/Radial/IRadialSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/Radial/RadialSeriesVisHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/Radial/RadialSeriesVisHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/DataHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/DataHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/ReduxStore/Actions/ReducerActions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,13 +152,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -493,14 +506,8 @@
       <workItem from="1621403659520" duration="2653000" />
       <workItem from="1621623944711" duration="4406000" />
       <workItem from="1621884649245" duration="2523000" />
-      <workItem from="1621970927060" duration="2439000" />
-    </task>
-    <task id="LOCAL-00286" summary="Updated ReduxReducer and unit tests with &#10;currentHeatmapVisualisation">
-      <created>1615710257827</created>
-      <option name="number" value="00286" />
-      <option name="presentableId" value="LOCAL-00286" />
-      <option name="project" value="LOCAL" />
-      <updated>1615710257827</updated>
+      <workItem from="1621970927060" duration="2909000" />
+      <workItem from="1622055488406" duration="3804000" />
     </task>
     <task id="LOCAL-00287" summary="Created Redux store handling components:&#10;CreateCurrentHeatmapVisual&#10;GetCurrentHeatmapVisual&#10;ResetCurrentHeatmapVisual&#10;&#10;TODO: Unit Tests">
       <created>1615710561915</created>
@@ -838,7 +845,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621972975224</updated>
     </task>
-    <option name="localTasksCounter" value="335" />
+    <task id="LOCAL-00335" summary="Radial series unit tests for RadialSeriesOptionsHandler">
+      <created>1621973505124</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1621973505124</updated>
+    </task>
+    <option name="localTasksCounter" value="336" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -846,7 +860,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis" />
     <MESSAGE value="Refactored CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis into CurrentPolygonVis&#10;single component + unit tests" />
     <MESSAGE value="Refactored CreateCurrentMarkVis, GetCurrentMarkVis&#10;and ResetCurrentMarkVis into CurrentMarkVis&#10;single component + unit tests" />
     <MESSAGE value="Refactored CreateCurrentLineVis, GetCurrentLineVis&#10;and ResetCurrentLineVis into CurrentLineVis&#10;single component + unit tests" />
@@ -871,7 +884,8 @@
     <MESSAGE value="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions" />
     <MESSAGE value="Radial series unit tests for&#10;RadialSeriesOptionsValidate" />
     <MESSAGE value="Radial series unit tests for RadialSeriesVis" />
-    <option name="LAST_COMMIT_MESSAGE" value="Radial series unit tests for RadialSeriesVis" />
+    <MESSAGE value="Radial series unit tests for RadialSeriesOptionsHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Radial series unit tests for RadialSeriesOptionsHandler" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

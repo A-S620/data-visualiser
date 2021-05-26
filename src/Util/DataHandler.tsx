@@ -37,6 +37,14 @@ export class DataHandler {
         }
         return {};
     }
+    public createAngleObjectFromColumn(column: string, dataObjects: Array<object>): Array<object> {
+        const angleObjectsArray: Array<object> = [];
+        dataObjects.forEach((value, key) => {
+            // @ts-ignore
+            angleObjectsArray.push({ angle: value[column] });
+        });
+        return angleObjectsArray;
+    }
     public getAnalysedData(): IAnalysedFileData {
         const getAnalysedData = new GetAnalysedData();
         return getAnalysedData.getAnalysedData();

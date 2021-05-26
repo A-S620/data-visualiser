@@ -7,6 +7,10 @@ export class RadialSeriesVisHandler {
         const currentVisual = new CurrentRadialVisual();
         currentVisual.create(createVis);
     }
+    public createDefaultVisual() {
+        const createVis = new RadialSeriesCreateVis().createDefaultOptions();
+        new CurrentRadialVisual().create(createVis);
+    }
     public reset() {
         new CurrentRadialVisual().reset();
     }

@@ -11,8 +11,7 @@ describe('Radial Series Handler UIHandling Component', () => {
             colour: '',
             height: 500,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const seriesHandler = new RadialSeriesOptionsHandler(testOptions);
         const notifications = seriesHandler.validateOptions();
@@ -23,8 +22,7 @@ describe('Radial Series Handler UIHandling Component', () => {
             colour: '',
             height: 0,
             width: 500,
-            xValue: 'test',
-            yValue: 'tes',
+            column: 'test',
         };
         const seriesHandler = new RadialSeriesOptionsHandler(testOptions);
         const notifications = seriesHandler.validateOptions();
@@ -37,8 +35,7 @@ describe('Radial Series Handler UIHandling Component', () => {
             colour: '',
             height: 500,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const seriesHandler = new RadialSeriesOptionsHandler(testOptions);
         seriesHandler.validateOptions();
@@ -50,8 +47,7 @@ describe('Radial Series Handler UIHandling Component', () => {
             colour: '',
             height: 500,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const seriesHandler = new RadialSeriesOptionsHandler(testOptions);
         seriesHandler.validateOptions();
@@ -69,8 +65,7 @@ describe('Radial Series Handler UIHandling Component', () => {
             colour: '',
             height: 500,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const seriesHandler = new RadialSeriesOptionsHandler(testOptions);
         seriesHandler.validateOptions();
@@ -81,8 +76,7 @@ describe('Radial Series Handler UIHandling Component', () => {
             colour: '',
             height: 500,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const seriesHandler = new RadialSeriesOptionsHandler(testOptions);
         seriesHandler.validateOptions();

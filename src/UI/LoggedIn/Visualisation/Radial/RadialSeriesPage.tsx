@@ -19,7 +19,7 @@ export default function RadialSeriesPage() {
             flexDirection="row"
             alignItems="center"
             className={classes.root}
-            id={'mark-plotting-page'}
+            id={'radial-plotting-page'}
         >
             <Box mx={10}>
                 <RadialSeriesVis />

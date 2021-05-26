@@ -9,8 +9,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             colour: '',
             height: 801,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const optionsValidate = new RadialSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -23,8 +22,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             colour: '',
             height: 50,
             width: 500,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const optionsValidate = new RadialSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -37,8 +35,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             colour: '',
             height: 500,
             width: 801,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const optionsValidate = new RadialSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
@@ -51,8 +48,7 @@ describe('MarkSeriesOptionsValidate domain component', () => {
             colour: '',
             height: 500,
             width: 50,
-            xValue: 'test',
-            yValue: 'test',
+            column: 'test',
         };
         const optionsValidate = new RadialSeriesOptionsValidate(options);
         const notifications = optionsValidate.validate();
