@@ -1,4 +1,4 @@
-import { IAnalysedFileData } from '../Interfaces/Analyse/IAnalysedFileData';
+import { FieldTypes, IAnalysedFileData } from '../Interfaces/Analyse/IAnalysedFileData';
 import GetAnalysedData from '../Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 export class DataHandler {
@@ -14,7 +14,12 @@ export class DataHandler {
         });
         return dataMap;
     }
-
+    public checkDataType(field: string, fields: Array<Object>): FieldTypes {
+        // @ts-ignore
+        const index = fields.findIndex((object) => Object.values(object)[0] === field);
+        const fieldObject = Object.values(fields[index]);
+        return fieldObject[1];
+    }
     public createArrayFromDataMap(xValue: string, yValue: string, dataMap: Map<any, any>) {
         const data: Array<object> = [];
         dataMap.forEach((value, key) => {
