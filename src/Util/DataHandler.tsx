@@ -42,17 +42,25 @@ export class DataHandler {
         }
         return {};
     }
-    public createAngleObjectFromColumn(column: string, dataObjects: Array<object>): Array<object> {
+    public createAngleObjectFromColumnPercent(column: string, analysedDataObjects: Array<object>): Array<object> {
         const angleObjectsArray: Array<object> = [];
-        dataObjects.forEach((value, key) => {
-            // @ts-ignore
-            angleObjectsArray.push({ angle: value[column] });
+        analysedDataObjects.forEach((dataObject, key) => {
+            for (const [key, value] of Object.entries(dataObject)) {
+                if (key === column) {
+                    value.forEach((valueObject: object) => {
+                        angleObjectsArray.push({
+                            angle: Object.values(valueObject)[2],
+                            label: Object.values(valueObject)[0],
+                        });
+                    });
+                }
+            }
         });
         return angleObjectsArray;
     }
     public getAnalysedData(): IAnalysedFileData {
         const getAnalysedData = new GetAnalysedData();
-        return getAnalysedData.getAnalysedData();
+        return getAnalysedData.get();
     }
     public createNonIntegerDataObject(valueObject: object, yValue: string): object {
         let x: string = '';
