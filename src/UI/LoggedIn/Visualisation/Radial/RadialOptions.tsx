@@ -28,16 +28,12 @@ function RadialOptions(props: any) {
     const classes = useStyles();
     const [options, setOptions] = React.useState<{
         column: string;
-        yValue: string;
         height: number;
         width: number;
-        colour: string;
     }>({
         column: '',
-        yValue: '',
         height: 800,
         width: 800,
-        colour: '',
     });
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
@@ -48,18 +44,15 @@ function RadialOptions(props: any) {
         outcomeMessage: '',
         errors: new NotificationsHandler(),
     });
+    const allValues = [...props.nominalFields, ...props.ordinalFields, ...props.binaryFields];
     function submitIsEnabled(): boolean {
-        return !(options.column.length !== 0 && xValAndYValIsEqual());
-    }
-    function xValAndYValIsEqual(): boolean {
-        return options.column !== options.yValue;
+        return !(options.column.length !== 0);
     }
     function validateDataOptions() {
         const optionsToValidate: IRadialSeriesOptions = {
             column: options.column,
             height: options.height,
             width: options.width,
-            colour: options.colour,
         };
         const validateOptions = new RadialSeriesOptionsHandler(optionsToValidate);
         const errors: NotificationsHandler = validateOptions.validateOptions();
@@ -129,21 +122,15 @@ function RadialOptions(props: any) {
                                     });
                                 }}
                                 name="X Values"
-                                renderValue={(value) => {
-                                    if (!xValAndYValIsEqual()) {
-                                        return `⚠️  - ${value}`;
-                                    }
-                                    return `${value}`;
-                                }}
                             >
-                                {props.intervalFields.map((integerField: string) => (
+                                {allValues.map((integerField: string) => (
                                     <option
                                         value={integerField}
                                         id={integerField + '-option'}
                                     >{`${integerField}`}</option>
                                 ))}
                             </Select>
-                            <FormHelperText className={classes.helperTextColor}>Data on X-Axis</FormHelperText>
+                            <FormHelperText className={classes.helperTextColor}>Slice Categories</FormHelperText>
                         </FormControl>
                     </Box>
                     <Box display="flex" flexDirection="row" justifyContent="center" id={'size-textfields'}>
@@ -187,32 +174,7 @@ function RadialOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
-                        <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
-                            <InputLabel className={classes.textColor}>Colour</InputLabel>
-                            <Select
-                                value={options.colour}
-                                onChange={(event) => {
-                                    setOptions({
-                                        ...options,
-                                        colour: event.target.value as string,
-                                    });
-                                }}
-                                name="colour"
-                            >
-                                <option value={'red'}>red</option>
-                                <option value={'green'}>green</option>
-                                <option value={'blue'}>blue</option>
-                                <option value={'purple'}>purple</option>
-                                <option value={'orange'}>orange</option>
-                                <option value={'black'}>black</option>
-                                <option value={'yellow'}>yellow</option>
-                                <option value={'brown'}>brown</option>
-                                <option value={'pink'}>pink</option>
-                                <option value={'turquoise'}>turquoise</option>
-                            </Select>
-                        </FormControl>
-                    </Box>
+
                     <Box id={'submit-button'} my={15}>
                         <Button
                             variant="outlined"
@@ -230,6 +192,8 @@ function RadialOptions(props: any) {
     );
 }
 const mapStateToProps = (state: any) => ({
-    intervalFields: state.analysedData.intervalFields,
+    nominalFields: state.analysedData.nominalFields,
+    ordinalFields: state.analysedData.ordinalFields,
+    binaryFields: state.analysedData.binaryFields,
 });
 export default connect(mapStateToProps, {})(RadialOptions);

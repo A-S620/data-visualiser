@@ -9,7 +9,6 @@ import RadialSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Radial
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IRadialSeriesVis = {
-        colour: 'red',
         data: [
             { x: 79, y: 5 },
             { x: 76, y: 23 },

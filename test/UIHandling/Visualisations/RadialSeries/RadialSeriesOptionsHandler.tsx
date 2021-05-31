@@ -8,7 +8,6 @@ import CurrentRadialVisual from '../../../../src/Domain/ReduxStoreHandling/Plott
 describe('Radial Series Handler UIHandling Component', () => {
     it('Should not give an error if all options are valid', () => {
         const testOptions: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 500,
             column: 'test',
@@ -19,7 +18,6 @@ describe('Radial Series Handler UIHandling Component', () => {
     });
     it('Should give an error if one of the options are invalid', () => {
         const testOptions: IRadialSeriesOptions = {
-            colour: '',
             height: 0,
             width: 500,
             column: 'test',
@@ -32,7 +30,6 @@ describe('Radial Series Handler UIHandling Component', () => {
     });
     it('Should save valid options in the Redux store', () => {
         const testOptions: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 500,
             column: 'test',
@@ -44,7 +41,6 @@ describe('Radial Series Handler UIHandling Component', () => {
     });
     it('Should create the current visualisation in the Redux store if the options are valid', () => {
         const testOptions: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 500,
             column: 'test',
@@ -62,7 +58,6 @@ describe('Radial Series Handler UIHandling Component', () => {
     });
     it('Should get the options from the Redux store', () => {
         const testOptions: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 500,
             column: 'test',
@@ -73,7 +68,6 @@ describe('Radial Series Handler UIHandling Component', () => {
     });
     it('Should reset the options from the Redux store', () => {
         const testOptions: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 500,
             column: 'test',

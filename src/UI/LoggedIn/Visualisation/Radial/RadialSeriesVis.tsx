@@ -34,6 +34,11 @@ function RadialSeriesVis(props: any) {
                     height={props.currentRadialVisual.height ? props.currentRadialVisual.height : 0}
                     width={props.currentRadialVisual.width ? props.currentRadialVisual.width : 0}
                     data={props.currentRadialVisual.data ? props.currentRadialVisual.data : []}
+                    labelsRadiusMultiplier={1.1}
+                    labelsStyle={{
+                        fontSize: 24,
+                    }}
+                    showLabels
                 />
             </Box>
         </Box>

@@ -11,7 +11,6 @@ beforeEach(() => {
 describe('RadialSeriesOptions domain component', () => {
     it('Should do the correct methods to the redux store', () => {
         const currentVisual: IRadialSeriesOptions = {
-            colour: '',
             height: 0,
             width: 0,
             column: 'test',

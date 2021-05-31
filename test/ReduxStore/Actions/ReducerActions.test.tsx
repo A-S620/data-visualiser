@@ -487,7 +487,6 @@ describe('Reducer actions', () => {
     describe('Radial Series Options actions', () => {
         it('Should create an action to add the radial options', () => {
             const options: IRadialSeriesOptions = {
-                colour: '',
                 height: 0,
                 width: 0,
                 column: '',
@@ -508,7 +507,6 @@ describe('Reducer actions', () => {
             it('Should create an action to add the current radial Visualisation', () => {
                 const currentVisual: IRadialSeriesVis = {
                     data: [],
-                    colour: '',
                     height: 0,
                     width: 0,
                 };

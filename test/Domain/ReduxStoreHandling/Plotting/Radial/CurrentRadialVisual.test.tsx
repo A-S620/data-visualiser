@@ -9,7 +9,6 @@ beforeEach(() => {
 describe('CurrentRadialVisual domain component', () => {
     it('Should do the correct methods to the redux store', () => {
         const currentVisual: IRadialSeriesVis = {
-            colour: '',
             data: [
                 { x: 79, y: 5 },
                 { x: 76, y: 23 },

@@ -6,7 +6,6 @@ import { RadialSeriesOptionsValidate } from '../../../../src/Domain/Visualisatio
 describe('MarkSeriesOptionsValidate domain component', () => {
     it('Should return a notification when the height is bigger than the maximum value', () => {
         const options: IRadialSeriesOptions = {
-            colour: '',
             height: 801,
             width: 500,
             column: 'test',
@@ -19,7 +18,6 @@ describe('MarkSeriesOptionsValidate domain component', () => {
     });
     it('Should return a notification when the height is smaller than the minimum value', () => {
         const options: IRadialSeriesOptions = {
-            colour: '',
             height: 50,
             width: 500,
             column: 'test',
@@ -32,7 +30,6 @@ describe('MarkSeriesOptionsValidate domain component', () => {
     });
     it('Should return a notification when the width is bigger than the maximum value', () => {
         const options: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 801,
             column: 'test',
@@ -45,7 +42,6 @@ describe('MarkSeriesOptionsValidate domain component', () => {
     });
     it('Should return a notification when the width is smaller than the minimum value', () => {
         const options: IRadialSeriesOptions = {
-            colour: '',
             height: 500,
             width: 50,
             column: 'test',
