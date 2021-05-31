@@ -44,7 +44,7 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().fields).toEqual([
+        expect(getStoreHandler.get().fields).toEqual([
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
             { field: 'col3', fieldType: FieldTypes.NOMINAL },
@@ -57,13 +57,13 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().intervalFields).toEqual(['col1', 'col2']);
+        expect(getStoreHandler.get().intervalFields).toEqual(['col1', 'col2']);
     });
     it('Should add interval data as Objects to the intervalDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIntervalDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().intervalDataObjects).toEqual([
+        expect(getStoreHandler.get().intervalDataObjects).toEqual([
             { col1: 32, col2: 45 },
             { col1: 79, col2: 5 },
             { col1: 76, col2: 23 },
@@ -73,13 +73,13 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().nominalFields).toEqual(['col3']);
+        expect(getStoreHandler.get().nominalFields).toEqual(['col3']);
     });
     it('Should add nominal data Objects to the nominalDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createNominalDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().nominalDataObjects).toEqual([
+        expect(getStoreHandler.get().nominalDataObjects).toEqual([
             { col3: 'female' },
             { col3: 'male' },
             { col3: 'female' },
@@ -89,41 +89,37 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createOrdinalFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ordinalFields).toEqual(['col4']);
+        expect(getStoreHandler.get().ordinalFields).toEqual(['col4']);
     });
     it('Should add ordinal data Objects to the ordinalDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createOrdinalDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ordinalDataObjects).toEqual([
-            { name: '15-20', count: 5, percentage: 20 },
-        ]);
+        expect(getStoreHandler.get().ordinalDataObjects).toEqual([{ name: '15-20', count: 5, percentage: 20 }]);
     });
     it('Should add binary fields to the binaryFields attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createBinaryFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().binaryFields).toEqual(['col5']);
+        expect(getStoreHandler.get().binaryFields).toEqual(['col5']);
     });
     it('Should add binary data Objects to the binaryDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createBinaryDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().binaryDataObjects).toEqual([
-            { name: 'true', count: 5, percentage: 20 },
-        ]);
+        expect(getStoreHandler.get().binaryDataObjects).toEqual([{ name: 'true', count: 5, percentage: 20 }]);
     });
     it('Should add ignore fields to the ignoreFields attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIgnoreFields();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ignoreFields).toEqual(['col6']);
+        expect(getStoreHandler.get().ignoreFields).toEqual(['col6']);
     });
     it('Should add ignore data Objects to the ignoreDataObjects attribute in the analysedData slice', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createIgnoreDataObjects();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ignoreDataObjects).toEqual([
+        expect(getStoreHandler.get().ignoreDataObjects).toEqual([
             { col6: 'female' },
             { col6: 'male' },
             { col6: 'female' },
@@ -133,7 +129,7 @@ describe('CreateAnalysedData domain component', () => {
         const createStoreHandler = new CreateAnalysedData(analysedFileData);
         createStoreHandler.createAll();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData()).toEqual({
+        expect(getStoreHandler.get()).toEqual({
             fields: [
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
                 { field: 'col2', fieldType: FieldTypes.INTERVAL },

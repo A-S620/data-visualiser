@@ -42,68 +42,68 @@ describe('ResetImportedData domain component', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().fields).toStrictEqual([]);
+        expect(getStoreHandler.get().fields).toStrictEqual([]);
     });
     it('Should reset the intervalFields attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().intervalFields).toStrictEqual([]);
+        expect(getStoreHandler.get().intervalFields).toStrictEqual([]);
     });
 
     it('Should reset the intervalDataAsObjects attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().intervalDataObjects).toStrictEqual([]);
+        expect(getStoreHandler.get().intervalDataObjects).toStrictEqual([]);
     });
     it('Should reset the nominalFields attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().nominalFields).toStrictEqual([]);
+        expect(getStoreHandler.get().nominalFields).toStrictEqual([]);
     });
 
     it('Should reset the nominalDataObjects attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().nominalDataObjects).toStrictEqual([]);
+        expect(getStoreHandler.get().nominalDataObjects).toStrictEqual([]);
     });
     it('Should reset the ordinalFields attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ordinalFields).toStrictEqual([]);
+        expect(getStoreHandler.get().ordinalFields).toStrictEqual([]);
     });
     it('Should reset the ordinalDataObjects attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ordinalDataObjects).toStrictEqual([]);
+        expect(getStoreHandler.get().ordinalDataObjects).toStrictEqual([]);
     });
     it('Should reset the binaryFields attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().binaryFields).toStrictEqual([]);
+        expect(getStoreHandler.get().binaryFields).toStrictEqual([]);
     });
     it('Should reset the binaryDataObjects attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().binaryDataObjects).toStrictEqual([]);
+        expect(getStoreHandler.get().binaryDataObjects).toStrictEqual([]);
     });
     it('Should reset the ignoreFields attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ignoreFields).toStrictEqual([]);
+        expect(getStoreHandler.get().ignoreFields).toStrictEqual([]);
     });
     it('Should reset the ignoreDataObjects attribute in the analysedData slice', () => {
         const resetStoreHandler = new ResetAnalysedData();
         resetStoreHandler.resetAnalysedData();
         const getStoreHandler = new GetAnalysedData();
-        expect(getStoreHandler.getAnalysedData().ignoreDataObjects).toStrictEqual([]);
+        expect(getStoreHandler.get().ignoreDataObjects).toStrictEqual([]);
     });
 });

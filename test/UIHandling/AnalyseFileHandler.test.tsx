@@ -52,7 +52,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         const analyseFile = new AnalyseFileHandler();
         analyseFile.validateAnalysedData(fields);
         const getAnalysedData = new GetAnalysedData();
-        expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual(['col1', 'col2']);
+        expect(getAnalysedData.get().intervalFields).toStrictEqual(['col1', 'col2']);
     });
     it('should reset analysed data slice', async () => {
         const importedFile: IImportedFile = {
@@ -64,7 +64,7 @@ describe('AnalyseFileHandler UI handling component', () => {
         const analyseFile = new AnalyseFileHandler();
         analyseFile.resetAnalysedData();
         const getAnalysedData = new GetAnalysedData();
-        expect(getAnalysedData.getAnalysedData().intervalFields).toStrictEqual([]);
+        expect(getAnalysedData.get().intervalFields).toStrictEqual([]);
     });
     it('should not return a notification when all object sizes are not equal', () => {
         const importedFile: IImportedFile = {

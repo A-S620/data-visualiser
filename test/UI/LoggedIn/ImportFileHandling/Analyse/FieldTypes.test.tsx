@@ -71,7 +71,7 @@ describe('Field Types UI Component', () => {
             expect(button.props().disabled).toBe(false);
             await clickAnalyseFile();
             const getAnalysedData = new GetAnalysedData();
-            expect(getAnalysedData.getAnalysedData().fields).toStrictEqual([
+            expect(getAnalysedData.get().fields).toStrictEqual([
                 { field: 'col1', fieldType: 'interval' },
                 { field: 'col2', fieldType: 'interval' },
                 { field: 'col3', fieldType: 'ignore' },

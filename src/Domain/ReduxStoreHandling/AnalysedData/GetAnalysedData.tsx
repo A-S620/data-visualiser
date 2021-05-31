@@ -35,7 +35,7 @@ export default class GetAnalysedData {
     private static getIgnoreDataObjects(): Array<object> {
         return store.getState().analysedData.ignoreDataObjects;
     }
-    public getAnalysedData(): IAnalysedFileData {
+    public get(): IAnalysedFileData {
         return {
             fields: GetAnalysedData.getFields(),
             intervalFields: GetAnalysedData.getIntegerFields(),

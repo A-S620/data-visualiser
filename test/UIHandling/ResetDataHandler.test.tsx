@@ -21,7 +21,7 @@ beforeAll(() => {
 describe('ResetDataHandler UI Handling component', () => {
     it('Should reset the whole applications state', () => {
         new ResetDataHandler().resetData();
-        expect(new GetAnalysedData().getAnalysedData()).toEqual({
+        expect(new GetAnalysedData().get()).toEqual({
             fields: [],
             intervalFields: [],
             intervalDataObjects: [],

@@ -36,7 +36,7 @@ describe('AnalyseFileData domain component', () => {
             { field: 'col4', fieldType: FieldTypes.BINARY },
         ]);
         analyseFileData.validateAnalysedData();
-        const getAnalysedData = new GetAnalysedData().getAnalysedData();
+        const getAnalysedData = new GetAnalysedData().get();
         expect(getAnalysedData.fields).toEqual([
             { field: 'col1', fieldType: FieldTypes.INTERVAL },
             { field: 'col2', fieldType: FieldTypes.INTERVAL },
@@ -53,7 +53,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.intervalFields).toEqual(['col1', 'col2']);
         });
         it('Should create the intervalDataObjects in the analysedData slice', () => {
@@ -64,7 +64,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.intervalDataObjects).toEqual([
                 { col1: 1, col2: 3 },
                 { col1: 2, col2: 5 },
@@ -80,7 +80,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.nominalFields).toEqual(['col3']);
         });
         it('Should create the nominalDataObjects in the analysedData slice', () => {
@@ -91,7 +91,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.nominalDataObjects).toEqual([
                 {
                     col3: [
@@ -112,7 +112,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.binaryFields).toEqual(['col4']);
         });
         it('Should create the binaryDataObjects in the analysedData slice', () => {
@@ -123,7 +123,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.binaryDataObjects).toEqual([
                 {
                     col4: [
@@ -143,7 +143,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.ignoreFields).toEqual(['col1', 'col2']);
         });
         it('Should create the ignoreDataObjects in the analysedData slice', () => {
@@ -154,7 +154,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.ignoreDataObjects).toEqual([
                 { col1: '1', col2: '3' },
                 { col1: '2', col2: '5' },
@@ -171,7 +171,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.ordinalFields).toEqual(['col3']);
         });
         it('Should create the ordinalDataObjects in the analysedData slice', () => {
@@ -182,7 +182,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.BINARY },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.ordinalDataObjects).toEqual([
                 {
                     col3: [
@@ -203,7 +203,7 @@ describe('AnalyseFileData domain component', () => {
                 { field: 'col4', fieldType: FieldTypes.IGNORE },
             ]);
             analyseFileData.validateAnalysedData();
-            const getAnalysedData = new GetAnalysedData().getAnalysedData();
+            const getAnalysedData = new GetAnalysedData().get();
             expect(getAnalysedData.fields).toEqual([
                 { field: 'col1', fieldType: FieldTypes.IGNORE },
                 { field: 'col2', fieldType: FieldTypes.IGNORE },

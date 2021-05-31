@@ -18,7 +18,7 @@ export class AnalyseFileHandler {
         }
     }
     public getAnalysedDataFields(): Array<object> {
-        return new GetAnalysedData().getAnalysedData().fields;
+        return new GetAnalysedData().get().fields;
     }
     public resetAnalysedData() {
         const resetAnalysedData = new ResetAnalysedData();
