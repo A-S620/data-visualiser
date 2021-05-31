@@ -15,9 +15,6 @@ export class LineSeriesCreateVis {
             lineSeriesOptions.yValue,
             this.dataHandler.getAnalysedData().intervalDataObjects
         );
-        console.log(
-            this.dataHandler.createArrayFromDataMap(lineSeriesOptions.xValue, lineSeriesOptions.yValue, dataMap)
-        );
         return {
             data: this.dataHandler.createArrayFromDataMap(lineSeriesOptions.xValue, lineSeriesOptions.yValue, dataMap),
             height: lineSeriesOptions.height,

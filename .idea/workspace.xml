@@ -5,7 +5,9 @@
       <change afterPath="$PROJECT_DIR$/test/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesCreateVis.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -499,14 +501,7 @@
       <workItem from="1622055488406" duration="3968000" />
       <workItem from="1622141172307" duration="2511000" />
       <workItem from="1622227473913" duration="2694000" />
-      <workItem from="1622473442447" duration="3958000" />
-    </task>
-    <task id="LOCAL-00293" summary="Created HeatmapOptions, HeatmapPage.&#10;Todo: HeatmapVis and unit tests">
-      <created>1615924310047</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1615924310047</updated>
+      <workItem from="1622473442447" duration="4324000" />
     </task>
     <task id="LOCAL-00294" summary="Updated HeatmapOptions, HeatmapPage.&#10;Created HeatmapVis&#10;TODO: Unit test">
       <created>1615970911514</created>
@@ -844,7 +839,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622475515712</updated>
     </task>
-    <option name="localTasksCounter" value="342" />
+    <task id="LOCAL-00342" summary="Refactored RadialSeriesCreateVis and created unit tests">
+      <created>1622477996079</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1622477996079</updated>
+    </task>
+    <option name="localTasksCounter" value="343" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -852,7 +854,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored CreateCurrentHeatmapVisual,&#10;GetCurrentHeatmapVisual&#10;and ResetCurrentHeatmapVisual into&#10;CurrentHeatmapVisual single component + unit tests&#10;Refactored interfaces" />
     <MESSAGE value="Refactored CreateCurrentBarVisual,&#10;GetCurrentBarVisual&#10;and ResetCurrentBarVisual into&#10;CurrentBarVisual single component + unit tests" />
     <MESSAGE value="Refactored CreateBarSeriesOptions,&#10;GetBarSeriesOptions&#10;and ResetBarSeriesOptions into&#10;BarSeriesOptions single component + unit tests" />
     <MESSAGE value="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests" />
@@ -877,7 +878,8 @@
     <MESSAGE value="Added createAngleObjectFromColumnPercent to DataHandler" />
     <MESSAGE value="Refactored IRadialSeriesOptions and IRadialSeriesVis" />
     <MESSAGE value="Refactored RadialSeriesCreateVis to include&#10;getDataObjectsForField" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored RadialSeriesCreateVis to include&#10;getDataObjectsForField" />
+    <MESSAGE value="Refactored RadialSeriesCreateVis and created unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored RadialSeriesCreateVis and created unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

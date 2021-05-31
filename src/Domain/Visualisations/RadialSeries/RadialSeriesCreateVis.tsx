@@ -2,6 +2,7 @@ import { DataHandler } from '../../../Util/DataHandler';
 import { IRadialSeriesVis } from '../../../Interfaces/Visualisations/Radial/IRadialSeriesVis';
 import RadialSeriesOptions from '../../ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions';
 import GetAnalysedData from '../../ReduxStoreHandling/AnalysedData/GetAnalysedData';
+import { FieldTypes } from '../../../Interfaces/Analyse/IAnalysedFileData';
 
 export class RadialSeriesCreateVis {
     private dataHandler = new DataHandler();
@@ -11,15 +12,27 @@ export class RadialSeriesCreateVis {
             return this.createDefaultOptions();
         }
 
+        const fieldType = this.dataHandler.checkDataType(options.column, new GetAnalysedData().get().fields);
         return {
-            data: this.getDataObjectsForField(options.column),
+            data: this.getDataObjectsForField(options.column, fieldType),
             height: options.height,
             width: options.width,
         };
     }
-    private getDataObjectsForField(field: string): Array<object> {
-        const binaryDataObjects = new GetAnalysedData().get().binaryDataObjects;
-        return this.dataHandler.createAngleObjectFromColumnPercent(field, binaryDataObjects);
+    private getDataObjectsForField(field: string, fieldType: FieldTypes): Array<object> {
+        if (fieldType === FieldTypes.BINARY) {
+            const dataObjects = new GetAnalysedData().get().binaryDataObjects;
+            return this.dataHandler.createAngleObjectFromColumnPercent(field, dataObjects);
+        }
+        if (fieldType === FieldTypes.ORDINAL) {
+            const dataObjects = new GetAnalysedData().get().ordinalDataObjects;
+            return this.dataHandler.createAngleObjectFromColumnPercent(field, dataObjects);
+        }
+        if (fieldType === FieldTypes.NOMINAL) {
+            const dataObjects = new GetAnalysedData().get().nominalDataObjects;
+            return this.dataHandler.createAngleObjectFromColumnPercent(field, dataObjects);
+        }
+        return [];
     }
     public createDefaultOptions(): IRadialSeriesVis {
         return {

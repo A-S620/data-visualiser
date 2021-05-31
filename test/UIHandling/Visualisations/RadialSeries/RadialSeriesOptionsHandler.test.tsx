@@ -53,7 +53,6 @@ describe('Radial Series Handler UIHandling Component', () => {
             height: 500,
             width: 500,
             opacity: 1,
-            colour: '',
         });
     });
     it('Should get the options from the Redux store', () => {
