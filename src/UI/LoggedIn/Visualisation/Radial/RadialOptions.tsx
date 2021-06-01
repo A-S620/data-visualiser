@@ -111,7 +111,7 @@ function RadialOptions(props: any) {
                 >
                     <Typography id={'radial-plotting-title'}>Radial Series Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
-                        <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
+                        <FormControl required style={{ minWidth: 200 }} id={'column-value-select'}>
                             <InputLabel className={classes.textColor}>Column</InputLabel>
                             <Select
                                 id={'select-column'}
@@ -121,7 +121,7 @@ function RadialOptions(props: any) {
                                         column: event.target.value as string,
                                     });
                                 }}
-                                name="X Values"
+                                name="Column Select"
                             >
                                 {allValues.map((integerField: string) => (
                                     <option

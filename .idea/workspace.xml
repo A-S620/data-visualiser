@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesVisHandler.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialOptions.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -500,14 +501,7 @@
       <workItem from="1622141172307" duration="2511000" />
       <workItem from="1622227473913" duration="2694000" />
       <workItem from="1622473442447" duration="4511000" />
-      <workItem from="1622576934212" duration="979000" />
-    </task>
-    <task id="LOCAL-00296" summary="FieldTypes.test fixes">
-      <created>1617867524893</created>
-      <option name="number" value="00296" />
-      <option name="presentableId" value="LOCAL-00296" />
-      <option name="project" value="LOCAL" />
-      <updated>1617867524894</updated>
+      <workItem from="1622576934212" duration="1568000" />
     </task>
     <task id="LOCAL-00297" summary="Updated HeatmapCreateVis to Add count to x-y values after a user selects x value and y value in heatmap options, this becomes the colour (intensity) of the element">
       <created>1617914056538</created>
@@ -845,7 +839,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622577358718</updated>
     </task>
-    <option name="localTasksCounter" value="345" />
+    <task id="LOCAL-00345" summary="RadialSeriesVisHandler unit tests">
+      <created>1622577954881</created>
+      <option name="number" value="00345" />
+      <option name="presentableId" value="LOCAL-00345" />
+      <option name="project" value="LOCAL" />
+      <updated>1622577954881</updated>
+    </task>
+    <option name="localTasksCounter" value="346" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -853,7 +854,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests" />
     <MESSAGE value="Created PolygonSeriesOptions redux store handling&#10;component and unit tests" />
     <MESSAGE value="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests" />
     <MESSAGE value="Created PolygonSeriesVisHandler and&#10;PolygonSeriesOptionsHandler UI Handling components and&#10;unit tests" />
@@ -878,7 +878,8 @@
     <MESSAGE value="Refactored RadialSeriesCreateVis and created unit tests" />
     <MESSAGE value="Refactored, TODO: UI Handling and UI components unit &#10;test for Radial Series" />
     <MESSAGE value="RadialSeriesOptionsHandler unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="RadialSeriesOptionsHandler unit tests" />
+    <MESSAGE value="RadialSeriesVisHandler unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="RadialSeriesVisHandler unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
