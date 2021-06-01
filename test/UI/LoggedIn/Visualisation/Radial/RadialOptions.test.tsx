@@ -6,8 +6,6 @@ import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import RadialOptions from '../../../../../src/UI/LoggedIn/Visualisation/Radial/RadialOptions';
-import BarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
-import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import RadialSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions';
 
 let wrapper: ReactWrapper;
