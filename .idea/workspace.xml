@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Refactored IRadialSeriesOptions and IRadialSeriesVis">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesVisHandler.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UIHandling/Visualisations/RadialSeries/RadialSeriesOptionsHandler.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -501,14 +500,7 @@
       <workItem from="1622141172307" duration="2511000" />
       <workItem from="1622227473913" duration="2694000" />
       <workItem from="1622473442447" duration="4511000" />
-      <workItem from="1622576934212" duration="395000" />
-    </task>
-    <task id="LOCAL-00295" summary="Created HeatmapVis and HeatmapOptions and unit tests">
-      <created>1617294370571</created>
-      <option name="number" value="00295" />
-      <option name="presentableId" value="LOCAL-00295" />
-      <option name="project" value="LOCAL" />
-      <updated>1617294370571</updated>
+      <workItem from="1622576934212" duration="979000" />
     </task>
     <task id="LOCAL-00296" summary="FieldTypes.test fixes">
       <created>1617867524893</created>
@@ -846,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622478501065</updated>
     </task>
-    <option name="localTasksCounter" value="344" />
+    <task id="LOCAL-00344" summary="RadialSeriesOptionsHandler unit tests">
+      <created>1622577358718</created>
+      <option name="number" value="00344" />
+      <option name="presentableId" value="LOCAL-00344" />
+      <option name="project" value="LOCAL" />
+      <updated>1622577358718</updated>
+    </task>
+    <option name="localTasksCounter" value="345" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -854,7 +853,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored CreateBarSeriesOptions,&#10;GetBarSeriesOptions&#10;and ResetBarSeriesOptions into&#10;BarSeriesOptions single component + unit tests" />
     <MESSAGE value="Refactored CreateImportedData,&#10;GetImportedData&#10;and ResetImportedData into&#10;ImportedData single component + unit tests" />
     <MESSAGE value="Created PolygonSeriesOptions redux store handling&#10;component and unit tests" />
     <MESSAGE value="Created PolygonSeriesCreateVis and&#10;PolygonSeriesOptionsValidate domain components and &#10;unit tests" />
@@ -879,7 +877,8 @@
     <MESSAGE value="Refactored RadialSeriesCreateVis to include&#10;getDataObjectsForField" />
     <MESSAGE value="Refactored RadialSeriesCreateVis and created unit tests" />
     <MESSAGE value="Refactored, TODO: UI Handling and UI components unit &#10;test for Radial Series" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored, TODO: UI Handling and UI components unit &#10;test for Radial Series" />
+    <MESSAGE value="RadialSeriesOptionsHandler unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="RadialSeriesOptionsHandler unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
