@@ -4,8 +4,7 @@
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -501,14 +500,7 @@
       <workItem from="1622227473913" duration="2694000" />
       <workItem from="1622473442447" duration="4511000" />
       <workItem from="1622576934212" duration="1806000" />
-      <workItem from="1622661266626" duration="562000" />
-    </task>
-    <task id="LOCAL-00299" summary="Refactoring HeatmapCreateVis">
-      <created>1618133355502</created>
-      <option name="number" value="00299" />
-      <option name="presentableId" value="LOCAL-00299" />
-      <option name="project" value="LOCAL" />
-      <updated>1618133355506</updated>
+      <workItem from="1622661266626" duration="3092000" />
     </task>
     <task id="LOCAL-00300" summary="Refactored HeatmapCreateVis">
       <created>1618134490585</created>
@@ -846,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622578578839</updated>
     </task>
-    <option name="localTasksCounter" value="348" />
+    <task id="LOCAL-00348" summary="Removed Hexbin from VisualiseNav and updated unit tests">
+      <created>1622661930864</created>
+      <option name="number" value="00348" />
+      <option name="presentableId" value="LOCAL-00348" />
+      <option name="project" value="LOCAL" />
+      <updated>1622661930864</updated>
+    </task>
+    <option name="localTasksCounter" value="349" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -854,7 +853,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created PolygonSeriesVisHandler and&#10;PolygonSeriesOptionsHandler UI Handling components and&#10;unit tests" />
     <MESSAGE value="Changing PolygonSeries components into AreaSeries" />
     <MESSAGE value="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests" />
     <MESSAGE value="Created AreaOptions and AreaSeriesVis Unit tests" />
@@ -879,7 +877,8 @@
     <MESSAGE value="RadialSeriesVisHandler unit tests" />
     <MESSAGE value="RadialOptions UI component unit tests" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Removed Hexbin from VisualiseNav and updated unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Hexbin from VisualiseNav and updated unit tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

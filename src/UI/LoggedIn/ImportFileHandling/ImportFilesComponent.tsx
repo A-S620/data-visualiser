@@ -16,6 +16,7 @@ import { IImportedFileStats } from '../../../Interfaces/import/IImportedFileStat
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
 import FieldTypes from './Analyse/DataTypes';
 import { ResetDataHandler } from '../../../UIHandling/ResetDataHandler';
+import ImportedData from '../../../Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 interface IState {
     importedFiles: Array<File>;
@@ -138,6 +139,10 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
             },
         });
     }
+    private applicationHasData(): boolean {
+        const importedDataFields = new ImportedData().get().dataFields;
+        return importedDataFields.length === 0;
+    }
     public render() {
         return (
             <main>
@@ -195,7 +200,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                                     color="primary"
                                     style={{ marginRight: 10, borderRadius: '5em' }}
                                     id="reset-application-button"
-                                    disabled={this.state.submitButtonDisabled}
+                                    disabled={this.applicationHasData()}
                                     onClick={() => {
                                         this.resetFiles();
                                     }}
