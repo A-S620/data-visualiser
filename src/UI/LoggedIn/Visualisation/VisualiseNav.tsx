@@ -6,7 +6,6 @@ import { AppBar, Tabs, Tab, Box, Typography } from '@material-ui/core';
 import ShowChartIcon from '@material-ui/icons/ShowChart';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import BlurOnIcon from '@material-ui/icons/BlurOn';
 import GraphicEqIcon from '@material-ui/icons/GraphicEq';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import StreetviewIcon from '@material-ui/icons/Streetview';
@@ -89,15 +88,12 @@ export default function VisualiseNav() {
                 <MarkSeriesPage />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                Hexbin
-            </TabPanel>
-            <TabPanel value={value} index={4}>
                 <AreaSeriesPage />
             </TabPanel>
-            <TabPanel value={value} index={5}>
+            <TabPanel value={value} index={4}>
                 <RadialSeriesPage />
             </TabPanel>
-            <TabPanel value={value} index={6}>
+            <TabPanel value={value} index={5}>
                 <HeatmapPage />
             </TabPanel>
 
@@ -128,30 +124,23 @@ export default function VisualiseNav() {
                         className={classes.tab}
                     />
                     <Tab
-                        label="Hexbin"
-                        icon={<BlurOnIcon />}
-                        {...a11yProps(3)}
-                        id={'hexbin-tab'}
-                        className={classes.tab}
-                    />
-                    <Tab
                         label="Area"
                         icon={<GraphicEqIcon />}
-                        {...a11yProps(4)}
+                        {...a11yProps(3)}
                         id={'area-tab'}
                         className={classes.tab}
                     />
                     <Tab
                         label="Radial"
                         icon={<DonutLargeIcon />}
-                        {...a11yProps(5)}
+                        {...a11yProps(4)}
                         id={'radial-tab'}
                         className={classes.tab}
                     />
                     <Tab
                         label="Heatmap"
                         icon={<StreetviewIcon />}
-                        {...a11yProps(6)}
+                        {...a11yProps(5)}
                         id={'heatmap-tab'}
                         className={classes.tab}
                     />
