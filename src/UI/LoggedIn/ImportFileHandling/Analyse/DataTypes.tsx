@@ -78,13 +78,10 @@ function DataTypes(props: any) {
                 }
             }
             fields.push(fieldToAdd);
-            enableSubmit();
-        }
-    }
-    function enableSubmit() {
-        if (fields.length === props.dataFields.length) {
-            setSubmitIsDisabled(false);
-            return;
+            console.log(fields);
+            if (fields.length === props.dataFields.length) {
+                setSubmitIsDisabled(false);
+            }
         }
     }
     function analyseFile() {
