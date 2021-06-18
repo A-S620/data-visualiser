@@ -213,7 +213,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                                     style={{ marginRight: 10, borderRadius: '5em' }}
                                     id="field-types-button"
                                     color="primary"
-                                    disabled={this.state.submitButtonDisabled}
+                                    disabled={this.applicationHasData()}
                                     onClick={() => {
                                         this.setState({
                                             fieldTypesDialogOpen: true,

@@ -1,7 +1,6 @@
 import { IMarkSeriesVis } from '../../../Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import { DataHandler } from '../../../Util/DataHandler';
 import MarkSeriesOptions from '../../ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
-
 export class MarkSeriesCreateVis {
     private dataHandler = new DataHandler();
     public createVis(): IMarkSeriesVis {
@@ -9,7 +8,6 @@ export class MarkSeriesCreateVis {
         if (Object.keys(options).length === 0) {
             return this.createDefaultOptions();
         }
-
         return {
             data: this.dataHandler.createIntegerDataArray(
                 options.xValue,
