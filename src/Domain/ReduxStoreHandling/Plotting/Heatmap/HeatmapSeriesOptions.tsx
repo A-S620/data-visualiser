@@ -1,15 +1,15 @@
-import { store } from '../../../../ReduxStore/store';
+import { reduxStore } from '../../../../ReduxStore/reduxStore';
 import { addHeatmapOptions, resetHeatmapOptions } from '../../../../ReduxStore/Actions/ReducerActions';
 import { IHeatmapSeriesOptions } from '../../../../Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 
 export default class HeatmapSeriesOptions {
     public create(options: IHeatmapSeriesOptions) {
-        store.dispatch(addHeatmapOptions(options));
+        reduxStore.dispatch(addHeatmapOptions(options));
     }
     public get(): IHeatmapSeriesOptions {
-        return store.getState().heatmapSeriesOptions;
+        return reduxStore.getState().heatmapSeriesOptions;
     }
     public reset() {
-        store.dispatch(resetHeatmapOptions());
+        reduxStore.dispatch(resetHeatmapOptions());
     }
 }

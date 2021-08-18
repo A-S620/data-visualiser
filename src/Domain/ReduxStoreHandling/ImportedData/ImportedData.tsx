@@ -1,4 +1,4 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 import {
     addDataFields,
     addDataAsArrays,
@@ -9,18 +9,18 @@ import { IImportedFileData } from '../../../Interfaces/import/IImportedFileData'
 
 export default class ImportedData {
     public create(importedData: IImportedFileData) {
-        store.dispatch(addDataFields(importedData.dataFields));
-        store.dispatch(addDataAsArrays(importedData.dataArrays));
-        store.dispatch(addDataAsObjects(importedData.dataObjects));
+        reduxStore.dispatch(addDataFields(importedData.dataFields));
+        reduxStore.dispatch(addDataAsArrays(importedData.dataArrays));
+        reduxStore.dispatch(addDataAsObjects(importedData.dataObjects));
     }
     public get(): IImportedFileData {
         return {
-            dataFields: store.getState().importedData.dataFields,
-            dataObjects: store.getState().importedData.dataObjects,
-            dataArrays: store.getState().importedData.dataArrays,
+            dataFields: reduxStore.getState().importedData.dataFields,
+            dataObjects: reduxStore.getState().importedData.dataObjects,
+            dataArrays: reduxStore.getState().importedData.dataArrays,
         };
     }
     public reset() {
-        store.dispatch(resetImportedData());
+        reduxStore.dispatch(resetImportedData());
     }
 }

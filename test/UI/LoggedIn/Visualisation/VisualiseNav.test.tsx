@@ -2,12 +2,12 @@ import { mount } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
-import { store } from '../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 import VisualiseNav from '../../../../src/UI/LoggedIn/Visualisation/VisualiseNav';
 
 describe('Plotting Navigation Component', () => {
     const wrapper = mount(
-        <Provider store={store}>
+        <Provider store={reduxStore}>
             <VisualiseNav />
         </Provider>
     );

@@ -1,4 +1,4 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 import {
     addBinaryDataObjects,
     addBinaryFields,
@@ -21,37 +21,37 @@ export default class CreateAnalysedData {
         this.analysedFileData = analysedFileData;
     }
     public createFields() {
-        store.dispatch(addFields(this.analysedFileData.fields));
+        reduxStore.dispatch(addFields(this.analysedFileData.fields));
     }
     public createIntervalFields() {
-        store.dispatch(addIntervalFields(this.analysedFileData.intervalFields));
+        reduxStore.dispatch(addIntervalFields(this.analysedFileData.intervalFields));
     }
     public createIntervalDataObjects() {
-        store.dispatch(addIntervalDataObjects(this.analysedFileData.intervalDataObjects));
+        reduxStore.dispatch(addIntervalDataObjects(this.analysedFileData.intervalDataObjects));
     }
     public createNominalFields() {
-        store.dispatch(addNominalFields(this.analysedFileData.nominalFields));
+        reduxStore.dispatch(addNominalFields(this.analysedFileData.nominalFields));
     }
     public createNominalDataObjects() {
-        store.dispatch(addNominalDataObjects(this.analysedFileData.nominalDataObjects));
+        reduxStore.dispatch(addNominalDataObjects(this.analysedFileData.nominalDataObjects));
     }
     public createOrdinalFields() {
-        store.dispatch(addOrdinalFields(this.analysedFileData.ordinalFields));
+        reduxStore.dispatch(addOrdinalFields(this.analysedFileData.ordinalFields));
     }
     public createOrdinalDataObjects() {
-        store.dispatch(addOrdinalDataObjects(this.analysedFileData.ordinalDataObjects));
+        reduxStore.dispatch(addOrdinalDataObjects(this.analysedFileData.ordinalDataObjects));
     }
     public createBinaryFields() {
-        store.dispatch(addBinaryFields(this.analysedFileData.binaryFields));
+        reduxStore.dispatch(addBinaryFields(this.analysedFileData.binaryFields));
     }
     public createBinaryDataObjects() {
-        store.dispatch(addBinaryDataObjects(this.analysedFileData.binaryDataObjects));
+        reduxStore.dispatch(addBinaryDataObjects(this.analysedFileData.binaryDataObjects));
     }
     public createIgnoreFields() {
-        store.dispatch(addIgnoreFields(this.analysedFileData.ignoreFields));
+        reduxStore.dispatch(addIgnoreFields(this.analysedFileData.ignoreFields));
     }
     public createIgnoreDataObjects() {
-        store.dispatch(addIgnoreDataObjects(this.analysedFileData.ignoreDataObjects));
+        reduxStore.dispatch(addIgnoreDataObjects(this.analysedFileData.ignoreDataObjects));
     }
     public createAll() {
         this.createFields();

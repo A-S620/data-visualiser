@@ -3,7 +3,7 @@ import 'jsdom-global/register';
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import FileAnalysisComponent from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
@@ -17,7 +17,7 @@ const testCSV = 'col1,col2,col3,col4,col5\n 1,3,foo,yes,beep\n 2,5,bar,no,beep\n
 let component: ReactWrapper;
 beforeEach(() => {
     component = mount(
-        <Provider store={store}>
+        <Provider store={reduxStore}>
             <FileAnalysisComponent />
         </Provider>
     );
@@ -64,7 +64,7 @@ describe('File Analysis component', () => {
                 file: testCSV,
                 fileType: 'text/csv',
             };
-            const importFile = new ImportFilesHandler(importedFile).validate();
+            new ImportFilesHandler(importedFile).validate();
             const analyseFileHandler = new AnalyseFileHandler();
             analyseFileHandler.validateAnalysedData([
                 { field: 'col1', fieldType: FieldTypes.INTERVAL },
@@ -103,7 +103,7 @@ describe('File Analysis component', () => {
         it('Should show an example object', () => {
             importAndAnalyseData();
             expect(component.find('div#json-object').text()).toBe(
-                '"Example Object":{"col1":"' + ' 1""col2":"3""col3":"foo""col4":"yes""col5":"beep"}'
+                '"Example Object":{"col1":" 1""col2":"3""col3":"foo""col4":"yes""col5":"beep"}'
             );
         });
     });
@@ -113,7 +113,7 @@ function importAndAnalyseData() {
         file: testCSV,
         fileType: 'text/csv',
     };
-    const importFile = new ImportFilesHandler(importedFile).validate();
+    new ImportFilesHandler(importedFile).validate();
     const analyseFileHandler = new AnalyseFileHandler();
     analyseFileHandler.validateAnalysedData([
         { field: 'col1', fieldType: FieldTypes.INTERVAL },

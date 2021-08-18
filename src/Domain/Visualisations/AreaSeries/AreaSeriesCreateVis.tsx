@@ -2,7 +2,6 @@ import { DataHandler } from '../../../Util/DataHandler';
 import { IAreaSeriesVis } from '../../../Interfaces/Visualisations/Area/IAreaSeriesVis';
 import AreaSeriesOptions from '../../ReduxStoreHandling/Plotting/Area/AreaSeriesOptions';
 import { CurveType } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
-
 export class AreaSeriesCreateVis {
     private dataHandler = new DataHandler();
     public createVis(): IAreaSeriesVis {
@@ -10,7 +9,6 @@ export class AreaSeriesCreateVis {
         if (Object.keys(options).length === 0) {
             return this.createDefaultOptions();
         }
-
         return {
             data: this.dataHandler.createIntegerDataArray(
                 options.xValue,

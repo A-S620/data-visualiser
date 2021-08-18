@@ -3,7 +3,7 @@ import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import { IBarSeriesVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import BarSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis';
 import CurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 let wrapper: ReactWrapper;
@@ -27,7 +27,7 @@ beforeAll(() => {
 beforeEach(
     () =>
         (wrapper = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <BarSeriesVis />
             </Provider>
         ))

@@ -1,7 +1,7 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseNominalData {
-    private readonly dataObjects = store.getState().importedData.dataObjects;
+    private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
     private nominalFields: any;
     private nominalDataObjects: Array<object> = [];
     constructor(nominalFields: Array<string>) {
@@ -28,11 +28,10 @@ export class AnalyseNominalData {
     }
     private getAllNominalValues(field: string): Array<string> {
         const nominalValues: Array<string> = [];
-        for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
-            const object = this.dataObjects[objectIndex];
-            for (var fieldIndex = 0; fieldIndex < this.nominalFields.length; fieldIndex += 1) {
-                if (field === this.nominalFields[fieldIndex]) {
-                    const nominalValueToAdd = this.getNominalValue(object, field);
+        for (const dataObject of this.dataObjects) {
+            for (const nominalField of this.nominalFields) {
+                if (field === nominalField) {
+                    const nominalValueToAdd = AnalyseNominalData.getNominalValue(dataObject, field);
                     if (nominalValueToAdd !== '') {
                         if (!nominalValues.includes(nominalValueToAdd)) {
                             nominalValues.push(nominalValueToAdd);
@@ -44,7 +43,7 @@ export class AnalyseNominalData {
 
         return nominalValues;
     }
-    private getNominalValue(object: object, field: string): string {
+    private static getNominalValue(object: object, field: string): string {
         for (const [key, value] of Object.entries(object)) {
             if (key === field) {
                 return value;
@@ -54,8 +53,7 @@ export class AnalyseNominalData {
     }
     private getNominalValueCount(field: string, nominalValue: string): number {
         let count = 0;
-        for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
-            const object = this.dataObjects[objectIndex];
+        for (const object of this.dataObjects) {
             for (const [key, value] of Object.entries(object)) {
                 if (key === field && value === nominalValue) {
                     count += 1;

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import App from './App';
-import { store } from './ReduxStore/store';
+import { reduxStore } from './ReduxStore/reduxStore';
 
 const theme = createMuiTheme({
     palette: {
@@ -31,7 +31,7 @@ const theme = createMuiTheme({
 });
 ReactDOM.render(
     <React.StrictMode>
-        <Provider store={store}>
+        <Provider store={reduxStore}>
             <MuiThemeProvider theme={theme} key="app">
                 <React.StrictMode>
                     <BrowserRouter>

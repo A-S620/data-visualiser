@@ -1,7 +1,7 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseIntervalData {
-    private readonly dataObjects = store.getState().importedData.dataObjects;
+    private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
     private intervalFields: any;
     private intervalDataObjects: Array<object> = [];
     constructor(intervalFields: Array<string>) {
@@ -29,13 +29,15 @@ export class AnalyseIntervalData {
     }
 
     private analyseIntervalData() {
-        for (var objIndex = 0; objIndex < this.dataObjects.length; objIndex += 1) {
+        for (const currentObject of this.dataObjects) {
             const objectToAdd: Object = {};
             // eslint-disable-next-line prefer-destructuring
-            const currentObject: Object = this.dataObjects[objIndex];
             for (const [key, value] of Object.entries(currentObject)) {
                 if (this.intervalFields.includes(key)) {
-                    if (AnalyseIntervalData.dataIsFloat(value) && AnalyseIntervalData.dataIsNotIPAddress(value)) {
+                    if (
+                        AnalyseIntervalData.dataIsFloat(value as string) &&
+                        AnalyseIntervalData.dataIsNotIPAddress(value as string)
+                    ) {
                         // @ts-ignore
                         objectToAdd[key] = AnalyseIntervalData.convertDataToFloat(value);
                     }
@@ -46,8 +48,8 @@ export class AnalyseIntervalData {
     }
     private static dataIsNotIPAddress(data: string): boolean {
         let decimalPointCount = 0;
-        for (var i = 0; i < data.length; i += 1) {
-            if (data[i] === '.') {
+        for (const character of data) {
+            if (character === '.') {
                 decimalPointCount += 1;
             }
         }

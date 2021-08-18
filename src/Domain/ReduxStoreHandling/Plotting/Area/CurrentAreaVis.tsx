@@ -1,15 +1,15 @@
-import { store } from '../../../../ReduxStore/store';
+import { reduxStore } from '../../../../ReduxStore/reduxStore';
 import { addCurrentAreaVisual, resetCurrentAreaVisual } from '../../../../ReduxStore/Actions/ReducerActions';
 import { IAreaSeriesVis } from '../../../../Interfaces/Visualisations/Area/IAreaSeriesVis';
 
 export default class CurrentAreaVis {
     public create(currentVisual: IAreaSeriesVis) {
-        store.dispatch(addCurrentAreaVisual(currentVisual));
+        reduxStore.dispatch(addCurrentAreaVisual(currentVisual));
     }
     public get(): IAreaSeriesVis {
-        return store.getState().currentAreaVisual;
+        return reduxStore.getState().currentAreaVisual;
     }
     public reset() {
-        store.dispatch(resetCurrentAreaVisual());
+        reduxStore.dispatch(resetCurrentAreaVisual());
     }
 }

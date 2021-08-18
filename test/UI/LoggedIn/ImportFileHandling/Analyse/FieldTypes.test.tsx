@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import FieldTypes from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes';
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
@@ -15,7 +15,7 @@ let component: ReactWrapper;
 beforeEach(
     () =>
         (component = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <FieldTypes />
             </Provider>
         ))

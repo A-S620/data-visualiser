@@ -139,7 +139,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
             },
         });
     }
-    private applicationHasData(): boolean {
+    private static applicationHasData(): boolean {
         const importedDataFields = new ImportedData().get().dataFields;
         return importedDataFields.length === 0;
     }
@@ -200,7 +200,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                                     color="primary"
                                     style={{ marginRight: 10, borderRadius: '5em' }}
                                     id="reset-application-button"
-                                    disabled={this.applicationHasData()}
+                                    disabled={ImportFilesComponent.applicationHasData()}
                                     onClick={() => {
                                         this.resetFiles();
                                     }}
@@ -213,7 +213,7 @@ export default class ImportFilesComponent extends React.Component<{}, IState> {
                                     style={{ marginRight: 10, borderRadius: '5em' }}
                                     id="field-types-button"
                                     color="primary"
-                                    disabled={this.applicationHasData()}
+                                    disabled={ImportFilesComponent.applicationHasData()}
                                     onClick={() => {
                                         this.setState({
                                             fieldTypesDialogOpen: true,

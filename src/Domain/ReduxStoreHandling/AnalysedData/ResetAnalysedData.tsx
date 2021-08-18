@@ -1,7 +1,7 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 import { resetAnalysedData } from '../../../ReduxStore/Actions/ReducerActions';
 export default class ResetAnalysedData {
     public resetAnalysedData() {
-        store.dispatch(resetAnalysedData());
+        reduxStore.dispatch(resetAnalysedData());
     }
 }

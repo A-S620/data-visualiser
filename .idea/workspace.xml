@@ -1,12 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Refactoring and fixing sonar lint">
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesCreateVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComp.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/ImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/ImportedData/ImportedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesCreateVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesCreateVis.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReduxStore/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReduxStore/reduxStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/NotificationsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/NotificationsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UIHandling/ResetDataHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ResetDataHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/DataHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/DataHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Home/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Home/Home.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialOptions.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +129,9 @@
     <option name="context" value="arn:aws:eks:us-west-2:595076097930:cluster/Korat-Kai-Cluster" />
     <option name="namespace" value="default" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -93,6 +148,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="NEW_TOOLWINDOW_STRIPE_DEFAULTS" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -123,7 +179,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComp.tsx" />
   </component>
@@ -143,7 +199,20 @@
       <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.LineSeriesVis UIHandling Component">
+  <component name="RunManager" selected="Jest.Area series Options UI component">
+    <configuration name="Area series Options UI component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaOptions.test.tsx" />
+      <test-names>
+        <test-name value="Area series Options UI component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="HeatmapCreateVis domain component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -180,16 +249,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -202,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Area series Options UI component" />
         <item itemvalue="Jest.LineSeriesVis UIHandling Component" />
         <item itemvalue="Jest.HeatmapCreateVis domain component" />
         <item itemvalue="npm.watch" />
         <item itemvalue="Jest.HeatmapCreateVis.test.tsx" />
-        <item itemvalue="npm.lint" />
       </list>
     </recent_temporary>
   </component>
@@ -497,20 +556,16 @@
       <workItem from="1623180873821" duration="4334000" />
       <workItem from="1623958205816" duration="2094000" />
       <workItem from="1624016718831" duration="1549000" />
-    </task>
-    <task id="LOCAL-00301" summary="Updated IHeatmapSeriesCreateVis and&#10;IHeatmapSeriesOptions colourRange option to an object.&#10;Updated unit tests to reflect this.&#10;Added two colour options in HeatmapOptions.&#10;TODO: Unit tests for HeatmapOptions and test state">
-      <created>1620283920077</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1620283920077</updated>
-    </task>
-    <task id="LOCAL-00302" summary="Fixed HeatmapVis colour range, it now shows colours&#10;correctly.&#10;TODO: HeatmapOptions unit tests">
-      <created>1620370558927</created>
-      <option name="number" value="00302" />
-      <option name="presentableId" value="LOCAL-00302" />
-      <option name="project" value="LOCAL" />
-      <updated>1620370558927</updated>
+      <workItem from="1624018317523" duration="50000" />
+      <workItem from="1624029595266" duration="3023000" />
+      <workItem from="1624041144641" duration="2140000" />
+      <workItem from="1624269259770" duration="1000" />
+      <workItem from="1624388773100" duration="2834000" />
+      <workItem from="1624475306863" duration="1546000" />
+      <workItem from="1625683775982" duration="244000" />
+      <workItem from="1628154851187" duration="27000" />
+      <workItem from="1628666700805" duration="7128000" />
+      <workItem from="1629271964621" duration="3176000" />
     </task>
     <task id="LOCAL-00303" summary="HeatmapOptions unit tests">
       <created>1620568329557</created>
@@ -841,16 +896,39 @@
       <option name="project" value="LOCAL" />
       <updated>1622664645253</updated>
     </task>
-    <option name="localTasksCounter" value="350" />
+    <task id="LOCAL-00350" summary="Refactoring">
+      <created>1624018349352</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1624018349353</updated>
+    </task>
+    <task id="LOCAL-00351" summary="Refactoring and fixing sonarlint issues">
+      <created>1629272451242</created>
+      <option name="number" value="00351" />
+      <option name="presentableId" value="LOCAL-00351" />
+      <option name="project" value="LOCAL" />
+      <updated>1629272451244</updated>
+    </task>
+    <option name="localTasksCounter" value="352" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created AreaOptions and AreaSeriesVis UI components&#10;TODO: Unit tests" />
-    <MESSAGE value="Created AreaOptions and AreaSeriesVis Unit tests" />
     <MESSAGE value="Refactored AnalyseFileHandler and unit tests" />
     <MESSAGE value="Created IRadialSeriesOptions, IRadialSeriesVis,&#10;CurrentRadialVisual, RadialSeriesOptions,&#10;RadialSeriesOptionsValidate,&#10;Added radial series to ReducerActions,&#10;ReducerActionTypes, ReduxReducer, ReduxState" />
     <MESSAGE value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
@@ -871,10 +949,12 @@
     <MESSAGE value="RadialSeriesOptionsHandler unit tests" />
     <MESSAGE value="RadialSeriesVisHandler unit tests" />
     <MESSAGE value="RadialOptions UI component unit tests" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Removed Hexbin from VisualiseNav and updated unit tests" />
     <MESSAGE value="Refactored Reset Application State button&#10;TODO: FieldTypes glitch after reset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Reset Application State button&#10;TODO: FieldTypes glitch after reset" />
+    <MESSAGE value="Refactoring and fixing sonarlint issues" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Refactoring and fixing sonar lint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring and fixing sonar lint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

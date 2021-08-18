@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import { IRadialSeriesVis } from '../../../../../src/Interfaces/Visualisations/Radial/IRadialSeriesVis';
 import CurrentRadialVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual';
@@ -21,7 +21,7 @@ beforeAll(() => {
 beforeEach(
     () =>
         (wrapper = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <RadialSeriesVis />
             </Provider>
         ))

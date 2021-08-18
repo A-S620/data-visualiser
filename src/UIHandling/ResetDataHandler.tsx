@@ -1,8 +1,8 @@
-import { store } from '../ReduxStore/store';
+import { reduxStore } from '../ReduxStore/reduxStore';
 import { resetApplicationState } from '../ReduxStore/Actions/ReducerActions';
 
 export class ResetDataHandler {
     public resetData() {
-        store.dispatch(resetApplicationState());
+        reduxStore.dispatch(resetApplicationState());
     }
 }

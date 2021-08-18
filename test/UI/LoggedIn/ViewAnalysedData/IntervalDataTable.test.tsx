@@ -2,7 +2,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from '../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
@@ -62,7 +62,7 @@ let component: ReactWrapper;
 beforeEach(
     () =>
         (component = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <IntervalDataTable />
             </Provider>
         ))

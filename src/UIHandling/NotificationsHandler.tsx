@@ -17,7 +17,7 @@ export class NotificationsHandler {
         return this.notifications;
     }
 
-    public concat(notifs: NotificationsHandler): void {
-        this.notifications = this.notifications.concat(notifs.getNotifications());
+    public concat(notificationsHandler: NotificationsHandler): void {
+        this.notifications = this.notifications.concat(notificationsHandler.getNotifications());
     }
 }

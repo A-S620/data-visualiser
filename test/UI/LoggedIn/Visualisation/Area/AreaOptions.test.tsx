@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
@@ -10,7 +10,7 @@ let wrapper: ReactWrapper;
 beforeEach(
     () =>
         (wrapper = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <AreaOptions />
             </Provider>
         ))
@@ -159,10 +159,11 @@ describe('Area series Options UI component', () => {
             await selectXVal('col2');
             await selectYVal('col1');
             await selectFill('blue');
-
             await inputHeight(50);
             await inputWidth(500);
+
             await clickSubmit();
+
             expect(wrapper.find('div#alert-area').find('div#notification-alert').text()).toBe(
                 'Error(s): The minimum value for Height is 100, the maximum value for Height is 800. The current height is 50'
             );

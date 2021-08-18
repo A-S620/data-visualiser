@@ -1,39 +1,39 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 import { IAnalysedFileData } from '../../../Interfaces/Analyse/IAnalysedFileData';
 export default class GetAnalysedData {
     private static getFields(): Array<object> {
-        return store.getState().analysedData.fields;
+        return reduxStore.getState().analysedData.fields;
     }
     private static getIntegerFields(): Array<string> {
-        return store.getState().analysedData.intervalFields;
+        return reduxStore.getState().analysedData.intervalFields;
     }
 
     private static getIntegerDataObjects(): Array<object> {
-        return store.getState().analysedData.intervalDataObjects;
+        return reduxStore.getState().analysedData.intervalDataObjects;
     }
     private static getNominalFields(): Array<string> {
-        return store.getState().analysedData.nominalFields;
+        return reduxStore.getState().analysedData.nominalFields;
     }
     private static getNominalDataObjects(): Array<object> {
-        return store.getState().analysedData.nominalDataObjects;
+        return reduxStore.getState().analysedData.nominalDataObjects;
     }
     private static getOrdinalFields(): Array<string> {
-        return store.getState().analysedData.ordinalFields;
+        return reduxStore.getState().analysedData.ordinalFields;
     }
     private static getOrdinalDataObjects(): Array<object> {
-        return store.getState().analysedData.ordinalDataObjects;
+        return reduxStore.getState().analysedData.ordinalDataObjects;
     }
     private static getBinaryFields(): Array<string> {
-        return store.getState().analysedData.binaryFields;
+        return reduxStore.getState().analysedData.binaryFields;
     }
     private static getBinaryDataObjects(): Array<object> {
-        return store.getState().analysedData.binaryDataObjects;
+        return reduxStore.getState().analysedData.binaryDataObjects;
     }
     private static getIgnoreFields(): Array<string> {
-        return store.getState().analysedData.ignoreFields;
+        return reduxStore.getState().analysedData.ignoreFields;
     }
     private static getIgnoreDataObjects(): Array<object> {
-        return store.getState().analysedData.ignoreDataObjects;
+        return reduxStore.getState().analysedData.ignoreDataObjects;
     }
     public get(): IAnalysedFileData {
         return {

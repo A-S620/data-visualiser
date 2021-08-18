@@ -1,15 +1,15 @@
-import { store } from '../../../../ReduxStore/store';
+import { reduxStore } from '../../../../ReduxStore/reduxStore';
 import { addBarOptions, resetBarOptions } from '../../../../ReduxStore/Actions/ReducerActions';
 import { IBarSeriesOptions } from '../../../../Interfaces/Visualisations/Bar/IBarSeriesOptions';
 
 export default class BarSeriesOptions {
     public create(options: IBarSeriesOptions) {
-        store.dispatch(addBarOptions(options));
+        reduxStore.dispatch(addBarOptions(options));
     }
     public get(): IBarSeriesOptions {
-        return store.getState().barSeriesOptions;
+        return reduxStore.getState().barSeriesOptions;
     }
     public reset() {
-        store.dispatch(resetBarOptions());
+        reduxStore.dispatch(resetBarOptions());
     }
 }

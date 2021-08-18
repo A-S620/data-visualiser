@@ -2,7 +2,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { store } from '../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 import ImportedDataTable from '../../../../src/UI/LoggedIn/ViewImportedData/ImportedDataTable';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
@@ -41,7 +41,7 @@ beforeAll(() => {
 beforeEach(
     () =>
         (component = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <ImportedDataTable />
             </Provider>
         ))

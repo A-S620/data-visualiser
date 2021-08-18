@@ -1,7 +1,7 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseIgnoreData {
-    private readonly dataObjects = store.getState().importedData.dataObjects;
+    private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
     private ignoreFields: any;
     private ignoreDataObjects: Array<object> = [];
     constructor(ignoreFields: Array<string>) {
@@ -16,10 +16,9 @@ export class AnalyseIgnoreData {
     }
 
     private analyseIgnoreData() {
-        for (var objIndex = 0; objIndex < this.dataObjects.length; objIndex += 1) {
+        for (const currentObject of this.dataObjects) {
             const objectToAdd: Object = {};
             // eslint-disable-next-line prefer-destructuring
-            const currentObject: Object = this.dataObjects[objIndex];
             for (const [key, value] of Object.entries(currentObject)) {
                 if (this.ignoreFields.includes(key)) {
                     // @ts-ignore

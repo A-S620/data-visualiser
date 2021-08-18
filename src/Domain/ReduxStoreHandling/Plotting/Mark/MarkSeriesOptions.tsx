@@ -1,15 +1,15 @@
-import { store } from '../../../../ReduxStore/store';
+import { reduxStore } from '../../../../ReduxStore/reduxStore';
 import { addMarkOptions, resetMarkOptions } from '../../../../ReduxStore/Actions/ReducerActions';
 import { IMarkSeriesOptions } from '../../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 
 export default class MarkSeriesOptions {
     public create(options: IMarkSeriesOptions) {
-        store.dispatch(addMarkOptions(options));
+        reduxStore.dispatch(addMarkOptions(options));
     }
     public get(): IMarkSeriesOptions {
-        return store.getState().markSeriesOptions;
+        return reduxStore.getState().markSeriesOptions;
     }
     public reset() {
-        store.dispatch(resetMarkOptions());
+        reduxStore.dispatch(resetMarkOptions());
     }
 }

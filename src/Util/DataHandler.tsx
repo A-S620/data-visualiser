@@ -2,7 +2,7 @@ import { FieldTypes, IAnalysedFileData } from '../Interfaces/Analyse/IAnalysedFi
 import GetAnalysedData from '../Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';
 
 export class DataHandler {
-    public createDataMapWithCount(xValue: string, yValue: string, analysedData: Array<object>) {
+    public createDataMapWithCount(xValue: string, yValue: string, analysedData: Array<object>): Map<any, any> {
         const dataMap = new Map();
         analysedData.forEach((obj) => {
             const convertedObj = JSON.stringify(this.createIntegerDataObject(xValue, yValue, obj));
@@ -14,13 +14,13 @@ export class DataHandler {
         });
         return dataMap;
     }
-    public checkDataType(field: string, fields: Array<Object>): FieldTypes {
+    public checkDataType(field: string, fields: Array<object>): FieldTypes {
         // @ts-ignore
         const index = fields.findIndex((object) => Object.values(object)[0] === field);
         const fieldObject = Object.values(fields[index]);
         return fieldObject[1];
     }
-    public createArrayFromDataMap(xValue: string, yValue: string, dataMap: Map<any, any>) {
+    public createArrayFromDataMap(xValue: string, yValue: string, dataMap: Map<any, any>): Array<object> {
         const data: Array<object> = [];
         dataMap.forEach((value, key) => {
             const keyValues = Object.values(JSON.parse(key));
@@ -29,7 +29,7 @@ export class DataHandler {
         return data.sort((a, b) => (Object.values(a)[0] > Object.values(b)[0] ? 1 : -1));
     }
 
-    public createIntegerDataObject(xValue: string, yValue: string, currentObject: Object): Object {
+    public createIntegerDataObject(xValue: string, yValue: string, currentObject: object): object {
         let x: number = 0;
         let y: number = 0;
         for (const [key, value] of Object.entries(currentObject)) {
@@ -44,7 +44,7 @@ export class DataHandler {
     }
     public createAngleObjectFromColumnPercent(column: string, analysedDataObjects: Array<object>): Array<object> {
         const angleObjectsArray: Array<object> = [];
-        analysedDataObjects.forEach((dataObject, key) => {
+        analysedDataObjects.forEach((dataObject) => {
             for (const [key, value] of Object.entries(dataObject)) {
                 if (key === column) {
                     value.forEach((valueObject: object) => {
@@ -76,33 +76,32 @@ export class DataHandler {
         return {};
     }
 
-    public getNonIntegerFieldValues(xValue: string): object {
+    public getNonIntegerFieldValues(field: string): object {
         const { nominalDataObjects } = this.getAnalysedData();
         const { ordinalDataObjects } = this.getAnalysedData();
         const { binaryDataObjects } = this.getAnalysedData();
         const allObjects = [...nominalDataObjects, ...ordinalDataObjects, ...binaryDataObjects];
-        for (var index = 0; index < allObjects.length; index += 1) {
-            if (Object.keys(allObjects[index])[0] === xValue) {
-                return allObjects[index];
+        for (const object of allObjects) {
+            if (Object.keys(object)[0] === field) {
+                return object;
             }
         }
         return {};
     }
-    public createNonIntegerDataArray(xValue: string, yValue: string): Array<object> {
-        const fieldValues = this.getNonIntegerFieldValues(xValue);
+    public createNonIntegerDataArray(value: string, countOrPercent: string): Array<object> {
+        const fieldValues = this.getNonIntegerFieldValues(value);
         const arrayOfValues = Object.values(fieldValues)[0];
         const data: Array<Object> = [];
-        for (var index = 0; index < arrayOfValues.length; index += 1) {
-            const valueObject = arrayOfValues[index];
-            const dataObject = this.createNonIntegerDataObject(valueObject, yValue);
+        for (const valueObject of arrayOfValues) {
+            const dataObject = this.createNonIntegerDataObject(valueObject, countOrPercent);
             data.push(dataObject);
         }
         return data;
     }
     public createIntegerDataArray(xValue: string, yValue: string, dataObjectsArray: Array<object>): Array<object> {
         const data: Array<Object> = [];
-        for (let objIndex = 0; objIndex < dataObjectsArray.length; objIndex += 1) {
-            const dataObject = this.createIntegerDataObject(xValue, yValue, dataObjectsArray[objIndex]);
+        for (const object of dataObjectsArray) {
+            const dataObject = this.createIntegerDataObject(xValue, yValue, object);
             data.push(dataObject);
         }
         return data;

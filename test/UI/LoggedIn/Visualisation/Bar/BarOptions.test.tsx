@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
@@ -12,7 +12,7 @@ let wrapper: ReactWrapper;
 beforeEach(
     () =>
         (wrapper = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <BarOptions />
             </Provider>
         ))

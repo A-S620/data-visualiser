@@ -4,11 +4,11 @@ import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 
 import Home from '../../../../src/UI/LoggedIn/Home/Home';
-import { store } from '../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 
 describe('Home page', () => {
     const wrapper = mount(
-        <Provider store={store}>
+        <Provider store={reduxStore}>
             <Home />
         </Provider>
     );

@@ -1,7 +1,7 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseBinaryData {
-    private readonly dataObjects = store.getState().importedData.dataObjects;
+    private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
     private binaryFields: any;
     private binaryDataObjects: Array<object> = [];
     constructor(binaryFields: Array<string>) {
@@ -28,11 +28,10 @@ export class AnalyseBinaryData {
     }
     private getValuesForField(field: string): Array<string> {
         const valuesForField: Array<string> = [];
-        for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
-            const object: object = this.dataObjects[objectIndex];
+        for (const object of this.dataObjects) {
             for (const [key, value] of Object.entries(object)) {
-                if (key === field && !valuesForField.includes(value) && this.binaryFields.includes(key)) {
-                    valuesForField.push(value);
+                if (key === field && !valuesForField.includes(value as string) && this.binaryFields.includes(key)) {
+                    valuesForField.push(value as string);
                 }
             }
         }
@@ -40,8 +39,7 @@ export class AnalyseBinaryData {
     }
     private getValueCount(field: string, binaryValue: string): number {
         let count = 0;
-        for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
-            const object = this.dataObjects[objectIndex];
+        for (const object of this.dataObjects) {
             for (const [key, value] of Object.entries(object)) {
                 if (key === field && value === binaryValue) {
                     count += 1;

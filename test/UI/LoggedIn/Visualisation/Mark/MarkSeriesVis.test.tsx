@@ -1,7 +1,7 @@
 import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
-import { store } from '../../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import { IMarkSeriesVis } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import CurrentMarkVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
@@ -25,7 +25,7 @@ beforeAll(() => {
 beforeEach(
     () =>
         (wrapper = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <MarkSeriesVis />
             </Provider>
         ))

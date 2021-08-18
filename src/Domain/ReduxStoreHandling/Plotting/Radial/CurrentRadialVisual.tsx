@@ -1,15 +1,15 @@
-import { store } from '../../../../ReduxStore/store';
+import { reduxStore } from '../../../../ReduxStore/reduxStore';
 import { addCurrentRadialVisual, resetCurrentRadialVisual } from '../../../../ReduxStore/Actions/ReducerActions';
 import { IRadialSeriesVis } from '../../../../Interfaces/Visualisations/Radial/IRadialSeriesVis';
 
 export default class CurrentRadialVisual {
     public create(currentVisual: IRadialSeriesVis) {
-        store.dispatch(addCurrentRadialVisual(currentVisual));
+        reduxStore.dispatch(addCurrentRadialVisual(currentVisual));
     }
     public get(): IRadialSeriesVis {
-        return store.getState().currentRadialVisual;
+        return reduxStore.getState().currentRadialVisual;
     }
     public reset() {
-        store.dispatch(resetCurrentRadialVisual());
+        reduxStore.dispatch(resetCurrentRadialVisual());
     }
 }

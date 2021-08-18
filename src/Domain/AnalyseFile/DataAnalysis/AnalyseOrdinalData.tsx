@@ -1,7 +1,7 @@
-import { store } from '../../../ReduxStore/store';
+import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseOrdinalData {
-    private readonly dataObjects = store.getState().importedData.dataObjects;
+    private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
     private ordinalFields: any;
     private ordinalDataObjects: Array<object> = [];
     constructor(ordinalFields: Array<string>) {
@@ -28,11 +28,10 @@ export class AnalyseOrdinalData {
     }
     private getOrdinalValuesForField(field: string): Array<string> {
         const ordinalValuesForField: Array<string> = [];
-        for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
-            const object: object = this.dataObjects[objectIndex];
+        for (const object of this.dataObjects) {
             for (const [key, value] of Object.entries(object)) {
-                if (key === field && !ordinalValuesForField.includes(value)) {
-                    ordinalValuesForField.push(value);
+                if (key === field && !ordinalValuesForField.includes(value as string)) {
+                    ordinalValuesForField.push(value as string);
                 }
             }
         }
@@ -40,8 +39,7 @@ export class AnalyseOrdinalData {
     }
     private getOrdinalValueCount(field: string, ordinalValue: string): number {
         let count = 0;
-        for (var objectIndex = 0; objectIndex < this.dataObjects.length; objectIndex += 1) {
-            const object = this.dataObjects[objectIndex];
+        for (const object of this.dataObjects) {
             for (const [key, value] of Object.entries(object)) {
                 if (key === field && value === ordinalValue) {
                     count += 1;
