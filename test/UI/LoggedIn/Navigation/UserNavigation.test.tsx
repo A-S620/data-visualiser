@@ -2,14 +2,14 @@ import { mount, ReactWrapper } from 'enzyme';
 import React from 'react';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
-import { store } from '../../../../src/ReduxStore/store';
+import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 import UserNavigation from '../../../../src/UI/LoggedIn/Navigation/UserNavigation';
 
 let wrapper: ReactWrapper;
 beforeEach(
     () =>
         (wrapper = mount(
-            <Provider store={store}>
+            <Provider store={reduxStore}>
                 <UserNavigation />
             </Provider>
         ))
