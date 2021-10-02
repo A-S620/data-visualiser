@@ -39,3 +39,5 @@ amplify/backend/awscloudformation
 build/
 dist/
 node_modules/
+.eslintcache
+.idea/workspace.xml
