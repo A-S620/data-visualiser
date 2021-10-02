@@ -15,6 +15,7 @@
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/fileTransformer.js"
     }
   },
+  "homepage": "https://a-s620.github.io/data-visualiser/",
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^0.2.22",
