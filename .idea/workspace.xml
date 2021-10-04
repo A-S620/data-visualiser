@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="Refactoring and fixing sonar lint">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -519,20 +519,6 @@
       <workItem from="1628666700805" duration="7128000" />
       <workItem from="1629271964621" duration="3176000" />
     </task>
-    <task id="LOCAL-00304" summary="Refactored and created DataHandler so that code can be reused">
-      <created>1620572677671</created>
-      <option name="number" value="00304" />
-      <option name="presentableId" value="LOCAL-00304" />
-      <option name="project" value="LOCAL" />
-      <updated>1620572677671</updated>
-    </task>
-    <task id="LOCAL-00305" summary="Refactored and created DataHandler so that code can be reused">
-      <created>1620577169491</created>
-      <option name="number" value="00305" />
-      <option name="presentableId" value="LOCAL-00305" />
-      <option name="project" value="LOCAL" />
-      <updated>1620577169491</updated>
-    </task>
     <task id="LOCAL-00306" summary="Created IPolygonSeriesVis and IPolygonSeriesOptions&#10;Updated ReduxState, ReducerActions and&#10;ReducerActionTypes with Polygon options and&#10;visualisation and unit tests">
       <created>1620578230722</created>
       <option name="number" value="00306" />
@@ -862,7 +848,21 @@
       <option name="project" value="LOCAL" />
       <updated>1633357651289</updated>
     </task>
-    <option name="localTasksCounter" value="353" />
+    <task id="LOCAL-00353" summary="adding package-lock.json">
+      <created>1633358039916</created>
+      <option name="number" value="00353" />
+      <option name="presentableId" value="LOCAL-00353" />
+      <option name="project" value="LOCAL" />
+      <updated>1633358039916</updated>
+    </task>
+    <task id="LOCAL-00354" summary="added homepage">
+      <created>1633358482313</created>
+      <option name="number" value="00354" />
+      <option name="presentableId" value="LOCAL-00354" />
+      <option name="project" value="LOCAL" />
+      <updated>1633358482313</updated>
+    </task>
+    <option name="localTasksCounter" value="355" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -894,8 +894,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created IRadialSeriesOptions, IRadialSeriesVis,&#10;CurrentRadialVisual, RadialSeriesOptions,&#10;RadialSeriesOptionsValidate,&#10;Added radial series to ReducerActions,&#10;ReducerActionTypes, ReduxReducer, ReduxState" />
-    <MESSAGE value="Created RadialSeriesCreateVis,&#10;RadialSeriesOptionsHandler, RadialSeriesVisHandler&#10;Added Radial series to VisualiseNav.tsx" />
     <MESSAGE value="Created RadialOptions, RadialSeriesVis and&#10;RadialSeriesPage UI components&#10;Refactored other radial components" />
     <MESSAGE value="Radial series unit tests for ReducerActions and&#10;ReduxReducer" />
     <MESSAGE value="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions" />
@@ -919,7 +917,9 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Refactoring and fixing sonar lint" />
     <MESSAGE value="workflow trigger" />
-    <option name="LAST_COMMIT_MESSAGE" value="workflow trigger" />
+    <MESSAGE value="adding package-lock.json" />
+    <MESSAGE value="added homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="added homepage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
