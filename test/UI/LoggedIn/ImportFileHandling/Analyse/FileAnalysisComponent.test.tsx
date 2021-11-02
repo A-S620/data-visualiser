@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
-import FileAnalysisComponent from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent';
+import FileAnalysisComponent from '../../../../../src/UI/ImportFileHandling/Analyse/FileAnalysisComponent';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { AnalyseFileHandler } from '../../../../../src/UIHandling/AnalyseFileHandler';

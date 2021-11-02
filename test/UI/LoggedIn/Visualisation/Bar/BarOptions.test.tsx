@@ -7,7 +7,7 @@ import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/Ana
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import { yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import BarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
-import BarOptions from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarOptions';
+import BarOptions from '../../../../../src/UI/Visualisation/Bar/BarOptions';
 let wrapper: ReactWrapper;
 beforeEach(
     () =>

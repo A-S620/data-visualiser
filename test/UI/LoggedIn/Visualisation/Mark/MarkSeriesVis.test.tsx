@@ -5,7 +5,7 @@ import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import { IMarkSeriesVis } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import CurrentMarkVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
-import MarkSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis';
+import MarkSeriesVis from '../../../../../src/UI/Visualisation/Mark/MarkSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IMarkSeriesVis = {

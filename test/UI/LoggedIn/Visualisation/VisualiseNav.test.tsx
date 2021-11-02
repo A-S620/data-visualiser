@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
-import VisualiseNav from '../../../../src/UI/LoggedIn/Visualisation/VisualiseNav';
+import VisualiseNav from '../../../../src/UI/Visualisation/VisualiseNav';
 
 describe('Plotting Navigation Component', () => {
     const wrapper = mount(

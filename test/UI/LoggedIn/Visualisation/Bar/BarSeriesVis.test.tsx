@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import { IBarSeriesVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
-import BarSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis';
+import BarSeriesVis from '../../../../../src/UI/Visualisation/Bar/BarSeriesVis';
 import CurrentBarVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/CurrentBarVisual';
 let wrapper: ReactWrapper;
 beforeAll(() => {

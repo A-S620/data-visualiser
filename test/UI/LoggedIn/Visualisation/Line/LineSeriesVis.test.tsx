@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { ILineSeriesVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
-import LineSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Line/LineSeriesVis';
+import LineSeriesVis from '../../../../../src/UI/Visualisation/Line/LineSeriesVis';
 import { Provider } from 'react-redux';
 import CurrentLineVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Line/CurrentLineVisual';
 let wrapper: ReactWrapper;

@@ -3,12 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Button, FormControl, FormHelperText, InputLabel, Select, TextField, Typography } from '@material-ui/core';
 import { connect } from 'react-redux';
 
-import { AlertType } from '../../../../Interfaces/Notification/INotification';
-import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
+import { AlertType } from '../../../Interfaces/Notification/INotification';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
-import { IAreaSeriesOptions } from '../../../../Interfaces/Visualisations/Area/IAreaSeriesOptions';
-import { AreaSeriesOptionsHandler } from '../../../../UIHandling/Visualisations/AreaSeries/AreaSeriesOptionsHandler';
-import { CurveType } from '../../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
+import { IAreaSeriesOptions } from '../../../Interfaces/Visualisations/Area/IAreaSeriesOptions';
+import { AreaSeriesOptionsHandler } from '../../../UIHandling/Visualisations/AreaSeries/AreaSeriesOptionsHandler';
+import { CurveType } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 
 const useStyles = makeStyles((theme) => ({
     paper: {

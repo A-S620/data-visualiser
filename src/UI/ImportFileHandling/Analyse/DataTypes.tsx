@@ -14,10 +14,10 @@ import {
 } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
-import { FieldTypes } from '../../../../Interfaces/Analyse/IAnalysedFileData';
-import { AnalyseFileHandler } from '../../../../UIHandling/AnalyseFileHandler';
-import { AlertType } from '../../../../Interfaces/Notification/INotification';
-import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
+import { FieldTypes } from '../../../Interfaces/Analyse/IAnalysedFileData';
+import { AnalyseFileHandler } from '../../../UIHandling/AnalyseFileHandler';
+import { AlertType } from '../../../Interfaces/Notification/INotification';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
 const useStyles = makeStyles((theme) => ({
     paper: {

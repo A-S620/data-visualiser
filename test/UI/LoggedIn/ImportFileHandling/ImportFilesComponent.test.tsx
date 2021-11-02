@@ -3,8 +3,8 @@ import 'jsdom-global/register';
 
 import { Provider } from 'react-redux';
 import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
-import ImportFilesComponent from '../../../../src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent';
-import ImportedFileStats from '../../../../src/UI/LoggedIn/ImportFileHandling/Import/ImportedFileStats';
+import ImportFilesComponent from '../../../../src/UI/ImportFileHandling/ImportFilesComponent';
+import ImportedFileStats from '../../../../src/UI/ImportFileHandling/Import/ImportedFileStats';
 
 let component: ReactWrapper;
 beforeEach(

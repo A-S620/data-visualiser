@@ -5,7 +5,7 @@ import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import AreaOptions from '../../../../../src/UI/LoggedIn/Visualisation/Area/AreaOptions';
+import AreaOptions from '../../../../../src/UI/Visualisation/Area/AreaOptions';
 let wrapper: ReactWrapper;
 beforeEach(
     () =>

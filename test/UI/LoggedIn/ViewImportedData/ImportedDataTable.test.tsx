@@ -3,7 +3,7 @@ import 'jsdom-global/register';
 
 import { Provider } from 'react-redux';
 import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
-import ImportedDataTable from '../../../../src/UI/LoggedIn/ViewImportedData/ImportedDataTable';
+import ImportedDataTable from '../../../../src/UI/ViewImportedData/ImportedDataTable';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 

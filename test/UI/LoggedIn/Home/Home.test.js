@@ -3,7 +3,7 @@ import 'jsdom-global/register';
 import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 
-import Home from '../../../../src/UI/LoggedIn/Home/Home';
+import Home from '../../../../src/UI/Home/Home';
 import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 
 describe('Home page', () => {

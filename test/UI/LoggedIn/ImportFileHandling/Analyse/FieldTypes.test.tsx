@@ -3,7 +3,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
-import FieldTypes from '../../../../../src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes';
+import FieldTypes from '../../../../../src/UI/ImportFileHandling/Analyse/DataTypes';
 import { IImportedFile } from '../../../../../src/Interfaces/import/IImportedFile';
 import { ImportFilesHandler } from '../../../../../src/UIHandling/ImportFilesHandler';
 import GetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/GetAnalysedData';

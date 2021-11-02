@@ -6,7 +6,7 @@ import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import { IAreaSeriesVis } from '../../../../../src/Interfaces/Visualisations/Area/IAreaSeriesVis';
 import CurrentAreaVis from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis';
-import AreaSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis';
+import AreaSeriesVis from '../../../../../src/UI/Visualisation/Area/AreaSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IAreaSeriesVis = {

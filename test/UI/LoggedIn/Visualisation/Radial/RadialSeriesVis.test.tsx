@@ -5,7 +5,7 @@ import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import { IRadialSeriesVis } from '../../../../../src/Interfaces/Visualisations/Radial/IRadialSeriesVis';
 import CurrentRadialVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual';
-import RadialSeriesVis from '../../../../../src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis';
+import RadialSeriesVis from '../../../../../src/UI/Visualisation/Radial/RadialSeriesVis';
 let wrapper: ReactWrapper;
 beforeAll(() => {
     const currentVisual: IRadialSeriesVis = {

@@ -6,7 +6,7 @@ import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import ResetAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import HeatmapOptions from '../../../../../src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions';
+import HeatmapOptions from '../../../../../src/UI/Visualisation/Heatmap/HeatmapOptions';
 
 let wrapper: ReactWrapper;
 beforeEach(

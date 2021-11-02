@@ -7,7 +7,7 @@ import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFi
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';
 import { FieldTypes } from '../../../../src/Interfaces/Analyse/IAnalysedFileData';
 import ResetAnalysedData from '../../../../src/Domain/ReduxStoreHandling/AnalysedData/ResetAnalysedData';
-import NominalDataTable from '../../../../src/UI/LoggedIn/ViewAnalysedData/Tables/NominalDataTable';
+import NominalDataTable from '../../../../src/UI/ViewAnalysedData/Tables/NominalDataTable';
 import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';
 beforeEach(() => {
     const importedFileData: IImportedFileData = {

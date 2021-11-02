@@ -4,7 +4,7 @@ import 'jsdom-global/register';
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import { IHeatmapSeriesVis } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesVis';
-import HeatmapVis from '../../../../../src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis';
+import HeatmapVis from '../../../../../src/UI/Visualisation/Heatmap/HeatmapVis';
 import CurrentHeatmapVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/CurrentHeatmapVisual';
 let wrapper: ReactWrapper;
 beforeAll(() => {

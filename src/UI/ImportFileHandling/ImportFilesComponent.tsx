@@ -3,20 +3,20 @@ import { Box, Button, Divider, IconButton, makeStyles, Tooltip, Dialog } from '@
 import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import { DropzoneArea } from 'material-ui-dropzone';
 
-import { AlertType } from '../../../Interfaces/Notification/INotification';
+import { AlertType } from '../../Interfaces/Notification/INotification';
 
-import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
-import { ImportFilesHandler } from '../../../UIHandling/ImportFilesHandler';
+import { NotificationsHandler } from '../../UIHandling/NotificationsHandler';
+import { ImportFilesHandler } from '../../UIHandling/ImportFilesHandler';
 
 import AlertNotification from '../Notifications/AlertNotification';
-import { IImportedFile } from '../../../Interfaces/import/IImportedFile';
+import { IImportedFile } from '../../Interfaces/import/IImportedFile';
 
 import ImportedFileStats from './Import/ImportedFileStats';
-import { IImportedFileStats } from '../../../Interfaces/import/IImportedFileStats';
+import { IImportedFileStats } from '../../Interfaces/import/IImportedFileStats';
 import FileAnalysisComponent from './Analyse/FileAnalysisComponent';
 import FieldTypes from './Analyse/DataTypes';
-import { ResetDataHandler } from '../../../UIHandling/ResetDataHandler';
-import ImportedData from '../../../Domain/ReduxStoreHandling/ImportedData/ImportedData';
+import { ResetDataHandler } from '../../UIHandling/ResetDataHandler';
+import ImportedData from '../../Domain/ReduxStoreHandling/ImportedData/ImportedData';
 
 interface IState {
     importedFiles: Array<File>;

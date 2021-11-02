@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Button, FormControl, FormHelperText, InputLabel, Select, TextField, Typography } from '@material-ui/core';
 import { connect } from 'react-redux';
+import { CurveType, ILineSeriesOptions, LineStyle } from '../../../Interfaces/Visualisations/Line/ILineSeriesOptions';
 
-import { AlertType } from '../../../../Interfaces/Notification/INotification';
-import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
+import { AlertType } from '../../../Interfaces/Notification/INotification';
+import { NotificationsHandler } from '../../../UIHandling/NotificationsHandler';
 import AlertNotification from '../../Notifications/AlertNotification';
-import { IMarkSeriesOptions } from '../../../../Interfaces/Visualisations/Mark/IMarkSeriesOptions';
-import { MarkSeriesOptionsHandler } from '../../../../UIHandling/Visualisations/MarkSeries/MarkSeriesOptionsHandler';
+import { LineSeriesOptionsHandler } from '../../../UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -24,17 +24,18 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.disabled,
     },
 }));
-function MarkOptions(props: any) {
+function LineOptions(props: any) {
     const classes = useStyles();
     const [options, setOptions] = React.useState<{
         xValue: string;
         yValue: string;
         height: number;
         width: number;
-        colour: string;
         stroke: string;
         opacity: number;
-        fill: string;
+        curveType: CurveType | null;
+        lineStyle: LineStyle | undefined;
+        lineWidth: number;
     }>({
         xValue: '',
         yValue: '',
@@ -42,8 +43,9 @@ function MarkOptions(props: any) {
         width: 800,
         stroke: '#000000',
         opacity: 1,
-        fill: '',
-        colour: '',
+        curveType: null,
+        lineStyle: undefined,
+        lineWidth: 2,
     });
     const [notifications, setNotifications] = React.useState<{
         outcome: AlertType | undefined;
@@ -61,17 +63,18 @@ function MarkOptions(props: any) {
         return options.xValue !== options.yValue;
     }
     function validateDataOptions() {
-        const optionsToValidate: IMarkSeriesOptions = {
+        const optionsToValidate: ILineSeriesOptions = {
             xValue: options.xValue,
             yValue: options.yValue,
             height: options.height,
             width: options.width,
             stroke: options.stroke,
             opacity: options.opacity,
-            colour: options.colour,
-            fill: options.fill,
+            curveType: options.curveType,
+            lineStyle: options.lineStyle,
+            lineWidth: options.lineWidth,
         };
-        const validateOptions = new MarkSeriesOptionsHandler(optionsToValidate);
+        const validateOptions = new LineSeriesOptionsHandler(optionsToValidate);
         const errors: NotificationsHandler = validateOptions.validateOptions();
         if (errors.isEmpty()) {
             try {
@@ -101,7 +104,7 @@ function MarkOptions(props: any) {
             flexDirection="column"
             alignItems="center"
             className={classes.root}
-            id={'mark-plotting-options'}
+            id={'line-plotting-options'}
             mx={15}
         >
             <Box style={{ height: '50%', width: '50%' }} id={'alert-area'}>
@@ -122,11 +125,11 @@ function MarkOptions(props: any) {
                     flexDirection="column"
                     alignItems="center"
                     className={classes.root}
-                    id={'mark-plotting-options'}
+                    id={'line-plotting-options'}
                     px={20}
                     py={20}
                 >
-                    <Typography id={'mark-plotting-title'}>Mark Series Options</Typography>
+                    <Typography id={'line-plotting-title'}>Line Series Plotting Options</Typography>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center">
                         <FormControl required style={{ minWidth: 200 }} id={'x-values-select'}>
                             <InputLabel className={classes.textColor}>X Value</InputLabel>
@@ -226,7 +229,7 @@ function MarkOptions(props: any) {
                     </Box>
                     <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'stroke-textfields'}>
                         <FormControl style={{ minWidth: 200 }} id={'stroke-select'}>
-                            <InputLabel className={classes.textColor}>Mark Colour</InputLabel>
+                            <InputLabel className={classes.textColor}>Colour</InputLabel>
                             <Select
                                 value={options.stroke}
                                 onChange={(event) => {
@@ -270,33 +273,72 @@ function MarkOptions(props: any) {
                             }}
                         />
                     </Box>
-                    <Box display="flex" flexDirection="row" justifyContent="center" id={'colour-options'}>
-                        <FormControl style={{ minWidth: 200 }} id={'colour-select'}>
-                            <InputLabel className={classes.textColor}>Mark Fill Colour</InputLabel>
+                    <Box>
+                        <FormControl style={{ minWidth: 400 }} id={'curve-select'}>
+                            <InputLabel className={classes.textColor}>Curve</InputLabel>
                             <Select
-                                value={options.colour}
+                                // value={options.curveType}
                                 onChange={(event) => {
                                     setOptions({
                                         ...options,
-                                        colour: event.target.value as string,
+                                        curveType: event.target.value as CurveType,
                                     });
                                 }}
-                                name="colour"
+                                name="Curve Type"
                             >
-                                <option value={'red'}>red</option>
-                                <option value={'green'}>green</option>
-                                <option value={'blue'}>blue</option>
-                                <option value={'purple'}>purple</option>
-                                <option value={'orange'}>orange</option>
-                                <option value={'black'}>black</option>
-                                <option value={'yellow'}>yellow</option>
-                                <option value={'brown'}>brown</option>
-                                <option value={'pink'}>pink</option>
-                                <option value={'turquoise'}>turquoise</option>
+                                <option value={CurveType.curveLinear}>Linear</option>
+                                <option value={CurveType.curveLinearClosed}>Linear Closed</option>
+                                <option value={CurveType.curveMonotoneX}>Monotone X</option>
+                                <option value={CurveType.curveMonotoneY}>Monotone Y</option>
+                                <option value={CurveType.curveNatural}>Natural</option>
+                                <option value={CurveType.curveStep}>Step</option>
+                                <option value={CurveType.curveStepAfter}>Step After</option>
+                                <option value={CurveType.curveStepBefore}>Step Before</option>
                             </Select>
+                            <FormHelperText className={classes.helperTextColor}>
+                                Function used to create curve
+                            </FormHelperText>
                         </FormControl>
                     </Box>
-                    <Box id={'submit-button'} my={15}>
+                    <Box my={15} display="flex" flexDirection="row" justifyContent="center" id={'line-options'}>
+                        <FormControl style={{ minWidth: 200 }} id={'line-style-select'}>
+                            <InputLabel className={classes.textColor}>Line Style</InputLabel>
+                            <Select
+                                value={options.lineStyle}
+                                onChange={(event) => {
+                                    setOptions({
+                                        ...options,
+                                        lineStyle: event.target.value as LineStyle,
+                                    });
+                                }}
+                                name="Y Values"
+                            >
+                                <option value={LineStyle.SOLID}>Solid</option>
+                                <option value={LineStyle.DASHED}>Dashed</option>
+                            </Select>
+                        </FormControl>
+                        <Box mx={5} />
+                        <TextField
+                            type={'number'}
+                            id="line-width-textfield"
+                            label="Line Width"
+                            variant="outlined"
+                            helperText="Default: 2px"
+                            FormHelperTextProps={{
+                                className: classes.helperTextColor,
+                            }}
+                            InputLabelProps={{
+                                className: classes.textColor,
+                            }}
+                            onChange={(event) => {
+                                setOptions({
+                                    ...options,
+                                    lineWidth: parseInt(event.target.value),
+                                });
+                            }}
+                        />
+                    </Box>
+                    <Box id={'submit-button'}>
                         <Button
                             variant="outlined"
                             color="primary"
@@ -315,4 +357,4 @@ function MarkOptions(props: any) {
 const mapStateToProps = (state: any) => ({
     intervalFields: state.analysedData.intervalFields,
 });
-export default connect(mapStateToProps, {})(MarkOptions);
+export default connect(mapStateToProps, {})(LineOptions);

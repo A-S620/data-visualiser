@@ -3,7 +3,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
-import UserNavigation from '../../../../src/UI/LoggedIn/Navigation/UserNavigation';
+import UserNavigation from '../../../../src/UI/Navigation/UserNavigation';
 
 let wrapper: ReactWrapper;
 beforeEach(

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { INotification } from '../../../Interfaces/Notification/INotification';
+import { INotification } from '../../Interfaces/Notification/INotification';
 import { IconButton, Snackbar } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 export default function AlertNotification(notifications: INotification) {

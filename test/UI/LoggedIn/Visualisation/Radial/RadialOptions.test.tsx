@@ -5,7 +5,7 @@ import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';
 import CreateAnalysedData from '../../../../../src/Domain/ReduxStoreHandling/AnalysedData/CreateAnalysedData';
 import { FieldTypes, IAnalysedFileData } from '../../../../../src/Interfaces/Analyse/IAnalysedFileData';
-import RadialOptions from '../../../../../src/UI/LoggedIn/Visualisation/Radial/RadialOptions';
+import RadialOptions from '../../../../../src/UI/Visualisation/Radial/RadialOptions';
 import RadialSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions';
 
 let wrapper: ReactWrapper;
