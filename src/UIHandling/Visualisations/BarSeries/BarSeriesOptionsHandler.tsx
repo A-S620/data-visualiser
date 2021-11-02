@@ -5,7 +5,7 @@ import { BarSeriesVisHandler } from './BarSeriesVisHandler';
 import BarSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
 
 export class BarSeriesOptionsHandler {
-    private options: IBarSeriesOptions;
+    private readonly options: IBarSeriesOptions;
     private barSeriesOptions = new BarSeriesOptions();
     constructor(options: IBarSeriesOptions) {
         this.options = options;

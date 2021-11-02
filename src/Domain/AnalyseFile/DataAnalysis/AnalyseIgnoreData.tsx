@@ -2,7 +2,7 @@ import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseIgnoreData {
     private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
-    private ignoreFields: any;
+    private readonly ignoreFields: any;
     private ignoreDataObjects: Array<object> = [];
     constructor(ignoreFields: Array<string>) {
         this.ignoreFields = ignoreFields;

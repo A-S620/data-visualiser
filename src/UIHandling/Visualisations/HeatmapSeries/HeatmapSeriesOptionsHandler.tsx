@@ -5,7 +5,7 @@ import { HeatmapVisHandler } from './HeatmapVisHandler';
 import HeatmapSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 
 export class HeatmapSeriesOptionsHandler {
-    private options: IHeatmapSeriesOptions;
+    private readonly options: IHeatmapSeriesOptions;
     private reduxHandler = new HeatmapSeriesOptions();
     constructor(options: IHeatmapSeriesOptions) {
         this.options = options;

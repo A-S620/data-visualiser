@@ -3,7 +3,7 @@ import { ImportFileData } from '../Domain/ImportFile/ImportFileData';
 import { IImportedFile } from '../Interfaces/import/IImportedFile';
 
 export class ImportFilesHandler {
-    private importedFile: IImportedFile;
+    private readonly importedFile: IImportedFile;
 
     constructor(importedFile: IImportedFile) {
         this.importedFile = importedFile;

@@ -2,7 +2,7 @@ import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseBinaryData {
     private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
-    private binaryFields: any;
+    private readonly binaryFields: any;
     private binaryDataObjects: Array<object> = [];
     constructor(binaryFields: Array<string>) {
         this.binaryFields = binaryFields;

@@ -2,7 +2,7 @@ import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseIntervalData {
     private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
-    private intervalFields: any;
+    private readonly intervalFields: any;
     private intervalDataObjects: Array<object> = [];
     constructor(intervalFields: Array<string>) {
         this.intervalFields = intervalFields;
@@ -16,7 +16,7 @@ export class AnalyseIntervalData {
         return [];
     }
     private validateObjectsLength() {
-        for (var objIndex = 0; objIndex < this.intervalDataObjects.length; objIndex += 1) {
+        for (let objIndex = 0; objIndex < this.intervalDataObjects.length; objIndex += 1) {
             const currentObject = this.intervalDataObjects[objIndex];
             const currentObjectLength = Object.keys(currentObject).length;
             if (currentObjectLength !== this.intervalFields.length) {

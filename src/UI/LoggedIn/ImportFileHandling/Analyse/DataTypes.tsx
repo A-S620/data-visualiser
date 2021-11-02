@@ -10,11 +10,11 @@ import {
     TableRow,
     Button,
     TableBody,
+    TableContainer,
 } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import { FieldTypes } from '../../../../Interfaces/Analyse/IAnalysedFileData';
-import { TableContainer } from '@material-ui/core';
 import { AnalyseFileHandler } from '../../../../UIHandling/AnalyseFileHandler';
 import { AlertType } from '../../../../Interfaces/Notification/INotification';
 import { NotificationsHandler } from '../../../../UIHandling/NotificationsHandler';
@@ -70,7 +70,7 @@ function DataTypes(props: any) {
     });
     function addField(fieldToAdd: { field: string; fieldType: FieldTypes }) {
         if (!fields.includes(fieldToAdd)) {
-            for (var objIndex = 0; objIndex < fields.length; objIndex += 1) {
+            for (let objIndex = 0; objIndex < fields.length; objIndex += 1) {
                 const values = Object.values(fields[objIndex]);
                 if (values[0] === fieldToAdd.field) {
                     fields[objIndex] = fieldToAdd;

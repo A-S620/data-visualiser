@@ -5,7 +5,7 @@ import { LineSeriesVisHandler } from './LineSeriesVisHandler';
 import LineSeriesOptions from '../../../Domain/ReduxStoreHandling/Plotting/Line/LineSeriesOptions';
 
 export class LineSeriesOptionsHandler {
-    private options: ILineSeriesOptions;
+    private readonly options: ILineSeriesOptions;
     private lineSeriesOptions = new LineSeriesOptions();
     constructor(options: ILineSeriesOptions) {
         this.options = options;

@@ -16,10 +16,8 @@ export default class CSVProcessor {
         const result = papa.parse(this.csvFile, { header: true, skipEmptyLines: true });
         const csvErrors = result.errors;
         if (csvErrors.length !== 0) {
-            for (var i = 0; i < csvErrors.length; i += 1) {
-                notifications.addNotification(
-                    `${csvErrors[i].type}: ${csvErrors[i].message}, Row: ${csvErrors[i].row}`
-                );
+            for (const error of csvErrors) {
+                notifications.addNotification(`${error.type}: ${error.message}, Row: ${error.row}`);
             }
             return notifications;
         }
@@ -42,8 +40,8 @@ export default class CSVProcessor {
     }
     private getCSVFields(): Array<string> {
         const dataFields: string[] = [];
-        for (let i = 0; i < this.csvToArrays()[0].length; i += 1) {
-            dataFields.push(this.csvToArrays()[0][i]);
+        for (const field of this.csvToArrays()[0]) {
+            dataFields.push(field);
         }
         return dataFields;
     }

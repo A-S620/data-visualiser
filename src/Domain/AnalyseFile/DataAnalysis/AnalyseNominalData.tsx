@@ -2,7 +2,7 @@ import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseNominalData {
     private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
-    private nominalFields: any;
+    private readonly nominalFields: any;
     private nominalDataObjects: Array<object> = [];
     constructor(nominalFields: Array<string>) {
         this.nominalFields = nominalFields;

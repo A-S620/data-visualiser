@@ -2,7 +2,7 @@ import { reduxStore } from '../../../ReduxStore/reduxStore';
 
 export class AnalyseOrdinalData {
     private readonly dataObjects = reduxStore.getState().importedData.dataObjects;
-    private ordinalFields: any;
+    private readonly ordinalFields: any;
     private ordinalDataObjects: Array<object> = [];
     constructor(ordinalFields: Array<string>) {
         this.ordinalFields = ordinalFields;
