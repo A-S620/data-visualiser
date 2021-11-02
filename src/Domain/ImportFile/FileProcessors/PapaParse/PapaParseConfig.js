@@ -1,4 +1,4 @@
-const Papa = require('papaparse');
+const papa = require('papaparse');
 const papaParseConfig = {
     delimiter: '', // auto-detect
     newline: '', // auto-detect
@@ -24,7 +24,7 @@ const papaParseConfig = {
     beforeFirstChunk: undefined,
     withCredentials: undefined,
     transform: undefined,
-    delimitersToGuess: [',', '\t', '|', ';', Papa.RECORD_SEP, Papa.UNIT_SEP],
+    delimitersToGuess: [',', '\t', '|', ';', papa.RECORD_SEP, papa.UNIT_SEP],
 };
 
 export default papaParseConfig;

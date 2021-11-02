@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import RadialSeriesVis from './RadialSeriesVis';
 import RadialOptions from './RadialOptions';
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         flexGrow: 1,
         width: '100%',

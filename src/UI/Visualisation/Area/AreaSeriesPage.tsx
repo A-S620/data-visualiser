@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box } from '@material-ui/core';
 import AreaSeriesVis from './AreaSeriesVis';
 import AreaOptions from './AreaOptions';
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         flexGrow: 1,
         width: '100%',

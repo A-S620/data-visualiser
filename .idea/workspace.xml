@@ -5,69 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Export/Export.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ImportFileHandling/Analyse/DataTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ImportFileHandling/Analyse/FileAnalysisComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Import/ImportedFileStats.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ImportFileHandling/Import/ImportedFileStats.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ImportFileHandling/ImportFilesComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/Appbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Navigation/Appbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Navigation/TabPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/UserNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Navigation/UserNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Notifications/AlertNotification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Notifications/AlertNotification.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/BinaryDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/Tables/BinaryDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IgnoreDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/Tables/IgnoreDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/IntervalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/Tables/IntervalDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/NominalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/Tables/NominalDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables/OrdinalDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/Tables/OrdinalDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ImportedDataTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewImportedData/ImportedDataTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ViewImportedData/ViewImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewImportedData/ViewImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Line/LineSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialOptions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialOptions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialSeriesVis.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/Visualisations.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Visualisations.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Visualisation/VisualiseNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/VisualiseNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Home/Home.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Home/Home.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FieldTypes.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/Analyse/FileAnalysisComponent.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ImportFileHandling/ImportFilesComponent.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Navigation/UserNavigation.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/BinaryDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IgnoreDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/IntervalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/NominalDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewAnalysedData/OrdinallDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/ViewImportedData/ImportedDataTable.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Area/AreaSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Bar/BarSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Heatmap/HeatmapVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Line/LineSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Mark/MarkSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialOptions.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialOptions.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/Radial/RadialSeriesVis.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/UI/LoggedIn/Visualisation/VisualiseNav.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Navigation/Appbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/ViewImportedData/ViewImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewImportedData/ViewImportedData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialSeriesPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,11 +153,11 @@
       <recent name="$PROJECT_DIR$/src/components/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/UI" />
+      <recent name="$PROJECT_DIR$/src/UI" />
       <recent name="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Polygon" />
       <recent name="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Polygon" />
       <recent name="$PROJECT_DIR$/src/Domain/ReduxStoreHandling/Plotting/Mark" />
-      <recent name="$PROJECT_DIR$/test/Domain/ReduxStoreHandling/Plotting/Mark" />
-      <recent name="$PROJECT_DIR$/src/UI/LoggedIn/ViewAnalysedData/Tables" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.Area series Options UI component">
@@ -581,20 +528,6 @@
       <workItem from="1628666700805" duration="7128000" />
       <workItem from="1629271964621" duration="3176000" />
     </task>
-    <task id="LOCAL-00311" summary="Refactored CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis into CurrentPolygonVis&#10;single component + unit tests">
-      <created>1620665596356</created>
-      <option name="number" value="00311" />
-      <option name="presentableId" value="LOCAL-00311" />
-      <option name="project" value="LOCAL" />
-      <updated>1620665596356</updated>
-    </task>
-    <task id="LOCAL-00312" summary="Refactored CreateCurrentMarkVis, GetCurrentMarkVis&#10;and ResetCurrentMarkVis into CurrentMarkVis&#10;single component + unit tests">
-      <created>1620667211970</created>
-      <option name="number" value="00312" />
-      <option name="presentableId" value="LOCAL-00312" />
-      <option name="project" value="LOCAL" />
-      <updated>1620667211970</updated>
-    </task>
     <task id="LOCAL-00313" summary="Refactored CreateCurrentLineVis, GetCurrentLineVis&#10;and ResetCurrentLineVis into CurrentLineVis&#10;single component + unit tests">
       <created>1620837692629</created>
       <option name="number" value="00313" />
@@ -924,7 +857,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635849008590</updated>
     </task>
-    <option name="localTasksCounter" value="360" />
+    <task id="LOCAL-00360" summary="Removed LoggedIn folder from UI Components">
+      <created>1635849231133</created>
+      <option name="number" value="00360" />
+      <option name="presentableId" value="LOCAL-00360" />
+      <option name="project" value="LOCAL" />
+      <updated>1635849231133</updated>
+    </task>
+    <task id="LOCAL-00361" summary="Removed LoggedIn folder from test/UI Components">
+      <created>1635849345311</created>
+      <option name="number" value="00361" />
+      <option name="presentableId" value="LOCAL-00361" />
+      <option name="project" value="LOCAL" />
+      <updated>1635849345311</updated>
+    </task>
+    <option name="localTasksCounter" value="362" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -956,8 +903,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Radial series unit tests for RadialSeriesOptionsHandler" />
-    <MESSAGE value="Refactored RadialOptions, IRadialSeriesOptions&#10;RadialSeriesCreateVis and unit tests" />
     <MESSAGE value="Refactored Radial series feature" />
     <MESSAGE value="Refactored GetAnalysedData" />
     <MESSAGE value="Added createAngleObjectFromColumnPercent to DataHandler" />
@@ -981,7 +926,9 @@
     <MESSAGE value="Test imports cleanup and snapshot updated" />
     <MESSAGE value="Type script minor fixes" />
     <MESSAGE value="Removed NotLoggedIn UI components and unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed NotLoggedIn UI components and unit tests" />
+    <MESSAGE value="Removed LoggedIn folder from UI Components" />
+    <MESSAGE value="Removed LoggedIn folder from test/UI Components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed LoggedIn folder from test/UI Components" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

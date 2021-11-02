@@ -6,7 +6,7 @@ import OrdinalDataTable from './Tables/OrdinalDataTable';
 import BinaryDataTable from './Tables/BinaryDataTable';
 import IgnoreDataTable from './Tables/IgnoreDataTable';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         width: '100%',
         display: 'flex',

@@ -4,7 +4,7 @@ import { Box } from '@material-ui/core';
 import BarSeriesOptions from './BarOptions';
 import BarSeriesVis from './BarSeriesVis';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         flexGrow: 1,
         width: '100%',

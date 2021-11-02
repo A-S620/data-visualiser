@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box, makeStyles } from '@material-ui/core';
 import ImportedDataTable from './ImportedDataTable';
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         height: '100%',
         width: '100%',
     },
 }));
 
-export default function ViewImportedData(props: any) {
+export default function ViewImportedData() {
     const classes = useStyles();
     return (
         <Box
