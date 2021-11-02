@@ -20,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'pink',
     },
 }));
-
-export default function Export() {
+function Export() {
     const classes = useStyles();
     return (
         <Grid className={classes.root} container direction="column" justify="flex-start" alignItems="center">

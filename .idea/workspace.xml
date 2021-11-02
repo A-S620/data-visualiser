@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseBinaryData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIgnoreData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseIntervalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseNominalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/AnalyseFile/DataAnalysis/AnalyseOrdinalData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ImportFile/FileProcessors/CSVProcessor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/ImportFile/FileProcessors/CSVProcessor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/ImportFile/FileProcessors/PapaParse/PapaUnparseConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/ImportFileHandling/Analyse/DataTypes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/NotLoggedIn/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/NotLoggedIn/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/ImportFilesHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/BarSeries/BarSeriesOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/HeatmapSeries/HeatmapSeriesOptionsHandler.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UIHandling/Visualisations/LineSeries/LineSeriesOptionsHandler.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Export/Export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Export/Export.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/NotLoggedIn/Login/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/NotLoggedIn/Login/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/NotLoggedIn/Navigation/TabPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/NotLoggedIn/Navigation/TabPanel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -538,13 +521,6 @@
       <workItem from="1628666700805" duration="7128000" />
       <workItem from="1629271964621" duration="3176000" />
     </task>
-    <task id="LOCAL-00309" summary="Refactoring names">
-      <created>1620664420574</created>
-      <option name="number" value="00309" />
-      <option name="presentableId" value="LOCAL-00309" />
-      <option name="project" value="LOCAL" />
-      <updated>1620664420574</updated>
-    </task>
     <task id="LOCAL-00310" summary="Created CreateCurrentPolygonVis, GetCurrentPolygon&#10;and ResetCurrentPolygonVis">
       <created>1620665277543</created>
       <option name="number" value="00310" />
@@ -881,7 +857,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635847559434</updated>
     </task>
-    <option name="localTasksCounter" value="358" />
+    <task id="LOCAL-00358" summary="Type script minor fixes">
+      <created>1635848799395</created>
+      <option name="number" value="00358" />
+      <option name="presentableId" value="LOCAL-00358" />
+      <option name="project" value="LOCAL" />
+      <updated>1635848799395</updated>
+    </task>
+    <option name="localTasksCounter" value="359" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -913,7 +896,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Radial series unit tests for&#10;RadialSeriesOptionsValidate" />
     <MESSAGE value="Radial series unit tests for RadialSeriesVis" />
     <MESSAGE value="Radial series unit tests for RadialSeriesOptionsHandler" />
     <MESSAGE value="Refactored RadialOptions, IRadialSeriesOptions&#10;RadialSeriesCreateVis and unit tests" />
@@ -938,7 +920,8 @@
     <MESSAGE value="&#10;spelling fixes" />
     <MESSAGE value="HTML and CSS fixes, and public folder cleanup" />
     <MESSAGE value="Test imports cleanup and snapshot updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test imports cleanup and snapshot updated" />
+    <MESSAGE value="Type script minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Type script minor fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
