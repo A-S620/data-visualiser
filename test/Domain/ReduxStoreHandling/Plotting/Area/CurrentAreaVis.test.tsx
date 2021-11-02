@@ -1,5 +1,4 @@
 import 'jsdom-global/register';
-import React from 'react';
 import { IAreaSeriesVis } from '../../../../../src/Interfaces/Visualisations/Area/IAreaSeriesVis';
 import CurrentAreaVis from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis';
 import { CurveType } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';

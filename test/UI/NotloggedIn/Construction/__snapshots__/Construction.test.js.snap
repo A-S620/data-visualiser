@@ -127,6 +127,7 @@ exports[`Construction Page should render without any errors 1`] = `
         className="MuiGrid-root makeStyles-background-3 MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
       >
         <img
+          alt="logo"
           className="makeStyles-logo-1"
           src="test-file-stub"
         />

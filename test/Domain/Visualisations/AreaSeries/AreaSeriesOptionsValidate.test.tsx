@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { IAreaSeriesOptions } from '../../../../src/Interfaces/Visualisations/Area/IAreaSeriesOptions';
 import { AreaSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate';

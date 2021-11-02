@@ -1,5 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme';
-import React from 'react';
+
 import 'jsdom-global/register';
 import { ILineSeriesVis } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesVis';
 import { CurveType, LineStyle } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';

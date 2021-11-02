@@ -1,5 +1,5 @@
 import 'jsdom-global/register';
-import React from 'react';
+
 import MarkSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/MarkSeriesOptions';
 import { IMarkSeriesOptions } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 

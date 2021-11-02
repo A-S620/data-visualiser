@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { MarkSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate';

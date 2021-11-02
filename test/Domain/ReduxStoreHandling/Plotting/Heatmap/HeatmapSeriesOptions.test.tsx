@@ -1,5 +1,5 @@
 import 'jsdom-global/register';
-import React from 'react';
+
 import HeatmapSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Heatmap/HeatmapSeriesOptions';
 import { IHeatmapSeriesOptions } from '../../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 

@@ -1,5 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme';
-import React from 'react';
+
 import 'jsdom-global/register';
 import { CurveType } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';

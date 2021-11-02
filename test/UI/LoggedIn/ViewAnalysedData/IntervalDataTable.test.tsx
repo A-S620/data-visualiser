@@ -1,6 +1,6 @@
 import { mount, ReactWrapper } from 'enzyme';
 import 'jsdom-global/register';
-import React from 'react';
+
 import { Provider } from 'react-redux';
 import { reduxStore } from '../../../../src/ReduxStore/reduxStore';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';

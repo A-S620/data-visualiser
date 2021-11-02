@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { IRadialSeriesOptions } from '../../../../src/Interfaces/Visualisations/Radial/IRadialSeriesOptions';
 import { RadialSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate';

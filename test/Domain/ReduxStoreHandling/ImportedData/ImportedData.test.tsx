@@ -1,5 +1,4 @@
 import 'jsdom-global/register';
-import React from 'react';
 
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import ImportedData from '../../../../src/Domain/ReduxStoreHandling/ImportedData/ImportedData';

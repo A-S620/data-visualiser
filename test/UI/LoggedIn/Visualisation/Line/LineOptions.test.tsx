@@ -1,5 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme';
-import React from 'react';
+
 import 'jsdom-global/register';
 import { reduxStore } from '../../../../../src/ReduxStore/reduxStore';
 import { Provider } from 'react-redux';

@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
 import { AnalyseFileData } from '../../../../src/Domain/AnalyseFile/AnalyseFileData';

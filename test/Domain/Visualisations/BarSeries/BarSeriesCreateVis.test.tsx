@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { IBarSeriesOptions, yValue } from '../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 import { BarSeriesCreateVis } from '../../../../src/Domain/Visualisations/BarSeries/BarSeriesCreateVis';

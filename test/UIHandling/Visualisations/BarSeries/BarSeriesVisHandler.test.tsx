@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { BarSeriesVisHandler } from '../../../../src/UIHandling/Visualisations/BarSeries/BarSeriesVisHandler';
 import { IImportedFileData } from '../../../../src/Interfaces/import/IImportedFileData';
@@ -43,7 +42,7 @@ afterAll(() => {
 });
 describe('BarSeriesVisHandler domain component', () => {
     it('Should return the visualisation options when the createBarVisual method is called', () => {
-        const barVisHandler = new BarSeriesVisHandler().createBarVisual();
+        new BarSeriesVisHandler().createBarVisual();
         const getCurrentVisual = new CurrentBarVisual().get();
         expect(getCurrentVisual).toEqual({
             data: [

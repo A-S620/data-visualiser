@@ -1,5 +1,4 @@
 import 'jsdom-global/register';
-import React from 'react';
 import AreaSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Area/AreaSeriesOptions';
 import { IAreaSeriesOptions } from '../../../../../src/Interfaces/Visualisations/Area/IAreaSeriesOptions';
 import { CurveType } from '../../../../../src/Interfaces/Visualisations/Line/ILineSeriesOptions';

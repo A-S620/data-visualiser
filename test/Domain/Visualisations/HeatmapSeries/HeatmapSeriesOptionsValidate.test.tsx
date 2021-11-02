@@ -1,4 +1,3 @@
-import React from 'react';
 import 'jsdom-global/register';
 import { IHeatmapSeriesOptions } from '../../../../src/Interfaces/Visualisations/Heatmap/IHeatmapSeriesOptions';
 import { HeatmapSeriesOptionsValidate } from '../../../../src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate';

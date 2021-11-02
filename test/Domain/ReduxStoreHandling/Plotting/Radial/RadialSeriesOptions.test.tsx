@@ -1,5 +1,5 @@
 import 'jsdom-global/register';
-import React from 'react';
+
 import RadialSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Radial/RadialSeriesOptions';
 import { IRadialSeriesOptions } from '../../../../../src/Interfaces/Visualisations/Radial/IRadialSeriesOptions';
 

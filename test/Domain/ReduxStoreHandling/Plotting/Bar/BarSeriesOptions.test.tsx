@@ -1,5 +1,4 @@
 import 'jsdom-global/register';
-import React from 'react';
 import BarSeriesOptions from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Bar/BarSeriesOptions';
 import { IBarSeriesOptions, yValue } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesOptions';
 

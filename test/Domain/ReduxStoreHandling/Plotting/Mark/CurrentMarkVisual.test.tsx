@@ -1,5 +1,4 @@
 import 'jsdom-global/register';
-import React from 'react';
 import { IMarkSeriesVis } from '../../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesVis';
 import CurrentMarkVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Mark/CurrentMarkVisual';
 beforeEach(() => {

@@ -1,5 +1,5 @@
 import { mount, ReactWrapper } from 'enzyme';
-import React from 'react';
+
 import 'jsdom-global/register';
 import { Provider } from 'react-redux';
 import { IBarSeriesVis } from '../../../../../src/Interfaces/Visualisations/Bar/IBarSeriesVis';

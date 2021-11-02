@@ -1,6 +1,4 @@
-import React from 'react';
 import 'jsdom-global/register';
-import { IMarkSeriesOptions } from '../../../../src/Interfaces/Visualisations/Mark/IMarkSeriesOptions';
 import { IAreaSeriesOptions } from '../../../../src/Interfaces/Visualisations/Area/IAreaSeriesOptions';
 import { AreaSeriesOptionsHandler } from '../../../../src/UIHandling/Visualisations/AreaSeries/AreaSeriesOptionsHandler';
 import CurrentAreaVis from '../../../../src/Domain/ReduxStoreHandling/Plotting/Area/CurrentAreaVis';

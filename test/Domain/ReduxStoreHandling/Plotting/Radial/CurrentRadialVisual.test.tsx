@@ -1,5 +1,5 @@
 import 'jsdom-global/register';
-import React from 'react';
+
 import { IRadialSeriesVis } from '../../../../../src/Interfaces/Visualisations/Radial/IRadialSeriesVis';
 import CurrentRadialVisual from '../../../../../src/Domain/ReduxStoreHandling/Plotting/Radial/CurrentRadialVisual';
 beforeEach(() => {
