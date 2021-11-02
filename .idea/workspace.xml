@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Util/OptionsValidate.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Navigation/Appbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/ViewAnalysedData/ViewAnalysedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewAnalysedData/ViewAnalysedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/ViewImportedData/ViewImportedData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ViewImportedData/ViewImportedData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Area/AreaSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Bar/BarSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Heatmap/HeatmapPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Line/LineSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Mark/MarkSeriesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialSeriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Visualisation/Radial/RadialSeriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/AreaSeries/AreaSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/BarSeries/BarSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/HeatmapSeries/HeatmapSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/LineSeries/LineSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/MarkSeries/MarkSeriesOptionsValidate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Visualisations/RadialSeries/RadialSeriesOptionsValidate.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,7 @@
     <option name="namespace" value="default" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="2" />
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -528,13 +526,6 @@
       <workItem from="1628666700805" duration="7128000" />
       <workItem from="1629271964621" duration="3176000" />
     </task>
-    <task id="LOCAL-00313" summary="Refactored CreateCurrentLineVis, GetCurrentLineVis&#10;and ResetCurrentLineVis into CurrentLineVis&#10;single component + unit tests">
-      <created>1620837692629</created>
-      <option name="number" value="00313" />
-      <option name="presentableId" value="LOCAL-00313" />
-      <option name="project" value="LOCAL" />
-      <updated>1620837692629</updated>
-    </task>
     <task id="LOCAL-00314" summary="Refactored CreateMarkSeriesOptions,&#10;GetMarkSeriesOptions&#10;and ResetMarkSeriesOptions into MarkSeriesOptions&#10;single component + unit tests">
       <created>1620838736295</created>
       <option name="number" value="00314" />
@@ -871,7 +862,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635849345311</updated>
     </task>
-    <option name="localTasksCounter" value="362" />
+    <task id="LOCAL-00362" summary="Removed unused parameters">
+      <created>1635850337367</created>
+      <option name="number" value="00362" />
+      <option name="presentableId" value="LOCAL-00362" />
+      <option name="project" value="LOCAL" />
+      <updated>1635850337367</updated>
+    </task>
+    <option name="localTasksCounter" value="363" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -903,7 +901,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Refactored Radial series feature" />
     <MESSAGE value="Refactored GetAnalysedData" />
     <MESSAGE value="Added createAngleObjectFromColumnPercent to DataHandler" />
     <MESSAGE value="Refactored IRadialSeriesOptions and IRadialSeriesVis" />
@@ -928,7 +925,8 @@
     <MESSAGE value="Removed NotLoggedIn UI components and unit tests" />
     <MESSAGE value="Removed LoggedIn folder from UI Components" />
     <MESSAGE value="Removed LoggedIn folder from test/UI Components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed LoggedIn folder from test/UI Components" />
+    <MESSAGE value="Removed unused parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unused parameters" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
