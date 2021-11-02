@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="" />
+    <list default="true" id="7b1dcb07-9a04-49d5-bf00-dc8ac9121aa8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/Appbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/LoggedIn/Navigation/Appbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/NotLoggedIn/Construction/Construction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/NotLoggedIn/Construction/Construction.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -517,13 +527,6 @@
       <workItem from="1628666700805" duration="7128000" />
       <workItem from="1629271964621" duration="3176000" />
     </task>
-    <task id="LOCAL-00306" summary="Created IPolygonSeriesVis and IPolygonSeriesOptions&#10;Updated ReduxState, ReducerActions and&#10;ReducerActionTypes with Polygon options and&#10;visualisation and unit tests">
-      <created>1620578230722</created>
-      <option name="number" value="00306" />
-      <option name="presentableId" value="LOCAL-00306" />
-      <option name="project" value="LOCAL" />
-      <updated>1620578230723</updated>
-    </task>
     <task id="LOCAL-00307" summary="Added attributes to IPolygonSeriesVis and&#10;IPolygonSeriesOptions&#10;Updated ReduxReducer and unit tests">
       <created>1620662801723</created>
       <option name="number" value="00307" />
@@ -860,7 +863,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633358482313</updated>
     </task>
-    <option name="localTasksCounter" value="355" />
+    <task id="LOCAL-00355" summary="&#10;spelling fixes">
+      <created>1635845625935</created>
+      <option name="number" value="00355" />
+      <option name="presentableId" value="LOCAL-00355" />
+      <option name="project" value="LOCAL" />
+      <updated>1635845625935</updated>
+    </task>
+    <option name="localTasksCounter" value="356" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -892,7 +902,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Created RadialOptions, RadialSeriesVis and&#10;RadialSeriesPage UI components&#10;Refactored other radial components" />
     <MESSAGE value="Radial series unit tests for ReducerActions and&#10;ReduxReducer" />
     <MESSAGE value="Radial series unit tests for CurrentRadialVisual and&#10;RadialSeriesOptions" />
     <MESSAGE value="Radial series unit tests for&#10;RadialSeriesOptionsValidate" />
@@ -917,7 +926,8 @@
     <MESSAGE value="workflow trigger" />
     <MESSAGE value="adding package-lock.json" />
     <MESSAGE value="added homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added homepage" />
+    <MESSAGE value="&#10;spelling fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;spelling fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -21,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Construction(props) {
+export default function Construction() {
     const classes = useStyles();
     return (
         <Grid container direction="row" justify="center" alignItems="center" className={classes.background}>
-            <img className={classes.logo} src={logo} />
+            <img className={classes.logo} src={logo} alt={'logo'} />
             <Typography variant="h1" className={classes.title}>
                 Coming Soon
             </Typography>

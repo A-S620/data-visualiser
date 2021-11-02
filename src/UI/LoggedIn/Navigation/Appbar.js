@@ -87,9 +87,9 @@ export default function Appbar() {
                     </Grid>
                 </Grid>
             </AppBar>
-            <div value={tab} index={0}>
+            <TabPanel value={tab} index={0}>
                 <LandingPage />
-            </div>
+            </TabPanel>
             <TabPanel value={tab} index={1}>
                 About
             </TabPanel>
