@@ -21,10 +21,10 @@ export default function LineSeriesPage() {
             className={classes.root}
             id={'line-plotting-page'}
         >
-            <Box mx={10}>
+            <Box>
                 <LineSeriesVis />
             </Box>
-            <Box mx={10}>
+            <Box>
                 <LineSeriesOptions />
             </Box>
         </Box>

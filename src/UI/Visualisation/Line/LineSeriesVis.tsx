@@ -28,7 +28,6 @@ function LineSeriesVis(props: any) {
             alignItems="center"
             className={classes.root}
             id={'line-series'}
-            mx={15}
         >
             <Box>
                 <XYPlot

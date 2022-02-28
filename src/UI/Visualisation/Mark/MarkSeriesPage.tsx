@@ -21,10 +21,10 @@ export default function MarkSeriesPage() {
             className={classes.root}
             id={'mark-plotting-page'}
         >
-            <Box mx={10}>
+            <Box>
                 <MarkSeriesVis />
             </Box>
-            <Box mx={10}>
+            <Box>
                 <MarkSeriesOptions />
             </Box>
         </Box>

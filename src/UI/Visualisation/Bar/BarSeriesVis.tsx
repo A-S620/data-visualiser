@@ -36,7 +36,6 @@ function BarSeriesVis(props: any) {
             alignItems="center"
             className={classes.root}
             id={'bar-series'}
-            mx={15}
         >
             <Box>
                 <XYPlot

@@ -21,10 +21,10 @@ export default function AreaSeriesPage() {
             className={classes.root}
             id={'polygon-plotting-page'}
         >
-            <Box mx={10}>
+            <Box>
                 <AreaSeriesVis />
             </Box>
-            <Box mx={10}>
+            <Box>
                 <AreaOptions />
             </Box>
         </Box>

@@ -21,10 +21,10 @@ export default function RadialSeriesPage() {
             className={classes.root}
             id={'radial-plotting-page'}
         >
-            <Box mx={10}>
+            <Box>
                 <RadialSeriesVis />
             </Box>
-            <Box mx={10}>
+            <Box>
                 <RadialOptions />
             </Box>
         </Box>

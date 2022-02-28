@@ -21,10 +21,10 @@ export default function BarSeriesPage() {
             className={classes.root}
             id={'bar-series-page'}
         >
-            <Box mx={10}>
+            <Box>
                 <BarSeriesVis />
             </Box>
-            <Box mx={10}>
+            <Box>
                 <BarSeriesOptions />
             </Box>
         </Box>

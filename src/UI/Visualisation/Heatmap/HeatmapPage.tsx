@@ -21,10 +21,10 @@ export default function HeatmapPage() {
             className={classes.root}
             id={'heatmap-plotting-page'}
         >
-            <Box mx={10}>
+            <Box>
                 <HeatmapVis />
             </Box>
-            <Box mx={10}>
+            <Box>
                 <HeatmapOptions />
             </Box>
         </Box>

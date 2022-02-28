@@ -27,7 +27,6 @@ function AreaSeriesVis(props: any) {
             alignItems="center"
             className={classes.root}
             id={'area-series'}
-            mx={15}
         >
             <Box>
                 <XYPlot
@@ -40,11 +39,11 @@ function AreaSeriesVis(props: any) {
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                     <XAxis
                         //@ts-ignore
-                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', margin: 5, padding: 5 } }}
                     />
                     <YAxis
                         // left={50}
-                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
+                        style={{ text: { stroke: 'none', fill: '#6b6b76', margin: 5, padding: 5 } }}
                     />
                     <AreaSeries
                         stroke={props.currentAreaVisual.stroke}

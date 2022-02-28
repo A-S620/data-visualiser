@@ -34,7 +34,6 @@ function HeatmapVis(props: any) {
             alignItems="center"
             className={classes.root}
             id={'heatmap-series'}
-            mx={15}
         >
             <Box>
                 <XYPlot id={'heatmap-series'} height={options.height} width={options.width} margin={{ left: 75 }}>

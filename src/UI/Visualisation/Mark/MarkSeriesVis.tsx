@@ -27,7 +27,6 @@ function MarkSeriesVis(props: any) {
             alignItems="center"
             className={classes.root}
             id={'mark-series'}
-            mx={15}
         >
             <Box>
                 <XYPlot
