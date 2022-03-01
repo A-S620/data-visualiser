@@ -36,7 +36,12 @@ function HeatmapVis(props: any) {
             id={'heatmap-series'}
         >
             <Box>
-                <XYPlot id={'heatmap-series'} height={options.height} width={options.width} margin={{ left: 75 }}>
+                <XYPlot
+                    id={'heatmap-series'}
+                    height={options.height}
+                    width={options.width}
+                    margin={{ bottom: 70, top: 80, left: 70, right: 70 }}
+                >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                     <XAxis

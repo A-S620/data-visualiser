@@ -34,13 +34,14 @@ function LineSeriesVis(props: any) {
                     id={'line-series-vis'}
                     height={props.currentLineVisual.height}
                     width={props.currentLineVisual.width}
-                    margin={{ left: 75 }}
+                    margin={{ bottom: 70, top: 80, left: 70, right: 70 }}
                 >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
                     <XAxis
                         //@ts-ignore
                         style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
+                        tickLabelAngle={-90}
                     />
                     <YAxis
                         // left={50}

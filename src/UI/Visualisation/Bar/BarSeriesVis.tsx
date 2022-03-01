@@ -43,7 +43,7 @@ function BarSeriesVis(props: any) {
                     xType="ordinal"
                     width={props.currentBarVisual.width}
                     height={props.currentBarVisual.height}
-                    margin={{ left: 75 }}
+                    margin={{ bottom: 70, top: 80, left: 70, right: 70 }}
                     xDistance={100}
                 >
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
@@ -58,7 +58,16 @@ function BarSeriesVis(props: any) {
                     />
                     <XAxis
                         //@ts-ignore
-                        style={{ text: { stroke: 'none', fill: '#6b6b76', fontWeight: 600, margin: 5, padding: 5 } }}
+                        style={{
+                            text: {
+                                stroke: 'none',
+                                fill: '#6b6b76',
+                                fontWeight: 600,
+                                margin: 5,
+                                padding: 5,
+                            },
+                        }}
+                        tickLabelAngle={-90}
                     />
                     <YAxis
                         //@ts-ignore

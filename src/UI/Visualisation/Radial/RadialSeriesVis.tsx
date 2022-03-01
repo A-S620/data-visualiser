@@ -30,6 +30,7 @@ function RadialSeriesVis(props: any) {
         >
             <Box>
                 <RadialChart
+                    margin={{ bottom: 70, top: 80, left: 70, right: 70 }}
                     height={props.currentRadialVisual.height ? props.currentRadialVisual.height : 0}
                     width={props.currentRadialVisual.width ? props.currentRadialVisual.width : 0}
                     data={props.currentRadialVisual.data ? props.currentRadialVisual.data : []}
@@ -37,8 +38,6 @@ function RadialSeriesVis(props: any) {
                     labelsStyle={{
                         stroke: 'none',
                         fill: '#6b6b76',
-                        margin: 5,
-                        padding: 5,
                     }}
                     showLabels
                 />

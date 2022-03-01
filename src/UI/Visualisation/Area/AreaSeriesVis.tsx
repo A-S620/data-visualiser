@@ -33,7 +33,7 @@ function AreaSeriesVis(props: any) {
                     id={'area-series-vis'}
                     height={props.currentAreaVisual.height}
                     width={props.currentAreaVisual.width}
-                    margin={{ left: 75 }}
+                    margin={{ bottom: 70, top: 80, left: 70, right: 70 }}
                 >
                     <HorizontalGridLines style={{ stroke: '#B7E9ED' }} />
                     <VerticalGridLines style={{ stroke: '#B7E9ED' }} />
